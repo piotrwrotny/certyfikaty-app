@@ -1,0 +1,9 @@
+# Keep LF in the working tree on every platform. references/** is a hashed
+# baseline (references/BASELINE_MANIFEST.json); CRLF conversion would change
+# its SHA-256 values and break the handoff check.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff2 binary
