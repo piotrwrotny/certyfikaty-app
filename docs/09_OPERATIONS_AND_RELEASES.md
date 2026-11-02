@@ -60,6 +60,8 @@ Adres hosta jest częścią originu: IndexedDB, profile i instalacja PWA należ�
 
 Najprostsza droga dla kilku własnych urządzeń (Android, iPhone/iPad, laptopy, komputer serwujący). Tailscale wystawia prawdziwy certyfikat HTTPS dla nazwy `*.ts.net`, więc **żadne urządzenie nie instaluje certyfikatu CA**, a nazwa nie zależy od mDNS ani IP z DHCP. Warunek: na każdym urządzeniu jest Tailscale (to samo konto). Dla uczniów raczej nieodpowiednie — tam stosuj hosta z zaufanym certyfikatem (własna domena z certyfikatem Let's Encrypt albo własne CA z sekcji niżej).
 
+Pełna procedura od czystego Omarchy, komenda po komendzie: [instalacja omarchy](instalacja%20omarchy.md). Skrót:
+
 Jednorazowo:
 
 1. Konto Tailscale. W panelu administratora (zakładka DNS) włącz **MagicDNS** i **HTTPS Certificates**.
