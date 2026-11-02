@@ -58,13 +58,24 @@ Adres hosta jest częścią originu: IndexedDB, profile i instalacja PWA należ�
 
 ### Uruchomienie na Linuksie (Arch/Omarchy)
 
-Skrypt działa tak samo (`npm run lan:serve`). Różnice systemowe — **nie zweryfikowane na Omarchy**, sprawdź każdy punkt:
+Start od zera na Omarchy (Arch). Skrypt działa tak samo jak na Windows (`npm run lan:serve`); poniżej kroki systemowe. **Nie zweryfikowane na Omarchy** — sprawdź każdy punkt i popraw dokument, jeśli coś działa inaczej.
 
-1. **Nazwa `alfabet.local`:** `sudo hostnamectl set-hostname alfabet`, a mDNS ogłasza Avahi: `sudo pacman -S avahi nss-mdns` i `sudo systemctl enable --now avahi-daemon`. Jeśli `systemd-resolved` ma włączone MulticastDNS, wyłącz je albo Avahi, by nie dublować odpowiedzi.
-2. **Port 443 bez roota:** `sudo setcap cap_net_bind_service=+ep "$(command -v caddy)"` (aktualizacja pakietu `caddy` kasuje to uprawnienie) albo `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=443`. Inny port zmienia origin.
-3. **Zapora:** jeśli działa `ufw`, `sudo ufw allow 443/tcp`.
-4. **Certyfikat główny** leży w `~/.local/share/caddy/pki/authorities/local/root.crt`. Żeby telefony, które już mu ufają, nie wymagały ponownej instalacji, skopiuj przed pierwszym startem cały katalog `authorities/local` z poprzedniego komputera (Windows: `%APPDATA%\Caddy\pki\authorities\local`). Zawiera klucz prywatny — przenieś nośnikiem lub `scp`, **nigdy przez git**.
-5. **Zaufanie na tym komputerze:** `caddy trust` nie zadziała (admin endpoint jest wyłączony); użyj `sudo trust anchor --store root.crt`.
+1. **Klon i pakiety:**
+   ```bash
+   git clone git@github.com:piotrwrotny/certyfikaty-app.git
+   cd certyfikaty-app
+   git checkout feat/cpre-pwa-increment-1
+   sudo pacman -S caddy nodejs npm avahi nss-mdns
+   npm ci
+   ```
+   Wersja Node: pole `engines` w `package.json` (≥ 22.12).
+2. **Certyfikat główny — przed pierwszym startem.** Katalog `~/.local/share/caddy/pki/authorities/local/` ma zawierać pliki z poprzedniego komputera (`root.crt`, `root.key`, `intermediate.crt`, `intermediate.key`; Windows: `%APPDATA%\Caddy\pki\authorities\local`). Wtedy urządzenia, które już ufają certyfikatowi, nie wymagają ponownej instalacji. Bez tego Caddy utworzy nowe CA i każde urządzenie trzeba skonfigurować od nowa. Pliki zawierają klucz prywatny — przenieś nośnikiem lub `scp`, **nigdy przez git**.
+3. **Nazwa `alfabet.local`:** `sudo hostnamectl set-hostname alfabet`, potem `sudo systemctl enable --now avahi-daemon`. Jeśli `systemd-resolved` ma włączone MulticastDNS, wyłącz je albo Avahi, by nie dublować odpowiedzi. Sprawdzenie z innego urządzenia w sieci: `ping alfabet.local`.
+4. **Port 443 bez roota:** `sudo setcap cap_net_bind_service=+ep "$(command -v caddy)"` (aktualizacja pakietu `caddy` kasuje to uprawnienie) albo `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=443`. Inny port zmienia origin.
+5. **Zapora:** jeśli działa `ufw`, `sudo ufw allow 443/tcp`.
+6. **Start:** `npm run lan:serve`. Skrypt wypisze adres `https://alfabet.local/cpre/`.
+7. **Zaufanie na tym komputerze (opcjonalnie):** `caddy trust` nie zadziała (admin endpoint jest wyłączony); użyj `sudo trust anchor --store ~/.local/share/caddy/pki/authorities/local/root.crt`.
+8. **Telefon/tablet:** otwórz adres. Ostrzeżenie o certyfikacie = sieć działa, brakuje zaufania (sekcja niżej); „nie można połączyć” = nazwa niewidoczna, zapora albo izolacja klientów (tabela „Typowe problemy”).
 
 ### Zaufanie certyfikatowi i instalacja PWA
 
