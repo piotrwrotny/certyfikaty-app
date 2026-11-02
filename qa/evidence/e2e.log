@@ -1,0 +1,142 @@
+npm notice run ireb-cpre-pwa@0.1.0 test:e2e
+npm notice run npm run build:e2e && playwright test --project=chromium --project=firefox --project=webkit --project=review
+npm notice run ireb-cpre-pwa@0.1.0 build:e2e
+npm notice run npm run content:build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e VITE_BUILD_TAG=e2e-a vite build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e-b VITE_BUILD_TAG=e2e-b vite build && cross-env VITE_CONTENT_CHANNEL=review VITE_BASE=/cpre-review/ VITE_OUT_DIR=dist-review VITE_BUILD_TAG=review vite build
+npm notice run ireb-cpre-pwa@0.1.0 content:build
+npm notice run tsx scripts/content/build-release.ts
+[review] release review-0001: included 2 package(s): T21@r1-full1, TECH01@r1
+[learner] release learner-0001: included 1 package(s): TECH01@r1
+[learner] excluded T21: LEARNER_REVIEW_PENDING; LEARNER_NOT_PERMITTED; LEARNER_NO_DECISION; LEARNER_NO_USES; LEARNER_RIGHTS; LEARNER_RIGHTS_CHANNEL; LEARNER_NO_RIGHTS_DECISION
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-e2e/manifest.webmanifest                          0.53 kB
+dist-e2e/index.html                                    0.85 kB │ gzip:   0.47 kB
+dist-e2e/assets/index-BgirjtMZ.css                    11.93 kB │ gzip:   3.35 kB
+dist-e2e/assets/workbox-window.prod.es5-Bd17z0YL.js    5.65 kB │ gzip:   2.20 kB
+dist-e2e/assets/index-BEng2zO4.js                    481.60 kB │ gzip: 144.92 kB
+
+[32m✓ built in 274ms[39m
+
+PWA v2.0.0
+mode      generateSW
+precache  14 entries (495.53 KiB)
+files generated
+  dist-e2e/sw.js
+  dist-e2e/workbox-2fbc6a65.js
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-e2e-b/manifest.webmanifest                          0.53 kB
+dist-e2e-b/index.html                                    0.85 kB │ gzip:   0.47 kB
+dist-e2e-b/assets/index-BgirjtMZ.css                    11.93 kB │ gzip:   3.35 kB
+dist-e2e-b/assets/workbox-window.prod.es5-Bd17z0YL.js    5.65 kB │ gzip:   2.20 kB
+dist-e2e-b/assets/index-C-ypd1v2.js                    481.60 kB │ gzip: 144.92 kB
+
+[32m✓ built in 284ms[39m
+
+PWA v2.0.0
+mode      generateSW
+precache  14 entries (495.53 KiB)
+files generated
+  dist-e2e-b/sw.js
+  dist-e2e-b/workbox-2fbc6a65.js
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-review/manifest.webmanifest                          0.54 kB
+dist-review/index.html                                    0.87 kB │ gzip:   0.48 kB
+dist-review/assets/index-BgirjtMZ.css                    11.93 kB │ gzip:   3.35 kB
+dist-review/assets/workbox-window.prod.es5-Bd17z0YL.js    5.65 kB │ gzip:   2.20 kB
+dist-review/assets/index-YzIWSgm8.js                    481.64 kB │ gzip: 144.95 kB
+
+[32m✓ built in 267ms[39m
+
+PWA v2.0.0
+mode      generateSW
+precache  14 entries (495.61 KiB)
+files generated
+  dist-review/sw.js
+  dist-review/workbox-2fbc6a65.js
+[WebServer] npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+[WebServer] npm notice run ireb-cpre-pwa@0.1.0 npx
+[WebServer] npm notice run tsx tests/e2e/server.ts --port 4300
+[WebServer] npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+[WebServer] npm notice run ireb-cpre-pwa@0.1.0 npx
+[WebServer] npm notice run tsx tests/e2e/server.ts --port 4301 --base /cpre-review/ --dist dist-review --dist-b dist-review
+
+Running 64 tests using 1 worker
+
+  ok  1 [chromium] › tests\e2e\a11y.spec.ts:18:1 › axe: selector, session, A/P/K, feedback, knowledge, test, review, result, scope, data (14.5s)
+  ok  2 [chromium] › tests\e2e\a11y.spec.ts:52:1 › keyboard-only: P answer, submit, open rationale link, Escape restores focus; touch targets ≥ 44 px (1.2s)
+  ok  3 [chromium] › tests\e2e\app-update.spec.ts:14:1 › QA-27: new SW waits; "Później" keeps the running version without reload (1.2s)
+  ok  4 [chromium] › tests\e2e\app-update.spec.ts:30:1 › QA-27: "Zapisz i odśwież" pauses the active check, reloads into the new version, same profile and attempt (2.5s)
+  ok  5 [chromium] › tests\e2e\failures.spec.ts:7:1 › QA-29/QA-03: write denied keeps the draft in memory, no false "saved", profile switch blocked (1.4s)
+  ok  6 [chromium] › tests\e2e\failures.spec.ts:33:1 › QA-29: blocked/newer DB version from another tab is reported; data is never deleted (1.7s)
+  ok  7 [chromium] › tests\e2e\failures.spec.ts:59:1 › QA-30: export one profile; corrupted import writes nothing; valid import creates a new profile without merge (1.8s)
+  ok  8 [chromium] › tests\e2e\learning.spec.ts:15:1 › QA-06/A: radio + clear, blank submit needs confirmation, feedback 0/1 with omitted correct rationale (1.3s)
+  ok  9 [chromium] › tests\e2e\learning.spec.ts:34:1 › QA-07/P: no hard cap, n/k counter, excess gives 0; one correct gives w/2 (1.4s)
+  ok 10 [chromium] › tests\e2e\learning.spec.ts:53:1 › QA-08/K: null rows, per-row clear, blank never shown as Fałsz; 2 of 3 rows = 4/3 (1.3s)
+  ok 11 [chromium] › tests\e2e\learning.spec.ts:71:1 › QA-12/QA-34: option → knowledge → comparison → back; return restores answer, result and focus; refresh keeps the attempt (1.5s)
+  ok 12 [chromium] › tests\e2e\learning.spec.ts:97:1 › QA-13/FR-016: B → correction → F fails → other help → G fails → change of support, no automatic third check (1.7s)
+  ok 13 [chromium] › tests\e2e\learning.spec.ts:123:1 › FR-032: "Zapisz miejsce i wyjdź" — session offers resume of the same attempt (1.3s)
+  ok 14 [chromium] › tests\e2e\learning.spec.ts:135:1 › FR-029: neutral format tutorial — skippable, D04 example 2/3 for K with a blank row, no evidence recorded (1.3s)
+  ok 15 [chromium] › tests\e2e\learning.spec.ts:151:1 › QA-33: safe markdown — no raw HTML execution, no horizontal scroll at 320 px (1.1s)
+  ok 16 [chromium] › tests\e2e\offline.spec.ts:6:1 › QA-20: after "Gotowe offline", closing and reopening offline keeps selector, learning, answers and finalization (2.5s)
+  ok 17 [chromium] › tests\e2e\offline.spec.ts:43:1 › QA-21: first start without reachable content shows an honest "no materials" state; retry after host returns (992ms)
+  ok 18 [chromium] › tests\e2e\profiles.spec.ts:12:1 › QA-01/QA-02: isolated progress, rename keeps data, delete only the chosen profile (2.3s)
+  ok 19 [chromium] › tests\e2e\profiles.spec.ts:60:1 › PROF-01: a fresh tab starts at the selector; refresh restores the same profile and attempt (1.9s)
+  ok 20 [chromium] › tests\e2e\profiles.spec.ts:78:1 › QA-05: two tabs with different profiles do not switch each other (2.1s)
+  ok 21 [chromium] › tests\e2e\profiles.spec.ts:98:1 › QA-04: the same attempt in two tabs — second writer gets a detected conflict, not silent overwrite (2.1s)
+  ok 22 [chromium] › tests\e2e\smoke.spec.ts:6:1 › smoke: built app under /cpre/ with manifest, SW and learner content (QA-36) (905ms)
+  ok 23 [chromium] › tests\e2e\topic-test.spec.ts:31:1 › QA-14/QA-15: prompt-only during the check; flags, blank K, P excess; neutral review; idempotent finalize; result 5 pkt scale (2.0s)
+  ok 24 [chromium] › tests\e2e\topic-test.spec.ts:76:1 › QA-16: conversion — cancel reveals nothing; confirm is permanent across refresh (1.4s)
+  ok 25 [chromium] › tests\e2e\topic-test.spec.ts:103:1 › FR-027: pause and resume the same check with a recorded break; Sesja shows a neutral resume card (1.4s)
+  ok 26 [chromium] › tests\e2e\updates.spec.ts:23:1 › QA-22: captive portal (HTML 200) and host down do not activate anything; saved content keeps working (1.3s)
+  ok 27 [chromium] › tests\e2e\updates.spec.ts:37:1 › QA-22: LAN returns without an online event — the periodic check of a visible app finds the release (944ms)
+  ok 28 [chromium] › tests\e2e\updates.spec.ts:48:3 › QA-23: bad-digest release is rejected as a whole; previous release and progress stay (1.4s)
+  ok 29 [chromium] › tests\e2e\updates.spec.ts:48:3 › QA-23: truncated release is rejected as a whole; previous release and progress stay (1.4s)
+  ok 30 [chromium] › tests\e2e\updates.spec.ts:48:3 › QA-23: bad-schema release is rejected as a whole; previous release and progress stay (1.3s)
+  ok 31 [chromium] › tests\e2e\updates.spec.ts:66:1 › QA-25: new release during an answer keeps the pinned revision; new activities use the new release (2.3s)
+  ok 32 [chromium] › tests\e2e\updates.spec.ts:86:1 › QA-26: incompatible release needs an app update; rollback with a higher sequence keeps progress (1.5s)
+  ok 33 [chromium] › tests\e2e\updates.spec.ts:110:1 › QA-28: withdrawal/disputed key suspends an active check neutrally; history kept; new uses blocked (2.6s)
+  ok 34 [firefox] › tests\e2e\offline.spec.ts:6:1 › QA-20: after "Gotowe offline", closing and reopening offline keeps selector, learning, answers and finalization (2.6s)
+  ok 35 [firefox] › tests\e2e\offline.spec.ts:43:1 › QA-21: first start without reachable content shows an honest "no materials" state; retry after host returns (679ms)
+  ok 36 [firefox] › tests\e2e\profiles.spec.ts:12:1 › QA-01/QA-02: isolated progress, rename keeps data, delete only the chosen profile (2.5s)
+  ok 37 [firefox] › tests\e2e\profiles.spec.ts:60:1 › PROF-01: a fresh tab starts at the selector; refresh restores the same profile and attempt (1.3s)
+  ok 38 [firefox] › tests\e2e\profiles.spec.ts:78:1 › QA-05: two tabs with different profiles do not switch each other (2.0s)
+  ok 39 [firefox] › tests\e2e\profiles.spec.ts:98:1 › QA-04: the same attempt in two tabs — second writer gets a detected conflict, not silent overwrite (1.7s)
+  ok 40 [firefox] › tests\e2e\smoke.spec.ts:6:1 › smoke: built app under /cpre/ with manifest, SW and learner content (QA-36) (560ms)
+  ok 41 [firefox] › tests\e2e\updates.spec.ts:23:1 › QA-22: captive portal (HTML 200) and host down do not activate anything; saved content keeps working (997ms)
+  ok 42 [firefox] › tests\e2e\updates.spec.ts:37:1 › QA-22: LAN returns without an online event — the periodic check of a visible app finds the release (666ms)
+  ok 43 [firefox] › tests\e2e\updates.spec.ts:48:3 › QA-23: bad-digest release is rejected as a whole; previous release and progress stay (2.1s)
+  ok 44 [firefox] › tests\e2e\updates.spec.ts:48:3 › QA-23: truncated release is rejected as a whole; previous release and progress stay (1.3s)
+  ok 45 [firefox] › tests\e2e\updates.spec.ts:48:3 › QA-23: bad-schema release is rejected as a whole; previous release and progress stay (1.1s)
+  ok 46 [firefox] › tests\e2e\updates.spec.ts:66:1 › QA-25: new release during an answer keeps the pinned revision; new activities use the new release (1.9s)
+  ok 47 [firefox] › tests\e2e\updates.spec.ts:86:1 › QA-26: incompatible release needs an app update; rollback with a higher sequence keeps progress (1.4s)
+  ok 48 [firefox] › tests\e2e\updates.spec.ts:110:1 › QA-28: withdrawal/disputed key suspends an active check neutrally; history kept; new uses blocked (2.2s)
+  ok 49 [webkit] › tests\e2e\learning.spec.ts:15:1 › QA-06/A: radio + clear, blank submit needs confirmation, feedback 0/1 with omitted correct rationale (3.2s)
+  ok 50 [webkit] › tests\e2e\learning.spec.ts:34:1 › QA-07/P: no hard cap, n/k counter, excess gives 0; one correct gives w/2 (3.3s)
+  ok 51 [webkit] › tests\e2e\learning.spec.ts:53:1 › QA-08/K: null rows, per-row clear, blank never shown as Fałsz; 2 of 3 rows = 4/3 (3.2s)
+  ok 52 [webkit] › tests\e2e\learning.spec.ts:71:1 › QA-12/QA-34: option → knowledge → comparison → back; return restores answer, result and focus; refresh keeps the attempt (4.0s)
+  ok 53 [webkit] › tests\e2e\learning.spec.ts:97:1 › QA-13/FR-016: B → correction → F fails → other help → G fails → change of support, no automatic third check (7.0s)
+  ok 54 [webkit] › tests\e2e\learning.spec.ts:123:1 › FR-032: "Zapisz miejsce i wyjdź" — session offers resume of the same attempt (3.1s)
+  ok 55 [webkit] › tests\e2e\learning.spec.ts:135:1 › FR-029: neutral format tutorial — skippable, D04 example 2/3 for K with a blank row, no evidence recorded (2.9s)
+  ok 56 [webkit] › tests\e2e\learning.spec.ts:151:1 › QA-33: safe markdown — no raw HTML execution, no horizontal scroll at 320 px (2.2s)
+  ok 57 [webkit] › tests\e2e\smoke.spec.ts:6:1 › smoke: built app under /cpre/ with manifest, SW and learner content (QA-36) (1.0s)
+  ok 58 [webkit] › tests\e2e\topic-test.spec.ts:31:1 › QA-14/QA-15: prompt-only during the check; flags, blank K, P excess; neutral review; idempotent finalize; result 5 pkt scale (7.8s)
+  ok 59 [webkit] › tests\e2e\topic-test.spec.ts:76:1 › QA-16: conversion — cancel reveals nothing; confirm is permanent across refresh (4.9s)
+  ok 60 [webkit] › tests\e2e\topic-test.spec.ts:103:1 › FR-027: pause and resume the same check with a recorded break; Sesja shows a neutral resume card (4.8s)
+  ok 61 [review] › tests\e2e\review.spec.ts:15:1 › review mode banner; question-first entry never names the criterion before the answer (INTRO-T21, B-DEC-14) (2.3s)
+  ok 62 [review] › tests\e2e\review.spec.ts:31:1 › T21 goals: 3 criteria, 8 notes, 4 open activities; long knowledge with tables reflows at 320 px (QA-33) (1.5s)
+  ok 63 [review] › tests\e2e\review.spec.ts:58:1 › no approved T21 form: only the explicit technical form is offered, no automatic D01–08 fallback (TASK-023) (1.1s)
+  ok 64 [review] › tests\e2e\review.spec.ts:67:1 › open retrieval O01: prompt before rubric, explicit self-assessment without CPRE points (FR-006) (1.2s)
+
+  64 passed (2.5m)
+EXIT=0

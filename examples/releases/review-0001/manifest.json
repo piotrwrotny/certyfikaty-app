@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseId": "review-0001",
+  "releaseSequence": 1,
+  "channel": "review",
+  "createdAt": "2026-11-02T00:00:00Z",
+  "compatibility": {
+    "contentSchemaVersion": "1.0.0",
+    "minAppVersion": "0.1.0",
+    "maxAppMajor": 0
+  },
+  "packages": [
+    {
+      "packageId": "T21",
+      "revision": "r1-import1",
+      "url": "./packages/T21.r1-import1.json",
+      "bytes": 24712,
+      "sha256": "d0ecc49b63a361b06d654f2b09132567cab1209bc29a7184f2b9d487add2c4fb"
+    }
+  ],
+  "withdrawals": [],
+  "releaseNote": "Wyłącznie fixture techniczne jednej gałęzi. Nie wydanie ucznia; data wydania przykładowa.",
+  "publicationChannel": "internal-review"
+}

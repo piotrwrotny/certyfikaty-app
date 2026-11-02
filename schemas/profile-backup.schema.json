@@ -1,0 +1,319 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "exportedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "appVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "payloadJson": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payloadSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "exportedAt",
+    "appVersion",
+    "payloadJson",
+    "payloadSha256"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ireb-cpre.local/schemas/profile-backup.schema.json",
+  "$defs": {
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "profile": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "preferences": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "createdAt",
+            "preferences"
+          ]
+        },
+        "records": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attempts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "answers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "evaluations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "exposures": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "navigationContexts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "plans": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "profileId"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "profileId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "attempts",
+            "answers",
+            "evaluations",
+            "exposures",
+            "contacts",
+            "navigationContexts",
+            "evidence",
+            "plans",
+            "issues"
+          ]
+        },
+        "snapshots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "revision",
+              "payload"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+              },
+              "revision": {
+                "type": "string",
+                "pattern": "^r[0-9]+(?:-[A-Za-z0-9._-]+)?$"
+              },
+              "payload": {
+                "type": "object"
+              }
+            }
+          },
+          "minItems": 0
+        },
+        "historyCompleteness": {
+          "enum": [
+            "complete-local",
+            "imported-unverified",
+            "partial"
+          ]
+        },
+        "sourceDeviceLabel": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "profile",
+        "records",
+        "snapshots",
+        "historyCompleteness"
+      ]
+    }
+  },
+  "description": "Hash exact UTF-8 bytes of decoded payloadJson string; then parse and validate against #/$defs/payload plus domain integrity."
+}

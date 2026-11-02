@@ -1,0 +1,4946 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T21",
+  "revision": "r1-full1",
+  "title": "T21 — Jakość pojedynczego wymagania (pełny import autorski)",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "complete",
+  "limitations": [
+    "Pełny import autorskiego T21 v0.1: 32 itemy /128 rationale, 4 otwarte aktywności, 8 not, 3 comparisons, 2 worked scenarios, 8 korekt.",
+    "Całość oczekuje odrębnego review (QG-09, C-AC-12); publikacja review-only, zero dopuszczonych użyć uczniowskich.",
+    "Rodziny są propozycją autora; zero potwierdzonych niezależnych rodzin i zero chronionej rezerwy dla czytelnika źródeł.",
+    "Żadna forma U-TOPIC nie została dopuszczona; forms jest puste zgodnie ze źródłem.",
+    "Relacje w pakiecie obejmują instancje potrzebne funkcjom przyrostu (R10/R11/R14); pozostałe instancje rejestru §8.3 pozostają w źródle."
+  ],
+  "status": {
+    "authoring": "complete",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md",
+      "sha256": "365e60dda5f9a47697c7f3170c938d821187c7658b38f7e8eb894f5621ccf965",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "2"
+    },
+    {
+      "path": "references/content/T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md",
+      "sha256": "ba95c577e0e251d23d227ec6289d96dfbdce501df24c384dc95e0b1883e6c57f",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "2"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T21-01",
+      "revision": "r1",
+      "description": "Rozpoznaje sześć nazw kryteriów jakości pojedynczego wymagania i odtwarza ich znaczenia.",
+      "eoRefs": [
+        {
+          "id": "EO3.8.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T21-01",
+          "label": "adequate"
+        },
+        {
+          "id": "ZAK-T21-02",
+          "label": "necessary"
+        },
+        {
+          "id": "ZAK-T21-03",
+          "label": "unambiguous"
+        },
+        {
+          "id": "ZAK-T21-04",
+          "label": "complete"
+        },
+        {
+          "id": "ZAK-T21-05",
+          "label": "understandable"
+        },
+        {
+          "id": "ZAK-T21-06",
+          "label": "verifiable"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T21-02",
+      "revision": "r1",
+      "description": "Rozpoznaje dwie najważniejsze cechy (adekwatność i zrozumiałość) oraz ich znaczenie wobec pozostałych.",
+      "eoRefs": [
+        {
+          "id": "EO3.8.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T21-07",
+          "label": "szczególna para: adekwatność i zrozumiałość"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T21-03",
+      "revision": "r1",
+      "description": "Pamięta zalecany charakter listy i kontekst wartości (stopień spełnienia względem wartości wymagania).",
+      "eoRefs": [
+        {
+          "id": "EO3.8.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T21-08",
+          "label": "zalecana lista i wartość"
+        }
+      ]
+    },
+    {
+      "id": "AUX-T21-03",
+      "revision": "r1",
+      "description": "Pomocnicze L2 bez oficjalnego EO: rozdziela oś typu oczekiwania od jakości zapisu oraz jednostki oceny kompletności.",
+      "eoRefs": [],
+      "aspects": []
+    },
+    {
+      "id": "AUX-T21-04",
+      "revision": "r1",
+      "description": "Pomocnicze L2 bez oficjalnego EO: odróżnia zgodność z potrzebą od możliwości sprawdzenia na jawnych danych.",
+      "eoRefs": [],
+      "aspects": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T21-CAT",
+      "title": "CPRE Download Center",
+      "version": "unversioned",
+      "url": "https://cpre.ireb.org/en/downloads-and-resources/downloads",
+      "location": "Wpisy Syllabus 3.3.0, Glossary 2.2.0 i Regulations 5.6.2; Handbook 1.3.2 tylko jako metadana",
+      "attribution": "IREB e.V., [CPRE Download Center](https://cpre.ireb.org/en/downloads-and-resources/downloads), strona bez rewizji",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    },
+    {
+      "id": "SRC-T21-SEN",
+      "title": "CPRE Foundation Level Syllabus EN 3.3.0",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "s.1–2; s.4–5; s.19; §3.8 s.29–30; §1.1 s.11–12 dla comparison",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal, [CPRE Foundation Level Syllabus EN 3.3.0](https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf), 1.04.2026",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    },
+    {
+      "id": "SRC-T21-SPL",
+      "title": "Syllabus PL 3.3.0",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "s.1–2 i 4; s.19–20; §3.8 s.30–31; §1.1 s.11–12",
+      "attribution": "IREB e.V., ci sami autorzy; przekład SJSI: Radosław Grębski, Joanna Kalabińska, konsultacja Iwona Kolasa, redakcja Monika Petri-Starego; [Syllabus PL 3.3.0](https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf), 1.04.2026",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    },
+    {
+      "id": "SRC-T21-GEN",
+      "title": "Glossary EN 2.2.0",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/bb302c52fe-1787039949/ireb_cpre_glossary_en_2.2.pdf",
+      "location": "s.1–2, 5 i 8; adequacy s.8; completeness s.11; necessity s.20; quality criteria i quality requirement s.23; requirement s.24; stakeholder s.28; unambiguity i understandability s.32; verifiability s.34",
+      "attribution": "Martin Glinz / IREB e.V., [Glossary EN 2.2.0](https://hub.ireb.org/media/pages/resources/cpre-glossary/bb302c52fe-1787039949/ireb_cpre_glossary_en_2.2.pdf), 1.10.2025",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    },
+    {
+      "id": "SRC-T21-GPL",
+      "title": "Glossary PL 2.2.0",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf",
+      "location": "s.1–2, 5 i 8; adekwatność s.8; interesariusz s.14; jednoznaczność s.15; kompletność s.16; konieczność i kryteria jakości s.17; weryfikowalność s.32; wymaganie s.33; wymaganie jakościowe/funkcjonalne s.34; zrozumiałość s.36",
+      "attribution": "Martin Glinz / IREB e.V.; terminy PL Monika Petri-Starego i Karolina Zmitrowicz, [Glossary PL 2.2.0](https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf), 1.10.2025",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    },
+    {
+      "id": "SRC-T21-REG",
+      "title": "Foundation Level and RE@Agile Primer — Examination Regulations EN 5.6.2",
+      "version": "5.6.2",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-and-agile-primer-examination-regulations/a7858da873-1787039946/cpre_fl_and_primer_examination_regulations_en_v5.6.2.pdf",
+      "location": "s.1–6, V-FULL; scoring §2 s.4–6",
+      "attribution": "IREB e.V., [Foundation Level and RE@Agile Primer — Examination Regulations EN 5.6.2](https://hub.ireb.org/media/pages/resources/cpre-foundation-level-and-agile-primer-examination-regulations/a7858da873-1787039946/cpre_fl_and_primer_examination_regulations_en_v5.6.2.pdf), 5.02.2024",
+      "usageNote": "Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-T21-01",
+      "revision": "r1",
+      "statementMarkdown": "Adekwatność dotyczy rzeczywistych, uzgodnionych potrzeb, a nie tylko poprawności języka",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.29"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "adequacy s.8"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.8"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-02",
+      "revision": "r1",
+      "statementMarkdown": "Konieczność dotyczy niezbędności danego wymagania w specyfikacji rozpatrywanego systemu",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.29"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "necessity s.20"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "konieczność s.17"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-03",
+      "revision": "r1",
+      "statementMarkdown": "Jednoznaczność dotyczy niedopuszczania różnych odczytań wymagania przez różne osoby",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.29"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "unambiguity s.32"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.15"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-04",
+      "revision": "r1",
+      "statementMarkdown": "Kompletność jednego wymagania to samowystarczalność jego opisu; drugi sens kompletności dotyczy zbioru",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.30"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30–31"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "completeness s.11, sensy 1/2"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.16"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-05",
+      "revision": "r1",
+      "statementMarkdown": "Zrozumiałość ocenia się względem zamierzonych odbiorców",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.30"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "understandability s.32"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.36"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-06",
+      "revision": "r1",
+      "statementMarkdown": "Weryfikowalność oznacza możliwość sprawdzenia spełnienia w zrealizowanym systemie; pomiar nie jest jedyną drogą",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.30"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        },
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "verifiability s.34 i uwaga o testach, pomiarach, inspekcjach"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.32"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-07",
+      "revision": "r1",
+      "statementMarkdown": "Dla pojedynczego wymagania szczególną wagę mają adekwatność i zrozumiałość; pozostałe cechy ich nie zastępują",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.29"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-08",
+      "revision": "r1",
+      "statementMarkdown": "Lista jest zalecana; w podejściu wartościowym stopień spełnienia odnosi się do wartości; większa wartość zwiększa znaczenie jakości dla ograniczenia ryzyka",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§3.8 s.29"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "s.30"
+        }
+      ]
+    },
+    {
+      "id": "REG-T21-TYPE",
+      "revision": "r1",
+      "statementMarkdown": "Typ quality requirement i jakość dowolnego wymagania to dwie osie opisu",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T21-GEN",
+          "location": "quality requirement s.23, requirement s.24, quality criteria s.23"
+        },
+        {
+          "sourceId": "SRC-T21-GPL",
+          "location": "s.33–34"
+        },
+        {
+          "sourceId": "SRC-T21-SEN",
+          "location": "§1.1 i §3.8"
+        },
+        {
+          "sourceId": "SRC-T21-SPL",
+          "location": "§1.1 i §3.8"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "INTRO-T21",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Wejście do tematu T21",
+      "bodyMarkdown": "„W tym temacie poznasz kryteria opisujące jakość jednego wymagania. Będziesz rozpoznawać ich znaczenia, odróżniać podobne nazwy i pamiętać, jak stosować zalecaną listę. Możesz zacząć od próby albo od krótkiego objaśnienia. Wynik dotyczy tego tematu; nie potwierdza umiejętności napisania całej specyfikacji”.\n\nWejście przez pytanie nie pokazuje przed odpowiedzią nazw kryteriów, poprawnej pary ani streszczenia rozwiązania. Powyższa nota celu nie jest hintem do konkretnej opcji, ale jej ekspozycję należy odnotować. W Sprawdzeniu używa się neutralnego komunikatu z §9, bez treści edukacyjnej.",
+      "ruleIds": [],
+      "contactScopes": [],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §3.1 INTRO-T21"
+    },
+    {
+      "id": "TERM-T21",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Terminologia PL/EN tematu T21",
+      "bodyMarkdown": "| Termin PL w nauce | EN przymiotnik / nazwa cechy | Status i lokalizacja | Formy wymagające ostrożności |\n|---|---|---|---|\n| adekwatne / adekwatność wymagania | adequate / adequacy of a requirement | Przymiotnik SPL §3.8 s.30; rzeczownik GPL s.8 / GEN s.8 | „Poprawne” bez kontekstu jest zbyt szerokie; nie zastępuje nazwy kryterium |\n| niezbędne / konieczność wymagania | necessary / necessity of a requirement | Przymiotnik SPL s.30; rzeczownik GPL s.17 / GEN s.20 | „Niezbędność” dopuszczalny alias dydaktyczny; Glossary używa „konieczność” |\n| jednoznaczne / jednoznaczność wymagań | unambiguous / unambiguity of requirements | SPL s.30; GPL s.15 / GEN s.32 | „Łatwe do przeczytania” nie wystarcza |\n| kompletne / kompletność wymagań, sens pojedynczy | complete / completeness of requirements, sense 1 | SPL s.30; GPL s.16 / GEN s.11 | „Niezależne” w PL nie oznacza zakazu powiązań ani zupełności systemu |\n| zrozumiałe / zrozumiałość | understandable / understandability | SPL s.30; GPL s.36 / GEN s.32 | Nie utożsamiać z usability systemu ani zrozumieniem autora |\n| weryfikowalne / weryfikowalność wymagań | verifiable / verifiability of requirements | SPL s.30; GPL s.32 / GEN s.34 | „Mierzalne” może być węższe; „już zweryfikowane” opisuje wynik, nie możliwość |\n| wymaganie | requirement | GPL s.33 / GEN s.24 | Własny opis w tym pliku: treść oczekiwania oraz jej zapis, zależnie od zdania |\n| interesariusz | stakeholder | GPL s.14 / GEN s.28 | Nie tylko bezpośredni użytkownik systemu |\n| wymaganie jakościowe | quality requirement | GPL s.34 / GEN s.23 | Typ wymagania o właściwości jakościowej systemu, nie pochwała jakości zapisu |\n| wymaganie funkcjonalne | functional requirement | GPL s.34; SEN/SPL §1.1 | Wymaganie funkcjonalne także podlega kryteriom T21 |\n| kryteria jakości w IW | quality criteria in RE | GPL s.17 / GEN s.23 | Nie utożsamiać z samymi kryteriami akceptacji konkretnego rozwiązania |\n\nPierwsze sześć wierszy terminów ma adresy TERM-T21-01–06, z końcówką -PL albo -EN dla odpowiedniej etykiety. CON-T21-01–06 identyfikują odpowiadające im sensy rozwinięte w N01–06.\n\nDla sześciu rzeczownikowych haseł, requirement, stakeholder, quality requirement i quality criteria potwierdzono oznaczenie pogrubieniem w części definicyjnej Glossary — w znaczeniu foundational podanym w legendzie EN s.8. Potwierdzenie dotyczy tych dziesięciu haseł, nie całego słownika. Nie tworzono nowego oficjalnego EO. Wymaganie funkcjonalne jest dodatkową podstawą comparison z istniejącego C-P; nie dodaje odrębnej oceny całego EO1.1.2. Potrzebne kontrole typografii i par PL/EN zestawia QA.",
+      "ruleIds": [],
+      "contactScopes": [],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §3.2 TERM-T21"
+    },
+    {
+      "id": "PRE-T21",
+      "revision": "r1",
+      "kind": "prerequisite",
+      "title": "Potrzebna podstawa: wymaganie i interesariusz",
+      "bodyMarkdown": "Do zrozumienia adekwatności potrzebne jest rozumienie, że wymaganie wyraża potrzebę lub oczekiwaną zdolność/właściwość, a interesariusz jest osobą lub organizacją wpływającą na wymagania albo dotkniętą działaniem systemu. Sygnał braku: uznanie poprawnej gramatyki za pełną zgodność z potrzebą albo uznanie wyłącznie użytkowników za interesariuszy. Minimalne wsparcie stanowią dwa poprzednie zdania, nie cała lekcja T01/T24.\n\nR14 proponuje się wyłącznie jako requirement/stakeholder → czynność rozpoznania sensu adequacy, z argumentem, że bez rozumienia potrzeb i ich podmiotu nie można odczytać tego kryterium. Gdy podstawa jest znana, można ją pominąć. Bez odrębnego review R14 nie wymusza niczego. T10 i T22 są odsyłaczami do sąsiednich zakresów, nie obowiązkowymi etapami przed T21.",
+      "ruleIds": [
+        "REG-T21-01"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §3.3 PRE-T21",
+      "prerequisiteCondition": "Tylko gdy niezrozumiałe są pojęcia potrzeby (wymaganie) i interesariusza; znana podstawa jest pomijalna. R14 bez review nie wymusza niczego.",
+      "skippable": true
+    },
+    {
+      "id": "N-T21-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Adekwatne / adequate",
+      "bodyMarkdown": "**Rdzeń:** zapis ma odzwierciedlać to, czego interesariusze rzeczywiście potrzebują i co uzgodnili. Sama precyzja sformułowania nie poświadcza adekwatności. **Pytanie pomocnicze autora:** „Czy to rzeczywiście ta potrzeba, a nie tylko dobrze napisane inne oczekiwanie?”. REG01 / CL01.\n\nNie należy uznawać wymagania za nieadekwatne tylko dlatego, że w krótkim opisie nie podano protokołu uzgodnienia. W przykładzie trzeba dać dowód zgodności albo rozbieżności z potrzebą; bez niego wynik to „brak danych”, nie negatywna ocena. Adekwatność nie jest głosowaniem nad gramatyką ani samą wykonalnością techniczną.\n\n**EX-T21-01 [N]:** opiekunowie skrytki uzgodnili, że potwierdzenie odbioru ma trafić do osoby odbierającej paczkę. Wymaganie „Po odebraniu paczki system wysyła potwierdzenie na zapisany adres e-mail tej osoby” odzwierciedla podaną, uzgodnioną potrzebę w tym zakresie. Nie oceniamy tu wszystkich innych kryteriów.\n\n**CE-T21-01 [N]:** przy tej samej jawnej potrzebie zapis wymaga wysłania potwierdzenia wyłącznie do administracji, która nie przekazuje go odbierającemu. Obie strony potwierdzają, że taki przebieg nie realizuje uzgodnionej potrzeby. Można go bardzo dokładnie przetestować, ale to nie naprawia adekwatności. Obala uogólnienie „jednoznaczny i sprawdzalny zapis zawsze jest adekwatny”.",
+      "ruleIds": [
+        "REG-T21-01"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-01"
+    },
+    {
+      "id": "N-T21-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Niezbędne / necessary",
+      "bodyMarkdown": "**Rdzeń:** pytamy o potrzebę obecności tego konkretnego wymagania w specyfikacji rozpatrywanego systemu. Kryterium odnosi się do konieczności treści, nie tylko jej elegancji lub popularności. REG02 / CL02.\n\nTo nie jest automatyczna reguła priorytetu „tylko najwyższy priorytet = necessary”. Niski priorytet realizacji nie dowodzi zbędności treści w specyfikacji. Brak wyjaśnienia celu w zadaniu też nie dowodzi zbędności. Odrębność konieczności i adekwatności pomaga zadawać różne pytania, ale nie oznacza, że te cechy są zawsze niezależne statystycznie lub logicznie.\n\n**EX-T21-02 [N]:** uzgodniony zakres obejmuje rejestrację wydania sprzętu z identyfikatorem odbierającego; bez tego nie da się ustalić, komu sprzęt wydano. Wymaganie rejestrowania tego identyfikatora jest potrzebnym składnikiem tak opisanej specyfikacji.\n\n**CE-T21-02 [N]:** interesariusze uzgodnili, że system nie będzie wysyłał żadnych powiadomień; w tym zakresie nie ma też przepisu ani zależności wymagającej takiej funkcji. Do specyfikacji omyłkowo dodano pozostałość z innego projektu: wysyłanie nocnego e-maila testowego. W opisie jawnie ustalono, że usunięcie tego żądania nie narusza żadnej potrzeby ani obowiązku tego systemu. Łatwość wykonania takiej funkcji nie czyni jej niezbędną. Obalane uogólnienie: „skoro jest łatwe i ma mały koszt, powinno zostać jako necessary”. To lokalna ilustracja, a nie metoda rozstrzygania realnej konieczności bez analizy zależności.",
+      "ruleIds": [
+        "REG-T21-02"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-02"
+    },
+    {
+      "id": "N-T21-03",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Jednoznaczne / unambiguous",
+      "bodyMarkdown": "**Rdzeń:** różne osoby nie powinny otrzymywać różnych znaczeń z tego samego wymagania. Chodzi o możliwe interpretacje treści, nie liczbę zdań ani ich długość. REG03 / CL03.\n\nKrótkie zdanie może być niejednoznaczne. Zdanie z liczbą może mieć niejasną jednostkę, zakres lub punkt odniesienia. To, że autor i jeden odbiorca zrozumieli je tak samo, nie dowodzi braku innych rozsądnych odczytań. Brak jednoznaczności może współwystępować z innymi wadami; nie należy w zadaniu wymuszać jedynej wady, gdy przesłanki wykazują kilka.\n\n**EX-T21-03 [N]:** „Dla nowego zgłoszenia pole »Termin« przechowuje datę wymaganego zakończenia obsługi, a nie datę jego utworzenia”. To autorska ilustracja usunięcia dwóch jawnie wskazanych interpretacji jednego pola; nie twierdzi się, że sam fragment wystarcza jako kompletne wymaganie systemowe.\n\n**CE-T21-03 [N]:** „Pokaż ostatnie zgłoszenie”. W opisie nie ustalono, czy „ostatnie” odnosi się do utworzenia, edycji czy zamknięcia; każde z tych znaczeń jest dopuszczalne dla odbiorców. Krótkość i codzienne słowa nie eliminują różnych odczytań. Obala „krótkie i proste zdanie musi być jednoznaczne”.",
+      "ruleIds": [
+        "REG-T21-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-03"
+    },
+    {
+      "id": "N-T21-04",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Kompletne / complete, pojedyncze wymaganie",
+      "bodyMarkdown": "**Rdzeń:** opis ma zawierać treść potrzebną do samodzielnego uchwycenia tego wymagania. Nie trzeba z niego odtwarzać wszystkich wymagań systemu. EN określa to jako self-contained; PL §3.8 używa objaśnienia „niezależne”. REG04 / CL04.\n\nNie wyprowadzamy stąd zakazu glossary, traceability, zależności biznesowych ani powiązań między wymaganiami. Nie zakładamy też, że samo dodanie linku uzupełnia dowolny brak. Uzgodnione pojęcie i brakująca normatywna decyzja to różne sytuacje. Bezpieczny przypadek braku to np. nieokreślone „odpowiednio”, „tak samo jak poprzednio” bez dostępnego odniesienia albo brak niezbędnego warunku. Dokładna granica dopuszczalnych odwołań wymaga review interpretacji, a nie intuicyjnego klucza.\n\n**EX-T21-04 [N]:** „Na żądanie zalogowanego magazyniera system zapisuje dla wskazanego wydania identyfikator odbierającego podany w formularzu wydania”. W przyjętym przykładzie wszystkie użyte role, pola i wskazania są jawne; pokazuje to samowystarczalność treści jednej reguły zapisu. Nie poświadcza kompletności całego systemu magazynowego.\n\n**CE-T21-04 [N]:** „W drugim przypadku system robi to samo”. W materiale nie opisano przypadków, czynności ani żadnego dostępnego odniesienia. Czytelnik nie może ustalić wymaganej czynności z dostarczonej treści. Jedno zdanie i nadany identyfikator nie uzupełniają brakującej treści. Obala „każdy zapis w jednym zdaniu jest kompletnym wymaganiem”.",
+      "ruleIds": [
+        "REG-T21-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-04"
+    },
+    {
+      "id": "N-T21-05",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Zrozumiałe / understandable",
+      "bodyMarkdown": "**Rdzeń:** treść ma być przyswajalna dla jej zamierzonych odbiorców. Zrozumienie autora nie wystarcza. Właściwe terminy specjalistyczne mogą pomagać kompetentnym odbiorcom; sama obecność skrótu nie dowodzi wady. REG05 / CL05.\n\nZrozumiałość i jednoznaczność mają różne osie. Dwa odczytania prostego zdania są problemem jednoznaczności. Ścisły zapis, którego docelowi odbiorcy nie umieją odczytać, może mieć problem zrozumiałości. Nie należy uznawać każdego wymagania za niezrozumiałe dla całej ludzkości tylko dlatego, że używa wiedzy dziedzinowej.\n\n**EX-T21-05 [N]:** „Po zatwierdzeniu formularza system pokazuje numer zgłoszenia”. W scenariuszu przyszli odbiorcy dokumentu znają formularz i numer zgłoszenia oraz potrafią własnymi słowami odtworzyć tę czynność. Przesłanka o odbiorcach wspiera pozytywną ilustrację zrozumiałości; nie jest wynikiem rzeczywistego badania użytkowników.\n\n**CE-T21-05 [N]:** jedynymi zamierzonymi odbiorcami są pracownicy obsługi, którzy nie znają użytej notacji formalnej; zapis nie ma wyjaśnienia, a w scenariuszu potwierdzono, że nie mogą go odczytać. To, że autor uznaje zapis za matematycznie ścisły, nie zapewnia zrozumiałości dla tych odbiorców. Obala „jeśli autor rozumie i zapis jest ścisły, kryterium jest spełnione”.",
+      "ruleIds": [
+        "REG-T21-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-05"
+    },
+    {
+      "id": "N-T21-06",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Weryfikowalne / verifiable",
+      "bodyMarkdown": "**Rdzeń:** musi istnieć możliwość sprawdzenia, czy zrealizowany system spełnia wymaganie. To właściwość wymagania, a nie informacja, że sprawdzenie już się odbyło lub zakończyło sukcesem. REG06 / CL06.\n\nSprawdzenie może użyć testu, pomiaru albo inspekcji. Sama liczba nie gwarantuje rozstrzygalności bez znanej jednostki i warunków; brak liczby nie wyklucza sprawdzenia zachowania. Nie wolno dopisać w rationale nieobecnego progu lub procedury, aby uratować klucz. Dobór pełnego procesu walidacji należy do T28/T29; tu kontrolujemy sens słowa.\n\n**EX-T21-06 [N]:** „Po wybraniu polecenia »Wyloguj« system zamyka bieżącą sesję, a ponowne otwarcie chronionej strony wymaga zalogowania”. Dla opisanej czynności można wykonać scenariusz sprawdzający dostęp po wylogowaniu. Brak wartości liczbowej nie uniemożliwia obserwacji spełnienia.\n\n**CE-T21-06 [N]:** „Raport ma wyglądać wspaniale”. Nie podano wzorca, kryterium akceptacji ani uzgodnionego sposobu rozstrzygnięcia; w scenariuszu odbiorcy oceniają te same raporty sprzecznie. Nie można rozstrzygnąć spełnienia na podanych danych. Obala „sama możliwość zapytania kogokolwiek o opinię gwarantuje verifiability”. Nie oznacza to zakazu uzgodnionej oceny eksperckiej o jawnych kryteriach.",
+      "ruleIds": [
+        "REG-T21-06"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-06"
+    },
+    {
+      "id": "N-T21-07",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Szczególna waga adekwatności i zrozumiałości",
+      "bodyMarkdown": "**Rdzeń:** przy rozpoznawaniu szczególnie ważnej pary wybierz adekwatność i zrozumiałość. Precyzyjne i sprawdzalne żądanie może kierować zespół ku niewłaściwej potrzebie; treść niezrozumiała dla zamierzonych odbiorców nie zapewnia porozumienia. REG07 / CL07. Nie zamieniaj tej wskazanej w źródle pary na własny ranking sześciu pozycji.\n\n**Przypomnienie EX-T21-01 [N], bez nowego przypadku:** w EX01 treść dotyczy właściwego odbiorcy potwierdzenia i jest zrozumiała dla wskazanych osób. Te dwie cechy uzasadniają podany w źródle priorytet; reszta listy nadal ma znaczenie.\n\n**Konsekwencja CE-T21-01 [N], bez nowego kontrprzykładu:** zespół perfekcyjnie sprawdził działanie wysyłania potwierdzenia do administracji z CE01, ale potrzeba nadal dotyczy osoby odbierającej. Weryfikacja wykonania niewłaściwego oczekiwania nie zastępuje adekwatności. Obala „spełnienie pozostałych kryteriów kompensuje brak jednego z dwóch najważniejszych”.",
+      "ruleIds": [
+        "REG-T21-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-07"
+    },
+    {
+      "id": "N-T21-08",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Zalecana lista i wartość",
+      "bodyMarkdown": "**Rdzeń:** poznaj zalecane sześć kryteriów, ale nie traktuj ich jako bezwarunkowego nakazu identycznego stopnia spełnienia we wszystkich sytuacjach. W podejściu zorientowanym na wartość stopień spełnienia odnosi się do wartości wymagania; wraz z wartością rośnie znaczenie jakości dla ograniczenia ryzyka niepowodzenia. REG08 / CL08.\n\nTo nie jest zgoda na dowolną wadę ani recepta „niska wartość = można nie uzgadniać potrzeb”. Nie ma tu oficjalnego procentu jakości, punktowej sumy sześciu cech ani zasady „pięć z sześciu wystarcza”. Dobór praktycznej staranności wymaga kontekstu; T21 nie wyznacza progu akceptacji zawodowej. Glossary quality criteria (CL11) dodatkowo wyjaśnia kontekstowy charakter zestawów kryteriów. Nie przypisujemy syllabus deklaracji, że jego lista stanowi pełny katalog wszystkich możliwych cech.\n\n**EX-T21-08 [N]:** organizacja dla wymagania mającego dużą wartość biznesową planuje silniejsze potwierdzenie potrzeb, staranniejszy przegląd treści i pewniejszy sposób kontroli spełnienia. To ilustracja kierunku zależności opisanego w §3.8; nie wylicza właściwego budżetu ani nie ustanawia normy liczby review.\n\n**BOUND-T21-08 [N] — obalenie źródłowe nadmiernej reguły:** „Każde wymaganie, bez względu na wartość i kontekst, musi uzyskać identyczny stopień wszystkich sześciu cech; inaczej sylabus zabrania jego użycia”. To autorskie nadmierne uogólnienie sprzeczne z warunkiem opisanym w §3.8. Kontrprzykładem jest sam dopuszczony w źródle kontekst różnego stopnia spełnienia; nie wymyśla się konkretnego przypadku, w którym dowolna wada byłaby z tego powodu bezpieczna.",
+      "ruleIds": [
+        "REG-T21-08"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §4 N-T21-08"
+    },
+    {
+      "id": "CMP-T21-01",
+      "revision": "r1",
+      "kind": "comparison",
+      "title": "Jakość wymagania a quality requirement",
+      "bodyMarkdown": "**Wspólna oś:** czego dotyczy ocena — treści oczekiwania wobec systemu czy sposobu, w jaki to oczekiwanie uchwycono i opisano? CL09, REG-T21-TYPE; reuse C-P/REG-P1, bez zmiany KRY-P01.\n\n| Przypadek | Typ oczekiwania | Pytanie o jakość zapisu |\n|---|---|---|\n| „Po wyborze »Usuń szkic« system usuwa wskazany szkic” | Funkcjonalne: opisuje zachowanie | Nadal pytamy o adekwatność, konieczność, jednoznaczność, kompletność, zrozumiałość i weryfikowalność |\n| „Dla uzgodnionego obciążenia czas utworzenia podglądu nie przekracza 2 s” | Jakościowe: dotyczy cechy czasowej działania | Liczba sama nie zapewnia adekwatności; potrzeba i odbiorcy wymagają osobnej kontroli |\n\nWłasny przykład obu stron pokazuje, że „jakościowe” nie oznacza automatycznie „dobrej jakości”, a „funkcjonalne” nie oznacza „poza kryteriami jakości”. Zadania T21 nie przejmują z tego powodu pomiaru całego EO1.1.2. Jeżeli agent chce uczyć klasyfikacji rodzajów, powinien użyć właściwego zakresu T02/C-P. Ten comparison wspiera rozpoznawanie sensu określenia „jakość wymagania”.",
+      "ruleIds": [
+        "REG-T21-TYPE"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §5 CMP-T21-01"
+    },
+    {
+      "id": "CMP-T21-02",
+      "revision": "r1",
+      "kind": "comparison",
+      "title": "Kompletność pojedyncza a kompletność zbioru",
+      "bodyMarkdown": "**Wspólna oś:** jednostka, o której wypowiadamy sąd. REG04, CL04; SEN §3.8 s.30, SPL s.30–31, Glossary completeness sensy 1/2.\n\n| Jednostka i przypadek | Co trzeba sprawdzić | Czego wynik nie dowodzi |\n|---|---|---|\n| Jedna reguła zapisu identyfikatora odbierającego, z jawną rolą, wejściem i wynikiem | Czy opis tej reguły jest samowystarczalny | Że opisano całą obsługę wydań |\n| Zestaw wymagań dla obsługi wydań; jawnie wiadomo, że pominięto istotne, uzgodnione wymaganie zwrotu sprzętu | Czy zbiór uwzględnia wszystkie znane istotne wymagania w swoim zakresie | Że każdy obecny zapis jest niekompletny jako pojedyncze wymaganie |\n\nW jednym artefakcie mogą istnieć poprawne pojedyncze wymagania i luka w zbiorze. To comparison wspierające T21, nie kontrola wszystkich kryteriów T22. Nie dodaje się tu punktów za spójność, modyfikowalność czy zgodność ze standardem.",
+      "ruleIds": [
+        "REG-T21-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §5 CMP-T21-02"
+    },
+    {
+      "id": "CMP-T21-03",
+      "revision": "r1",
+      "kind": "comparison",
+      "title": "Adekwatność a sama możliwość weryfikacji",
+      "bodyMarkdown": "**Wspólna oś:** zgodność z potrzebą versus możliwość potwierdzenia wykonania zapisanego oczekiwania. REG01/REG06/REG07, CL01/06/07.\n\n| Przypadek | Adekwatność | Możliwość weryfikacji |\n|---|---|---|\n| Uzgodniono potwierdzenie dla odbierającego; zapis i test odnoszą się do tego odbiorcy | W podanym zakresie zgodne z potrzebą | Można sprawdzić wysłanie do wskazanej osoby |\n| Uzgodniono potwierdzenie dla odbierającego; zapis nakazuje wysłać je wyłącznie do administracji; wykazano, że nie spełnia to potrzeby | W podanym zakresie niezgodne z potrzebą | Nadal można sprawdzić działanie opisane w błędnym wymaganiu |\n\nW drugim wierszu test może wykazać poprawną realizację niewłaściwego wymagania. Nie mówi to, że weryfikacja jest zbędna: stwierdza tylko, że nie zastępuje adekwatności. Nie utożsamiać weryfikowalności z już wykonanym testem.",
+      "ruleIds": [
+        "REG-T21-01",
+        "REG-T21-06",
+        "REG-T21-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §5 CMP-T21-03"
+    },
+    {
+      "id": "WS-T21-01",
+      "revision": "r1",
+      "kind": "worked-example",
+      "title": "Jedna potrzeba, kilka odrębnych pytań",
+      "bodyMarkdown": "**Jawne dane:** interesariusze skrytki uzgodnili, że osoba odbierająca paczkę powinna dostać e-mail z potwierdzeniem. Mają rozpoznany adres odbierającego. Odrzucili wysyłkę wyłącznie do administracji. Dokument ma być czytany przez koordynatorów znających te pojęcia. Rozpatrz zapis: „Po odebraniu paczki system wysyła potwierdzenie wyłącznie do administracji”.\n\n1. Przedmiot zapisu to zachowanie, więc nie należy mylić go z typem quality requirement. To tło, a nie punkt pomiarowy T21.\n2. Jawne porównanie z uzgodnioną potrzebą wykazuje rozbieżność adresata: podstawa negatywnej oceny adekwatności jest dostępna przed wnioskiem.\n3. Można sprawdzić, czy system wysyła wiadomość do administracji. Nie potrzeba wyniku takiego sprawdzenia, aby mówić o samej możliwości weryfikacji.\n4. Z pkt 3 nie wynika, że wymaganie staje się adekwatne. REG07 wskazuje, dlaczego sama testowalność nie kompensuje tej wady.\n5. Nie orzekamy o konieczności, kompletności wszystkich wymagań ani pełnym spełnieniu każdej cechy tylko na podstawie tego fragmentu.\n\nOglądanie tego toku to instrukcja; nie jest samodzielnym wykonaniem L2 ani L3.",
+      "ruleIds": [
+        "REG-T21-01",
+        "REG-T21-06",
+        "REG-T21-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06"
+        },
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §5 WS-T21-01"
+    },
+    {
+      "id": "WS-T21-02",
+      "revision": "r1",
+      "kind": "worked-example",
+      "title": "Różny poziom sądu o kompletności",
+      "bodyMarkdown": "**Jawne dane:** specyfikacja obsługi wydania zawiera jedną samowystarczalną regułę zapisu identyfikatora odbierającego z EX04. Wiadomo też, że zakres obejmuje zwrot sprzętu, lecz uzgodnionego wymagania zwrotu w specyfikacji nie ma.\n\n1. Jednostką pierwszego sądu jest jedna reguła zapisu, a drugiego — cały zbiór obsługi wydania i zwrotu.\n2. Obecność jasnej reguły zapisu nie wypełnia nieobecnego wymagania zwrotu. Nie potwierdza kompletności zbioru.\n3. Pominięcie zwrotu nie czyni automatycznie opisu zapisu identyfikatora niekompletnym we własnym zakresie.\n4. Powrót do T21 zatrzymuje się na znaczeniu complete dla jednego wymagania. Ocena pełnego T22 pozostaje osobnym flow.",
+      "ruleIds": [
+        "REG-T21-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04"
+        }
+      ],
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §5 WS-T21-02"
+    }
+  ],
+  "questions": [
+    {
+      "id": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które kryterium jakości pojedynczego wymagania odnosi się do zgodności z rzeczywistymi, uzgodnionymi potrzebami interesariuszy?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Konieczność."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Adekwatność."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Jednoznaczność."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Weryfikowalność."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Konieczność odnosi się do niezbędności danego wymagania w specyfikacji. Polecenie pyta o zgodność treści z potrzebami, dlatego ta nazwa nie jest właściwym wyborem.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1, RAT-T21-B01-a"
+        },
+        {
+          "id": "RAT-T21-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "W poleceniu wskazano rzeczywiste i uzgodnione potrzeby. To rozstrzygający przedmiot adekwatności, dlatego należy wybrać tę odpowiedź.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1, RAT-T21-B01-b"
+        },
+        {
+          "id": "RAT-T21-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Jednoznaczność dotyczy różnych interpretacji zapisu. Brak takich różnic nie jest sam w sobie zgodnością z rzeczywistymi potrzebami, o którą pyta polecenie.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1, RAT-T21-B01-c"
+        },
+        {
+          "id": "RAT-T21-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Weryfikowalność odnosi się do możliwości sprawdzenia spełnienia. Można sprawdzić realizację niewłaściwej potrzeby, więc nazwa nie odpowiada wskazanemu znaczeniu.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1, RAT-T21-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-01",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1"
+    },
+    {
+      "id": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń każdą tezę dotyczącą adekwatności pojedynczego wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Adekwatność odnosi się do potrzeb rzeczywistych i uzgodnionych."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Poprawność gramatyczna sama wystarcza do uznania wymagania za adekwatne."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Adekwatność nie oznacza wyłącznie technicznej możliwości realizacji wymagania."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza wymienia oba warunki sensu adekwatności; odpowiada regule, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1, RAT-T21-F01-1"
+        },
+        {
+          "id": "RAT-T21-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Teza zastępuje zgodność z potrzebami własnością języka. Reguła nie daje takiej równoważności, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1, RAT-T21-F01-2"
+        },
+        {
+          "id": "RAT-T21-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Definicja dotyczy rzeczywistych, uzgodnionych potrzeb; sama wykonalność opisuje inny przedmiot. Teza poprawnie rozdziela te znaczenia, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1, RAT-T21-F01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-01",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1"
+    },
+    {
+      "id": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia prawidłowo opisują adekwatność pojedynczego wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Ocena dotyczy tego, czy zapis trafnie odzwierciedla rzeczywiste, uzgodnione potrzeby."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Ściśle opisane wymaganie może nadal nie odpowiadać rzeczywistej, uzgodnionej potrzebie."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Uzgodnienie treści z dowolną osobą automatycznie dowodzi jej zgodności z rzeczywistymi potrzebami interesariuszy."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Każde wymaganie z liczbą jest adekwatne."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Adekwatność jest nazwą braku różnych interpretacji zdania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Teza zachowuje przedmiot i warunki adekwatności, dlatego należy do klucza.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1, RAT-T21-G01-a"
+        },
+        {
+          "id": "RAT-T21-G01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Ścisłość nie zapewnia zgodności z potrzebą. Teza poprawnie rozdziela te cechy, dlatego należy do klucza.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1, RAT-T21-G01-b"
+        },
+        {
+          "id": "RAT-T21-G01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Teza usuwa warunki rzeczywistej potrzeby i właściwych interesariuszy. Sama dowolna zgoda ich nie potwierdza, dlatego nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1, RAT-T21-G01-c"
+        },
+        {
+          "id": "RAT-T21-G01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Liczba nie jest dowodem zgodności z potrzebą. Teza nie opisuje tego kryterium i nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1, RAT-T21-G01-d"
+        },
+        {
+          "id": "RAT-T21-G01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Brak różnych interpretacji to jednoznaczność. Opcja podmienia sens adekwatności, dlatego nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1, RAT-T21-G01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-01",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1"
+    },
+    {
+      "id": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie objaśnia adequacy of a requirement?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Sprawdza wyłącznie, czy opis używa uzgodnionego szablonu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Sprawdza, czy da się potwierdzić wykonanie zapisu w systemie."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Sprawdza, w jakim stopniu wymaganie wyraża to, czego interesariusze rzeczywiście potrzebują i co uzgodnili."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Sprawdza wyłącznie, czy wymaganie ma być zrealizowane w pierwszej iteracji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Szablon może porządkować zapis, lecz nie jest kryterium zgodności z rzeczywistą potrzebą. Słowo wyłącznie dodatkowo wyklucza istotny sens.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1, RAT-T21-D01-a"
+        },
+        {
+          "id": "RAT-T21-D01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To sens weryfikowalności. Polecenie dotyczy adekwatności, więc ta notatka nie odpowiada nazwie.",
+          "ruleIds": [
+            "REG-T21-01",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1, RAT-T21-D01-b"
+        },
+        {
+          "id": "RAT-T21-D01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Notatka obejmuje istotne warunki adekwatności i nie redukuje jej do języka lub sprawdzania systemu. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1, RAT-T21-D01-c"
+        },
+        {
+          "id": "RAT-T21-D01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Termin realizacji nie definiuje adekwatności. Priorytet dostarczenia nie rozstrzyga zgodności treści z potrzebą.",
+          "ruleIds": [
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-01"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1, RAT-T21-D01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-01",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1"
+    },
+    {
+      "id": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które kryterium określa, czy pojedyncze wymaganie jest niezbędną częścią specyfikacji rozpatrywanego systemu?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Zrozumiałość."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Weryfikowalność."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Kompletność."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Konieczność."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Zrozumiałość dotyczy odbiorców treści. Polecenie dotyczy potrzebnej obecności wymagania w specyfikacji, więc nie jest to właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1, RAT-T21-B02-a"
+        },
+        {
+          "id": "RAT-T21-B02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Możliwość sprawdzenia spełnienia jest inną cechą niż niezbędność wymagania. Ta nazwa nie odpowiada opisanemu znaczeniu.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1, RAT-T21-B02-b"
+        },
+        {
+          "id": "RAT-T21-B02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Kompletność pojedyncza dotyczy samowystarczalności opisu. Nie zastępuje pytania, czy jego treść jest potrzebną częścią specyfikacji.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1, RAT-T21-B02-c"
+        },
+        {
+          "id": "RAT-T21-B02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Polecenie opisuje niezbędność obecności konkretnego wymagania w specyfikacji; to sens necessity, po polsku konieczności.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1, RAT-T21-B02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-02",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1"
+    },
+    {
+      "id": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące kryterium necessary / konieczności wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Wymaganie z późniejszym terminem realizacji jest z definicji zbędne w specyfikacji."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Kryterium dotyczy tego, czy dane wymaganie jest potrzebnym składnikiem specyfikacji systemu."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Łatwość implementacji sama wystarcza do spełnienia kryterium necessary."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F02-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza utożsamia termin realizacji z koniecznością obecności treści. Definicja takiej równoważności nie ustanawia, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F02/r1, RAT-T21-F02-1"
+        },
+        {
+          "id": "RAT-T21-F02-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Teza zachowuje przedmiot necessity, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F02/r1, RAT-T21-F02-2"
+        },
+        {
+          "id": "RAT-T21-F02-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Koszt lub łatwość nie dowodzi niezbędności treści. Teza dodaje nieuprawniony warunek wystarczający, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F02/r1, RAT-T21-F02-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-02",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F02/r1"
+    },
+    {
+      "id": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia poprawnie opisują kryterium konieczności wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 2 punkty.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Necessary oznacza, że wymaganie nie zawiera żadnych terminów specjalistycznych."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Każde wymaganie już wpisane do dokumentu jest przez ten fakt necessary."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Weryfikowalność i konieczność są dwiema nazwami dokładnie tego samego kryterium."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Niski priorytet realizacji nie dowodzi sam w sobie zbędności wymagania w specyfikacji."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Przy tym kryterium rozpatruje się potrzebę obecności danego wymagania w specyfikacji systemu."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To rzekoma reguła językowa; brak terminów specjalistycznych nie definiuje potrzebnej obecności wymagania.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1, RAT-T21-G02-a"
+        },
+        {
+          "id": "RAT-T21-G02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Fakt zapisania nie stanowi dowodu niezbędności treści. Teza czyniłaby kontrolę pozorną, dlatego nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1, RAT-T21-G02-b"
+        },
+        {
+          "id": "RAT-T21-G02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Możliwość sprawdzenia i niezbędność składnika specyfikacji mają różne znaczenia. Teza jest niepoprawna.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1, RAT-T21-G02-c"
+        },
+        {
+          "id": "RAT-T21-G02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Definicja dotyczy niezbędności treści, a nie samego terminu. Teza zachowuje tę granicę i należy do klucza.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1, RAT-T21-G02-d"
+        },
+        {
+          "id": "RAT-T21-G02-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To opis istotnego przedmiotu necessity, dlatego należy do klucza.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1, RAT-T21-G02-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-02",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1"
+    },
+    {
+      "id": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie objaśnia necessity of a requirement?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Dotyczy tego, czy to konkretne wymaganie stanowi niezbędny składnik specyfikacji systemu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Dotyczy wyłącznie zrozumienia zapisu przez jego autora."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Dotyczy wyłącznie możliwości pomiaru czasu działania funkcji."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Dotyczy tego, czy cały zbiór zawiera wszystkie znane istotne wymagania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Notatka zachowuje jednostkę i znaczenie konieczności. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1, RAT-T21-D02-a"
+        },
+        {
+          "id": "RAT-T21-D02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To nie opis konieczności; dodatkowo zrozumiałość dotyczy zamierzonych odbiorców, nie tylko autora.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1, RAT-T21-D02-b"
+        },
+        {
+          "id": "RAT-T21-D02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To wąski aspekt potencjalnej weryfikacji, a nie niezbędność treści w specyfikacji.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1, RAT-T21-D02-c"
+        },
+        {
+          "id": "RAT-T21-D02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "To kompletność zbioru, czyli inna jednostka i inny przedmiot oceny. Nie objaśnia necessity pojedynczego wymagania.",
+          "ruleIds": [
+            "REG-T21-02",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-02"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1, RAT-T21-D02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-02",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1"
+    },
+    {
+      "id": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które kryterium jakości wymagania dotyczy wyeliminowania różnych interpretacji jego treści przez różne osoby?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Jednoznaczność."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Konieczność."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Adekwatność."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Kompletność zbioru."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B03-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Polecenie dotyczy różnic odczytania treści; to bezpośrednio sens unambiguity. Odpowiedź jest właściwa.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1, RAT-T21-B03-a"
+        },
+        {
+          "id": "RAT-T21-B03-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Konieczność dotyczy niezbędności wymagania w specyfikacji, a nie różnych interpretacji jego zapisu.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1, RAT-T21-B03-b"
+        },
+        {
+          "id": "RAT-T21-B03-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Adekwatność dotyczy zgodności z rzeczywistą, uzgodnioną potrzebą. Sama zgodność z potrzebą nie definiuje braku różnych interpretacji.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1, RAT-T21-B03-c"
+        },
+        {
+          "id": "RAT-T21-B03-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Kompletność zbioru dotyczy braku pominiętych znanych istotnych wymagań. Polecenie pyta o znaczenie jednego zapisu, więc wybór jest nieadekwatny.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1, RAT-T21-B03-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-03",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1"
+    },
+    {
+      "id": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące jednoznaczności pojedynczego wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Krótkie zdanie zawsze jest jednoznaczne."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Jednoznaczność dotyczy tego, czy różne osoby mogą odczytać wymaganie na różne sposoby."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Sama obecność liczby nie wyklucza różnych odczytań wymagania."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F03-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Długość nie wyklucza różnych interpretacji. Teza wprowadza nieuprawniony warunek wystarczający, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F03/r1, RAT-T21-F03-1"
+        },
+        {
+          "id": "RAT-T21-F03-2",
+          "decisionId": "2",
+          "bodyMarkdown": "To właściwa oś kryterium, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F03/r1, RAT-T21-F03-2"
+        },
+        {
+          "id": "RAT-T21-F03-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Liczba może mieć nieokreślony zakres lub jednostkę; teza nie utożsamia jej z brakiem różnych interpretacji, dlatego Prawda. To autorska ilustracja granicy reguły.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F03/r1, RAT-T21-F03-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-03",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F03/r1"
+    },
+    {
+      "id": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 3,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia poprawnie opisują jednoznaczność wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 3 punkty.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Jest automatycznie zapewniona, jeżeli wymaganie ma tylko jedno zdanie."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Różne dopuszczalne znaczenia tego samego zapisu są istotne dla oceny tego kryterium."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Nie jest tym samym co sama łatwość zrozumienia zdania."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Oznacza brak jakichkolwiek zależności między wymaganiami."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Jest nazwą braku pominiętych wymagań w całej specyfikacji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G03-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Jedno zdanie może dopuszczać różne interpretacje. Teza jest niepoprawnym skrótem i nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1, RAT-T21-G03-a"
+        },
+        {
+          "id": "RAT-T21-G03-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Opcja wskazuje przedmiot unambiguity, dlatego należy do klucza.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1, RAT-T21-G03-b"
+        },
+        {
+          "id": "RAT-T21-G03-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Łatwość pojmowania przez odbiorców i brak różnych interpretacji są odrębnymi osiami; teza jest poprawna i należy do klucza.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1, RAT-T21-G03-c"
+        },
+        {
+          "id": "RAT-T21-G03-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zależności między wymaganiami nie są definicją różnych odczytań zapisu. Opcja podmienia znaczenie.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1, RAT-T21-G03-d"
+        },
+        {
+          "id": "RAT-T21-G03-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To opis kompletności zbioru. Nie jest znaczeniem jednoznaczności, więc nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1, RAT-T21-G03-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-03",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1"
+    },
+    {
+      "id": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie wyjaśnia unambiguity of requirements?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wymaganie ma być przede wszystkim tanie do realizacji."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wymaganie ma zawierać wszystkie znane wymagania dotyczące systemu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Wymaganie ma być już wykonane i zaakceptowane przez zamawiającego."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Sposób wyrażenia wymagania ma zapobiegać odmiennym interpretacjom przez różne osoby."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D03-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Koszt realizacji nie definiuje braku różnych interpretacji treści. To inny przedmiot oceny.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1, RAT-T21-D03-a"
+        },
+        {
+          "id": "RAT-T21-D03-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To dodatkowo błędne przeniesienie całej specyfikacji do jednego wymagania; nie jest znaczeniem unambiguity.",
+          "ruleIds": [
+            "REG-T21-03",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1, RAT-T21-D03-b"
+        },
+        {
+          "id": "RAT-T21-D03-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Stan realizacji i akceptacji nie określa jednoznaczności zapisu. Odpowiedź myli właściwość treści z historią pracy.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1, RAT-T21-D03-c"
+        },
+        {
+          "id": "RAT-T21-D03-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Notatka zachowuje istotną oś definicji, dlatego jest właściwa.",
+          "ruleIds": [
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-03"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1, RAT-T21-D03-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-03",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1"
+    },
+    {
+      "id": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Który opis dotyczy complete w znaczeniu jakości POJEDYNCZEGO wymagania?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Cały zbiór zawiera wszystkie znane, istotne wymagania w swoim zakresie."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zrealizowany system przeszedł już wszystkie testy."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Opis tego wymagania jest samowystarczalny."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Wymaganie ma zawsze najwyższy priorytet realizacji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B04-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To drugi sens completeness, dotyczący zbioru. Polecenie wyraźnie pyta o pojedyncze wymaganie.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1, RAT-T21-B04-a"
+        },
+        {
+          "id": "RAT-T21-B04-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To informacja o sprawdzeniu systemu, nie definicja samowystarczalności opisu wymagania.",
+          "ruleIds": [
+            "REG-T21-04",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1, RAT-T21-B04-b"
+        },
+        {
+          "id": "RAT-T21-B04-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To sens completeness pojedynczego wymagania wskazany w źródle, więc właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1, RAT-T21-B04-c"
+        },
+        {
+          "id": "RAT-T21-B04-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Priorytet nie definiuje kompletności treści pojedynczego wymagania. Opcja nie odpowiada poleceniu.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1, RAT-T21-B04-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-04",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1"
+    },
+    {
+      "id": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące kompletności pojedynczego wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Kompletność pojedynczego wymagania dotyczy samowystarczalności jego opisu."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Z kompletności jednego wymagania wynika kompletność całego zbioru wymagań."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Samo nadanie identyfikatora uzupełnia brakującą istotną treść wymagania."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F04-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza przywołuje właściwy sens completeness, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F04/r1, RAT-T21-F04-1"
+        },
+        {
+          "id": "RAT-T21-F04-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Zmiana jednostki oceny nie ma uzasadnienia. Inne istotne wymagania mogą być pominięte, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F04/r1, RAT-T21-F04-2"
+        },
+        {
+          "id": "RAT-T21-F04-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Identyfikator pozwala wskazać zapis, ale nie wnosi brakującego oczekiwania. Nie gwarantuje samowystarczalności, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F04/r1, RAT-T21-F04-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-04",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F04/r1"
+    },
+    {
+      "id": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia poprawnie objaśniają complete dla pojedynczego wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "W tym znaczeniu chodzi o samowystarczalność opisu jednego wymagania."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wymaganie musi w jednym zdaniu zawierać całą specyfikację systemu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Brak pominiętych znanych, istotnych wymagań odnosi się do innego poziomu oceny: zbioru."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Każdy zapis bez linków jest przez ten fakt kompletny."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Kompletność pojedyncza oznacza, że test systemu zakończył się sukcesem."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G04-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Teza odtwarza właściwy sens źródłowy, dlatego należy do klucza.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1, RAT-T21-G04-a"
+        },
+        {
+          "id": "RAT-T21-G04-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Teza przenosi zakres całej specyfikacji do pojedynczego wymagania. Definicja tego nie wymaga, więc nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1, RAT-T21-G04-b"
+        },
+        {
+          "id": "RAT-T21-G04-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Teza poprawnie rozdziela dwa sensy completeness i należy do klucza; nie zamyka pełnego T22.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1, RAT-T21-G04-c"
+        },
+        {
+          "id": "RAT-T21-G04-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Brak linków nie zapewnia obecności istotnej treści. Teza zastępuje samowystarczalność mechaniczną cechą reprezentacji.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1, RAT-T21-G04-d"
+        },
+        {
+          "id": "RAT-T21-G04-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To pomieszanie właściwości opisu z wynikiem sprawdzenia implementacji. Opcja nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-04",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1, RAT-T21-G04-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-04",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1"
+    },
+    {
+      "id": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Które z poniższych objaśnień jest właściwe dla completeness of a single requirement?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Brak jakichkolwiek relacji z innymi wymaganiami."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Samowystarczalny opis tego pojedynczego wymagania."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Brak nadmiarowych kopii tego wymagania w repozytorium."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Znajomość zapisu przez wszystkich pracowników organizacji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D04-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Źródło mówi o samowystarczalności opisu, a nie zakazie relacji. Mechaniczny brak powiązań nie objaśnia kryterium.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1, RAT-T21-D04-a"
+        },
+        {
+          "id": "RAT-T21-D04-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To właściwy sens w odróżnieniu od kompletności zbioru i innych cech. Odpowiedź należy wybrać.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1, RAT-T21-D04-b"
+        },
+        {
+          "id": "RAT-T21-D04-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Liczba kopii informacji nie jest znaczeniem samowystarczalności jej treści. Opcja opisuje inny problem jakości.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1, RAT-T21-D04-c"
+        },
+        {
+          "id": "RAT-T21-D04-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zasięg rozpowszechnienia nie definiuje kompletności pojedynczej treści. Nie odpowiada nazwie kryterium.",
+          "ruleIds": [
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-04"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1, RAT-T21-D04-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-04",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1"
+    },
+    {
+      "id": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które kryterium dotyczy tego, czy zamierzeni odbiorcy potrafią pojąć treść wymagania?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Konieczność."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zrozumiałość."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Kompletność zbioru."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Weryfikowalność."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B05-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Konieczność dotyczy potrzebnej obecności wymagania w specyfikacji. Nie jest nazwą pojmowalności dla odbiorców.",
+          "ruleIds": [
+            "REG-T21-05",
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1, RAT-T21-B05-a"
+        },
+        {
+          "id": "RAT-T21-B05-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Polecenie podaje właściwego odbiorcę i przedmiot understandability, więc jest to właściwa odpowiedź.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1, RAT-T21-B05-b"
+        },
+        {
+          "id": "RAT-T21-B05-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Kompletność zbioru dotyczy zawartości całego artefaktu. Nie określa pojmowalności treści dla zamierzonych odbiorców.",
+          "ruleIds": [
+            "REG-T21-05",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1, RAT-T21-B05-c"
+        },
+        {
+          "id": "RAT-T21-B05-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Możliwość sprawdzenia spełnienia w systemie nie jest tym samym co rozumienie opisu przez odbiorców.",
+          "ruleIds": [
+            "REG-T21-05",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1, RAT-T21-B05-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-05",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1"
+    },
+    {
+      "id": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące zrozumiałości wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Wystarczy, że autor potrafi odczytać wymaganie; pozostali zamierzeni odbiorcy nie mają znaczenia."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Kryterium odnosi się do pojmowalności treści dla jej zamierzonych odbiorców."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Sama obecność terminu specjalistycznego nie dowodzi niezrozumiałości dla zamierzonych odbiorców."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F05-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Reguła dotyczy zamierzonych odbiorców. Zawężenie do autora usuwa istotny warunek, dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F05/r1, RAT-T21-F05-1"
+        },
+        {
+          "id": "RAT-T21-F05-2",
+          "decisionId": "2",
+          "bodyMarkdown": "To właściwa oś understandability, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F05/r1, RAT-T21-F05-2"
+        },
+        {
+          "id": "RAT-T21-F05-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Odbiorcy mogą znać ten termin. Bez informacji o ich rozumieniu nie można automatycznie stwierdzić wady, dlatego Prawda; to granica zastosowania definicji.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F05/r1, RAT-T21-F05-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-05",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F05/r1"
+    },
+    {
+      "id": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia poprawnie opisują zrozumiałość wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 2 punkty.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Understandable oznacza dokładnie tyle co usable dla działającego systemu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zamierzeni odbiorcy są istotni dla oceny tej cechy."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Każdy skrót automatycznie czyni wymaganie niezrozumiałym."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "To, że zdanie jest łatwe do przeczytania, nie dowodzi jeszcze braku różnych interpretacji."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Kryterium dotyczy przede wszystkim tego, czy wymaganie jest już zaimplementowane."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G05-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Zrozumiałość treści i użyteczność systemu mają różne przedmioty. Ta równoważność nie objaśnia kryterium T21.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1, RAT-T21-G05-a"
+        },
+        {
+          "id": "RAT-T21-G05-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Teza zachowuje źródłowe odniesienie do intended users danego elementu, tu treści wymagania. Należy do klucza.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1, RAT-T21-G05-b"
+        },
+        {
+          "id": "RAT-T21-G05-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Teza pomija wiedzę zamierzonych odbiorców. Skrót może być dla nich znany, więc nie jest to ogólna reguła.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1, RAT-T21-G05-c"
+        },
+        {
+          "id": "RAT-T21-G05-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Łatwość rozumienia nie jest automatyczną jednoznacznością. Opcja poprawnie rozdziela te cechy i należy do klucza.",
+          "ruleIds": [
+            "REG-T21-05",
+            "REG-T21-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1, RAT-T21-G05-d"
+        },
+        {
+          "id": "RAT-T21-G05-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Stan realizacji nie definiuje pojmowalności treści dla jej odbiorców. Opcja jest niepoprawna.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1, RAT-T21-G05-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-05",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1"
+    },
+    {
+      "id": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie objaśnia understandability pojedynczego wymagania?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Treść ma być pojmowalna dla zamierzonych odbiorców, do których skierowano opis."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Treść ma być rozpowszechniona w jak największej liczbie kopii."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Treść ma być pozbawiona wszystkich terminów dziedziny niezależnie od wiedzy odbiorców."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Treść ma opisywać wyłącznie łatwe do implementacji funkcje."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D05-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Notatka zachowuje przedmiot oraz grupę odniesienia definicji. Jest właściwa.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1, RAT-T21-D05-a"
+        },
+        {
+          "id": "RAT-T21-D05-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Liczba kopii nie określa rozumienia treści. Można szeroko udostępnić opis, którego odbiorcy nie pojmują.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1, RAT-T21-D05-b"
+        },
+        {
+          "id": "RAT-T21-D05-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To arbitralna zasada językowa. Definicja ocenia pojmowalność względem odbiorców, a nie brak całej terminologii.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1, RAT-T21-D05-c"
+        },
+        {
+          "id": "RAT-T21-D05-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Łatwość realizacji nie jest znaczeniem understandability. Funkcja trudna do realizacji może być jasno opisana.",
+          "ruleIds": [
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-05"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1, RAT-T21-D05-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-05",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1"
+    },
+    {
+      "id": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które kryterium dotyczy możliwości sprawdzenia, czy zrealizowany system spełnia wymaganie?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Adekwatność."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Konieczność."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Zrozumiałość."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Weryfikowalność."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B06-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Adekwatność dotyczy rzeczywistej, uzgodnionej potrzeby. Możliwość sprawdzenia realizacji jest odrębną cechą.",
+          "ruleIds": [
+            "REG-T21-06",
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1, RAT-T21-B06-a"
+        },
+        {
+          "id": "RAT-T21-B06-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Konieczność dotyczy potrzebnej obecności treści w specyfikacji. Nie jest nazwą możliwości sprawdzenia realizacji.",
+          "ruleIds": [
+            "REG-T21-06",
+            "REG-T21-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1, RAT-T21-B06-b"
+        },
+        {
+          "id": "RAT-T21-B06-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Pojmowanie opisu przez odbiorców jest innym przedmiotem niż sprawdzenie spełnienia w systemie.",
+          "ruleIds": [
+            "REG-T21-06",
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1, RAT-T21-B06-c"
+        },
+        {
+          "id": "RAT-T21-B06-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Polecenie podaje znaczenie verifiability i dotyczy możliwości, a nie wykonanego testu. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1, RAT-T21-B06-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-06",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1"
+    },
+    {
+      "id": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące weryfikowalności wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Weryfikowalność oznacza, że można sprawdzić spełnienie wymagania w zrealizowanym systemie."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Wymaganie jest weryfikowalne dopiero po udanym wykonaniu jego testu."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Sprawdzenie spełnienia może korzystać z pomiaru, testu albo inspekcji."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F06-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza poprawnie wskazuje możliwość i przedmiot sprawdzenia, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F06/r1, RAT-T21-F06-1"
+        },
+        {
+          "id": "RAT-T21-F06-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Teza myli możliwość sprawdzenia z wynikiem już przeprowadzonej czynności. Dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F06/r1, RAT-T21-F06-2"
+        },
+        {
+          "id": "RAT-T21-F06-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Źródło podaje takie przykładowe sposoby; teza nie ogranicza sprawdzenia do jednej z nich, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F06/r1, RAT-T21-F06-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-06",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F06/r1"
+    },
+    {
+      "id": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 3,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia poprawnie opisują verifiability wymagania?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 3 punkty.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Weryfikowalność nie oznacza, że wymaganie zostało już sprawdzone z wynikiem pozytywnym."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wymaganie bez liczby nie może być weryfikowalne."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Jedynym dopuszczalnym sposobem sprawdzenia jest pomiar czasu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Sama obecność liczby zawsze gwarantuje możliwość rozstrzygnięcia spełnienia."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Możliwość sprawdzenia spełnienia może opierać się na uzgodnionej procedurze inspekcji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G06-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To poprawne rozróżnienie możliwości i zdarzenia. Teza należy do klucza.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1, RAT-T21-G06-a"
+        },
+        {
+          "id": "RAT-T21-G06-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Źródło nie sprowadza sprawdzenia do progów liczbowych. Zachowanie można sprawdzać testem lub inspekcją, więc ta ogólna teza nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1, RAT-T21-G06-b"
+        },
+        {
+          "id": "RAT-T21-G06-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Teza nieuprawnienie usuwa inne testy, pomiary i inspekcje. Nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1, RAT-T21-G06-c"
+        },
+        {
+          "id": "RAT-T21-G06-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Liczba bez warunków lub jednostki może nie dawać rozstrzygnięcia. Definicja nie ustanawia takiej gwarancji.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1, RAT-T21-G06-d"
+        },
+        {
+          "id": "RAT-T21-G06-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Inspekcja jest jednym ze źródłowo podanych przykładów weryfikacji. Opcja należy do klucza.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1, RAT-T21-G06-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-06",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1"
+    },
+    {
+      "id": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie objaśnia verifiability of requirements?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Każde wymaganie z liczbą jest już zweryfikowane."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Weryfikowalność dotyczy tego, czy interesariusze uzgodnili rzeczywistą potrzebę."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Spełnienie wymagania przez zrealizowany system można sprawdzić, na przykład testem, pomiarem lub inspekcją."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Weryfikowalność oznacza, że cały zbiór wymagań nie zawiera pominięć."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D06-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Teza myli własność treści, obecność liczby i wynik czynności. Żaden z tych wniosków nie wynika z definicji.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1, RAT-T21-D06-a"
+        },
+        {
+          "id": "RAT-T21-D06-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To przedmiot adekwatności. Sama zgodność z potrzebą nie jest definicją możliwości sprawdzenia spełnienia.",
+          "ruleIds": [
+            "REG-T21-06",
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1, RAT-T21-D06-b"
+        },
+        {
+          "id": "RAT-T21-D06-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Notatka zachowuje możliwość i właściwy przedmiot kontroli, bez zakładania udanego wykonania. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1, RAT-T21-D06-c"
+        },
+        {
+          "id": "RAT-T21-D06-d",
+          "decisionId": "d",
+          "bodyMarkdown": "To opis kompletności zbioru, nie możliwości sprawdzenia realizacji danego wymagania.",
+          "ruleIds": [
+            "REG-T21-06",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-01",
+              "aspectId": "ZAK-T21-06"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1, RAT-T21-D06-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-06",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1"
+    },
+    {
+      "id": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Która para ma według §3.8 sylabusa szczególne znaczenie dla jakości pojedynczego wymagania?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Konieczność i kompletność."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Jednoznaczność i weryfikowalność."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Adekwatność i zrozumiałość."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Kompletność i weryfikowalność."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B07-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Obie cechy są na zalecanej liście, lecz nie są wskazaną w źródle najważniejszą parą. Opcja nie odpowiada poleceniu.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-02",
+            "REG-T21-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1, RAT-T21-B07-a"
+        },
+        {
+          "id": "RAT-T21-B07-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Obie cechy są zalecane, ale źródło szczególnie wyróżnia inną parę. Nie wolno zastąpić jej własnym rankingiem.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-03",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1, RAT-T21-B07-b"
+        },
+        {
+          "id": "RAT-T21-B07-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To para wyróżniona dla pojedynczych wymagań w §3.8. Odpowiada poleceniu.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1, RAT-T21-B07-c"
+        },
+        {
+          "id": "RAT-T21-B07-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Te cechy są ważne, jednak nie stanowią pary wskazanej w źródle. Nie należy ich wybrać w tym poleceniu.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-04",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1, RAT-T21-B07-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-07",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1"
+    },
+    {
+      "id": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy o szczególnej wadze kryteriów jakości pojedynczego wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Sylabus wyróżnia w tym kontekście jednoznaczność i weryfikowalność jako najważniejszą parę."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Spełnienie pozostałych kryteriów nie zastępuje adekwatności i zrozumiałości wymagania."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Wyróżnienie dwóch kryteriów oznacza usunięcie pozostałych czterech z zalecanej listy."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F07-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza podmienia źródłowo wskazaną parę na dwie inne zalecane cechy. Dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F07/r1, RAT-T21-F07-1"
+        },
+        {
+          "id": "RAT-T21-F07-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Teza zachowuje opis szczególnej wagi tej pary i granicy kompensowania, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F07/r1, RAT-T21-F07-2"
+        },
+        {
+          "id": "RAT-T21-F07-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Źródło nadal zaleca sześć kryteriów; ich szczególna waga nie usuwa innych. Dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F07/r1, RAT-T21-F07-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-07",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F07/r1"
+    },
+    {
+      "id": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia zgodnie z §3.8 opisują szczególną wagę adekwatności i zrozumiałości?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Oznacza ona, że pozostałe kryteria nie służą już ocenie jakości."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Oznacza ona, że liczbowy próg w wymaganiu gwarantuje właściwą potrzebę."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Samo spełnienie pozostałych kryteriów nie kompensuje braku tej pary."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Wyróżnioną parą są adekwatność i zrozumiałość pojedynczego wymagania."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Pozwala ona uznać za dobre wymaganie, którego zamierzeni odbiorcy nie potrafią pojąć."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G07-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To nieuprawnione usunięcie innych zalecanych cech. Wyróżnienie nie jest wykreśleniem reszty listy.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1, RAT-T21-G07-a"
+        },
+        {
+          "id": "RAT-T21-G07-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Liczba nie poświadcza adekwatności. Teza nie wynika z wyróżnienia pary i nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1, RAT-T21-G07-b"
+        },
+        {
+          "id": "RAT-T21-G07-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To właściwa granica roli innych cech wobec adekwatności i zrozumiałości. Należy do klucza.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1, RAT-T21-G07-c"
+        },
+        {
+          "id": "RAT-T21-G07-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Opcja poprawnie przywołuje parę oraz jednostkę oceny. Należy do klucza.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1, RAT-T21-G07-d"
+        },
+        {
+          "id": "RAT-T21-G07-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Brak zrozumiałości jest właśnie jedną z przesłanek, których inne cechy nie kompensują. Teza jest sprzeczna z regułą.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1, RAT-T21-G07-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-07",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1"
+    },
+    {
+      "id": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka wiernie podsumowuje wskazanie §3.8 dotyczące najważniejszych kryteriów pojedynczego wymagania?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wystarczy weryfikowalność; zgodność z potrzebą nie ma wtedy znaczenia."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Źródło ustala pełny ranking od pierwszego do szóstego miejsca."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Najważniejsza para zawsze zmienia się na tę, którą wskaże autor pytania."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Adekwatność i zrozumiałość mają szczególną wagę; spełnienie pozostałych kryteriów nie zastępuje ich braku."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D07-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Możliwość sprawdzenia nie zastępuje adekwatności. Teza zaprzecza wskazanej w źródle granicy.",
+          "ruleIds": [
+            "REG-T21-07",
+            "REG-T21-01",
+            "REG-T21-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1, RAT-T21-D07-a"
+        },
+        {
+          "id": "RAT-T21-D07-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Źródło wyróżnia parę, lecz nie ustanawia tu pełnego porządku sześciu cech. Opcja dodaje nieistniejącą normę.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1, RAT-T21-D07-b"
+        },
+        {
+          "id": "RAT-T21-D07-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Polecenie pyta o wskazanie źródła. Opinia autora nie zastępuje tej podstawy, dlatego opcja nie jest właściwa.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1, RAT-T21-D07-c"
+        },
+        {
+          "id": "RAT-T21-D07-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Notatka zachowuje parę i sens jej wyróżnienia, dlatego jest właściwa.",
+          "ruleIds": [
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-02",
+              "aspectId": "ZAK-T21-07"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1, RAT-T21-D07-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-07",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1"
+    },
+    {
+      "id": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które stwierdzenie odpowiada §3.8 w odniesieniu do zalecanych kryteriów i podejścia zorientowanego na wartość?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Stopień spełnienia kryteriów powinien odpowiadać wartości wymagania; nie zawsze trzeba całkowicie spełnić wszystkie kryteria."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Każde wymaganie musi w każdym kontekście spełniać wszystkie kryteria całkowicie."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Zawsze wystarcza dowolnych pięć z sześciu kryteriów."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Zalecany charakter listy oznacza, że jakość można całkowicie zignorować."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-B08-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Opcja zachowuje warunek wartości i granicę bezwarunkowego pełnego spełnienia. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1, RAT-T21-B08-a"
+        },
+        {
+          "id": "RAT-T21-B08-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Teza usuwa jawny warunek wartości i możliwość niepełnego stopnia spełnienia, dlatego nie odpowiada źródłu.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1, RAT-T21-B08-b"
+        },
+        {
+          "id": "RAT-T21-B08-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Źródło nie podaje liczbowego progu ani dowolnego wyboru pięciu cech. Opcja dodaje nieistniejącą normę.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1, RAT-T21-B08-c"
+        },
+        {
+          "id": "RAT-T21-B08-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zalecenie i dostosowanie stopnia nie są zwolnieniem z dbałości o jakość. Teza nie odpowiada opisanej zależności.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1, RAT-T21-B08-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "criterionId": "KRY-T21-02",
+          "role": "secondary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-08",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1"
+    },
+    {
+      "id": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń tezy dotyczące zalecanej listy kryteriów jakości i wartości wymagania.",
+      "instruction": "Dla KAŻDEGO z trzech wierszy wybierz Prawda albo Fałsz. Maksymalnie 2 punkty; 2/3 za poprawny wiersz.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "W podejściu zorientowanym na wartość stopień spełnienia kryteriów wiąże się z wartością wymagania."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Wyższa wartość wymagania zwiększa znaczenie kryteriów jakości dla ograniczenia ryzyka niepowodzenia."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Określenie listy jako zalecanej samo w sobie pozwala dowolnie ignorować adekwatność."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-F08-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Teza zachowuje podaną zależność, dlatego Prawda.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F08/r1, RAT-T21-F08-1"
+        },
+        {
+          "id": "RAT-T21-F08-2",
+          "decisionId": "2",
+          "bodyMarkdown": "To kierunek zależności wskazany w §3.8, dlatego Prawda; bez wymyślania liczbowego budżetu.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F08/r1, RAT-T21-F08-2"
+        },
+        {
+          "id": "RAT-T21-F08-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Teza zamienia zalecenie w nieograniczone zwolnienie i pomija szczególną wagę adekwatności. Dlatego Fałsz.",
+          "ruleIds": [
+            "REG-T21-08",
+            "REG-T21-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F08/r1, RAT-T21-F08-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "criterionId": "KRY-T21-02",
+          "role": "secondary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-08",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F08/r1"
+    },
+    {
+      "id": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWA stwierdzenia są zgodne z opisanym w §3.8 podejściem do stopnia spełnienia kryteriów?",
+      "instruction": "Wybierz dokładnie DWA stwierdzenia. Maksymalnie 2 punkty.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wartość wymagania przekłada się na ustaloną w źródle tabelę procentów jakości."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Nie należy z tej zasady wyprowadzać identycznego, całkowitego spełnienia wszystkich kryteriów w każdej sytuacji."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Dla wymagania o małej wartości wszystkie kryteria są automatycznie nieistotne."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Sam fakt, że wymaganie ma identyfikator, ustala właściwy stopień jakości."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Większa wartość wymagania sprawia, że jakość ma większe znaczenie dla ograniczenia ryzyka niepowodzenia."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-G08-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Źródło nie podaje takiej tabeli ani procentów. Opcja tworzy dodatkową normę i nie należy do klucza.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1, RAT-T21-G08-a"
+        },
+        {
+          "id": "RAT-T21-G08-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Opcja zachowuje zależność od wartości i granicę pełnego spełnienia. Należy do klucza.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1, RAT-T21-G08-b"
+        },
+        {
+          "id": "RAT-T21-G08-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Źródło opisuje stopień i znaczenie, a nie automatyczne wyłączenie całej jakości. Opcja jest niepoprawna.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1, RAT-T21-G08-c"
+        },
+        {
+          "id": "RAT-T21-G08-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Identyfikator nie określa wartości ani stopnia spełnienia kryteriów. Teza nie wynika z reguły.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1, RAT-T21-G08-d"
+        },
+        {
+          "id": "RAT-T21-G08-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To właściwy kierunek zależności źródłowej. Opcja należy do klucza.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1, RAT-T21-G08-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        },
+        {
+          "criterionId": "KRY-T21-02",
+          "role": "secondary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-08",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1"
+    },
+    {
+      "id": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Która notatka poprawnie streszcza status listy sześciu kryteriów i warunek wartości opisany w sylabusie?",
+      "instruction": "Wybierz JEDNĄ odpowiedź. Maksymalnie 1 punkt.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Lista nakazuje zawsze identyczny stopień spełnienia wszystkich kryteriów."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "To zalecany zestaw; stopień spełnienia odnosi się do wartości wymagania, bez podanego uniwersalnego procentu jakości."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Lista definiuje oficjalny próg: spełnienie połowy cech wystarcza do akceptacji."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Lista dotyczy wyłącznie wymagań jakościowych i omija wymagania funkcjonalne."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T21-D08-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Teza zamienia zalecany zestaw i zależny od wartości stopień w bezwarunkowy identyczny nakaz. Nie odpowiada źródłu.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1, RAT-T21-D08-a"
+        },
+        {
+          "id": "RAT-T21-D08-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Notatka zachowuje status listy, zależność i brak dodatkowego progu. To właściwy wybór.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1, RAT-T21-D08-b"
+        },
+        {
+          "id": "RAT-T21-D08-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Źródło nie podaje takiego progu. Opcja dodaje nieuprawnioną regułę akceptacji.",
+          "ruleIds": [
+            "REG-T21-08"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1, RAT-T21-D08-c"
+        },
+        {
+          "id": "RAT-T21-D08-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zakres §3.8 dotyczy pojedynczych wymagań, a nie tylko jednego ich typu. Opcja myli dwie osie.",
+          "ruleIds": [
+            "REG-T21-08",
+            "REG-T21-TYPE"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T21-03",
+              "aspectId": "ZAK-T21-08"
+            }
+          ],
+          "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1, RAT-T21-D08-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        },
+        {
+          "criterionId": "KRY-T21-02",
+          "role": "secondary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T21-08",
+        "revision": "r1"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "T21-O01",
+      "revision": "r1",
+      "promptMarkdown": "„Bez otwierania notatek wymień sześć zalecanych kryteriów jakości pojedynczego wymagania. Przy każdym podaj polską lub angielską nazwę i krótkie znaczenie. Nie musisz pamiętać kolejności listy ani dosłownej definicji”.",
+      "rubricMarkdown": "Rubryka RUB-T21-O01:** dla każdego ZAK oddzielnie ocenić (a) rozpoznawalną nazwę i (b) zgodne znaczenie: łącznie 12 elementów opisowych. Wzorzec: adekwatność — zgodność z rzeczywistą, uzgodnioną potrzebą; konieczność — potrzebna część specyfikacji; jednoznaczność — brak różnych interpretacji; kompletność pojedyncza — samowystarczalny opis; zrozumiałość — pojmowalność dla zamierzonych odbiorców; weryfikowalność — możliwość sprawdzenia spełnienia w systemie. Dopuszczalne przymiotniki PL/EN i „niezbędność” zamiast „konieczność”, o ile znaczenie jest właściwe. Nie karać za brak EN ani kolejność.\n\nPełna odpowiedź ma sześć rozpoznawalnych nazw i sześć zgodnych znaczeń. Odpowiedź z jedną poprawną nazwą bez znaczenia daje tylko obserwację tej nazwy. „Kompletność = wszystkie znane wymagania w całym zbiorze” nie spełnia elementu znaczenia ZAK04. Nie kasuje to poprawnych elementów pozostałych. „Weryfikowalne = już przetestowane” jest błędem znaczenia ZAK06. Dodatkowe kryterium poza zalecaną szóstką nie zastępuje żadnego brakującego elementu; nie deklarować z tego powodu, że taka cecha nie może być użyteczna w RE.",
+      "scope": [
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-01"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-02"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-03"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-04"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-05"
+        },
+        {
+          "criterionId": "KRY-T21-01",
+          "aspectId": "ZAK-T21-06"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §6 T21-O01/r1"
+    },
+    {
+      "id": "T21-O02",
+      "revision": "r1",
+      "promptMarkdown": "„Które dwie cechy mają szczególne znaczenie dla jakości pojedynczego wymagania? Co źródło mówi o stopniu spełnienia kryteriów w podejściu zorientowanym na wartość? Czy wynika z tego stały procent albo prawo do dowolnego pominięcia jakości?”.",
+      "rubricMarkdown": "RUB-T21-O02 — cztery elementy:** (1) adekwatność; (2) zrozumiałość; (3) stopień spełnienia odniesiony do wartości, z pamięcią, że nie zawsze trzeba całkowicie spełnić wszystkie kryteria; (4) brak wymyślonego progu i brak dowolnego zwolnienia z dbałości o jakość. Pełna odpowiedź zawiera wszystkie; pkt 3 może być wyrażony własnymi słowami. „Im więcej płacę za aplikację, tym więcej punktów dostaję” nie jest opisem wartości wymagania. Podanie pary konieczność/weryfikowalność nie spełnia elementów 1/2. Sama poprawna para nie zalicza elementów 3/4. Błąd krytyczny dla elementu 4: „zawsze wystarcza pięć cech z sześciu”.",
+      "scope": [
+        {
+          "criterionId": "KRY-T21-02",
+          "aspectId": "ZAK-T21-07"
+        },
+        {
+          "criterionId": "KRY-T21-03",
+          "aspectId": "ZAK-T21-08"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §6 T21-O02/r1"
+    },
+    {
+      "id": "T21-O03",
+      "revision": "r1",
+      "promptMarkdown": "„Anna mówi: »To wymaganie jest funkcjonalne, więc kryteria jakości wymagania go nie dotyczą«. Bartek mówi: »Każde obecne wymaganie ma samowystarczalny opis, więc zbiór na pewno nie pomija żadnego znanego istotnego wymagania«. Oceń oddzielnie oba wnioski i podaj powód. Nie oceniaj kompletności żadnej rzeczywistej specyfikacji”.",
+      "rubricMarkdown": "RUB-T21-O03 — cztery elementy:** (1) odrzucenie wniosku Anny; (2) rozdzielenie typu oczekiwania od jakości jego zapisu; (3) odrzucenie wniosku Bartka; (4) rozdzielenie samowystarczalności pojedynczej treści od zawartości całego zbioru. Dopuszczalne własne proste przykłady, jeżeli rzeczywiście pokazują różnicę. Same „nie/nie” obserwują dwie decyzje, lecz nie potwierdzają żadnego uzasadnienia. „Functional jest zawsze słabej jakości” albo „wszystkie linki niszczą kompletność” jest nieadekwatnym powodem. Błąd jednego uzasadnienia nie przekreśla drugiego. Metoda: oceniający lub jawna samoocena; nie wyprowadzać z poprawnej decyzji automatycznej oceny powodu.",
+      "scope": [
+        {
+          "criterionId": "AUX-T21-03"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §6 T21-O03/r1"
+    },
+    {
+      "id": "T21-O04",
+      "revision": "r1",
+      "promptMarkdown": "„Uzgodniona potrzeba: osoba odbierająca paczkę ma dostać potwierdzenie. Wymaganie: system wysyła potwierdzenie wyłącznie do administracji; administracja nie przekazuje go dalej. Interesariusze potwierdzili, że nie realizuje to uzgodnionej potrzeby. Można wykonać test sprawdzający wysyłkę do administracji. Czy sama możliwość takiego testu naprawia adekwatność? Co można stwierdzić o adekwatności, a co o weryfikowalności? Podaj powody”.",
+      "rubricMarkdown": "RUB-T21-O04 — cztery elementy:** (1) nie, testowalność nie kompensuje nieadekwatności; (2) w podanym zakresie brak zgodności z uzgodnionym adresatem; (3) istnieje możliwość sprawdzenia zapisanego zachowania; (4) możliwość weryfikacji nie dowodzi, że test już wykonano ani że rzeczywisty system spełnia wymaganie. Nie wymagać napisania testu lub nowego wymagania. „Brak danych o potrzebie” jest tu nieprawidłowy — dane podano. „Skoro da się przetestować, wymaganie jest właściwe” to błąd głównego rozróżnienia. Metoda: oceniający według rubryki lub jawna samoocena. Nie wyprowadzać samodzielnego transferu z odpowiedzi po WS01.",
+      "scope": [
+        {
+          "criterionId": "AUX-T21-04"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §6 T21-O04/r1"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-T21-01",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-01"
+      },
+      "bodyMarkdown": "„Adekwatność pyta o rzeczywistą, uzgodnioną potrzebę. Poprawny język ani możliwość wykonania nie zastępują tej zgodności. W przykładzie potwierdzenia rozstrzyga właściwy adresat potrzeby”. N01, EX01/CE01, CMP03",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F01",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F01 pokaż obie strony CMP03; poproś o wskazanie różnicy adresata bez oceny zaliczenia. Następnie T21-G01",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-02",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-02"
+      },
+      "bodyMarkdown": "„Konieczność dotyczy potrzebnego składnika specyfikacji systemu. Termin realizacji i łatwość wykonania nie rozstrzygają tej cechy. W EX02 wymaganie identyfikacji odbierającego jest potrzebne z powodu jawnie określonego celu”. N02",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F02",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F02 wróć do EX02/CE02 i odczytaj jawny warunek potrzeby, bez wnioskowania z samego braku danych. Następnie T21-G02",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-03",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-03"
+      },
+      "bodyMarkdown": "„Jednoznaczność pyta o różne możliwe odczytania tej samej treści. Krótkie zdanie z liczbą może nadal mieć różne znaczenia. W CE03 nie wiadomo, do jakiej daty odnosi się »ostatnie«”. N03",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F03",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G03",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F03 zestaw N03 z N05: różne odczytania versus pojmowalność dla odbiorców. Następnie T21-G03",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-04",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-04"
+      },
+      "bodyMarkdown": "„Complete dla jednego wymagania oznacza samowystarczalny opis tego wymagania. Kompletność zbioru ma inny zakres. Samo ID nie wnosi brakującej treści”. N04, EX04/CE04",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F04",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G04",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F04 pokaż dwa poziomy CMP02/WS02; nie dodawaj arbitralnego zakazu glossary lub relacji. Następnie T21-G04",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-05",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-05"
+      },
+      "bodyMarkdown": "„Zrozumiałość odnosi się do zamierzonych odbiorców. Samo zrozumienie autora nie wystarcza, a znany odbiorcom termin specjalistyczny nie jest automatycznie wadą”. N05, EX05/CE05",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F05",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G05",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F05 przeczytaj kontrast osoby docelowej i autora z CE05, potem różnicę N03/N05. Następnie T21-G05",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-06",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-01",
+        "aspectId": "ZAK-T21-06"
+      },
+      "bodyMarkdown": "„Weryfikowalność to możliwość sprawdzenia spełnienia wymagania w systemie. Test, pomiar i inspekcja są możliwymi drogami; nie oznacza to, że kontrolę już wykonano. EX06 pokazuje sprawdzalne zachowanie bez liczby”. N06",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F06",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G06",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F06 zestaw możliwość kontroli, jej wykonanie i wynik jako trzy różne informacje; użyj EX06/CE06. Następnie T21-G06",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-07",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-02",
+        "aspectId": "ZAK-T21-07"
+      },
+      "bodyMarkdown": "„Wskazana w źródle para to adekwatność i zrozumiałość. Inne cechy nadal należą do zalecanej listy, lecz ich spełnienie nie kompensuje braku tej pary”. N07, CMP03",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F07",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G07",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F07 wróć do CE01 i pokaż, że można perfekcyjnie sprawdzić realizację niewłaściwej potrzeby. Następnie T21-G07",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-T21-08",
+      "revision": "r1",
+      "scope": {
+        "criterionId": "KRY-T21-03",
+        "aspectId": "ZAK-T21-08"
+      },
+      "bodyMarkdown": "„Lista jest zalecana, a stopień spełnienia odnosi się do wartości wymagania. Większa wartość zwiększa znaczenie jakości dla ograniczenia ryzyka. Źródło nie daje progu pięciu z sześciu ani zgody na dowolne ignorowanie jakości”. N08",
+      "knowledgeRefs": [],
+      "followUpRefs": [
+        {
+          "id": "T21-F08",
+          "revision": "r1"
+        },
+        {
+          "id": "T21-G08",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Po błędzie F08 zestaw bezwarunkowe 100%, dowolne pomijanie i właściwą zależność jako trzy opisy; nazwij regułę ze źródła. Następnie T21-G08",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T21-01",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-01; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-02",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-02; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-03",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-03; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-04",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-04; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-05",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-05; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-06",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-06; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-07",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-07; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-08",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Wspólna rodzina B/F/G/D ścieżki ZAK-T21-08; brak zatwierdzonej niezależności."
+    },
+    {
+      "id": "FAM-T21-LEX-ALL",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Grupowanie O01; krzyżuje sześć rodzin znaczeniowych."
+    },
+    {
+      "id": "FAM-T21-PRIORITY-VALUE",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Grupowanie O02; bliskie FAM-T21-07/08."
+    },
+    {
+      "id": "FAM-T21-COMPARISONS",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Grupowanie O03; bliskie CMP01/02."
+    },
+    {
+      "id": "FAM-T21-NEED-VS-CHECK",
+      "revision": "r1",
+      "review": "pending",
+      "description": "Grupowanie O04; bliskie WS01/CMP03."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-T21-10-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-01",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-02",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-03",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-03",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-04",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-04",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-04",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-05",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-05",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-05",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-06",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-06",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-06",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-07",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-07",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-07",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-10-08",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T21-08",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-08",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-11-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-T21-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-TYPE",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Comparison rozdziela dwa sensy po wspólnej osi.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-11-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-T21-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-04",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Comparison rozdziela dwa sensy po wspólnej osi.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-11-03",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-T21-03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-T21-07",
+        "revision": "r1"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Comparison rozdziela dwa sensy po wspólnej osi.",
+      "provenance": "INTERPRETATION autora wg Content §8.3",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T21-14",
+      "revision": "r1",
+      "type": "R14",
+      "from": {
+        "id": "PRE-T21",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "KRY-T21-01",
+        "revision": "r1"
+      },
+      "condition": "Tylko gdy niezrozumiałe są pojęcia potrzeby i interesariusza; podstawa pomijalna",
+      "meaning": "Podstawa requirement/stakeholder jest potrzebna do odczytania sensu adequacy; bez review nie wymusza niczego.",
+      "provenance": "Propozycja dydaktyczna wg Content §3.3",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "review-only",
+    "channels": [
+      "internal-review"
+    ]
+  }
+}

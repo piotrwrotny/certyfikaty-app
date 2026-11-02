@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-02",
+  "kind": "author_design_review_not_user_study",
+  "scoring_vectors_passed": 13,
+  "browser_checks": [
+    "P partial b,c -> 1/2",
+    "option -> comparison -> prerequisite -> same choices, score and focus",
+    "P follow-up classifications 3/3; separate self-assessment",
+    "active check DOM: 0 rationale / 0 knowledge links / no score",
+    "topic check pause -> reload -> same answers and flag",
+    "A 1/1 + excess P 0/2 + K 1.5/2 -> 2.5/5 after finalization",
+    "neutral dictionary does not convert check",
+    "cancel conversion gives no help; confirm converts whole check",
+    "Escape returns to knowledge-2 / 1/2",
+    "keyboard K select then clear -> blank"
+  ],
+  "reflow_320": [
+    {
+      "scene": "home",
+      "content": 320,
+      "width": 320,
+      "heading": "Jeden cel.Jeden kolejny krok."
+    },
+    {
+      "scene": "goals",
+      "content": 320,
+      "width": 320,
+      "heading": "Czego chcesz spróbować?"
+    },
+    {
+      "scene": "lesson",
+      "content": 320,
+      "width": 320,
+      "heading": "Rodzaje wymagań"
+    },
+    {
+      "scene": "A-question",
+      "content": 320,
+      "width": 320,
+      "heading": "Co należy do kontekstu?"
+    },
+    {
+      "scene": "P-question",
+      "content": 320,
+      "width": 320,
+      "heading": "Jakiego rodzaju to wymaganie?"
+    },
+    {
+      "scene": "K-question",
+      "content": 320,
+      "width": 320,
+      "heading": "Co mówi zapis powiązania?"
+    },
+    {
+      "scene": "A-feedback",
+      "content": 320,
+      "width": 320,
+      "heading": "Co należy do kontekstu?"
+    },
+    {
+      "scene": "P-feedback",
+      "content": 320,
+      "width": 320,
+      "heading": "Jakiego rodzaju to wymaganie?"
+    },
+    {
+      "scene": "K-feedback",
+      "content": 320,
+      "width": 320,
+      "heading": "Co mówi zapis powiązania?"
+    },
+    {
+      "scene": "knowledge",
+      "content": 305,
+      "width": 305,
+      "heading": "Jakiego rodzaju to wymaganie?"
+    },
+    {
+      "scene": "follow",
+      "content": 320,
+      "width": 320,
+      "heading": "Sprawdź inną sytuację."
+    },
+    {
+      "scene": "follow-result",
+      "content": 320,
+      "width": 320,
+      "heading": "Sprawdź inną sytuację."
+    },
+    {
+      "scene": "test-intro",
+      "content": 320,
+      "width": 320,
+      "heading": "Wynik zobaczysz na końcu."
+    },
+    {
+      "scene": "test-A",
+      "content": 320,
+      "width": 320,
+      "heading": "Twoja odpowiedź."
+    },
+    {
+      "scene": "test-P",
+      "content": 320,
+      "width": 320,
+      "heading": "Twoja odpowiedź."
+    },
+    {
+      "scene": "test-K",
+      "content": 320,
+      "width": 320,
+      "heading": "Twoja odpowiedź."
+    },
+    {
+      "scene": "test-review",
+      "content": 320,
+      "width": 320,
+      "heading": "Przejrzyj odpowiedzi."
+    },
+    {
+      "scene": "test-result",
+      "content": 320,
+      "width": 320,
+      "heading": "Zobacz wynik i następny krok."
+    },
+    {
+      "scene": "converted",
+      "content": 320,
+      "width": 320,
+      "heading": "Próba przeszła do Nauki."
+    },
+    {
+      "scene": "novariant",
+      "content": 320,
+      "width": 320,
+      "heading": "Brakuje nowego zadania do tej kontroli."
+    },
+    {
+      "scene": "missing",
+      "content": 320,
+      "width": 320,
+      "heading": "Tego materiału jeszcze nie ma."
+    },
+    {
+      "scene": "withdrawn",
+      "content": 320,
+      "width": 320,
+      "heading": "Materiał został wycofany."
+    },
+    {
+      "scene": "disputed",
+      "content": 320,
+      "width": 320,
+      "heading": "Klucz wymaga sprawdzenia."
+    },
+    {
+      "scene": "scope",
+      "content": 320,
+      "width": 320,
+      "heading": "Co już sprawdziliśmy?"
+    },
+    {
+      "scene": "evidence",
+      "content": 320,
+      "width": 320,
+      "heading": "Rodzaje wymagań"
+    }
+  ],
+  "contrasts": [
+    [
+      "#182a2a",
+      "#faf9f6",
+      14.21
+    ],
+    [
+      "#52625f",
+      "#faf9f6",
+      6.1
+    ],
+    [
+      "#185a50",
+      "#ffffff",
+      8.02
+    ],
+    [
+      "#a1332e",
+      "#fff0ec",
+      6.25
+    ],
+    [
+      "#78531a",
+      "#fff4dc",
+      6.3
+    ],
+    [
+      "#254ccd",
+      "#faf9f6",
+      6.66
+    ],
+    [
+      "#73847c",
+      "#ffffff",
+      3.95
+    ]
+  ],
+  "unverified": [
+    "real C and family review",
+    "user study",
+    "learning efficacy",
+    "retention after real delay",
+    "screen reader and full WCAG audit",
+    "production reserve security",
+    "physical mobile devices"
+  ]
+}

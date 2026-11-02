@@ -1,0 +1,134 @@
+{
+  "kind": "schema-and-declared-subset-validation-not-app-test",
+  "validator": "jsonschema 4.26.0",
+  "draft": "2020-12",
+  "date": "2026-11-02",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Draft 2020-12 valid schema: content-package",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Draft 2020-12 valid schema: content-manifest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Draft 2020-12 valid schema: profile-backup",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Positive example: content-package",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Positive example: content-manifest",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Backup envelope valid",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Backup payload valid",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Backup exact UTF-8 digest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Empty learner release valid and honest",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Fixture semantic references complete within declared subset",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Rejected: A with two correct choices",
+      "passed": true,
+      "details": {
+        "method": "schema",
+        "expectedCode": null
+      }
+    },
+    {
+      "name": "Rejected: P missing k",
+      "passed": true,
+      "details": {
+        "method": "schema",
+        "expectedCode": null
+      }
+    },
+    {
+      "name": "Rejected: K m disagrees with rows",
+      "passed": true,
+      "details": {
+        "method": "semantic",
+        "expectedCode": "K_KEY_ROW_MISMATCH"
+      }
+    },
+    {
+      "name": "Rejected: One rationale missing",
+      "passed": true,
+      "details": {
+        "method": "semantic",
+        "expectedCode": "INCOMPLETE_RATIONALES"
+      }
+    },
+    {
+      "name": "Rejected: Unknown rule reference",
+      "passed": true,
+      "details": {
+        "method": "semantic",
+        "expectedCode": "MISSING_RULE_REF"
+      }
+    },
+    {
+      "name": "Rejected: P key count differs from k",
+      "passed": true,
+      "details": {
+        "method": "semantic",
+        "expectedCode": "P_KEY_COUNT_MISMATCH"
+      }
+    },
+    {
+      "name": "Rejected: Invalid format",
+      "passed": true,
+      "details": {
+        "method": "schema",
+        "expectedCode": null
+      }
+    },
+    {
+      "name": "Rejected: Invalid app version",
+      "passed": true,
+      "details": {
+        "method": "schema",
+        "expectedCode": null
+      }
+    },
+    {
+      "name": "Review-only rejected for learner release",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "Review rights separately rejected for LAN learner",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "note": "Domain checks here validate example structure and references only; app importer must implement full rules in schemas/README."
+}

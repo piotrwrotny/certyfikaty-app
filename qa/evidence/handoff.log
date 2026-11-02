@@ -1,0 +1,2 @@
+{"passed": false, "checks": 20, "failed": [{"check": "No work falsely completed", "passed": false, "details": null}]}
+EXIT=1

@@ -1,0 +1,17 @@
+npm notice run ireb-cpre-pwa@0.1.0 npx
+npm notice run playwright test --project=visual
+[WebServer] npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+[WebServer] npm notice run ireb-cpre-pwa@0.1.0 npx
+[WebServer] npm notice run tsx tests/e2e/server.ts --port 4300
+[WebServer] npm warn install-scripts .npmrc allow-scripts setting is being ignored because --allow-scripts was passed on the command line
+[WebServer] npm notice run ireb-cpre-pwa@0.1.0 npx
+[WebServer] npm notice run tsx tests/e2e/server.ts --port 4301 --base /cpre-review/ --dist dist-review --dist-b dist-review
+
+Running 3 tests using 1 worker
+
+  ok 1 [visual] › tests\visual\fidelity.spec.ts:120:1 › fidelity: app vs accepted prototype — session, question, feedback, test, result (1200 and 390) (15.1s)
+  ok 2 [visual] › tests\visual\fidelity.spec.ts:200:1 › states: converted, missing variant, two failed follow-ups, offline status (screenshots + overflow) (3.4s)
+  ok 3 [visual] › tests\visual\fidelity.spec.ts:225:1 › implementation regression baseline (not a design reference) (1.4s)
+
+  3 passed (26.3s)
+EXIT=0

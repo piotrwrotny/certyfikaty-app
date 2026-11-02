@@ -1,0 +1,15 @@
+:root {
+  --paper: #faf9f6; --surface: #ffffff; --ink: #182a2a;
+  --muted: #52625f; --accent: #185a50; --accent-soft: #eaf2ee;
+  --line: #d7ded9; --control: #73847c;
+  --error: #a1332e; --error-bg: #fff0ec;
+  --warning: #78531a; --warning-bg: #fff4dc; --focus: #254ccd;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px;
+  --space-12: 48px; --space-18: 72px;
+  --reading-width: 760px; --frame-width: 856px; --target-size: 44px;
+}
+/* Punkt wyjścia tokenów, nie komplet stylów aplikacji. D03 i makiety określają komponenty. */
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }

@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-02",
+  "source_count": 19,
+  "note": "Input identity only; hashes are not acceptance or a claim of full rereading all 19 documents. Source content was not modified.",
+  "files": [
+    {
+      "uploaded_name": "IREB_CPRE_Deep_Research_PL_2026-11.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/01-IREB_CPRE_Deep_Research_PL_2026-11.md",
+      "sha256": "04d8dd6c237fbacf4daedfffe41034279e595714c5db4aab23a6371fa0eff9ed",
+      "bytes": 257829
+    },
+    {
+      "uploaded_name": "IREB_CPRE_Functional_Learning_Experience_Blueprint_PL_2026-11.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/02-IREB_CPRE_Functional_Learning_Experience_Blueprint_PL_2026-11.md",
+      "sha256": "43e82c6915aaae12f735ed45d4b341186f6cefa8d93dab140a4b1099644122b8",
+      "bytes": 295414
+    },
+    {
+      "uploaded_name": "IREB_CPRE_Functional_to_Knowledge_Contract_PL_2026-11.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/03-IREB_CPRE_Functional_to_Knowledge_Contract_PL_2026-11.md",
+      "sha256": "d1cd3831a6aa80c6c899b38ae02ea46737b63e026fa155e7f6612ea5e5d95210",
+      "bytes": 123110
+    },
+    {
+      "uploaded_name": "00_IREB_CPRE_Fundament_pedagogiczny.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/04-00_IREB_CPRE_Fundament_pedagogiczny.md",
+      "sha256": "12643d8e65e495a9fac2aaab46c96b14da6b25c2a454e9859a66c529e57b68cd",
+      "bytes": 9270
+    },
+    {
+      "uploaded_name": "C02_IREB_CPRE_Terminology_and_Authoring_Standard_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/05-C02_IREB_CPRE_Terminology_and_Authoring_Standard_v0.1.md",
+      "sha256": "8c8393f5863e8dbe6e50dd60e1046088ee13e197ba2af6d47a0ef0c632c4dab3",
+      "bytes": 24896
+    },
+    {
+      "uploaded_name": "C01_IREB_CPRE_Source_and_Licensing_Register_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/06-C01_IREB_CPRE_Source_and_Licensing_Register_v0.1.md",
+      "sha256": "8606f70a06c364499b09853f9873c39816f3d4e156bbbf4c83b82200b20f5155",
+      "bytes": 16233
+    },
+    {
+      "uploaded_name": "R01_IREB_CPRE_Project_State_and_Knowledge_Consolidation_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/07-R01_IREB_CPRE_Project_State_and_Knowledge_Consolidation_v0.1.md",
+      "sha256": "0ca6c77589f3b90a919e63aa384f59fa4936c223a1bcdc23f2254e3e9b7ee2ba",
+      "bytes": 38914
+    },
+    {
+      "uploaded_name": "R02_IREB_CPRE_Readiness_Audit_and_Gap_Register_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/08-R02_IREB_CPRE_Readiness_Audit_and_Gap_Register_v0.1.md",
+      "sha256": "dbed9155a1d8e3911864852d222797f21518a72276e24b6d770dbdb9a70ad54d",
+      "bytes": 41654
+    },
+    {
+      "uploaded_name": "R03_IREB_CPRE_Application_Design_Conversation_Input_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/09-R03_IREB_CPRE_Application_Design_Conversation_Input_v0.1.md",
+      "sha256": "dbdff94dead628618e2412182415e7edb131f2f23b41674329d66b83928bd5a5",
+      "bytes": 9335
+    },
+    {
+      "uploaded_name": "R04_IREB_CPRE_B_Acceptance_Review_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/10-R04_IREB_CPRE_B_Acceptance_Review_v0.1.md",
+      "sha256": "8c5125b527d5e6f1f827dbad3ed699dae8a4c91f28e49fb342ac37d0abbabddf",
+      "bytes": 28792
+    },
+    {
+      "uploaded_name": "R05_IREB_CPRE_G1_Corrections_and_Readiness_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/11-R05_IREB_CPRE_G1_Corrections_and_Readiness_v0.1.md",
+      "sha256": "80768f54d892c5f49859a6eedf04608131325ae6fa11037cfdb2a7137f1d2771",
+      "bytes": 9766
+    },
+    {
+      "uploaded_name": "B03_IREB_CPRE_Semantic_Pilot_APK_v0.2.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/12-B03_IREB_CPRE_Semantic_Pilot_APK_v0.2.md",
+      "sha256": "af112d6e97ebe559264eb7ba6df4c6acc8a0c91ffe02f543b0f44123913114d1",
+      "bytes": 38906
+    },
+    {
+      "uploaded_name": "B02_IREB_CPRE_FR_Traceability_v0.2.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/13-B02_IREB_CPRE_FR_Traceability_v0.2.md",
+      "sha256": "dc089326e158d431520c7a8eb5cc2f6d8935c0513bee355ca8f9ab7c92dcfa94",
+      "bytes": 50452
+    },
+    {
+      "uploaded_name": "B01_IREB_CPRE_Semantic_Knowledge_Contract_v0.2.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/14-B01_IREB_CPRE_Semantic_Knowledge_Contract_v0.2.md",
+      "sha256": "f29c2f3b61ce1ad86467a19153b648c50af8cac61b07ca19bb856d0dfe46323c",
+      "bytes": 74098
+    },
+    {
+      "uploaded_name": "00_IREB_CPRE_START.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/15-00_IREB_CPRE_START.md",
+      "sha256": "b8216bf09c60bd5455077bfb3731ac009c9a34d5a0909cf24225093d77d7ca78",
+      "bytes": 15402
+    },
+    {
+      "uploaded_name": "B04_IREB_CPRE_B_Decisions_and_Handoff_C_v0.2.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/16-B04_IREB_CPRE_B_Decisions_and_Handoff_C_v0.2.md",
+      "sha256": "00d82a4f62d8b1c01931941a0dcfa8fccccd378b29c1990eb47d5fd3dc4988e2",
+      "bytes": 37189
+    },
+    {
+      "uploaded_name": "R06_IREB_CPRE_G1_Owner_Decision_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/17-R06_IREB_CPRE_G1_Owner_Decision_v0.1.md",
+      "sha256": "85181939cbbe1e9eb96170b416c732de83a5882864db63857e4de47c2dd593d0",
+      "bytes": 5472
+    },
+    {
+      "uploaded_name": "C03_IREB_CPRE_Pilot_Content_APK_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/18-C03_IREB_CPRE_Pilot_Content_APK_v0.1.md",
+      "sha256": "b92d740f4e58b9dd45b323eefa74157da14d93fb6522db70d8c7626f000326f9",
+      "bytes": 5955
+    },
+    {
+      "uploaded_name": "C04_IREB_CPRE_Content_QA_and_Handoff_v0.1.md",
+      "workspace_copy": "/workspace/scratch/6379e47c43e2/project_sources/19-C04_IREB_CPRE_Content_QA_and_Handoff_v0.1.md",
+      "sha256": "91c37ff2b554fe162c0102a54b2b14245ad6dd68f91df23b649709ad0185cc53",
+      "bytes": 20009
+    }
+  ]
+}

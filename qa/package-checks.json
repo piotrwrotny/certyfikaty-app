@@ -1,0 +1,15 @@
+{
+  "kind": "package-integrity-not-application-test",
+  "date": "2026-11-02",
+  "passed": true,
+  "coreBAcceptedHashes": {
+    "B01_IREB_CPRE_Semantic_Knowledge_Contract_v0.2.md": true,
+    "B02_IREB_CPRE_FR_Traceability_v0.2.md": true,
+    "B03_IREB_CPRE_Semantic_Pilot_APK_v0.2.md": true,
+    "B04_IREB_CPRE_B_Decisions_and_Handoff_C_v0.2.md": true
+  },
+  "zipCrcIntegrity": "passed",
+  "safeRelativePaths": true,
+  "filesInFinalArchive": 116,
+  "note": "The archive is rebuilt and CRC-tested after embedding this report. No app build or G2/G3/G4 closure is implied."
+}

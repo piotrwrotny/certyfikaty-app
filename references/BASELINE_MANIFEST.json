@@ -1,0 +1,465 @@
+{
+  "snapshotDate": "2026-11-02",
+  "files": [
+    {
+      "path": "references/project/00_IREB_CPRE_START.md",
+      "sha256": "b8216bf09c60bd5455077bfb3731ac009c9a34d5a0909cf24225093d77d7ca78",
+      "bytes": 15402,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R06_IREB_CPRE_G1_Owner_Decision_v0.1.md",
+      "sha256": "85181939cbbe1e9eb96170b416c732de83a5882864db63857e4de47c2dd593d0",
+      "bytes": 5472,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/00_IREB_CPRE_Fundament_pedagogiczny.md",
+      "sha256": "12643d8e65e495a9fac2aaab46c96b14da6b25c2a454e9859a66c529e57b68cd",
+      "bytes": 9270,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/IREB_CPRE_Functional_Learning_Experience_Blueprint_PL_2026-11.md",
+      "sha256": "43e82c6915aaae12f735ed45d4b341186f6cefa8d93dab140a4b1099644122b8",
+      "bytes": 295414,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/IREB_CPRE_Functional_to_Knowledge_Contract_PL_2026-11.md",
+      "sha256": "d1cd3831a6aa80c6c899b38ae02ea46737b63e026fa155e7f6612ea5e5d95210",
+      "bytes": 123110,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/B01_IREB_CPRE_Semantic_Knowledge_Contract_v0.2.md",
+      "sha256": "f29c2f3b61ce1ad86467a19153b648c50af8cac61b07ca19bb856d0dfe46323c",
+      "bytes": 74098,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/B02_IREB_CPRE_FR_Traceability_v0.2.md",
+      "sha256": "dc089326e158d431520c7a8eb5cc2f6d8935c0513bee355ca8f9ab7c92dcfa94",
+      "bytes": 50452,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/B03_IREB_CPRE_Semantic_Pilot_APK_v0.2.md",
+      "sha256": "af112d6e97ebe559264eb7ba6df4c6acc8a0c91ffe02f543b0f44123913114d1",
+      "bytes": 38906,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/B04_IREB_CPRE_B_Decisions_and_Handoff_C_v0.2.md",
+      "sha256": "00d82a4f62d8b1c01931941a0dcfa8fccccd378b29c1990eb47d5fd3dc4988e2",
+      "bytes": 37189,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/C01_IREB_CPRE_Source_and_Licensing_Register_v0.2.md",
+      "sha256": "5bc472d6a8df25a7aa65561114ca23ed7defd00c03f7254bf76cc78181921f5a",
+      "bytes": 17576,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/C02_IREB_CPRE_Terminology_and_Authoring_Standard_v0.2.md",
+      "sha256": "de488b934a6c65a22988d49636259d45a40331059800ccc44d9acf528d6681aa",
+      "bytes": 15481,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/C03_IREB_CPRE_Pilot_Content_APK_v0.2.md",
+      "sha256": "f249bf8e631afc8f4c2154920a1e6da4261adf1a9a7e5f831b0014429de4fec9",
+      "bytes": 69879,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/C04_IREB_CPRE_Content_QA_and_Handoff_v0.2.md",
+      "sha256": "63fa29fda5a7661b11b971be81b07eb56c6cd9529e789dd29f1f17b3fc9bd6ca",
+      "bytes": 30385,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/M01_IREB_CPRE_FL_Topic_Map_and_Authoring_Backlog_v0.1.md",
+      "sha256": "4036fa4af886e9a0feb2e186933b2a92c30cbaa05f2331c4423398a121ba9739",
+      "bytes": 46018,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/M02_IREB_CPRE_Topic_Flow_Brief_Template_v0.1.md",
+      "sha256": "6c019430595741d9a45084ca77aa78302fb83a3995c4117436aab124735bd365",
+      "bytes": 32611,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/M03_IREB_CPRE_Topic_Collections_Z1-Z6_v0.1.md",
+      "sha256": "ad30b306bd9b784272759cf733e4dfc6b273119d3bf4073c261f277eb4c931a4",
+      "bytes": 4723,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R03_IREB_CPRE_Application_Design_Conversation_Input_v0.1.md",
+      "sha256": "dbdff94dead628618e2412182415e7edb131f2f23b41674329d66b83928bd5a5",
+      "bytes": 9335,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R04_IREB_CPRE_B_Acceptance_Review_v0.1.md",
+      "sha256": "8c5125b527d5e6f1f827dbad3ed699dae8a4c91f28e49fb342ac37d0abbabddf",
+      "bytes": 28792,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R05_IREB_CPRE_G1_Corrections_and_Readiness_v0.1.md",
+      "sha256": "80768f54d892c5f49859a6eedf04608131325ae6fa11037cfdb2a7137f1d2771",
+      "bytes": 9766,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R01_IREB_CPRE_Project_State_and_Knowledge_Consolidation_v0.1.md",
+      "sha256": "0ca6c77589f3b90a919e63aa384f59fa4936c223a1bcdc23f2254e3e9b7ee2ba",
+      "bytes": 38914,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/R02_IREB_CPRE_Readiness_Audit_and_Gap_Register_v0.1.md",
+      "sha256": "dbed9155a1d8e3911864852d222797f21518a72276e24b6d770dbdb9a70ad54d",
+      "bytes": 41654,
+      "role": "project-input"
+    },
+    {
+      "path": "references/project/IREB_CPRE_Deep_Research_PL_2026-11.md",
+      "sha256": "04d8dd6c237fbacf4daedfffe41034279e595714c5db4aab23a6371fa0eff9ed",
+      "bytes": 257829,
+      "role": "project-input"
+    },
+    {
+      "path": "references/design/D01_IREB_CPRE_Product_Scope_and_Decisions_v0.1.md",
+      "sha256": "b0712a924f65d314e19bee0737b304e14b841e2572ca161a177483ee2749d5de",
+      "bytes": 21421,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D02_IREB_CPRE_User_Flows_and_Screen_States_v0.1.md",
+      "sha256": "ebc42422c11f27f4d51b7687732036e156f79dd0e9887b30e1e794044415320c",
+      "bytes": 20857,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D03_IREB_CPRE_UI_Design_System_and_Mockups_v0.1.md",
+      "sha256": "8cc4db5bacd61180cd850c193f67847bf4de40ee64ddf43105fa1ab7b755f373",
+      "bytes": 11761,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D04_IREB_CPRE_Interaction_and_Prototype_Spec_v0.1.md",
+      "sha256": "a2cecf6123be98042056206d55e68800dca79e841a7204d905204b0e7032a28e",
+      "bytes": 14620,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D05_IREB_CPRE_Design_QA_and_Implementation_Handoff_v0.1.md",
+      "sha256": "8ff9f40c91fce0dd428f00b18a07c424049ad0656b36fa67b3176b2e38fc7a91",
+      "bytes": 28602,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D_Document_Checks.json",
+      "sha256": "6d9bd029669f90ad165f1ab6a165a42ca756d56fed57eff1ae95ad5a69ac5d90",
+      "bytes": 138,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D_QA_Evidence.json",
+      "sha256": "5e259f1895b18f3d63a73196bb609120a77ec8169bfecf7ab1f3f717f0ba9a52",
+      "bytes": 4571,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D_START_Update_Proposal_v0.1.md",
+      "sha256": "c69060a7f714baa4d7561512bb6ca29e1394c4323416aa551f64ed528fdfb7ce",
+      "bytes": 2016,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/D_Source_Manifest.json",
+      "sha256": "5029d4cdd5a0aaaa4c564a7a54b4428b10954d1303ca609ad6f1a4279c1cee5b",
+      "bytes": 6229,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/IREB_CPRE_D_Mockup_Atlas_v0.1.html",
+      "sha256": "3fe90808c7862a2d3c88ce5831efc4f8a21d06d0292f947b0e9d9f51a5e4fd20",
+      "bytes": 66682,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/IREB_CPRE_D_Prototype_v0.1.html",
+      "sha256": "d46d61272c4089719e53d151b1b79fa610486a6bbfae72f5e561e65bd10becd2",
+      "bytes": 58280,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/README.md",
+      "sha256": "bbaf50412f735cf084b39d3acf823e49e4bf8c54a4230d4f0ed35ae8b1080488",
+      "bytes": 860,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/design-qa.md",
+      "sha256": "053fff89ecc22fa2ba5c519e099167887bcf0a93321bcddf6e9752986095f3cb",
+      "bytes": 3014,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/D_Design_QA_Comparison.png",
+      "sha256": "11045cb9b1178722754b42fbde0ed5ad9775c099cb7eccfb57e678a9ee6b9593",
+      "bytes": 883988,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/D_Review_Overview.png",
+      "sha256": "7f1d0b13bb3adf114cc5424d7abf90a838b5cb13d3033d59a4d80710e35bfe7e",
+      "bytes": 554273,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/D_Variants_Comparison.jpg",
+      "sha256": "9eae9c56859e198d6baf3240550e28d13253b33189ae84efd83b00497b669aae",
+      "bytes": 204078,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-A-feedback.png",
+      "sha256": "58f6681b87cd382b670bd4ec7690508002159d4304abe682a10d908afcf01fe0",
+      "bytes": 603911,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-A-question.png",
+      "sha256": "d9f9846e66ce73c83068724f89e85da9a119ddb75b94fe44419501e8fde1f901",
+      "bytes": 391822,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-K-feedback.png",
+      "sha256": "1a67b46de5abf075600fec53ba141d74c767a681b49a31c022b1fa2201bba862",
+      "bytes": 654537,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-K-question.png",
+      "sha256": "a4d259002d68a6ac1c8806c2e07233c1d89975e8072022f0045751236a67e440",
+      "bytes": 443536,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-P-feedback.png",
+      "sha256": "3204d4075a0dc43e4b0a098c38c13af33ff66c56fa11cf1973a3319097f89e5e",
+      "bytes": 588759,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-P-question.png",
+      "sha256": "80fcc9569a7b2e171bbed9095999d517c03fc2dd81263f9d1e361df4aacd1121",
+      "bytes": 376581,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-converted.png",
+      "sha256": "c5d96bb8fc9509bef9b436106349397c79b952785d5a6806e7dc27ac33b21eab",
+      "bytes": 325788,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-disputed.png",
+      "sha256": "b3f766c9b4512596fe8c29e9dd76ccf0c466a278ec16857987d97f1fed20a646",
+      "bytes": 178642,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-evidence.png",
+      "sha256": "7466d76f8b5fc52c3efabeff649bd80794082af01ddb4cdbd2af7ec8410619a3",
+      "bytes": 314240,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-follow-result.png",
+      "sha256": "582606756e046fdf3c1ebc91394f29a805ab3c181726db62658cd1b3c9e54881",
+      "bytes": 451263,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-follow.png",
+      "sha256": "87d59c041ceeacf00c12c41c82a2c0503f0de2e8c1ecfdcdb3d6b6b8bb90f0a8",
+      "bytes": 283810,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-home.png",
+      "sha256": "51acc82e72dfed3c275caf13d22a244ad8db28bd87eb36731d95e1fc617cad42",
+      "bytes": 286714,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-knowledge.png",
+      "sha256": "a3f4f322d59440a2cfb3aa51d83cd0ffb2dab4fbfd570b52f6ee1d8305b7b1ce",
+      "bytes": 450997,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-missing.png",
+      "sha256": "23c36e90f0f1fe9203c41ced75f87af8cf5cc9ae746da2ae874481e99df8078a",
+      "bytes": 163730,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-scope.png",
+      "sha256": "7b2f07e4f570eef8202a9bd5b4eb96b271cce0bbe06aa668996608c2d38694f3",
+      "bytes": 365351,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-test-P.png",
+      "sha256": "c8ed491fade8da4bc8ae68626f3b665ccf50d39132cad6e6c224ee53631e3dee",
+      "bytes": 392445,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-test-result.png",
+      "sha256": "05b12eb9bb789b17aba2c2996b34b6b689915e3edf73a03434e0ef2a02094655",
+      "bytes": 324991,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/desktop-test-review.png",
+      "sha256": "eec20eb7808b68a0c9b7148d261a8cffdf6ab83d9a0e8c47394981ed90ddb032",
+      "bytes": 287203,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-A-feedback.png",
+      "sha256": "da8e68fa29fd404804c04c2f1ae9fc05349c4e54a6becb9b7ac796c45ca6f240",
+      "bytes": 568043,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-A-question.png",
+      "sha256": "d9752ad29555b3f2b6434cb2308d8fb9712b556c6d40ef06356ec00d28c87c5a",
+      "bytes": 364778,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-K-feedback.png",
+      "sha256": "13d3d5e01d03c4ca005841ab5be8fb8bf585b6fde6e8887d9c75606a6bbbc65a",
+      "bytes": 602229,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-K-question.png",
+      "sha256": "11d9901ea0a297fdc5f8a7fc7a2d6690001d580f306c0a381ba3cf6bcb37918f",
+      "bytes": 393117,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-P-feedback.png",
+      "sha256": "2548f322b784490f2be512289a82b4c88542be76c3ce00463aae51c6da60d56a",
+      "bytes": 551429,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-P-question.png",
+      "sha256": "7057271b7b5f871b661cf5629080ff98620c94d8264696bf9e1cb6f846143206",
+      "bytes": 343284,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-converted.png",
+      "sha256": "89cb25f3f0be595f0943a7adaa04021f536735d911e1f00079ab83e3c7547ab7",
+      "bytes": 281867,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-disputed.png",
+      "sha256": "d5d0a05b1831233e0a20952a7f9bb4f9590bb9233594420cf84446d49c17ea5d",
+      "bytes": 147748,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-evidence.png",
+      "sha256": "405854035178c9d07275854c0073a3ad6838e4dbbf9e52584f228789adff6c83",
+      "bytes": 275681,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-follow-result.png",
+      "sha256": "f3ceaede7a92a9deef1b11379b13ead2de287c4bec84a4a5d7039d926d045bee",
+      "bytes": 422746,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-follow.png",
+      "sha256": "7be62093fd1fa678508c68ee0943abb867e12c285bd37b2e2c9d135beb6e0575",
+      "bytes": 250235,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-home.png",
+      "sha256": "68b2f64849146b6df3791db3fe249ec99f3a99ccbca43b9adb8c58c97f001267",
+      "bytes": 251794,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-knowledge.png",
+      "sha256": "a5d4b969d63886c731dfb08d617206b1b09f46514febb11205211426c6f8d237",
+      "bytes": 179023,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-missing.png",
+      "sha256": "049693b70832ce971b0681fdb111e9b234c72647c2f7033e312b29a02eae404e",
+      "bytes": 129226,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-novariant.png",
+      "sha256": "06bcfb814f41ac654b1fbfd069829f1c3b17c2f7f1bc3af4a137756807798bc6",
+      "bytes": 180551,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-test-P.png",
+      "sha256": "c11c5efad9080c905c75a68c70f651f9fb5fdab6ab0c0f848fa01bee45501b9d",
+      "bytes": 362059,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-test-result.png",
+      "sha256": "87f1788271dae9667ef3402f153ed9ee42dbdd5e53fd650804e8d84c95db42c9",
+      "bytes": 282892,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/design/visuals/mobile-test-review.png",
+      "sha256": "c08ab4e51205b0f9491297ffaf2ce8e4782833c11b3ff771cb838a54f5ae4ff2",
+      "bytes": 263998,
+      "role": "design-baseline"
+    },
+    {
+      "path": "references/content/T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md",
+      "sha256": "365e60dda5f9a47697c7f3170c938d821187c7658b38f7e8eb894f5621ccf965",
+      "bytes": 214843,
+      "role": "content-review-input",
+      "libraryVersion": "2",
+      "documentVersion": "v0.1"
+    },
+    {
+      "path": "references/content/T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md",
+      "sha256": "ba95c577e0e251d23d227ec6289d96dfbdce501df24c384dc95e0b1883e6c57f",
+      "bytes": 69363,
+      "role": "content-review-input",
+      "libraryVersion": "2",
+      "documentVersion": "v0.1"
+    }
+  ]
+}

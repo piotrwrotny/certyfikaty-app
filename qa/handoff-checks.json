@@ -1,0 +1,158 @@
+{
+  "kind": "handoff-integrity-and-arithmetic-not-application-test",
+  "passed": false,
+  "checks": [
+    {
+      "check": "Immutable source/design bytes",
+      "passed": true,
+      "details": {
+        "files": 76,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Task IDs unique and dependencies resolved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Task dependencies acyclic",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All 38 FR traced",
+      "passed": true,
+      "details": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-011",
+        "FR-012",
+        "FR-013",
+        "FR-014",
+        "FR-015",
+        "FR-016",
+        "FR-017",
+        "FR-018",
+        "FR-019",
+        "FR-020",
+        "FR-021",
+        "FR-022",
+        "FR-023",
+        "FR-024",
+        "FR-025",
+        "FR-026",
+        "FR-027",
+        "FR-028",
+        "FR-029",
+        "FR-030",
+        "FR-031",
+        "FR-032",
+        "FR-033",
+        "FR-034",
+        "FR-035",
+        "FR-036",
+        "FR-037",
+        "FR-038"
+      ]
+    },
+    {
+      "check": "38 explicit FR matrix rows",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Validate/Later preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "No work falsely completed",
+      "passed": false,
+      "details": null
+    },
+    {
+      "check": "All new profile/PWA/update/content requirements traced",
+      "passed": true,
+      "details": {
+        "requirements": 18,
+        "unmapped": [],
+        "unexpected": []
+      }
+    },
+    {
+      "check": "36 QA scenarios referenced",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "Actual T21 inventory 32 /128 /47",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Review fixture cannot claim learner approval",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "A/P/K fixture, all 12 rationale",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Fixture source/rule references resolve",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Source files match fixture provenance",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "176 independent explicit expected scoring vectors",
+      "passed": true,
+      "details": {
+        "vectors": 176,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "1024 enumerated scoring states range and excess",
+      "passed": true,
+      "details": {
+        "states": 1024,
+        "failures": []
+      }
+    },
+    {
+      "check": "Exact fraction addition",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Review release payload digest/bytes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Authored Markdown local links resolve",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "Required technical docs present",
+      "passed": true,
+      "details": null
+    }
+  ]
+}

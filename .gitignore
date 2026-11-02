@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*.local
+*.profile-backup.json
+*.learner-export.json
+*.db
+.DS_Store
+# Nie ignoruj backlogu, lockfile, schematów, normatywnego contentu ani dowodów qa.
+release-out/
+dist-review/
+dist-e2e/
+dist-e2e-b/

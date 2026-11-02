@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0.0",
+  "exportedAt": "2026-11-02T00:00:00Z",
+  "appVersion": "0.1.0",
+  "payloadJson": "{\n  \"profile\": {\n    \"id\": \"00000000-0000-4000-8000-000000000001\",\n    \"name\": \"Syntetyczny profil kontrolny\",\n    \"createdAt\": \"2026-11-02T00:00:00Z\",\n    \"preferences\": {}\n  },\n  \"records\": {\n    \"attempts\": [],\n    \"answers\": [],\n    \"evaluations\": [],\n    \"exposures\": [],\n    \"contacts\": [],\n    \"navigationContexts\": [],\n    \"evidence\": [],\n    \"plans\": [],\n    \"issues\": []\n  },\n  \"snapshots\": [],\n  \"historyCompleteness\": \"imported-unverified\",\n  \"sourceDeviceLabel\": \"Przykład techniczny — brak danych ucznia\"\n}\n",
+  "payloadSha256": "dbccce4bf5656b8c8bcef7751a2ad2bbc309015341b4e2ea69a999246f72ccdc"
+}

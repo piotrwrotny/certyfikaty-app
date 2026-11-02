@@ -1,0 +1,510 @@
+{
+  "purpose": "review-inventory-not-a-release",
+  "origin": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md",
+  "questions": [
+    {
+      "id": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "b"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D01/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B02/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": false
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F02/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "answerKey": {
+        "selectedIds": [
+          "d",
+          "e"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G02/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D02/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B03/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": true
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F03/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 3,
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G03/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D03/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B04/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": false
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F04/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G04/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D04/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B05/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": true
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F05/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G05/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D05/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B06/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F06/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 3,
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "e"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G06/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D06/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B07/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": false
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F07/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "c",
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G07/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D07/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B08/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    },
+    {
+      "id": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false
+        }
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F08/r1",
+      "decisionCount": 3,
+      "rationaleCount": 3
+    },
+    {
+      "id": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "e"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G08/r1",
+      "decisionCount": 5,
+      "rationaleCount": 5
+    },
+    {
+      "id": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "sourceAnchor": "T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-D08/r1",
+      "decisionCount": 4,
+      "rationaleCount": 4
+    }
+  ]
+}

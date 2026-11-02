@@ -1,0 +1,67 @@
+npm notice run ireb-cpre-pwa@0.1.0 check
+npm notice run npm run typecheck && npm run lint && npm run content:validate && npm run test && npm run build
+npm notice run ireb-cpre-pwa@0.1.0 typecheck
+npm notice run tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit && tsc -p tsconfig.node.json --noEmit
+npm notice run ireb-cpre-pwa@0.1.0 lint
+npm notice run eslint .
+npm notice run ireb-cpre-pwa@0.1.0 content:validate
+npm notice run tsx scripts/content/validate.ts
+PASS  T21.r1-full1.json: JSON Schema 2020-12
+PASS  T21.r1-full1.json: semantic rules
+PASS  TECH01.r1.json: JSON Schema 2020-12
+PASS  TECH01.r1.json: semantic rules
+PASS  T21 rejected on learner channel (review pending, review-only, no uses, no rights)
+PASS  T21 allowed on review channel
+PASS  TECH01 (synthetic technical fixture) passes learner gate
+PASS  examples review fixture: JSON Schema
+PASS  examples review fixture rejected on learner channel
+PASS  negative(schema): A with two correct choices
+PASS  negative(schema): P missing k
+PASS  negative(semantic): K m disagrees with rows (K_KEY_ROW_MISMATCH)
+PASS  negative(semantic): One rationale missing (INCOMPLETE_RATIONALES)
+PASS  negative(semantic): Unknown rule reference (MISSING_RULE_REF)
+PASS  negative(semantic): P key count differs from k (P_KEY_COUNT_MISMATCH)
+PASS  negative(schema): Invalid format
+PASS  negative(schema): Invalid app version
+PASS  example review manifest: JSON Schema
+PASS  empty learner manifest valid
+
+content:validate OK
+npm notice run ireb-cpre-pwa@0.1.0 test
+npm notice run vitest run
+
+ RUN  v5.0.5 C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app
+
+
+ Test Files  11 passed (11)
+      Tests  242 passed (242)
+   Start at  13:54:49
+   Duration  428ms (setup 46%, tests 20%, import 17%, transform 12%, worker 4%)
+
+npm notice run ireb-cpre-pwa@0.1.0 build
+npm notice run npm run content:build && vite build
+npm notice run ireb-cpre-pwa@0.1.0 content:build
+npm notice run tsx scripts/content/build-release.ts
+[review] release review-0001: included 2 package(s): T21@r1-full1, TECH01@r1
+[learner] release learner-0001: included 1 package(s): TECH01@r1
+[learner] excluded T21: LEARNER_REVIEW_PENDING; LEARNER_NOT_PERMITTED; LEARNER_NO_DECISION; LEARNER_NO_USES; LEARNER_RIGHTS; LEARNER_RIGHTS_CHANNEL; LEARNER_NO_RIGHTS_DECISION
+[36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 60 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/manifest.webmanifest                          0.52 kB
+dist/index.html                                    0.83 kB │ gzip:   0.47 kB
+dist/assets/index-BgirjtMZ.css                    11.93 kB │ gzip:   3.35 kB
+dist/assets/workbox-window.prod.es5-Bd17z0YL.js    5.65 kB │ gzip:   2.20 kB
+dist/assets/index-Gx9zM2BA.js                    481.57 kB │ gzip: 144.91 kB
+
+[32m✓ built in 287ms[39m
+
+PWA v2.0.0
+mode      generateSW
+precache  14 entries (495.48 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-2fbc6a65.js
+EXIT=0

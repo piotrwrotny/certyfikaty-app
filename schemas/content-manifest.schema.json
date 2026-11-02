@@ -1,0 +1,171 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "releaseId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "releaseSequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "channel": {
+      "enum": [
+        "review",
+        "learner"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contentSchemaVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "minAppVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "maxAppMajor": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "contentSchemaVersion",
+        "minAppVersion",
+        "maxAppMajor"
+      ]
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "packageId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^r[0-9]+(?:-[A-Za-z0-9._-]+)?$"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "packageId",
+          "revision",
+          "url",
+          "bytes",
+          "sha256"
+        ]
+      },
+      "minItems": 0
+    },
+    "withdrawals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "decisionId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+          },
+          "itemRef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+              },
+              "revision": {
+                "type": "string",
+                "pattern": "^r[0-9]+(?:-[A-Za-z0-9._-]+)?$"
+              }
+            },
+            "required": [
+              "id",
+              "revision"
+            ]
+          },
+          "status": {
+            "enum": [
+              "withdrawn",
+              "key-disputed"
+            ]
+          },
+          "reasonCode": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+          },
+          "decidedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "decisionRef": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "decisionId",
+          "itemRef",
+          "status",
+          "reasonCode",
+          "decidedAt",
+          "decisionRef"
+        ]
+      },
+      "minItems": 0
+    },
+    "releaseNote": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publicationChannel": {
+      "enum": [
+        "internal-review",
+        "internal-lan",
+        "public-noncommercial",
+        "public-commercial"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "releaseId",
+    "releaseSequence",
+    "channel",
+    "createdAt",
+    "compatibility",
+    "packages",
+    "withdrawals",
+    "releaseNote",
+    "publicationChannel"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ireb-cpre.local/schemas/content-manifest.schema.json"
+}

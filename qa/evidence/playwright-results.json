@@ -1,0 +1,304 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=visual"
+    ],
+    "configFile": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\playwright.config.ts",
+    "rootDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [
+          "**/review.spec.ts"
+        ],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/profiles.spec.ts",
+          "**/offline.spec.ts",
+          "**/updates.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/learning.spec.ts",
+          "**/topic-test.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "review",
+        "name": "review",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/review.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "visual",
+        "name": "visual",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/visual",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "visual",
+        "testDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\visual",
+        "snapshotDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\visual",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4300/cpre/",
+          "serviceWorkers": "allow",
+          "locale": "pl-PL",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1200,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "visual"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "qa/evidence/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "visual\\fidelity.spec.ts",
+      "file": "visual/fidelity.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fidelity: app vs accepted prototype — session, question, feedback, test, result (1200 and 390)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "visual",
+              "projectName": "visual",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15070,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:56.878Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e952102408661d6a7ca6-a26b471abf4c12fbf232",
+          "file": "visual/fidelity.spec.ts",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "states: converted, missing variant, two failed follow-ups, offline status (screenshots + overflow)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "visual",
+              "projectName": "visual",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:54:12.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e952102408661d6a7ca6-dd1a20d91fc99e58f957",
+          "file": "visual/fidelity.spec.ts",
+          "line": 200,
+          "column": 1
+        },
+        {
+          "title": "implementation regression baseline (not a design reference)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "visual",
+              "projectName": "visual",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1376,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:54:16.082Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e952102408661d6a7ca6-9c7c291d36facca5499d",
+          "file": "visual/fidelity.spec.ts",
+          "line": 225,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-02T12:53:51.649Z",
+    "duration": 26325.937,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

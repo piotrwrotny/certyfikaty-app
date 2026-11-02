@@ -1,0 +1,3134 @@
+{
+  "purpose": "synthetic-scoring-inputs-not-learner-results",
+  "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md",
+  "vectors": [
+    {
+      "id": "GOLD-001",
+      "itemId": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B01"
+    },
+    {
+      "id": "GOLD-002",
+      "itemId": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B01"
+    },
+    {
+      "id": "GOLD-003",
+      "itemId": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B01"
+    },
+    {
+      "id": "GOLD-004",
+      "itemId": "T21-B01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B01"
+    },
+    {
+      "id": "GOLD-005",
+      "itemId": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B02"
+    },
+    {
+      "id": "GOLD-006",
+      "itemId": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B02"
+    },
+    {
+      "id": "GOLD-007",
+      "itemId": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B02"
+    },
+    {
+      "id": "GOLD-008",
+      "itemId": "T21-B02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B02"
+    },
+    {
+      "id": "GOLD-009",
+      "itemId": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B03"
+    },
+    {
+      "id": "GOLD-010",
+      "itemId": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B03"
+    },
+    {
+      "id": "GOLD-011",
+      "itemId": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B03"
+    },
+    {
+      "id": "GOLD-012",
+      "itemId": "T21-B03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B03"
+    },
+    {
+      "id": "GOLD-013",
+      "itemId": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B04"
+    },
+    {
+      "id": "GOLD-014",
+      "itemId": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B04"
+    },
+    {
+      "id": "GOLD-015",
+      "itemId": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B04"
+    },
+    {
+      "id": "GOLD-016",
+      "itemId": "T21-B04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B04"
+    },
+    {
+      "id": "GOLD-017",
+      "itemId": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B05"
+    },
+    {
+      "id": "GOLD-018",
+      "itemId": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B05"
+    },
+    {
+      "id": "GOLD-019",
+      "itemId": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B05"
+    },
+    {
+      "id": "GOLD-020",
+      "itemId": "T21-B05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B05"
+    },
+    {
+      "id": "GOLD-021",
+      "itemId": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B06"
+    },
+    {
+      "id": "GOLD-022",
+      "itemId": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B06"
+    },
+    {
+      "id": "GOLD-023",
+      "itemId": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B06"
+    },
+    {
+      "id": "GOLD-024",
+      "itemId": "T21-B06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B06"
+    },
+    {
+      "id": "GOLD-025",
+      "itemId": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B07"
+    },
+    {
+      "id": "GOLD-026",
+      "itemId": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B07"
+    },
+    {
+      "id": "GOLD-027",
+      "itemId": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B07"
+    },
+    {
+      "id": "GOLD-028",
+      "itemId": "T21-B07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B07"
+    },
+    {
+      "id": "GOLD-029",
+      "itemId": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B08"
+    },
+    {
+      "id": "GOLD-030",
+      "itemId": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B08"
+    },
+    {
+      "id": "GOLD-031",
+      "itemId": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B08"
+    },
+    {
+      "id": "GOLD-032",
+      "itemId": "T21-B08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-B08"
+    },
+    {
+      "id": "GOLD-033",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-034",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-035",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-036",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-037",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-038",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-039",
+      "itemId": "T21-F01",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": true,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F01"
+    },
+    {
+      "id": "GOLD-040",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-041",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-042",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-043",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-044",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-045",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-046",
+      "itemId": "T21-F02",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": false,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F02"
+    },
+    {
+      "id": "GOLD-047",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-048",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-049",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-050",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-051",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-052",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-053",
+      "itemId": "T21-F03",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": false,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F03"
+    },
+    {
+      "id": "GOLD-054",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-055",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-056",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-057",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-058",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": false,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-059",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": false,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-060",
+      "itemId": "T21-F04",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": true,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F04"
+    },
+    {
+      "id": "GOLD-061",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-062",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-063",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-064",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-065",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-066",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": true,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-067",
+      "itemId": "T21-F05",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": false,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F05"
+    },
+    {
+      "id": "GOLD-068",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-069",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-070",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-071",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-072",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-073",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-074",
+      "itemId": "T21-F06",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": true,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F06"
+    },
+    {
+      "id": "GOLD-075",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-076",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-077",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-078",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-079",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-080",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-081",
+      "itemId": "T21-F07",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": false,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F07"
+    },
+    {
+      "id": "GOLD-082",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "c=3: 2×3/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-083",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": false,
+        "2": false,
+        "3": true
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie błędne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-084",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": null,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie blank",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-085",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": "both",
+        "3": "both"
+      },
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "wszystkie podwójne",
+      "sourceCalculation": "c=0: 2×0/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-086",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": null,
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jeden blank",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-087",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": "both",
+        "2": true,
+        "3": false
+      },
+      "expectedPoints": {
+        "numerator": 4,
+        "denominator": 3
+      },
+      "caseLabel": "jedna podwójna",
+      "sourceCalculation": "c=2: 2×2/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-088",
+      "itemId": "T21-F08",
+      "revision": "r1",
+      "format": "K",
+      "weight": 2,
+      "answer": {
+        "1": true,
+        "2": false,
+        "3": null
+      },
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "caseLabel": "jedna trafna, jedna błędna, blank",
+      "sourceCalculation": "c=1: 2×1/3",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-F08"
+    },
+    {
+      "id": "GOLD-089",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 1×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-090",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-091",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-092",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-093",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-094",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-095",
+      "itemId": "T21-G01",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c",
+        "d",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G01"
+    },
+    {
+      "id": "GOLD-096",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "d",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 2×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-097",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-098",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-099",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-100",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-101",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "d",
+        "e",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-102",
+      "itemId": "T21-G02",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G02"
+    },
+    {
+      "id": "GOLD-103",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 3×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-104",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 2
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 3×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-105",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 2
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 3×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-106",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 3×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-107",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 3×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-108",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b",
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-109",
+      "itemId": "T21-G03",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a",
+        "d",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G03"
+    },
+    {
+      "id": "GOLD-110",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 1×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-111",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-112",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-113",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "b",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-114",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-115",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "c",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-116",
+      "itemId": "T21-G04",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "b",
+        "d",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G04"
+    },
+    {
+      "id": "GOLD-117",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 2×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-118",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-119",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-120",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-121",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-122",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-123",
+      "itemId": "T21-G05",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "c",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G05"
+    },
+    {
+      "id": "GOLD-124",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 3×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-125",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 2
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 3×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-126",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 3,
+        "denominator": 2
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 3×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-127",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 3×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-128",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 3×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-129",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "a",
+        "e",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-130",
+      "itemId": "T21-G06",
+      "revision": "r1",
+      "format": "P",
+      "weight": 3,
+      "answer": [
+        "b",
+        "c",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G06"
+    },
+    {
+      "id": "GOLD-131",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 1×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-132",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-133",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 2
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 1×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-134",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-135",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 1×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-136",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "c",
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-137",
+      "itemId": "T21-G07",
+      "revision": "r1",
+      "format": "P",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G07"
+    },
+    {
+      "id": "GOLD-138",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "e"
+      ],
+      "expectedPoints": {
+        "numerator": 2,
+        "denominator": 1
+      },
+      "caseLabel": "pełna",
+      "sourceCalculation": "n=2, c=2: 2×2/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-139",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "niedobór: jedna trafna",
+      "sourceCalculation": "n=1, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-140",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "mieszana: trafna i błędna",
+      "sourceCalculation": "n=2, c=1: 2×1/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-141",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "dwie błędne",
+      "sourceCalculation": "n=2, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-142",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "n=0, c=0: 2×0/2",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-143",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "b",
+        "e",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar z dwoma trafieniami",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-144",
+      "itemId": "T21-G08",
+      "revision": "r1",
+      "format": "P",
+      "weight": 2,
+      "answer": [
+        "a",
+        "c",
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar trzech błędnych",
+      "sourceCalculation": "n=3>2 → 0 za całe P",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-G08"
+    },
+    {
+      "id": "GOLD-145",
+      "itemId": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D01"
+    },
+    {
+      "id": "GOLD-146",
+      "itemId": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D01"
+    },
+    {
+      "id": "GOLD-147",
+      "itemId": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D01"
+    },
+    {
+      "id": "GOLD-148",
+      "itemId": "T21-D01",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D01"
+    },
+    {
+      "id": "GOLD-149",
+      "itemId": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D02"
+    },
+    {
+      "id": "GOLD-150",
+      "itemId": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D02"
+    },
+    {
+      "id": "GOLD-151",
+      "itemId": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D02"
+    },
+    {
+      "id": "GOLD-152",
+      "itemId": "T21-D02",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D02"
+    },
+    {
+      "id": "GOLD-153",
+      "itemId": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D03"
+    },
+    {
+      "id": "GOLD-154",
+      "itemId": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D03"
+    },
+    {
+      "id": "GOLD-155",
+      "itemId": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D03"
+    },
+    {
+      "id": "GOLD-156",
+      "itemId": "T21-D03",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D03"
+    },
+    {
+      "id": "GOLD-157",
+      "itemId": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D04"
+    },
+    {
+      "id": "GOLD-158",
+      "itemId": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D04"
+    },
+    {
+      "id": "GOLD-159",
+      "itemId": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D04"
+    },
+    {
+      "id": "GOLD-160",
+      "itemId": "T21-D04",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D04"
+    },
+    {
+      "id": "GOLD-161",
+      "itemId": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D05"
+    },
+    {
+      "id": "GOLD-162",
+      "itemId": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D05"
+    },
+    {
+      "id": "GOLD-163",
+      "itemId": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D05"
+    },
+    {
+      "id": "GOLD-164",
+      "itemId": "T21-D05",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a",
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D05"
+    },
+    {
+      "id": "GOLD-165",
+      "itemId": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D06"
+    },
+    {
+      "id": "GOLD-166",
+      "itemId": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D06"
+    },
+    {
+      "id": "GOLD-167",
+      "itemId": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D06"
+    },
+    {
+      "id": "GOLD-168",
+      "itemId": "T21-D06",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "c",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D06"
+    },
+    {
+      "id": "GOLD-169",
+      "itemId": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D07"
+    },
+    {
+      "id": "GOLD-170",
+      "itemId": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D07"
+    },
+    {
+      "id": "GOLD-171",
+      "itemId": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D07"
+    },
+    {
+      "id": "GOLD-172",
+      "itemId": "T21-D07",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "d",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D07"
+    },
+    {
+      "id": "GOLD-173",
+      "itemId": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b"
+      ],
+      "expectedPoints": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "caseLabel": "poprawna",
+      "sourceCalculation": "jedyny poprawny wybór → 1",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D08"
+    },
+    {
+      "id": "GOLD-174",
+      "itemId": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "błędna",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D08"
+    },
+    {
+      "id": "GOLD-175",
+      "itemId": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "pusta",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D08"
+    },
+    {
+      "id": "GOLD-176",
+      "itemId": "T21-D08",
+      "revision": "r1",
+      "format": "A",
+      "weight": 1,
+      "answer": [
+        "b",
+        "a"
+      ],
+      "expectedPoints": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "caseLabel": "nadmiar",
+      "sourceCalculation": "brak pojedynczego wyboru klucza → 0",
+      "source": "T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md §7 T21-D08"
+    }
+  ]
+}

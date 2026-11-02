@@ -1,0 +1,60 @@
+{
+  "name": "ireb-cpre-pwa",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lekka PWA IREB CPRE Foundation Level — Skupiona sesja, nazwane profile lokalne, offline i atomowe aktualizacje treści.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run content:build && vite build",
+    "build:review": "npm run content:build && cross-env VITE_CONTENT_CHANNEL=review VITE_OUT_DIR=dist-review vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "content:import": "tsx scripts/content/import-t21.ts && tsx scripts/content/make-tech-fixture.ts",
+    "content:validate": "tsx scripts/content/validate.ts",
+    "content:build": "tsx scripts/content/build-release.ts",
+    "content:release": "tsx scripts/content/build-release.ts --channel learner --strict",
+    "icons": "tsx scripts/make-icons.ts",
+    "test:e2e": "npm run build:e2e && playwright test --project=chromium --project=firefox --project=webkit --project=review",
+    "test:visual": "npm run build:e2e && playwright test --project=visual",
+    "serve:test": "tsx tests/e2e/server.ts",
+    "check": "npm run typecheck && npm run lint && npm run content:validate && npm run test && npm run build",
+    "build:e2e": "npm run content:build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e VITE_BUILD_TAG=e2e-a vite build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e-b VITE_BUILD_TAG=e2e-b vite build && cross-env VITE_CONTENT_CHANNEL=review VITE_BASE=/cpre-review/ VITE_OUT_DIR=dist-review VITE_BUILD_TAG=review vite build"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "dexie": "^4.4.7",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "workbox-window": "^7.4.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "fake-indexeddb": "^6.2.7",
+    "jsdom": "^30.1.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.5",
+    "workbox-build": "^7.4.1"
+  }
+}

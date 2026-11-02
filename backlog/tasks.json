@@ -1,0 +1,1164 @@
+{
+  "schemaVersion": "1.0.0",
+  "statusVocabulary": [
+    "todo",
+    "in-progress",
+    "done",
+    "blocked-content",
+    "blocked-environment",
+    "deferred"
+  ],
+  "completionRule": "Only inIncrement tasks; done requires satisfied acceptance and actual evidence. Content/gate acceptance is separate.",
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Wejścia, manifest i ochrona designu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [],
+      "fr": [
+        "FR-034",
+        "FR-038"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Porównaj hashe wszystkich kopii references i uruchom kontrolę handoffu.",
+        "Otwórz atlas/prototyp i zapisz bazowe sceny do porównania; nie zmieniaj referencji."
+      ],
+      "qa": [
+        "QA-35"
+      ],
+      "evidence": [
+        "references/BASELINE_MANIFEST.json: 76/76 SHA-256 unchanged (node check, 2026-11-02)",
+        "scripts/check_handoff.py: 20/20 passed before implementation (qa/handoff-checks.json)",
+        "tests/visual/fidelity.spec.ts: prototype scenes home, K-question, P-feedback, test-P, test-review, test-result, converted compared with app metrics"
+      ]
+    },
+    {
+      "id": "TASK-002",
+      "title": "Tooling i moduły aplikacji",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-001"
+      ],
+      "fr": [],
+      "newRequirements": [],
+      "acceptance": [
+        "Utwórz TS strict/React/Vite, plain CSS i test runner bez backendu.",
+        "Zapisz zgodne wersje, lockfile i komendy wymagane w docs/07; realny build przechodzi."
+      ],
+      "qa": [],
+      "evidence": [
+        "package.json + package-lock.json + .node-version (24.15.0)",
+        "npm run check: typecheck, lint, content:validate, test, build → qa/evidence/check.log"
+      ]
+    },
+    {
+      "id": "TASK-003",
+      "title": "Shell Skupionej sesji i komponenty dostępności",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-002"
+      ],
+      "fr": [
+        "FR-036",
+        "FR-037"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Odtwórz tokeny, typografię, szerokości i Sesja/Zakres i dowody według makiet.",
+        "Zapewnij fokus, dialog, fieldset/legend, tekstowe statusy i układ 320/390/768/1200."
+      ],
+      "qa": [
+        "QA-34",
+        "QA-35"
+      ],
+      "evidence": [
+        "src/styles/app.css (tokens from design/tokens.css), src/app/Shell.tsx, src/ui/Dialog.tsx",
+        "tests/e2e/a11y.spec.ts (axe, keyboard, 44 px targets)",
+        "tests/visual/fidelity.spec.ts (1200/390 metrics, overflow 320/390/768/1200)"
+      ]
+    },
+    {
+      "id": "TASK-004",
+      "title": "Model IndexedDB, wersje i transakcje",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-002"
+      ],
+      "fr": [
+        "FR-010",
+        "FR-032"
+      ],
+      "newRequirements": [
+        "PWA-04"
+      ],
+      "acceptance": [
+        "Rozdziel stores treści i ucznia; każda operacja aktywności wymaga profileId.",
+        "Migracja ma test starej bazy, blocked/versionchange i brak resetu po błędzie."
+      ],
+      "qa": [
+        "QA-29"
+      ],
+      "evidence": [
+        "src/data/db.ts",
+        "tests/unit/db.test.ts (profileId indexes, newer DB refused without deletion, versionchange)",
+        "tests/e2e/failures.spec.ts QA-29 newer DB from another tab"
+      ]
+    },
+    {
+      "id": "TASK-005",
+      "title": "Tworzenie, wybór i nazwy profili",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-003",
+        "TASK-004"
+      ],
+      "fr": [],
+      "newRequirements": [
+        "PROF-01",
+        "PROF-02"
+      ],
+      "acceptance": [
+        "Selektor przy nowym uruchomieniu; nazwy 1–40, NFC, walidacja kolizji i stabilny UUID.",
+        "Rename zachowuje wszystkie odwołania, polskie znaki i offline działają."
+      ],
+      "qa": [
+        "QA-01",
+        "QA-02"
+      ],
+      "evidence": [
+        "tests/unit/profiles.test.ts",
+        "tests/e2e/profiles.spec.ts QA-01/QA-02, PROF-01 (Chromium, Firefox)"
+      ]
+    },
+    {
+      "id": "TASK-006",
+      "title": "Izolacja profili i wiele kart",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-005"
+      ],
+      "fr": [
+        "FR-018",
+        "FR-019",
+        "FR-032"
+      ],
+      "newRequirements": [
+        "PROF-03"
+      ],
+      "acceptance": [
+        "Odseparuj odpowiedzi, ekspozycję, plany, flags i ustawienia; brak domyślnego pierwszego profilu.",
+        "Kontekst per karta i atomowa kontrola wersji/lease wykrywają konflikt."
+      ],
+      "qa": [
+        "QA-01",
+        "QA-03",
+        "QA-04",
+        "QA-05"
+      ],
+      "evidence": [
+        "tests/unit/attempts.test.ts (CAS conflict, lease, captured profileId)",
+        "tests/e2e/profiles.spec.ts QA-04/QA-05"
+      ]
+    },
+    {
+      "id": "TASK-007",
+      "title": "Bezpieczne przełączanie i wznowienie profilu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-006"
+      ],
+      "fr": [
+        "FR-027",
+        "FR-032"
+      ],
+      "newRequirements": [
+        "PROF-04"
+      ],
+      "acceptance": [
+        "Await zapisu przed przełączeniem; test dostaje pause bez finalizacji.",
+        "Odświeżenie aktywnej karty odtwarza ten sam profil i tę samą próbę, bez nowego attemptId."
+      ],
+      "qa": [
+        "QA-03",
+        "QA-12"
+      ],
+      "evidence": [
+        "tests/e2e/profiles.spec.ts PROF-01 refresh restores profile+attempt",
+        "tests/e2e/failures.spec.ts QA-03 failed save blocks profile switch",
+        "tests/e2e/app-update.spec.ts pause before reload"
+      ]
+    },
+    {
+      "id": "TASK-008",
+      "title": "Eksport, import i usuwanie jednego profilu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-006"
+      ],
+      "fr": [
+        "FR-010",
+        "FR-032"
+      ],
+      "newRequirements": [
+        "PROF-05",
+        "PROF-06"
+      ],
+      "acceptance": [
+        "Backup ma wersję, integralność, ekspozycję, oryginalne oceny i snapshoty.",
+        "Import tworzy nowy profil bez merge; błędny nic nie zapisuje; delete dotyczy wyłącznie wskazanego profilu."
+      ],
+      "qa": [
+        "QA-02",
+        "QA-30"
+      ],
+      "evidence": [
+        "tests/unit/backup.test.ts (exact-bytes digest, no merge, converted stays converted)",
+        "tests/e2e/failures.spec.ts QA-30",
+        "tests/e2e/profiles.spec.ts delete only Bartek"
+      ]
+    },
+    {
+      "id": "TASK-009",
+      "title": "Kontrakt treści, projekcje i walidator",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-002"
+      ],
+      "fr": [
+        "FR-004",
+        "FR-034",
+        "FR-037",
+        "FR-038"
+      ],
+      "newRequirements": [
+        "CNT-01",
+        "CNT-02"
+      ],
+      "acceptance": [
+        "Wdroż schematy i walidację semantyczną pełnego QKP/referencji/użyć.",
+        "QuestionPrompt nie zawiera solutions ani pomocnych mapowań; render bez raw HTML/JS."
+      ],
+      "qa": [
+        "QA-14",
+        "QA-31",
+        "QA-33"
+      ],
+      "evidence": [
+        "src/content/validate.ts, src/content/projections.ts, scripts/content/validate.ts",
+        "tests/unit/projections.test.ts",
+        "tests/unit/markdown.test.tsx",
+        "npm run content:validate (incl. examples/negative-cases.json)"
+      ]
+    },
+    {
+      "id": "TASK-010",
+      "title": "Import T21 i procedura kolejnego tematu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-009"
+      ],
+      "fr": [
+        "FR-005",
+        "FR-006",
+        "FR-012",
+        "FR-034"
+      ],
+      "newRequirements": [
+        "CNT-01",
+        "CNT-03"
+      ],
+      "acceptance": [
+        "Przeczytaj oba pełne pliki, zmapuj istniejące 32 zamknięte/128 rationale i 4 otwarte, wiedzę oraz potrzebne relacje i kontakty.",
+        "Raport ma wszystkie liczniki/delty i zachowane pending review; drugi temat-fixture renderuje się bez hardcode."
+      ],
+      "qa": [
+        "QA-10",
+        "QA-31",
+        "QA-32"
+      ],
+      "evidence": [
+        "scripts/content/import-t21.ts → content/normalized/T21.r1-full1.json",
+        "content/normalized/T21-IMPORT_REPORT.md (32/128/47, 4 open, 8 notes, 3 CMP, 8 REM; statuses pending/review-only)",
+        "TECH01 second topic renders without hardcode (tests/e2e/*)",
+        "Limitation: relation register §8.3 mapped only for used functions; RAT contacts primary ZAK only (documented)"
+      ]
+    },
+    {
+      "id": "TASK-011",
+      "title": "Bramka treści i generowanie wydania",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-010"
+      ],
+      "fr": [
+        "FR-019",
+        "FR-025",
+        "FR-034"
+      ],
+      "newRequirements": [
+        "CNT-02",
+        "UPD-02"
+      ],
+      "acceptance": [
+        "Review-only nie przechodzi do learner; formy wymagają własnego dopuszczenia.",
+        "content:build jest deterministyczny, immutable URL/digest i manifest publikowany na końcu."
+      ],
+      "qa": [
+        "QA-31"
+      ],
+      "evidence": [
+        "scripts/content/build-release.ts (deterministic, separate review/learner outputs, manifest written last)",
+        "learner release excludes T21 with 7 gate codes; content:release --strict refuses review-only",
+        "tests/e2e/smoke.spec.ts learner build has no review content"
+      ]
+    },
+    {
+      "id": "TASK-012",
+      "title": "Dokładny scoring A/P/K i wektory",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-009"
+      ],
+      "fr": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-029"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Implementuj reguły docs/06 niezależnie od UI, z dokładnymi ułamkami.",
+        "176 oczekiwanych wektorów i 1024 stanów T21 zgodne; dodatkowo K m=4/5 i A 5 opcji."
+      ],
+      "qa": [
+        "QA-06",
+        "QA-07",
+        "QA-08",
+        "QA-09",
+        "QA-10"
+      ],
+      "evidence": [
+        "tests/unit/scoring-t21-vectors.test.ts (176 vectors, 1024 states)",
+        "tests/unit/scoring.test.ts (K m=4/5, A 5 options)",
+        "tests/unit/fraction.test.ts (QA-09)"
+      ]
+    },
+    {
+      "id": "TASK-013",
+      "title": "Kontrolki A/P/K i neutralna nauka formatu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-003",
+        "TASK-012"
+      ],
+      "fr": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-029"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "A radio+wyczyść, P bez hard cap z n/k, K null/T/F i osobne clear, tekstowe etykiety.",
+        "Format ma pomijalne neutralne objaśnienie bez naliczania dowodów RE."
+      ],
+      "qa": [
+        "QA-06",
+        "QA-07",
+        "QA-08",
+        "QA-34"
+      ],
+      "evidence": [
+        "src/features/learning/ChoiceControls.tsx, FormatTutorial.tsx (D04 §3 examples)",
+        "tests/e2e/learning.spec.ts QA-06/07/08, FR-029 (Chromium, WebKit)"
+      ]
+    },
+    {
+      "id": "TASK-014",
+      "title": "Próba, draft, submit i niezmienna historia",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-004",
+        "TASK-013",
+        "TASK-007"
+      ],
+      "fr": [
+        "FR-010",
+        "FR-018",
+        "FR-032"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Draft zapisuje się przy decyzji/flags i przed nawigacją; submit idempotentny commit.",
+        "Próba ma przypięte rewizje i snapshot, feedback nie pozwala nadpisać pierwotnej odpowiedzi."
+      ],
+      "qa": [
+        "QA-03",
+        "QA-12",
+        "QA-15"
+      ],
+      "evidence": [
+        "tests/unit/attempts.test.ts idempotent submit, immutable answer",
+        "tests/e2e/learning.spec.ts QA-12 refresh keeps attempt"
+      ]
+    },
+    {
+      "id": "TASK-015",
+      "title": "Sesja, wybór celu i rekomendacja",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-010",
+        "TASK-014"
+      ],
+      "fr": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-021",
+        "FR-038"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Jedna rekomendacja z przesłanką, wejście od noty albo pytania, wybór innego celu.",
+        "Bez wymaganej diagnozy/daty, mastery/pełności FL; wznowienie ma pierwszeństwo z jasnym powodem."
+      ],
+      "qa": [
+        "QA-01",
+        "QA-19",
+        "QA-35"
+      ],
+      "evidence": [
+        "src/services/planner.ts, src/features/session/*",
+        "tests/e2e/learning.spec.ts FR-032 resume",
+        "tests/e2e/offline.spec.ts QA-21 no-content state"
+      ]
+    },
+    {
+      "id": "TASK-016",
+      "title": "Noty i otwarty retrieval z rubryką",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-015"
+      ],
+      "fr": [
+        "FR-005",
+        "FR-006",
+        "FR-037"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Krótki rdzeń z rozwinięciem i kontaktem właściwego zakresu; brak obowiązku odczytu wszystkiego.",
+        "Otwarte polecenie przed rubryką, jawna samoocena i brak automatycznego awansu do niezależnego pomiaru."
+      ],
+      "qa": [
+        "QA-17",
+        "QA-33",
+        "QA-34"
+      ],
+      "evidence": [
+        "src/features/session/LessonView.tsx (core + details)",
+        "tests/e2e/review.spec.ts open retrieval O01 with self-assessment"
+      ]
+    },
+    {
+      "id": "TASK-017",
+      "title": "Warstwowy feedback i rationale wszystkich decyzji",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-014",
+        "TASK-010"
+      ],
+      "fr": [
+        "FR-011",
+        "FR-012"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Wynik i decydująca zasada; błędne/pominięte poprawne rozwinięte, reszta na żądanie.",
+        "Kontakt jest logowany dla faktycznie ujawnionego RAT, nie całej ukrytej tabeli."
+      ],
+      "qa": [
+        "QA-11",
+        "QA-17"
+      ],
+      "evidence": [
+        "tests/e2e/learning.spec.ts QA-07 (wrong/omitted open, others on demand)",
+        "LearningService.revealRationale logs contact per RAT"
+      ]
+    },
+    {
+      "id": "TASK-018",
+      "title": "Wiedza kontekstowa, comparison i powrót",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-017",
+        "TASK-016"
+      ],
+      "fr": [
+        "FR-012",
+        "FR-013",
+        "FR-014",
+        "FR-032"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Jedna kotwica source attempt i stos treści; uzasadniony optional prerequisite bez bramki.",
+        "Powrót/refresh zachowują odpowiedź/wynik/rewizję/ujawnienia/scroll/fokus i nie tworzą próby."
+      ],
+      "qa": [
+        "QA-12",
+        "QA-34"
+      ],
+      "evidence": [
+        "tests/e2e/learning.spec.ts QA-12 (Chromium, WebKit)",
+        "tests/e2e/a11y.spec.ts keyboard"
+      ]
+    },
+    {
+      "id": "TASK-019",
+      "title": "Korekta, follow-up i wyjście",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-018"
+      ],
+      "fr": [
+        "FR-015",
+        "FR-016",
+        "FR-017",
+        "FR-021"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Celowana ścieżka B→REM→F→alternatywna pomoc→G według treści, z możliwością wcześniejszego wyjścia.",
+        "Po dwóch niepowodzeniach inne wsparcie/przerwa; neutralna korekta gdy brak sondy; D nie jest trzecią kontrolą."
+      ],
+      "qa": [
+        "QA-13",
+        "QA-19"
+      ],
+      "evidence": [
+        "tests/e2e/learning.spec.ts QA-13 two failed follow-ups, no third check"
+      ]
+    },
+    {
+      "id": "TASK-020",
+      "title": "Ekspozycja, pomoc, rodziny i eligibility",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-014",
+        "TASK-009"
+      ],
+      "fr": [
+        "FR-015",
+        "FR-018",
+        "FR-019"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Snapshot przed pokazaniem, potem event; niezależne wymiary pomocy/itemu/rodziny/kontekstu/metody.",
+        "Nowe ID/tłumaczenie/revizja nie resetuje znajomości; niepełna historia pozostaje niepewna."
+      ],
+      "qa": [
+        "QA-14",
+        "QA-18"
+      ],
+      "evidence": [
+        "tests/unit/exposure.test.ts (novelty before show, family, incomplete history)"
+      ]
+    },
+    {
+      "id": "TASK-021",
+      "title": "Późniejsza kontrola i dwa odstępy",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-020",
+        "TASK-019"
+      ],
+      "fr": [
+        "FR-020",
+        "FR-021"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Dwa odstępy per criterion/aspect z historii sprzed próby, bez EO-level reset.",
+        "Wybór eligible aktywności przed ponowną lekturą; brak zadania pokazuje uczciwą alternatywę."
+      ],
+      "qa": [
+        "QA-17",
+        "QA-18",
+        "QA-19"
+      ],
+      "evidence": [
+        "tests/unit/exposure.test.ts QA-17 two intervals",
+        "planner delayed recommendation ≥24 h (pilot parameter)",
+        "StateView novariant"
+      ]
+    },
+    {
+      "id": "TASK-022",
+      "title": "Zakres, postęp i profil dowodów",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-020",
+        "TASK-021"
+      ],
+      "fr": [
+        "FR-004",
+        "FR-022",
+        "FR-023",
+        "FR-024",
+        "FR-038"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Punkty/warunki/kategorie obserwacji/mianowniki osobno; źródło etykiety na żądanie.",
+        "Brak korpusu, brak dowodów i ograniczona historia rozdzielone; zero mastery/pass forecast."
+      ],
+      "qa": [
+        "QA-17",
+        "QA-18",
+        "QA-19"
+      ],
+      "evidence": [
+        "src/features/evidence/ScopeView.tsx",
+        "tests/e2e/profiles.spec.ts, tests/e2e/updates.spec.ts (evidence + withdrawn limitation)"
+      ]
+    },
+    {
+      "id": "TASK-023",
+      "title": "Formy testu tematu i warunki startu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-011",
+        "TASK-020"
+      ],
+      "fr": [
+        "FR-025",
+        "FR-038"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "FormRef z ID/revizją, declared scope, kolejność i użycia; sprawdź eligibility przed ekspozycją.",
+        "Silnik testowany na jawnej formie technicznej; brak dopuszczonej T21 nie jest obchodzony automatycznym wyborem D01–08."
+      ],
+      "qa": [
+        "QA-18",
+        "QA-31"
+      ],
+      "evidence": [
+        "TECH01 explicit technical form; T21 has no form",
+        "tests/e2e/review.spec.ts no automatic D01–08 fallback"
+      ]
+    },
+    {
+      "id": "TASK-024",
+      "title": "Test: odpowiedzi, flags, review i finalizacja",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-023",
+        "TASK-014"
+      ],
+      "fr": [
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-026",
+        "FR-028"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Prompt-only przed finalizacją; flags dostępne, odpowiedzi edytowalne, review neutralny.",
+        "Całość commit idempotentnie, potem wynik i rationale, bez podglądu trafności w DOM/AT."
+      ],
+      "qa": [
+        "QA-14",
+        "QA-15"
+      ],
+      "evidence": [
+        "tests/e2e/topic-test.spec.ts QA-14/QA-15 (Chromium, WebKit)"
+      ]
+    },
+    {
+      "id": "TASK-025",
+      "title": "Test: pause, wznowienie i świadoma konwersja",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-024",
+        "TASK-007"
+      ],
+      "fr": [
+        "FR-027",
+        "FR-032"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Wstrzymany test nadal ogranicza wiedzę w kontekście profilu, pause zapisuje przerwę.",
+        "Dialog konwersji całej formy, anulowanie bez przecieku, brak odzyskania niezależności po refresh/import."
+      ],
+      "qa": [
+        "QA-14",
+        "QA-16"
+      ],
+      "evidence": [
+        "tests/e2e/topic-test.spec.ts QA-16, FR-027",
+        "tests/unit/backup.test.ts converted survives import"
+      ]
+    },
+    {
+      "id": "TASK-026",
+      "title": "Wynik testu i następny krok",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-024",
+        "TASK-022"
+      ],
+      "fr": [
+        "FR-011",
+        "FR-024",
+        "FR-028"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Dokładna suma i procent punktów, zakres i warunki, dostępne pełne rationale.",
+        "Brak progu zdania tematu i werdyktu całego FL; jeden uzasadniony dalszy krok."
+      ],
+      "qa": [
+        "QA-09",
+        "QA-11",
+        "QA-15"
+      ],
+      "evidence": [
+        "tests/e2e/topic-test.spec.ts exact 13/3 = 4,33 / 5, 86,7 %"
+      ]
+    },
+    {
+      "id": "TASK-027",
+      "title": "Braki, zgłoszenie wątpliwości i korekta historii",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-017",
+        "TASK-024"
+      ],
+      "fr": [
+        "FR-033",
+        "FR-035"
+      ],
+      "newRequirements": [
+        "UPD-05"
+      ],
+      "acceptance": [
+        "Różne stany braków; critical QKP blokuje cały item, optional link nie blokuje rationale.",
+        "Lokalne zgłoszenie ma kontekst/revizję i eksport; nie zmienia klucza. Odgórna korekta zachowuje starą ocenę."
+      ],
+      "qa": [
+        "QA-19",
+        "QA-28"
+      ],
+      "evidence": [
+        "StateView missing/novariant/withdrawn/disputed/two-failed",
+        "ReportView local issue (exported with profile)",
+        "tests/e2e/updates.spec.ts QA-28 history kept, not used as evidence"
+      ]
+    },
+    {
+      "id": "TASK-028",
+      "title": "PWA app shell, instalacja i gotowość offline",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-003",
+        "TASK-004"
+      ],
+      "fr": [
+        "FR-036"
+      ],
+      "newRequirements": [
+        "PWA-01",
+        "PWA-02",
+        "PWA-03"
+      ],
+      "acceptance": [
+        "Manifest, ikony i scope/base poprawne; shell bez CDN, działa jako zwykła strona.",
+        "Gotowe offline dopiero po pełnym zapisie; offline cold start po pobraniu działa."
+      ],
+      "qa": [
+        "QA-20",
+        "QA-21",
+        "QA-36"
+      ],
+      "evidence": [
+        "tests/e2e/smoke.spec.ts manifest scope/start_url /cpre/, maskable icon, no CDN",
+        "tests/e2e/offline.spec.ts QA-20/QA-21 (Chromium, Firefox)",
+        "Real device installation: see TASK-035/036 (blocked-environment)"
+      ]
+    },
+    {
+      "id": "TASK-029",
+      "title": "Aktualizator treści i atomowy commit",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-011",
+        "TASK-028"
+      ],
+      "fr": [
+        "FR-034",
+        "FR-035"
+      ],
+      "newRequirements": [
+        "UPD-01",
+        "UPD-02"
+      ],
+      "acceptance": [
+        "Implementuj docs/04: start/foreground/online/manual i okresowy fallback widocznej app, własny host, stage/verify/commit, compatibility.",
+        "Timeout, portal, digest/schema/ref/quota/kill przed commit zachowują stare wydanie i postęp."
+      ],
+      "qa": [
+        "QA-22",
+        "QA-23",
+        "QA-24",
+        "QA-26",
+        "QA-29"
+      ],
+      "evidence": [
+        "tests/unit/updater.test.ts",
+        "tests/e2e/updates.spec.ts QA-22/23/26 (Chromium, Firefox)"
+      ]
+    },
+    {
+      "id": "TASK-030",
+      "title": "Przypięte rewizje, wycofania i czyszczenie",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-029",
+        "TASK-027"
+      ],
+      "fr": [
+        "FR-010",
+        "FR-019",
+        "FR-032",
+        "FR-035"
+      ],
+      "newRequirements": [
+        "UPD-03",
+        "UPD-05"
+      ],
+      "acceptance": [
+        "Nowe aktywności widzą nowe treści; aktywne zachowują snapshots; GC sprawdza wszystkie profile i karty.",
+        "Krytyczne wycofanie zatrzymuje test neutralnie, bez klucza; nie resetuje ekspozycji ani odpowiedzi."
+      ],
+      "qa": [
+        "QA-25",
+        "QA-28"
+      ],
+      "evidence": [
+        "tests/e2e/updates.spec.ts QA-25/QA-28",
+        "tests/unit/updater.test.ts GC keeps referenced packages"
+      ]
+    },
+    {
+      "id": "TASK-031",
+      "title": "Aktualizacja aplikacji bez utraty sesji",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-028",
+        "TASK-030"
+      ],
+      "fr": [
+        "FR-027",
+        "FR-032"
+      ],
+      "newRequirements": [
+        "UPD-04"
+      ],
+      "acceptance": [
+        "SW prompt/waiting, bez auto-reload; Zapisz i odśwież dopiero po commit/przerwie.",
+        "Koordynacja kart, kompatybilne migracje i odtworzenie tej samej próby po update."
+      ],
+      "qa": [
+        "QA-27",
+        "QA-29"
+      ],
+      "evidence": [
+        "tests/e2e/app-update.spec.ts QA-27 (Później / Zapisz i odśwież)"
+      ]
+    },
+    {
+      "id": "TASK-032",
+      "title": "Stan danych, persist i błędy zapisu",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-008",
+        "TASK-029"
+      ],
+      "fr": [
+        "FR-032",
+        "FR-033"
+      ],
+      "newRequirements": [
+        "PWA-04",
+        "PROF-05"
+      ],
+      "acceptance": [
+        "Dane aplikacji pokazują lokalną wersję/gotowość offline i wynik persist bez blokowania przy odmowie.",
+        "Quota/write error zachowuje draft, udostępnia kopię i nie kasuje profili."
+      ],
+      "qa": [
+        "QA-21",
+        "QA-29",
+        "QA-30"
+      ],
+      "evidence": [
+        "src/features/appdata/DataView.tsx",
+        "tests/e2e/failures.spec.ts QA-29 write denied",
+        "tests/e2e/offline.spec.ts readiness"
+      ]
+    },
+    {
+      "id": "TASK-033",
+      "title": "Testy domenowe, danych i integralności",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-019",
+        "TASK-022",
+        "TASK-025",
+        "TASK-030"
+      ],
+      "fr": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-018",
+        "FR-019",
+        "FR-020",
+        "FR-035"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Uruchom rzeczywiste testy scoring/state/evidence/profile/migration/replay i raport wyników.",
+        "Brak skipped/fake PASS; negatywne fixture mają rzeczywiste oczekiwane błędy."
+      ],
+      "qa": [
+        "QA-01",
+        "QA-04",
+        "QA-06",
+        "QA-07",
+        "QA-08",
+        "QA-09",
+        "QA-10",
+        "QA-16",
+        "QA-17",
+        "QA-18"
+      ],
+      "evidence": [
+        "npm test: 242 unit tests, 0 skipped (qa/evidence/check.log)",
+        "examples/negative-cases.json rejected with expected codes"
+      ]
+    },
+    {
+      "id": "TASK-034",
+      "title": "E2E build: offline, profile, aktualizacja i awarie",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "done",
+      "dependsOn": [
+        "TASK-031",
+        "TASK-032",
+        "TASK-033"
+      ],
+      "fr": [
+        "FR-032",
+        "FR-033",
+        "FR-034"
+      ],
+      "newRequirements": [
+        "PWA-02",
+        "UPD-02"
+      ],
+      "acceptance": [
+        "Testy build z SW i IndexedDB obejmują serwer A/B, urwane requesty, restart i realne profile.",
+        "Wymuszone błędy nie usuwają danych i nie ujawniają rozwiązań."
+      ],
+      "qa": [
+        "QA-20",
+        "QA-21",
+        "QA-22",
+        "QA-23",
+        "QA-24",
+        "QA-25",
+        "QA-26",
+        "QA-27",
+        "QA-29",
+        "QA-30"
+      ],
+      "evidence": [
+        "qa/evidence/e2e.log (Chromium, Firefox, WebKit, review build)",
+        "tests/e2e/server.ts test LAN host with A/B and failure modes"
+      ]
+    },
+    {
+      "id": "TASK-035",
+      "title": "Regresja wizualna, klawiatura i dostępność",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "blocked-environment",
+      "dependsOn": [
+        "TASK-026",
+        "TASK-032",
+        "TASK-034"
+      ],
+      "fr": [
+        "FR-036",
+        "FR-037"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Porównaj wszystkie kluczowe stany z baseline desktop/mobile, nowe profile w tym samym systemie.",
+        "Przeprowadź keyboard/axe/reflow i dostępny rzeczywisty reader/device check; brak środowiska raportuj jawnie."
+      ],
+      "qa": [
+        "QA-14",
+        "QA-33",
+        "QA-34",
+        "QA-35",
+        "QA-36"
+      ],
+      "evidence": [
+        "Done: tests/visual/fidelity.spec.ts (metrics vs prototype, screenshots qa/screenshots), axe, keyboard, reflow 320–1200",
+        "Blocked: real screen reader (NVDA/VoiceOver), physical phone, 400% zoom/text-spacing manual check — no AT/device in this environment; manual protocol in qa/IMPLEMENTATION_REPORT.md"
+      ]
+    },
+    {
+      "id": "TASK-036",
+      "title": "Build do LAN, runbook i końcowy raport",
+      "priority": "Essential",
+      "inIncrement": true,
+      "status": "blocked-environment",
+      "dependsOn": [
+        "TASK-035"
+      ],
+      "fr": [
+        "FR-034",
+        "FR-038"
+      ],
+      "newRequirements": [
+        "UPD-01",
+        "CNT-01"
+      ],
+      "acceptance": [
+        "Wszystkie techniczne AC przyrostu spełnione, komendy działają, instrukcja HTTPS/base/publikacji/rollback/kopii.",
+        "IMPLEMENTATION_REPORT oddziela wykonanie od G2/G3/G4 i sprawdzeń nieprzeprowadzonych; brak deploymentu bez zlecenia."
+      ],
+      "qa": [
+        "QA-31",
+        "QA-32",
+        "QA-36"
+      ],
+      "evidence": [
+        "Done: docs/RUNBOOK_LAN.md, docs/IMPLEMENTATION_DECISIONS.md, qa/IMPLEMENTATION_REPORT.md, build verified",
+        "Blocked: real HTTPS LAN origin + device installation (QA-36 install part) and TASK-035 AT checks; no deployment performed (not ordered)"
+      ]
+    },
+    {
+      "id": "VAL-030",
+      "title": "Opcjonalna deklaracja pewności",
+      "priority": "Validate",
+      "inIncrement": false,
+      "status": "deferred",
+      "dependsOn": [],
+      "fr": [
+        "FR-030"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Nieaktywne w bazowej sesji; odrębne badanie po decyzji właściciela."
+      ],
+      "qa": [],
+      "evidence": []
+    },
+    {
+      "id": "LATER-031",
+      "title": "Globalne wyszukiwanie PL/EN",
+      "priority": "Later",
+      "inIncrement": false,
+      "status": "deferred",
+      "dependsOn": [],
+      "fr": [
+        "FR-031"
+      ],
+      "newRequirements": [],
+      "acceptance": [
+        "Późniejszy przyrost; lokalne linki i terminy nie są globalną wyszukiwarką."
+      ],
+      "qa": [],
+      "evidence": []
+    }
+  ]
+}

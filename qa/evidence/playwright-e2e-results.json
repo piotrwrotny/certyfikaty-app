@@ -1,0 +1,2580 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project=chromium",
+      "--project=firefox",
+      "--project=webkit",
+      "--project=review"
+    ],
+    "configFile": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\playwright.config.ts",
+    "rootDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [
+          "**/review.spec.ts"
+        ],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/profiles.spec.ts",
+          "**/offline.spec.ts",
+          "**/updates.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/learning.spec.ts",
+          "**/topic-test.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "review",
+        "name": "review",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/review.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "visual",
+        "name": "visual",
+        "testDir": "C:/Users/piotr.wrotny/WorkSpace/Projects/certyfikaty-app/tests/visual",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "testIgnore": [
+          "**/review.spec.ts"
+        ],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "visual/**/*.spec.ts"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4300/cpre/",
+          "serviceWorkers": "allow",
+          "locale": "pl-PL",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1200,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/profiles.spec.ts",
+          "**/offline.spec.ts",
+          "**/updates.spec.ts"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4300/cpre/",
+          "serviceWorkers": "allow",
+          "locale": "pl-PL",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1200,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/smoke.spec.ts",
+          "**/learning.spec.ts",
+          "**/topic-test.spec.ts"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4300/cpre/",
+          "serviceWorkers": "allow",
+          "locale": "pl-PL",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1200,
+            "height": 900
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "review",
+        "testDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\piotr.wrotny\\WorkSpace\\Projects\\certyfikaty-app\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/review.spec.ts"
+        ],
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://localhost:4301/cpre-review/",
+          "serviceWorkers": "allow",
+          "locale": "pl-PL",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1200,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "review"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "qa/evidence/playwright-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e\\a11y.spec.ts",
+      "file": "e2e/a11y.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "axe: selector, session, A/P/K, feedback, knowledge, test, review, result, scope, data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:21.922Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-23189ac1a6ee7b299f6a",
+          "file": "e2e/a11y.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "keyboard-only: P answer, submit, open rationale link, Escape restores focus; touch targets ≥ 44 px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:37.037Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3ad05f8c0e05077efb-ccf9674ef02ed303ec01",
+          "file": "e2e/a11y.spec.ts",
+          "line": 52,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\app-update.spec.ts",
+      "file": "e2e/app-update.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-27: new SW waits; \"Później\" keeps the running version without reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:38.278Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0162aabc503a38751003-83689fc70a1c490581ab",
+          "file": "e2e/app-update.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "QA-27: \"Zapisz i odśwież\" pauses the active check, reloads into the new version, same profile and attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:39.516Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0162aabc503a38751003-693bcc5005d4c7da0597",
+          "file": "e2e/app-update.spec.ts",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\failures.spec.ts",
+      "file": "e2e/failures.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-29/QA-03: write denied keeps the draft in memory, no false \"saved\", profile switch blocked",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:42.013Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ca86dc4f195df8674d02-a1eaf378c09986cdd39c",
+          "file": "e2e/failures.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "QA-29: blocked/newer DB version from another tab is reported; data is never deleted",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:43.405Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ca86dc4f195df8674d02-9a02221b488ec728160c",
+          "file": "e2e/failures.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "QA-30: export one profile; corrupted import writes nothing; valid import creates a new profile without merge",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1786,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:45.070Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ca86dc4f195df8674d02-83d9413236199997e769",
+          "file": "e2e/failures.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\learning.spec.ts",
+      "file": "e2e/learning.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-06/A: radio + clear, blank submit needs confirmation, feedback 0/1 with omitted correct rationale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:46.880Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-4f380fe5d7b0d06b878b",
+          "file": "e2e/learning.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "QA-07/P: no hard cap, n/k counter, excess gives 0; one correct gives w/2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1372,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:48.214Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-98c1962c1f056332d8b3",
+          "file": "e2e/learning.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "QA-08/K: null rows, per-row clear, blank never shown as Fałsz; 2 of 3 rows = 4/3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:49.592Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-8e60017981ee32f9114d",
+          "file": "e2e/learning.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "QA-12/QA-34: option → knowledge → comparison → back; return restores answer, result and focus; refresh keeps the attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:50.872Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-78cc776038732268cad4",
+          "file": "e2e/learning.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "QA-13/FR-016: B → correction → F fails → other help → G fails → change of support, no automatic third check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1748,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:52.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-67b92c030075e18da7fd",
+          "file": "e2e/learning.spec.ts",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "FR-032: \"Zapisz miejsce i wyjdź\" — session offers resume of the same attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:54.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-e083bc9d26835f253d44",
+          "file": "e2e/learning.spec.ts",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "FR-029: neutral format tutorial — skippable, D04 example 2/3 for K with a blank row, no evidence recorded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1299,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:55.383Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-286f1212ce47d05adb67",
+          "file": "e2e/learning.spec.ts",
+          "line": 135,
+          "column": 1
+        },
+        {
+          "title": "QA-33: safe markdown — no raw HTML execution, no horizontal scroll at 320 px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1072,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:56.687Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-fa737bc0dfca90ef18a0",
+          "file": "e2e/learning.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "QA-06/A: radio + clear, blank submit needs confirmation, feedback 0/1 with omitted correct rationale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3181,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:53.685Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-7f969b23cbff9cbba08a",
+          "file": "e2e/learning.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "QA-07/P: no hard cap, n/k counter, excess gives 0; one correct gives w/2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3341,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:56.954Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-f01a7098d40c73d98367",
+          "file": "e2e/learning.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "QA-08/K: null rows, per-row clear, blank never shown as Fałsz; 2 of 3 rows = 4/3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:00.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-7cffbcca552efeebbe1a",
+          "file": "e2e/learning.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "QA-12/QA-34: option → knowledge → comparison → back; return restores answer, result and focus; refresh keeps the attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3988,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:03.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-722ce98c310a226f61ef",
+          "file": "e2e/learning.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "QA-13/FR-016: B → correction → F fails → other help → G fails → change of support, no automatic third check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:07.460Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-2fa01013900addd443c9",
+          "file": "e2e/learning.spec.ts",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "FR-032: \"Zapisz miejsce i wyjdź\" — session offers resume of the same attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3148,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:14.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-6fefd058496558f54fa7",
+          "file": "e2e/learning.spec.ts",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "FR-029: neutral format tutorial — skippable, D04 example 2/3 for K with a blank row, no evidence recorded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2870,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:17.645Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-3acbede936cef09f95a6",
+          "file": "e2e/learning.spec.ts",
+          "line": 135,
+          "column": 1
+        },
+        {
+          "title": "QA-33: safe markdown — no raw HTML execution, no horizontal scroll at 320 px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2229,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:20.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e0ec79b0c4f511f16424-31bd4c36bbe308dbdb49",
+          "file": "e2e/learning.spec.ts",
+          "line": 151,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\offline.spec.ts",
+      "file": "e2e/offline.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-20: after \"Gotowe offline\", closing and reopening offline keeps selector, learning, answers and finalization",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2534,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:51:57.776Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "586fc5283fd8ec7c7982-21ba14f2d69a2e93407a",
+          "file": "e2e/offline.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "QA-21: first start without reachable content shows an honest \"no materials\" state; retry after host returns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 992,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:00.314Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "586fc5283fd8ec7c7982-b3c34c61f3efb339ca1c",
+          "file": "e2e/offline.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "QA-20: after \"Gotowe offline\", closing and reopening offline keeps selector, learning, answers and finalization",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:28.847Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "586fc5283fd8ec7c7982-6b0919b4b0fef1e72171",
+          "file": "e2e/offline.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "QA-21: first start without reachable content shows an honest \"no materials\" state; retry after host returns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:31.871Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "586fc5283fd8ec7c7982-fcfc860f6e252aec2da7",
+          "file": "e2e/offline.spec.ts",
+          "line": 43,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\profiles.spec.ts",
+      "file": "e2e/profiles.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-01/QA-02: isolated progress, rename keeps data, delete only the chosen profile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2304,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:01.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-99741f211e0af1caa07b",
+          "file": "e2e/profiles.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "PROF-01: a fresh tab starts at the selector; refresh restores the same profile and attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1897,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:03.641Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-f71ef53e11229d6648ab",
+          "file": "e2e/profiles.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "QA-05: two tabs with different profiles do not switch each other",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:05.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-0c827c7214a6a0688f40",
+          "file": "e2e/profiles.spec.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "QA-04: the same attempt in two tabs — second writer gets a detected conflict, not silent overwrite",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2095,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:07.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-8ff45b9ef2be949499d1",
+          "file": "e2e/profiles.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "QA-01/QA-02: isolated progress, rename keeps data, delete only the chosen profile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2484,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:32.567Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-7cf5fc72254e1514452f",
+          "file": "e2e/profiles.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "PROF-01: a fresh tab starts at the selector; refresh restores the same profile and attempt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1344,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:35.058Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-c1963ce775bfd56373c9",
+          "file": "e2e/profiles.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "QA-05: two tabs with different profiles do not switch each other",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2001,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:36.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-684bd15cf2bf121c346f",
+          "file": "e2e/profiles.spec.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "QA-04: the same attempt in two tabs — second writer gets a detected conflict, not silent overwrite",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1749,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:38.414Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fd97f6a16028267a2f6-a5ef54d45a10b455cbbe",
+          "file": "e2e/profiles.spec.ts",
+          "line": 98,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\smoke.spec.ts",
+      "file": "e2e/smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "smoke: built app under /cpre/ with manifest, SW and learner content (QA-36)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:09.745Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-1fbb20a018c49f72b755",
+          "file": "e2e/smoke.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "smoke: built app under /cpre/ with manifest, SW and learner content (QA-36)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 560,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:40.191Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-e36f06115b6058394601",
+          "file": "e2e/smoke.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "smoke: built app under /cpre/ with manifest, SW and learner content (QA-36)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:22.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-7a7dcc1d3e35069b0bf3",
+          "file": "e2e/smoke.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\topic-test.spec.ts",
+      "file": "e2e/topic-test.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-14/QA-15: prompt-only during the check; flags, blank K, P excess; neutral review; idempotent finalize; result 5 pkt scale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1962,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:10.668Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-90b7e69454f31287f50c",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "QA-16: conversion — cancel reveals nothing; confirm is permanent across refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:12.635Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-e8f0a5d6dde166385dbb",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "FR-027: pause and resume the same check with a recorded break; Sesja shows a neutral resume card",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:14.066Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-3b8a9ae06d9635785181",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "QA-14/QA-15: prompt-only during the check; flags, blank K, P excess; neutral review; idempotent finalize; result 5 pkt scale",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:23.794Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-9da11524a2036321e718",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "QA-16: conversion — cancel reveals nothing; confirm is permanent across refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:31.565Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-5a0bef804d8ea788218f",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "FR-027: pause and resume the same check with a recorded break; Sesja shows a neutral resume card",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:36.465Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "971e80de93e659481db1-4e89ad5a0e07b23ecee1",
+          "file": "e2e/topic-test.spec.ts",
+          "line": 103,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\updates.spec.ts",
+      "file": "e2e/updates.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "QA-22: captive portal (HTML 200) and host down do not activate anything; saved content keeps working",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:15.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-d7003c867eb74c8ed92a",
+          "file": "e2e/updates.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "QA-22: LAN returns without an online event — the periodic check of a visible app finds the release",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 944,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:16.773Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-7eda1dbe253e77f5c51b",
+          "file": "e2e/updates.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "QA-23: bad-digest release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:17.721Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-5c731c7b783ce850b5cb",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-23: truncated release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1438,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:19.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-a7cbf62238a65c65bfc7",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-23: bad-schema release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1332,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:20.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-7a23bb9c109d440182d6",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-25: new release during an answer keeps the pinned revision; new activities use the new release",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2343,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:21.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-2eba017137889f8d2430",
+          "file": "e2e/updates.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "QA-26: incompatible release needs an app update; rollback with a higher sequence keeps progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:24.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-4f3439f0a67aa3e5658f",
+          "file": "e2e/updates.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "QA-28: withdrawal/disputed key suspends an active check neutrally; history kept; new uses blocked",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2599,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:25.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-f96a84b67d0542840500",
+          "file": "e2e/updates.spec.ts",
+          "line": 110,
+          "column": 1
+        },
+        {
+          "title": "QA-22: captive portal (HTML 200) and host down do not activate anything; saved content keeps working",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 997,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:40.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-97031ff9823dbea8ce22",
+          "file": "e2e/updates.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "QA-22: LAN returns without an online event — the periodic check of a visible app finds the release",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 666,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:41.767Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-9c3907edad2d95ab6fed",
+          "file": "e2e/updates.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "QA-23: bad-digest release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:42.440Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-ef62b5ff2ae4f6883d23",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-23: truncated release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:44.593Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-7f8f5e1debc7c9b04014",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-23: bad-schema release is rejected as a whole; previous release and progress stay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1122,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:45.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-142e438ab353d5f8bf0a",
+          "file": "e2e/updates.spec.ts",
+          "line": 48,
+          "column": 3
+        },
+        {
+          "title": "QA-25: new release during an answer keeps the pinned revision; new activities use the new release",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:46.989Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-9eaa30aa970dac5f8b49",
+          "file": "e2e/updates.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "QA-26: incompatible release needs an app update; rollback with a higher sequence keeps progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:48.850Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-bc4d9b224d67c63cce3c",
+          "file": "e2e/updates.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "QA-28: withdrawal/disputed key suspends an active check neutrally; history kept; new uses blocked",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:52:50.258Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eca1817b16bff49f616a-0667ba5c932f11d2b2a7",
+          "file": "e2e/updates.spec.ts",
+          "line": 110,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\review.spec.ts",
+      "file": "e2e/review.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "review mode banner; question-first entry never names the criterion before the answer (INTRO-T21, B-DEC-14)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "review",
+              "projectName": "review",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2267,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:41.681Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12f883ce49bb8436c3d7-366a49debbf69a0a9bb3",
+          "file": "e2e/review.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "T21 goals: 3 criteria, 8 notes, 4 open activities; long knowledge with tables reflows at 320 px (QA-33)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "review",
+              "projectName": "review",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:44.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12f883ce49bb8436c3d7-39ecd6bb65bf800f351f",
+          "file": "e2e/review.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "no approved T21 form: only the explicit technical form is offered, no automatic D01–08 fallback (TASK-023)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "review",
+              "projectName": "review",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1072,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:46.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12f883ce49bb8436c3d7-ae975dfc5b7f741cd819",
+          "file": "e2e/review.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "open retrieval O01: prompt before rubric, explicit self-assessment without CPRE points (FR-006)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "review",
+              "projectName": "review",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1210,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T12:53:47.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "12f883ce49bb8436c3d7-9b37abf5acb44fc56c9f",
+          "file": "e2e/review.spec.ts",
+          "line": 67,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-02T12:51:17.527Z",
+    "duration": 151512.46899999998,
+    "expected": 64,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
