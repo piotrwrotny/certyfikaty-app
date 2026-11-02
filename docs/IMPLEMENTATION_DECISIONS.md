@@ -80,6 +80,14 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 - **Nowsza baza danych** (np. po aktualizacji w innej karcie): aplikacja odmawia pracy z nieznanym schematem i pokazuje komunikat; dane nie są usuwane (Dexie 4 domyślnie otworzyłby taką bazę — wykryte testem e2e).
 - Wycofania z manifestu są kumulatywne; aktywny test, którego przypiętej rewizji dotyczy krytyczna decyzja, jest wstrzymywany jako cała forma („Ta próba wymaga aktualizacji materiału. Zachowaliśmy odpowiedzi”), z wyborem „Zakończ bez wyniku” albo „Przejdź do Nauki”.
 
+## Uruchomienie w LAN na żądanie (2.11.2026)
+
+- **`npm run lan:serve`** (`scripts/lan-serve.ts`, generator w `scripts/lan/caddyfile.ts`): pomocnik operatora, który buduje z `VITE_BASE=/cpre/` i serwuje `dist/` przez Caddy z `tls internal`. Nie zmienia aplikacji ani zasad docs/09; procedura w docs/09 („Uruchomienie w LAN na żądanie”). Nie dodaje backendu ani zależności do aplikacji (Caddy to narzędzie operatora, nie zależność npm).
+- **Host = origin**: domyślnie `<nazwa-komputera>.local`, by origin PWA nie zależał od IP z DHCP; alternatywa to `--host <IP>` z rezerwacją DHCP. Zmiana hosta/portu oznacza nowy origin.
+- **Port 80 wyłączony** (`auto_https disable_redirects`): brak konfliktu z innymi usługami; uczniowie dostają adres `https://`.
+- **Błędy nie dziedziczą cache**: `handle_errors` ustawia `no-store`; wykryte testem na żywym Caddy (brakujący JSON dostawał `immutable`).
+- **Weryfikacja**: testy jednostkowe generatora, `caddy validate` i sondowanie `curl` na localhost (nagłówki, 404, fallback, redirecty). **Nie sprawdzono** na telefonach: zaufania certyfikatowi, rozwiązywania `.local`, instalacji PWA ani aktualizacji między urządzeniami — to ograniczenie, nie dowód.
+
 ## Odstępstwa techniczne od makiet (bez zmiany kompozycji)
 
 - Pasek u góry: w prototypie „Prototyp D v0.1 …”; w aplikacji ten sam pasek pełni rolę dyskretnego statusu (offline, aktualizacje, błąd zapisu, tryb techniczny/recenzencki).
