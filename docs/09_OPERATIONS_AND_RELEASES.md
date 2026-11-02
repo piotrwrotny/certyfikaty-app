@@ -64,7 +64,6 @@ Start od zera na Omarchy (Arch). Skrypt działa tak samo jak na Windows (`npm ru
    ```bash
    git clone git@github.com:piotrwrotny/certyfikaty-app.git
    cd certyfikaty-app
-   git checkout feat/cpre-pwa-increment-1
    sudo pacman -S caddy nodejs npm avahi nss-mdns
    npm ci
    ```
