@@ -7,18 +7,19 @@
  * Without directories: every topic in content/authoring except names starting with _ or .
  * Exit code: 0 = no errors (warnings allowed), 1 = errors, 2 = wrong usage.
  */
-import { existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { resolve, relative, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import { parse as parseYaml } from 'yaml';
-import type { ContentPackage } from '../../src/content/types.ts';
+import type { ContentPackage, Withdrawal } from '../../src/content/types.ts';
 import { validateLearnerGate } from '../../src/content/validate.ts';
 import { AUTHORING_FORMAT, loadAuthoringValidators } from './authoring.ts';
-import { convertModel, hasErrors, lintTopic, renderReport, validateConverted, type LintIssue } from './authoring-convert.ts';
+import { convertModel, convertWithdrawals, hasErrors, lintTopic, renderReport, validateConverted, type LintIssue } from './authoring-convert.ts';
 import { ROOT, stableJson } from './lib.ts';
 
 const AUTHORING_DIR = resolve(ROOT, 'content/authoring');
 const NORMALIZED_DIR = resolve(ROOT, 'content/normalized');
+const WITHDRAWALS_DIR = resolve(ROOT, 'content/withdrawals');
 
 const [command, ...rest] = process.argv.slice(2);
 const replaceImport = rest.includes('--replace-import');
@@ -43,6 +44,15 @@ function corpus(): NormalizedFile[] {
   if (!existsSync(NORMALIZED_DIR)) return [];
   return readdirSync(NORMALIZED_DIR).filter((f) => f.endsWith('.json')).sort()
     .map((file) => ({ file, pkg: JSON.parse(readFileSync(resolve(NORMALIZED_DIR, file), 'utf-8')) as ContentPackage }));
+}
+
+function withdrawalFiles(): Map<string, Withdrawal[]> {
+  const out = new Map<string, Withdrawal[]>();
+  if (!existsSync(WITHDRAWALS_DIR)) return out;
+  for (const f of readdirSync(WITHDRAWALS_DIR).filter((n) => n.endsWith('.json'))) {
+    out.set(f.replace(/\.json$/, ''), JSON.parse(readFileSync(resolve(WITHDRAWALS_DIR, f), 'utf-8')) as Withdrawal[]);
+  }
+  return out;
 }
 
 function topicIdOf(dir: string): string | null {
@@ -76,6 +86,7 @@ if (dirs.length === 0) {
 
 const validators = loadAuthoringValidators();
 const all = corpus();
+const allWithdrawals = withdrawalFiles();
 let failed = false;
 
 for (const dir of dirs) {
@@ -91,7 +102,9 @@ for (const dir of dirs) {
     });
   }
   const previous = previousFile && fromAuthoring(previousFile.pkg) ? previousFile.pkg : null;
-  const lint = lintTopic(dir, { expectDirName: underAuthoring, previous, otherPackages: others }, validators);
+  const previousWithdrawals = id ? allWithdrawals.get(id) ?? [] : [];
+  const otherWithdrawalIds = [...allWithdrawals].filter(([k]) => k !== id).flatMap(([, ws]) => ws.map((w) => w.decisionId));
+  const lint = lintTopic(dir, { expectDirName: underAuthoring, previous, otherPackages: others, previousWithdrawals, otherWithdrawalIds }, validators);
   issues.push(...lint.issues);
   const label = `${id ?? '?'} ${lint.model?.topic.data.revision ?? ''}`.trim();
 
@@ -130,8 +143,15 @@ for (const dir of dirs) {
   });
   const reportPath = resolve(NORMALIZED_DIR, `${pkg.packageId}-AUTHORING_REPORT.md`);
   writeFileSync(reportPath, report, 'utf-8');
+  const withdrawals = convertWithdrawals(lint.model);
+  const withdrawalsPath = resolve(WITHDRAWALS_DIR, `${pkg.packageId}.json`);
+  if (withdrawals.length > 0) {
+    mkdirSync(WITHDRAWALS_DIR, { recursive: true });
+    writeFileSync(withdrawalsPath, stableJson(withdrawals), 'utf-8');
+  }
   print(dir, label, issues);
   console.log(`  Zapisano content/normalized/${fileName} i ${rel(reportPath)}.`);
+  if (withdrawals.length > 0) console.log(`  Zapisano ${rel(withdrawalsPath)} (${String(withdrawals.length)} wycofań).`);
   if (removed.length > 0) console.log(`  Usunięto poprzednie rewizje: ${removed.join(', ')}.`);
   console.log(`  Kanał recenzencki: ${pkg.rights.channels.includes('internal-review') ? 'tak' : 'nie'}. Kanał ucznia: ${learnerGate.length === 0 ? 'tak' : `nie (${learnerGate.join(', ')})`}.`);
 }

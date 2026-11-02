@@ -15,7 +15,7 @@ export const AUTHORING_FORMAT = 'cpre-authoring/1.0';
 export const AUTHORING_SCHEMA_DIR = resolve(ROOT, 'schemas', 'authoring');
 
 export type AuthoringKind =
-  | 'topic' | 'sources' | 'rules' | 'relations' | 'forms' | 'decisions'
+  | 'topic' | 'sources' | 'rules' | 'relations' | 'forms' | 'decisions' | 'withdrawals'
   | 'question' | 'lesson' | 'example' | 'correction' | 'open';
 
 const SCHEMA_FILES: Record<AuthoringKind, string> = {
@@ -25,6 +25,7 @@ const SCHEMA_FILES: Record<AuthoringKind, string> = {
   relations: 'relations.schema.json',
   forms: 'forms.schema.json',
   decisions: 'decisions.schema.json',
+  withdrawals: 'withdrawals.schema.json',
   question: 'question.schema.json',
   lesson: 'lesson.schema.json',
   example: 'example.schema.json',
@@ -63,6 +64,7 @@ export function kindForPath(relPath: string): AuthoringKind | null {
   if (p === 'relations.yaml') return 'relations';
   if (p === 'forms.yaml') return 'forms';
   if (p === 'review/decisions.yaml') return 'decisions';
+  if (p === 'review/withdrawals.yaml') return 'withdrawals';
   if (/^questions\/[^/]+\.yaml$/.test(p)) return 'question';
   if (/^lessons\/[^/]+\.md$/.test(p)) return 'lesson';
   if (/^examples\/[^/]+\.md$/.test(p)) return 'example';

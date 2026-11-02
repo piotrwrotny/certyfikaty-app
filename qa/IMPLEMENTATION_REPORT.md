@@ -133,3 +133,13 @@ Osobny baseline regresji implementacji (`tests/visual/fidelity.spec.ts-snapshots
 - **Forma U-TOPIC T21**: brak dopuszczonej formy; silnik testowany na jawnej formie technicznej.
 - **Host LAN**: stały origin HTTPS i certyfikat ustala operator.
 - Propozycje w `docs/IMPLEMENTATION_DECISIONS.md` (forma T21, pełna integracja relacji §8.3) czekają na decyzję właściciela.
+
+## 10. Zmiany po sporządzeniu raportu
+
+Sekcje 1–9 opisują stan z commita `1f77150`. Późniejsze zmiany są opisane w `docs/13_AUTHORING_FORMAT.md` i `docs/IMPLEMENTATION_DECISIONS.md`. Dwie z nich zmieniają zdania tego raportu:
+
+- **Build ucznia jest pusty.** TECH01 przeniesiono do `tests/fixtures/content/` i dołącza go tylko build testowy e2e. Zdanie z §9, że build ucznia pokazuje TECH01, już nie obowiązuje. Bez dopuszczonych tematów uczniowie widzą „Materiały są przygotowywane”.
+- **`content:release` nie odmawia z powodu tematów w review.** Pomija je i wypisuje. Odmawia przed zapisem, gdy paczka przeznaczona dla uczniów nie przechodzi bramki. Wiersz tabeli w §2 o celowej odmowie opisuje dawne zachowanie.
+
+Dodano też format autorski z komendami `content:lint` i `content:convert` oraz wycofania przenoszone do manifestu. Statusy G2, G3 i G4 są bez zmian.
+

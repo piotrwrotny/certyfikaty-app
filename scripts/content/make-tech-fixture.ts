@@ -200,7 +200,7 @@ if (!semantic.ok) {
   console.error(semantic.issues);
   process.exit(1);
 }
-const outDir = resolve(ROOT, 'content/normalized');
+const outDir = resolve(ROOT, 'tests/fixtures/content');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(resolve(outDir, 'TECH01.r1.json'), stableJson(pkg), 'utf-8');
-console.log('OK: content/normalized/TECH01.r1.json');
+console.log('OK: tests/fixtures/content/TECH01.r1.json');

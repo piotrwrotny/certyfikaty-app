@@ -53,6 +53,15 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 - **Pochodzenie paczki**: dokumenty z `topic.yaml` z SHA-256 oraz każdy plik autorski z SHA-256; kontrakt wymaga co najmniej dwóch wpisów.
 - **Sprawdzenie ścieżki zapisu**: `content:convert --replace-import` na T21-mini zapisał paczkę i raport, `content:validate` przyjął wynik, po czym `content/normalized` przywrócono z git.
 
+## Domknięcie luk: wycofania, pusty start, wydanie częściowe (2.11.2026)
+
+- **Wycofania w formacie autorskim**: `review/withdrawals.yaml` (pisze upoważniona osoba) → `content:convert` → `content/withdrawals/<ID>.json` → manifest każdego wydania w obu kanałach. Wcześniej skrypt wydania zawsze zapisywał pustą listę, choć aplikacja obsługiwała wycofania. Dotyczą tylko pytań, bo tylko do nich aplikacja je stosuje. Lista jest kumulatywna i niezmienna, zgodnie z klientem, który nigdy nie usuwa otrzymanych wycofań.
+- **TECH01 przeniesiony do `tests/fixtures/content/`** i dołączany wyłącznie flagą `--with-fixtures` (`build:e2e`). Zwykłe wydanie ucznia jest teraz puste, zgodnie z CLAUDE.md: fixtures nie trafiają automatycznie do wydania uczniowskiego. `content:validate` pilnuje, żeby żaden fixture nie wrócił do `content/normalized`.
+- **Pusty korpus jest poprawny w `content:validate`** (wcześniej brak pakietów był błędem).
+- **„Gotowe offline” przy pustym wydaniu** mówi, że aplikacja jest zapisana, a materiałów jeszcze nie ma, zamiast „aplikacja i materiały są zapisane”.
+- **`content:release --strict` pozwala na wydanie częściowe**: temat w review jest pomijany i wypisany; odmowa następuje tylko, gdy paczka przeznaczona dla uczniów (approved, permitted albo z dopuszczonymi użyciami) nie przechodzi bramki albo jest uszkodzona. Odmowa zapada przed zapisem czegokolwiek; wcześniej manifest był zapisywany, a dopiero potem polecenie kończyło się błędem. Bramka ucznia jest bez zmian.
+- **Runbook** opisuje przepływ formatu autorskiego, wydanie, wycofania i import historyczny T21.
+
 ## Pedagogika — interpretacje wykonawcze (bez zmiany zasad)
 
 - **Nagłówek pytania**: treść nie zawiera tytułów itemów, a ich dopisanie byłoby tworzeniem treści. H1 jest neutralny („Twoja odpowiedź.” / „Sprawdź inną sytuację.”), stem jest akapitem pod nim — ta sama hierarchia co w makiecie.

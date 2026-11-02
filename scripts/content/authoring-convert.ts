@@ -11,7 +11,7 @@ import { basename, relative, resolve, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 import type {
   ContactScope, ContentPackage, Criterion, ItemRef, Knowledge, KnowledgeKind, OpenActivity, PackageStatus,
-  Question, Relationship, Remediation, Rights, Rule, Source, TestForm,
+  Question, Relationship, Remediation, Rights, Rule, Source, TestForm, Withdrawal,
 } from '../../src/content/types.ts';
 import { formatInstruction } from '../../src/content/instruction.ts';
 import { validatePackageSemantics, validatePackageStructure, combine } from '../../src/content/validate.ts';
@@ -53,6 +53,11 @@ interface ADecision {
   forms?: { id: string; review: PackageStatus['review']; publication: PackageStatus['publication']; allowedUses: 'topic-test'[]; eligibilityPolicyRef: string }[];
 }
 
+interface AWithdrawal {
+  id: string; question: string; revision: string; status: Withdrawal['status']; reasonCode: string;
+  decidedAt: string; decidedBy: string; ref: string;
+}
+
 interface Located<T> { readonly file: string; readonly data: T; readonly body?: string }
 
 export interface TopicModel {
@@ -70,6 +75,7 @@ export interface TopicModel {
   readonly relations: readonly Located<ARelation>[];
   readonly forms: readonly Located<AForm>[];
   readonly decisions: readonly Located<ADecision>[];
+  readonly withdrawals: readonly Located<AWithdrawal>[];
 }
 
 // ---------------------------------------------------------------- issues
@@ -137,6 +143,7 @@ export function buildModel(topicDir: string, files: readonly AuthoringFile[]): T
     relations: flat<ARelation>('relations', 'relations'),
     forms: flat<AForm>('forms', 'forms'),
     decisions: flat<ADecision>('decisions', 'decisions'),
+    withdrawals: flat<AWithdrawal>('withdrawals', 'withdrawals'),
   };
 }
 
@@ -182,6 +189,10 @@ export interface LintOptions {
   readonly previous?: ContentPackage | null;
   /** Other packages already in the corpus (cross-topic ID collisions). */
   readonly otherPackages?: readonly ContentPackage[];
+  /** Withdrawals previously converted for this topic (content/withdrawals/<id>.json). */
+  readonly previousWithdrawals?: readonly Withdrawal[];
+  /** Withdrawal decision ids already used by other topics. */
+  readonly otherWithdrawalIds?: readonly string[];
 }
 
 export interface LintResult { readonly issues: LintIssue[]; readonly model: TopicModel | null }
@@ -358,6 +369,25 @@ function crossCheck(m: TopicModel, opts: LintOptions, issues: Issues): void {
   });
   if (current.length === 0) {
     issues.warn('review/decisions.yaml', undefined, `Brak decyzji dla rewizji ${t.revision}: status do review, prawa nieustalone. Paczka nie trafi do żadnego kanału, także recenzenckiego.`);
+  }
+
+  // withdrawals (cumulative; devices keep every withdrawal they received)
+  const wdIds = new Set<string>();
+  const otherWd = new Set(opts.otherWithdrawalIds ?? []);
+  m.withdrawals.forEach((w, i) => {
+    const f = `withdrawals[${String(i)}]`;
+    if (wdIds.has(w.data.id)) issues.error(w.file, `${f}.id`, `Powtórzony identyfikator wycofania ${w.data.id}.`);
+    wdIds.add(w.data.id);
+    if (otherWd.has(w.data.id)) issues.error(w.file, `${f}.id`, `Identyfikator wycofania ${w.data.id} jest już użyty w innym temacie.`);
+    const e = reg.get(w.data.question);
+    if (!e) issues.warn(w.file, `${f}.question`, `Pytania ${w.data.question} nie ma w bieżącej rewizji tematu; wycofanie dotyczy wersji już usuniętej.`);
+    else if (e.kind !== 'question') issues.error(w.file, `${f}.question`, `${w.data.question} to ${KIND_LABEL[e.kind] ?? e.kind}; aplikacja wycofuje tylko pytania.`);
+  });
+  const nowById = new Map(convertWithdrawals(m).map((w) => [w.decisionId, w]));
+  for (const prev of opts.previousWithdrawals ?? []) {
+    const now = nowById.get(prev.decisionId);
+    if (!now) issues.error('review/withdrawals.yaml', undefined, `Wycofanie ${prev.decisionId} zniknęło. Urządzenia zachowują otrzymane wycofania, więc wpisu nie można usunąć; poprawione pytanie opublikuj jako nową rewizję.`);
+    else if (JSON.stringify(now) !== JSON.stringify(prev)) issues.error('review/withdrawals.yaml', undefined, `Wycofanie ${prev.decisionId} zmieniło treść. Wpisy są niezmienne; zapisz nową decyzję z nowym identyfikatorem.`);
   }
 
   // unused rules
@@ -592,6 +622,18 @@ export function convertModel(m: TopicModel): ContentPackage {
   };
 }
 
+/** Manifest withdrawal entries (content-manifest schema) from review/withdrawals.yaml. */
+export function convertWithdrawals(m: TopicModel): Withdrawal[] {
+  return m.withdrawals.map((w) => ({
+    decisionId: w.data.id,
+    itemRef: { id: w.data.question, revision: w.data.revision },
+    status: w.data.status,
+    reasonCode: w.data.reasonCode,
+    decidedAt: `${w.data.decidedAt}T00:00:00Z`,
+    decisionRef: `${w.data.decidedBy}; ${w.data.ref}`,
+  }));
+}
+
 /** Schema and semantic validation of the converted package (same checks as content:validate). */
 export function validateConverted(pkg: ContentPackage): LintIssue[] {
   const out: LintIssue[] = [];
@@ -674,6 +716,14 @@ export function renderReport(args: {
   const issueLine = (i: LintIssue) => `- \`${i.file}\`${i.field ? ` \`${i.field}\`` : ''}: ${i.message}`;
   lines.push(`## Błędy (${String(errs.length)})`, '', ...(errs.length ? errs.map(issueLine) : ['Brak.']), '');
   lines.push(`## Ostrzeżenia (${String(warns.length)})`, '', ...(warns.length ? warns.map(issueLine) : ['Brak.']), '');
+  const wds = convertWithdrawals(m);
+  lines.push(`## Wycofania (${String(wds.length)})`, '');
+  if (wds.length === 0) lines.push('Brak.');
+  else {
+    lines.push(`Plik \`content/withdrawals/${pkg.packageId}.json\` trafia do manifestu każdego kolejnego wydania. Wpisy są kumulatywne i niezmienne.`, '');
+    for (const w of wds) lines.push(`- \`${w.decisionId}\`: ${w.itemRef.id}@${w.itemRef.revision}, ${w.status}, ${w.reasonCode}, ${w.decidedAt.slice(0, 10)}`);
+  }
+  lines.push('');
   lines.push('## Różnice względem poprzedniej konwersji', '');
   if (!previous) lines.push('Pierwsza konwersja tego tematu.');
   else {

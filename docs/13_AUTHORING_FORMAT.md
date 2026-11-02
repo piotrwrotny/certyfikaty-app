@@ -29,7 +29,8 @@ content/authoring/T22/
 ├── examples/<ID>.md      przykład, kontrprzykład, scenariusz albo porównanie
 ├── corrections/<ID>.md   korekta z kontrolami F i G
 ├── open/<ID>.md          aktywność otwarta z rubryką
-└── review/decisions.yaml decyzje recenzji (pisze tylko upoważniona osoba)
+├── review/decisions.yaml decyzje recenzji (pisze tylko upoważniona osoba)
+└── review/withdrawals.yaml wycofania i spory o klucz (pisze tylko upoważniona osoba)
 ```
 
 Pliki `.md` mają nagłówek YAML między liniami `---`, a pod nim treść w Markdown. Pliki `.yaml` z pierwszą linią `# yaml-language-server: $schema=…` są sprawdzane w VS Code na bieżąco przez rozszerzenie YAML. Nagłówki `.md` sprawdza komenda `content:lint`.
@@ -186,7 +187,16 @@ Kanał ucznia przyjmuje paczkę tylko po spełnieniu wszystkich warunków bramki
 - niepuste `allowedUses`, obejmujące użycia wymagane przez wydanie;
 - prawa `permitted`, z kanałem publikacji wydania, np. `internal-lan`, i odwołaniem do decyzji.
 
-Wycofania i spory o klucz obsługuje manifest wydania, nie format autorski.
+### Wycofania i spory o klucz
+
+Wycofanie zapisuje upoważniona osoba w `review/withdrawals.yaml`. Każdy wpis ma `id` decyzji (unikalne we wszystkich tematach, np. `WD-T22-0001`), `question`, `revision`, `status` (`withdrawn` albo `key-disputed`), `reasonCode`, `decidedAt` (data), `decidedBy` i `ref`.
+
+- **Dotyczy tylko pytań.** Aplikacja stosuje wycofania wyłącznie do pytań.
+- **Skutek u ucznia.** Nowe użycia tej rewizji są zablokowane. Aktywny test z nią zostaje neutralnie wstrzymany, bez ujawniania klucza. Odpowiedzi zostają w historii, ale nie służą jako dowód.
+- **Lista jest kumulatywna i niezmienna.** Urządzenia zachowują każde otrzymane wycofanie, więc usunięcie albo zmiana wpisu niczego by nie cofnęły. Lint zgłasza je jako błąd. Poprawione pytanie publikuje się jako nową rewizję.
+- **Droga do manifestu.** `content:convert` zapisuje wpisy do `content/withdrawals/<ID>.json`. Wydanie dołącza wszystkie pliki z tego katalogu do manifestu w obu kanałach.
+
+Wycofanie rewizji, której nie ma już w temacie, jest dozwolone i daje ostrzeżenie.
 
 ## 8. Konwersja i kontrole
 
@@ -222,13 +232,15 @@ Błędy:
 - `labelBeforeAnswer` zawierające `labelAfterAnswer` swojego kryterium;
 - znacznik HTML albo niewypełniony wzór `<…>` w tekście wyświetlanym, link inny niż http(s);
 - brak pliku wskazanego w `provenance`;
+- wycofanie obiektu innego niż pytanie, powtórzony identyfikator wycofania, usunięty albo zmieniony wpis już przekonwertowanego wycofania;
 - paczka niezgodna ze schematem albo regułami semantycznymi kontraktu (te same kontrole co `content:validate`).
 
 Ostrzeżenia:
 
 - brak decyzji dla bieżącej rewizji albo decyzja dla innej rewizji;
 - pytanie bazowe bez korekty swojego zakresu, pytanie kontrolne niewskazane w żadnej korekcie;
-- źródło lub reguła, których nic nie używa.
+- źródło lub reguła, których nic nie używa;
+- wycofanie pytania, którego nie ma w bieżącej rewizji tematu.
 
 ### Niezmienność rewizji
 
@@ -249,7 +261,7 @@ npm run content:convert
 
 Bez argumentów obie komendy biorą każdy katalog `content/authoring/*` poza nazwami zaczynającymi się od `_` lub `.`. Można też podać katalogi tematów jako argumenty po `--`. Kod wyjścia 0 oznacza brak błędów, 1 błędy, 2 złe użycie. `content:lint` jest częścią `npm run check`.
 
-`content:convert` zapisuje `content/normalized/<id>.<revision>.json` i raport `content/normalized/<id>-AUTHORING_REPORT.md`. Raport zawiera statusy, dostępność kanałów, liczby obiektów, błędy, ostrzeżenia i różnice względem poprzedniej konwersji. Poprzednie rewizje tego tematu znikają z `content/normalized`, bo wydanie zabiera wszystkie pliki z tego katalogu. Urządzenia uczniów zachowują przypięte stare rewizje dla rozpoczętych prób.
+`content:convert` zapisuje `content/normalized/<id>.<revision>.json`, raport `content/normalized/<id>-AUTHORING_REPORT.md` i, gdy temat ma wycofania, `content/withdrawals/<id>.json`. Raport zawiera statusy, dostępność kanałów, liczby obiektów, błędy, ostrzeżenia i różnice względem poprzedniej konwersji. Poprzednie rewizje tego tematu znikają z `content/normalized`, bo wydanie zabiera wszystkie pliki z tego katalogu. Urządzenia uczniów zachowują przypięte stare rewizje dla rozpoczętych prób.
 
 Konwerter odmawia nadpisania paczki o tym samym `packageId`, która nie powstała z formatu autorskiego, np. importu T21. Świadome zastąpienie wymaga flagi `--replace-import`.
 

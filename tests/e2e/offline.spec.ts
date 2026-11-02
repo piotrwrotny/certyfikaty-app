@@ -54,3 +54,22 @@ test('QA-21: first start without reachable content shows an honest "no materials
   await expect(page.getByText('Nowe materiały są dostępne dla kolejnych zadań.').first()).toBeVisible();
   await expect(page.getByText(/learner-0001/)).toBeVisible();
 });
+
+test('Pusty start: poprawne wydanie bez pakietów, uczciwy stan offline; materiały przychodzą później z hosta bez przebudowy aplikacji', async ({ page, request }) => {
+  await setServer(request, { content: 'empty' });
+  await page.goto('./');
+  await createProfile(page, 'Ania');
+  await expect(page.getByRole('heading', { level: 1, name: 'Materiały są przygotowywane.' })).toBeVisible();
+  await expect(page.getByText('Nie udało się sprawdzić nowych materiałów.')).toHaveCount(0);
+  await waitForServiceWorker(page);
+  await page.getByRole('button', { name: 'Sprawdź dane aplikacji' }).click();
+  await expect(page.getByText(/learner-0001 \(sekwencja 1/)).toBeVisible();
+  await expect(page.getByText('Aplikacja jest zapisana na tym urządzeniu. Nie ma jeszcze dopuszczonych materiałów.')).toBeVisible();
+  await expect(page.getByText('Tak — aplikacja i materiały są zapisane na tym urządzeniu.')).toHaveCount(0);
+  // the same installed app receives the first approved release from the LAN host
+  await setServer(request, { content: 'B' });
+  await page.getByRole('button', { name: 'Sprawdź aktualizacje' }).click();
+  await expect(page.getByText('Nowe materiały są dostępne dla kolejnych zadań.').first()).toBeVisible();
+  await expect(page.getByText('TECH01@r2', { exact: true })).toBeVisible();
+  await expect(page.getByText('Tak — aplikacja i materiały są zapisane na tym urządzeniu.')).toBeVisible();
+});

@@ -8,6 +8,7 @@ import { resolve } from 'node:path';
 import { ROOT, readJson, loadValidators, formatAjvErrors, schemaValid } from './lib.ts';
 import { validatePackageSemantics, validatePackageStructure, validateLearnerGate, combine } from '../../src/content/validate.ts';
 import type { ContentPackage } from '../../src/content/types.ts';
+import { collectWithdrawals } from './release-plan.ts';
 
 let failures = 0;
 function check(name: string, ok: boolean, details?: string): void {
@@ -17,19 +18,34 @@ function check(name: string, ok: boolean, details?: string): void {
 
 const validators = loadValidators();
 
-// 1. Normalized packages
+// 1. Normalized packages and technical fixtures. An empty corpus is a valid state.
 const normalizedDir = resolve(ROOT, 'content/normalized');
+const fixturesDir = resolve(ROOT, 'tests/fixtures/content');
 const files = existsSync(normalizedDir) ? readdirSync(normalizedDir).filter((f) => f.endsWith('.json')) : [];
-if (files.length === 0) {
-  check('content/normalized packages present', false, 'run content:import first');
+const fixtureFiles = existsSync(fixturesDir) ? readdirSync(fixturesDir).filter((f) => f.endsWith('.json')) : [];
+if (files.length === 0) console.log('PASS  content/normalized: brak pakietów (poprawny pusty korpus)');
+for (const [dir, list] of [['content/normalized', files], ['tests/fixtures/content', fixtureFiles]] as const) {
+  for (const file of list) {
+    const pkg = readJson<ContentPackage>(`${dir}/${file}`);
+    const schemaOk = schemaValid(validators.contentPackage, pkg);
+    check(`${dir}/${file}: JSON Schema 2020-12`, schemaOk, formatAjvErrors(validators.contentPackage));
+    const semantic = combine(validatePackageStructure(pkg), validatePackageSemantics(pkg));
+    check(`${dir}/${file}: semantic rules`, semantic.ok, semantic.issues.map((i) => i.code).join(','));
+  }
 }
-for (const file of files) {
-  const pkg = readJson<ContentPackage>(`content/normalized/${file}`);
-  const schemaOk = schemaValid(validators.contentPackage, pkg);
-  check(`${file}: JSON Schema 2020-12`, schemaOk, formatAjvErrors(validators.contentPackage));
-  const semantic = combine(validatePackageStructure(pkg), validatePackageSemantics(pkg));
-  check(`${file}: semantic rules`, semantic.ok, semantic.issues.map((i) => i.code).join(','));
-}
+
+// 1b. Technical fixtures never sit in the ordinary corpus (CLAUDE.md: fixtures do not reach the learner release).
+const fixtureIds = new Set(fixtureFiles.map((f) => readJson<ContentPackage>(`tests/fixtures/content/${f}`).packageId));
+const leaked = files.map((f) => readJson<ContentPackage>(`content/normalized/${f}`))
+  .filter((p) => fixtureIds.has(p.packageId) || (p.status.decisionRef ?? '').startsWith('FIXTURE-'));
+check('content/normalized: brak fixtures technicznych', leaked.length === 0, leaked.map((p) => p.packageId).join(','));
+
+// 1c. Cumulative withdrawals are valid manifest entries with unique decision ids.
+const collected = collectWithdrawals(resolve(ROOT, 'content/withdrawals'));
+check('content/withdrawals: unikalne identyfikatory decyzji', collected.problems.length === 0, collected.problems.join('; '));
+const emptyManifest = readJson<Record<string, unknown>>('examples/learner-empty-manifest.json');
+check(`content/withdrawals: ${String(collected.withdrawals.length)} wpisów zgodnych ze schematem manifestu`,
+  schemaValid(validators.contentManifest, { ...emptyManifest, withdrawals: collected.withdrawals }), formatAjvErrors(validators.contentManifest));
 
 // 2. Learner gate: T21 (pending review) must be rejected; TECH01 must pass.
 if (files.includes('T21.r1-full1.json')) {
@@ -39,8 +55,8 @@ if (files.includes('T21.r1-full1.json')) {
   const reviewGate = validateLearnerGate(t21, { channel: 'review', publicationChannel: 'internal-review' });
   check('T21 allowed on review channel', reviewGate.ok);
 }
-if (files.includes('TECH01.r1.json')) {
-  const tech = readJson<ContentPackage>('content/normalized/TECH01.r1.json');
+if (fixtureFiles.includes('TECH01.r1.json')) {
+  const tech = readJson<ContentPackage>('tests/fixtures/content/TECH01.r1.json');
   const gate = validateLearnerGate(tech, { channel: 'learner', publicationChannel: 'internal-lan', intendedUses: ['learning', 'topic-test'] });
   check('TECH01 (synthetic technical fixture) passes learner gate', gate.ok, gate.issues.map((i) => i.code).join(','));
 }

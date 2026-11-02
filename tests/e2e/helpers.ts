@@ -1,6 +1,6 @@
 import { expect, type APIRequestContext, type Page } from '@playwright/test';
 
-export type ContentMode = 'A' | 'B' | 'withdraw' | 'bad-digest' | 'truncated' | 'bad-schema' | 'portal' | 'down' | 'hang' | 'incompatible' | 'rollback';
+export type ContentMode = 'A' | 'B' | 'withdraw' | 'bad-digest' | 'truncated' | 'bad-schema' | 'portal' | 'down' | 'hang' | 'incompatible' | 'rollback' | 'empty';
 
 /** Waits until this tab's pending answer writes are committed (body[data-save-state=saved]). */
 export async function waitForSaved(page: Page): Promise<void> {

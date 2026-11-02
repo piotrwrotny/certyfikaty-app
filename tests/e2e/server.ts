@@ -17,6 +17,7 @@
  *   hang       manifest URL never answers (client 8 s timeout)
  *   incompatible learner-0009 requiring app 9.0.0
  *   rollback   learner-0010: TECH01@r1 again with a higher sequence
+ *   empty      learner-0001: valid release without any package (raw start, no approved content)
  */
 import { createServer, type ServerResponse } from 'node:http';
 import { createHash } from 'node:crypto';
@@ -31,7 +32,7 @@ const BASE = arg('--base', '/cpre/');
 const DIST_A = resolve(ROOT, arg('--dist', 'dist-e2e'));
 const DIST_B = resolve(ROOT, arg('--dist-b', 'dist-e2e-b'));
 
-type Mode = 'A' | 'B' | 'withdraw' | 'bad-digest' | 'truncated' | 'bad-schema' | 'portal' | 'down' | 'hang' | 'incompatible' | 'rollback';
+type Mode = 'A' | 'B' | 'withdraw' | 'bad-digest' | 'truncated' | 'bad-schema' | 'portal' | 'down' | 'hang' | 'incompatible' | 'rollback' | 'empty';
 let mode: Mode = 'A';
 let app: 'a' | 'b' = 'a';
 const requests: string[] = [];
@@ -44,7 +45,7 @@ const MIME: Record<string, string> = {
 const sha = (b: Buffer) => createHash('sha256').update(b).digest('hex');
 
 interface Pkg { packageId: string; revision: string; questions: { id: string; revision: string; stemMarkdown: string }[]; [k: string]: unknown }
-const tech = JSON.parse(readFileSync(resolve(ROOT, 'content/normalized/TECH01.r1.json'), 'utf-8')) as Pkg;
+const tech = JSON.parse(readFileSync(resolve(ROOT, 'tests/fixtures/content/TECH01.r1.json'), 'utf-8')) as Pkg;
 
 function pkgBytes(p: Pkg): Buffer { return Buffer.from(`${JSON.stringify(p, null, 2)}\n`, 'utf-8'); }
 
@@ -94,6 +95,7 @@ function currentRelease(): Release | null {
     }
     case 'incompatible': return release(9, [{ pkg: { ...techR2(), revision: 'r9' } }], { compatibility: { contentSchemaVersion: '1.0.0', minAppVersion: '9.0.0', maxAppMajor: 9 } });
     case 'rollback': return release(10, [{ pkg: tech }]);
+    case 'empty': return release(1, [], { releaseNote: 'Brak dopuszczonych materiałów: poprawny pusty korpus, bez wniosku o uczniu.' });
     case 'A': case 'portal': case 'down': case 'hang': return null;
   }
 }

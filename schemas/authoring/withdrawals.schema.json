@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review/withdrawals.yaml: wycofania i spory o klucz pytań. Pisze je wyłącznie upoważniona osoba. Lista jest kumulatywna: wpisu nie usuwa się ani nie zmienia.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["withdrawals"],
+  "properties": {
+    "withdrawals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "question", "revision", "status", "reasonCode", "decidedAt", "decidedBy", "ref"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id", "description": "Identyfikator decyzji, unikalny we wszystkich tematach, np. WD-T22-0001." },
+          "question": { "$ref": "common.schema.json#/$defs/id", "description": "Wycofywane pytanie." },
+          "revision": { "$ref": "common.schema.json#/$defs/revision", "description": "Wycofywana rewizja pytania." },
+          "status": { "enum": ["withdrawn", "key-disputed"], "description": "withdrawn: pytanie wycofane. key-disputed: klucz wymaga sprawdzenia." },
+          "reasonCode": { "$ref": "common.schema.json#/$defs/id", "description": "Krótki kod przyczyny, np. KEY-ERROR, SOURCE-CHANGED." },
+          "decidedAt": { "type": "string", "format": "date" },
+          "decidedBy": { "$ref": "common.schema.json#/$defs/text", "description": "Osoba i rola." },
+          "ref": { "$ref": "common.schema.json#/$defs/text", "description": "Gdzie jest zapis decyzji." }
+        }
+      }
+    }
+  }
+}

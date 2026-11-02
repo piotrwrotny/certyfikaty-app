@@ -56,19 +56,65 @@ location /cpre/ {
 
 ## 5. Aktualizacja treści (bez zmiany kodu)
 
-1. Umieść parę `Txx_…_Content` + `Txx_…_QA_and_Handoff` w `content/inbox/` i przygotuj import według `docs/05_CONTENT_INGESTION.md` (raport wejście→wyjście).
-2. `npm run content:validate`.
-3. Tylko gdy istnieje **rzeczywisty zapis** review, praw i dopuszczonych użyć: `npm run content:release -- --sequence <N+1> --created-at <ISO>`. Polecenie odrzuca pakiety review-only w kanale learner (`--strict`).
-4. Skopiuj **najpierw** `release-out/content/learner/releases/<nowy-id>/` na host i sprawdź rozmiary/SHA-256 z manifestu.
-5. **Na końcu** podmień `content/manifest.json` atomowo (zapis do pliku tymczasowego + rename). Nie edytuj manifestu w miejscu.
-6. Sprawdź: nowa przeglądarka (pusta baza), istniejąca baza z aktywną próbą (ta sama rewizja zostaje), tryb offline, profile.
+Treść jest oddzielona od kodu. Aplikacja pobiera `content/manifest.json` w czasie działania, więc nowe materiały publikuje się bez przebudowy i bez ponownej instalacji aplikacji.
 
-Puste wydanie learner (zero pakietów) jest poprawne: uczniowie widzą „Materiały są przygotowywane”.
+**Pusty start jest poprawnym stanem.** Bez dopuszczonych tematów wydanie learner ma zero pakietów. Uczniowie widzą wtedy „Materiały są przygotowywane”, a „Dane aplikacji” mówią, że aplikacja jest zapisana, ale materiałów jeszcze nie ma. Fixtures techniczne (`tests/fixtures/content`, np. TECH01) trafiają wyłącznie do buildów testowych e2e i nigdy do zwykłego wydania.
+
+### 5.1 Przygotowanie tematu (format autorski, docs/13)
+
+1. Umieść katalog tematu w `content/authoring/<ID>/`. Wzory są w `content/authoring/_templates/`.
+2. Sprawdź pliki:
+
+   ```bash
+   npm run content:lint
+   ```
+
+3. Przekonwertuj temat. Powstaje `content/normalized/<ID>.<rewizja>.json`, raport `content/normalized/<ID>-AUTHORING_REPORT.md` i, gdy są wycofania, `content/withdrawals/<ID>.json`:
+
+   ```bash
+   npm run content:convert
+   ```
+
+4. Przeczytaj raport. Sprawdź statusy, dostępność kanałów, ostrzeżenia i różnice względem poprzedniej rewizji.
+
+Dopuszczenie zapisuje wyłącznie upoważniona osoba w `review/decisions.yaml` tematu. Bez decyzji temat nie trafia do żadnego kanału, także recenzenckiego. Dla buildu recenzenckiego wystarczy decyzja z `review: pending`, `publication: review-only` i prawami `review-only` dla `internal-review`.
+
+### 5.2 Wydanie
+
+1. Sprawdź całość:
+
+   ```bash
+   npm run check
+   ```
+
+2. Zbuduj wydanie ucznia z numerem sekwencji wyższym niż ostatnio opublikowany:
+
+   ```bash
+   npm run content:release -- --sequence <N+1> --created-at <ISO>
+   ```
+
+   Tematy jeszcze w review są pomijane i wypisane jako „do review, pominięty”. Polecenie odmawia wydania i niczego nie zapisuje, gdy temat przeznaczony dla uczniów (zatwierdzony, dopuszczony albo z dopuszczonymi użyciami) nie przechodzi bramki albo paczka jest uszkodzona.
+
+3. Skopiuj **najpierw** `release-out/content/learner/releases/<nowy-id>/` na host i sprawdź rozmiary i SHA-256 z manifestu.
+4. **Na końcu** podmień `content/manifest.json` atomowo, przez zapis do pliku tymczasowego i rename. Nie edytuj manifestu w miejscu. Starych katalogów `releases/` nie usuwaj.
+5. Sprawdź nową przeglądarkę z pustą bazą, istniejącą bazę z aktywną próbą (ta sama rewizja zostaje), tryb offline i profile.
+
+### 5.3 Wycofanie pytania i spór o klucz
+
+1. Upoważniona osoba dopisuje wpis do `review/withdrawals.yaml` tematu: identyfikator decyzji, pytanie, rewizję, `withdrawn` albo `key-disputed`, kod przyczyny, datę, osobę i odwołanie do zapisu.
+2. Uruchom `content:lint`, `content:convert` i wydanie z punktu 5.2. Wycofania z `content/withdrawals/` trafiają do manifestu każdego kolejnego wydania, w obu kanałach.
+3. Urządzenia zachowują każde otrzymane wycofanie. Wpisu nie wolno usunąć ani zmienić, a lint zgłasza to jako błąd. Poprawione pytanie publikuje się jako nową rewizję.
+
+Skutek u ucznia: nowe użycia wycofanej rewizji są zablokowane, a aktywny test z tą rewizją zostaje neutralnie wstrzymany bez ujawniania klucza. Odpowiedzi zostają w historii, ale nie służą jako dowód.
+
+### 5.4 Import historyczny T21
+
+`content/normalized/T21.r1-full1.json` powstał wcześniejszym importem (`npm run content:import`, docs/05). Konwerter formatu autorskiego go nie nadpisze, chyba że uruchomisz `content:convert` z flagą `--replace-import` dla tematu o tym samym identyfikatorze.
 
 ## 6. Rollback
 
 - Treść: opublikuj **nowy** manifest z **wyższym** `releaseSequence`, wskazujący poprzednie poprawne paczki; dodaj powód w `releaseNote`. Nie cofaj sekwencji i nie usuwaj historii ocen.
-- Wycofanie/sporny klucz: wpis w `withdrawals` (kumulatywnie). Aktywne testy z tą rewizją zostaną neutralnie wstrzymane; odpowiedzi zostają.
+- Wycofanie lub sporny klucz: procedura z punktu 5.3. Wpisy są kumulatywne. Aktywne testy z tą rewizją zostaną neutralnie wstrzymane, a odpowiedzi zostają.
 - Kod: przywróć poprzednie `index.html`/`sw.js` (stare `assets` nadal są na serwerze).
 
 ## 7. Sytuacje awaryjne
@@ -89,4 +135,4 @@ Uczeń: menu profilu → „Kopia postępu” → „Pobierz kopię tego profilu
 
 ## 9. Instalacja PWA
 
-Instalacja zależy od przeglądarki (Chromium/Edge: ikona w pasku adresu; Android Chrome: „Dodaj do ekranu głównego”; iOS Safari: Udostępnij → „Do ekranu początkowego”). Nauka w zwykłej karcie działa bez instalacji. „Gotowe offline” w „Dane aplikacji” oznacza, że app shell i aktywne wydanie są zapisane.
+Instalacja zależy od przeglądarki (Chromium/Edge: ikona w pasku adresu; Android Chrome: „Dodaj do ekranu głównego”; iOS Safari: Udostępnij → „Do ekranu początkowego”). Nauka w zwykłej karcie działa bez instalacji. „Gotowe offline” w „Dane aplikacji” oznacza, że app shell i aktywne wydanie są zapisane. Przy pustym wydaniu ekran mówi wprost, że aplikacja jest zapisana, ale materiałów jeszcze nie ma.

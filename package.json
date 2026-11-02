@@ -25,7 +25,7 @@
     "test:visual": "npm run build:e2e && playwright test --project=visual",
     "serve:test": "tsx tests/e2e/server.ts",
     "check": "npm run typecheck && npm run lint && npm run content:validate && npm run content:lint && npm run test && npm run build",
-    "build:e2e": "npm run content:build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e VITE_BUILD_TAG=e2e-a vite build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e-b VITE_BUILD_TAG=e2e-b vite build && cross-env VITE_CONTENT_CHANNEL=review VITE_BASE=/cpre-review/ VITE_OUT_DIR=dist-review VITE_BUILD_TAG=review vite build"
+    "build:e2e": "npm run content:build -- --with-fixtures && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e VITE_BUILD_TAG=e2e-a vite build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e-b VITE_BUILD_TAG=e2e-b vite build && cross-env VITE_CONTENT_CHANNEL=review VITE_BASE=/cpre-review/ VITE_OUT_DIR=dist-review VITE_BUILD_TAG=review vite build"
   },
   "dependencies": {
     "ajv": "^8.20.0",

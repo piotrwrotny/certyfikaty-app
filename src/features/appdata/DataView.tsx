@@ -115,7 +115,11 @@ export function DataView() {
         <dt>Wersja aplikacji</dt><dd data-testid="app-build">{APP_VERSION_STRING} (build {APP_BUILD_TAG}){CONTENT_CHANNEL === 'review' ? ' · tryb recenzencki' : ''}</dd>
         <dt>Wydanie materiałów</dt><dd>{release ? `${release.releaseId} (sekwencja ${String(release.releaseSequence)}, aktywne od ${release.activatedAt ? new Date(release.activatedAt).toLocaleString('pl-PL') : '—'})` : 'brak pobranych materiałów'}</dd>
         <dt>Pakiety</dt><dd>{content.packages.length === 0 ? 'brak' : content.packages.map((p) => `${p.packageId}@${p.revision}`).join(', ')}</dd>
-        <dt>Gotowe offline</dt><dd>{offlineReady ? 'Tak — aplikacja i materiały są zapisane na tym urządzeniu.' : 'Jeszcze nie — aplikacja lub materiały nie są w pełni zapisane.'}</dd>
+        <dt>Gotowe offline</dt><dd>{!offlineReady
+          ? 'Jeszcze nie — aplikacja lub materiały nie są w pełni zapisane.'
+          : content.packages.length === 0
+            ? 'Aplikacja jest zapisana na tym urządzeniu. Nie ma jeszcze dopuszczonych materiałów.'
+            : 'Tak — aplikacja i materiały są zapisane na tym urządzeniu.'}</dd>
         <dt>Miejsce w przeglądarce</dt><dd>{estimate ? `${mb(estimate.usage)} z ${mb(estimate.quota)}` : 'niedostępne'}</dd>
         <dt>Trwałe przechowywanie</dt><dd>{persisted === null ? 'nieobsługiwane' : persisted ? 'przyznane' : 'nieprzyznane — aplikacja działa normalnie; rób kopię postępu'}</dd>
         <dt>Stan aktualizacji</dt><dd aria-live="polite">{statusText}</dd>

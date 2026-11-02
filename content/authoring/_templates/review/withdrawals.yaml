@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/withdrawals.schema.json
+# WZÓR. Wycofania i spory o klucz pytań. Pisze je wyłącznie osoba upoważniona do decyzji o treści.
+# Lista jest kumulatywna: urządzenia uczniów zachowują każde otrzymane wycofanie,
+# więc wpisu nie usuwa się ani nie zmienia. Poprawione pytanie publikuje się jako nową rewizję.
+# Historia ucznia zostaje; wyniki z wycofanej rewizji nie służą jako dowód.
+withdrawals: []
+# Przykład wpisu:
+#  - id: WD-TXX-0001
+#    question: TXX-B01
+#    revision: r1
+#    status: key-disputed      # withdrawn albo key-disputed
+#    reasonCode: KEY-ERROR
+#    decidedAt: 2026-01-01
+#    decidedBy: "<Imię i nazwisko, rola>"
+#    ref: "<Gdzie jest zapis decyzji>"

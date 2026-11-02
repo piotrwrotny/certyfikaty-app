@@ -4,9 +4,9 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { loadAuthoringValidators } from '../../scripts/content/authoring.ts';
 import {
-  comparePackages, convertModel, hasErrors, lintTopic, renderReport, validateConverted, type LintIssue, type LintOptions,
+  comparePackages, convertModel, convertWithdrawals, hasErrors, lintTopic, renderReport, validateConverted, type LintIssue, type LintOptions,
 } from '../../scripts/content/authoring-convert.ts';
-import { ROOT } from '../../scripts/content/lib.ts';
+import { ROOT, loadValidators } from '../../scripts/content/lib.ts';
 import { formatInstruction } from '../../src/content/instruction.ts';
 import { validateLearnerGate } from '../../src/content/validate.ts';
 import type { ContentPackage } from '../../src/content/types.ts';
@@ -292,5 +292,67 @@ describe('stage 2: published revisions are immutable', () => {
     expect(after.questions.find((q) => q.id === 'TXX-B01')?.noveltyReview).toBe('independent');
     const diff = comparePackages(before, after);
     expect([...diff.changedWithRevision, ...diff.changedWithoutRevision]).toEqual([]);
+  });
+});
+
+describe('withdrawals and key disputes', () => {
+  const entry = (id: string, question: string, extra = '') => `  - id: ${id}
+    question: ${question}
+    revision: r1
+    status: key-disputed
+    reasonCode: KEY-ERROR
+    decidedAt: 2026-11-02
+    decidedBy: "Recenzent A, właściciel treści"
+    ref: "Protokół review 2026-11-02"
+${extra}`;
+  const withWithdrawals = (...entries: string[]) => {
+    const dir = topicCopy();
+    edit(dir, 'review/withdrawals.yaml', 'withdrawals: []', `withdrawals:
+${entries.join('')}`);
+    return dir;
+  };
+
+  it('converts into manifest entries that pass the manifest schema', () => {
+    const dir = withWithdrawals(entry('WD-TXX-0001', 'TXX-B01'));
+    const r = lint(dir);
+    expect(errorsOf(r.issues)).toEqual([]);
+    if (!r.model) throw new Error('no model');
+    const ws = convertWithdrawals(r.model);
+    expect(ws).toEqual([{ decisionId: 'WD-TXX-0001', itemRef: { id: 'TXX-B01', revision: 'r1' }, status: 'key-disputed', reasonCode: 'KEY-ERROR', decidedAt: '2026-11-02T00:00:00Z', decisionRef: 'Recenzent A, właściciel treści; Protokół review 2026-11-02' }]);
+    const manifest = JSON.parse(readFileSync(resolve(ROOT, 'examples/learner-empty-manifest.json'), 'utf-8')) as Record<string, unknown>;
+    expect(loadValidators().contentManifest({ ...manifest, withdrawals: ws })).toBe(true);
+    const text = renderReport({ model: r.model, pkg: convertModel(r.model), issues: r.issues, previous: null, outputPath: 'x', outputSha256: 'y', date: '2026-11-02', reviewChannel: true, learnerGate: [] });
+    expect(text).toContain('## Wycofania (1)');
+    expect(text).toContain('`WD-TXX-0001`: TXX-B01@r1, key-disputed, KEY-ERROR, 2026-11-02');
+  });
+
+  it('only questions can be withdrawn; an unknown question is a warning; ids are unique', () => {
+    const dir = withWithdrawals(entry('WD-1', 'TXX-N01'), entry('WD-2', 'TXX-B77'), entry('WD-2', 'TXX-B01'));
+    const issues = lint(dir, { templates: true, otherWithdrawalIds: ['WD-1'] }).issues;
+    expect(issues).toContainEqual(expect.objectContaining({ severity: 'error', field: 'withdrawals[0].question', message: 'TXX-N01 to nota; aplikacja wycofuje tylko pytania.' }));
+    expect(issues).toContainEqual(expect.objectContaining({ severity: 'warning', field: 'withdrawals[1].question' }));
+    expect(issues).toContainEqual(expect.objectContaining({ severity: 'error', field: 'withdrawals[2].id', message: 'Powtórzony identyfikator wycofania WD-2.' }));
+    expect(issues).toContainEqual(expect.objectContaining({ severity: 'error', field: 'withdrawals[0].id', message: 'Identyfikator wycofania WD-1 jest już użyty w innym temacie.' }));
+  });
+
+  it('a released withdrawal can be neither removed nor changed', () => {
+    const dir = withWithdrawals(entry('WD-TXX-0001', 'TXX-B01'));
+    const r = lint(dir);
+    if (!r.model) throw new Error('no model');
+    const released = convertWithdrawals(r.model);
+    edit(dir, 'review/withdrawals.yaml', 'status: key-disputed', 'status: withdrawn');
+    expect(errorsOf(lint(dir, { templates: true, previousWithdrawals: released }).issues)).toContainEqual(expect.objectContaining({ message: expect.stringMatching(/Wycofanie WD-TXX-0001 zmieniło treść/) as unknown }));
+    const removed = topicCopy();
+    expect(errorsOf(lint(removed, { templates: true, previousWithdrawals: released }).issues)).toContainEqual(expect.objectContaining({ message: expect.stringMatching(/Wycofanie WD-TXX-0001 zniknęło/) as unknown }));
+  });
+
+  it('rejects a withdrawal without a person or with a datetime instead of a date', () => {
+    const v = loadAuthoringValidators();
+    const ok = { id: 'WD-1', question: 'Q', revision: 'r1', status: 'withdrawn', reasonCode: 'KEY-ERROR', decidedAt: '2026-11-02', decidedBy: 'Osoba', ref: 'Protokół' };
+    expect(v.withdrawals({ withdrawals: [ok] })).toBe(true);
+    const { decidedBy: _d, ...noPerson } = ok;
+    expect(v.withdrawals({ withdrawals: [noPerson] })).toBe(false);
+    expect(v.withdrawals({ withdrawals: [{ ...ok, decidedAt: '2026-11-02T10:00:00Z' }] })).toBe(false);
+    expect(v.withdrawals({ withdrawals: [{ ...ok, status: 'retired' }] })).toBe(false);
   });
 });

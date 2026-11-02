@@ -27,6 +27,7 @@ describe('authoring format: paths and parsing', () => {
   it('maps every documented location to its kind and rejects others', () => {
     expect(kindForPath('topic.yaml')).toBe('topic');
     expect(kindForPath('review/decisions.yaml')).toBe('decisions');
+    expect(kindForPath('review/withdrawals.yaml')).toBe('withdrawals');
     expect(kindForPath('questions/T22-B01.yaml')).toBe('question');
     expect(kindForPath('lessons/N-T22-01.md')).toBe('lesson');
     expect(kindForPath('examples/CMP-T22-01.md')).toBe('example');
@@ -57,7 +58,7 @@ describe('authoring format: templates and example are valid', () => {
 
   it('templates cover every file kind', () => {
     const kinds = new Set(readTopicDir(TEMPLATES).files.map((f) => f.kind));
-    expect([...kinds].sort()).toEqual(['correction', 'decisions', 'example', 'forms', 'lesson', 'open', 'question', 'relations', 'rules', 'sources', 'topic']);
+    expect([...kinds].sort()).toEqual(['correction', 'decisions', 'example', 'forms', 'lesson', 'open', 'question', 'relations', 'rules', 'sources', 'topic', 'withdrawals']);
   });
 
   it('the decisions template approves nothing', () => {

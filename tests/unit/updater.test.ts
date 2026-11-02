@@ -11,7 +11,7 @@ import { freshDb, conditions } from './helpers.ts';
 
 const root = resolve(__dirname, '..', '..');
 const enc = new TextEncoder();
-const tech = JSON.parse(readFileSync(resolve(root, 'content/normalized/TECH01.r1.json'), 'utf-8')) as ContentPackage;
+const tech = JSON.parse(readFileSync(resolve(root, 'tests/fixtures/content/TECH01.r1.json'), 'utf-8')) as ContentPackage;
 const t21 = JSON.parse(readFileSync(resolve(root, 'content/normalized/T21.r1-full1.json'), 'utf-8')) as ContentPackage;
 
 function sha(bytes: Uint8Array): string {
