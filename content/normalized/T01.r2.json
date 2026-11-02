@@ -1,0 +1,4338 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T01",
+  "revision": "r2",
+  "title": "T01 — Podstawowe pojęcia RE",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "partial",
+  "limitations": [
+    "Wymaganie w trzech sensach; specyfikacja/specyfikacja wymagań; interesariusz; system; RE i podstawowa terminologia roli.",
+    "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
+    "Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.",
+    "Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.",
+    "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
+  ],
+  "status": {
+    "authoring": "draft",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md",
+      "sha256": "ab9104d88d3890149bf1924ca85be799f400a032d36d448e2ed74f8bb933741b",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_QA_and_Handoff_v0.1.md",
+      "sha256": "eedb7cf80fa2b597e99f90de87bf5b8f7dfbb5170982b9d695c6bd84e9b3ab19",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/Z1_IREB_CPRE_Manifest_v0.1.md",
+      "sha256": "b8a240a1e78c08fd365e90b53f1120bf4c89717246f265d056e3b210d34264ba",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "content/authoring/T01/corrections/REM-KRY-T01-01.md",
+      "sha256": "6df3511ae14626659f6fa3a8663ac138d41aa31ed6158df903cd72c0033b7f1c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/corrections/REM-KRY-T01-02.md",
+      "sha256": "d9d4c5b18d30de8959355d2d302840b3a19c4010efa1f36083ef1a95171cd873",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/corrections/REM-KRY-T01-03.md",
+      "sha256": "739702c2fc530baed10b23846139a78e4771fb05014bc1bd606d01ee657eb1d5",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/corrections/REM-KRY-T01-04.md",
+      "sha256": "d8d2e8b461e519274f92117faff124e4db3012b170c20e09fcb4d86a44ac3ef4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/corrections/REM-KRY-T01-05.md",
+      "sha256": "30a72bdea977fd8c4bcf9a127059c610b8862ae5c9c19e65016d4a515066c82b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CE-KRY-T01-01.md",
+      "sha256": "5eea8e0867a450b3f4e3806d70e0a6594d96796058e05db13dca45d640b5500e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CE-KRY-T01-02.md",
+      "sha256": "13537674bcb3b0315a67c37784228e38fd50470cfffc588f759bc40cd4d7d8da",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CE-KRY-T01-03.md",
+      "sha256": "83b9114e8468840b0bb05f1878c4f78a782cdbc8a54953dd6948ce82af685af6",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CE-KRY-T01-04.md",
+      "sha256": "79d94a53c5329b63b3143c29d791cedbcf626df4cf33907dbff2b317ea3c8064",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CE-KRY-T01-05.md",
+      "sha256": "b3e6fda99cf7661da3e74430417586cd22f9b5b7b2a6d5d42abded86b7c12b17",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CMP-KRY-T01-01.md",
+      "sha256": "c0831f2da630f94c87a5b83f9f3c3c5702e4a09401ecb3be005e461df79feee5",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CMP-KRY-T01-02.md",
+      "sha256": "92d8eda72ec2b4f5cd8d055a08ab4c5a542ed2bb97694c8c558f44b3bf6f0f3f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CMP-KRY-T01-03.md",
+      "sha256": "738ffeda067ce70057d7a4961e3d6c77cfa3f1b5609607de5893f268b5fe5c24",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CMP-KRY-T01-04.md",
+      "sha256": "2c6943869b22793acecc9800fa3e81104e0221245e7098ba05a77375efa4f894",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/CMP-KRY-T01-05.md",
+      "sha256": "35fb29a49c33cf8edf3947bb1f4a4e720580caa15ae29098c07be273dbd3306f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/EX-KRY-T01-01.md",
+      "sha256": "4ac996a37fac0fb3dfe5ee8709e06b6e424693c2093c0ab7ca9a5c75bf12c984",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/EX-KRY-T01-02.md",
+      "sha256": "00889610c0977c09ea1bdeb4aac4a781c93f5bf686d2d6c7908f687d88d944f1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/EX-KRY-T01-03.md",
+      "sha256": "c7c88f6d4f1fc4fed038f4d5d8150ae02e7df71ca13822398daf07ef0f6f4886",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/EX-KRY-T01-04.md",
+      "sha256": "6125f51123fa2cdd15c7de13539bec77e5182abecb302c9dcd5b253f4a080b9c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/examples/EX-KRY-T01-05.md",
+      "sha256": "7a6be2e5d909ad220c6078b4ee923ce54cba49ab92f4cc25c421d3151db8900b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-01.md",
+      "sha256": "c3a86a652a74ebe7514288d61eae6f04633e70c907dbe36364027668ca22403c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-02.md",
+      "sha256": "d7da4c0dca519798f6dcd61bcd740f192a7fd13950360ed5af3475d7f86d4e57",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-03.md",
+      "sha256": "297e3314aa4623474f65e533cc5097b6c0f03b3f60c06b9485466297758b6405",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-04.md",
+      "sha256": "45fc68a1a60dc4e7d844554e4469064697899e5e85b3847d78b7f14abb726cd6",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-05.md",
+      "sha256": "44078802d119b50edfdcd9e37452911c1bc7f7c22c3a4c160aa2f84b71461233",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/lessons/N-T01-ZZ.md",
+      "sha256": "de52a7fc580e3a678d699fc71292f750360ebee3cceba7b3d21a7679f1d50347",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/RP-T01-01.md",
+      "sha256": "3cb4e07ebc7b176fcfbf02f15858722c34bea437f24bcf58268992d9e24fa8e7",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/RP-T01-02.md",
+      "sha256": "edb1f79c8976520cdb5292331c56c81c36ce2978074fb8267936981eafe42424",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/RP-T01-03.md",
+      "sha256": "60f33f37df3d8b69626f34f765a87e19dc9ec669f108abe3b9195c4506d20069",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/RP-T01-04.md",
+      "sha256": "94099c85f6faabd4566aa3ccd1cb1e3611bb7a9e644af40ff686fed20d676b77",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/RP-T01-05.md",
+      "sha256": "a76d311b11e98d06025e68b68f30d9223514882d89fccaa4bdeccd79e25a033e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/open/Z1-T01-01-F01.md",
+      "sha256": "b7471848577b9102fbe45579b32bce858b673b6eab46098cc2ba22f97792f91e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-D02.yaml",
+      "sha256": "b037b0aa6f64c50c382cadb75fe85deca0f20532e758e064de84f7de409b7853",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-D04.yaml",
+      "sha256": "72c66f506dbb1d5439baa289be19db7fbf57a03047def5688ca9e396e90acbb2",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-D05.yaml",
+      "sha256": "f1f2d08e95f94f789555825964509a62c8a93a28d3ed3af8455e7d5141fcaea5",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-F01.yaml",
+      "sha256": "42e2d337f87920d6776b27d188b80480cda2151cc7c78364592b88e9bac064b7",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-G01.yaml",
+      "sha256": "1d7e8137ac857728632d868b8e22dcc25ec0397b24425e4b1e2f1b1c4ba8ac96",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-G02.yaml",
+      "sha256": "f5718a0a5989d7abe1a58f8b24e037cf9ace1711789c0e9783dc4692776e70e0",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-G03.yaml",
+      "sha256": "29fc7779c1f93778445634053440c7299b2334007788d42f35a474802804d34b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-G04.yaml",
+      "sha256": "f3154009dee52d113b8af6d50edf375ee368e95db1505f4a34e0eadd9f831a97",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/T01-G05.yaml",
+      "sha256": "a6c55be134729e78e4fc10c87156a8b469bc59984129f6bd4d5704626c4495b4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-01-B01.yaml",
+      "sha256": "2a615a0fee3cd1e7b9cea6362f0fdc5d968190bda2a9844abfef8a718c266155",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-01-D01.yaml",
+      "sha256": "d6b3b1586f2b0349f75e7b1d6bf6bc9bf00d3ac3bd7de660653a053a12d13731",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-02-B01.yaml",
+      "sha256": "37e62e549a6f1ed65a90461ab1a2b3dc2b9d142529e231cce48d710d132365a9",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-02-F01.yaml",
+      "sha256": "37e5432b8f7a43349422b5aaeb9e09e9448e13c813ae1a99807ad3b3ec55b9dd",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-03-B01.yaml",
+      "sha256": "c5b49040cd5ceba5a0adffff75b52e919d6a046a2636ad4ea1eaa198b2dca3ef",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-03-D01.yaml",
+      "sha256": "da205426725a36966edef0d242b4bcaea82bff8038eeae0fe07a36756659bd09",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-03-F01.yaml",
+      "sha256": "0e19e742766a7a9e02c2beaacaefbeb7820e52713fc08ddf04b2dfebfe252de0",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-04-B01.yaml",
+      "sha256": "b181ee64dc2c04f3bf35fd37b8dbb4485144a9397b0a1d2b4776503b2928557c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-04-F01.yaml",
+      "sha256": "430975a6517d04e3cadac7eeff2ec6f6d2bca06c87f04dd2706d3fd5e9d9373d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-05-B01.yaml",
+      "sha256": "763b3f428ead7d82242d793eff14d7fc2ca8ee3fc92968a161539a5ef72cc74d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/questions/Z1-T01-05-F01.yaml",
+      "sha256": "6c048d9c80acc77b9b8a0301a2268c33c46a28c204c89f9f72fb169119ea7a50",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/relations.yaml",
+      "sha256": "4882f5c427c6cf28c6bf216b141d7b41f08e874d065b7ffd1dd80405ffbedb37",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/rules.yaml",
+      "sha256": "7b49a29d925b6720794e203536ebc44cf541f66fe153b49e4a8d029cfeed6ee2",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/sources.yaml",
+      "sha256": "ec01c60adc75493296f1b00ab14e0a3c6e50d6b872c756ad26f45cb6eb903ac9",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T01/topic.yaml",
+      "sha256": "054e44b53b485370783cfd2ebfd9e08d6cf66c00ec6fd1aa7ca3f4d30d30d859",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T01-01",
+      "revision": "r2",
+      "description": "Rozpoznaje sens terminu w podanej wypowiedzi.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T01-01",
+          "label": "Trzy sensy requirement"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T01-02",
+      "revision": "r2",
+      "description": "Rozpoznaje rolę opisu i czynności w podanym przypadku.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T01-02",
+          "label": "Specification i requirements specification"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T01-03",
+      "revision": "r2",
+      "description": "Rozpoznaje relacje osób i organizacji z analizowaną całością.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T01-03",
+          "label": "Stakeholder a user"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T01-04",
+      "revision": "r2",
+      "description": "Rozpoznaje zakres pojęcia w podanym opisie całości.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T01-04",
+          "label": "System w szerokim znaczeniu inżynierskim"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T01-05",
+      "revision": "r2",
+      "description": "Rozpoznaje cel i charakter wskazanego podejścia.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T01-05",
+          "label": "Cel i charakter Requirements Engineering"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T01-GPL",
+      "title": "Glossary of Requirements Engineering Terminology — Polish",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf",
+      "location": "Hasła Requirement / Wymaganie, znaczenia 1 i 3; fizyczne strony PDF 33; Hasła Requirement / Wymaganie; Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 33–34; Hasła Requirement / Wymaganie; fizyczne strony PDF 33; Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14; Hasła Requirements specification / Specyfikacja wymagań; fizyczne strony PDF 27; Hasła Specification / Specyfikacja, uwaga; fizyczne strony PDF 27; Hasła Specification / Specyfikacja; fizyczne strony PDF 27; Hasła Stakeholder / Interesariusz; fizyczne strony PDF 14; Hasła System, Important; fizyczne strony PDF 29; Hasła System, uwaga 1; fizyczne strony PDF 29; Hasła System, uwaga 4; fizyczne strony PDF 29; Hasła System, znaczenie 2; fizyczne strony PDF 29; Hasła User / Użytkownik; Stakeholder / Interesariusz; fizyczne strony PDF 14, 32",
+      "attribution": "Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T01-SEN",
+      "title": "CPRE Foundation Level Syllabus EN",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "§1.1; fizyczne strony PDF 11; §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T01-SPL",
+      "title": "CPRE Foundation Level Syllabus PL",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "§1.1; fizyczne strony PDF 11; §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T01-HEN",
+      "title": "CPRE Foundation Level Handbook EN",
+      "version": "1.3.2",
+      "url": "https://isqi.org/media/65/0a/43/1789029072/cpre_foundationlevel_handbook_en_v1.3.2.pdf",
+      "location": "§1.1, Definition 1.4 i uwaga o podsystemach; fizyczne strony PDF 12",
+      "attribution": "IREB e.V.; Martin Glinz, Hans van Loenhoud, Stefan Staal, Stan Bühne; wersja 1.3.2; historia wersji s.5: 23.07.2026; oficjalny dokument w publicznej kopii iSQI; prawa według s.2.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-KRY-T01-01",
+      "revision": "r2",
+      "statementMarkdown": "Wymaganie może oznaczać potrzebę interesariusza, wymaganą zdolność lub właściwość systemu albo ich udokumentowaną reprezentację.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Requirement / Wymaganie; fizyczne strony PDF 33"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-01-02",
+      "revision": "r1",
+      "statementMarkdown": "Potrzeba może istnieć przed powstaniem jej udokumentowanej reprezentacji.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Requirement / Wymaganie, znaczenia 1 i 3; fizyczne strony PDF 33"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-01-03",
+      "revision": "r1",
+      "statementMarkdown": "Trzy znaczenia słowa requirement i podział na functional requirement, quality requirement oraz constraint są różnymi rozróżnieniami.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Requirement / Wymaganie; Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 33–34"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T01-02",
+      "revision": "r2",
+      "statementMarkdown": "Specification może oznaczać uporządkowany opis właściwości obiektu spełniający ustalone kryteria albo proces ich specyfikowania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Specification / Specyfikacja; fizyczne strony PDF 27"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-02-02",
+      "revision": "r1",
+      "statementMarkdown": "Requirements specification jako rezultat jest uporządkowanym zbiorem wymagań spełniającym ustalone kryteria.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Requirements specification / Specyfikacja wymagań; fizyczne strony PDF 27"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-02-03",
+      "revision": "r1",
+      "statementMarkdown": "Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Specification / Specyfikacja, uwaga; fizyczne strony PDF 27"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T01-03",
+      "revision": "r2",
+      "statementMarkdown": "Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-SEN",
+          "location": "§1.1; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T01-SPL",
+          "location": "§1.1; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Stakeholder / Interesariusz; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-03-02",
+      "revision": "r1",
+      "statementMarkdown": "User korzysta z funkcjonalności systemu i jest jego interesariuszem, lecz nie każdy interesariusz musi być użytkownikiem.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła User / Użytkownik; Stakeholder / Interesariusz; fizyczne strony PDF 14, 32"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-03-03",
+      "revision": "r1",
+      "statementMarkdown": "Jeden interesariusz może równocześnie pełnić więcej niż jedną rolę.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-SEN",
+          "location": "§2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15"
+        },
+        {
+          "sourceId": "SRC-T01-SPL",
+          "location": "§2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T01-04",
+      "revision": "r2",
+      "statementMarkdown": "System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła System, znaczenie 2; fizyczne strony PDF 29"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-04-02",
+      "revision": "r1",
+      "statementMarkdown": "W CPRE pojęcie system obejmuje także produkty, usługi, urządzenia, procedury oraz komponenty i złożenia systemów.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-SEN",
+          "location": "§1.1; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T01-SPL",
+          "location": "§1.1; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła System, Important; fizyczne strony PDF 29"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-04-03",
+      "revision": "r1",
+      "statementMarkdown": "System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła System, uwaga 1; fizyczne strony PDF 29"
+        },
+        {
+          "sourceId": "SRC-T01-HEN",
+          "location": "§1.1, Definition 1.4 i uwaga o podsystemach; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-04-04",
+      "revision": "r1",
+      "statementMarkdown": "System socjotechniczny obejmuje oprogramowanie, sprzęt, ludzi i aspekty organizacyjne.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła System, uwaga 4; fizyczne strony PDF 29"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T01-05",
+      "revision": "r2",
+      "statementMarkdown": "RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-GPL",
+          "location": "Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-05-02",
+      "revision": "r1",
+      "statementMarkdown": "Celem specyfikowania i zarządzania wymaganiami jest zaspokojenie oczekiwań i potrzeb interesariuszy przez wytworzony i wdrożony system.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-SEN",
+          "location": "§1.1; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T01-SPL",
+          "location": "§1.1; fizyczne strony PDF 11"
+        }
+      ]
+    },
+    {
+      "id": "REG-T01-05-03",
+      "revision": "r1",
+      "statementMarkdown": "Systematyczna praca RE wymaga doboru procesów i praktyk do sytuacji, a nie jednego uniwersalnego narzędzia lub sposobu pracy.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T01-SEN",
+          "location": "§2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18"
+        },
+        {
+          "sourceId": "SRC-T01-SPL",
+          "location": "§2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "N-T01-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Odczytywanie sensu wypowiedzi",
+      "bodyMarkdown": "**Cel:** Rozpoznaje sens terminu w podanej wypowiedzi.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nWymaganie (requirement) może oznaczać potrzebę postrzeganą przez interesariusza, zdolność lub właściwość, którą ma mieć system, albo udokumentowaną reprezentację takiej potrzeby, zdolności lub właściwości. To trzy sensy jednego terminu, nie trzy rodzaje z T02. Rozmówca mówiący „nie zapisaliśmy tego wymagania” może mieć na myśli istniejącą potrzebę, której nie utrwalono. Zdanie „wymaganie znajduje się w repozytorium” mówi zwykle o reprezentacji. Rozróżnienie pomaga uniknąć twierdzenia, że potrzeba zaczyna istnieć dopiero po utworzeniu rekordu.\n\nZapis jest środkiem komunikacji. Może być niejasny, niepełny lub nietrafny wobec potrzeby; samo jego istnienie nie potwierdza zgodności z potrzebą. Rozpoznanie sensu nie wymaga narzędzia ani formalnego ID. Gdy w zdaniu brakuje kontekstu, należy dopytać, zamiast arbitralnie wybierać jeden sens. Na L1 chodzi o znajomość tych znaczeń; ocena jakości zapisu i proces jego uzgadniania należą do innych tematów.\n\n**Terminologia PL/EN:** wymaganie — requirement: oficjalna para C-S06 s.33; „reprezentacja” jest objaśnieniem sensu 3.\n\n**Przypadek:** Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.\n\n**Granica:** Uogólnienie „bez numeru nie ma wymagania” obala potrzeba odtworzenia zgłoszona ustnie przed utworzeniem REQ-17. Brak zapisu nie usuwa potrzeby.\n\n**Samodzielna próba:** Wymień trzy sensy requirement i pokaż różnicę między potrzebą a jej zapisem.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T01-01",
+        "REG-T01-01-02",
+        "REG-T01-01-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § REG-KRY-T01-01"
+    },
+    {
+      "id": "N-T01-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Użycia terminu w opisie pracy",
+      "bodyMarkdown": "**Cel:** Rozpoznaje rolę opisu i czynności w podanym przypadku.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nSpecification oznacza zarówno rezultat pracy, jak i proces specyfikowania. Jako rezultat jest uporządkowanym opisem właściwości określonego obiektu, spełniającym ustalone kryteria. Może opisywać właściwości wymagane lub już zaimplementowane. Requirements specification jako rezultat skupia wymagania w uporządkowanej reprezentacji. W drugim sensie wyrażenie może oznaczać czynność ich specyfikowania.\n\nNie należy utożsamiać każdej specyfikacji z listą przyszłych wymagań ani każdego zbioru luźnych notatek ze spełniającą kryteria specyfikacją. O rodzaju opisu decyduje przedmiot i rola, a nie rozszerzenie pliku. Requirements specification nie musi być pojedynczym dokumentem Word; w tym temacie rozpoznajemy sens, bez projektowania struktur dokumentacji z T19. Zdanie „specyfikacja trwała dwa dni” nazywa proces; „przejrzeliśmy specyfikację” zwykle nazywa rezultat.\n\n**Terminologia PL/EN:** specyfikacja — specification; specyfikacja wymagań — requirements specification: C-S06 s.27; nie każdy dokument to specyfikacja wymagań.\n\n**Przypadek:** Opis już produkowanego czujnika może specyfikować jego rzeczywiste cechy; wymagania dla następnej wersji opisują cechy pożądane. Oba są opisami, lecz mają inną rolę.\n\n**Granica:** Uogólnienie „specification zawsze znaczy przyszłe wymagania” obala techniczny opis istniejącego czujnika dokumentujący cechy wykonanej wersji.\n\n**Samodzielna próba:** Odróżnij specification jako proces i rezultat oraz wyjaśnij, co wyróżnia requirements specification.\n\n**Źródła:** C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T01-02",
+        "REG-T01-02-02",
+        "REG-T01-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § REG-KRY-T01-02"
+    },
+    {
+      "id": "N-T01-03",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Osoby i organizacje w opisanej sytuacji",
+      "bodyMarkdown": "**Cel:** Rozpoznaje relacje osób i organizacji z analizowaną całością.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nStakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi systemu. Alternatywa „albo” jest istotna: ktoś może nie mieć prawa decyzji, a mimo to być interesariuszem przez skutki działania systemu. User korzysta z funkcjonalności systemu. Użytkownik jest interesariuszem, lecz zbiór interesariuszy obejmuje również inne role.\n\nNabywca, zamawiający, operator czy organizacja regulująca mogą mieć istotne wymagania bez codziennej obsługi interfejsu. Jedna osoba może występować w kilku rolach. Nazwanie organizacji interesariuszem nie oznacza, że jej każda osoba jest automatycznie właściwym reprezentantem. T01 uczy definicji; pełna identyfikacja reprezentantów i stakeholder management należą do T24. W zadaniach wystarczy rozpoznać podaną przesłankę wpływu lub oddziaływania, bez znajomości rzeczywistych kompetencji prawnych wymyślonej instytucji.\n\n**Terminologia PL/EN:** interesariusz — stakeholder: oficjalna para s.14; użytkownik — user, s.32.\n\n**Przypadek:** Organizacja audytująca otrzymuje wyniki systemu i ustala kryteria raportowania, lecz nie loguje się do aplikacji. Może być interesariuszem bez bycia użytkownikiem.\n\n**Granica:** Uogólnienie „tylko zalogowani użytkownicy są interesariuszami” obala grupa pracowników, których grafik ustala system używany wyłącznie przez kierownika.\n\n**Samodzielna próba:** Podaj definicję stakeholder i powód, dla którego nie jest to synonim user.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T01-03",
+        "REG-T01-03-02",
+        "REG-T01-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § REG-KRY-T01-03"
+    },
+    {
+      "id": "N-T01-04",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Analizowana całość i jej elementy",
+      "bodyMarkdown": "**Cel:** Rozpoznaje zakres pojęcia w podanym opisie całości.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nW znaczeniu inżynierskim system jest spójną, dającą się wyodrębnić całością elementów współdziałających w określonym celu. W CPRE używa się tego słowa szeroko: obejmuje produkty, usługi, urządzenia, procedury i ich składniki lub zestawienia. System nie jest synonimem aplikacji. W zależności od przedmiotu analizy całością może być samo oprogramowanie albo szersza usługa z ludźmi, urządzeniami i zasadami organizacyjnymi.\n\nKomponent może być rozpatrywany jako system, gdy sam staje się analizowaną całością. Nie oznacza to dowolnego przesuwania granicy w trakcie rozwiązania zadania: przyjęta perspektywa musi być jawna. Znajomość definicji L1 nie zastępuje samodzielnego wyznaczania granic L3 z T23. W T01 rozpoznajemy szerokie znaczenie i możliwość hierarchii; nie tworzymy modelu kontekstu.\n\n**Terminologia PL/EN:** system — system, oficjalna para s.29; komponent — component, s.16. Używany sens inżynierski, nie ogólny „system porządkowania”.\n\n**Przypadek:** Usługa odbioru zamówień może obejmować aplikację, skaner i pracowników wydających paczki. Wskazany cel i współdziałanie pozwalają rozpatrywać ją jako system.\n\n**Granica:** Uogólnienie „bez kodu nie ma systemu” obala zorganizowana procedura ręcznego wydawania sprzętu z określonym celem i współpracującymi elementami.\n\n**Samodzielna próba:** Czy system w CPRE musi być aplikacją? Wskaż znaczenie inżynierskie i przykład szerszy niż software.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T01-04",
+        "REG-T01-04-02",
+        "REG-T01-04-03",
+        "REG-T01-04-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § REG-KRY-T01-04"
+    },
+    {
+      "id": "N-T01-05",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Cel pracy nad oczekiwaniami",
+      "bodyMarkdown": "**Cel:** Rozpoznaje cel i charakter wskazanego podejścia.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nRequirements Engineering (RE, inżynieria wymagań, IW) oznacza systematyczne i zdyscyplinowane podejście do specyfikowania i zarządzania wymaganiami. Jego celem jest zrozumienie oczekiwań i potrzeb interesariuszy oraz ograniczenie ryzyka dostarczenia systemu, który ich nie spełnia. Akcent na cel chroni przed traktowaniem produkcji dokumentów jako samodzielnej miary powodzenia.\n\nRE obejmuje pracę z wymaganiami podczas tworzenia i rozwijania systemu; nie kończy się z definicji po pierwszym wywiadzie. Requirements Engineer współpracuje z interesariuszami przy pozyskiwaniu, dokumentowaniu, walidacji i zarządzaniu. Szczegóły zadań, roli i wiedzy rozwija T05. Znajomość definicji nie dowodzi umiejętności wykonania zawodowego, podobnie jak samo posiadanie certyfikatu lub stanowiska nie jest wynikiem zadania w tym materiale.\n\n**Terminologia PL/EN:** inżynieria wymagań — Requirements Engineering; IW i RE jako kontrolowane skróty. Inżynier wymagań — Requirements Engineer, C-S06 s.14.\n\n**Przypadek:** Analityk uzgadnia, co oznacza poprawne zamknięcie zgłoszenia, utrwala to i sprawdza z użytkownikami. Dokument jest częścią pracy ukierunkowanej na potrzebę.\n\n**Granica:** Uogólnienie „im więcej stron, tym lepsze RE” obala duża specyfikacja opisująca niewłaściwą potrzebę. Objętość nie zapewnia realizacji celu RE.\n\n**Samodzielna próba:** Co oznacza RE i jaki ma cel? Odróżnij ten cel od produkowania dokumentacji.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T01-05",
+        "REG-T01-05-02",
+        "REG-T01-05-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § REG-KRY-T01-05"
+    },
+    {
+      "id": "N-T01-ZZ",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Cel i granice pracy w temacie",
+      "bodyMarkdown": "Podstawowe pojęcia pozwalają ustalić, o czym rozmawiamy: czy o potrzebie człowieka, wymaganej właściwości systemu, czy o zapisie tej właściwości. W tym temacie rozpoznajesz znaczenia, a nie tworzysz jeszcze kompletnej specyfikacji. Najważniejsza praktyka językowa to nazwanie sensu słowa w konkretnym zdaniu. Obecność formularza, dokumentu lub numeru wymagania nie przesądza o istnieniu i poprawnym rozumieniu samej potrzeby.\n\n**Przypadek wprowadzający:** Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.\n\n**Możliwość próby:** Wymień trzy sensy requirement i pokaż różnicę między potrzebą a jej zapisem. Możesz też wybrać inne lokalne kryterium bez obowiązku odhaczania lektury.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+      "ruleIds": [
+        "REG-KRY-T01-01",
+        "REG-KRY-T01-02",
+        "REG-KRY-T01-03",
+        "REG-KRY-T01-04",
+        "REG-KRY-T01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        },
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        },
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        },
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        },
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Wprowadzenie do tematu"
+    },
+    {
+      "id": "CE-KRY-T01-01",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Odczytywanie sensu wypowiedzi",
+      "bodyMarkdown": "Uogólnienie „bez numeru nie ma wymagania” obala potrzeba odtworzenia zgłoszona ustnie przed utworzeniem REQ-17. Brak zapisu nie usuwa potrzeby.\n\n**Reguła rozstrzygająca:** Wymaganie może oznaczać potrzebę interesariusza, wymaganą zdolność lub właściwość systemu albo ich udokumentowaną reprezentację.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+      "ruleIds": [
+        "REG-KRY-T01-01",
+        "REG-T01-01-02",
+        "REG-T01-01-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CE-KRY-T01-01"
+    },
+    {
+      "id": "CE-KRY-T01-02",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Użycia terminu w opisie pracy",
+      "bodyMarkdown": "Uogólnienie „specification zawsze znaczy przyszłe wymagania” obala techniczny opis istniejącego czujnika dokumentujący cechy wykonanej wersji.\n\n**Reguła rozstrzygająca:** Specification może oznaczać uporządkowany opis właściwości obiektu spełniający ustalone kryteria albo proces ich specyfikowania.\n\n**Podstawa:** C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11",
+      "ruleIds": [
+        "REG-KRY-T01-02",
+        "REG-T01-02-02",
+        "REG-T01-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CE-KRY-T01-02"
+    },
+    {
+      "id": "CE-KRY-T01-03",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Osoby i organizacje w opisanej sytuacji",
+      "bodyMarkdown": "Uogólnienie „tylko zalogowani użytkownicy są interesariuszami” obala grupa pracowników, których grafik ustala system używany wyłącznie przez kierownika.\n\n**Reguła rozstrzygająca:** Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32",
+      "ruleIds": [
+        "REG-KRY-T01-03",
+        "REG-T01-03-02",
+        "REG-T01-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CE-KRY-T01-03"
+    },
+    {
+      "id": "CE-KRY-T01-04",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Analizowana całość i jej elementy",
+      "bodyMarkdown": "Uogólnienie „bez kodu nie ma systemu” obala zorganizowana procedura ręcznego wydawania sprzętu z określonym celem i współpracującymi elementami.\n\n**Reguła rozstrzygająca:** System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16",
+      "ruleIds": [
+        "REG-KRY-T01-04",
+        "REG-T01-04-02",
+        "REG-T01-04-03",
+        "REG-T01-04-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CE-KRY-T01-04"
+    },
+    {
+      "id": "CE-KRY-T01-05",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Cel pracy nad oczekiwaniami",
+      "bodyMarkdown": "Uogólnienie „im więcej stron, tym lepsze RE” obala duża specyfikacja opisująca niewłaściwą potrzebę. Objętość nie zapewnia realizacji celu RE.\n\n**Reguła rozstrzygająca:** RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14",
+      "ruleIds": [
+        "REG-KRY-T01-05",
+        "REG-T01-05-02",
+        "REG-T01-05-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CE-KRY-T01-05"
+    },
+    {
+      "id": "CMP-KRY-T01-01",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Odczytywanie sensu wypowiedzi",
+      "bodyMarkdown": "Oś: potrzeba → wymagana właściwość → jej zapis. „Chcę odzyskać dane” wskazuje potrzebę; „system ma umożliwiać odzyskanie” wskazuje właściwość; „akapit REQ-17” wskazuje zapis. Functional/quality/constraint to odmienna oś.\n\n**Reguła rozstrzygająca:** Wymaganie może oznaczać potrzebę interesariusza, wymaganą zdolność lub właściwość systemu albo ich udokumentowaną reprezentację.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T01-01",
+        "REG-T01-01-02",
+        "REG-T01-01-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CMP-KRY-T01-01"
+    },
+    {
+      "id": "CMP-KRY-T01-02",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Użycia terminu w opisie pracy",
+      "bodyMarkdown": "Oś 1: proces versus rezultat — „specyfikowanie” i „gotowy opis”. Oś 2: właściwości wymagane versus zaimplementowane — specyfikacja wymagań i opis wykonanego produktu. Każda oś ma własne pytanie.\n\n**Reguła rozstrzygająca:** Specification może oznaczać uporządkowany opis właściwości obiektu spełniający ustalone kryteria albo proces ich specyfikowania.\n\n**Podstawa:** C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T01-02",
+        "REG-T01-02-02",
+        "REG-T01-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CMP-KRY-T01-02"
+    },
+    {
+      "id": "CMP-KRY-T01-03",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Osoby i organizacje w opisanej sytuacji",
+      "bodyMarkdown": "Oś: relacja do systemu. Użytkownik korzysta z funkcjonalności; interesariusz wpływa na wymagania lub odczuwa skutki. Kierownik klikający grafik spełnia oba warunki, pracownik objęty grafikiem może spełniać tylko drugi.\n\n**Reguła rozstrzygająca:** Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T01-03",
+        "REG-T01-03-02",
+        "REG-T01-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CMP-KRY-T01-03"
+    },
+    {
+      "id": "CMP-KRY-T01-04",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Analizowana całość i jej elementy",
+      "bodyMarkdown": "Oś: zakres analizowanej całości. System aplikacji obejmuje jej elementy; system całej usługi może obejmować również urządzenia i ludzi. To inne przedmioty analizy, a nie sprzeczne definicje.\n\n**Reguła rozstrzygająca:** System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T01-04",
+        "REG-T01-04-02",
+        "REG-T01-04-03",
+        "REG-T01-04-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CMP-KRY-T01-04"
+    },
+    {
+      "id": "CMP-KRY-T01-05",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Cel pracy nad oczekiwaniami",
+      "bodyMarkdown": "Oś: działanie versus cel. Dokumentowanie jest czynnością; ograniczenie ryzyka niespełnienia potrzeb jest celem. Uporządkowane dokumenty mogą wspierać cel, lecz nie zastępują go.\n\n**Reguła rozstrzygająca:** RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T01-05",
+        "REG-T01-05-02",
+        "REG-T01-05-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § CMP-KRY-T01-05"
+    },
+    {
+      "id": "EX-KRY-T01-01",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Odczytywanie sensu wypowiedzi",
+      "bodyMarkdown": "Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.\n\n**Reguła rozstrzygająca:** Wymaganie może oznaczać potrzebę interesariusza, wymaganą zdolność lub właściwość systemu albo ich udokumentowaną reprezentację.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+      "ruleIds": [
+        "REG-KRY-T01-01",
+        "REG-T01-01-02",
+        "REG-T01-01-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § EX-KRY-T01-01"
+    },
+    {
+      "id": "EX-KRY-T01-02",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Użycia terminu w opisie pracy",
+      "bodyMarkdown": "Opis już produkowanego czujnika może specyfikować jego rzeczywiste cechy; wymagania dla następnej wersji opisują cechy pożądane. Oba są opisami, lecz mają inną rolę.\n\n**Reguła rozstrzygająca:** Specification może oznaczać uporządkowany opis właściwości obiektu spełniający ustalone kryteria albo proces ich specyfikowania.\n\n**Podstawa:** C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11",
+      "ruleIds": [
+        "REG-KRY-T01-02",
+        "REG-T01-02-02",
+        "REG-T01-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § EX-KRY-T01-02"
+    },
+    {
+      "id": "EX-KRY-T01-03",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Osoby i organizacje w opisanej sytuacji",
+      "bodyMarkdown": "Organizacja audytująca otrzymuje wyniki systemu i ustala kryteria raportowania, lecz nie loguje się do aplikacji. Może być interesariuszem bez bycia użytkownikiem.\n\n**Reguła rozstrzygająca:** Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32",
+      "ruleIds": [
+        "REG-KRY-T01-03",
+        "REG-T01-03-02",
+        "REG-T01-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § EX-KRY-T01-03"
+    },
+    {
+      "id": "EX-KRY-T01-04",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Analizowana całość i jej elementy",
+      "bodyMarkdown": "Usługa odbioru zamówień może obejmować aplikację, skaner i pracowników wydających paczki. Wskazany cel i współdziałanie pozwalają rozpatrywać ją jako system.\n\n**Reguła rozstrzygająca:** System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16",
+      "ruleIds": [
+        "REG-KRY-T01-04",
+        "REG-T01-04-02",
+        "REG-T01-04-03",
+        "REG-T01-04-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § EX-KRY-T01-04"
+    },
+    {
+      "id": "EX-KRY-T01-05",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Cel pracy nad oczekiwaniami",
+      "bodyMarkdown": "Analityk uzgadnia, co oznacza poprawne zamknięcie zgłoszenia, utrwala to i sprawdza z użytkownikami. Dokument jest częścią pracy ukierunkowanej na potrzebę.\n\n**Reguła rozstrzygająca:** RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14",
+      "ruleIds": [
+        "REG-KRY-T01-05",
+        "REG-T01-05-02",
+        "REG-T01-05-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § EX-KRY-T01-05"
+    }
+  ],
+  "questions": [
+    {
+      "id": "T01-D02",
+      "revision": "r1",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Plik A jest uporządkowanym zbiorem uzgodnionych wymagań dla następnej wersji i spełnia ustalone kryteria. Plik B opisuje zmierzone parametry obecnie wykonanego urządzenia. Oceń interpretacje.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Plik A jest requirements specification jako rezultat pracy."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Plik B nie może być specification, ponieważ opisuje stan już zaimplementowany."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Nazwa rozszerzenia pliku sama nie rozstrzyga, czy jego treść jest requirements specification."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-D02-1",
+          "decisionId": "1",
+          "bodyMarkdown": "A grupuje wymagania i spełnia kryteria → tak określono rezultat requirements specification → Prawda.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/D, RAT-T01-D02-1"
+        },
+        {
+          "id": "RAT-T01-D02-2",
+          "decisionId": "2",
+          "bodyMarkdown": "B dotyczy wykonanych cech → specification obejmuje także takie opisy → Fałsz.",
+          "ruleIds": [
+            "REG-T01-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/D, RAT-T01-D02-2"
+        },
+        {
+          "id": "RAT-T01-D02-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Dane odróżniają przedmiot i strukturę opisów → definicja odnosi się do właściwości zbioru, nie rozszerzenia → Prawda.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/D, RAT-T01-D02-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-02/D"
+    },
+    {
+      "id": "T01-D04",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Rozpatruje się wyodrębnioną usługę archiwizacji obejmującą pracowników, szafy i rejestr elektroniczny. Jej elementy współdziałają, aby przechować i odnaleźć dokumenty. Który argument uzasadnia traktowanie tej całości jako systemu?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Elementy tworzą spójną całość i współdziałają w osiąganiu wskazanego celu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Każda grupa przedmiotów jest systemem także bez związku między nimi."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Pracowników należy uznać za fragmenty kodu, aby zachować nazwę system."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Brak nowego programu wyklucza jakiekolwiek wymagania wobec usługi."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-D04-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Opis zawiera cel archiwizacji i skoordynowane elementy → to warunek inżynierskiego pojęcia system → argument jest trafny.",
+          "ruleIds": [
+            "REG-KRY-T01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/D, RAT-T01-D04-a"
+        },
+        {
+          "id": "RAT-T01-D04-b",
+          "decisionId": "b",
+          "bodyMarkdown": "W przykładzie związek i cel są jawne → definicja nie obejmuje automatycznie przypadkowych grup → argument jest zbyt szeroki.",
+          "ruleIds": [
+            "REG-KRY-T01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/D, RAT-T01-D04-b"
+        },
+        {
+          "id": "RAT-T01-D04-c",
+          "decisionId": "c",
+          "bodyMarkdown": "System CPRE może obejmować ludzi i organizację → nie trzeba utożsamiać ich z software → argument jest błędny.",
+          "ruleIds": [
+            "REG-T01-04-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/D, RAT-T01-D04-c"
+        },
+        {
+          "id": "RAT-T01-D04-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Przedmiotem są potrzeby wobec usługi → szeroki zakres systemów nie wymaga nowej aplikacji → wykluczenie nie wynika.",
+          "ruleIds": [
+            "REG-T01-04-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/D, RAT-T01-D04-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-04",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-04/D"
+    },
+    {
+      "id": "T01-D05",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Pracownik przepisuje wszystkie słowa klienta bez sprawdzania znaczenia i twierdzi, że jest to pełny opis RE. Które uzupełnienie najtrafniej oddaje pominięte elementy?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wystarczy użyć droższego edytora, aby zapewnić realizację potrzeb."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Potrzebne są systematyczne specyfikowanie i zarządzanie oraz cel rozumienia potrzeb i ograniczania ryzyka ich niespełnienia."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Należy zagwarantować, że wymagania nigdy się nie zmienią."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Należy zakończyć kontakt z interesariuszami natychmiast po zapisie."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-D05-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Brakuje pracy nad znaczeniem → narzędzie nie zastępuje celu i systematycznego podejścia → uzupełnienie jest nietrafne.",
+          "ruleIds": [
+            "REG-T01-05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/D, RAT-T01-D05-a"
+        },
+        {
+          "id": "RAT-T01-D05-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Opis ograniczono do przepisywania → definicja RE obejmuje wskazane działania i cel → to właściwe uzupełnienie.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/D, RAT-T01-D05-b"
+        },
+        {
+          "id": "RAT-T01-D05-c",
+          "decisionId": "c",
+          "bodyMarkdown": "W danych nie ma podstaw do niezmienności → definicja ogranicza ryzyko, a nie zabrania ewolucji → to niewłaściwe uzupełnienie.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/D, RAT-T01-D05-c"
+        },
+        {
+          "id": "RAT-T01-D05-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Cel dotyczy rozumienia ich potrzeb → zerwanie kontaktu nie uzupełnia brakującego rozumienia → odpowiedź nie wynika.",
+          "ruleIds": [
+            "REG-T01-05-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/D, RAT-T01-D05-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-05",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-05/D"
+    },
+    {
+      "id": "T01-F01",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-1",
+      "weight": 1,
+      "stemMarkdown": "Właściciel pracowni potrzebował widzieć nieopłacone zamówienia już przed rozmową. Analityk dopiero po rozmowie zapisał tę potrzebę w rejestrze. Który opis obu zdarzeń jest trafny?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Przed wpisem nie istniało wymaganie w żadnym znaczeniu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Potrzeba istniała wcześniej, a wpis jest jej udokumentowaną reprezentacją."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Wpis jest zawsze zaimplementowaną funkcją systemu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Potrzeba i wpis muszą oznaczać dwa różne rodzaje quality requirement."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Potrzeba istniała wcześniej → requirement obejmuje potrzebę niezależnie od reprezentacji → wykluczenie wszystkich znaczeń jest błędne.",
+          "ruleIds": [
+            "REG-T01-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/F, RAT-T01-F01-a"
+        },
+        {
+          "id": "RAT-T01-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Podano wcześniejszą potrzebę i późniejszy zapis → to odrębne znaczenia requirement → opis jest trafny.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/F, RAT-T01-F01-b"
+        },
+        {
+          "id": "RAT-T01-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Podano zapis analityka, nie wykonanie kodu → reprezentacja oczekiwania nie jest z definicji implementacją → odpowiedź nie wynika z danych.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/F, RAT-T01-F01-c"
+        },
+        {
+          "id": "RAT-T01-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Opis nie rozstrzyga rodzaju oczekiwania → trzy znaczenia nie są trójpodziałem rodzajów → taka klasyfikacja jest nieuzasadniona.",
+          "ruleIds": [
+            "REG-T01-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/F, RAT-T01-F01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-01/F"
+    },
+    {
+      "id": "T01-G01",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Operator od dawna potrzebuje rozpoznać właściciela przesyłki. Zespół opisuje oczekiwaną zdolność systemu, po czym utrwala ją w punkcie REQ-9. Które interpretacje są uzasadnione?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wcześniejsza potrzeba operatora może być requirement."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Dopiero numer REQ-9 sprawił, że potrzeba mogła istnieć."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Trzy opisane momenty wyznaczają kolejno functional, quality i constraint."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Punkt REQ-9 jest udokumentowaną reprezentacją oczekiwanej zdolności."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-G01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Potrzebę wskazano przed dokumentowaniem → pierwszy sens requirement obejmuje tę potrzebę → interpretacja jest poprawna.",
+          "ruleIds": [
+            "REG-T01-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/G, RAT-T01-G01-a"
+        },
+        {
+          "id": "RAT-T01-G01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Numer nadano późniejszemu zapisowi → potrzeba nie zależy od identyfikatora reprezentacji → twierdzenie jest błędne.",
+          "ruleIds": [
+            "REG-T01-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/G, RAT-T01-G01-b"
+        },
+        {
+          "id": "RAT-T01-G01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Momenty dotyczą potrzeby, zdolności i zapisu → znaczenia terminu nie są rodzajami wymagań → przyporządkowanie jest błędne.",
+          "ruleIds": [
+            "REG-T01-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/G, RAT-T01-G01-c"
+        },
+        {
+          "id": "RAT-T01-G01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Podano utrwalenie opisu zdolności → trzeci sens requirement dotyczy takiej reprezentacji → interpretacja jest poprawna.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-01/G, RAT-T01-G01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-01/G"
+    },
+    {
+      "id": "T01-G02",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "W harmonogramie zapisano: „Specyfikowanie parametrów potrwa dwa dni”. W repozytorium znajduje się też opis parametrów już produkowanego czujnika. Która interpretacja jest zgodna ze znaczeniem specification?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Oba sformułowania muszą oznaczać wyłącznie przyszłe wymagania."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Harmonogram dowodzi, że opis urządzenia nie może być specyfikacją."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Każdy gotowy opis jest requirements specification niezależnie od przedmiotu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Pierwsze użycie nazywa proces, a drugie może nazywać rezultat opisujący cechy wykonane."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-G02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Drugi opis dotyczy wykonanego urządzenia → specification dopuszcza cechy zaimplementowane → ograniczenie do przyszłych wymagań jest błędne.",
+          "ruleIds": [
+            "REG-T01-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/G, RAT-T01-G02-a"
+        },
+        {
+          "id": "RAT-T01-G02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Podano dwa różne użycia → proces jednego opisu nie wyklucza rezultatu drugiego → taki wniosek nie wynika.",
+          "ruleIds": [
+            "REG-KRY-T01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/G, RAT-T01-G02-b"
+        },
+        {
+          "id": "RAT-T01-G02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Parametry wykonanej wersji nie są same przez się zbiorem wymagań → przedmiot opisu ma znaczenie → uogólnienie jest niepoprawne.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/G, RAT-T01-G02-c"
+        },
+        {
+          "id": "RAT-T01-G02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Czas dotyczy czynności, parametry dotyczą obecnego urządzenia → specification ma oba sensy i dopuszcza właściwości wykonane → opis jest trafny.",
+          "ruleIds": [
+            "REG-KRY-T01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-02/G, RAT-T01-G02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-02/G"
+    },
+    {
+      "id": "T01-G03",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-2",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń konsekwencje następujących danych: urząd używa wyników systemu do podjęcia decyzji dotyczącej firmy, firma nie ma konta w systemie, a operator korzysta z jego funkcji.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Firma może być interesariuszem, ponieważ wynik systemu na nią wpływa."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Brak konta wyklucza firmę ze zbioru interesariuszy."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Operator korzystający z funkcji jest użytkownikiem i zarazem interesariuszem."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-G03-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Decyzja dotyczy firmy → oddziaływanie systemu wystarcza w definicji stakeholder → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-03/G, RAT-T01-G03-1"
+        },
+        {
+          "id": "RAT-T01-G03-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Podano oddziaływanie mimo braku konta → konto nie jest warunkiem definicji → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-03/G, RAT-T01-G03-2"
+        },
+        {
+          "id": "RAT-T01-G03-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Operator używa funkcji → user jest stakeholderem → Prawda.",
+          "ruleIds": [
+            "REG-T01-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-03/G, RAT-T01-G03-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-03/G"
+    },
+    {
+      "id": "T01-G04",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "Laboratorium obejmuje usługę kalibracji: program przyjmuje zlecenie, urządzenie wykonuje pomiar, a pracownik zatwierdza wynik. Elementy współdziałają w celu dostarczenia wyniku kalibracji. Która ocena użycia terminu system jest trafna?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Termin jest wykluczony, ponieważ w całości uczestniczy człowiek."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Tylko program może być systemem, a urządzenie nigdy."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Całość może być systemem, ponieważ elementy współdziałają w określonym celu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Sama wspólna lokalizacja wystarczałaby także bez celu i współdziałania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-G04-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Pracownik współdziała z programem i sprzętem → system może mieć skład socjotechniczny → wykluczenie jest błędne.",
+          "ruleIds": [
+            "REG-T01-04-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/G, RAT-T01-G04-a"
+        },
+        {
+          "id": "RAT-T01-G04-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Opis obejmuje współdziałające elementy i cel → system nie jest ograniczony do samego kodu → odpowiedź nadmiernie zawęża pojęcie.",
+          "ruleIds": [
+            "REG-T01-04-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/G, RAT-T01-G04-b"
+        },
+        {
+          "id": "RAT-T01-G04-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Dane wskazują wyodrębnioną całość i skoordynowane działania → spełniają sens inżynierski systemu → odpowiedź jest poprawna.",
+          "ruleIds": [
+            "REG-KRY-T01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/G, RAT-T01-G04-c"
+        },
+        {
+          "id": "RAT-T01-G04-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Podano istotny cel i współdziałanie → definicja wymaga ich, a nie tylko miejsca → uogólnienie jest błędne.",
+          "ruleIds": [
+            "REG-KRY-T01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-04/G, RAT-T01-G04-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-04",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-04/G"
+    },
+    {
+      "id": "T01-G05",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-2",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Zespół zapisuje potrzeby, sprawdza ich znaczenie z zainteresowanymi osobami i zarządza późniejszymi zmianami. Oceń interpretacje celu tej pracy.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Praca może ograniczać ryzyko dostarczenia systemu nieodpowiadającego potrzebom."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Sukces tej pracy z definicji mierzy się wyłącznie liczbą stron."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Zarządzanie późniejszymi zmianami nie jest z definicji wyłączone z RE."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T01-G05-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Podano pracę nad potrzebami i zmianami → cel definicji RE obejmuje ograniczenie tego ryzyka → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/G, RAT-T01-G05-1"
+        },
+        {
+          "id": "RAT-T01-G05-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Opis dotyczy rozumienia i zarządzania → celem RE są potrzeby, nie objętość → Fałsz.",
+          "ruleIds": [
+            "REG-T01-05-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/G, RAT-T01-G05-2"
+        },
+        {
+          "id": "RAT-T01-G05-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Podano zarządzanie wymaganiami po ustaleniach → definicja obejmuje zarządzanie, a nie tylko pierwszy zapis → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T01-05/G, RAT-T01-G05-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-05",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T01-05/G"
+    },
+    {
+      "id": "Z1-T01-01-B01",
+      "revision": "r2",
+      "format": "K",
+      "role": "base",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń twierdzenia o znaczeniu terminu requirement.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Potrzeba interesariusza może być wymaganiem przed jej udokumentowaniem."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Wpis w specyfikacji może być reprezentacją wymaganej właściwości."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Trzy sensy requirement to functional, quality i constraint."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-01-B01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Podano potrzebę → pierwszy sens requirement nie wymaga wcześniejszego rekordu → Prawda.",
+          "ruleIds": [
+            "REG-T01-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-B01, RAT-Z1-T01-01-B01-1"
+        },
+        {
+          "id": "RAT-Z1-T01-01-B01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Podano utrwalony zapis właściwości → sens reprezentacji → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-B01, RAT-Z1-T01-01-B01-2"
+        },
+        {
+          "id": "RAT-Z1-T01-01-B01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Wyliczono rodzaje oczekiwań → to inna klasyfikacja niż trzy znaczenia terminu → Fałsz.",
+          "ruleIds": [
+            "REG-T01-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-B01, RAT-Z1-T01-01-B01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-B01"
+    },
+    {
+      "id": "Z1-T01-01-D01",
+      "revision": "r2",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "W instrukcji przeglądu napisano: „Porównaj wymaganie zapisane w punkcie 8 z potrzebą zgłoszoną przez operatora”. Co oznacza tu wymaganie „zapisane w punkcie 8”?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Rodzaj ograniczenia technologicznego."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Udokumentowaną reprezentację potrzeby lub wymaganej właściwości."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Wyłącznie potrzebę, której nie da się zapisać."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Każdy zrealizowany fragment kodu."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-01-D01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Lokalizacja nie mówi, czego dotyczy oczekiwanie → typ constraint nie wynika → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01, RAT-Z1-T01-01-D01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-01-D01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Lokalizacja w tekście wskazuje reprezentację → sens 3 → właściwa odpowiedź.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01, RAT-Z1-T01-01-D01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-01-D01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Podano istniejący zapis → nie jest to wyłącznie nieutrwalona potrzeba → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01, RAT-Z1-T01-01-D01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-01-D01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Punkt specyfikacji nie oznacza kodu → implementacja nie wynika ze stemu → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-01",
+              "aspectId": "ZAK-T01-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01, RAT-Z1-T01-01-D01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01"
+    },
+    {
+      "id": "Z1-T01-02-B01",
+      "revision": "r2",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które zdanie poprawnie charakteryzuje requirements specification jako rezultat pracy?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wyłącznie kod wdrożonej aplikacji."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zawsze pojedynczy papierowy formularz."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Uporządkowany zbiór wymagań spełniający ustalone kryteria."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Dowolną rozmowę niezależnie od jej utrwalenia i struktury."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-02-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Kod implementuje zachowanie, a nie z definicji zbiór wymagań → Requirements specification jako rezultat jest uporządkowanym zbiorem wymagań spełniającym ustalone kryteria. → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-B01, RAT-Z1-T01-02-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-02-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Nośnik i liczba dokumentów nie definiują znaczenia → bezpodstawne zawężenie → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-B01, RAT-Z1-T01-02-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-02-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Chodzi o rezultat → zbiór wymagań o uporządkowanej reprezentacji → wybrać.",
+          "ruleIds": [
+            "REG-T01-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-B01, RAT-Z1-T01-02-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-02-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Rozmowa nie gwarantuje reprezentacji spełniającej kryteria → definicja rezultatu nie jest spełniona → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-B01, RAT-Z1-T01-02-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-B01"
+    },
+    {
+      "id": "Z1-T01-02-F01",
+      "revision": "r2",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń użycia terminu specification.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Sformułowanie „specyfikowanie wymagań zajęło tydzień” dotyczy procesu."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Specyfikacja techniczna może opisywać już zaimplementowane właściwości."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Każda specyfikacja z definicji zawiera tylko wymagania."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-02-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Opis czasu czynności → proces specyfikowania → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-F01, RAT-Z1-T01-02-F01-1"
+        },
+        {
+          "id": "RAT-Z1-T01-02-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Znaczenie specification dopuszcza cechy wykonane → Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań. → Prawda.",
+          "ruleIds": [
+            "REG-T01-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-F01, RAT-Z1-T01-02-F01-2"
+        },
+        {
+          "id": "RAT-Z1-T01-02-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Specification ma szerszy zakres niż requirements specification → Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań. → Fałsz.",
+          "ruleIds": [
+            "REG-T01-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-02",
+              "aspectId": "ZAK-T01-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-F01, RAT-Z1-T01-02-F01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-F01"
+    },
+    {
+      "id": "Z1-T01-03-B01",
+      "revision": "r2",
+      "format": "P",
+      "role": "base",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWIE informacje samodzielnie wystarczają do uznania osoby lub organizacji za stakeholder w znaczeniu RE?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Pracuje w tej samej miejscowości, bez jakiegokolwiek związku z systemem."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wpływa na wymagania rozpatrywanego systemu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "System wpływa na jej sytuację."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Ma konto w dowolnym, niezwiązanym systemie."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-03-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Wspólna miejscowość nie jest wpływem ani oddziaływaniem → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-B01, RAT-Z1-T01-03-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-03-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Wpływ na wymagania spełnia jedną stronę definicji → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-B01, RAT-Z1-T01-03-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-03-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Oddziaływanie systemu spełnia drugą stronę → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-B01, RAT-Z1-T01-03-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-03-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Brak związku z analizowanym systemem → informacja nie wystarcza → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-B01, RAT-Z1-T01-03-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-B01"
+    },
+    {
+      "id": "Z1-T01-03-D01",
+      "revision": "r2",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń relacje pojęć.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Interesariuszem może być organizacja."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Interesariusz musi zarazem wpływać na wymagania i korzystać z funkcjonalności."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Osoba może pełnić kilka ról interesariusza."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-03-D01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Definicja obejmuje organizacje, nie tylko osoby → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-D01, RAT-Z1-T01-03-D01-1"
+        },
+        {
+          "id": "RAT-Z1-T01-03-D01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Są to inne warunki; definicja używa wpływu lub oddziaływania, bez obowiązku użycia → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-D01, RAT-Z1-T01-03-D01-2"
+        },
+        {
+          "id": "RAT-Z1-T01-03-D01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Role nie muszą wykluczać się wzajemnie → Jeden interesariusz może równocześnie pełnić więcej niż jedną rolę. → Prawda; także C-S02/C-S03 §2.2 zasada 2 s.15.",
+          "ruleIds": [
+            "REG-T01-03-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-D01, RAT-Z1-T01-03-D01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-D01"
+    },
+    {
+      "id": "Z1-T01-03-F01",
+      "revision": "r2",
+      "format": "A",
+      "role": "follow-up-1",
+      "weight": 1,
+      "stemMarkdown": "System przydziela miejsca parkingowe pracownikom. Obsługuje go administrator. Pracownik objęty przydziałem nie korzysta z systemu. Która etykieta jest uzasadniona dla tego pracownika?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Stakeholder, ponieważ wynik systemu na niego wpływa."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Na pewno user, ponieważ każdy stakeholder jest userem."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Nie jest stakeholder, bo nie ma konta."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Wyłącznie element oprogramowania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-03-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Przydział dotyczy pracownika → jest dotknięty systemem → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-F01, RAT-Z1-T01-03-F01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-03-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Nie korzysta z funkcjonalności → odwrócono relację user–stakeholder → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-F01, RAT-Z1-T01-03-F01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-03-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Konto nie jest warunkiem definicji → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-F01, RAT-Z1-T01-03-F01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-03-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Pracownik jest osobą → nie jest komponentem kodu → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-03",
+              "aspectId": "ZAK-T01-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-F01, RAT-Z1-T01-03-F01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-F01"
+    },
+    {
+      "id": "Z1-T01-04-B01",
+      "revision": "r2",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które stwierdzenie jest zgodne ze znaczeniem system w CPRE?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "System może obejmować oprogramowanie, ludzi i elementy organizacyjne."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "System to zawsze wyłącznie kod aplikacji."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "System nigdy nie zawiera innych systemów."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Każdy przypadkowy zbiór przedmiotów jest systemem niezależnie od celu i współdziałania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-04-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Szerokie znaczenie obejmuje takie całości → System socjotechniczny obejmuje oprogramowanie, sprzęt, ludzi i aspekty organizacyjne. → wybrać.",
+          "ruleIds": [
+            "REG-T01-04-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-B01, RAT-Z1-T01-04-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-04-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Bezpodstawne zawężenie pomija inne rodzaje całości → W CPRE pojęcie system obejmuje także produkty, usługi, urządzenia, procedury oraz komponenty i złożenia systemów. → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-04-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-B01, RAT-Z1-T01-04-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-04-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Definicja dopuszcza podsystemy → System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system. → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-04-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-B01, RAT-Z1-T01-04-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-04-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "W sensie inżynierskim potrzebne są spójność i wspólny cel → System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-B01, RAT-Z1-T01-04-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-04",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-B01"
+    },
+    {
+      "id": "Z1-T01-04-F01",
+      "revision": "r2",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń twierdzenia o analizowanym module i usłudze.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Komponent rozpatrywany w izolacji może być traktowany jako system."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Usługa z urządzeniami i procedurami nie może być przedmiotem RE."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Przyjęta perspektywa analizy powinna być rozpoznawalna."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-04-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Zmiana przedmiotu analizy pozwala rozpatrywać komponent jako całość → System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system. → Prawda.",
+          "ruleIds": [
+            "REG-T01-04-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-F01, RAT-Z1-T01-04-F01-1"
+        },
+        {
+          "id": "RAT-Z1-T01-04-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Syllabus obejmuje usługi i procedury → W CPRE pojęcie system obejmuje także produkty, usługi, urządzenia, procedury oraz komponenty i złożenia systemów. → Fałsz.",
+          "ruleIds": [
+            "REG-T01-04-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-F01, RAT-Z1-T01-04-F01-2"
+        },
+        {
+          "id": "RAT-Z1-T01-04-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Bez określenia analizowanej całości termin system byłby niejednoznaczny → System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system. → Prawda; interpretacja warunku użycia definicji.",
+          "ruleIds": [
+            "REG-T01-04-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-04",
+              "aspectId": "ZAK-T01-04"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-F01, RAT-Z1-T01-04-F01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-04",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-F01"
+    },
+    {
+      "id": "Z1-T01-05-B01",
+      "revision": "r2",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Który opis najtrafniej oddaje cel RE?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Zmaksymalizować liczbę stron bez względu na potrzeby."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zastąpić wszystkie decyzje projektowe jednym narzędziem."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Zagwarantować brak jakichkolwiek przyszłych zmian."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Zrozumieć potrzeby i zmniejszyć ryzyko dostarczenia systemu, który ich nie spełnia."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-05-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Objętość nie jest celem definicyjnym → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-B01, RAT-Z1-T01-05-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-05-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Narzędzie nie zastępuje pracy z potrzebami → Systematyczna praca RE wymaga doboru procesów i praktyk do sytuacji, a nie jednego uniwersalnego narzędzia lub sposobu pracy. → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-B01, RAT-Z1-T01-05-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-05-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "RE ogranicza ryzyko; nie gwarantuje niezmienności → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-B01, RAT-Z1-T01-05-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-05-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Opis wskazuje cel definicyjny → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-B01, RAT-Z1-T01-05-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-05",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-B01"
+    },
+    {
+      "id": "Z1-T01-05-F01",
+      "revision": "r2",
+      "format": "P",
+      "role": "follow-up-1",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWIE cechy należą do definicyjnego opisu RE?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Obowiązek użycia jednego konkretnego programu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zakaz uzgadniania wymagań po rozpoczęciu projektu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Systematyczne podejście do specyfikowania wymagań."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Zarządzanie wymaganiami z uwzględnieniem potrzeb interesariuszy."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T01-05-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Definicja nie wyznacza narzędzia → Systematyczna praca RE wymaga doboru procesów i praktyk do sytuacji, a nie jednego uniwersalnego narzędzia lub sposobu pracy. → nie wybrać.",
+          "ruleIds": [
+            "REG-T01-05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-F01, RAT-Z1-T01-05-F01-a"
+        },
+        {
+          "id": "RAT-Z1-T01-05-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Takiego zakazu nie ma; pozostawałby sprzeczny z zarządzaniem ewolucją → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-F01, RAT-Z1-T01-05-F01-b"
+        },
+        {
+          "id": "RAT-Z1-T01-05-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Specyfikowanie w sposób systematyczny należy do definicji → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-F01, RAT-Z1-T01-05-F01-c"
+        },
+        {
+          "id": "RAT-Z1-T01-05-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zarządzanie i cel potrzeb należą do definicji → RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T01-05",
+              "aspectId": "ZAK-T01-05"
+            }
+          ],
+          "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-F01, RAT-Z1-T01-05-F01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T01-05",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-05-F01"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "RP-T01-01",
+      "revision": "r2",
+      "promptMarkdown": "Wymień trzy sensy requirement i pokaż różnicę między potrzebą a jej zapisem.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Wymienia potrzebę interesariusza, wymaganą zdolność/właściwość systemu oraz udokumentowaną reprezentację. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Odróżnia potrzebę od zapisu; dopuszcza istnienie potrzeby przed zapisem. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § RP-T01-01"
+    },
+    {
+      "id": "RP-T01-02",
+      "revision": "r2",
+      "promptMarkdown": "Odróżnij specification jako proces i rezultat oraz wyjaśnij, co wyróżnia requirements specification.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Rozpoznaje proces specyfikowania i uporządkowany opis jako rezultat. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Requirements specification dotyczy wymagań, a specification może też opisywać właściwości już istniejące. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-02",
+          "aspectId": "ZAK-T01-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § RP-T01-02"
+    },
+    {
+      "id": "RP-T01-03",
+      "revision": "r2",
+      "promptMarkdown": "Podaj definicję stakeholder i powód, dla którego nie jest to synonim user.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Wskazuje osobę lub organizację oraz wpływ na wymagania lub oddziaływanie systemu. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| User korzysta z funkcjonalności; nie każdy stakeholder musi jej używać. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-03",
+          "aspectId": "ZAK-T01-03"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § RP-T01-03"
+    },
+    {
+      "id": "RP-T01-04",
+      "revision": "r2",
+      "promptMarkdown": "Czy system w CPRE musi być aplikacją? Wskaż znaczenie inżynierskie i przykład szerszy niż software.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Rozpoznaje wyodrębnioną całość współdziałających elementów realizującą cel. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Dopuszcza usługę/urządzenie/procedurę lub całość socjotechniczną; nie ogranicza pojęcia do aplikacji. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-04",
+          "aspectId": "ZAK-T01-04"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § RP-T01-04"
+    },
+    {
+      "id": "RP-T01-05",
+      "revision": "r2",
+      "promptMarkdown": "Co oznacza RE i jaki ma cel? Odróżnij ten cel od produkowania dokumentacji.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Nazywa systematyczne i zdyscyplinowane specyfikowanie i zarządzanie wymaganiami. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Wskazuje rozumienie potrzeb oraz zmniejszenie ryzyka dostarczenia systemu, który ich nie spełnia. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-05",
+          "aspectId": "ZAK-T01-05"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § RP-T01-05"
+    },
+    {
+      "id": "Z1-T01-01-F01",
+      "revision": "r2",
+      "promptMarkdown": "Właściciel pracowni mówi: „Muszę widzieć, które zamówienia nie są opłacone”. Analityk dopisuje zdanie w rejestrze. Nazwij potrzebę i jej reprezentację; czy zapis stworzył potrzebę?",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Potrzebą jest wiedza o nieopłaconych zamówieniach, niezależna od późniejszego wpisu. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Wpis analityka dokumentuje potrzebę; nie jest powodem jej powstania. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Nie trzeba cytować właściciela dosłownie; można nazwać sens własnymi słowami.\n\n**Błąd krytyczny:** Uznanie, że przed wpisem nie mogła istnieć potrzeba.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+      "scope": [
+        {
+          "criterionId": "KRY-T01-01",
+          "aspectId": "ZAK-T01-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-F01"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-KRY-T01-01",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T01-01",
+        "aspectId": "ZAK-T01-01"
+      },
+      "bodyMarkdown": "Najpierw ustal, czy zdanie dotyczy potrzeby, cechy systemu czy reprezentacji. Nie zastępuj tych sensów podziałem na funkcję, jakość i ograniczenie.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T01-01",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T01-01",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "T01-F01",
+          "revision": "r1"
+        },
+        {
+          "id": "T01-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Pomyśl o potrzebie jako o treści, a o wpisie jako o jej nośniku. Można potrzebować informacji, zanim istnieje formularz. Zdanie o właściwości systemu i zdanie o akapicie dokumentu mogą wskazywać różne znaczenia tego samego terminu.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T01-02",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T01-02",
+        "aspectId": "ZAK-T01-02"
+      },
+      "bodyMarkdown": "Zbadaj przedmiot opisu i sens zdania. Nazwa pliku lub obecność tabel nie zastępuje tego rozróżnienia.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T01-02",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T01-02",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T01-02-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T01-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Zapytaj kolejno: czy mowa o wykonywanej czynności, czy o gotowym opisie, oraz czy opis dotyczy właściwości pożądanych, czy wykonanych. Czas trwania wskazuje zwykle czynność, a opis egzemplarza urządzenia może dotyczyć stanu już osiągniętego.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T01-03",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T01-03",
+        "aspectId": "ZAK-T01-03"
+      },
+      "bodyMarkdown": "Sprawdź dwa niezależne wejścia do definicji: wpływ na wymagania i bycie dotkniętym działaniem systemu. Nie wymagaj obu jednocześnie.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T01-03",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T01-03",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T01-03-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T01-G03",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Narysuj w myśli dwa kręgi: korzystający z funkcji i wszyscy, na których system wpływa lub którzy wpływają na wymagania. Pierwszy mieści się w drugim. Konto i uprawnienie do decyzji nie są koniecznymi warunkami drugiego kręgu.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T01-04",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T01-04",
+        "aspectId": "ZAK-T01-04"
+      },
+      "bodyMarkdown": "Nazwij cel i analizowaną całość. Oprogramowanie jest jednym możliwym składnikiem, nie warunkiem definicji systemu.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T01-04",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T01-04",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T01-04-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T01-G04",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Zacznij od celu i współdziałania elementów. Jeśli usługę realizują program, urządzenie i ludzie, brak czysto programowej postaci nie odbiera jej statusu systemu. Przypadkowy zbiór bez współdziałania nie spełnia jednak definicji inżynierskiej.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T01-05",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T01-05",
+        "aspectId": "ZAK-T01-05"
+      },
+      "bodyMarkdown": "Powiąż czynności RE z potrzebami interesariuszy. Dokument i narzędzie są środkami; sama ich obecność nie poświadcza właściwego wyniku.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T01-05",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T01-05",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T01-05-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T01-G05",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Zestaw dwa pytania: czy uporządkowaliśmy treść i nią zarządzamy oraz czy pomaga ona rozumieć potrzeby i ograniczać ryzyko ich niespełnienia. Samo zwiększenie liczby rekordów odpowiada tylko na pytanie o objętość.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T01-01",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Trzy sensy requirement; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T01-02",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Specification i requirements specification; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T01-03",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Stakeholder a user; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T01-04",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń System w szerokim znaczeniu inżynierskim; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T01-05",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Cel i charakter Requirements Engineering; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-EX-KRY-T01-01-illustrates-REG-KRY-T01-01",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T01-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T01-01-counterexample-of-REG-KRY-T01-01",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T01-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „bez numeru nie ma wymagania” obala potrzeba odtworzenia zgłoszona ustnie przed utworzeniem REQ-17. Brak zapisu nie usuwa potrzeby.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T01-01-distinguishes-REG-KRY-T01-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T01-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: potrzeba → wymagana właściwość → jej zapis. „Chcę odzyskać dane” wskazuje potrzebę; „system ma umożliwiać odzyskanie” wskazuje właściwość; „akapit REQ-17” wskazuje zapis. Functional/quality/constraint to odmienna oś.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T01-01-explains-REG-KRY-T01-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T01-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-F01-variant-of-Z1-T01-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Dialog o potrzebie i późniejszym zapisie zastępuje ogólne tezy B; wybór nie zastępuje otwartego uzasadnienia źródłowego F.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G01-variant-of-Z1-T01-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Trzy referenty w sekwencji i dwa poprawne wnioski; odróżnia istnienie potrzeby od tożsamości dokumentu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-01-D01-variant-of-Z1-T01-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-01-D01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Zmiana na odczyt sensu w instrukcji; wspólny rdzeń pojęciowy.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T01-02-illustrates-REG-KRY-T01-02",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T01-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Opis już produkowanego czujnika może specyfikować jego rzeczywiste cechy; wymagania dla następnej wersji opisują cechy pożądane. Oba są opisami, lecz mają inną rolę.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T01-02-counterexample-of-REG-KRY-T01-02",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T01-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „specification zawsze znaczy przyszłe wymagania” obala techniczny opis istniejącego czujnika dokumentujący cechy wykonanej wersji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T01-02-distinguishes-REG-KRY-T01-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T01-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś 1: proces versus rezultat — „specyfikowanie” i „gotowy opis”. Oś 2: właściwości wymagane versus zaimplementowane — specyfikacja wymagań i opis wykonanego produktu. Każda oś ma własne pytanie.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T01-02-explains-REG-KRY-T01-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T01-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-02-F01-variant-of-Z1-T01-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Proces/rezultat i wymagane/wykonane oceniane w kontrastach.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G02-variant-of-Z1-T01-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Łączy rozpoznanie procesu z drugim artefaktem o cechach wykonanych; nie powtarza definicji B.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-D02-variant-of-Z1-T01-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-D02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Dwa artefakty i kontrast właściwości wymaganych/wykonanych; zachowano źródłowe otwarte D pod jego ID.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T01-03-illustrates-REG-KRY-T01-03",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T01-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Organizacja audytująca otrzymuje wyniki systemu i ustala kryteria raportowania, lecz nie loguje się do aplikacji. Może być interesariuszem bez bycia użytkownikiem.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T01-03-counterexample-of-REG-KRY-T01-03",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T01-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „tylko zalogowani użytkownicy są interesariuszami” obala grupa pracowników, których grafik ustala system używany wyłącznie przez kierownika.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T01-03-distinguishes-REG-KRY-T01-03",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T01-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: relacja do systemu. Użytkownik korzysta z funkcjonalności; interesariusz wpływa na wymagania lub odczuwa skutki. Kierownik klikający grafik spełnia oba warunki, pracownik objęty grafikiem może spełniać tylko drugi.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T01-03-explains-REG-KRY-T01-03",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T01-03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-03-F01-variant-of-Z1-T01-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-03-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Definicję przeniesiono na osobę dotkniętą wynikiem bez użycia aplikacji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G03-variant-of-Z1-T01-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-G03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Organizacja podlegająca skutkom i operator korzystający z funkcji; odmienna konfiguracja od pracownika w F.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-03-D01-variant-of-Z1-T01-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-03-D01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrola kwantyfikatorów i zakresu definicji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T01-04-illustrates-REG-KRY-T01-04",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T01-04",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Usługa odbioru zamówień może obejmować aplikację, skaner i pracowników wydających paczki. Wskazany cel i współdziałanie pozwalają rozpatrywać ją jako system.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T01-04-counterexample-of-REG-KRY-T01-04",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T01-04",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „bez kodu nie ma systemu” obala zorganizowana procedura ręcznego wydawania sprzętu z określonym celem i współpracującymi elementami.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T01-04-distinguishes-REG-KRY-T01-04",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T01-04",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: zakres analizowanej całości. System aplikacji obejmuje jej elementy; system całej usługi może obejmować również urządzenia i ludzi. To inne przedmioty analizy, a nie sprzeczne definicje.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T01-04-explains-REG-KRY-T01-04",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T01-04",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-04-F01-variant-of-Z1-T01-04-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-04-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-04-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Zamiast definicji wprost sprawdzono hierarchię i zakres.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G04-variant-of-Z1-T01-04-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-G04",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-04-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Celowo współdziałająca usługa z programem, urządzeniem i człowiekiem zamiast abstrakcyjnej definicji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-D04-variant-of-Z1-T01-04-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-D04",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-04-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Wybór warunku definicyjnego w innej mieszanej usłudze; otwarte D pozostaje osobnym wykonaniem.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T01-05-illustrates-REG-KRY-T01-05",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T01-05",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Analityk uzgadnia, co oznacza poprawne zamknięcie zgłoszenia, utrwala to i sprawdza z użytkownikami. Dokument jest częścią pracy ukierunkowanej na potrzebę.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T01-05-counterexample-of-REG-KRY-T01-05",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T01-05",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „im więcej stron, tym lepsze RE” obala duża specyfikacja opisująca niewłaściwą potrzebę. Objętość nie zapewnia realizacji celu RE.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T01-05-distinguishes-REG-KRY-T01-05",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T01-05",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: działanie versus cel. Dokumentowanie jest czynnością; ograniczenie ryzyka niespełnienia potrzeb jest celem. Uporządkowane dokumenty mogą wspierać cel, lecz nie zastępują go.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T01-05-explains-REG-KRY-T01-05",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T01-05",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-05-F01-variant-of-Z1-T01-05-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T01-05-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T01-05-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrast definicji z nieuprawnionymi ograniczeniami.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G05-variant-of-Z1-T01-05-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-G05",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-05-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Ocena ciągłej pracy i jej celu w krótkim opisie, zamiast wyboru dwóch składników definicji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-D05-variant-of-Z1-T01-05-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T01-D05",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T01-05-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Niepełny zawodowy opis wymaga wskazania brakujących działań i celu; oryginalny otwarty wariant zachowany.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-F01-checks-after-REM-KRY-T01-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-01.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G01-checks-after-REM-KRY-T01-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-01.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-02-F01-checks-after-REM-KRY-T01-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T01-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-02.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G02-checks-after-REM-KRY-T01-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-02.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-03-F01-checks-after-REM-KRY-T01-03",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T01-03-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-03.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-03.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G03-checks-after-REM-KRY-T01-03",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-G03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-03",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-03.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-03.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-04-F01-checks-after-REM-KRY-T01-04",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T01-04-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-04.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-04.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G04-checks-after-REM-KRY-T01-04",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-G04",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-04",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-04.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-04.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T01-05-F01-checks-after-REM-KRY-T01-05",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T01-05-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-05.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-05.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T01-G05-checks-after-REM-KRY-T01-05",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T01-G05",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T01-05",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T01-05.",
+      "provenance": "Lista followUps w content/authoring/T01/corrections/REM-KRY-T01-05.md",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "unresolved",
+    "channels": []
+  }
+}

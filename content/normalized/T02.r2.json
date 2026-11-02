@@ -1,0 +1,2866 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T02",
+  "revision": "r2",
+  "title": "T02 — Rodzaje wymagań",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "partial",
+  "limitations": [
+    "Pełny zadeklarowany trójpodział functional/quality/constraint, w tym dane/interakcje i granice heurystyk; NFR jako jakość lub ograniczenie. C-P pozostaje wkładem częściowym.",
+    "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
+    "Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.",
+    "Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.",
+    "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
+  ],
+  "status": {
+    "authoring": "draft",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md",
+      "sha256": "2a075c254569adec9ed1736f4bd2a87f48b4b68bfab93cddb7d1a8ee53b77339",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_QA_and_Handoff_v0.1.md",
+      "sha256": "c06c83c6efbde8a3e2146757c5b6580721e98ea34d27798651ac9e38e2f57095",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/Z1_IREB_CPRE_Manifest_v0.1.md",
+      "sha256": "b8a240a1e78c08fd365e90b53f1120bf4c89717246f265d056e3b210d34264ba",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md",
+      "sha256": "f249bf8e631afc8f4c2154920a1e6da4261adf1a9a7e5f831b0014429de4fec9",
+      "documentVersion": "v0.2",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "content/authoring/T02/corrections/REM-KRY-T02-01.md",
+      "sha256": "a417884682e44ba716b8402cb07ce92ff5749f9619b93cf04a16cc28ab896495",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/corrections/REM-KRY-T02-02.md",
+      "sha256": "3e597aaf9bfe8964e7def82cf4896718e19d78db042688947b560469ae5d9f60",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/corrections/REM-P.md",
+      "sha256": "9ed9e951aae1589014c7eb79647fefbe4817e1a040a1441d56c447f4139df89f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CE-KRY-T02-01.md",
+      "sha256": "36d2b903495f4e4868d904a605e9298a1443f1d44cd1dac488c0073240cdc5d4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CE-KRY-T02-02.md",
+      "sha256": "5a29258c5975685719309f496d7655cf879eb677d13b3eb537727fd27395392c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CE-P.md",
+      "sha256": "1c498780cb5ca9faf6b542047e6928a5fcecdd2e776147c5362810f307852331",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CMP-KRY-T02-01.md",
+      "sha256": "c03b31b091296e03bbd354a75f5979df34fd64dd658c6ff0f901bf43f82b4f9c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CMP-KRY-T02-02.md",
+      "sha256": "bd2c332bde76547b1844651d5c1566a3b228fbcffee22d0024fe25809ee2bf36",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/CMP-P.md",
+      "sha256": "4610370d33734114e6bab7c4633eda1cd0eec75d2e6565851837c751d3d8561b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/EX-KRY-T02-01.md",
+      "sha256": "f360930a90240aa707f70e63f6c086ec92569c711a057378c33b29927873631b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/EX-KRY-T02-02.md",
+      "sha256": "8fe0fa7a2e66d81a58b2a418cecdfffcb28946ac16ae4452c8cc505656f64cd4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/examples/EX-P.md",
+      "sha256": "4ac5061db02712123dc88723dda7ae083086a18a8a1a304e7791b41e086fd16f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/lessons/N-T02-01.md",
+      "sha256": "e3179e92ad43396b711bb4c8e7c6c6205a78ca4e6a4b51273f42b670368aedc9",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/lessons/N-T02-02.md",
+      "sha256": "6d5a935ae88c6414587772e27396ea4946ba1363bbad1a1af8abf835dbec6786",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/lessons/N-T02-C-P01.md",
+      "sha256": "a3308611ef700ad54fcecc7623bf0d856ffd7e58a170a4ddc1a603f1e29bd313",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/lessons/PRE-P.md",
+      "sha256": "11fb9418d9edde43a5c446292933673362b12aae5ab390b258e59c530e425e7a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/open/C-P-R01.md",
+      "sha256": "926f39ca3af6e3848566fd1203690ad5023cf6c01ee7a9ad7692b1daaf5f07a3",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/open/C-P-S01.md",
+      "sha256": "d4f819e243964c3ed073a442c6f1a0eb588c1e334b565667896fa14cfc8233bc",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/open/RP-T02-01.md",
+      "sha256": "0662a7b9df2a0a4384586d9c5ff46f95a3200db9a68859d6c9cacd353781b133",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/open/RP-T02-02.md",
+      "sha256": "da8cbf3f959b1199683ec3683128df2febd0a9e2d423ed88f9db08c7816d0321",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/open/Z1-T02-01-F01.md",
+      "sha256": "c1233a02e7eda7a919e0bd2d2422997d5560593c750fd8ba229bbc02253740ed",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/C-P-B01.yaml",
+      "sha256": "79eea1b9d322e9953ce06feb69fa0dcc76c7ee0d30ddea8f5535f2728dd61043",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/C-P-D01.yaml",
+      "sha256": "c34bb395f61482fc1c18bdf541f820d060bc9324d13efacd59f7e3ac756b441c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/C-P-F01.yaml",
+      "sha256": "47f63e11ce404880e7d2e4adc46a822a18e9e34ab9019a95e1582180c54e7681",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/T02-D02.yaml",
+      "sha256": "d5b0ee8cdd2a589452eabf8d149fcbdc356082c436a8e0a600dcce4c7fb2702c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/T02-F01.yaml",
+      "sha256": "ed59022f5a3d6aed0fd1ccf053c730e843dec33e8608648559308d63cb0f0b02",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/T02-G01.yaml",
+      "sha256": "728f9ab8ade035bce78bc418bb635056216d2b5864ba3339cd1c57fa72d6fe5a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/T02-G02.yaml",
+      "sha256": "6e75346b7cbcd546ad185a8cd86f6b849fd746450b2a4d6752f27d7c190044de",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/T02-GC01.yaml",
+      "sha256": "a9bb2ecc3cf25ce8cec6cdbec55e963bb75dab073b872969b36a0593d63e441c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/Z1-T02-01-B01.yaml",
+      "sha256": "0a0f28913a8b0305ce83622433c7f260d38ce3354f518a53bd3d514f9beffde6",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/Z1-T02-01-D01.yaml",
+      "sha256": "95ed04b22d3165914b7473fa50122f09de7b14aecbdca56f0d48ff1aeb3c3a64",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/Z1-T02-02-B01.yaml",
+      "sha256": "a211857d126872e7028ad5c73ba39c8c192ba4d78f96acc45b2deae50ea129d4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/questions/Z1-T02-02-F01.yaml",
+      "sha256": "45791e7dc695c54b8ea78f5d2eb806fceef2c465aa351bbfd543b894b5c92e59",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/relations.yaml",
+      "sha256": "5f996f06d90855883bae8c27d979318fb0ab46db602a615b0c664c25dc06d3a4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/rules.yaml",
+      "sha256": "bd28e0b369567f10a6a7f142c2f61eeafb9f08f0f03fcbd7ea046b354b96331d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/sources.yaml",
+      "sha256": "f3f63fef70eaa5eae60f5a8fe6e3c8720486849c478c4b412ca41346e50ac1ca",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T02/topic.yaml",
+      "sha256": "959e12a02849a92314bca0b520f902c4ee5f6a34fcbbbbb7f0456f0687190194",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T02-01",
+      "revision": "r2",
+      "description": "Klasyfikuje oczekiwania na podstawie jawnych przesłanek.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.2",
+          "level": "L2"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T02-01",
+          "label": "Funkcja, jakość i dodatkowe ograniczenie rozwiązania"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T02-02",
+      "revision": "r2",
+      "description": "Odróżnia osie klasyfikowania i oceniania zapisu.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.2",
+          "level": "L2"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T02-02",
+          "label": "NFR i rozdzielenie osi klasyfikacji"
+        }
+      ]
+    },
+    {
+      "id": "KRY-P01",
+      "revision": "r2",
+      "description": "Rozpoznaje i uzasadnia wskazane rozróżnienie w dodatkowych przypadkach.",
+      "eoRefs": [
+        {
+          "id": "EO1.1.2",
+          "level": "L2"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T02-C-P01",
+          "label": "Klasyfikacja typu oczekiwania"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T02-SEN",
+      "title": "CPRE Foundation Level Syllabus EN",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "§1.1 i §1.3; fizyczne strony PDF 11–12; §1.1, Constraints; fizyczne strony PDF 12; §1.1, Functional requirements; fizyczne strony PDF 11; §1.1, Quality requirements; fizyczne strony PDF 11; §1.1; fizyczne strony PDF 11–12",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T02-SPL",
+      "title": "CPRE Foundation Level Syllabus PL",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "§1.1 i §1.3; fizyczne strony PDF 11–12; §1.1, Constraints; fizyczne strony PDF 12; §1.1, Functional requirements; fizyczne strony PDF 11; §1.1, Quality requirements; fizyczne strony PDF 11; §1.1; fizyczne strony PDF 11–12",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T02-GPL",
+      "title": "Glossary of Requirements Engineering Terminology — Polish",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf",
+      "location": "Hasła Constraint / Ograniczenie w IW; fizyczne strony PDF 21; Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34; Hasła Functional requirement; Quality requirement; Quality criteria in RE; fizyczne strony PDF 17, 34; Hasła Functional requirement; fizyczne strony PDF 34; Hasła Non-functional requirement; fizyczne strony PDF 34; Hasła Performance requirement; Non-functional requirement, uwaga; fizyczne strony PDF 34; Hasła Quality requirement; Performance requirement; fizyczne strony PDF 34; Hasła Security / Zabezpieczenia, uwaga; fizyczne strony PDF 35; Hasła User requirement; Functional requirement; Quality requirement; fizyczne strony PDF 34",
+      "attribution": "Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-KRY-T02-01",
+      "revision": "r2",
+      "statementMarkdown": "Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-01-02",
+      "revision": "r1",
+      "statementMarkdown": "Functional requirement określa wynik lub zachowanie dostarczane przez funkcję systemu, w tym dane albo interakcję z otoczeniem.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1, Functional requirements; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1, Functional requirements; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Functional requirement; fizyczne strony PDF 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-01-03",
+      "revision": "r1",
+      "statementMarkdown": "Quality requirement dotyczy zagadnienia jakości nieobjętego wymaganiem funkcjonalnym, na przykład wydajności lub dostępności.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1, Quality requirements; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1, Quality requirements; fizyczne strony PDF 11"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Quality requirement; Performance requirement; fizyczne strony PDF 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-01-04",
+      "revision": "r1",
+      "statementMarkdown": "Constraint ogranicza przestrzeń rozwiązania ponad to, co jest konieczne do spełnienia danych wymagań funkcjonalnych i jakościowych.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1, Constraints; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1, Constraints; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Constraint / Ograniczenie w IW; fizyczne strony PDF 21"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-01-05",
+      "revision": "r1",
+      "statementMarkdown": "Wymagania bezpieczeństwa mogą być wyrażone jako wymagania jakościowe lub jako wymagania funkcjonalne.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Security / Zabezpieczenia, uwaga; fizyczne strony PDF 35"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T02-02",
+      "revision": "r2",
+      "statementMarkdown": "Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Non-functional requirement; fizyczne strony PDF 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-02-02",
+      "revision": "r1",
+      "statementMarkdown": "Performance requirement jest w przyjętym Glossary podkategorią quality requirement.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Performance requirement; Non-functional requirement, uwaga; fizyczne strony PDF 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-02-03",
+      "revision": "r1",
+      "statementMarkdown": "Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Functional requirement; Quality requirement; Quality criteria in RE; fizyczne strony PDF 17, 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-T02-02-04",
+      "revision": "r1",
+      "statementMarkdown": "Perspektywa user requirement nie wyklucza typu quality requirement ani functional requirement.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1 i §1.3; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1 i §1.3; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła User requirement; Functional requirement; Quality requirement; fizyczne strony PDF 34"
+        }
+      ]
+    },
+    {
+      "id": "REG-P1",
+      "revision": "r2",
+      "statementMarkdown": "Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T02-SEN",
+          "location": "§1.1; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-SPL",
+          "location": "§1.1; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T02-GPL",
+          "location": "Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "N-T02-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Przedmiot oczekiwania w zdaniu",
+      "bodyMarkdown": "**Cel:** Klasyfikuje oczekiwania na podstawie jawnych przesłanek.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nKlasyfikuj przedmiot oczekiwania. Functional requirement opisuje rezultat, zachowanie, dane lub interakcję, które ma zapewnić funkcja systemu. Quality requirement dotyczy cechy jakościowej niepokrytej samym wymaganiem funkcjonalnym. Constraint dodatkowo ogranicza przestrzeń rozwiązań ponad to, co wynika z wymaganych funkcji i jakości. Ten ostatni warunek odróżnia ograniczenie w sensie RE od potocznego „każde wymaganie coś ogranicza”.\n\nŻądanie wygenerowania czterech etykiet jest funkcją mimo liczby. Limit czasu odpowiedzi jest jakością, choć odpowiada na ważne biznesowe „co chcemy osiągnąć”. Nakaz użycia wskazanej platformy mimo istnienia innych realizacji spełniających funkcje i jakość jest dodatkowym ograniczeniem. Wymóg zapisania osoby zatwierdzającej jest funkcją także wtedy, gdy służy bezpieczeństwu. Oczekiwana struktura danych oraz wymagana interakcja nie stają się constraint tylko przez szczegółowość. Zawodna heurystyka „co versus jak” nie może zastąpić concern, czyli przedmiotu oczekiwania.\n\nZłożone zdanie może wyrażać kilka oczekiwań. „System tworzy raport i robi to w 2 sekundy” zawiera funkcję oraz cechę czasu. Rozdzielenie sensów jest objaśnieniem klasyfikacji L2, nie obowiązkiem wykonania pełnego projektu L3. Dla jednoznacznego punktowanego zadania trzeba określić perspektywę i warunki: czy technologia jest dodatkowo narzucona, czy zdanie opisuje cechę lub interakcję. Nie wolno dopisywać tych przesłanek dopiero w rationale.\n\n**Terminologia PL/EN:** T-06/T-07/T-08 z C02 zachowane; functional requirement — wymaganie funkcjonalne; quality requirement — wymaganie jakościowe; constraint in RE — ograniczenie w IW. Concern: autorskie objaśnienie „przedmiot oczekiwania”.\n\n**Przypadek:** „Odpowiedź zawiera numer zgłoszenia” wymaga danych wyniku funkcji. „95% odpowiedzi w ≤1 s przy określonym obciążeniu” określa czas. „Użyj jedynie silnika X mimo odpowiednich alternatyw” nakazuje rozwiązanie.\n\n**Granica:** Uogólnienie „każdy limit to constraint” obala limit zużycia pamięci opisujący jakość pracy systemu. Wymagania funkcji i jakości też ograniczają możliwe realizacje.\n\n**Samodzielna próba:** Sklasyfikuj i uzasadnij: (1) system po żądaniu wysyła potwierdzenie; (2) czas odpowiedzi przy zadanym obciążeniu ≤1 s; (3) nakaz silnika X mimo alternatyw spełniających funkcje i jakość.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T02-01",
+        "REG-T02-01-02",
+        "REG-T02-01-03",
+        "REG-T02-01-04",
+        "REG-T02-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § REG-KRY-T02-01"
+    },
+    {
+      "id": "N-T02-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Różne pytania o ten sam zapis",
+      "bodyMarkdown": "**Cel:** Odróżnia osie klasyfikowania i oceniania zapisu.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nW kontrolowanym znaczeniu Glossary non-functional requirement obejmuje quality requirement albo constraint. NFR nie jest więc synonimem samej jakości. Jeżeli materiał zawodowy stosuje inne znaczenie, trzeba je jawnie nazwać; w tym pakiecie klucze opierają się na profilu IREB. Wydajność traktujemy w tym profilu jako podkategorię jakości, nawet jeśli w innych klasyfikacjach bywa wyróżniana oddzielnie.\n\nNie mieszaj rodzaju wymagania z perspektywą. Wymaganie użytkownika może opisywać funkcję albo jakość, a wymaganie biznesowe wskazuje inną perspektywę niż podział concern. Nie myl też quality requirement z jakością samego sformułowania. Funkcjonalny zapis może być jasny lub niejasny; jakościowy zapis też może być niejasny. T21 ocenia jakość zapisu, T02 to, czego ten zapis wymaga. Rozdzielenie osi pozwala utrzymać sens terminów bez uznawania jednego członu za odpowiedź na wszystkie pytania klasyfikacyjne.\n\n**Terminologia PL/EN:** non-functional requirement — wymaganie niefunkcjonalne (T-09); quality requirement — T-07. NFR rozwijać przy pierwszym użyciu.\n\n**Przypadek:** Dodatkowy nakaz bazy danych jest constraint, więc należy do NFR w profilu Glossary. Wymóg czasu odpowiedzi jest quality, więc również należy do NFR.\n\n**Granica:** Uogólnienie „NFR = jakość” obala dodatkowy nakaz konkretnego silnika. Jest NFR jako constraint, choć nie określa cechy jakościowej.\n\n**Samodzielna próba:** Czy constraint należy do NFR? Czy jasny zapis funkcjonalny staje się quality requirement? Uzasadnij oba rozróżnienia.\n\n**Źródła:** C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T02-02",
+        "REG-T02-02-02",
+        "REG-T02-02-03",
+        "REG-T02-02-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § REG-KRY-T02-02"
+    },
+    {
+      "id": "N-T02-C-P01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Dodatkowe objaśnienie i przykłady",
+      "bodyMarkdown": "**Cel:** rozróżnić, czego wymaga konkretny zapis: rezultatu/zachowania, cechy jakościowej czy dodatkowo narzuconego wyboru rozwiązania. Primary KRY-P01 / część EO1.1.2 L2. Nie ocenia to kompletności ani jakości redakcji wymagania z EO3.8.\n\n**Terminy:** functional requirement — wymaganie funkcjonalne; quality requirement — wymaganie jakościowe; constraint — ograniczenie; non-functional requirement — wymaganie niefunkcjonalne. T-06–09/13.\n\n**REG-P1:** klasyfikuj oczekiwanie wyrażone w zdaniu. Funkcja określa wynik, zachowanie lub interakcję. Jakość określa cechę nieobjętą samym wymaganiem funkcjonalnym. Constraint dodatkowo ogranicza dopuszczalne rozwiązania. Wyraz „musi”, liczba, techniczny język i cel bezpieczeństwa nie są samodzielnymi regułami klasyfikacji. S-P1/S-P2.\n\n**CMP-P — oś: przedmiot oczekiwania, zamiast powierzchni zdania.**\n\n| Typ | Pytanie rozstrzygające | Własny przykład |\n|---|---|---|\n| Functional | Jaki wynik/zachowanie/interakcja ma być zapewnione? | System na żądanie porównuje dwa wskazane dokumenty |\n| Quality | Jaka cecha jakości działania lub systemu jest wymagana? | Przy podanym zestawie danych zużycie pamięci procesu nie przekracza ustalonego pułapu |\n| Constraint | Jaki dodatkowy wybór realizacji narzucono mimo innych odpowiednich rozwiązań? | Nakaz użycia komponentu dostawcy Z, chociaż inne spełniają te same wymagania |\n\n**Granice:** jedno zdanie może łączyć różne oczekiwania; wtedy najpierw rozdzielić je znaczeniowo, zamiast wymuszać jedną etykietę. Zadania P poniżej celowo izolują oczekiwania. Constraint wymaga dodatkowego ograniczenia przestrzeni, nie tylko dowolnej wzmianki o technologii. „Niefunkcjonalne” w Glossary obejmuje jakość lub ograniczenie, dlatego nie zastępuje etykiety quality.\n\n**EX-P:** „System zapisuje identyfikator osoby zatwierdzającej dokument” określa zachowanie, nawet gdy służy rozliczalności. **CE-P:** „System po żądaniu drukuje 3 kopie etykiety” obala „każda liczba oznacza jakość”: trzy kopie są oczekiwanym rezultatem funkcji. Nie wnioskujemy z tych przykładów, że każda informacja o bezpieczeństwie lub liczbie jest funkcjonalna. S-P1/S-P2.\n\n**PRE-P:** do klasyfikacji trzeba rozumieć, co jest przedmiotem wymagania. Sygnał braku: klasyfikowanie wyłącznie po obecności słowa „techniczny” bez wskazania oczekiwania. Pomoc: „Podkreśl rezultat, cechę albo narzucony wybór; jeśli są dwa różne oczekiwania, nazwij oba”. Warunkowy kandydat R14, bez wymuszenia i bez obowiązku całej lekcji podstaw.",
+      "ruleIds": [
+        "REG-P1"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § P1"
+    },
+    {
+      "id": "PRE-P",
+      "revision": "r2",
+      "kind": "prerequisite",
+      "title": "Pomijalna pomoc w odczytaniu przypadku",
+      "bodyMarkdown": "**PRE-P:** do klasyfikacji trzeba rozumieć, co jest przedmiotem wymagania. Sygnał braku: klasyfikowanie wyłącznie po obecności słowa „techniczny” bez wskazania oczekiwania. Pomoc: „Podkreśl rezultat, cechę albo narzucony wybór; jeśli są dwa różne oczekiwania, nazwij oba”. Warunkowy kandydat R14, bez wymuszenia i bez obowiązku całej lekcji podstaw.",
+      "ruleIds": [
+        "REG-P1"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § PRE-P",
+      "prerequisiteCondition": "Gdy nie można wskazać, co w zdaniu jest przedmiotem oczekiwania.",
+      "skippable": true
+    },
+    {
+      "id": "CE-KRY-T02-01",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Przedmiot oczekiwania w zdaniu",
+      "bodyMarkdown": "Uogólnienie „każdy limit to constraint” obala limit zużycia pamięci opisujący jakość pracy systemu. Wymagania funkcji i jakości też ograniczają możliwe realizacje.\n\n**Reguła rozstrzygająca:** Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11",
+      "ruleIds": [
+        "REG-KRY-T02-01",
+        "REG-T02-01-02",
+        "REG-T02-01-03",
+        "REG-T02-01-04",
+        "REG-T02-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § CE-KRY-T02-01"
+    },
+    {
+      "id": "CE-KRY-T02-02",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Różne pytania o ten sam zapis",
+      "bodyMarkdown": "Uogólnienie „NFR = jakość” obala dodatkowy nakaz konkretnego silnika. Jest NFR jako constraint, choć nie określa cechy jakościowej.\n\n**Reguła rozstrzygająca:** Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint.\n\n**Podstawa:** C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12",
+      "ruleIds": [
+        "REG-KRY-T02-02",
+        "REG-T02-02-02",
+        "REG-T02-02-03",
+        "REG-T02-02-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § CE-KRY-T02-02"
+    },
+    {
+      "id": "CE-P",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica dodatkowego uogólnienia",
+      "bodyMarkdown": "**CE-P:** „System po żądaniu drukuje 3 kopie etykiety” obala „każda liczba oznacza jakość”: trzy kopie są oczekiwanym rezultatem funkcji. Nie wnioskujemy z tych przykładów, że każda informacja o bezpieczeństwie lub liczbie jest funkcjonalna. S-P1/S-P2.",
+      "ruleIds": [
+        "REG-P1"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § CE-P"
+    },
+    {
+      "id": "CMP-KRY-T02-01",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Przedmiot oczekiwania w zdaniu",
+      "bodyMarkdown": "Oś: przedmiot oczekiwania. Wynik/zachowanie/dane/interakcja → functional; cecha jakościowa → quality; dodatkowo narzucony wybór → constraint. Dwa różne oczekiwania w zdaniu trzeba nazwać osobno, zamiast wybierać typ po słowie „musi”.\n\n**Reguła rozstrzygająca:** Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T02-01",
+        "REG-T02-01-02",
+        "REG-T02-01-03",
+        "REG-T02-01-04",
+        "REG-T02-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § CMP-KRY-T02-01"
+    },
+    {
+      "id": "CMP-KRY-T02-02",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Różne pytania o ten sam zapis",
+      "bodyMarkdown": "Oś zbiorów: quality jest jedną z dwóch kategorii NFR; constraint jest drugą. Oś redakcyjna: jasny/niejasny zapis jest niezależna od obu — „system działa szybko” jest jakościowe i zarazem nieprecyzyjne.\n\n**Reguła rozstrzygająca:** Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint.\n\n**Podstawa:** C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T02-02",
+        "REG-T02-02-02",
+        "REG-T02-02-03",
+        "REG-T02-02-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § CMP-KRY-T02-02"
+    },
+    {
+      "id": "CMP-P",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie uzupełniające",
+      "bodyMarkdown": "**CMP-P — oś: przedmiot oczekiwania, zamiast powierzchni zdania.**\n\n| Typ | Pytanie rozstrzygające | Własny przykład |\n|---|---|---|\n| Functional | Jaki wynik/zachowanie/interakcja ma być zapewnione? | System na żądanie porównuje dwa wskazane dokumenty |\n| Quality | Jaka cecha jakości działania lub systemu jest wymagana? | Przy podanym zestawie danych zużycie pamięci procesu nie przekracza ustalonego pułapu |\n| Constraint | Jaki dodatkowy wybór realizacji narzucono mimo innych odpowiednich rozwiązań? | Nakaz użycia komponentu dostawcy Z, chociaż inne spełniają te same wymagania |\n\n**Granice:** jedno zdanie może łączyć różne oczekiwania; wtedy najpierw rozdzielić je znaczeniowo, zamiast wymuszać jedną etykietę. Zadania P poniżej celowo izolują oczekiwania. Constraint wymaga dodatkowego ograniczenia przestrzeni, nie tylko dowolnej wzmianki o technologii. „Niefunkcjonalne” w Glossary obejmuje jakość lub ograniczenie, dlatego nie zastępuje etykiety quality.",
+      "ruleIds": [
+        "REG-P1"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § CMP-P"
+    },
+    {
+      "id": "EX-KRY-T02-01",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Przedmiot oczekiwania w zdaniu",
+      "bodyMarkdown": "„Odpowiedź zawiera numer zgłoszenia” wymaga danych wyniku funkcji. „95% odpowiedzi w ≤1 s przy określonym obciążeniu” określa czas. „Użyj jedynie silnika X mimo odpowiednich alternatyw” nakazuje rozwiązanie.\n\n**Reguła rozstrzygająca:** Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11",
+      "ruleIds": [
+        "REG-KRY-T02-01",
+        "REG-T02-01-02",
+        "REG-T02-01-03",
+        "REG-T02-01-04",
+        "REG-T02-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § EX-KRY-T02-01"
+    },
+    {
+      "id": "EX-KRY-T02-02",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Różne pytania o ten sam zapis",
+      "bodyMarkdown": "Dodatkowy nakaz bazy danych jest constraint, więc należy do NFR w profilu Glossary. Wymóg czasu odpowiedzi jest quality, więc również należy do NFR.\n\n**Reguła rozstrzygająca:** Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint.\n\n**Podstawa:** C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12",
+      "ruleIds": [
+        "REG-KRY-T02-02",
+        "REG-T02-02-02",
+        "REG-T02-02-03",
+        "REG-T02-02-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § EX-KRY-T02-02"
+    },
+    {
+      "id": "EX-P",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek uzupełniający",
+      "bodyMarkdown": "**EX-P:** „System zapisuje identyfikator osoby zatwierdzającej dokument” określa zachowanie, nawet gdy służy rozliczalności.",
+      "ruleIds": [
+        "REG-P1"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § EX-P"
+    }
+  ],
+  "questions": [
+    {
+      "id": "C-P-B01",
+      "revision": "r2",
+      "format": "P",
+      "role": "base",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Poniższe wymagania dotyczą samoobsługowego systemu wypożyczeń, obejmującego terminal i jego aplikację. Wymieniony komponent CatalogCore jest dodatkowo narzucony organizacyjnie, chociaż dostępne są inne komponenty spełniające te same wymagania funkcjonalne i jakościowe.\n\nKtóre wymagania są jakościowe?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "System umożliwia czytelnikowi przedłużenie wskazanego wypożyczenia."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "System wykorzystuje komponent CatalogCore jako jedyny dopuszczony silnik katalogu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Pobór mocy terminala w zdefiniowanym trybie bezczynności nie przekracza 8 W."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "System zapisuje identyfikator pracownika, który zatwierdził zmianę limitu wypożyczeń."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "W godzinach otwarcia, bez wyłączania okien serwisowych, system jest gotowy do obsługi przez co najmniej 99,5% czasu w miesiącu."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-C-P-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Przedłużenie wypożyczenia jest oczekiwanym działaniem → określa funkcję → nie należy do klucza jakości",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01, RAT-C-P-B01-a"
+        },
+        {
+          "id": "RAT-C-P-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Podano dodatkowy nakaz jednego silnika mimo odpowiednich alternatyw → ogranicza przestrzeń rozwiązań ponad pozostałe wymagania → constraint, nie quality",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01, RAT-C-P-B01-b"
+        },
+        {
+          "id": "RAT-C-P-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Wskazano zużycie energii w określonym stanie → jest cechą jakościową terminala, a nie dodatkowym wyborem komponentu → należy do klucza",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01, RAT-C-P-B01-c"
+        },
+        {
+          "id": "RAT-C-P-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Rejestrowanie osoby jest wymaganym zachowaniem → funkcja może służyć jakości/bezpieczeństwu → sam cel nie czyni tego zapisu quality",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01, RAT-C-P-B01-d"
+        },
+        {
+          "id": "RAT-C-P-B01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Określono gotowość w zadanym okresie i sposób liczenia → cecha dostępności → należy do klucza",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01, RAT-C-P-B01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-C-P1",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01"
+    },
+    {
+      "id": "C-P-D01",
+      "revision": "r2",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Moduł zestawia wyniki pomiarów. Dwie jego możliwe implementacje zapewniają te same wymagane funkcje, ale różnią się zużyciem pamięci. Postawiono wymaganie: „Podczas pracy na uzgodnionym zestawie 50 000 rekordów proces zajmuje nie więcej niż 256 MiB pamięci operacyjnej”. Wymaganie nie wskazuje komponentu, algorytmu ani platformy; obie implementacje mogą spełnić ten limit.\n\nKtóra klasyfikacja tego wymagania ma właściwe uzasadnienie?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Funkcjonalne — ponieważ sprawne zestawianie wyników jest ważnym celem modułu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Ograniczenie — ponieważ każdy liczbowy limit zawężający możliwe implementacje jest ograniczeniem w sensie RE."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Funkcjonalne — ponieważ wymaganie nie narzuca nazwanego komponentu ani platformy."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Jakościowe — ponieważ określa cechę zużycia zasobu przy podanym wolumenie pracy."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-C-P-D01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Przedmiotem zdania jest zużycie pamięci, chociaż system realizuje cel funkcjonalny → cel całego modułu nie określa typu każdego jego wymagania → uzasadnienie nie daje typu functional",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01, RAT-C-P-D01-a"
+        },
+        {
+          "id": "RAT-C-P-D01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Limit dotyczy cechy pracy modułu → także quality zawęża dopuszczalne realizacje; constraint ogranicza je dodatkowo ponad dane funkcje i jakość → sam limit liczbowy nie uzasadnia constraint",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01, RAT-C-P-D01-b"
+        },
+        {
+          "id": "RAT-C-P-D01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Nie narzucono komponentu → brak takiego constraint nie rozstrzyga pomiędzy functional i quality → argument jest niewystarczający i daje niewłaściwy typ",
+          "ruleIds": [
+            "REG-P1",
+            "REG-KRY-T02-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01, RAT-C-P-D01-c"
+        },
+        {
+          "id": "RAT-C-P-D01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Wskazano pamięć procesu przy określonych danych → cecha jakościowa zużycia zasobu, bez dodatkowego wyboru realizacji → klasyfikacja i argument poprawne",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01, RAT-C-P-D01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-C-P2",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01"
+    },
+    {
+      "id": "C-P-F01",
+      "revision": "r2",
+      "format": "P",
+      "role": "follow-up-1",
+      "weight": 3,
+      "k": 2,
+      "stemMarkdown": "W systemie obsługi faktur opisano wymagania poniżej. Użycie komponentu ScanBridge jest dodatkowym nakazem organizacji mimo istnienia innych rozwiązań spełniających te same wymagania funkcjonalne i jakościowe.\n\nKtóre klasyfikacje wraz z uzasadnieniem są poprawne?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "„System na żądanie generuje trzy kopie potwierdzenia” — jakościowe, ponieważ podano liczbę kopii."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "„System używa komponentu ScanBridge” — ograniczenie, ponieważ dodatkowo narzucono wybór realizacji."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "„Przy 80 równoczesnych operatorach 95% podglądów faktury pojawia się w ciągu 1,5 s” — jakościowe, ponieważ ograniczono czas odpowiedzi w danych warunkach."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "„System pozwala odrzucić fakturę z podaniem powodu” — jakościowe, ponieważ służy ograniczaniu błędów."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "„Czas ponownego udostępnienia usługi po awarii procesu nie przekracza 40 s w uzgodnionym teście” — funkcjonalne, ponieważ wspomina o wykonaniu czynności."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-C-P-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Trzy kopie określają wynik funkcji → liczba nie jest kryterium jakości → para typ/powód błędna",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01, RAT-C-P-F01-a"
+        },
+        {
+          "id": "RAT-C-P-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Alternatywy spełniają pozostałe wymagania, lecz nakazano ScanBridge → dodatkowe zawężenie rozwiązania → klasyfikacja i powód poprawne",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01, RAT-C-P-F01-b"
+        },
+        {
+          "id": "RAT-C-P-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Czas dla odsetka podglądów przy wskazanym obciążeniu → cecha wydajności, nie sama funkcja podglądu → klasyfikacja i powód poprawne",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01, RAT-C-P-F01-c"
+        },
+        {
+          "id": "RAT-C-P-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Odrzucenie z powodem to wymagane zachowanie → cel ograniczania błędów nie zmienia typu → quality jest nieadekwatne",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01, RAT-C-P-F01-d"
+        },
+        {
+          "id": "RAT-C-P-F01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Zdanie ogranicza czas przywrócenia usługi w teście → cecha jakościowa odtwarzania działania → obecność czynności nie uzasadnia typu functional dla tego ograniczenia",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01, RAT-C-P-F01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-C-P1",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01"
+    },
+    {
+      "id": "T02-D02",
+      "revision": "r1",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Przyjęto znaczenie NFR z Glossary IREB 2.2.0. Zapis A nakazuje generowanie potwierdzenia i został oceniony jako jednoznaczny. Zapis B dodatkowo narzuca platformę mimo odpowiednich alternatyw. Oceń wnioski.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Jednoznaczność A wystarcza, aby zmienić jego rodzaj z functional na quality."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "B jako constraint należy do NFR w tym profilu."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "NFR jest szersze niż sam zbiór quality requirements."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": false,
+          "2": true,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T02-D02-1",
+          "decisionId": "1",
+          "bodyMarkdown": "A opisuje generowanie → jakość redakcji nie zmienia oczekiwanego zachowania → Fałsz.",
+          "ruleIds": [
+            "REG-T02-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/D, RAT-T02-D02-1"
+        },
+        {
+          "id": "RAT-T02-D02-2",
+          "decisionId": "2",
+          "bodyMarkdown": "B dodatkowo narzuca platformę → constraint jest członem definicji NFR → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/D, RAT-T02-D02-2"
+        },
+        {
+          "id": "RAT-T02-D02-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Profil zawiera także constraint → quality nie wyczerpuje NFR → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/D, RAT-T02-D02-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T02-02/D"
+    },
+    {
+      "id": "T02-F01",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "System po anulowaniu zlecenia ma wysłać operatorowi komunikat. Przy zadanym obciążeniu 99% komunikatów ma dotrzeć w 3 s. Do wysyłki dodatkowo narzucono komponent Omega, mimo innych rozwiązań spełniających oba oczekiwania. Oceń klasyfikacje.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Wysłanie komunikatu jest wymaganiem funkcjonalnym."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Warunek czasu dotarcia komunikatów jest wymaganiem jakościowym."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Całe zdanie musi mieć jeden rodzaj, ponieważ użyto jednego słowa komunikat."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Dodatkowy nakaz Omega jest constraint."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T02-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Podano zachowanie po anulowaniu → wymagany wynik/interakcja to functional requirement → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/F, RAT-T02-F01-1"
+        },
+        {
+          "id": "RAT-T02-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Podano czas dla odsetka przy obciążeniu → dotyczy wydajności → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/F, RAT-T02-F01-2"
+        },
+        {
+          "id": "RAT-T02-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Opis łączy zachowanie, cechę i narzucony komponent → rodzaj wynika z przedmiotu każdego oczekiwania → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T02-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/F, RAT-T02-F01-3"
+        },
+        {
+          "id": "RAT-T02-F01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Alternatywy spełniają funkcję i jakość → nakaz wykracza poza ich konieczne spełnienie → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/F, RAT-T02-F01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T02-01/F"
+    },
+    {
+      "id": "T02-G01",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Terminal potwierdza przyjęcie produktu i zapisuje identyfikator kontrolera. W uzgodnionym teście ma zużywać najwyżej 12 W. Organizacja nakazuje platformę Atlas-X mimo alternatyw spełniających wszystkie wymagane funkcje i jakość. Które klasyfikacje z powodem są poprawne?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Zapis identyfikatora jest jakościowy, bo pomaga w rozliczalności."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Limit 12 W jest jakościowy, bo określa zużycie zasobu w podanych warunkach."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Samo słowo platforma zawsze wystarcza do rozpoznania constraint w każdym zdaniu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Nakaz Atlas-X jest constraint, bo dodatkowo eliminuje odpowiednie alternatywy."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T02-G01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Podano czynność zapisu → funkcjonalne zachowanie może wspierać bezpieczeństwo → cel nie uzasadnia etykiety quality.",
+          "ruleIds": [
+            "REG-T02-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/G, RAT-T02-G01-a"
+        },
+        {
+          "id": "RAT-T02-G01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Oczekiwanie dotyczy cechy zużycia energii → quality requirement → para jest poprawna.",
+          "ruleIds": [
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/G, RAT-T02-G01-b"
+        },
+        {
+          "id": "RAT-T02-G01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "W zadaniu podano dodatkowy nakaz i alternatywy → constraint wynika z zawężenia ponad funkcje i jakość, nie samego słowa → uogólnienie jest błędne.",
+          "ruleIds": [
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/G, RAT-T02-G01-c"
+        },
+        {
+          "id": "RAT-T02-G01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Alternatywy są odpowiednie funkcjonalnie i jakościowo → dodatkowy wybór ogranicza przestrzeń → para jest poprawna.",
+          "ruleIds": [
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-01/G, RAT-T02-G01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T02-01/G"
+    },
+    {
+      "id": "T02-G02",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "Wymaganie nakazuje konkretną bazę danych mimo istnienia alternatyw spełniających ustalone funkcje i jakość. Recenzent uznał zapis za jednoznaczny. Który wniosek o tych ocenach jest trafny?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Jednoznaczność zmienia dodatkowy nakaz w quality requirement."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Nakaz nie może należeć do NFR, ponieważ nie opisuje wydajności."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Nakaz może być constraint i należeć do NFR, a jednoznaczność jest osobną oceną zapisu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Każde NFR musi dotyczyć wyłącznie szybkości."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T02-G02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Ocena jasności dotyczy redakcji → nie zmienia przedmiotu oczekiwania → wniosek jest błędny.",
+          "ruleIds": [
+            "REG-T02-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/G, RAT-T02-G02-a"
+        },
+        {
+          "id": "RAT-T02-G02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Podano dodatkowe ograniczenie rozwiązania → NFR obejmuje również constraint → wykluczenie jest błędne.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/G, RAT-T02-G02-b"
+        },
+        {
+          "id": "RAT-T02-G02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Alternatywy wskazują dodatkowe ograniczenie, a recenzja jasność → to odrębne osie; NFR obejmuje constraint → wniosek jest trafny.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/G, RAT-T02-G02-c"
+        },
+        {
+          "id": "RAT-T02-G02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zakres NFR obejmuje jakość i constraint → jedna cecha wydajności nie wyczerpuje go → odpowiedź jest zbyt wąska.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-02/G, RAT-T02-G02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T02-02/G"
+    },
+    {
+      "id": "T02-GC01",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-2",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Urządzenie po przyjęciu zlecenia drukuje dwie etykiety. W zdefiniowanym trybie ma zużywać najwyżej 6 W. Nakazano sterownik Sigma mimo innych sterowników spełniających te same wymagania funkcjonalne i jakościowe. Oceń klasyfikacje z uzasadnieniem.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Dwie etykiety określają wynik funkcji, więc oczekiwanie jest funkcjonalne."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Limit zużycia energii jest constraint tylko dlatego, że zapisano liczbę."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Nakaz Sigma jest constraint, ponieważ eliminuje dodatkowo odpowiednie alternatywy."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Każde wymaganie wspierające bezpieczeństwo musi być jakościowe."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T02-GC01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Liczba dotyczy wytwarzanego rezultatu → functional requirement obejmuje taki wynik → Prawda.",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-C-P/G, RAT-T02-GC01-1"
+        },
+        {
+          "id": "RAT-T02-GC01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Limit określa cechę pracy w trybie → quality może zawężać realizacje bez dodatkowego narzucenia rozwiązania → Fałsz.",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-C-P/G, RAT-T02-GC01-2"
+        },
+        {
+          "id": "RAT-T02-GC01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Podano odpowiednie alternatywy i nakaz sterownika → dodatkowe zawężenie spełnia definicję constraint → Prawda.",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-C-P/G, RAT-T02-GC01-3"
+        },
+        {
+          "id": "RAT-T02-GC01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Cel może być wspierany zachowaniem → security bywa wyrażone funkcjonalnie lub jakościowo → Fałsz.",
+          "ruleIds": [
+            "REG-P1",
+            "REG-T02-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-P01",
+              "aspectId": "ZAK-T02-C-P01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T02-C-P/G, RAT-T02-GC01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-C-P1",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T02-C-P/G"
+    },
+    {
+      "id": "Z1-T02-01-B01",
+      "revision": "r2",
+      "format": "P",
+      "role": "base",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Dla systemu wydawania sprzętu oceń pary opis–typ. Wybrany czytnik Z jest narzucony mimo dostępności innych czytników spełniających wszystkie podane funkcje i cechy jakościowe. Które TRZY pary wraz z powodem są poprawne?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "„Użyj czytnika Z” — constraint, bo dodatkowo narzucono rozwiązanie mimo odpowiednich alternatyw."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "„Po wydaniu sprzętu wyślij SMS” — quality, bo poprawia obsługę klienta."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "„Limit pamięci procesu to 180 MiB w podanym teście” — constraint, bo każda liczba oznacza narzucony komponent."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "„Potwierdzenie zawiera identyfikator wypożyczenia” — functional, bo opisuje dane wymaganego wyniku."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "„95% identyfikacji w ≤0,8 s przy 30 terminalach” — quality, bo podaje cechę czasu w warunkach pracy."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "d",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T02-01-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Przesłanka alternatyw jest jawna → dodatkowe zawężenie → wybrać.",
+          "ruleIds": [
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01, RAT-Z1-T02-01-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T02-01-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Wysyłanie to zachowanie → jego korzystny cel nie zmienia typu → nie wybrać.",
+          "ruleIds": [
+            "REG-T02-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01, RAT-Z1-T02-01-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T02-01-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Limit zasobu nie nazywa komponentu → cecha jakości, błędna reguła → nie wybrać.",
+          "ruleIds": [
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01, RAT-Z1-T02-01-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T02-01-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Dane potwierdzenia są rezultatem funkcji → typ i argument właściwe → wybrać.",
+          "ruleIds": [
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01, RAT-Z1-T02-01-B01-d"
+        },
+        {
+          "id": "RAT-Z1-T02-01-B01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Czas identyfikacji to concern jakości → Quality requirement dotyczy zagadnienia jakości nieobjętego wymaganiem funkcjonalnym, na przykład wydajności lub dostępności. → wybrać.",
+          "ruleIds": [
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01, RAT-Z1-T02-01-B01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-B01"
+    },
+    {
+      "id": "Z1-T02-01-D01",
+      "revision": "r2",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń klasyfikacje. System po zatwierdzeniu produkuje 5 kopii etykiety, ma dostępność 99,8% w uzgodnionym okresie i musi działać na platformie K narzuconej mimo odpowiednich alternatyw.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Wymóg pięciu kopii etykiety jest funkcjonalny."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Wymóg dostępności jest jakościowy."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Nakaz platformy K jest ograniczeniem w sensie RE."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Każde z tych wymagań jest jakościowe, bo zawęża zbiór realizacji."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T02-01-D01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Liczba opisuje rezultat funkcji → functional → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01, RAT-Z1-T02-01-D01-1"
+        },
+        {
+          "id": "RAT-Z1-T02-01-D01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Dostępność jest cechą jakościową działania → Quality requirement dotyczy zagadnienia jakości nieobjętego wymaganiem funkcjonalnym, na przykład wydajności lub dostępności. → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01, RAT-Z1-T02-01-D01-2"
+        },
+        {
+          "id": "RAT-Z1-T02-01-D01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Dodatkowy wybór platformy mimo alternatyw → constraint → Prawda.",
+          "ruleIds": [
+            "REG-T02-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01, RAT-Z1-T02-01-D01-3"
+        },
+        {
+          "id": "RAT-Z1-T02-01-D01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Każdy wymóg może zawężać realizacje; o typie decyduje concern → Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania. → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T02-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-01",
+              "aspectId": "ZAK-T02-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01, RAT-Z1-T02-01-D01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01"
+    },
+    {
+      "id": "Z1-T02-02-B01",
+      "revision": "r2",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Który zakres ma non-functional requirement w przyjętym Glossary IREB?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Każdy błędnie napisany zapis."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wyłącznie quality requirement."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Quality requirement albo constraint."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Wyłącznie każda funkcja związana z bezpieczeństwem."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T02-02-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Jakość redakcyjna nie jest definicją rodzaju → Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement. → nie wybrać.",
+          "ruleIds": [
+            "REG-T02-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01, RAT-Z1-T02-02-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T02-02-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Pomija constraint → za wąski zakres → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01, RAT-Z1-T02-02-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T02-02-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Oba człony odpowiadają hasłu → Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01, RAT-Z1-T02-02-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T02-02-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Cel bezpieczeństwa może prowadzić do funkcji, lecz nie definiuje NFR → Perspektywa user requirement nie wyklucza typu quality requirement ani functional requirement. → nie wybrać.",
+          "ruleIds": [
+            "REG-T02-02-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01, RAT-Z1-T02-02-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01"
+    },
+    {
+      "id": "Z1-T02-02-F01",
+      "revision": "r2",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń twierdzenia przy znaczeniu NFR z Glossary 2.2.0.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Dodatkowy constraint należy do NFR."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Jednoznaczny zapis funkcji automatycznie jest quality requirement."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "W tym profilu performance requirement mieści się w quality requirement."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T02-02-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "NFR obejmuje constraint → Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-F01, RAT-Z1-T02-02-F01-1"
+        },
+        {
+          "id": "RAT-Z1-T02-02-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Jakość zapisu nie zmienia concern → Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement. → Fałsz.",
+          "ruleIds": [
+            "REG-T02-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-F01, RAT-Z1-T02-02-F01-2"
+        },
+        {
+          "id": "RAT-Z1-T02-02-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Glossary przyjmuje wydajność jako podkategorię jakości → Performance requirement jest w przyjętym Glossary podkategorią quality requirement. → Prawda.",
+          "ruleIds": [
+            "REG-T02-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T02-02",
+              "aspectId": "ZAK-T02-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-F01, RAT-Z1-T02-02-F01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T02-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-F01"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "C-P-R01",
+      "revision": "r2",
+      "promptMarkdown": "Podaj po jednym kryterium odróżniającym wymaganie funkcjonalne, jakościowe i ograniczenie. Wyjaśnij, dlaczego sama liczba w zdaniu nie określa jego typu. Czy wymaganie niefunkcjonalne oznacza wyłącznie jakościowe?.",
+      "rubricMarkdown": "osobno ocenić wskazanie rezultatu/zachowania, cechy jakości oraz dodatkowego ograniczenia rozwiązania; następnie brak reguły „liczba = typ” i szerszy zakres NFR. Własne trafne przykłady równoważne definicyjnemu opisowi są dopuszczalne. „Funkcja = co, jakość = jak” bez rozróżnienia concern jest niepełne; „każda specyfikacja techniczna jest constraint” jest błędne. S-P1/S-P2. KRY-P01 tylko w części trójpodziału; NFR jest wspierającą kontrolą terminologii, bez dodatkowego EO. Ocena z rubryki przez wskazaną osobę lub jawna samoocena; bez punktów CPRE.\n\n**Błąd krytyczny:** Klasyfikacja wyłącznie po liczbie, technologii lub celu bezpieczeństwa, bez rozpoznania przedmiotu oczekiwania.\n\n**Odpowiedzi równoważne i graniczne:** Równoważne nazwy PL/EN i trafne własne przykłady są dopuszczalne; sam skrót co/jak bez wskazania concern jest częściowy.\n\n**Podstawa źródłowa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11\n\nOcena: jawna samoocena, bez punktów CPRE. Wymagane są wszystkie wskazane rozróżnienia; poprawne równoważne sformułowania są dopuszczalne.",
+      "scope": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-R01"
+    },
+    {
+      "id": "C-P-S01",
+      "revision": "r2",
+      "promptMarkdown": "Dla trzech wymagań podaj typ i wskaż fragment, który o nim decyduje: (1) Po zatwierdzeniu system tworzy cztery kopie etykiety. (2) Przy podanym obciążeniu zapis wyniku trwa nie dłużej niż 400 ms. (3) System musi używać platformy Delta, chociaż dwie inne platformy spełniają te same wymagania funkcjonalne i jakościowe.",
+      "rubricMarkdown": "(1) functional — utworzenie określonego rezultatu; (2) quality — czas wykonania przy podanym obciążeniu; (3) constraint — dodatkowo narzucona platforma. Ocenić każdą klasyfikację osobno oraz każdy wskazany powód. Nie przyznawać poprawnego powodu automatycznie po trafnej etykiecie.\n\nOceniane są bieżące rozróżnienia i powody. Brak odpowiedzi jest brakiem dowodu; nie przypisuje się na tej podstawie wcześniejszej przyczyny błędu lub cechy osoby.\n\n**Błąd krytyczny:** Klasyfikacja wyłącznie po liczbie, technologii lub celu bezpieczeństwa, bez rozpoznania przedmiotu oczekiwania.\n\n**Odpowiedzi równoważne i graniczne:** Równoważne nazwy PL/EN i trafne własne przykłady są dopuszczalne; sam skrót co/jak bez wskazania concern jest częściowy.\n\n**Podstawa źródłowa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11\n\nOcena: jawna samoocena, bez punktów CPRE. Wymagane są wszystkie wskazane rozróżnienia; poprawne równoważne sformułowania są dopuszczalne.",
+      "scope": [
+        {
+          "criterionId": "KRY-P01",
+          "aspectId": "ZAK-T02-C-P01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-S01"
+    },
+    {
+      "id": "RP-T02-01",
+      "revision": "r2",
+      "promptMarkdown": "Sklasyfikuj i uzasadnij: (1) system po żądaniu wysyła potwierdzenie; (2) czas odpowiedzi przy zadanym obciążeniu ≤1 s; (3) nakaz silnika X mimo alternatyw spełniających funkcje i jakość.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| (1) Functional: wymagane zachowanie wysłania. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| (2) Quality: cecha czasu pracy przy wskazanym obciążeniu. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| (3) Constraint: dodatkowy wybór realizacji mimo odpowiednich alternatyw. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11",
+      "scope": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § RP-T02-01"
+    },
+    {
+      "id": "RP-T02-02",
+      "revision": "r2",
+      "promptMarkdown": "Czy constraint należy do NFR? Czy jasny zapis funkcjonalny staje się quality requirement? Uzasadnij oba rozróżnienia.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| NFR w Glossary obejmuje quality albo constraint; sam termin NFR nie oznacza wyłącznie jakości. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Jasność zapisu nie zmienia rodzaju oczekiwania; funkcja pozostaje funkcją. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12",
+      "scope": [
+        {
+          "criterionId": "KRY-T02-02",
+          "aspectId": "ZAK-T02-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § RP-T02-02"
+    },
+    {
+      "id": "Z1-T02-01-F01",
+      "revision": "r2",
+      "promptMarkdown": "System ma po anulowaniu zlecenia wysłać komunikat do operatora. Przy zadanym obciążeniu 99% komunikatów ma dotrzeć w ciągu 3 s. Do wysyłki narzucono komponent Omega, choć inne spełniają obie powyższe potrzeby. Rozdziel oczekiwania i podaj typ z powodem.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Wysłanie komunikatu to functional: wymagane zachowanie/interakcja. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Czas dla 99% komunikatów to quality: cecha działania w warunkach. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Omega to constraint: dodatkowo narzucony wybór realizacji mimo alternatyw. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Można opisać trzy oczekiwania jednym akapitem; wymagane są trzy odrębne klasyfikacje i powody.\n\n**Błąd krytyczny:** Uznanie wszystkich oczekiwań za jeden typ wyłącznie z powodu słowa „komunikat” lub technologii.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11",
+      "scope": [
+        {
+          "criterionId": "KRY-T02-01",
+          "aspectId": "ZAK-T02-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-F01"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-KRY-T02-01",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T02-01",
+        "aspectId": "ZAK-T02-01"
+      },
+      "bodyMarkdown": "Podkreśl, czego wymaga zdanie. Odrzuć reguły „liczba/technologia/bezpieczeństwo = jakość”. W constraint sprawdź dodatkowe zawężenie ponad funkcje i jakość.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T02-01",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T02-01",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "T02-F01",
+          "revision": "r1"
+        },
+        {
+          "id": "T02-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Dwa zdania mogą zawierać tę samą liczbę, a wymagać czegoś innego. Cztery kopie to wynik funkcji; czas wykonania przy obciążeniu to jej cecha; nakaz komponentu mimo odpowiednich alternatyw dodatkowo wyklucza sposoby realizacji. Rozstrzyga sens oczekiwania.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T02-02",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T02-02",
+        "aspectId": "ZAK-T02-02"
+      },
+      "bodyMarkdown": "Rozdziel pytanie o typ oczekiwania od pytania o jakość jego zapisania. W profilu IREB NFR ma dwa człony: quality i constraint.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T02-02",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T02-02",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T02-02-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T02-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Ułóż dwie osobne kartki: na pierwszej zapisz, czego wymagamy, na drugiej, jak dobrze to opisano. Jasny opis zachowania nadal jest opisem funkcji. W profilu Glossary do NFR należą zarówno jakość, jak i dodatkowe ograniczenie rozwiązania.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-P",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-P01",
+        "aspectId": "ZAK-T02-C-P01"
+      },
+      "bodyMarkdown": "usuń z klasyfikacji skrót „liczba/technologia/bezpieczeństwo = jakość”. Wskaż, co ma się wydarzyć albo jaką właściwość/wybór narzucono. W bazowym b podano wybór silnika mimo alternatyw; w c cechę zużycia energii; w d czynność rejestracji.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T02-C-P01",
+          "revision": "r1"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "C-P-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T02-GC01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Dwa zdania mogą zawierać tę samą liczbę, a wymagać czegoś innego. Cztery kopie to wynik funkcji; czas wykonania przy obciążeniu to jej cecha; nakaz komponentu mimo odpowiednich alternatyw dodatkowo wyklucza sposoby realizacji. Rozstrzyga sens oczekiwania.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę; D pozostaje późniejszym kandydatem.",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T02-01",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Funkcja, jakość i dodatkowe ograniczenie rozwiązania; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T02-02",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń NFR i rozdzielenie osi klasyfikacji; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-C-P1",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Zachowana propozycja rodziny C-P1 z C03 v0.2; bliskość także wobec pozostałych rodzin C i Z1, bez ustalenia niezależności."
+    },
+    {
+      "id": "FAM-C-P2",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Zachowana propozycja rodziny C-P2 z C03 v0.2; bliskość także wobec pozostałych rodzin C i Z1, bez ustalenia niezależności."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-EX-KRY-T02-01-illustrates-REG-KRY-T02-01",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T02-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "„Odpowiedź zawiera numer zgłoszenia” wymaga danych wyniku funkcji. „95% odpowiedzi w ≤1 s przy określonym obciążeniu” określa czas. „Użyj jedynie silnika X mimo odpowiednich alternatyw” nakazuje rozwiązanie.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T02-01-counterexample-of-REG-KRY-T02-01",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T02-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „każdy limit to constraint” obala limit zużycia pamięci opisujący jakość pracy systemu. Wymagania funkcji i jakości też ograniczają możliwe realizacje.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T02-01-distinguishes-REG-KRY-T02-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T02-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: przedmiot oczekiwania. Wynik/zachowanie/dane/interakcja → functional; cecha jakościowa → quality; dodatkowo narzucony wybór → constraint. Dwa różne oczekiwania w zdaniu trzeba nazwać osobno, zamiast wybierać typ po słowie „musi”.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T02-01-explains-REG-KRY-T02-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T02-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-F01-variant-of-Z1-T02-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T02-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T02-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Złożony przypadek jest rozdzielany na oczekiwania; zamknięta kontrola nie zastępuje swobodnego powodu w źródłowym F.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-G01-variant-of-Z1-T02-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T02-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T02-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Inna cecha zasobowa i funkcja rozliczalności; oceniane są zarazem typ i podany argument.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T02-01-D01-variant-of-Z1-T02-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T02-01-D01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T02-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrast rezultatu liczbowego, cechy i dodatkowego wyboru; bliskość do C-P jawna.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T02-02-illustrates-REG-KRY-T02-02",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T02-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Dodatkowy nakaz bazy danych jest constraint, więc należy do NFR w profilu Glossary. Wymóg czasu odpowiedzi jest quality, więc również należy do NFR.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T02-02-counterexample-of-REG-KRY-T02-02",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T02-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „NFR = jakość” obala dodatkowy nakaz konkretnego silnika. Jest NFR jako constraint, choć nie określa cechy jakościowej.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T02-02-distinguishes-REG-KRY-T02-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T02-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś zbiorów: quality jest jedną z dwóch kategorii NFR; constraint jest drugą. Oś redakcyjna: jasny/niejasny zapis jest niezależna od obu — „system działa szybko” jest jakościowe i zarazem nieprecyzyjne.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T02-02-explains-REG-KRY-T02-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T02-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T02-02-F01-variant-of-Z1-T02-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T02-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T02-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozdzielono zakres NFR, jakość zapisu i wydajność.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-G02-variant-of-Z1-T02-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T02-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T02-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Łączy dodatkowy wybór realizacji z oceną jego zapisu; nie wystarcza pamięć samej definicji NFR.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-D02-variant-of-Z1-T02-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T02-D02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T02-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Dwa błędne argumenty ze źródłowego otwartego D stają się osobnym sprawdzeniem zamkniętym z nowym ID.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-P-illustrates-REG-P1",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-P",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-P1",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Zachowany przypadek C rozwija częściowy zakres jego kryterium.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-P-counterexample-of-REG-P1",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-P",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-P1",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Zachowany przypadek C rozwija częściowy zakres jego kryterium.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-P-distinguishes-REG-P1",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-P",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-P1",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Zachowany przypadek C rozwija częściowy zakres jego kryterium.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-PRE-P-required-for-KRY-P01",
+      "revision": "r1",
+      "type": "R14",
+      "from": {
+        "id": "PRE-P",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "KRY-P01",
+        "revision": "r2"
+      },
+      "condition": "Gdy nie można wskazać, co w zdaniu jest przedmiotem oczekiwania. Znana podstawa jest pomijalna; brak decyzji nie tworzy bramki.",
+      "meaning": "Podstawa umożliwia odczytanie przyjętej perspektywy lub przedmiotu wymagania.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T02-C-P01-explains-REG-P1",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T02-C-P01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-P1",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Wierny wkład C wyjaśnia zachowany częściowy zakres.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-C-P-F01-variant-of-C-P-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "C-P-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "C-P-B01",
+        "revision": "r2"
+      },
+      "condition": "Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.",
+      "meaning": "Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-GC01-variant-of-C-P-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T02-GC01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "C-P-B01",
+        "revision": "r2"
+      },
+      "condition": "Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.",
+      "meaning": "Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-C-P-D01-variant-of-C-P-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "C-P-D01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "C-P-B01",
+        "revision": "r2"
+      },
+      "condition": "Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.",
+      "meaning": "Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-F01-checks-after-REM-KRY-T02-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T02-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T02-01.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-KRY-T02-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-G01-checks-after-REM-KRY-T02-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T02-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T02-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T02-01.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-KRY-T02-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T02-02-F01-checks-after-REM-KRY-T02-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T02-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T02-02.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-KRY-T02-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-G02-checks-after-REM-KRY-T02-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T02-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T02-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T02-02.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-KRY-T02-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-C-P-F01-checks-after-REM-P",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "C-P-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-P",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-P.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-P.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T02-GC01-checks-after-REM-P",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T02-GC01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-P",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-P.",
+      "provenance": "Lista followUps w content/authoring/T02/corrections/REM-P.md",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "unresolved",
+    "channels": []
+  }
+}

@@ -1,0 +1,1978 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T06",
+  "revision": "r2",
+  "title": "T06 — Przegląd zasad RE i ich terminologia",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "partial",
+  "limitations": [
+    "Odtworzenie dziewięciu zasad; sześć terminów EU2 i związane rozróżnienia terminologiczne. Wyjaśnianie znaczenia i ważności zasad należy do T07.",
+    "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
+    "Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.",
+    "Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.",
+    "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
+  ],
+  "status": {
+    "authoring": "draft",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md",
+      "sha256": "7a656ed2b8036e40991c32a9174fe9f3a457d5399c8df5fac7d2ebe887255712",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_QA_and_Handoff_v0.1.md",
+      "sha256": "e3c6b4bab86f8b307887489fb90a46d967699f31efb8b489ac5ff96d16607a32",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/Z1_IREB_CPRE_Manifest_v0.1.md",
+      "sha256": "b8a240a1e78c08fd365e90b53f1120bf4c89717246f265d056e3b210d34264ba",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "content/authoring/T06/corrections/REM-KRY-T06-01.md",
+      "sha256": "d8ab4120f56ed564eec4aeb6a437dc4b530cd3175b0edc6ab2bc00696d360692",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/corrections/REM-KRY-T06-02.md",
+      "sha256": "3cd386b0b1f7b9a3bdac0e9aa5210ec1169f7d13ea16394f3add609446366eb1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/CE-KRY-T06-01.md",
+      "sha256": "10546baaa20595bedec8ef1e1bcba0c62c82003ac045c037b78574beafe24149",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/CE-KRY-T06-02.md",
+      "sha256": "df866549cffb987d2033114a73328e5e7c37e438c217a4982d29a53042ab1be2",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/CMP-KRY-T06-01.md",
+      "sha256": "2d0e13792b78e67ab94cb6febf141810bf94cfda375c9dd16b3af65016a6698f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/CMP-KRY-T06-02.md",
+      "sha256": "a8700c3ffe7088d2e935bc8310af59b6963a57f6519d1599edcb8bcaf2061496",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/EX-KRY-T06-01.md",
+      "sha256": "44f311bf624a0bb1778961ce1315eb684034df6eded15ccb8b5155577adc8243",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/examples/EX-KRY-T06-02.md",
+      "sha256": "2e879599cfdfb576f3ff71e44f464f1dbf1fdad7ef6d49a80249ca00e12b270b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/lessons/N-T06-01.md",
+      "sha256": "14ecdc7b903d958267009acda1717191f365912985ada71fb3580784d097e6b1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/lessons/N-T06-02.md",
+      "sha256": "79d07b5feb297bde0afe9481b6890e0fbb5256b76c5f43ce0428984df23d1b49",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/open/RP-T06-01.md",
+      "sha256": "c1b56c0d4975d92ec280c686f9e788e37321e8826ca2aee22bcb1d517f3ddde5",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/open/RP-T06-02.md",
+      "sha256": "d011e62112f6d591bad5db24643d18233407515ce6165805edb8cdae1f604fd2",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/open/Z1-T06-01-B01.md",
+      "sha256": "3c1b3abc8fe85643665e12f07e309fb04733ae4458dde2a18138860f2464e736",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/open/Z1-T06-02-F01.md",
+      "sha256": "5bf748a28fbaa60325ffcabc2bae28da957aab8ebf828a532a5b0ce01f7d0efb",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-B01.yaml",
+      "sha256": "93698ade192f6ac6ec4b230b43909cb203551dd3bcc454b7ca5b93c3e3c2351d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-D01.yaml",
+      "sha256": "422ead11ec5c50a593c1431053c1c39efc8a9e5b5e072760a69a0db624adbd34",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-D02.yaml",
+      "sha256": "3544d607004216e0904352bd768d623cef422105c88d8ec5b578bba117c186d9",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-F02.yaml",
+      "sha256": "2aec4ea6fc6771239014237d83f7e81dc5d290680c081d4fe50529135e17c51c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-G01.yaml",
+      "sha256": "4a6cbdfbf0376caa743d0b4fddb58e4ca0cec5184346abb46c815f309906e668",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/T06-G02.yaml",
+      "sha256": "0877d46c1dfd22ee63fe03115953a6f05386671204ee187da6e2ea08cf5a0bca",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/Z1-T06-01-F01.yaml",
+      "sha256": "6c1e140990bf376dcf4714779faf95fa71f2b60fd25ea444d99ea51aefd78bcf",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/questions/Z1-T06-02-B01.yaml",
+      "sha256": "e82ef10f05ae46e24e74b1a996382908b3a5911f4be0f5cf17771ada14aff4fc",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/relations.yaml",
+      "sha256": "16d883defe40d6c0233d42db734062420f9332cc71f55d82dda8b3de405c0096",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/rules.yaml",
+      "sha256": "9d30d96769923f08a32bec5049243cc8b5eb71c59ac2b7f3a4e3b021c4c0f87d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/sources.yaml",
+      "sha256": "c39e3d151eada10d3ed14aeb8630a8bd8e38ef329a05ad82c62b91c628bba05c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T06/topic.yaml",
+      "sha256": "ccb8a4e641c0d1b24169461628e03ee29548fe4869fa0054c210725956b1b81f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T06-01",
+      "revision": "r2",
+      "description": "Rozpoznaje nazwy z ustalonego wykazu.",
+      "eoRefs": [
+        {
+          "id": "EO2.1.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T06-01",
+          "label": "Nazwy wszystkich dziewięciu zasad"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T06-02",
+      "revision": "r2",
+      "description": "Rozpoznaje znaczenia wskazanych terminów.",
+      "eoRefs": [
+        {
+          "id": "EO2.2.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T06-02",
+          "label": "Sześć terminów EU2 i słownik zasad"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T06-SEN",
+      "title": "CPRE Foundation Level Syllabus EN",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "EU2, Terms / Terminy; fizyczne strony PDF 14; §2.1, akapit wprowadzający; fizyczne strony PDF 14; §2.1; fizyczne strony PDF 14; §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T06-SPL",
+      "title": "CPRE Foundation Level Syllabus PL",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "EU2, Terms / Terminy; fizyczne strony PDF 14; §2.1, akapit wprowadzający; fizyczne strony PDF 14; §2.1; fizyczne strony PDF 14; §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T06-GPL",
+      "title": "Glossary of Requirements Engineering Terminology — Polish",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf",
+      "location": "Hasła Context / Kontekst, znaczenie 2; fizyczne strony PDF 17; Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14; Hasła Stakeholder / Interesariusz; Requirement / Wymaganie; fizyczne strony PDF 14, 33; Hasła Validation / Walidacja; Verification / Weryfikacja; fizyczne strony PDF 32",
+      "attribution": "Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T06-HEN",
+      "title": "CPRE Foundation Level Handbook EN",
+      "version": "1.3.2",
+      "url": "https://isqi.org/media/65/0a/43/1789029072/cpre_foundationlevel_handbook_en_v1.3.2.pdf",
+      "location": "§2.2.3; fizyczne strony PDF 20–21",
+      "attribution": "IREB e.V.; Martin Glinz, Hans van Loenhoud, Stefan Staal, Stan Bühne; wersja 1.3.2; historia wersji s.5: 23.07.2026; oficjalny dokument w publicznej kopii iSQI; prawa według s.2.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-KRY-T06-01",
+      "revision": "r2",
+      "statementMarkdown": "Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-SEN",
+          "location": "§2.1; fizyczne strony PDF 14"
+        },
+        {
+          "sourceId": "SRC-T06-SPL",
+          "location": "§2.1; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-01-02",
+      "revision": "r1",
+      "statementMarkdown": "Zasady RE stosuje się przekrojowo do jego zadań, działań i praktyk, a nie jako dziewięć obowiązkowych faz procesu.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-SEN",
+          "location": "§2.1, akapit wprowadzający; fizyczne strony PDF 14"
+        },
+        {
+          "sourceId": "SRC-T06-SPL",
+          "location": "§2.1, akapit wprowadzający; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T06-02",
+      "revision": "r2",
+      "statementMarkdown": "Sześć terminów EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-SEN",
+          "location": "EU2, Terms / Terminy; fizyczne strony PDF 14"
+        },
+        {
+          "sourceId": "SRC-T06-SPL",
+          "location": "EU2, Terms / Terminy; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-02",
+      "revision": "r1",
+      "statementMarkdown": "Context w RE jest częścią otoczenia istotną dla zrozumienia systemu i jego wymagań.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-GPL",
+          "location": "Hasła Context / Kontekst, znaczenie 2; fizyczne strony PDF 17"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-03",
+      "revision": "r1",
+      "statementMarkdown": "Explicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach, a implicit na wspólnej wiedzy o potrzebach, wizji i kontekście.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-SEN",
+          "location": "§2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15"
+        },
+        {
+          "sourceId": "SRC-T06-SPL",
+          "location": "§2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-04",
+      "revision": "r1",
+      "statementMarkdown": "Zarówno explicit, jak i implicit shared understanding mogą być pozorne i wymagają sprawdzania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-HEN",
+          "location": "§2.2.3; fizyczne strony PDF 20–21"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-05",
+      "revision": "r1",
+      "statementMarkdown": "Validation potwierdza zgodność z potrzebami interesariuszy, a verification zgodność ze specyfikacją.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-GPL",
+          "location": "Hasła Validation / Walidacja; Verification / Weryfikacja; fizyczne strony PDF 32"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-06",
+      "revision": "r1",
+      "statementMarkdown": "Stakeholder może wpływać na wymagania albo podlegać wpływowi systemu, a requirement może oznaczać potrzebę, właściwość lub jej reprezentację.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-GPL",
+          "location": "Hasła Stakeholder / Interesariusz; Requirement / Wymaganie; fizyczne strony PDF 14, 33"
+        }
+      ]
+    },
+    {
+      "id": "REG-T06-02-07",
+      "revision": "r1",
+      "statementMarkdown": "RE jest systematycznym i zdyscyplinowanym specyfikowaniem i zarządzaniem wymaganiami dla rozumienia potrzeb i ograniczania ryzyka ich niespełnienia.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T06-GPL",
+          "location": "Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "N-T06-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Praca z wykazem nazw",
+      "bodyMarkdown": "**Cel:** Rozpoznaje nazwy z ustalonego wykazu.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nDziewięć zasad tworzy wspólną podstawę pracy RE: orientacja na wartość; interesariusze; wspólne zrozumienie; kontekst; problem–wymaganie–rozwiązanie; walidacja; ewolucja; innowacja; systematyczna i zdyscyplinowana praca. Zasady obowiązują przekrojowo wobec zadań i praktyk RE, a nie jako lista dziewięciu faz projektu.\n\nW T06 trzeba przywołać wszystkie nazwy i rozpoznać odpowiadający im termin EN. Nie wymagamy pamięci identycznego brzmienia hasła ani obowiązkowej kolejności odpowiedzi. Porządek PR01–PR09 zachowuje routing M01. Na tym poziomie nazwanie „kontekst” jest znajomością etykiety; uzasadnienie, dlaczego wpływ otoczenia trzeba uwzględnić w wymaganiach, wymaga pracy L2 z T07. Słowo walidacja jest również nazwą zadania RE; zależnie od pytania chodzi o zasadę albo czynność, a nie sprzeczność terminów.\n\n**Terminologia PL/EN:** PR01 Value-orientation; PR02 Stakeholders; PR03 Shared understanding; PR04 Context; PR05 Problem–Requirement–Solution; PR06 Validation; PR07 Evolution; PR08 Innovation; PR09 Systematic and disciplined work. Oficjalne nazwy z §2.1; opisy PL w tym pakiecie są własne.\n\n**Przypadek:** Zadanie „wymień zasady” wymaga dziewięciu nazw, nie szczegółowego planu review ani diagramu procesu.\n\n**Granica:** Uogólnienie „to dziewięć etapów w obowiązkowej kolejności” obala równoczesne rozważanie potrzeb, wartości i kontekstu w jednym spotkaniu RE.\n\n**Samodzielna próba:** Bez patrzenia na listę wymień dziewięć zasad. Czy są to fazy procesu?\n\n**Źródła:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T06-01",
+        "REG-T06-01-02"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § REG-KRY-T06-01"
+    },
+    {
+      "id": "N-T06-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Odczytywanie użytych pojęć",
+      "bodyMarkdown": "**Cel:** Rozpoznaje znaczenia wskazanych terminów.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nSześć terminów umieszczonych przy EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation. Pierwsze cztery łączą się ze słownikiem T01; context w RE oznacza istotną część otoczenia systemu. Shared understanding dotyczy wspólnej podstawy rozumienia potrzeb, wymagań i kontekstu między zaangażowanymi stronami. Validation potwierdza dopasowanie do potrzeb interesariuszy; nie jest synonimem samego sprawdzenia poprawności zapisu.\n\nExplicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach. Implicit opiera się na wspólnej wiedzy, np. domeny, potrzeb i wizji. Polski syllabus używa etykiet „faktyczne (explicit)” i „domniemane (implicit)”. W pakiecie używamy także objaśniającego „jawne/niejawne” z zachowaniem EN; nie utożsamiamy explicit z automatycznie prawdziwym, a implicit z automatycznie pozornym. Handbook wyjaśnia, że obie postacie mogą być pozorne i wymagają sprawdzania.\n\nDodatkowe hasła pomagające czytać zasady to persona, scope, system boundary, context boundary, problem i solution. W T06 ich krótkie znaczenia są wejściem terminologicznym, a argumenty stosowania rozwija T07. Nie tworzymy nowego EO dla każdego hasła. Verification potwierdza zgodność ze specyfikacją; validation zgodność z potrzebami. Źródłowy odsyłacz do tych haseł to Glossary PL s.32.\n\n**Terminologia PL/EN:** kontekst — context; wymaganie — requirement; IW/RE — Requirements Engineering; interesariusz — stakeholder; wspólne zrozumienie — shared understanding; walidacja — validation. Shared understanding: etykieta sylabusa PL s.14–15; nie przypisano nieistniejącej definicji PL Glossary.\n\n**Przypadek:** Dwie osoby używają jednego terminu „zamknięte”, ale mają na myśli różne stany. Zgodność użytego słowa nie dowodzi wspólnego znaczenia.\n\n**Granica:** Uogólnienie „podpisany dokument automatycznie dowodzi wspólnego rozumienia” obala odmienna interpretacja tego samego podpisanego warunku. Explicit nie gwarantuje trafności wspólnej podstawy.\n\n**Samodzielna próba:** Wymień sześć terminów EU2. Odróżnij explicit od implicit shared understanding oraz validation od verification.\n\n**Źródła:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T06-02",
+        "REG-T06-02-02",
+        "REG-T06-02-03",
+        "REG-T06-02-04",
+        "REG-T06-02-05",
+        "REG-T06-02-06",
+        "REG-T06-02-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § REG-KRY-T06-02"
+    },
+    {
+      "id": "CE-KRY-T06-01",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Praca z wykazem nazw",
+      "bodyMarkdown": "Uogólnienie „to dziewięć etapów w obowiązkowej kolejności” obala równoczesne rozważanie potrzeb, wartości i kontekstu w jednym spotkaniu RE.\n\n**Reguła rozstrzygająca:** Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16",
+      "ruleIds": [
+        "REG-KRY-T06-01",
+        "REG-T06-01-02"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § CE-KRY-T06-01"
+    },
+    {
+      "id": "CE-KRY-T06-02",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Odczytywanie użytych pojęć",
+      "bodyMarkdown": "Uogólnienie „podpisany dokument automatycznie dowodzi wspólnego rozumienia” obala odmienna interpretacja tego samego podpisanego warunku. Explicit nie gwarantuje trafności wspólnej podstawy.\n\n**Reguła rozstrzygająca:** Sześć terminów EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21",
+      "ruleIds": [
+        "REG-KRY-T06-02",
+        "REG-T06-02-02",
+        "REG-T06-02-03",
+        "REG-T06-02-04",
+        "REG-T06-02-05",
+        "REG-T06-02-06",
+        "REG-T06-02-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § CE-KRY-T06-02"
+    },
+    {
+      "id": "CMP-KRY-T06-01",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Praca z wykazem nazw",
+      "bodyMarkdown": "Oś: nazwa zasady versus jej wyjaśnienie. „Ewolucja” jest etykietą L1; wyjaśnienie przyczyn zmian i potrzeby stabilności to T07/PR07 L2.\n\n**Reguła rozstrzygająca:** Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T06-01",
+        "REG-T06-01-02"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § CMP-KRY-T06-01"
+    },
+    {
+      "id": "CMP-KRY-T06-02",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Odczytywanie użytych pojęć",
+      "bodyMarkdown": "Oś 1: nośnik wspólnej podstawy — zapis/uzgodnienie versus wspólna wiedza. Oś 2: zgodność rzeczywista versus pozorna. To odrębne rozróżnienia. Oś validation/verification: potrzeba versus specyfikacja.\n\n**Reguła rozstrzygająca:** Sześć terminów EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T06-02",
+        "REG-T06-02-02",
+        "REG-T06-02-03",
+        "REG-T06-02-04",
+        "REG-T06-02-05",
+        "REG-T06-02-06",
+        "REG-T06-02-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § CMP-KRY-T06-02"
+    },
+    {
+      "id": "EX-KRY-T06-01",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Praca z wykazem nazw",
+      "bodyMarkdown": "Zadanie „wymień zasady” wymaga dziewięciu nazw, nie szczegółowego planu review ani diagramu procesu.\n\n**Reguła rozstrzygająca:** Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16",
+      "ruleIds": [
+        "REG-KRY-T06-01",
+        "REG-T06-01-02"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § EX-KRY-T06-01"
+    },
+    {
+      "id": "EX-KRY-T06-02",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Odczytywanie użytych pojęć",
+      "bodyMarkdown": "Dwie osoby używają jednego terminu „zamknięte”, ale mają na myśli różne stany. Zgodność użytego słowa nie dowodzi wspólnego znaczenia.\n\n**Reguła rozstrzygająca:** Sześć terminów EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21",
+      "ruleIds": [
+        "REG-KRY-T06-02",
+        "REG-T06-02-02",
+        "REG-T06-02-03",
+        "REG-T06-02-04",
+        "REG-T06-02-05",
+        "REG-T06-02-06",
+        "REG-T06-02-07"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § EX-KRY-T06-02"
+    }
+  ],
+  "questions": [
+    {
+      "id": "T06-B01",
+      "revision": "r1",
+      "format": "P",
+      "role": "base",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Które zestawy zawierają wyłącznie nazwy z dziewięciu zasad RE wymienionych w §2.1 Syllabus?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Orientacja na wartość; interesariusze; wspólne zrozumienie."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Kontekst; maksymalizacja dokumentacji; walidacja."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Kontekst; problem–wymaganie–rozwiązanie; walidacja."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Ewolucja; innowacja; obowiązkowy zakup narzędzia."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Ewolucja; innowacja; systematyczna i zdyscyplinowana praca."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Trzy nazwy należą do PR01–PR03 → zestaw zawiera wyłącznie pozycje wykazu → należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/B, RAT-T06-B01-a"
+        },
+        {
+          "id": "RAT-T06-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Środkowa pozycja nie występuje w wykazie → cały zestaw nie spełnia warunku wyłącznie nazw zasad → nie należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/B, RAT-T06-B01-b"
+        },
+        {
+          "id": "RAT-T06-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Nazwy odpowiadają PR04–PR06 → zestaw spełnia warunek → należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/B, RAT-T06-B01-c"
+        },
+        {
+          "id": "RAT-T06-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Zakup narzędzia nie jest nazwą dziewiątej zasady → zestaw nie spełnia warunku → nie należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/B, RAT-T06-B01-d"
+        },
+        {
+          "id": "RAT-T06-B01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Nazwy odpowiadają PR07–PR09 → wszystkie są na liście → zestaw należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/B, RAT-T06-B01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-01/B"
+    },
+    {
+      "id": "T06-D01",
+      "revision": "r1",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Po przerwie sprawdź zgodność pozycji z wykazem zasad z §2.1, bez oceniania ich szczegółowego zastosowania.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Value-orientation oraz shared understanding są nazwami zasad."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "„Jeden uniwersalny proces” jest oficjalną nazwą dziewiątej zasady."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Problem–Requirement–Solution oraz validation należą do listy."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Context, stakeholders, evolution, innovation i systematic and disciplined work dopełniają powyższe poprawne nazwy do dziewięciu."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-D01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Obie nazwy znajdują się w PR01–PR03 → zgodność z wykazem zachodzi → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/D, RAT-T06-D01-1"
+        },
+        {
+          "id": "RAT-T06-D01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Dziewiąta nazwa dotyczy systematycznej i zdyscyplinowanej pracy → podana nazwa nie jest pozycją wykazu → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/D, RAT-T06-D01-2"
+        },
+        {
+          "id": "RAT-T06-D01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Nazwy odpowiadają PR05 i PR06 → należą do wykazu → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/D, RAT-T06-D01-3"
+        },
+        {
+          "id": "RAT-T06-D01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Wyliczono pozostałe pięć źródłowych nazw → łącznie obejmują pełny wykaz → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/D, RAT-T06-D01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-01/D"
+    },
+    {
+      "id": "T06-D02",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "Recenzent tłumaczy explicit jako „zawsze rzeczywiste”, implicit jako „zawsze pozorne”, a validation jako samą kontrolę zgodności ze specyfikacją. Która korekta jest właściwa?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wszystkie trzy utożsamienia są definicjami obowiązującymi w profilu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Wystarczy zmienić nazwę dokumentu, pozostawiając trzy utożsamienia."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Explicit i implicit różnią się podstawą, obie postacie mogą być pozorne, a validation odnosi się do potrzeb."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Tylko implicit może służyć wspólnemu zrozumieniu, ponieważ dokumentacja je wyklucza."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-D02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Opis miesza nośnik z trafnością oraz potrzeby ze specyfikacją → źródła rozróżniają te osie → odpowiedź jest błędna.",
+          "ruleIds": [
+            "REG-T06-02-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/D, RAT-T06-D02-a"
+        },
+        {
+          "id": "RAT-T06-D02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Wada dotyczy znaczeń → nazwa pliku nie zmienia definicji → korekta nie rozwiązuje problemu.",
+          "ruleIds": [
+            "REG-T06-02-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/D, RAT-T06-D02-b"
+        },
+        {
+          "id": "RAT-T06-D02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Trzy twierdzenia wymagają rozdzielenia → zapis/wiedza, trafność oraz potrzeby/specyfikacja to osobne rozróżnienia → korekta jest trafna.",
+          "ruleIds": [
+            "REG-T06-02-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/D, RAT-T06-D02-c"
+        },
+        {
+          "id": "RAT-T06-D02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Źródło dopuszcza dwie postacie → dokumentowanie i uzgadnianie budują explicit → wykluczenie jest błędne.",
+          "ruleIds": [
+            "REG-T06-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/D, RAT-T06-D02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-02/D"
+    },
+    {
+      "id": "T06-F02",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-1",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Które pary termin–znaczenie są zgodne z terminologią EU2 i przyjętym Glossary?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Requirement — potrzeba, wymagana zdolność lub właściwość albo ich udokumentowana reprezentacja."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Stakeholder — wyłącznie osoba bezpośrednio używająca interfejsu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Context — istotna część otoczenia systemu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Validation — wyłącznie sprawdzenie zgodności zapisu ze specyfikacją."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "RE — systematyczne specyfikowanie i zarządzanie wymaganiami dla rozumienia potrzeb i ograniczenia ryzyka."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-F02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Para wymienia trzy sensy → odpowiada hasłu Requirement → należy do klucza.",
+          "ruleIds": [
+            "REG-T06-02-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/F, RAT-T06-F02-a"
+        },
+        {
+          "id": "RAT-T06-F02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Zawężono wpływ i oddziaływanie do użycia → stakeholder jest szerszy niż user → para jest błędna.",
+          "ruleIds": [
+            "REG-T06-02-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/F, RAT-T06-F02-b"
+        },
+        {
+          "id": "RAT-T06-F02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Wskazano istotność wobec systemu i wymagań → jest to sens Context w RE → para jest poprawna.",
+          "ruleIds": [
+            "REG-T06-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/F, RAT-T06-F02-c"
+        },
+        {
+          "id": "RAT-T06-F02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Wskazano punkt odniesienia verification → validation odnosi się do potrzeb → para jest błędna.",
+          "ruleIds": [
+            "REG-T06-02-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/F, RAT-T06-F02-d"
+        },
+        {
+          "id": "RAT-T06-F02-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Opis zachowuje działania i cel → odpowiada definicji RE → para jest poprawna.",
+          "ruleIds": [
+            "REG-T06-02-07"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/F, RAT-T06-F02-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-02/F"
+    },
+    {
+      "id": "T06-G01",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "Redaktor chce dopisać do listy zasad „maksymalizację liczby stron” i uznać kolejność listy za obowiązkowy plan etapów projektu. Która korekta jest trafna?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wystarczy uznać maksymalizację stron za alternatywną nazwę innowacji."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zachować dziewięć źródłowych nazw, a ich kolejności nie interpretować jako obowiązkowych faz procesu."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Dopisać dziesiątą nazwę, jeżeli edytor pozwala utworzyć dziesięć rekordów."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Usunąć walidację, bo jest także nazwą zadania RE."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-G01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Zmieniono znaczenie nazwy → taka pozycja nie występuje w źródłowym wykazie → korekta jest błędna.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/G, RAT-T06-G01-a"
+        },
+        {
+          "id": "RAT-T06-G01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Propozycja zmienia wykaz i jego funkcję → zasady są przekrojową podstawą zadań i praktyk → korekta jest trafna.",
+          "ruleIds": [
+            "REG-T06-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/G, RAT-T06-G01-b"
+        },
+        {
+          "id": "RAT-T06-G01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Możliwość narzędzia nie zmienia wykazu Syllabus → dziesiąta pozycja nie jest zasadą źródłową → korekta jest błędna.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/G, RAT-T06-G01-c"
+        },
+        {
+          "id": "RAT-T06-G01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Termin może nazywać zadanie i zasadę → walidacja pozostaje w dziewiątce → korekta jest błędna.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-01/G, RAT-T06-G01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-01/G"
+    },
+    {
+      "id": "T06-G02",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-2",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Dwie osoby podpisały wymaganie, lecz podają różne wyniki dla tego samego przypadku. W innym zespole wspólna wiedza domenowa pozwala przewidzieć ten przypadek jednakowo. Oceń terminologiczne wnioski.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Udokumentowana i uzgodniona podstawa należy do explicit shared understanding."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Sam podpis dowodzi, że pierwsze osoby rzeczywiście mają wspólne znaczenie."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Wspólna wiedza stanowi podstawę implicit shared understanding."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Kontrola dopasowania wymagania do potrzeb to validation, a nie wyłącznie verification."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T06-G02-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Wskazano zapis i uzgodnienie → tym rozróżnia się explicit od implicit → Prawda.",
+          "ruleIds": [
+            "REG-T06-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/G, RAT-T06-G02-1"
+        },
+        {
+          "id": "RAT-T06-G02-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Podano różne interpretacje mimo podpisu → obie postacie mogą być pozorne → Fałsz.",
+          "ruleIds": [
+            "REG-T06-02-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/G, RAT-T06-G02-2"
+        },
+        {
+          "id": "RAT-T06-G02-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Drugi przypadek opiera się na wiedzy domenowej → odpowiada podstawie implicit → Prawda.",
+          "ruleIds": [
+            "REG-T06-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/G, RAT-T06-G02-3"
+        },
+        {
+          "id": "RAT-T06-G02-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Punktem odniesienia są potrzeby → validation różni się od zgodności ze specyfikacją → Prawda.",
+          "ruleIds": [
+            "REG-T06-02-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T06-02/G, RAT-T06-G02-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T06-02/G"
+    },
+    {
+      "id": "Z1-T06-01-F01",
+      "revision": "r2",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń zgodność nazw z listą zasad. To rozpoznanie nazw, bez wyjaśniania ich ważności.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Orientacja na wartość, interesariusze i wspólne zrozumienie są zasadami RE."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Kontekst, problem–wymaganie–rozwiązanie i walidacja są zasadami RE."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca są zasadami RE."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "„Maksymalizacja liczby dokumentów” jest dziesiątą zasadą z tego wykazu."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T06-01-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "To PR01–PR03 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01, RAT-Z1-T06-01-F01-1"
+        },
+        {
+          "id": "RAT-Z1-T06-01-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "To PR04–PR06 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01, RAT-Z1-T06-01-F01-2"
+        },
+        {
+          "id": "RAT-Z1-T06-01-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "To PR07–PR09 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01, RAT-Z1-T06-01-F01-3"
+        },
+        {
+          "id": "RAT-Z1-T06-01-F01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Taka pozycja nie należy do dziewięciu → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Fałsz.",
+          "ruleIds": [
+            "REG-KRY-T06-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-01",
+              "aspectId": "ZAK-T06-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01, RAT-Z1-T06-01-F01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01"
+    },
+    {
+      "id": "Z1-T06-02-B01",
+      "revision": "r2",
+      "format": "K",
+      "role": "base",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń znaczenia terminów.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Context w RE to istotna część otoczenia systemu."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Stakeholder musi być bezpośrednim użytkownikiem."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Validation odnosi się do zgodności z potrzebami interesariuszy."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Shared understanding oznacza po prostu używanie tych samych słów."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true,
+          "4": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T06-02-B01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Istotność wobec systemu i wymagań ogranicza zakres → Context w RE jest częścią otoczenia istotną dla zrozumienia systemu i jego wymagań. → Prawda.",
+          "ruleIds": [
+            "REG-T06-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01, RAT-Z1-T06-02-B01-1"
+        },
+        {
+          "id": "RAT-Z1-T06-02-B01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Wpływ lub oddziaływanie wystarcza → Stakeholder może wpływać na wymagania albo podlegać wpływowi systemu, a requirement może oznaczać potrzebę, właściwość lub jej reprezentację. → Fałsz.",
+          "ruleIds": [
+            "REG-T06-02-06"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01, RAT-Z1-T06-02-B01-2"
+        },
+        {
+          "id": "RAT-Z1-T06-02-B01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "To odniesienie definiuje validation → Validation potwierdza zgodność z potrzebami interesariuszy, a verification zgodność ze specyfikacją. → Prawda.",
+          "ruleIds": [
+            "REG-T06-02-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01, RAT-Z1-T06-02-B01-3"
+        },
+        {
+          "id": "RAT-Z1-T06-02-B01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Słowa mogą mieć różne znaczenia; wspólna podstawa wymaga znaczenia → Explicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach, a implicit na wspólnej wiedzy o potrzebach, wizji i kontekście. → Fałsz.",
+          "ruleIds": [
+            "REG-T06-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T06-02",
+              "aspectId": "ZAK-T06-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01, RAT-Z1-T06-02-B01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T06-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "RP-T06-01",
+      "revision": "r2",
+      "promptMarkdown": "Bez patrzenia na listę wymień dziewięć zasad. Czy są to fazy procesu?",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Podaje wszystkie dziewięć nazw, dopuszczając trafne odpowiedniki EN i równoważne PL. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Rozpoznaje przekrojowe zasady, bez obowiązkowego dziewięcioetapowego harmonogramu. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16",
+      "scope": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § RP-T06-01"
+    },
+    {
+      "id": "RP-T06-02",
+      "revision": "r2",
+      "promptMarkdown": "Wymień sześć terminów EU2. Odróżnij explicit od implicit shared understanding oraz validation od verification.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Nazywa sześć terminów: context, requirement, RE, stakeholder, shared understanding, validation. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Explicit/implicit rozróżnia według udokumentowanej podstawy versus wspólnej wiedzy; nie według prawdziwe/fałszywe. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Validation wiąże z potrzebami, verification ze specyfikacją; to termin wspierający kontrast. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21",
+      "scope": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § RP-T06-02"
+    },
+    {
+      "id": "Z1-T06-01-B01",
+      "revision": "r2",
+      "promptMarkdown": "Wymień wszystkie dziewięć zasad RE. Kolejność dowolna; użyj nazw PL albo EN.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Orientacja na wartość; interesariusze; wspólne zrozumienie. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Kontekst; problem–wymaganie–rozwiązanie; walidacja. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Ewolucja; innowacja; systematyczna i zdyscyplinowana praca. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Nazwy „wartość” lub „praca systematyczna” są wystarczające przy jednoznacznym sensie. Brak jednej zasady daje częściowy wynik.\n\n**Błąd krytyczny:** Zamiana listy zasad na rzekomy obowiązkowy harmonogram.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16",
+      "scope": [
+        {
+          "criterionId": "KRY-T06-01",
+          "aspectId": "ZAK-T06-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-B01"
+    },
+    {
+      "id": "Z1-T06-02-F01",
+      "revision": "r2",
+      "promptMarkdown": "Podaj krótki sens każdego z sześciu terminów EU2. Nie wyjaśniaj jeszcze ważności dziewięciu zasad.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Requirement: potrzeba, wymagana właściwość/zdolność lub jej zapis; RE: systematyczne specyfikowanie i zarządzanie z celem zrozumienia potrzeb i zmniejszenia ryzyka. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Stakeholder: osoba/organizacja wpływająca na wymagania lub dotknięta systemem; context: istotne otoczenie. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Shared understanding: wspólna podstawa znaczeń; validation: potwierdzenie dopasowania do potrzeb. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Wystarczy jeden poprawny sens requirement, jeśli nie neguje pozostałych; pełniejszy recall trzech sensów jest w T01.\n\n**Błąd krytyczny:** Redukowanie stakeholder do user lub validation wyłącznie do poprawności zapisu.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21",
+      "scope": [
+        {
+          "criterionId": "KRY-T06-02",
+          "aspectId": "ZAK-T06-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-F01"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-KRY-T06-01",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T06-01",
+        "aspectId": "ZAK-T06-01"
+      },
+      "bodyMarkdown": "Sprawdź listę PR01–PR09 i odtwórz ją w dowolnej kolejności. Pominiętej zasady nie zastępuj szczegółowym objaśnieniem innej.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T06-01",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T06-01",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T06-01-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T06-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Przywołaj dziewięć nazw po jednej i sprawdź, czy żadnej nie zastąpiono techniką, produktem lub miarą objętości dokumentów. Kolejność nazw nie narzuca kolejności wykonywania pracy.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T06-02",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T06-02",
+        "aspectId": "ZAK-T06-02"
+      },
+      "bodyMarkdown": "Zachowaj EN obok polskiego terminu. „Faktyczne” w etykiecie przekładu nie uprawnia do wniosku, że każde explicit shared understanding jest prawdziwe.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T06-02",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T06-02",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "T06-F02",
+          "revision": "r1"
+        },
+        {
+          "id": "T06-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Rozdziel dwa wymiary: na czym oparto wspólną interpretację oraz czy uczestnicy rzeczywiście rozumieją to samo. Zapis i uzgodnienie opisują pierwszy wymiar; przykłady interpretacji pomagają sprawdzić drugi. Osobno odróżnij potrzeby od specyfikacji jako punkt odniesienia kontroli.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T06-01",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Nazwy wszystkich dziewięciu zasad; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T06-02",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Sześć terminów EU2 i słownik zasad; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-EX-KRY-T06-01-illustrates-REG-KRY-T06-01",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T06-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Zadanie „wymień zasady” wymaga dziewięciu nazw, nie szczegółowego planu review ani diagramu procesu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T06-01-counterexample-of-REG-KRY-T06-01",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T06-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „to dziewięć etapów w obowiązkowej kolejności” obala równoczesne rozważanie potrzeb, wartości i kontekstu w jednym spotkaniu RE.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T06-01-distinguishes-REG-KRY-T06-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T06-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: nazwa zasady versus jej wyjaśnienie. „Ewolucja” jest etykietą L1; wyjaśnienie przyczyn zmian i potrzeby stabilności to T07/PR07 L2.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T06-01-explains-REG-KRY-T06-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T06-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T06-01-F01-variant-of-T06-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T06-01-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "T06-B01",
+        "revision": "r1"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie trzech podzbiorów pełnej listy, nie nowy L2.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-G01-variant-of-T06-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T06-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "T06-B01",
+        "revision": "r1"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie dwóch zmian naruszających wykaz i jego przekrojowy charakter; odmienny cel niż F.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-D01-variant-of-T06-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T06-D01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "T06-B01",
+        "revision": "r1"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie nazw EN w innym grupowaniu; to nie swobodny recall dziewiątki, który pozostaje w open.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T06-02-illustrates-REG-KRY-T06-02",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T06-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Dwie osoby używają jednego terminu „zamknięte”, ale mają na myśli różne stany. Zgodność użytego słowa nie dowodzi wspólnego znaczenia.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T06-02-counterexample-of-REG-KRY-T06-02",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T06-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „podpisany dokument automatycznie dowodzi wspólnego rozumienia” obala odmienna interpretacja tego samego podpisanego warunku. Explicit nie gwarantuje trafności wspólnej podstawy.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T06-02-distinguishes-REG-KRY-T06-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T06-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś 1: nośnik wspólnej podstawy — zapis/uzgodnienie versus wspólna wiedza. Oś 2: zgodność rzeczywista versus pozorna. To odrębne rozróżnienia. Oś validation/verification: potrzeba versus specyfikacja.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T06-02-explains-REG-KRY-T06-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T06-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-F02-variant-of-Z1-T06-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T06-F02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T06-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Trzy znaczenia i dwa kontrasty; pełne odtworzenie sześciu terminów pozostaje w source F/RP.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-G02-variant-of-Z1-T06-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T06-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T06-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozdzielenie nośnika i trafności na dwóch przypadkach; nie przypisuje prawdziwości samej etykiecie.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-D02-variant-of-Z1-T06-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T06-D02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T06-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Ocena złożonego błędnego objaśnienia zamiast czterech prostych tez B; otwarte D zachowuje sześć definicji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T06-01-F01-checks-after-REM-KRY-T06-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T06-01-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T06-01.",
+      "provenance": "Lista followUps w content/authoring/T06/corrections/REM-KRY-T06-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-G01-checks-after-REM-KRY-T06-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T06-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T06-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T06-01.",
+      "provenance": "Lista followUps w content/authoring/T06/corrections/REM-KRY-T06-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-F02-checks-after-REM-KRY-T06-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T06-F02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T06-02.",
+      "provenance": "Lista followUps w content/authoring/T06/corrections/REM-KRY-T06-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T06-G02-checks-after-REM-KRY-T06-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T06-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T06-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T06-02.",
+      "provenance": "Lista followUps w content/authoring/T06/corrections/REM-KRY-T06-02.md",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "unresolved",
+    "channels": []
+  }
+}

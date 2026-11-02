@@ -1,0 +1,2767 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T05",
+  "revision": "r2",
+  "title": "T05 — Zadania RE, rola i kompetencje Requirements Engineer",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "partial",
+  "limitations": [
+    "Cztery główne zadania i tailoring; rola względem stanowiska; sześć obszarów uczenia FL oraz objaśniające soft skills z Handbook.",
+    "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
+    "Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.",
+    "Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.",
+    "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
+  ],
+  "status": {
+    "authoring": "draft",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md",
+      "sha256": "411a7fa8ae3d68bdfff647ff9573fa1891db3253c38af76e786da268d353a663",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_QA_and_Handoff_v0.1.md",
+      "sha256": "205cc9a9af764cdbefb050ec4d4aff463dfe7d240e6bd0c1455898e4f513c967",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/Z1_IREB_CPRE_Manifest_v0.1.md",
+      "sha256": "b8a240a1e78c08fd365e90b53f1120bf4c89717246f265d056e3b210d34264ba",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "content/authoring/T05/corrections/REM-KRY-T05-01.md",
+      "sha256": "8810cb17d84fedf9f8bdde1f57bad5500b87568d31c926335d1f670067877457",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/corrections/REM-KRY-T05-02.md",
+      "sha256": "f9c4b514ff4576211e2439a80ce8880b4b3f91573c9ac5684a6e9a959fc57fb2",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/corrections/REM-KRY-T05-03.md",
+      "sha256": "d982fa602c0d07e4fe67029a2a8ecaba4adfdbbc5e5abe1a1da4ef77f1967acf",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CE-KRY-T05-01.md",
+      "sha256": "ea556a1ca0a42408f715023240a720e6226ed2e8f4ad7c22751db3027fa20a8d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CE-KRY-T05-02.md",
+      "sha256": "6646b04bec1122e9fa66e8b2eb16cffc62ffe5bc61ec1f956edb7266152e455e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CE-KRY-T05-03.md",
+      "sha256": "7c048ace8fdad88d1e4913475ac7ed3e030fa1d57a8301644d56afb258bb6671",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CMP-KRY-T05-01.md",
+      "sha256": "5f214fe9ca2c4b79c00c1d33e6ad5e6280d3861ec7aa4beb86db47a60ff8f0aa",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CMP-KRY-T05-02.md",
+      "sha256": "33f4c58b7708c23ab3dcb008cba57a716a2baf13a4046c31061d09607b7bfd49",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/CMP-KRY-T05-03.md",
+      "sha256": "776e6ac175ee5685df38e16437bed6e90063b851a602b446f61c006514cb4d5e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/EX-KRY-T05-01.md",
+      "sha256": "a5254765a1c712383da53412868a6e0e7c3cf45d057972bfc2b1b201f8af3a1a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/EX-KRY-T05-02.md",
+      "sha256": "c59f1058326a2038a68cd75a391b4457c01a7ff5cbc5396948fa20bb0d7b2f7a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/examples/EX-KRY-T05-03.md",
+      "sha256": "199ea1d23477ef8fc110ab7ea5fb092fe89a88a37d921a4de896f93a25f98eb3",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/lessons/N-T05-01.md",
+      "sha256": "c001f270d705f2fca10208085857e50b8fec8cae8dc02655f467971fedc3ff4a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/lessons/N-T05-02.md",
+      "sha256": "0a875b38f3ca10a4d233eea3cd85de8522c1419048acbbab191a4fb7c33c6bd3",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/lessons/N-T05-03.md",
+      "sha256": "f8f69e9ab0d412a4100ea38fe5473b0d0e28857c7539f404c1674fd65cc7380f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/open/RP-T05-01.md",
+      "sha256": "61e317e53b430a00c9f538991289b6282f1076959f977b9dbfaf9ba3cdcf0c97",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/open/RP-T05-02.md",
+      "sha256": "a4f14aba0a8ccf9ca8fd75b4df6b2d2215de892988951e9199279197e4ee6671",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/open/RP-T05-03.md",
+      "sha256": "c0892205d1310cc9e5a2190ee1dbb0783604ef1bae21280fb0d72b3f2a3d9c59",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/open/Z1-T05-03-F01.md",
+      "sha256": "2d1638de255643ba5b1963bf7799153bbb8bf0988106cc933e51325209cc012c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-D01.yaml",
+      "sha256": "7f615bda3331bbecf2f7a161d0293cd15310427ba473564b45777ff2331ea968",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-D02.yaml",
+      "sha256": "ef3f5a8d6f64c58b49f60cd852ea0a65c2e683355cd6e7e60e8d11ce8382470e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-D03.yaml",
+      "sha256": "f6b7718dae67772a6d6efa61394385598ed9f20a460a0949a37090664a9d05ee",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-F03.yaml",
+      "sha256": "3a223f6e2e6922db3b625ff990bd196a10b5ca341664065c3efdff29687e281c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-G01.yaml",
+      "sha256": "56eddf19f3c423c6dbed28b2598c21d04dbb3427e04b9cc9b3e37923b44dd889",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-G02.yaml",
+      "sha256": "8883b256cd6f4bb2d20b3ba9c2c9c1462d1d7cec6a4935ab49b3ab2c761c9805",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/T05-G03.yaml",
+      "sha256": "59ecec20f9b64012e89aaa5e4df4746b8b64e768a1ab86e098d1ff9ba0d8eece",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/Z1-T05-01-B01.yaml",
+      "sha256": "bfdb6766dce52cdb9902c7e9498752437e2ae5e1b428521b241e076bd4f3e13b",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/Z1-T05-01-F01.yaml",
+      "sha256": "e3ca3c10329e362f7bb7060160dd6b7f56ee51b8b4c544496eeafee027167935",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/Z1-T05-02-B01.yaml",
+      "sha256": "ec9bcbbdaa6d7effcb96e8bd063ae116dc4c2de0fbea8440f17391ab90d11dd5",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/Z1-T05-02-F01.yaml",
+      "sha256": "2fcdbd17673aa47f22e56941043b2d3e935f19608e1c00c3fa9c81b79646c7bb",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/questions/Z1-T05-03-B01.yaml",
+      "sha256": "aa5437e2621139599645d58e5a3d29cc3833f84c521cc3ccd5df22c5f4515265",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/relations.yaml",
+      "sha256": "7457246bed679cc6a7d0ee3fa2d2ea874eb0d56b2e2ca3a41b9441c13c75cc33",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/rules.yaml",
+      "sha256": "66988e94c45903329fe7810fe064e4289d1b4cd7e8d81a266de202d2597b1c8c",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/sources.yaml",
+      "sha256": "74ebc4a62dbcfa9365351826d72792a2e374034eb993fe39dcaffefeabd29eac",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T05/topic.yaml",
+      "sha256": "13d9f62e30b024c89db332790509c54e8ab753d3c800adcda025cc008330374d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T05-01",
+      "revision": "r2",
+      "description": "Rozpoznaje czynności i warunki doboru sposobu pracy.",
+      "eoRefs": [
+        {
+          "id": "EO1.4.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T05-01",
+          "label": "Zadania RE i tailoring procesu"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T05-02",
+      "revision": "r2",
+      "description": "Charakteryzuje udział osoby w opisanej pracy.",
+      "eoRefs": [
+        {
+          "id": "EO1.5.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T05-02",
+          "label": "Rola Requirements Engineer a stanowisko"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T05-03",
+      "revision": "r2",
+      "description": "Rozpoznaje obszary potrzebnej wiedzy i umiejętności.",
+      "eoRefs": [
+        {
+          "id": "EO1.6.1",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T05-03",
+          "label": "Co inżynier wymagań powinien poznawać"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T05-SEN",
+      "title": "CPRE Foundation Level Syllabus EN",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "§1.4; fizyczne strony PDF 12; §1.5; fizyczne strony PDF 13; §1.6; fizyczne strony PDF 13",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T05-SPL",
+      "title": "CPRE Foundation Level Syllabus PL",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "§1.4; fizyczne strony PDF 12; §1.5; fizyczne strony PDF 13; §1.6; fizyczne strony PDF 13",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T05-GPL",
+      "title": "Glossary of Requirements Engineering Terminology — Polish",
+      "version": "2.2.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf",
+      "location": "Hasła Requirements Engineer; fizyczne strony PDF 14; Hasła Requirements management; fizyczne strony PDF 35; Hasła Validation / Walidacja; fizyczne strony PDF 32",
+      "attribution": "Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T05-HEN",
+      "title": "CPRE Foundation Level Handbook EN",
+      "version": "1.3.2",
+      "url": "https://isqi.org/media/65/0a/43/1789029072/cpre_foundationlevel_handbook_en_v1.3.2.pdf",
+      "location": "§1.6, soft skills; fizyczne strony PDF 14",
+      "attribution": "IREB e.V.; Martin Glinz, Hans van Loenhoud, Stefan Staal, Stan Bühne; wersja 1.3.2; historia wersji s.5: 23.07.2026; oficjalny dokument w publicznej kopii iSQI; prawa według s.2.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-KRY-T05-01",
+      "revision": "r2",
+      "statementMarkdown": "Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.4; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.4; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-01-02",
+      "revision": "r1",
+      "statementMarkdown": "Syllabus zalicza analizę wymagań i rozwiązywanie konfliktów do pozyskiwania wymagań.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.4; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.4; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-01-03",
+      "revision": "r1",
+      "statementMarkdown": "Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.4; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.4; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-01-04",
+      "revision": "r1",
+      "statementMarkdown": "Zarządzanie wymaganiami obejmuje istniejące wymagania i powiązane artefakty, w tym przechowywanie, zmiany i śledzenie powiązań.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-GPL",
+          "location": "Hasła Requirements management; fizyczne strony PDF 35"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-01-05",
+      "revision": "r1",
+      "statementMarkdown": "Walidacja potwierdza dopasowanie wymagania do potrzeb, a samo utrwalenie wypowiedzi tego nie potwierdza.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-GPL",
+          "location": "Hasła Validation / Walidacja; fizyczne strony PDF 32"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T05-02",
+      "revision": "r2",
+      "statementMarkdown": "Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.5; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.5; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-GPL",
+          "location": "Hasła Requirements Engineer; fizyczne strony PDF 14"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-02-02",
+      "revision": "r1",
+      "statementMarkdown": "Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.5; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.5; fizyczne strony PDF 13"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-02-03",
+      "revision": "r1",
+      "statementMarkdown": "Rolę Requirements Engineer mogą pełnić między innymi analitycy, specjaliści aplikacyjni, Product Owners, inżynierowie systemów i programiści.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.5; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.5; fizyczne strony PDF 13"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T05-03",
+      "revision": "r2",
+      "statementMarkdown": "Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.6; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.6; fizyczne strony PDF 13"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-03-02",
+      "revision": "r1",
+      "statementMarkdown": "Znajomość jednego edytora nie wyczerpuje sześciu obszarów wiedzy i praktyk wskazanych w §1.6.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-SEN",
+          "location": "§1.6; fizyczne strony PDF 13"
+        },
+        {
+          "sourceId": "SRC-T05-SPL",
+          "location": "§1.6; fizyczne strony PDF 13"
+        }
+      ]
+    },
+    {
+      "id": "REG-T05-03-03",
+      "revision": "r1",
+      "statementMarkdown": "Handbook wymienia słuchanie, moderowanie, negocjowanie, mediację, empatię i otwartość jako potrzebne umiejętności interpersonalne.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T05-HEN",
+          "location": "§1.6, soft skills; fizyczne strony PDF 14"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "N-T05-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Czynności a organizacja pracy",
+      "bodyMarkdown": "**Cel:** Rozpoznaje czynności i warunki doboru sposobu pracy.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nGłówne zadania RE to pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. Syllabus zalicza analizę wymagań i rozwiązywanie ich konfliktów do pozyskiwania. Narzędzia mogą pomagać w realizacji tych zadań, ale zakup programu nie jest piątym równorzędnym zadaniem tego wykazu i nie zastępuje ich wykonania.\n\nAby realizować zadania właściwie, trzeba dopasować proces RE do sytuacji. Tailoring nie oznacza rezygnacji z dyscypliny. Określa dobór sposobu pracy, praktyk i artefaktów do problemu, otoczenia i procesu wytwarzania. Znajomość czterech nazw nie ustala obowiązkowej sekwencji jednorazowego przechodzenia przez etapy. Zadania mogą powracać i współdziałać; szczegóły konfiguracji procesu są właścicielskim zakresem T30–T32.\n\nNa L1 należy rozpoznać zadanie i wiedzieć o potrzebie dostosowania procesu. Nie wymagamy samodzielnego zaprojektowania procesu dla złożonej organizacji ani wyboru jedynej techniki zawsze właściwej.\n\n**Terminologia PL/EN:** pozyskiwanie — elicitation; dokumentowanie — documentation; walidacja — validation; zarządzanie wymaganiami — requirements management; tailoring — projektowo „dostosowanie procesu”.\n\n**Przypadek:** Rozmowa o oczekiwaniach wspiera pozyskiwanie; zapis uzgodnień dokumentowanie; porównanie z potrzebami walidację; obsługa zmian i powiązań zarządzanie.\n\n**Granica:** Uogólnienie „jedna skuteczna procedura jest dobra wszędzie” obala zastosowanie ciężkiego trybu zatwierdzania do małego eksperymentu bez rozważenia jego celu i ryzyka. Wymagana jest refleksja i dopasowanie.\n\n**Samodzielna próba:** Wymień cztery główne zadania RE, miejsce analizy i rozwiązywania konfliktów oraz sens tailoring.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T05-01",
+        "REG-T05-01-02",
+        "REG-T05-01-03",
+        "REG-T05-01-04",
+        "REG-T05-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § REG-KRY-T05-01"
+    },
+    {
+      "id": "N-T05-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Udział osób w pracy nad wymaganiami",
+      "bodyMarkdown": "**Cel:** Charakteryzuje udział osoby w opisanej pracy.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nRequirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska. W tę rolę wchodzą osoby pozyskujące, dokumentujące, walidujące lub zarządzające wymaganiami w ramach swoich obowiązków, mające pogłębioną wiedzę RE i zdolność połączenia problemu z potencjalnymi rozwiązaniami. W praktyce mogą ją pełnić analitycy, specjaliści aplikacyjni, Product Owners, systems engineers oraz programiści.\n\nNie należy wyprowadzać pełnienia roli wyłącznie z etykiety stanowiska. Podobnie brak tytułu „Requirements Engineer” w strukturze organizacyjnej nie dowodzi braku pracy RE. W zadaniu rozpoznajemy charakterystykę roli; nie przeprowadzamy audytu kompetencji rzeczywistej osoby. Jedna osoba może łączyć role, a obowiązki RE mogą być rozdzielone między kilka osób. Zwrot „i/lub” w zakresie zadań nie oznacza obowiązku osobistego wykonania przez każdego inżyniera wszystkich czterech czynności w każdym projekcie.\n\n**Terminologia PL/EN:** inżynier wymagań — Requirements Engineer; rola — role; stanowisko — job title: ostatnie zestawienie jest objaśnieniem §1.5.\n\n**Przypadek:** Product Owner prowadzący uzgodnienia potrzeb i walidację może działać w roli RE, choć jego etat nie ma takiej nazwy.\n\n**Granica:** Uogólnienie „programista nie może pełnić roli RE” obala programista uczestniczący kompetentnie w pozyskiwaniu i uzgadnianiu wymagań. Sama nazwa stanowiska tego nie wyklucza.\n\n**Samodzielna próba:** Scharakteryzuj rolę Requirements Engineer i podaj dwa stanowiska, które mogą ją pełnić.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T05-02",
+        "REG-T05-02-02",
+        "REG-T05-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § REG-KRY-T05-02"
+    },
+    {
+      "id": "N-T05-03",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Zakres potrzebnego przygotowania",
+      "bodyMarkdown": "**Cel:** Rozpoznaje obszary potrzebnej wiedzy i umiejętności.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nPodstawowy zakres uczenia obejmuje zasady RE, dokumentowanie w różnych postaciach, praktyki opracowywania wymagań, odpowiednie procesy i struktury pracy, zarządzanie wymaganiami oraz wsparcie narzędziowe. To sześć obszarów odpowiadających EU2–EU7; EU1 daje wprowadzenie. Lista nie nakazuje nauki jednego konkretnego produktu ani sprowadzania RE do diagramów.\n\nHandbook dodatkowo wskazuje umiejętności interpersonalne: słuchanie, moderowanie, negocjowanie, mediację, empatię i otwartość na potrzeby oraz pomysły innych. W tym temacie są objaśniającym rozwinięciem roli, jawnie opartym na Handbook. Nie tworzymy z nich nowych oficjalnych EO ani testu praktycznego poziomu L3. Nauka pojęć o narzędziach to inna rzecz niż sama obsługa jednego interfejsu; podobnie znajomość celu negocjacji nie poświadcza zawodowej biegłości negocjatora.\n\nWymagany wynik L1 to rozpoznanie obszarów i ich sensu. Szczegółowe wykonania i techniki pozostają w odpowiednich tematach późniejszych zbiorów.\n\n**Terminologia PL/EN:** zasady — principles; artefakty — work products; opracowywanie — elaboration; proces i struktura pracy — process and working structure; zarządzanie — management; wsparcie narzędziowe — tool support: nazwy obszarów sylabusa.\n\n**Przypadek:** Kandydat uczy się dobierać reprezentację wymagania, rozumieć walidację i zarządzać zmianą; znajomość jednej notacji nie wyczerpuje zakresu.\n\n**Granica:** Uogólnienie „kurs narzędzia wyczerpuje RE” obala sytuacja, gdy użytkownik programu umie tworzyć rekordy, lecz nie rozróżnia potrzeby i narzuconego rozwiązania.\n\n**Samodzielna próba:** Wymień sześć obszarów nauki wskazanych w §1.6. Osobno nazwij dwa przykłady soft skills z Handbook.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T05-03",
+        "REG-T05-03-02",
+        "REG-T05-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § REG-KRY-T05-03"
+    },
+    {
+      "id": "CE-KRY-T05-01",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Czynności a organizacja pracy",
+      "bodyMarkdown": "Uogólnienie „jedna skuteczna procedura jest dobra wszędzie” obala zastosowanie ciężkiego trybu zatwierdzania do małego eksperymentu bez rozważenia jego celu i ryzyka. Wymagana jest refleksja i dopasowanie.\n\n**Reguła rozstrzygająca:** Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14",
+      "ruleIds": [
+        "REG-KRY-T05-01",
+        "REG-T05-01-02",
+        "REG-T05-01-03",
+        "REG-T05-01-04",
+        "REG-T05-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CE-KRY-T05-01"
+    },
+    {
+      "id": "CE-KRY-T05-02",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Udział osób w pracy nad wymaganiami",
+      "bodyMarkdown": "Uogólnienie „programista nie może pełnić roli RE” obala programista uczestniczący kompetentnie w pozyskiwaniu i uzgadnianiu wymagań. Sama nazwa stanowiska tego nie wyklucza.\n\n**Reguła rozstrzygająca:** Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14",
+      "ruleIds": [
+        "REG-KRY-T05-02",
+        "REG-T05-02-02",
+        "REG-T05-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CE-KRY-T05-02"
+    },
+    {
+      "id": "CE-KRY-T05-03",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Zakres potrzebnego przygotowania",
+      "bodyMarkdown": "Uogólnienie „kurs narzędzia wyczerpuje RE” obala sytuacja, gdy użytkownik programu umie tworzyć rekordy, lecz nie rozróżnia potrzeby i narzuconego rozwiązania.\n\n**Reguła rozstrzygająca:** Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15",
+      "ruleIds": [
+        "REG-KRY-T05-03",
+        "REG-T05-03-02",
+        "REG-T05-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CE-KRY-T05-03"
+    },
+    {
+      "id": "CMP-KRY-T05-01",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Czynności a organizacja pracy",
+      "bodyMarkdown": "Oś: zadanie versus sposób wykonania. Walidacja jest zadaniem; wybrany review to praktyka jego wykonania. Narzędzie przechowujące wymagania wspiera pracę, lecz samo nie oznacza walidacji.\n\n**Reguła rozstrzygająca:** Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T05-01",
+        "REG-T05-01-02",
+        "REG-T05-01-03",
+        "REG-T05-01-04",
+        "REG-T05-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CMP-KRY-T05-01"
+    },
+    {
+      "id": "CMP-KRY-T05-02",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Udział osób w pracy nad wymaganiami",
+      "bodyMarkdown": "Oś: formalna etykieta organizacyjna versus wykonywana rola. „Analityk” jest nazwą stanowiska; faktyczne czynności i wiedza mogą wskazywać rolę RE. Etykieta nie jest samodzielnym dowodem kompetencji.\n\n**Reguła rozstrzygająca:** Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T05-02",
+        "REG-T05-02-02",
+        "REG-T05-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CMP-KRY-T05-02"
+    },
+    {
+      "id": "CMP-KRY-T05-03",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Zakres potrzebnego przygotowania",
+      "bodyMarkdown": "Oś: obszar kompetencji versus konkretny nośnik/praktyka. Tool support jest obszarem; kliknięcia w programie są jedną umiejętnością operacyjną. Moderowanie spotkania wspiera współpracę, ale nie zastępuje dokumentowania czy walidacji.\n\n**Reguła rozstrzygająca:** Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T05-03",
+        "REG-T05-03-02",
+        "REG-T05-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § CMP-KRY-T05-03"
+    },
+    {
+      "id": "EX-KRY-T05-01",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Czynności a organizacja pracy",
+      "bodyMarkdown": "Rozmowa o oczekiwaniach wspiera pozyskiwanie; zapis uzgodnień dokumentowanie; porównanie z potrzebami walidację; obsługa zmian i powiązań zarządzanie.\n\n**Reguła rozstrzygająca:** Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14",
+      "ruleIds": [
+        "REG-KRY-T05-01",
+        "REG-T05-01-02",
+        "REG-T05-01-03",
+        "REG-T05-01-04",
+        "REG-T05-01-05"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § EX-KRY-T05-01"
+    },
+    {
+      "id": "EX-KRY-T05-02",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Udział osób w pracy nad wymaganiami",
+      "bodyMarkdown": "Product Owner prowadzący uzgodnienia potrzeb i walidację może działać w roli RE, choć jego etat nie ma takiej nazwy.\n\n**Reguła rozstrzygająca:** Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14",
+      "ruleIds": [
+        "REG-KRY-T05-02",
+        "REG-T05-02-02",
+        "REG-T05-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § EX-KRY-T05-02"
+    },
+    {
+      "id": "EX-KRY-T05-03",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Zakres potrzebnego przygotowania",
+      "bodyMarkdown": "Kandydat uczy się dobierać reprezentację wymagania, rozumieć walidację i zarządzać zmianą; znajomość jednej notacji nie wyczerpuje zakresu.\n\n**Reguła rozstrzygająca:** Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15",
+      "ruleIds": [
+        "REG-KRY-T05-03",
+        "REG-T05-03-02",
+        "REG-T05-03-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § EX-KRY-T05-03"
+    }
+  ],
+  "questions": [
+    {
+      "id": "T05-D01",
+      "revision": "r1",
+      "format": "K",
+      "role": "delayed-candidate",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Zespół potraktował listę zadań jako nakaz wykonania każdego dokładnie raz. Inna osoba proponuje dopasować proces i wracać do potrzebnych czynności. Oceń argumenty.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Pozyskiwanie, dokumentowanie, walidacja i zarządzanie to główne zadania RE."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Sama kolejność nazw w wykazie dowodzi zakazu ponownej walidacji."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Dobór procesu do sytuacji jest zgodny z wymaganiem tailoring."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-D01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Opis odwołuje się do źródłowego wykazu → te cztery nazwy do niego należą → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T05-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/D, RAT-T05-D01-1"
+        },
+        {
+          "id": "RAT-T05-D01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Wykaz nie jest uniwersalnym harmonogramem → proces dobiera się do sytuacji → Fałsz.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/D, RAT-T05-D01-2"
+        },
+        {
+          "id": "RAT-T05-D01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Zaproponowano dopasowanie sposobu pracy → §1.4 wymaga odpowiedniego procesu → Prawda.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/D, RAT-T05-D01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-01/D"
+    },
+    {
+      "id": "T05-D02",
+      "revision": "r1",
+      "format": "A",
+      "role": "delayed-candidate",
+      "weight": 1,
+      "stemMarkdown": "W nowym projekcie Product Owner kompetentnie pozyskuje i waliduje wymagania oraz wyjaśnia ich związek z rozwiązywanym problemem. Kierownik uznaje, że bez zmiany nazwy etatu osoba nie może pełnić roli RE. Który argument jest trafny?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Opisane działania i wiedza mogą odpowiadać roli RE, niezależnie od nazwy etatu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Zmiana nazwy etatu sama zapewniłaby wszystkie kompetencje."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Product Owner jest w Syllabus z definicji wyłączony z roli RE."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "W roli RE nigdy nie wolno rozważać potencjalnych rozwiązań."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-D02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Podano czynności i łączenie problemu z rozwiązaniem → charakterystyka roli dotyczy pracy, nie wyłącznie etykiety → argument jest poprawny.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/D, RAT-T05-D02-a"
+        },
+        {
+          "id": "RAT-T05-D02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Nowa nazwa nie dodaje wiedzy ani wykonania → opis roli wymaga rzeczywistych cech → argument jest błędny.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/D, RAT-T05-D02-b"
+        },
+        {
+          "id": "RAT-T05-D02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Ta funkcja jest dopuszczona w §1.5 → wykluczenie przeczy wykazowi → argument jest błędny.",
+          "ruleIds": [
+            "REG-T05-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/D, RAT-T05-D02-c"
+        },
+        {
+          "id": "RAT-T05-D02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Podano łączenie problemu z rozwiązaniami → jest to część charakterystyki → zakaz jest błędny.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/D, RAT-T05-D02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-02/D"
+    },
+    {
+      "id": "T05-D03",
+      "revision": "r1",
+      "format": "P",
+      "role": "delayed-candidate",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "W planie nauki są zasady RE, dokumentowanie w różnych postaciach oraz opracowywanie wymagań. Które trzy obszary uzupełniają pełny wykaz z §1.6 Syllabus?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Definiowanie i stosowanie odpowiednich procesów RE."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Obowiązkowa specjalizacja w jednym wskazanym komercyjnym edytorze."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Zarządzanie istniejącymi wymaganiami."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Zastąpienie walidacji samą pamięcią prowadzącego."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Wykorzystanie wsparcia narzędziowego."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-D03-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Brakuje obszaru organizacji pracy → odpowiednie procesy są częścią §1.6 → pozycja należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/D, RAT-T05-D03-a"
+        },
+        {
+          "id": "RAT-T05-D03-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Syllabus mówi o wsparciu narzędziowym jako obszarze → nie wskazuje takiego obowiązkowego produktu → pozycja nie należy do klucza.",
+          "ruleIds": [
+            "REG-T05-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/D, RAT-T05-D03-b"
+        },
+        {
+          "id": "RAT-T05-D03-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Pierwsze trzy obszary nie obejmują tej pracy → zarządzanie jest osobnym obszarem §1.6 → pozycja należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/D, RAT-T05-D03-c"
+        },
+        {
+          "id": "RAT-T05-D03-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Nie opisano żadnego obszaru z wykazu → pamięć nie zastępuje podstawowego zakresu → pozycja nie należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/D, RAT-T05-D03-d"
+        },
+        {
+          "id": "RAT-T05-D03-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Narzędzia są szóstym obszarem → uzupełniają podane zasady, dokumentowanie i opracowywanie → pozycja należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/D, RAT-T05-D03-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-03/D"
+    },
+    {
+      "id": "T05-F03",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń przyporządkowania do podstawowego zakresu nauki RE i rozwinięcia z Handbook.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Zasady, dokumentowanie i opracowywanie wymagań należą do zakresu nauki."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Procesy, zarządzanie i wsparcie narzędziowe uzupełniają wskazany zakres."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Biegłość w jednym edytorze wyczerpuje wszystkie sześć obszarów."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Słuchanie i moderowanie są przykładami umiejętności interpersonalnych wymienionych w Handbook."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-F03-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Te trzy obszary wskazano w §1.6 → stanowią część sześciu obszarów → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/F, RAT-T05-F03-1"
+        },
+        {
+          "id": "RAT-T05-F03-2",
+          "decisionId": "2",
+          "bodyMarkdown": "To pozostałe obszary EU5–EU7 → wraz z wcześniejszymi tworzą pełną szóstkę → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/F, RAT-T05-F03-2"
+        },
+        {
+          "id": "RAT-T05-F03-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Edytor dotyczy fragmentu narzędzi → nie zastępuje pozostałych obszarów → Fałsz.",
+          "ruleIds": [
+            "REG-T05-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/F, RAT-T05-F03-3"
+        },
+        {
+          "id": "RAT-T05-F03-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Obie umiejętności występują w §1.6 Handbook → rozpoznanie tej listy jest poprawne → Prawda.",
+          "ruleIds": [
+            "REG-T05-03-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/F, RAT-T05-F03-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-03/F"
+    },
+    {
+      "id": "T05-G01",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "Zespół wykonuje wywiady, zapisuje ustalenia, sprawdza ich adekwatność i obsługuje zmiany. Następnie wybiera częstość spotkań i postać artefaktów stosownie do dostępności interesariuszy. Który opis jest trafny?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Wybrana aplikacja automatycznie wykonuje wszystkie cztery zadania RE."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Lista czterech zadań ustanawia jeden obowiązkowy jednorazowy harmonogram."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Nazwano główne zadania RE i dostosowano sposób ich realizacji do sytuacji."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Analiza i rozwiązywanie konfliktów z definicji nie należą do pozyskiwania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-G01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Opis wskazuje czynności zespołu → wsparcie narzędziowe nie zastępuje ich wykonania → odpowiedź jest błędna.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/G, RAT-T05-G01-a"
+        },
+        {
+          "id": "RAT-T05-G01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Dane obejmują wybór organizacji pracy → Syllabus wymaga doboru procesu → uniwersalna sekwencja nie wynika.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/G, RAT-T05-G01-b"
+        },
+        {
+          "id": "RAT-T05-G01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Wywiady, zapis, sprawdzenie i zmiany odpowiadają zadaniom → ich proces wymaga tailoring → opis jest poprawny.",
+          "ruleIds": [
+            "REG-KRY-T05-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/G, RAT-T05-G01-c"
+        },
+        {
+          "id": "RAT-T05-G01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Pytanie dotyczy wykazu Syllabus → zalicza on te czynności do elicitation → zaprzeczenie jest błędne.",
+          "ruleIds": [
+            "REG-T05-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-01/G, RAT-T05-G01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-01/G"
+    },
+    {
+      "id": "T05-G02",
+      "revision": "r1",
+      "format": "P",
+      "role": "follow-up-2",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Analityczka pozyskuje i dokumentuje wymagania, a deweloper z interesariuszami sprawdza ich znaczenie. Oboje mają pogłębioną wiedzę RE i łączą problem z potencjalnymi rozwiązaniami. Nie istnieje osobny etat Requirements Engineer. Które wnioski są uzasadnione?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Brak tego etatu wyklucza pełnienie roli przez obie osoby."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Podział obowiązków może realizować rolę RE przez osoby o innych stanowiskach."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Sam tytuł analityczka poświadczałby całą kompetencję także bez tych danych."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Programista nie jest z definicji wyłączony z roli Requirements Engineer."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-G02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Obowiązki i wiedza zostały podane → rola nie wymaga nazwy etatu → wniosek jest błędny.",
+          "ruleIds": [
+            "REG-KRY-T05-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/G, RAT-T05-G02-a"
+        },
+        {
+          "id": "RAT-T05-G02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Opis zawiera czynności, wiedzę i most problem–rozwiązania → charakterystyka może być spełniona bez osobnego etatu → wniosek jest trafny.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/G, RAT-T05-G02-b"
+        },
+        {
+          "id": "RAT-T05-G02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Dane o czynnościach i wiedzy są istotne → nazwa stanowiska nie zastępuje charakterystyki → wniosek jest nieuprawniony.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/G, RAT-T05-G02-c"
+        },
+        {
+          "id": "RAT-T05-G02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Podano dewelopera wykonującego część zadań → Syllabus dopuszcza programistów w tej roli → wniosek jest trafny.",
+          "ruleIds": [
+            "REG-T05-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-02/G, RAT-T05-G02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-02/G"
+    },
+    {
+      "id": "T05-G03",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "Program kursu obejmuje wyłącznie rysowanie diagramów w jednym edytorze. Organizator uważa, że to pełny zakres przygotowania RE. Która ocena jest trafna?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Kurs jest pełny, jeżeli edytor ma wiele funkcji."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Z zakresu RE należy usunąć zarządzanie istniejącymi wymaganiami."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Pozostałe obszary zastąpi sam tytuł certyfikatu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Brakuje zakresów zasad, opracowywania, procesów i zarządzania, a samo narzędzie nie wyczerpuje także dokumentowania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T05-G03-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Liczba funkcji narzędzia nie pokrywa sześciu obszarów → obsługa programu nie wyczerpuje RE → ocena jest błędna.",
+          "ruleIds": [
+            "REG-T05-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/G, RAT-T05-G03-a"
+        },
+        {
+          "id": "RAT-T05-G03-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Zarządzanie znajduje się w §1.6 → redukcja kursu nie zmienia wykazu → ocena jest błędna.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/G, RAT-T05-G03-b"
+        },
+        {
+          "id": "RAT-T05-G03-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Tytuł nie jest treścią kursu → wymagany zakres obejmuje konkretne obszary → ocena nie wynika.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/G, RAT-T05-G03-c"
+        },
+        {
+          "id": "RAT-T05-G03-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Program opisuje tylko diagramy i edytor → §1.6 obejmuje szerszą szóstkę → zarzut niepełności jest uzasadniony.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T05-03/G, RAT-T05-G03-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T05-03/G"
+    },
+    {
+      "id": "Z1-T05-01-B01",
+      "revision": "r2",
+      "format": "K",
+      "role": "base",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń twierdzenia o wykazie zadań RE.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Walidacja i dokumentowanie należą do głównych zadań RE."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Analizę wymagań i rozwiązywanie konfliktów zaliczono tu do pozyskiwania."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Proces RE należy dostosować do sytuacji."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Zakup narzędzia zastępuje pozyskiwanie wymagań."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": true,
+          "4": false
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T05-01-B01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Obie nazwy należą do §1.4 → Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T05-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01, RAT-Z1-T05-01-B01-1"
+        },
+        {
+          "id": "RAT-Z1-T05-01-B01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Taki zakres elicitation przyjmuje syllabus → Syllabus zalicza analizę wymagań i rozwiązywanie konfliktów do pozyskiwania wymagań. → Prawda.",
+          "ruleIds": [
+            "REG-T05-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01, RAT-Z1-T05-01-B01-2"
+        },
+        {
+          "id": "RAT-Z1-T05-01-B01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "§1.4 wymaga tailoring → Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie. → Prawda.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01, RAT-Z1-T05-01-B01-3"
+        },
+        {
+          "id": "RAT-Z1-T05-01-B01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Wsparcie narzędziowe nie zastępuje zadania → Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie. → Fałsz.",
+          "ruleIds": [
+            "REG-T05-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01, RAT-Z1-T05-01-B01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01"
+    },
+    {
+      "id": "Z1-T05-01-F01",
+      "revision": "r2",
+      "format": "P",
+      "role": "follow-up-1",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Które DWIE czynności odpowiadają walidacji lub zarządzaniu wymaganiami?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Pozyskanie nowej potrzeby w wywiadzie, bez jej sprawdzania lub zarządzania istniejącym zapisem."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Utrwalenie treści rozmowy jako nowego opisu, bez oceny adekwatności."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Sprawdzenie, czy zapisane oczekiwanie odpowiada potrzebie interesariusza."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Utrzymanie wersji i obsługa zmiany istniejącego wymagania."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c",
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T05-01-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To elicitation, nie jedna z dwóch czynności wyznaczonych pytaniem → Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-F01, RAT-Z1-T05-01-F01-a"
+        },
+        {
+          "id": "RAT-Z1-T05-01-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "To dokumentowanie; sam zapis nie jest walidacją ani obsługą istniejącego wymagania → Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-F01, RAT-Z1-T05-01-F01-b"
+        },
+        {
+          "id": "RAT-Z1-T05-01-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To potwierdzenie adekwatności wobec potrzeby → walidacja → wybrać.",
+          "ruleIds": [
+            "REG-T05-01-05"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-F01, RAT-Z1-T05-01-F01-c"
+        },
+        {
+          "id": "RAT-Z1-T05-01-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "To zarządzanie istniejącymi wymaganiami → Zarządzanie wymaganiami obejmuje istniejące wymagania i powiązane artefakty, w tym przechowywanie, zmiany i śledzenie powiązań. → wybrać.",
+          "ruleIds": [
+            "REG-T05-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-01",
+              "aspectId": "ZAK-T05-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-F01, RAT-Z1-T05-01-F01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-F01"
+    },
+    {
+      "id": "Z1-T05-02-B01",
+      "revision": "r2",
+      "format": "A",
+      "role": "base",
+      "weight": 1,
+      "stemMarkdown": "Które stwierdzenie o roli Requirements Engineer jest poprawne?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Zawsze sprowadza się do przepisywania wypowiedzi bez rozumienia problemu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Nie wymaga znajomości RE."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Może być pełniona przez Product Ownera lub programistę."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Musi być osobnym stanowiskiem w każdej organizacji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T05-02-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Rola obejmuje wiedzę i most problem–rozwiązania → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → nie wybrać.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-B01, RAT-Z1-T05-02-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T05-02-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Pogłębiona wiedza należy do charakterystyki → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → nie wybrać.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-B01, RAT-Z1-T05-02-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T05-02-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "§1.5 wymienia różne funkcje zawodowe → Rolę Requirements Engineer mogą pełnić między innymi analitycy, specjaliści aplikacyjni, Product Owners, inżynierowie systemów i programiści. → wybrać.",
+          "ruleIds": [
+            "REG-T05-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-B01, RAT-Z1-T05-02-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T05-02-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Syllabus mówi zwykle o roli, nie obowiązkowym etacie → Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-B01, RAT-Z1-T05-02-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-B01"
+    },
+    {
+      "id": "Z1-T05-02-F01",
+      "revision": "r2",
+      "format": "K",
+      "role": "follow-up-1",
+      "weight": 2,
+      "m": 3,
+      "stemMarkdown": "Oceń twierdzenia o roli RE.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Brak etatu o nazwie Requirements Engineer nie dowodzi braku tej roli."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Sama nazwa stanowiska wystarcza do poświadczenia zawodowej kompetencji."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Łączenie problemu z potencjalnymi rozwiązaniami należy do charakterystyki roli."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": false,
+          "3": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T05-02-F01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Rolę mogą pełnić osoby o innych stanowiskach → Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T05-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-F01, RAT-Z1-T05-02-F01-1"
+        },
+        {
+          "id": "RAT-Z1-T05-02-F01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Etykieta nie potwierdza wiedzy i działania → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → Fałsz; granica interpretacji charakterystyki.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-F01, RAT-Z1-T05-02-F01-2"
+        },
+        {
+          "id": "RAT-Z1-T05-02-F01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "To wprost element §1.5 → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → Prawda.",
+          "ruleIds": [
+            "REG-T05-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-02",
+              "aspectId": "ZAK-T05-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-F01, RAT-Z1-T05-02-F01-3"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-F01"
+    },
+    {
+      "id": "Z1-T05-03-B01",
+      "revision": "r2",
+      "format": "P",
+      "role": "base",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Które TRZY pozycje są obszarami nauki wskazanymi w §1.6?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Zarządzanie istniejącymi wymaganiami."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Obowiązkowe opanowanie jednego konkretnego komercyjnego edytora."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Zastąpienie wszystkich uzgodnień samą pamięcią autora."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Dokumentowanie wymagań w różnych formach."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Procesy i struktury pracy RE."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "d",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T05-03-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "To wskazany obszar EU6 → Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01, RAT-Z1-T05-03-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T05-03-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Syllabus nie narzuca konkretnego produktu → Znajomość jednego edytora nie wyczerpuje sześciu obszarów wiedzy i praktyk wskazanych w §1.6. → nie wybrać.",
+          "ruleIds": [
+            "REG-T05-03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01, RAT-Z1-T05-03-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T05-03-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "To nie jest obszar wskazanego zestawu umiejętności → Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01, RAT-Z1-T05-03-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T05-03-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "To wskazany obszar EU3 → Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01, RAT-Z1-T05-03-B01-d"
+        },
+        {
+          "id": "RAT-Z1-T05-03-B01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To wskazany obszar EU5 → Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T05-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T05-03",
+              "aspectId": "ZAK-T05-03"
+            }
+          ],
+          "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01, RAT-Z1-T05-03-B01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T05-03",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-B01"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "RP-T05-01",
+      "revision": "r2",
+      "promptMarkdown": "Wymień cztery główne zadania RE, miejsce analizy i rozwiązywania konfliktów oraz sens tailoring.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Nazywa elicitation, documentation, validation i management. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Analiza i rozwiązywanie konfliktów należą w tym wykazie do elicitation; proces dobiera się do sytuacji. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14",
+      "scope": [
+        {
+          "criterionId": "KRY-T05-01",
+          "aspectId": "ZAK-T05-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § RP-T05-01"
+    },
+    {
+      "id": "RP-T05-02",
+      "revision": "r2",
+      "promptMarkdown": "Scharakteryzuj rolę Requirements Engineer i podaj dwa stanowiska, które mogą ją pełnić.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Wskazuje zadania RE, wiedzę RE oraz łączenie problemu z potencjalnymi rozwiązaniami. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Dopuszcza np. analityka, PO, systems engineer lub programistę; rola nie wymaga konkretnej nazwy stanowiska. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14",
+      "scope": [
+        {
+          "criterionId": "KRY-T05-02",
+          "aspectId": "ZAK-T05-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § RP-T05-02"
+    },
+    {
+      "id": "RP-T05-03",
+      "revision": "r2",
+      "promptMarkdown": "Wymień sześć obszarów nauki wskazanych w §1.6. Osobno nazwij dwa przykłady soft skills z Handbook.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Wymienia zasady, dokumentowanie, opracowywanie, procesy, zarządzanie i narzędzia. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Soft skills np. słuchanie i moderacja są rozwinięciem Handbook, a nie nowymi EO; rozpoznanie nie certyfikuje wykonania. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15",
+      "scope": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § RP-T05-03"
+    },
+    {
+      "id": "Z1-T05-03-F01",
+      "revision": "r2",
+      "promptMarkdown": "Przywołaj pełną listę sześciu obszarów nauki z §1.6 i połącz każdy z krótkim sensem. Nie wybieraj konkretnych narzędzi.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Zasady RE; dokumentowanie w różnych formach; opracowywanie różnymi praktykami. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Definiowanie i stosowanie odpowiednich procesów; zarządzanie wymaganiami; wsparcie narzędziowe. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Dopuszczalne nazwy EU2–EU7 z poprawnym sensem; pominięty obszar to częściowe odtworzenie.\n\n**Błąd krytyczny:** Zastąpienie listy samą obsługą jednego programu.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15",
+      "scope": [
+        {
+          "criterionId": "KRY-T05-03",
+          "aspectId": "ZAK-T05-03"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-03-F01"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-KRY-T05-01",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T05-01",
+        "aspectId": "ZAK-T05-01"
+      },
+      "bodyMarkdown": "Oddziel „co robimy” od „jaką praktyką/narzędziem”. Cztery zadania pozostają; sposób ich realizacji wymaga dopasowania.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T05-01",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T05-01",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T05-01-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T05-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Wykaz czynności odpowiada na pytanie, co trzeba robić. Proces określa, jak, kiedy i z jakimi artefaktami to wykonamy. Wpis w narzędziu dokumentuje treść; dopiero sprawdzenie wobec potrzeb stanowi odpowiednią kontrolę.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T05-02",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T05-02",
+        "aspectId": "ZAK-T05-02"
+      },
+      "bodyMarkdown": "Sprawdź obowiązki i charakterystykę wiedzy, nie samą etykietę etatu. Nie oceniaj pełnej kompetencji zawodowej z jednego quizu.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T05-02",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T05-02",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T05-02-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T05-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Przeczytaj opis obowiązków bez nazwy stanowiska. Czy osoba wykonuje pracę nad wymaganiami, ma potrzebną wiedzę i łączy problem z potencjalnym rozwiązaniem? Formalna nazwa etatu sama nie odpowiada na te pytania.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T05-03",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T05-03",
+        "aspectId": "ZAK-T05-03"
+      },
+      "bodyMarkdown": "Sprawdź komplet sześciu obszarów, zamiast redukować RE do narzędzia, pisania dokumentów albo diagramów.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T05-03",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T05-03",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "T05-F03",
+          "revision": "r1"
+        },
+        {
+          "id": "T05-G03",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Przejdź przez sześć obszarów: zasady, dokumentowanie, opracowywanie, procesy, zarządzanie, narzędzia. Umiejętność użycia jednego programu pokrywa tylko fragment ostatniego. Kompetencje interpersonalne wspierają pracę, lecz nie zastępują pozostałych obszarów.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T05-01",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Zadania RE i tailoring procesu; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T05-02",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Rola Requirements Engineer a stanowisko; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T05-03",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Co inżynier wymagań powinien poznawać; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-EX-KRY-T05-01-illustrates-REG-KRY-T05-01",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T05-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Rozmowa o oczekiwaniach wspiera pozyskiwanie; zapis uzgodnień dokumentowanie; porównanie z potrzebami walidację; obsługa zmian i powiązań zarządzanie.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T05-01-counterexample-of-REG-KRY-T05-01",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T05-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „jedna skuteczna procedura jest dobra wszędzie” obala zastosowanie ciężkiego trybu zatwierdzania do małego eksperymentu bez rozważenia jego celu i ryzyka. Wymagana jest refleksja i dopasowanie.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T05-01-distinguishes-REG-KRY-T05-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T05-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: zadanie versus sposób wykonania. Walidacja jest zadaniem; wybrany review to praktyka jego wykonania. Narzędzie przechowujące wymagania wspiera pracę, lecz samo nie oznacza walidacji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T05-01-explains-REG-KRY-T05-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T05-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T05-01-F01-variant-of-Z1-T05-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T05-01-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T05-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie zadań w prostych opisach, bez projektowania procesu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G01-variant-of-Z1-T05-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrast zadań i konkretnego doboru praktyk; nie projektuje pełnego procesu L3.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-D01-variant-of-Z1-T05-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-D01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Ocena błędnej interpretacji listy jako harmonogramu; zachowano otwarte D wymagające własnego wyjaśnienia.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T05-02-illustrates-REG-KRY-T05-02",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T05-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Product Owner prowadzący uzgodnienia potrzeb i walidację może działać w roli RE, choć jego etat nie ma takiej nazwy.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T05-02-counterexample-of-REG-KRY-T05-02",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T05-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „programista nie może pełnić roli RE” obala programista uczestniczący kompetentnie w pozyskiwaniu i uzgadnianiu wymagań. Sama nazwa stanowiska tego nie wyklucza.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T05-02-distinguishes-REG-KRY-T05-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T05-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: formalna etykieta organizacyjna versus wykonywana rola. „Analityk” jest nazwą stanowiska; faktyczne czynności i wiedza mogą wskazywać rolę RE. Etykieta nie jest samodzielnym dowodem kompetencji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T05-02-explains-REG-KRY-T05-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T05-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T05-02-F01-variant-of-Z1-T05-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T05-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T05-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrast stanowiska i charakterystyki.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G02-variant-of-Z1-T05-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Praca rozdzielona między dwie osoby zamiast definicji stanowiska; zakres nie obejmuje certyfikowania kompetencji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-D02-variant-of-Z1-T05-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-D02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Spór o formalny etat przy jawnej charakterystyce pracy, bez udawania pełnego audytu zawodowego.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T05-03-illustrates-REG-KRY-T05-03",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T05-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Kandydat uczy się dobierać reprezentację wymagania, rozumieć walidację i zarządzać zmianą; znajomość jednej notacji nie wyczerpuje zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T05-03-counterexample-of-REG-KRY-T05-03",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T05-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „kurs narzędzia wyczerpuje RE” obala sytuacja, gdy użytkownik programu umie tworzyć rekordy, lecz nie rozróżnia potrzeby i narzuconego rozwiązania.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T05-03-distinguishes-REG-KRY-T05-03",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T05-03",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: obszar kompetencji versus konkretny nośnik/praktyka. Tool support jest obszarem; kliknięcia w programie są jedną umiejętnością operacyjną. Moderowanie spotkania wspiera współpracę, ale nie zastępuje dokumentowania czy walidacji.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T05-03-explains-REG-KRY-T05-03",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T05-03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-F03-variant-of-Z1-T05-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-F03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie pełnej szóstki w dwóch grupach i jawne oddzielenie rozwinięcia Handbook; otwarte F zachowuje recall.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G03-variant-of-Z1-T05-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-G03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Ocena niepełnego programu zamiast wybierania trzech pozycji listy.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-D03-variant-of-Z1-T05-03-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T05-D03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T05-03-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Dopełnienie pełnej szóstki po innej grupie wejściowej; nie dowodzi samodzielnego odtworzenia bez podpowiedzi.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T05-01-F01-checks-after-REM-KRY-T05-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T05-01-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-01.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G01-checks-after-REM-KRY-T05-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T05-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T05-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-01.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T05-02-F01-checks-after-REM-KRY-T05-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T05-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-02.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G02-checks-after-REM-KRY-T05-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T05-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T05-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-02.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-F03-checks-after-REM-KRY-T05-03",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T05-F03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-03.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-03.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T05-G03-checks-after-REM-KRY-T05-03",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T05-G03",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T05-03",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T05-03.",
+      "provenance": "Lista followUps w content/authoring/T05/corrections/REM-KRY-T05-03.md",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "unresolved",
+    "channels": []
+  }
+}

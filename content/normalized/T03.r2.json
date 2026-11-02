@@ -1,0 +1,1957 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageId": "T03",
+  "revision": "r2",
+  "title": "T03 — Wartość RE i skutki jego niedostatków",
+  "language": "pl",
+  "purpose": "content",
+  "runtimeCompleteness": "partial",
+  "limitations": [
+    "Cztery wskazane korzyści RE; objawy brakujących/niejasnych/nieprawidłowych wymagań i cztery źródłowo wymienione przyczyny.",
+    "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
+    "Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.",
+    "Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.",
+    "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
+  ],
+  "status": {
+    "authoring": "draft",
+    "review": "pending",
+    "publication": "review-only",
+    "allowedUses": [],
+    "empirical": "none"
+  },
+  "provenance": [
+    {
+      "path": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md",
+      "sha256": "fe3a052a200b0b7fafa22e3615ef4954fe5cf71a29e26ea9779a6692b2187fc9",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_QA_and_Handoff_v0.1.md",
+      "sha256": "d6f848b8ef214f58921d5e18d0f31250278ffcd246c7e28650e105b25b12c44b",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "references/content/Z1_IREB_CPRE_Manifest_v0.1.md",
+      "sha256": "b8a240a1e78c08fd365e90b53f1120bf4c89717246f265d056e3b210d34264ba",
+      "documentVersion": "v0.1",
+      "storedFileVersion": "brak danych"
+    },
+    {
+      "path": "content/authoring/T03/corrections/REM-KRY-T03-01.md",
+      "sha256": "820490602f36b4f2e790b909ccc0fe9970818d8c53314306d6f8af2932895b3f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/corrections/REM-KRY-T03-02.md",
+      "sha256": "4dec5fd610c800763d51cff13a95bb16dd462cd1164c7fcd707d35c7faed81b1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/CE-KRY-T03-01.md",
+      "sha256": "61c2411d0db41097a3841817698b522d2d168c0edb3546ca50770832b15946a0",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/CE-KRY-T03-02.md",
+      "sha256": "e4e9608778671174260aa6292561d602fdf952179168e9a6735d21839ccf14f8",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/CMP-KRY-T03-01.md",
+      "sha256": "41cc36efaccaa789702107428e0375da8fa6cf828f3c3a80c44966737b02f2c1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/CMP-KRY-T03-02.md",
+      "sha256": "6c05a24d92565366f3b52198bd5beb0c66ffa7e5202d1ba5bf52870e72daa49a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/EX-KRY-T03-01.md",
+      "sha256": "22f74acde8abc58b66f4f5bd669e64ccf219190164639c0a27201f068a5ab6b1",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/examples/EX-KRY-T03-02.md",
+      "sha256": "f6dc75501507370febe6515813b25acadbb5187a8044eb54aa01fcd815e07d2a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/lessons/N-T03-01.md",
+      "sha256": "a89be491d1c0647010cd779d1fd99449cedb9a647c18941af581ae5baaf81ea0",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/lessons/N-T03-02.md",
+      "sha256": "f9d5de55bac6bdc461a66f6ad47ac16560ed08e282a907b42fdf9644dc5a0cbc",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/open/RP-T03-01.md",
+      "sha256": "75a154b88266fbbfc12377ae5216f4af1d403cbcac690a087cfd1e043f877c13",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/open/RP-T03-02.md",
+      "sha256": "92a659afe061b3dd5b880333855db4da76ee6a9c68b0aebf41fdb2dd66e934bf",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/open/Z1-T03-01-F01.md",
+      "sha256": "32c00d5c5c6574fb05e3269434b5e210f52c353a41bd500be34ef8c8b6add4af",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/T03-D01.yaml",
+      "sha256": "ff0dcf724d0b07dc3fc2ef21f0fb06b4b8b731e90ff70b8aa024f313cdb61513",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/T03-D02.yaml",
+      "sha256": "7062bb692eaefdd3f6264bcc0a2b7d7480feac4e74f1140a58519a91c8bd7f3d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/T03-F01.yaml",
+      "sha256": "09ef347454901605c87707915b45ba7e2a4504e5a99ecdf33f4bb30dc09bf7f6",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/T03-G01.yaml",
+      "sha256": "635a653bda6a5c1526e5f66edba79714c357918427d3b30fc3144125235404af",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/T03-G02.yaml",
+      "sha256": "6ac49d62736ec0c57e54f04c4096e6b89ed29f376d4b202f26d6d989a556e325",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/Z1-T03-01-B01.yaml",
+      "sha256": "7986f9ea25167b838a21cbe1a3fefeedf6f7d317d916be40782a339e2f27c354",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/Z1-T03-02-B01.yaml",
+      "sha256": "dbabaa7cad054c30375942d8f5fdb1dce31299a3fd74792eed4194bf2b0b905f",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/questions/Z1-T03-02-F01.yaml",
+      "sha256": "dfd57cb75b7facdcb31752074fb1dc517d431e94c7c13d4a99aee36fd7ab64f4",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/relations.yaml",
+      "sha256": "f27d9df6f885a33a9fe8be16585bb22f4ce191c60d9f3465aa0ff870fc383923",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/rules.yaml",
+      "sha256": "2154260e1d6b6d28ab63232a7f0e1aa919889268f7eeff9345febb01181401ec",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/sources.yaml",
+      "sha256": "59c5a4cfb5009bb849d437c7a09a6342a847e58ab719ab3dec5ec3f63bfd230d",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
+      "path": "content/authoring/T03/topic.yaml",
+      "sha256": "b082bd22d4b0250584e2d0080f2a7e180f5ab4f1e060ada4b54408cbd2027298",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    }
+  ],
+  "educationProfile": {
+    "syllabusVersion": "3.3.0",
+    "glossaryVersion": "2.2.0",
+    "regulationsVersion": "5.6.2"
+  },
+  "criteria": [
+    {
+      "id": "KRY-T03-01",
+      "revision": "r2",
+      "description": "Wyjaśnia wpływ ustaleń na działania zespołu.",
+      "eoRefs": [
+        {
+          "id": "EO1.2.1",
+          "level": "L2"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T03-01",
+          "label": "Cztery źródła wartości RE"
+        }
+      ]
+    },
+    {
+      "id": "KRY-T03-02",
+      "revision": "r2",
+      "description": "Rozpoznaje stany wymagań i granice wnioskowania o ich źródłach.",
+      "eoRefs": [
+        {
+          "id": "EO1.2.2",
+          "level": "L1"
+        }
+      ],
+      "aspects": [
+        {
+          "id": "ZAK-T03-02",
+          "label": "Objawy i przyczyny niewłaściwego RE"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-T03-SEN",
+      "title": "CPRE Foundation Level Syllabus EN",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf",
+      "location": "§1.1–1.2; fizyczne strony PDF 11–12; §1.2, Adequate RE adds value; fizyczne strony PDF 12; §1.2, Basis for estimating; fizyczne strony PDF 12; §1.2, Prerequisite for testing; fizyczne strony PDF 12; §1.2, Symptoms and causes; fizyczne strony PDF 12; §1.2, This is particularly due to; fizyczne strony PDF 12; §1.2, Typical symptoms; fizyczne strony PDF 12",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T03-SPL",
+      "title": "CPRE Foundation Level Syllabus PL",
+      "version": "3.3.0",
+      "url": "https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf",
+      "location": "§1.1–1.2; fizyczne strony PDF 11–12; §1.2, Adequate RE adds value; fizyczne strony PDF 12; §1.2, Basis for estimating; fizyczne strony PDF 12; §1.2, Prerequisite for testing; fizyczne strony PDF 12; §1.2, Symptoms and causes; fizyczne strony PDF 12; §1.2, This is particularly due to; fizyczne strony PDF 12; §1.2, Typical symptoms; fizyczne strony PDF 12",
+      "attribution": "IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    },
+    {
+      "id": "SRC-T03-HEN",
+      "title": "CPRE Foundation Level Handbook EN",
+      "version": "1.3.2",
+      "url": "https://isqi.org/media/65/0a/43/1789029072/cpre_foundationlevel_handbook_en_v1.3.2.pdf",
+      "location": "§1.2; fizyczne strony PDF 12–13",
+      "attribution": "IREB e.V.; Martin Glinz, Hans van Loenhoud, Stefan Staal, Stan Bühne; wersja 1.3.2; historia wersji s.5: 23.07.2026; oficjalny dokument w publicznej kopii iSQI; prawa według s.2.",
+      "usageNote": "Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji."
+    }
+  ],
+  "rules": [
+    {
+      "id": "REG-KRY-T03-01",
+      "revision": "r2",
+      "statementMarkdown": "Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, Adequate RE adds value; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, Adequate RE adds value; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T03-01-02",
+      "revision": "r1",
+      "statementMarkdown": "Wymagania dostarczają podstawy estymacji pracy i kosztu, a nie gwarancji trafności każdego oszacowania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, Basis for estimating; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, Basis for estimating; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-HEN",
+          "location": "§1.2; fizyczne strony PDF 12–13"
+        }
+      ]
+    },
+    {
+      "id": "REG-T03-01-03",
+      "revision": "r1",
+      "statementMarkdown": "Wymagania określające oczekiwany system są podstawą testowania, a nie gwarancją braku defektów implementacji.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, Prerequisite for testing; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, Prerequisite for testing; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-HEN",
+          "location": "§1.2; fizyczne strony PDF 12–13"
+        }
+      ]
+    },
+    {
+      "id": "REG-T03-01-04",
+      "revision": "r1",
+      "statementMarkdown": "Lepsze zrozumienie problemu pomaga ograniczać ryzyko wytwarzania systemu, który nie zaspokoi potrzeb interesariuszy.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.1–1.2; fizyczne strony PDF 11–12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.1–1.2; fizyczne strony PDF 11–12"
+        }
+      ]
+    },
+    {
+      "id": "REG-KRY-T03-02",
+      "revision": "r2",
+      "statementMarkdown": "Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, Typical symptoms; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, Typical symptoms; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T03-02-02",
+      "revision": "r1",
+      "statementMarkdown": "Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, This is particularly due to; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, This is particularly due to; fizyczne strony PDF 12"
+        }
+      ]
+    },
+    {
+      "id": "REG-T03-02-03",
+      "revision": "r1",
+      "statementMarkdown": "Wymienienie kilku możliwych przyczyn niedostatków RE nie pozwala ustalić jednej pewnej przyczyny z samego objawu niejasnego wymagania.",
+      "sourceRefs": [
+        {
+          "sourceId": "SRC-T03-SEN",
+          "location": "§1.2, Symptoms and causes; fizyczne strony PDF 12"
+        },
+        {
+          "sourceId": "SRC-T03-SPL",
+          "location": "§1.2, Symptoms and causes; fizyczne strony PDF 12"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "N-T03-01",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Jak ustalenia pomagają w pracy",
+      "bodyMarkdown": "**Cel:** Wyjaśnia wpływ ustaleń na działania zespołu.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nWartość RE należy wyjaśniać przez mechanizm wpływu na rozwój systemu. Uzgodnienie potrzeby zmniejsza ryzyko zbudowania niewłaściwego systemu. Rozpoznanie problemu pomaga ustalić, co trzeba zmienić i dlaczego. Określony zakres oraz oczekiwane właściwości dają podstawę szacowania pracy i kosztu. Wymagania dostarczają również punktu odniesienia dla testowania: trzeba wiedzieć, co ma być sprawdzane.\n\nTo korzyści warunkowe, a nie gwarancja sukcesu, trafnego kosztorysu czy braku defektów. Nie wystarczy sporządzić dokument, jeśli opisuje niewłaściwy problem. W przykładzie brak reguły częściowego zwrotu może prowadzić do błędnego zachowania i przeróbek; jej wcześniejsze uzgodnienie dostarcza również danych do oszacowania wariantów obsługi oraz oczekiwanych testów. Jeden konkretny zapis może wspierać kilka korzyści, lecz nie oznacza to podwójnej niezależnej obserwacji wiedzy ucznia.\n\nNie podajemy uniwersalnych mnożników oszczędności ani dowiedzionego ROI. Dla EO L2 wymagane jest rozumienie, dlaczego dana czynność RE może dawać korzyść, a nie bezwarunkowe hasło „RE się opłaca”.\n\n**Terminologia PL/EN:** wartość — value (etykieta zasady z Syllabus); wymaganie — requirement. „Podstawa szacowania” nie znaczy gwarancji kosztu.\n\n**Przypadek:** Przed estymacją ustalono, że anulowanie ma zwalniać również część rezerwacji. Zespół może uwzględnić dodatkowe zachowanie w nakładzie i scenariuszach testów.\n\n**Granica:** Uogólnienie „RE gwarantuje trafny budżet” obala projekt z poprawnie uzgodnionymi wymaganiami i błędną oceną złożoności technicznej. Wymagania są podstawą, nie gwarancją.\n\n**Samodzielna próba:** Wymień cztery wskazane korzyści RE i wyjaśnij mechanizm przynajmniej dwóch.\n\n**Źródła:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T03-01",
+        "REG-T03-01-02",
+        "REG-T03-01-03",
+        "REG-T03-01-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § REG-KRY-T03-01"
+    },
+    {
+      "id": "N-T03-02",
+      "revision": "r1",
+      "kind": "note",
+      "title": "Obserwowany stan i możliwe wyjaśnienia",
+      "bodyMarkdown": "**Cel:** Rozpoznaje stany wymagań i granice wnioskowania o ich źródłach.\n\nMożesz najpierw podjąć próbę albo przeczytać objaśnienie. Zakres dotyczy wskazanego rozróżnienia, a nie całego EO.\n\nTypowe objawy niewłaściwego RE to wymagania brakujące, niejasne lub nieprawidłowe. Brakujące: istotne oczekiwanie nie zostało uwzględnione. Niejasne: strony mogą inaczej rozumieć zapis. Nieprawidłowe: treść nie odpowiada właściwemu oczekiwaniu lub opisuje błędny warunek. Kategorie mogą współwystępować; nie są diagnozą wyczerpującą każdy problem projektu.\n\nSyllabus wskazuje w szczególności pośpiech prowadzący od razu do budowania, problemy komunikacyjne, założenie oczywistości wymagań oraz niewystarczające wykształcenie i umiejętności RE. To możliwe przyczyny, a nie jednoznaczne etykiety przypisywane z pojedynczego objawu. Niejasne wymaganie może mieć kilka źródeł; bez danych nie wiadomo, które wystąpiło. Podobnie opóźnienie projektu samo w sobie nie dowodzi niedostatku RE — może wynikać z innych czynników.\n\nPoziom L1 wymaga nazwania i rozpoznania wskazanego katalogu. Przykłady przyczyn w materiale są autorskie i służą odróżnieniu symptomu od mechanizmu, nie ocenie kompetencji konkretnego zespołu.\n\n**Terminologia PL/EN:** symptom — objaw/symptom; cause — przyczyna: robocze etykiety dydaktyczne. Missing, unclear, incorrect requirements — brakujące, niejasne, nieprawidłowe wymagania.\n\n**Przypadek:** „System działa szybko” bez uzgodnionego znaczenia jest objawem niejasności. „Wszyscy przecież wiedzą, jak szybko” obrazuje założenie oczywistości jako możliwą przyczynę.\n\n**Granica:** Uogólnienie „każde opóźnienie dowodzi złego RE” obala uzgodniony zakres z opóźnioną dostawą sprzętu. Sam termin nie wskazuje źródła problemu.\n\n**Samodzielna próba:** Wymień trzy symptomy i cztery wskazane w syllabusie przyczyny. Czy sam symptom ustala konkretną przyczynę?\n\n**Źródła:** C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13; dokładne odwołania znajdują się przy regułach tego zakresu.",
+      "ruleIds": [
+        "REG-KRY-T03-02",
+        "REG-T03-02-02",
+        "REG-T03-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § REG-KRY-T03-02"
+    },
+    {
+      "id": "CE-KRY-T03-01",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Jak ustalenia pomagają w pracy",
+      "bodyMarkdown": "Uogólnienie „RE gwarantuje trafny budżet” obala projekt z poprawnie uzgodnionymi wymaganiami i błędną oceną złożoności technicznej. Wymagania są podstawą, nie gwarancją.\n\n**Reguła rozstrzygająca:** Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "ruleIds": [
+        "REG-KRY-T03-01",
+        "REG-T03-01-02",
+        "REG-T03-01-03",
+        "REG-T03-01-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § CE-KRY-T03-01"
+    },
+    {
+      "id": "CE-KRY-T03-02",
+      "revision": "r2",
+      "kind": "counterexample",
+      "title": "Granica: Obserwowany stan i możliwe wyjaśnienia",
+      "bodyMarkdown": "Uogólnienie „każde opóźnienie dowodzi złego RE” obala uzgodniony zakres z opóźnioną dostawą sprzętu. Sam termin nie wskazuje źródła problemu.\n\n**Reguła rozstrzygająca:** Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "ruleIds": [
+        "REG-KRY-T03-02",
+        "REG-T03-02-02",
+        "REG-T03-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § CE-KRY-T03-02"
+    },
+    {
+      "id": "CMP-KRY-T03-01",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Jak ustalenia pomagają w pracy",
+      "bodyMarkdown": "Oś: rezultat bezpośredni i korzyść. Uzgodniona reguła zwrotu jest rezultatem RE; mniejsze ryzyko przeróbki, lepsza estymacja i podstawa testu to możliwe skutki użycia tego rezultatu.\n\n**Reguła rozstrzygająca:** Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T03-01",
+        "REG-T03-01-02",
+        "REG-T03-01-03",
+        "REG-T03-01-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § CMP-KRY-T03-01"
+    },
+    {
+      "id": "CMP-KRY-T03-02",
+      "revision": "r2",
+      "kind": "comparison",
+      "title": "Porównanie: Obserwowany stan i możliwe wyjaśnienia",
+      "bodyMarkdown": "Oś: co obserwujemy versus co mogło do tego doprowadzić. Niejasny zapis to objaw; brak rozmowy z powodu pośpiechu to możliwa przyczyna. Jedno nie ustala automatycznie drugiego.\n\n**Reguła rozstrzygająca:** Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13\n\nPorównanie dotyczy wskazanej wspólnej osi; dwa różne kryteria nie stają się jednym tylko dlatego, że odnoszą się do tego samego przykładu.",
+      "ruleIds": [
+        "REG-KRY-T03-02",
+        "REG-T03-02-02",
+        "REG-T03-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § CMP-KRY-T03-02"
+    },
+    {
+      "id": "EX-KRY-T03-01",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Jak ustalenia pomagają w pracy",
+      "bodyMarkdown": "Przed estymacją ustalono, że anulowanie ma zwalniać również część rezerwacji. Zespół może uwzględnić dodatkowe zachowanie w nakładzie i scenariuszach testów.\n\n**Reguła rozstrzygająca:** Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "ruleIds": [
+        "REG-KRY-T03-01",
+        "REG-T03-01-02",
+        "REG-T03-01-03",
+        "REG-T03-01-04"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § EX-KRY-T03-01"
+    },
+    {
+      "id": "EX-KRY-T03-02",
+      "revision": "r2",
+      "kind": "example",
+      "title": "Przypadek: Obserwowany stan i możliwe wyjaśnienia",
+      "bodyMarkdown": "„System działa szybko” bez uzgodnionego znaczenia jest objawem niejasności. „Wszyscy przecież wiedzą, jak szybko” obrazuje założenie oczywistości jako możliwą przyczynę.\n\n**Reguła rozstrzygająca:** Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "ruleIds": [
+        "REG-KRY-T03-02",
+        "REG-T03-02-02",
+        "REG-T03-02-03"
+      ],
+      "contactScopes": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02"
+        }
+      ],
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § EX-KRY-T03-02"
+    }
+  ],
+  "questions": [
+    {
+      "id": "T03-D01",
+      "revision": "r1",
+      "format": "P",
+      "role": "delayed-candidate",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Dla nowej usługi ustalono oczekiwania operatora, wyjątki zachowania i wyniki mające być widoczne po ich obsłudze. Które argumenty poprawnie wiążą RE z korzyściami?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Znajomość wyjątków poprawia rozumienie problemu i ogranicza ryzyko pominięcia istotnej potrzeby."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Uzgodnienie potrzeb zapewnia, że każda przyszła estymacja będzie dokładna."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Znany zakres wariantów daje podstawę szacowania pracy i kosztu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Po takim uzgodnieniu nie ma już potrzeby testowania."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Oczekiwane wyniki pozwalają wyznaczyć punkt odniesienia dla testów."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T03-D01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Ustalono wyjątki i oczekiwania operatora → rozumienie i ograniczenie ryzyka należą do korzyści RE → argument jest trafny.",
+          "ruleIds": [
+            "REG-T03-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/D, RAT-T03-D01-a"
+        },
+        {
+          "id": "RAT-T03-D01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Uzgodniono zakres, nie przyszłą pracochłonność → podstawa estymacji nie jest gwarancją → argument jest błędny.",
+          "ruleIds": [
+            "REG-T03-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/D, RAT-T03-D01-b"
+        },
+        {
+          "id": "RAT-T03-D01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Dane opisują potrzebne zachowania → określony zakres wspiera estymację → argument jest trafny.",
+          "ruleIds": [
+            "REG-T03-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/D, RAT-T03-D01-c"
+        },
+        {
+          "id": "RAT-T03-D01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Ustalono oczekiwane wyniki → wymagania są podstawą testu, a nie powodem jego zaniechania → argument jest błędny.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/D, RAT-T03-D01-d"
+        },
+        {
+          "id": "RAT-T03-D01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Podano oczekiwany rezultat → można porównać z nim wykonanie → argument jest trafny.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/D, RAT-T03-D01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T03-01/D"
+    },
+    {
+      "id": "T03-D02",
+      "revision": "r1",
+      "format": "P",
+      "role": "delayed-candidate",
+      "weight": 3,
+      "k": 4,
+      "stemMarkdown": "Po przeglądzie znaleziono brakujące, niejasne i nieprawidłowe wymagania. Które pozycje należą do wskazanych w Syllabus możliwych przyczyn takich niedostatków?",
+      "instruction": "Wybierz 4 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Pośpieszne przejście od razu do budowania systemu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Samo stwierdzenie, że wymaganie jest niejasne."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Problemy komunikacyjne między zaangażowanymi stronami."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Założenie, że wymagania są oczywiste."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Niewystarczająca edukacja i umiejętności RE."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T03-D02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Wskazano mechanizm pośpiechu → znajduje się na liście przyczyn niedostatków RE → pozycja jest poprawna.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/D, RAT-T03-D02-a"
+        },
+        {
+          "id": "RAT-T03-D02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Pozycja opisuje stan wymagania → niejasność jest symptomem, nie wskazaną tu przyczyną → nie należy do klucza.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/D, RAT-T03-D02-b"
+        },
+        {
+          "id": "RAT-T03-D02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Pozycja dotyczy komunikacji → Syllabus wymienia ten mechanizm wśród przyczyn → należy do klucza.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/D, RAT-T03-D02-c"
+        },
+        {
+          "id": "RAT-T03-D02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Podano założenie zastępujące wyjaśnianie → jest wymienioną przyczyną niedostatków → należy do klucza.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/D, RAT-T03-D02-d"
+        },
+        {
+          "id": "RAT-T03-D02-e",
+          "decisionId": "e",
+          "bodyMarkdown": "Pozycja dotyczy przygotowania do RE → należy do źródłowego wykazu przyczyn → należy do klucza.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/D, RAT-T03-D02-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T03-02/D"
+    },
+    {
+      "id": "T03-F01",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-1",
+      "weight": 1,
+      "stemMarkdown": "Zespół zamierzał automatyzować druk etykiet. Rozmowa o potrzebach wykazała, że opóźnienia wynikają głównie z brakujących danych zamówienia. Nie powstał jeszcze nowy kod. Który argument opisuje wartość tej pracy?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Bez kodu nie mogło poprawić się rozumienie problemu."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Ustalenie gwarantuje już brak wszystkich przyszłych defektów."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Ustalenie samo zapewnia dokładny budżet całego rozwiązania."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Lepsze rozumienie problemu zmniejsza ryzyko budowania automatyzacji, która go nie rozwiąże."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "d"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T03-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Rozmowa ujawniła przyczynę inną niż zakładana → RE może poprawiać rozumienie przed implementacją → argument jest błędny.",
+          "ruleIds": [
+            "REG-T03-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/F, RAT-T03-F01-a"
+        },
+        {
+          "id": "RAT-T03-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Ujawniono problem danych → wiedza o potrzebie nie gwarantuje poprawności każdego wykonania → argument wykracza poza korzyść.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/F, RAT-T03-F01-b"
+        },
+        {
+          "id": "RAT-T03-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Dane dotyczą przyczyny opóźnienia → wymagania są podstawą estymacji, nie gwarancją kosztu → argument jest nieuprawniony.",
+          "ruleIds": [
+            "REG-T03-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/F, RAT-T03-F01-c"
+        },
+        {
+          "id": "RAT-T03-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Ujawniono brak danych zamiast problemu druku → rozumienie problemu ogranicza ryzyko niewłaściwego systemu → argument jest trafny.",
+          "ruleIds": [
+            "REG-T03-01-04"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/F, RAT-T03-F01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T03-01/F"
+    },
+    {
+      "id": "T03-G01",
+      "revision": "r1",
+      "format": "K",
+      "role": "follow-up-2",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Przed zbudowaniem obsługi zwrotów uzgodniono wyjątek zwrotu części zamówienia. Zespół poznaje potrzebne warianty i oczekiwany wynik. Oceń konsekwencje tego ustalenia.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Można uwzględnić dodatkowe warianty w szacowaniu nakładu."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Można przygotować testy z oczekiwanym wynikiem zwrotu częściowego."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Ustalenie uniemożliwia popełnienie błędu podczas implementacji."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Ustalenie może ograniczać ryzyko błędnego zachowania wobec potrzeby częściowego zwrotu."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-T03-G01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Uzgodniono zakres wariantów → wymagania dostarczają podstawy estymacji → Prawda.",
+          "ruleIds": [
+            "REG-T03-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/G, RAT-T03-G01-1"
+        },
+        {
+          "id": "RAT-T03-G01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Opisano oczekiwany rezultat → wymagania są podstawą testowania → Prawda.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/G, RAT-T03-G01-2"
+        },
+        {
+          "id": "RAT-T03-G01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Treść określa oczekiwania, nie wykonanie kodu → podstawa testu nie jest gwarancją bezbłędności → Fałsz.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/G, RAT-T03-G01-3"
+        },
+        {
+          "id": "RAT-T03-G01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Wyjątek został rozpoznany przed realizacją → adekwatne RE może zmniejszać ryzyko niewłaściwego systemu → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T03-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-01/G, RAT-T03-G01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T03-01/G"
+    },
+    {
+      "id": "T03-G02",
+      "revision": "r1",
+      "format": "A",
+      "role": "follow-up-2",
+      "weight": 1,
+      "stemMarkdown": "W opisie systemu w ogóle nie uwzględniono wymaganego wyjątku obsługi. Nie podano, jak prowadzono rozmowy ani jakie szkolenia odbył autor. Który wniosek jest uzasadniony?",
+      "instruction": "Wybierz jedną odpowiedź.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Na pewno jedyną przyczyną jest brak szkolenia autora."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Opis ilustruje brakujące wymaganie, ale nie ustala jednej konkretnej przyczyny pominięcia."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Każde brakujące wymaganie dowodzi celowego pominięcia przez programistę."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Brak wyjątku nie może należeć do symptomów wymienionych w Syllabus."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-T03-G02-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Nie podano danych o przygotowaniu → lista możliwych przyczyn nie wskazuje jednej pewnej → diagnoza jest nieuprawniona.",
+          "ruleIds": [
+            "REG-T03-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/G, RAT-T03-G02-a"
+        },
+        {
+          "id": "RAT-T03-G02-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Wyjątek pominięto, a danych o przyczynie brak → można nazwać symptom bez pewnej diagnozy → wniosek jest poprawny.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/G, RAT-T03-G02-b"
+        },
+        {
+          "id": "RAT-T03-G02-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Podano tylko brak wyjątku → symptom nie dowodzi zamiaru ani konkretnego sprawcy → wniosek jest nieuzasadniony.",
+          "ruleIds": [
+            "REG-T03-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/G, RAT-T03-G02-c"
+        },
+        {
+          "id": "RAT-T03-G02-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Wymagane zachowanie nie zostało uwzględnione → to brakujące wymaganie → zaprzeczenie jest błędne.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "tools/z1_extensions.py T03-02/G, RAT-T03-G02-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "tools/z1_extensions.py T03-02/G"
+    },
+    {
+      "id": "Z1-T03-01-B01",
+      "revision": "r2",
+      "format": "P",
+      "role": "base",
+      "weight": 2,
+      "k": 2,
+      "stemMarkdown": "Uzgodniono, kiedy rezerwacja może być anulowana i jakie dane muszą zostać odzyskane. Które DWIE korzyści wynikają bezpośrednio z takiego ustalenia?",
+      "instruction": "Wybierz 2 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Każda przyszła zmiana staje się zbędna."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Można przygotować oczekiwane wyniki testów anulowania."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Można uwzględnić warianty anulowania w oszacowaniu nakładu."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Na pewno nie wystąpią defekty w implementacji."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "b",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T03-01-B01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Ewolucja potrzeb pozostaje możliwa → Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania. → nie wybrać.",
+          "ruleIds": [
+            "REG-KRY-T03-01"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-B01, RAT-Z1-T03-01-B01-a"
+        },
+        {
+          "id": "RAT-Z1-T03-01-B01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Reguła opisuje oczekiwane zachowanie → podstawa testowania → wybrać.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-B01, RAT-Z1-T03-01-B01-b"
+        },
+        {
+          "id": "RAT-Z1-T03-01-B01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Zakres zachowania daje dane do estymacji → Wymagania dostarczają podstawy estymacji pracy i kosztu, a nie gwarancji trafności każdego oszacowania. → wybrać.",
+          "ruleIds": [
+            "REG-T03-01-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-B01, RAT-Z1-T03-01-B01-c"
+        },
+        {
+          "id": "RAT-Z1-T03-01-B01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "Uzgodnienie wymagań nie usuwa wszystkich usterek kodu → Wymagania określające oczekiwany system są podstawą testowania, a nie gwarancją braku defektów implementacji. → nie wybrać.",
+          "ruleIds": [
+            "REG-T03-01-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-01",
+              "aspectId": "ZAK-T03-01"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-B01, RAT-Z1-T03-01-B01-d"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-01",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-B01"
+    },
+    {
+      "id": "Z1-T03-02-B01",
+      "revision": "r2",
+      "format": "K",
+      "role": "base",
+      "weight": 2,
+      "m": 4,
+      "stemMarkdown": "Oceń twierdzenia o symptomach i przyczynach niewłaściwego RE.",
+      "instruction": "W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.",
+      "decisions": [
+        {
+          "id": "1",
+          "textMarkdown": "Brakujące i niejasne wymagania są wymienionymi symptomami."
+        },
+        {
+          "id": "2",
+          "textMarkdown": "Założenie oczywistości wymagań jest wymienioną możliwą przyczyną."
+        },
+        {
+          "id": "3",
+          "textMarkdown": "Sam niejasny zapis dowodzi, że autor nie odbył szkolenia RE."
+        },
+        {
+          "id": "4",
+          "textMarkdown": "Pośpieszne rozpoczęcie budowy i problemy komunikacji należą do wskazanych przyczyn."
+        }
+      ],
+      "answerKey": {
+        "truthByDecisionId": {
+          "1": true,
+          "2": true,
+          "3": false,
+          "4": true
+        }
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T03-02-B01-1",
+          "decisionId": "1",
+          "bodyMarkdown": "Obie kategorie są w §1.2 → Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe. → Prawda.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-B01, RAT-Z1-T03-02-B01-1"
+        },
+        {
+          "id": "RAT-Z1-T03-02-B01-2",
+          "decisionId": "2",
+          "bodyMarkdown": "Syllabus wskazuje to założenie jako źródło niedostatków → Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków. → Prawda.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-B01, RAT-Z1-T03-02-B01-2"
+        },
+        {
+          "id": "RAT-Z1-T03-02-B01-3",
+          "decisionId": "3",
+          "bodyMarkdown": "Brak edukacji jest jedną możliwością, nie jedyną przyczyną niejasności → Wymienienie kilku możliwych przyczyn niedostatków RE nie pozwala ustalić jednej pewnej przyczyny z samego objawu niejasnego wymagania. → Fałsz.",
+          "ruleIds": [
+            "REG-T03-02-03"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-B01, RAT-Z1-T03-02-B01-3"
+        },
+        {
+          "id": "RAT-Z1-T03-02-B01-4",
+          "decisionId": "4",
+          "bodyMarkdown": "Oba mechanizmy występują w katalogu §1.2 → Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków. → Prawda.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-B01, RAT-Z1-T03-02-B01-4"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02",
+          "role": "primary",
+          "decisionIds": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-B01"
+    },
+    {
+      "id": "Z1-T03-02-F01",
+      "revision": "r2",
+      "format": "P",
+      "role": "follow-up-1",
+      "weight": 3,
+      "k": 3,
+      "stemMarkdown": "Które TRZY pozycje są symptomami niewłaściwego RE wymienionymi w §1.2?",
+      "instruction": "Wybierz 3 odpowiedzi.",
+      "decisions": [
+        {
+          "id": "a",
+          "textMarkdown": "Brakujące wymagania."
+        },
+        {
+          "id": "b",
+          "textMarkdown": "Niejasne wymagania."
+        },
+        {
+          "id": "c",
+          "textMarkdown": "Nieprawidłowe wymagania."
+        },
+        {
+          "id": "d",
+          "textMarkdown": "Przekonanie, że wymagania są oczywiste."
+        },
+        {
+          "id": "e",
+          "textMarkdown": "Niewystarczające umiejętności RE."
+        }
+      ],
+      "answerKey": {
+        "selectedIds": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationales": [
+        {
+          "id": "RAT-Z1-T03-02-F01-a",
+          "decisionId": "a",
+          "bodyMarkdown": "Brak istotnego wymagania jest objawem → Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01, RAT-Z1-T03-02-F01-a"
+        },
+        {
+          "id": "RAT-Z1-T03-02-F01-b",
+          "decisionId": "b",
+          "bodyMarkdown": "Niejasność jest objawem → Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01, RAT-Z1-T03-02-F01-b"
+        },
+        {
+          "id": "RAT-Z1-T03-02-F01-c",
+          "decisionId": "c",
+          "bodyMarkdown": "Błędna treść należy do symptomów → Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe. → wybrać.",
+          "ruleIds": [
+            "REG-KRY-T03-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01, RAT-Z1-T03-02-F01-c"
+        },
+        {
+          "id": "RAT-Z1-T03-02-F01-d",
+          "decisionId": "d",
+          "bodyMarkdown": "To możliwa przyczyna, nie pozycja listy symptomów → Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków. → nie wybrać.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01, RAT-Z1-T03-02-F01-d"
+        },
+        {
+          "id": "RAT-Z1-T03-02-F01-e",
+          "decisionId": "e",
+          "bodyMarkdown": "To możliwa przyczyna → Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków. → nie wybrać.",
+          "ruleIds": [
+            "REG-T03-02-02"
+          ],
+          "contactScopes": [
+            {
+              "criterionId": "KRY-T03-02",
+              "aspectId": "ZAK-T03-02"
+            }
+          ],
+          "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01, RAT-Z1-T03-02-F01-e"
+        }
+      ],
+      "criterionMappings": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02",
+          "role": "primary",
+          "decisionIds": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        }
+      ],
+      "familyRef": {
+        "id": "FAM-T03-02",
+        "revision": "r2"
+      },
+      "noveltyReview": "pending",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-02-F01"
+    }
+  ],
+  "openActivities": [
+    {
+      "id": "RP-T03-01",
+      "revision": "r2",
+      "promptMarkdown": "Wymień cztery wskazane korzyści RE i wyjaśnij mechanizm przynajmniej dwóch.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Nazywa mniejsze ryzyko niewłaściwego systemu, lepsze rozumienie problemu, podstawę estymacji i podstawę testowania. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Dla dwóch korzyści łączy konkretny rezultat RE z użyciem, np. reguła → test albo zakres → estymacja; bez gwarancji. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "scope": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § RP-T03-01"
+    },
+    {
+      "id": "RP-T03-02",
+      "revision": "r2",
+      "promptMarkdown": "Wymień trzy symptomy i cztery wskazane w syllabusie przyczyny. Czy sam symptom ustala konkretną przyczynę?",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Nazywa brakujące, niejasne i nieprawidłowe wymagania. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Nazywa pośpiech ku budowie, problemy komunikacji, założenie oczywistości, brak edukacji/umiejętności. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Nie przypisuje jednej pewnej przyczyny z samego symptomu. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Akceptować poprawne parafrazy i równoważne przykłady; same nazwy bez żądanego powodu dają wykonanie częściowe.\n\n**Błąd krytyczny:** Zastąpienie rozstrzygającej reguły jej zaprzeczeniem.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "scope": [
+        {
+          "criterionId": "KRY-T03-02",
+          "aspectId": "ZAK-T03-02"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § RP-T03-02"
+    },
+    {
+      "id": "Z1-T03-01-F01",
+      "revision": "r2",
+      "promptMarkdown": "Zespół chce automatyzować druk etykiet, ale rozmowa RE wykazała, że opóźnienia wynikają głównie z braku danych zamówienia. Wyjaśnij wartość tej rozmowy, nawet jeżeli nie powstał jeszcze żaden kod.",
+      "rubricMarkdown": "| Element konieczny / model odpowiedzi | Ocena lokalna |\n| --- | --- |\n| Lepsze rozumienie problemu ujawniło przyczynę opóźnień inną niż założona. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n| Zmniejszono ryzyko inwestowania w system, który nie usuwa istotnego problemu; nie jest to gwarancja sukcesu nowej decyzji. | Spełnione: sens zachowany; częściowo: fragment bez pełnego rozróżnienia; niespełnione: brak lub sprzeczność. |\n\n**Odpowiedzi równoważne i graniczne:** Można wspomnieć oszczędzenie zbędnego nakładu jako interpretację, bez liczb lub twierdzenia o potwierdzonym ROI.\n\n**Błąd krytyczny:** Uznanie braku kodu za dowód braku jakiejkolwiek wartości RE.\n\nPełne wykonanie obejmuje wszystkie elementy i nie zawiera błędu krytycznego. Samoocena według rubryki nie daje punktów CPRE; wybór zamknięty nie zastępuje tego wykonania.\n\n**Podstawa:** C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+      "scope": [
+        {
+          "criterionId": "KRY-T03-01",
+          "aspectId": "ZAK-T03-01"
+        }
+      ],
+      "evaluationMethod": "self-assessment",
+      "sourceAnchor": "references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md § Z1-T03-01-F01"
+    }
+  ],
+  "remediations": [
+    {
+      "id": "REM-KRY-T03-01",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T03-01",
+        "aspectId": "ZAK-T03-01"
+      },
+      "bodyMarkdown": "Użyj łańcucha: ustalona potrzeba lub reguła → decyzja zespołu → ograniczone ryzyko albo lepsza podstawa działania. Unikaj słowa „gwarantuje”.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T03-01",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T03-01",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "T03-F01",
+          "revision": "r1"
+        },
+        {
+          "id": "T03-G01",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Prześledź jeden uzgodniony wyjątek. Wyjaśnia problem, wyznacza potrzebne zachowanie, pozwala uwzględnić je w estymacji i podaje oczekiwany wynik testu. Każdy związek jest podstawą działania; żaden nie jest obietnicą nieomylności całego projektu.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    },
+    {
+      "id": "REM-KRY-T03-02",
+      "revision": "r2",
+      "scope": {
+        "criterionId": "KRY-T03-02",
+        "aspectId": "ZAK-T03-02"
+      },
+      "bodyMarkdown": "Oddziel stan wymagania od możliwego źródła tego stanu. Źródłowa lista pomaga rozpoznawać ryzyka; nie jest automatycznym narzędziem diagnozy projektu.\n\nSprawdź przesłanki konkretnego przypadku i zastosuj regułę przed oceną wyniku. Kontrola dotyczy tego rozróżnienia, bez diagnozy osoby.",
+      "knowledgeRefs": [
+        {
+          "id": "N-T03-02",
+          "revision": "r1"
+        },
+        {
+          "id": "CMP-KRY-T03-02",
+          "revision": "r2"
+        }
+      ],
+      "followUpRefs": [
+        {
+          "id": "Z1-T03-02-F01",
+          "revision": "r2"
+        },
+        {
+          "id": "T03-G02",
+          "revision": "r1"
+        }
+      ],
+      "alternativeHelpMarkdown": "Objaw opisuje, co jest nie tak z wymaganiem. Przyczyna mówi, jak mogło do tego dojść. Ta sama niejasność może powstać po pośpiechu, złej komunikacji albo przyjęciu oczywistości; sam zapis nie rozstrzyga, który mechanizm wystąpił.\n\nPo dwóch nieudanych kontrolach wybierz inne wsparcie lub przerwę. Nie traktuj lektury jako dowodu poprawnego wykonania i nie zużywaj kandydata D jako trzeciej natychmiastowej próby.",
+      "exitAfterFailedFollowUps": 2
+    }
+  ],
+  "families": [
+    {
+      "id": "FAM-T03-01",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Cztery źródła wartości RE; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    },
+    {
+      "id": "FAM-T03-02",
+      "revision": "r2",
+      "review": "pending",
+      "description": "Wspólny rdzeń Objawy i przyczyny niewłaściwego RE; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości."
+    }
+  ],
+  "forms": [],
+  "relationships": [
+    {
+      "id": "REL-EX-KRY-T03-01-illustrates-REG-KRY-T03-01",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T03-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Przed estymacją ustalono, że anulowanie ma zwalniać również część rezerwacji. Zespół może uwzględnić dodatkowe zachowanie w nakładzie i scenariuszach testów.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T03-01-counterexample-of-REG-KRY-T03-01",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T03-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „RE gwarantuje trafny budżet” obala projekt z poprawnie uzgodnionymi wymaganiami i błędną oceną złożoności technicznej. Wymagania są podstawą, nie gwarancją.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T03-01-distinguishes-REG-KRY-T03-01",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T03-01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: rezultat bezpośredni i korzyść. Uzgodniona reguła zwrotu jest rezultatem RE; mniejsze ryzyko przeróbki, lepsza estymacja i podstawa testu to możliwe skutki użycia tego rezultatu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T03-01-explains-REG-KRY-T03-01",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T03-01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-F01-variant-of-Z1-T03-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T03-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T03-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Zmiana z korzyści testowania i estymacji w B na uniknięcie niewłaściwego problemu; otwarte F pozostaje.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-G01-variant-of-Z1-T03-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T03-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T03-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Łączna ocena warunkowych korzyści i granicy gwarancji w nowej funkcji biznesowej.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-D01-variant-of-Z1-T03-01-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T03-D01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T03-01-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Łączy cztery korzyści w trzech argumentach i dwie fałszywe gwarancje; nie zastępuje odtworzenia w otwartym D.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-EX-KRY-T03-02-illustrates-REG-KRY-T03-02",
+      "revision": "r1",
+      "type": "R12",
+      "from": {
+        "id": "EX-KRY-T03-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "„System działa szybko” bez uzgodnionego znaczenia jest objawem niejasności. „Wszyscy przecież wiedzą, jak szybko” obrazuje założenie oczywistości jako możliwą przyczynę.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CE-KRY-T03-02-counterexample-of-REG-KRY-T03-02",
+      "revision": "r1",
+      "type": "R13",
+      "from": {
+        "id": "CE-KRY-T03-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Uogólnienie „każde opóźnienie dowodzi złego RE” obala uzgodniony zakres z opóźnioną dostawą sprzętu. Sam termin nie wskazuje źródła problemu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-CMP-KRY-T03-02-distinguishes-REG-KRY-T03-02",
+      "revision": "r1",
+      "type": "R11",
+      "from": {
+        "id": "CMP-KRY-T03-02",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REG-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Oś: co obserwujemy versus co mogło do tego doprowadzić. Niejasny zapis to objaw; brak rozmowy z powodu pośpiechu to możliwa przyczyna. Jedno nie ustala automatycznie drugiego.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-N-T03-02-explains-REG-KRY-T03-02",
+      "revision": "r1",
+      "type": "R10",
+      "from": {
+        "id": "N-T03-02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REG-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Ujawnienie dopuszczone przez granicę feedbacku",
+      "meaning": "Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T03-02-F01-variant-of-Z1-T03-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "Z1-T03-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "Z1-T03-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Kontrast dwóch list; wybór dotyczy wyłącznie symptomów.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-G02-variant-of-Z1-T03-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T03-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T03-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Przypadek z jawnie ograniczonymi danymi zamiast odtwarzania obu list; nie diagnozuje osoby.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-D02-variant-of-Z1-T03-02-B01",
+      "revision": "r1",
+      "type": "R21",
+      "from": {
+        "id": "T03-D02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "Z1-T03-02-B01",
+        "revision": "r2"
+      },
+      "condition": "Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.",
+      "meaning": "Rozpoznanie pełnej listy czterech przyczyn z kontrastem objawu; zachowano osobne swobodne odtworzenie D.",
+      "provenance": "Interpretacja autora",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-F01-checks-after-REM-KRY-T03-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T03-F01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T03-01.",
+      "provenance": "Lista followUps w content/authoring/T03/corrections/REM-KRY-T03-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-G01-checks-after-REM-KRY-T03-01",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T03-G01",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T03-01",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T03-01.",
+      "provenance": "Lista followUps w content/authoring/T03/corrections/REM-KRY-T03-01.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-Z1-T03-02-F01-checks-after-REM-KRY-T03-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "Z1-T03-02-F01",
+        "revision": "r2"
+      },
+      "to": {
+        "id": "REM-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola F sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T03-02.",
+      "provenance": "Lista followUps w content/authoring/T03/corrections/REM-KRY-T03-02.md",
+      "review": "pending"
+    },
+    {
+      "id": "REL-T03-G02-checks-after-REM-KRY-T03-02",
+      "revision": "r2",
+      "type": "R19",
+      "from": {
+        "id": "T03-G02",
+        "revision": "r1"
+      },
+      "to": {
+        "id": "REM-KRY-T03-02",
+        "revision": "r2"
+      },
+      "condition": "Po nieudanej odpowiedzi i korekcie tego zakresu",
+      "meaning": "Kontrola G sprawdza rozróżnienie, którego dotyczyła korekta REM-KRY-T03-02.",
+      "provenance": "Lista followUps w content/authoring/T03/corrections/REM-KRY-T03-02.md",
+      "review": "pending"
+    }
+  ],
+  "rights": {
+    "status": "unresolved",
+    "channels": []
+  }
+}
