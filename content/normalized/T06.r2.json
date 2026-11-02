@@ -5,7 +5,7 @@
   "title": "T06 — Przegląd zasad RE i ich terminologia",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Odtworzenie dziewięciu zasad; sześć terminów EU2 i związane rozróżnienia terminologiczne. Wyjaśnianie znaczenia i ważności zasad należy do T07.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T06-0001"
   },
   "provenance": [
     {
@@ -178,6 +184,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T06/review/decisions.yaml",
+      "sha256": "3c7fbb5465a75312e3ba988e796513572a3b65564dc246f7aec50db859601475",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T06/rules.yaml",
       "sha256": "9d30d96769923f08a32bec5049243cc8b5eb71c59ac2b7f3a4e3b021c4c0f87d",
       "documentVersion": "r2",
@@ -191,7 +203,7 @@
     },
     {
       "path": "content/authoring/T06/topic.yaml",
-      "sha256": "ccb8a4e641c0d1b24169461628e03ee29548fe4869fa0054c210725956b1b81f",
+      "sha256": "2d4ad1c1d77cf45b9aa574a89b4ba0422d6f27035312562517d38d63ffeb455b",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -1972,7 +1984,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T06-0001"
   }
 }

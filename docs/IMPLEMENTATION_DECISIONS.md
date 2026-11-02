@@ -62,6 +62,13 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 - **`content:release --strict` pozwala na wydanie częściowe**: temat w review jest pomijany i wypisany; odmowa następuje tylko, gdy paczka przeznaczona dla uczniów (approved, permitted albo z dopuszczonymi użyciami) nie przechodzi bramki albo jest uszkodzona. Odmowa zapada przed zapisem czegokolwiek; wcześniej manifest był zapisywany, a dopiero potem polecenie kończyło się błędem. Bramka ucznia jest bez zmian.
 - **Runbook** opisuje przepływ formatu autorskiego, wydanie, wycofania i import historyczny T21.
 
+## Wsad Z1 i dopuszczenie T01–T07 (2.11.2026)
+
+- **Wsad Z1** (T01–T07 r2) przyjęty bez zmian treści; README korzenia paczki zachowany w `handoff/Z1/README.md`, numerowane kopie w `references/project` zostawione, bo wymienia je inwentarz SHA-256 autora, a T02/T07 odwołują się do kopii C03.
+- **Decyzja właściciela zapisana na jego polecenie**: Piotr Wrotny, właściciel projektu, wybrał w sesji dopuszczenie T01–T07 r2 do kanału ucznia (`internal-lan`) i recenzenckiego, bez odrębnego review. Agent przedstawił alternatywę (sam kanał recenzencki) i ryzyko (63 pytania to nowe uzupełnienia, kontrola wyłącznie autorska); właściciel podtrzymał wybór. Pliki `T0n/review/decisions.yaml` mówią wprost, że krok 3 C02-08 nie został wykonany. `authoring: complete` ustawiono na polecenie właściciela. Użycia: learning, practice, remediation, delayed; bez topic-test, bo nie ma form.
+- **G2 w rozumieniu C02-08 nie jest zamknięte**: brak odrębnego kompetentnego review. G3 i G4 bez zmian.
+- **Stały korpus testów e2e**: `build:e2e` buduje wydanie z `--packages T21,TECH01`, żeby rzeczywiste tematy nie zmieniały scenariuszy testowych. Zwykły build ucznia zawiera teraz T01–T07.
+
 ## Pedagogika — interpretacje wykonawcze (bez zmiany zasad)
 
 - **Nagłówek pytania**: treść nie zawiera tytułów itemów, a ich dopisanie byłoby tworzeniem treści. H1 jest neutralny („Twoja odpowiedź.” / „Sprawdź inną sytuację.”), stem jest akapitem pod nim — ta sama hierarchia co w makiecie.

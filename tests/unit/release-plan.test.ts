@@ -50,11 +50,12 @@ describe('release plan: review channel and the ordinary corpus', () => {
     expect(plan.included.map((p) => p.revision)).toEqual(['r1-full1']);
   });
 
-  it('the ordinary corpus holds no technical fixture, so the learner release is empty today', () => {
+  it('the ordinary corpus holds no technical fixture, so none reaches the learner release', () => {
     const corpus = readPackages(resolve(ROOT, 'content/normalized'));
     expect(corpus.map((p) => p.packageId)).not.toContain('TECH01');
     expect(corpus.filter((p) => (p.status.decisionRef ?? '').startsWith('FIXTURE-'))).toEqual([]);
-    expect(planChannel(corpus, 'learner', schema).included).toEqual([]);
+    const included = planChannel(corpus, 'learner', schema).included;
+    expect(included.filter((p) => p.packageId === 'TECH01' || p.purpose === 'review-fixture')).toEqual([]);
   });
 });
 

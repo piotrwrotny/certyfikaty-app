@@ -29,7 +29,8 @@ Dokumentacja autora: [manifest](../../handoff/Z1/MANIFEST.md), [pokrycie](../../
 
 - `content:lint`: 0 błędów we wszystkich tematach; jedyne ostrzeżenie to brak decyzji dla r2.
 - `content:convert`: paczki `content/normalized/T0n.r2.json` i raporty `content/normalized/T0n-AUTHORING_REPORT.md`. Kontrakt poprawny, zero kolizji identyfikatorów, klucz każdego pytania daje pełną punktację, żadne pytanie nie ujawnia klucza w treści testu.
-- Bez decyzji żaden temat nie trafia do kanału recenzenckiego ani ucznia. Kolejne kroki: [docs/15_MIGRACJA_TRESCI.md](../../docs/15_MIGRACJA_TRESCI.md), część A od kroku 5.
+- Decyzja właściciela z 2.11.2026 (`T0n/review/decisions.yaml`, `DEC-T0n-0001`): T01–T07 r2 dopuszczone do kanału ucznia w sieci wewnętrznej i do kanału recenzenckiego, użycia: nauka, ćwiczenia, korekta, późniejsza kontrola. `authoring` ustawiono na `complete` na polecenie właściciela. **Odrębne review merytoryczne nie zostało wykonane**; zapis decyzji mówi to wprost.
+- Test tematu nie jest dopuszczony, bo wsad nie zawiera form testu.
 
 ### Ograniczenia zgłoszone przez autora
 

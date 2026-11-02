@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/decisions.schema.json
+# Decyzja właściciela zapisana na jego polecenie w sesji Claude Code z 2.11.2026.
+# Odrębne kompetentne review merytoryczne (C02-08 krok 3) NIE zostało wykonane przed tą decyzją.
+decisions:
+  - id: DEC-T06-0001
+    decidedAt: 2026-11-02
+    decidedBy: "Piotr Wrotny, właściciel projektu"
+    ref: "Polecenie właściciela w sesji Claude Code z 2.11.2026: dopuszczenie T06 r2 do kanału ucznia w sieci wewnętrznej bez odrębnego review merytorycznego; kontrola wyłącznie autorska (handoff/Z1). Prawa do źródeł pozostają przy ich właścicielach."
+    revision: r2
+    review: approved
+    publication: permitted
+    allowedUses: [learning, practice, remediation, delayed]
+    rights:
+      status: permitted
+      channels: [internal-review, internal-lan]

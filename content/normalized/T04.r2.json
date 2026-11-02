@@ -5,7 +5,7 @@
   "title": "T04 — Zastosowania i perspektywy RE",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Zastosowanie do różnych systemów; pięć perspektyw występowania wymagań. Poziom EO L1 mimo nagłówka §1.3 L2.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T04-0001"
   },
   "provenance": [
     {
@@ -172,6 +178,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T04/review/decisions.yaml",
+      "sha256": "c6f8b5b097b4c001a6d33fbc371635071edb1b58eaf16860e0b88b354530061e",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T04/rules.yaml",
       "sha256": "c415a2b10beda03f5ca124ab5ac6ab36b333c5f52feb9e83f625df288296b195",
       "documentVersion": "r2",
@@ -185,7 +197,7 @@
     },
     {
       "path": "content/authoring/T04/topic.yaml",
-      "sha256": "da1e91b2f124992ea7c806836e7d46c46f6b0df9767f2d02dba00956dc8ebcde",
+      "sha256": "fd2ed64cdeb47f391fcb6a227b21a588e5875f14be067e0756188e15e026eaae",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -1897,7 +1909,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T04-0001"
   }
 }

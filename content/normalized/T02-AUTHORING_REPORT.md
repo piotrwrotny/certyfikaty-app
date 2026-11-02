@@ -1,20 +1,20 @@
 # Raport konwersji T02 r2
 
-Data: 2026-11-02. Wejście: `content/authoring/T02/` (cpre-authoring/1.0). Wyjście: `content/normalized/T02.r2.json`, SHA-256 `ed01b31d4cc6a9036d298c0204f2b6740a07cbe1841be413982c178fba5063d8`.
+Data: 2026-11-02. Wejście: `content/authoring/T02/` (cpre-authoring/1.0). Wyjście: `content/normalized/T02.r2.json`, SHA-256 `2b9c6d06defaca097e226fa88c368edf2f4735abf505c49ab9845a2428dc6825`.
 
 ## Status
 
-Brak decyzji dla tej rewizji. Status: do review, publikacja review-only, bez dopuszczonych użyć, prawa nieustalone.
+Statusy pochodzą z decyzji DEC-T02-0001 z 2026-11-02 (Piotr Wrotny, właściciel projektu; zapis: Polecenie właściciela w sesji Claude Code z 2.11.2026: dopuszczenie T02 r2 do kanału ucznia w sieci wewnętrznej bez odrębnego review merytorycznego; kontrola wyłącznie autorska (handoff/Z1). Prawa do źródeł pozostają przy ich właścicielach.).
 
 | Oś | Wartość |
 |---|---|
-| Kompletność autorska | draft |
-| Review | pending |
-| Publikacja | review-only |
-| Dopuszczone użycia | brak |
-| Prawa | unresolved; kanały: brak |
-| Kanał recenzencki | nie, prawa nie obejmują internal-review |
-| Kanał ucznia | nie: LEARNER_PARTIAL, LEARNER_REVIEW_PENDING, LEARNER_NOT_PERMITTED, LEARNER_NO_DECISION, LEARNER_NO_USES, LEARNER_RIGHTS, LEARNER_RIGHTS_CHANNEL, LEARNER_NO_RIGHTS_DECISION |
+| Kompletność autorska | complete |
+| Review | approved |
+| Publikacja | permitted |
+| Dopuszczone użycia | learning, practice, remediation, delayed |
+| Prawa | permitted; kanały: internal-review, internal-lan |
+| Kanał recenzencki | tak |
+| Kanał ucznia | tak |
 
 ## Liczby
 
@@ -34,9 +34,9 @@ Brak decyzji dla tej rewizji. Status: do review, publikacja review-only, bez dop
 
 Brak.
 
-## Ostrzeżenia (1)
+## Ostrzeżenia (0)
 
-- `review/decisions.yaml`: Brak decyzji dla rewizji r2: status do review, prawa nieustalone. Paczka nie trafi do żadnego kanału, także recenzenckiego.
+Brak.
 
 ## Wycofania (0)
 
@@ -44,6 +44,11 @@ Brak.
 
 ## Różnice względem poprzedniej konwersji
 
-Pierwsza konwersja tego tematu.
+Poprzednio: T02 r2.
+
+- Nowe: brak
+- Usunięte: brak. Usunięcie nie wycofuje materiału z urządzeń; wycofanie idzie przez manifest wydania.
+- Zmienione z nową rewizją: brak
+- Zmienione bez nowej rewizji: brak
 
 Raport opisuje techniczną konwersję. Nie jest recenzją merytoryczną ani dopuszczeniem treści.

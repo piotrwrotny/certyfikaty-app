@@ -143,3 +143,5 @@ Sekcje 1–9 opisują stan z commita `1f77150`. Późniejsze zmiany są opisane 
 
 Dodano też format autorski z komendami `content:lint` i `content:convert` oraz wycofania przenoszone do manifestu. Statusy G2, G3 i G4 są bez zmian.
 
+**Aktualizacja z 2.11.2026, wsad Z1.** Tematy T01–T07 r2 są w repozytorium i w wydaniu ucznia na podstawie decyzji właściciela zapisanej na jego polecenie, bez odrębnego review merytorycznego. Punkt z §10 o pustym buildzie ucznia już nie obowiązuje. G2 w rozumieniu C02-08 pozostaje niezamknięte, G3 i G4 bez zmian. Testy e2e korzystają ze stałego korpusu T21 i TECH01.
+

@@ -5,7 +5,7 @@
   "title": "T01 — Podstawowe pojęcia RE",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Wymaganie w trzech sensach; specyfikacja/specyfikacja wymagań; interesariusz; system; RE i podstawowa terminologia roli.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T01-0001"
   },
   "provenance": [
     {
@@ -358,6 +364,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T01/review/decisions.yaml",
+      "sha256": "71581a2838b8390b23375b206a51464669d48aa39ccbf3f83802ae2af43a3cdf",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T01/rules.yaml",
       "sha256": "7b49a29d925b6720794e203536ebc44cf541f66fe153b49e4a8d029cfeed6ee2",
       "documentVersion": "r2",
@@ -371,7 +383,7 @@
     },
     {
       "path": "content/authoring/T01/topic.yaml",
-      "sha256": "054e44b53b485370783cfd2ebfd9e08d6cf66c00ec6fd1aa7ca3f4d30d30d859",
+      "sha256": "2833880c9da7de44459eb898512e2d4ef78d988a8f1ce8921a47828f1b860a59",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -4332,7 +4344,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T01-0001"
   }
 }

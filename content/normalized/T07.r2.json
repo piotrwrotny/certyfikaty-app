@@ -5,7 +5,7 @@
   "title": "T07 — Wyjaśnianie dziewięciu zasad RE",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Dziewięć jawnych zakresów PR01–PR09 z argumentem, warunkami i konsekwencją. PR04 obejmuje granice/scope, zmiany kontekstu, wymagania świata rzeczywistego i założenia.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T07-0001"
   },
   "provenance": [
     {
@@ -778,6 +784,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T07/review/decisions.yaml",
+      "sha256": "f454c49681a76ff92d06f5cbb3b2efed69cf806739dffa06ede7b278586e273a",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T07/rules.yaml",
       "sha256": "069086f77de844f24026b0b76f522e597e4d4862b8bbc2e93f353a8814ed81f2",
       "documentVersion": "r2",
@@ -791,7 +803,7 @@
     },
     {
       "path": "content/authoring/T07/topic.yaml",
-      "sha256": "2a2cde5078e405141e7e819a09d6260913efeeeb988fa58004adc434034df7a6",
+      "sha256": "7a7f70cb3d8b45f6167dc7d59a5e38038e74d966bed4e317edcca2a34f22a522",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -9667,7 +9679,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T07-0001"
   }
 }

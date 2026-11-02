@@ -5,7 +5,7 @@
   "title": "T03 — Wartość RE i skutki jego niedostatków",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Cztery wskazane korzyści RE; objawy brakujących/niejasnych/nieprawidłowych wymagań i cztery źródłowo wymienione przyczyny.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T03-0001"
   },
   "provenance": [
     {
@@ -172,6 +178,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T03/review/decisions.yaml",
+      "sha256": "553c3497b4445f1dd710ff51ff66dd8d5941df04bc53add26a26a726ece273cd",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T03/rules.yaml",
       "sha256": "2154260e1d6b6d28ab63232a7f0e1aa919889268f7eeff9345febb01181401ec",
       "documentVersion": "r2",
@@ -185,7 +197,7 @@
     },
     {
       "path": "content/authoring/T03/topic.yaml",
-      "sha256": "b082bd22d4b0250584e2d0080f2a7e180f5ab4f1e060ada4b54408cbd2027298",
+      "sha256": "f701494939fc722193119d2e7d53c24e2700baa377aedf71d2657ff534b84a7d",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -1951,7 +1963,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T03-0001"
   }
 }

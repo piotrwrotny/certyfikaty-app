@@ -31,11 +31,14 @@ const withFixtures = args.includes('--with-fixtures');
 const sequence = Number(argValue('--sequence') ?? '1');
 const createdAt = argValue('--created-at') ?? '2026-11-02T00:00:00Z'; // fixed for determinism; operator overrides at publish
 
+// --packages T21,TECH01 limits the input to the listed packageIds (e2e builds use a fixed test corpus).
+const onlyIds = argValue('--packages')?.split(',').map((s) => s.trim()).filter(Boolean) ?? null;
+
 const validators = loadValidators();
 const packages = [
   ...readPackages(resolve(ROOT, 'content/normalized')),
   ...(withFixtures ? readPackages(resolve(ROOT, 'tests/fixtures/content')) : []),
-];
+].filter((p) => onlyIds === null || onlyIds.includes(p.packageId));
 const { withdrawals, problems } = collectWithdrawals(resolve(ROOT, 'content/withdrawals'));
 if (problems.length > 0) {
   for (const p of problems) console.error(`withdrawals: ${p}`);

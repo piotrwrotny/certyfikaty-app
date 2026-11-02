@@ -5,7 +5,7 @@
   "title": "T02 — Rodzaje wymagań",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Pełny zadeklarowany trójpodział functional/quality/constraint, w tym dane/interakcje i granice heurystyk; NFR jako jakość lub ograniczenie. C-P pozostaje wkładem częściowym.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T02-0001"
   },
   "provenance": [
     {
@@ -250,6 +256,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T02/review/decisions.yaml",
+      "sha256": "e11478b8762be416ac0349fbe624a80b30aca033cb4109a838539a6c76446024",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T02/rules.yaml",
       "sha256": "bd28e0b369567f10a6a7f142c2f61eeafb9f08f0f03fcbd7ea046b354b96331d",
       "documentVersion": "r2",
@@ -263,7 +275,7 @@
     },
     {
       "path": "content/authoring/T02/topic.yaml",
-      "sha256": "959e12a02849a92314bca0b520f902c4ee5f6a34fcbbbbb7f0456f0687190194",
+      "sha256": "8d3d3a47fcc56a694da59d95b0ab1fe4c001052d3c3d0abee7fd7f27feedc32d",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -2860,7 +2872,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T02-0001"
   }
 }

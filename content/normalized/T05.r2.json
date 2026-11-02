@@ -5,7 +5,7 @@
   "title": "T05 — Zadania RE, rola i kompetencje Requirements Engineer",
   "language": "pl",
   "purpose": "content",
-  "runtimeCompleteness": "partial",
+  "runtimeCompleteness": "complete",
   "limitations": [
     "Cztery główne zadania i tailoring; rola względem stanowiska; sześć obszarów uczenia FL oraz objaśniające soft skills z Handbook.",
     "Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.",
@@ -14,11 +14,17 @@
     "K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem."
   ],
   "status": {
-    "authoring": "draft",
-    "review": "pending",
-    "publication": "review-only",
-    "allowedUses": [],
-    "empirical": "none"
+    "authoring": "complete",
+    "review": "approved",
+    "publication": "permitted",
+    "allowedUses": [
+      "learning",
+      "practice",
+      "remediation",
+      "delayed"
+    ],
+    "empirical": "none",
+    "decisionRef": "DEC-T05-0001"
   },
   "provenance": [
     {
@@ -232,6 +238,12 @@
       "storedFileVersion": "cpre-authoring/1.0"
     },
     {
+      "path": "content/authoring/T05/review/decisions.yaml",
+      "sha256": "03c8ad18603e59995adfbe3e7c1797852160001169c7f0b907469db599ba4458",
+      "documentVersion": "r2",
+      "storedFileVersion": "cpre-authoring/1.0"
+    },
+    {
       "path": "content/authoring/T05/rules.yaml",
       "sha256": "66988e94c45903329fe7810fe064e4289d1b4cd7e8d81a266de202d2597b1c8c",
       "documentVersion": "r2",
@@ -245,7 +257,7 @@
     },
     {
       "path": "content/authoring/T05/topic.yaml",
-      "sha256": "13d9f62e30b024c89db332790509c54e8ab753d3c800adcda025cc008330374d",
+      "sha256": "9623ce359c141e7569af908636fea5812f29f14f1a318072e50f5fd8bd6ad691",
       "documentVersion": "r2",
       "storedFileVersion": "cpre-authoring/1.0"
     }
@@ -2761,7 +2773,11 @@
     }
   ],
   "rights": {
-    "status": "unresolved",
-    "channels": []
+    "status": "permitted",
+    "channels": [
+      "internal-review",
+      "internal-lan"
+    ],
+    "decisionRef": "DEC-T05-0001"
   }
 }
