@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T21-F01
+revision: r1
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T21-01
+  aspect: ZAK-T21-01
+family: FAM-T21-01
+sourceAnchor: T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-F01/r1
+stem: Oceń każdą tezę dotyczącą adekwatności pojedynczego wymagania.
+options:
+  - id: "1"
+    text: Adekwatność odnosi się do potrzeb rzeczywistych i uzgodnionych.
+    truth: true
+    rationale: Teza wymienia oba warunki sensu adekwatności; odpowiada regule, dlatego Prawda.
+    rules:
+      - REG-T21-01
+  - id: "2"
+    text: Poprawność gramatyczna sama wystarcza do uznania wymagania za adekwatne.
+    truth: false
+    rationale: Teza zastępuje zgodność z potrzebami własnością języka. Reguła nie daje takiej równoważności, dlatego Fałsz.
+    rules:
+      - REG-T21-01
+  - id: "3"
+    text: Adekwatność nie oznacza wyłącznie technicznej możliwości realizacji wymagania.
+    truth: true
+    rationale: Definicja dotyczy rzeczywistych, uzgodnionych potrzeb; sama wykonalność opisuje inny przedmiot. Teza poprawnie rozdziela te znaczenia, dlatego Prawda.
+    rules:
+      - REG-T21-01

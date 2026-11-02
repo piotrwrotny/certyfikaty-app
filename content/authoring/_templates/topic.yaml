@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+# Szablon tematu. Skopiuj cały katalog _templates jako content/authoring/<ID tematu>/.
+# Opis pól: docs/13_AUTHORING_FORMAT.md, sekcja 4.1.
+format: cpre-authoring/1.0
+id: TXX                       # identyfikator tematu, staje się packageId
+revision: r1                  # rewizja paczki; zwiększ przy zmianie opublikowanej treści
+title: <Pełny tytuł tematu>   # widoczny w panelu „Zakres materiału”
+shortTitle: <Krótki tytuł>    # widoczny nad pytaniem i przy celach
+language: pl
+authoring: draft              # draft albo complete; to Twoja ocena, nie recenzja
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:                        # kolejność kryteriów na liście celów
+  - KRY-TXX-01
+limitations:
+  - <Czego temat świadomie nie obejmuje>
+provenance:                   # dokumenty, z których powstał temat; SHA-256 liczy konwerter
+  - path: references/content/<plik źródłowy>.md
+    documentVersion: v0.1
+criteria:
+  - id: KRY-TXX-01
+    revision: r1
+    description: <Cel uczenia się, np. Rozpoznaje …>
+    labelBeforeAnswer: <Neutralna etykieta bez nazwy zakresu>
+    eo:
+      - id: EO0.0.0
+        level: L1
+    aspects:
+      - id: ZAK-TXX-01
+        labelAfterAnswer: <Nazwa zakresu pokazywana po odpowiedzi>
+families:
+  - id: FAM-TXX-01
+    revision: r1
+    description: <Wspólny rdzeń pytań B/F/G/D tego zakresu i powód grupowania>

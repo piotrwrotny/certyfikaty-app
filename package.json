@@ -16,13 +16,15 @@
     "test": "vitest run",
     "content:import": "tsx scripts/content/import-t21.ts && tsx scripts/content/make-tech-fixture.ts",
     "content:validate": "tsx scripts/content/validate.ts",
+    "content:lint": "tsx scripts/content/authoring-cli.ts lint",
+    "content:convert": "tsx scripts/content/authoring-cli.ts convert",
     "content:build": "tsx scripts/content/build-release.ts",
     "content:release": "tsx scripts/content/build-release.ts --channel learner --strict",
     "icons": "tsx scripts/make-icons.ts",
     "test:e2e": "npm run build:e2e && playwright test --project=chromium --project=firefox --project=webkit --project=review",
     "test:visual": "npm run build:e2e && playwright test --project=visual",
     "serve:test": "tsx tests/e2e/server.ts",
-    "check": "npm run typecheck && npm run lint && npm run content:validate && npm run test && npm run build",
+    "check": "npm run typecheck && npm run lint && npm run content:validate && npm run content:lint && npm run test && npm run build",
     "build:e2e": "npm run content:build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e VITE_BUILD_TAG=e2e-a vite build && cross-env VITE_BASE=/cpre/ VITE_OUT_DIR=dist-e2e-b VITE_BUILD_TAG=e2e-b vite build && cross-env VITE_CONTENT_CHANNEL=review VITE_BASE=/cpre-review/ VITE_OUT_DIR=dist-review VITE_BUILD_TAG=review vite build"
   },
   "dependencies": {
@@ -55,6 +57,7 @@
     "vite": "^8.3.5",
     "vite-plugin-pwa": "^2.0.0",
     "vitest": "^5.0.5",
-    "workbox-build": "^7.4.1"
+    "workbox-build": "^7.4.1",
+    "yaml": "^2.9.1"
   }
 }

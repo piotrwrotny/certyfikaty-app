@@ -11,12 +11,7 @@ import { type ReactNode } from 'react';
 import type { QuestionPrompt } from '@/content/projections.ts';
 import type { AnyAnswer, KAnswer, KDecision, SelectionAnswer } from '@/domain/scoring.ts';
 import { InlineMarkdown } from '@/ui/Markdown.tsx';
-
-export function formatInstruction(p: QuestionPrompt): string {
-  if (p.format === 'A') return 'Wybierz jedną odpowiedź.';
-  if (p.format === 'P') return `Wybierz ${String(p.k ?? 2)} odpowiedzi.`;
-  return 'W każdym wierszu wybierz Prawda albo Fałsz. Brak wyboru pozostaje brakiem odpowiedzi.';
-}
+import { formatInstruction } from '@/content/instruction.ts';
 
 export function ChoiceControls({ prompt, value, onChange, locked, renderAfter, mode, idPrefix, announce }: {
   prompt: QuestionPrompt;

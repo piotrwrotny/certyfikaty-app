@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "forms.yaml: propozycje form testu tematu. Dopuszczenie formy pochodzi wyłącznie z review/decisions.yaml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["forms"],
+  "properties": {
+    "forms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "revision", "title", "scopes", "items", "dictionaryAllowed"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id" },
+          "revision": { "$ref": "common.schema.json#/$defs/revision" },
+          "title": { "$ref": "common.schema.json#/$defs/text", "description": "Tytuł formy. Widoczny na ekranie warunków testu." },
+          "scopes": { "$ref": "common.schema.json#/$defs/scopes" },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "common.schema.json#/$defs/id" },
+            "uniqueItems": true,
+            "description": "Pytania formy w kolejności wyświetlania."
+          },
+          "dictionaryAllowed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

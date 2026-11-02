@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T21-G01
+revision: r1
+format: P
+role: follow-up-2
+weight: 1
+k: 2
+scope:
+  criterion: KRY-T21-01
+  aspect: ZAK-T21-01
+family: FAM-T21-01
+sourceAnchor: T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-G01/r1
+stem: Które DWA stwierdzenia prawidłowo opisują adekwatność pojedynczego wymagania?
+options:
+  - id: a
+    text: Ocena dotyczy tego, czy zapis trafnie odzwierciedla rzeczywiste, uzgodnione potrzeby.
+    correct: true
+    rationale: Teza zachowuje przedmiot i warunki adekwatności, dlatego należy do klucza.
+    rules:
+      - REG-T21-01
+  - id: b
+    text: Ściśle opisane wymaganie może nadal nie odpowiadać rzeczywistej, uzgodnionej potrzebie.
+    correct: true
+    rationale: Ścisłość nie zapewnia zgodności z potrzebą. Teza poprawnie rozdziela te cechy, dlatego należy do klucza.
+    rules:
+      - REG-T21-01
+      - REG-T21-03
+  - id: c
+    text: Uzgodnienie treści z dowolną osobą automatycznie dowodzi jej zgodności z rzeczywistymi potrzebami interesariuszy.
+    correct: false
+    rationale: Teza usuwa warunki rzeczywistej potrzeby i właściwych interesariuszy. Sama dowolna zgoda ich nie potwierdza, dlatego nie należy do klucza.
+    rules:
+      - REG-T21-01
+  - id: d
+    text: Każde wymaganie z liczbą jest adekwatne.
+    correct: false
+    rationale: Liczba nie jest dowodem zgodności z potrzebą. Teza nie opisuje tego kryterium i nie należy do klucza.
+    rules:
+      - REG-T21-01
+  - id: e
+    text: Adekwatność jest nazwą braku różnych interpretacji zdania.
+    correct: false
+    rationale: Brak różnych interpretacji to jednoznaczność. Opcja podmienia sens adekwatności, dlatego nie należy do klucza.
+    rules:
+      - REG-T21-01
+      - REG-T21-03

@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+# Reguły rozstrzygające. Uzasadnienia opcji, lekcje i przykłady wskazują je przez id.
+rules:
+  - id: REG-TXX-01
+    revision: r1
+    statement: <Jedno zdanie reguły, widoczne w oknie wiedzy>
+    sources:
+      - source: SRC-TXX-SEN
+        location: <§ i strona>

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../../../schemas/authoring/sources.schema.json
+sources:
+  - id: SRC-T21-SEN
+    title: CPRE Foundation Level Syllabus EN 3.3.0
+    version: 3.3.0
+    url: https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf
+    location: s.1–2; s.4–5; s.19; §3.8 s.29–30; §1.1 s.11–12 dla comparison
+    attribution: IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal, [CPRE Foundation Level Syllabus EN 3.3.0](https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf), 1.04.2026
+    usageNote: Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska.
+  - id: SRC-T21-SPL
+    title: Syllabus PL 3.3.0
+    version: 3.3.0
+    url: https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf
+    location: s.1–2 i 4; s.19–20; §3.8 s.30–31; §1.1 s.11–12
+    attribution: "IREB e.V., ci sami autorzy; przekład SJSI: Radosław Grębski, Joanna Kalabińska, konsultacja Iwona Kolasa, redakcja Monika Petri-Starego; [Syllabus PL 3.3.0](https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf), 1.04.2026"
+    usageNote: Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska.
+  - id: SRC-T21-GEN
+    title: Glossary EN 2.2.0
+    version: 2.2.0
+    url: https://hub.ireb.org/media/pages/resources/cpre-glossary/bb302c52fe-1787039949/ireb_cpre_glossary_en_2.2.pdf
+    location: s.1–2, 5 i 8; adequacy s.8; completeness s.11; necessity s.20; quality criteria i quality requirement s.23; requirement s.24; stakeholder s.28; unambiguity i understandability s.32; verifiability s.34
+    attribution: Martin Glinz / IREB e.V., [Glossary EN 2.2.0](https://hub.ireb.org/media/pages/resources/cpre-glossary/bb302c52fe-1787039949/ireb_cpre_glossary_en_2.2.pdf), 1.10.2025
+    usageNote: Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska.
+  - id: SRC-T21-GPL
+    title: Glossary PL 2.2.0
+    version: 2.2.0
+    url: https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf
+    location: s.1–2, 5 i 8; adekwatność s.8; interesariusz s.14; jednoznaczność s.15; kompletność s.16; konieczność i kryteria jakości s.17; weryfikowalność s.32; wymaganie s.33; wymaganie jakościowe/funkcjonalne s.34; zrozumiałość s.36
+    attribution: Martin Glinz / IREB e.V.; terminy PL Monika Petri-Starego i Karolina Zmitrowicz, [Glossary PL 2.2.0](https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf), 1.10.2025
+    usageNote: Materiał do review. Dokładne prawa i kanał według Content §10 i QA; to nie zgoda uczniowska.

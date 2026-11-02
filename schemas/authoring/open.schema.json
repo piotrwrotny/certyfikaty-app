@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "open/*.md: nagłówek aktywności otwartej. Treść ma dwie sekcje: ## Polecenie i ## Rubryka.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "revision", "scope", "evaluation"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "scope": { "$ref": "common.schema.json#/$defs/scopes" },
+    "evaluation": { "enum": ["self-assessment", "designated-reviewer"], "description": "Samoocena nie daje punktów CPRE." },
+    "sourceAnchor": { "$ref": "common.schema.json#/$defs/text" }
+  }
+}

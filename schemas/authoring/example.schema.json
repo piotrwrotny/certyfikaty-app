@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "examples/*.md: nagłówek przykładu, kontrprzykładu, przepracowanego scenariusza albo porównania. Treść to Markdown pod nagłówkiem.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "revision", "kind", "title", "scope", "rules"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "kind": { "enum": ["example", "counterexample", "worked-example", "comparison"] },
+    "title": { "$ref": "common.schema.json#/$defs/text", "description": "Tytuł w oknie wiedzy i na przycisku Porównaj." },
+    "scope": { "$ref": "common.schema.json#/$defs/scopes" },
+    "rules": { "$ref": "common.schema.json#/$defs/idList", "description": "Reguły, na których opiera się tekst. Porównanie pojawia się przy lekcjach o wspólnej regule." },
+    "sourceAnchor": { "$ref": "common.schema.json#/$defs/text" }
+  }
+}

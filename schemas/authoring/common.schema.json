@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wspólne definicje formatu autorskiego cpre-authoring/1.0",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "description": "Stały identyfikator. Nie zmieniaj go po publikacji."
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^r[0-9]+(?:-[A-Za-z0-9._-]+)?$",
+      "description": "Rewizja obiektu, np. r1. Zmiana opublikowanej treści wymaga nowej rewizji."
+    },
+    "text": { "type": "string", "minLength": 1 },
+    "markdown": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Bezpieczny podzbiór Markdown: akapity, listy, wyróżnienia, proste tabele i linki http(s). Bez HTML."
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criterion"],
+      "properties": {
+        "criterion": { "$ref": "#/$defs/id" },
+        "aspect": { "$ref": "#/$defs/id" }
+      }
+    },
+    "scopes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scope" }
+    },
+    "idList": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/id" },
+      "uniqueItems": true
+    }
+  }
+}

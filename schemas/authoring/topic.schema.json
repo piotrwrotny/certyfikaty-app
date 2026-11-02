@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "topic.yaml: tożsamość tematu, teksty wyświetlane, kryteria, zakresy i rodziny",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "id", "revision", "title", "shortTitle", "language", "authoring", "educationProfile", "criteria"],
+  "properties": {
+    "format": { "const": "cpre-authoring/1.0" },
+    "id": { "$ref": "common.schema.json#/$defs/id", "description": "Identyfikator tematu, np. T22. Staje się packageId." },
+    "revision": { "$ref": "common.schema.json#/$defs/revision", "description": "Rewizja paczki tematu." },
+    "purpose": { "enum": ["content", "review-fixture"], "description": "Domyślnie content. review-fixture nigdy nie trafia do kanału ucznia." },
+    "title": { "$ref": "common.schema.json#/$defs/text", "description": "Pełny tytuł tematu. Widoczny w panelu Zakres materiału." },
+    "shortTitle": { "$ref": "common.schema.json#/$defs/text", "description": "Krótki tytuł. Widoczny nad pytaniem i przy celach." },
+    "language": { "const": "pl" },
+    "authoring": { "enum": ["draft", "complete"], "description": "Twoja ocena kompletności. Nie jest recenzją." },
+    "educationProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["syllabusVersion", "glossaryVersion", "regulationsVersion"],
+      "properties": {
+        "syllabusVersion": { "$ref": "common.schema.json#/$defs/text" },
+        "glossaryVersion": { "$ref": "common.schema.json#/$defs/text" },
+        "regulationsVersion": { "$ref": "common.schema.json#/$defs/text" }
+      }
+    },
+    "order": { "$ref": "common.schema.json#/$defs/idList", "description": "Kolejność kryteriów na liście celów. Brak pola oznacza kolejność z listy criteria." },
+    "limitations": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/text" } },
+    "provenance": {
+      "type": "array",
+      "description": "Dokumenty źródłowe, z których powstał temat. Sumę SHA-256 liczy konwerter.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "documentVersion"],
+        "properties": {
+          "path": { "$ref": "common.schema.json#/$defs/text" },
+          "documentVersion": { "$ref": "common.schema.json#/$defs/text" },
+          "storedFileVersion": { "$ref": "common.schema.json#/$defs/text" }
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "revision", "description"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id" },
+          "revision": { "$ref": "common.schema.json#/$defs/revision" },
+          "description": { "$ref": "common.schema.json#/$defs/text", "description": "Cel uczenia się. Dziś widoczny przed odpowiedzią, dopóki aplikacja nie czyta labelBeforeAnswer." },
+          "labelBeforeAnswer": { "$ref": "common.schema.json#/$defs/text", "description": "Neutralna etykieta przed odpowiedzią. Nie może zdradzać nazwy zakresu." },
+          "eo": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "level"],
+              "properties": {
+                "id": { "$ref": "common.schema.json#/$defs/id" },
+                "level": { "enum": ["L1", "L2", "L3"] }
+              }
+            }
+          },
+          "aspects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "labelAfterAnswer"],
+              "properties": {
+                "id": { "$ref": "common.schema.json#/$defs/id" },
+                "labelAfterAnswer": { "$ref": "common.schema.json#/$defs/text", "description": "Nazwa zakresu. Widoczna dopiero po odpowiedzi." }
+              }
+            }
+          }
+        }
+      }
+    },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "revision", "description"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id" },
+          "revision": { "$ref": "common.schema.json#/$defs/revision" },
+          "description": { "$ref": "common.schema.json#/$defs/text", "description": "Wspólny rdzeń pytań rodziny i powód grupowania." }
+        }
+      }
+    }
+  }
+}

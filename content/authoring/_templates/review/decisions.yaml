@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/decisions.schema.json
+# WZÓR. Ten plik pisze wyłącznie osoba upoważniona do recenzji, praw i dopuszczenia.
+# Agent programujący nigdy go nie tworzy ani nie zmienia. Brak pliku oznacza: do review, bez użyć.
+# Poniższe wartości niczego nie dopuszczają; pokazują tylko strukturę.
+decisions:
+  - id: DEC-TXX-0001
+    decidedAt: 2026-01-01
+    decidedBy: <Imię i nazwisko, rola>
+    ref: "<Gdzie jest zapis recenzji: protokół, zgłoszenie, dokument>"
+    revision: r1
+    review: pending           # pending, changes-required albo approved
+    publication: review-only  # review-only, permitted albo withdrawn
+    allowedUses: []           # learning, practice, remediation, delayed, topic-test
+    rights:
+      status: unresolved      # unresolved, review-only, permitted albo restricted
+      channels: [internal-review]

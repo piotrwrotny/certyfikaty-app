@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+# Szablon pytania K: każdy wiersz ma truth: true (Prawda) albo false (Fałsz).
+# Liczbę wierszy m policzy konwerter. Każdy poprawny wiersz daje weight/m punktu.
+id: TXX-F01
+revision: r1
+format: K
+role: follow-up-1             # pierwsza kontrola po korekcie (F)
+weight: 2
+scope:
+  criterion: KRY-TXX-01
+  aspect: ZAK-TXX-01
+family: FAM-TXX-01
+stem: |
+  <Polecenie, np. Oceń każdą tezę.>
+options:
+  - id: "1"
+    text: <Teza 1>
+    truth: true
+    rationale: |
+      <Dlaczego Prawda.>
+    rules: [REG-TXX-01]
+  - id: "2"
+    text: <Teza 2>
+    truth: false
+    rationale: |
+      <Dlaczego Fałsz.>
+    rules: [REG-TXX-01]
+  - id: "3"
+    text: <Teza 3>
+    truth: true
+    rationale: |
+      <Dlaczego Prawda.>
+    rules: [REG-TXX-01]

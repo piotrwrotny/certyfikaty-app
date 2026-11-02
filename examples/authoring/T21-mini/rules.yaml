@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+  - id: REG-T21-01
+    revision: r1
+    statement: Adekwatność dotyczy rzeczywistych, uzgodnionych potrzeb, a nie tylko poprawności języka
+    sources:
+      - source: SRC-T21-SEN
+        location: §3.8 s.29
+      - source: SRC-T21-SPL
+        location: s.30
+      - source: SRC-T21-GEN
+        location: adequacy s.8
+      - source: SRC-T21-GPL
+        location: s.8
+  - id: REG-T21-02
+    revision: r1
+    statement: Konieczność dotyczy niezbędności danego wymagania w specyfikacji rozpatrywanego systemu
+    sources:
+      - source: SRC-T21-SEN
+        location: §3.8 s.29
+      - source: SRC-T21-SPL
+        location: s.30
+      - source: SRC-T21-GEN
+        location: necessity s.20
+      - source: SRC-T21-GPL
+        location: konieczność s.17
+  - id: REG-T21-03
+    revision: r1
+    statement: Jednoznaczność dotyczy niedopuszczania różnych odczytań wymagania przez różne osoby
+    sources:
+      - source: SRC-T21-SEN
+        location: §3.8 s.29
+      - source: SRC-T21-SPL
+        location: s.30
+      - source: SRC-T21-GEN
+        location: unambiguity s.32
+      - source: SRC-T21-GPL
+        location: s.15
+  - id: REG-T21-06
+    revision: r1
+    statement: Weryfikowalność oznacza możliwość sprawdzenia spełnienia w zrealizowanym systemie; pomiar nie jest jedyną drogą
+    sources:
+      - source: SRC-T21-SEN
+        location: §3.8 s.30
+      - source: SRC-T21-SPL
+        location: s.30
+      - source: SRC-T21-GEN
+        location: verifiability s.34 i uwaga o testach, pomiarach, inspekcjach
+      - source: SRC-T21-GPL
+        location: s.32
+  - id: REG-T21-07
+    revision: r1
+    statement: Dla pojedynczego wymagania szczególną wagę mają adekwatność i zrozumiałość; pozostałe cechy ich nie zastępują
+    sources:
+      - source: SRC-T21-SEN
+        location: §3.8 s.29
+      - source: SRC-T21-SPL
+        location: s.30

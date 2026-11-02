@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+# Szablon pytania P: dokładnie k opcji ma correct: true. Nadmiar zaznaczeń daje 0 pkt.
+id: TXX-G01
+revision: r1
+format: P
+k: 2
+role: follow-up-2             # druga kontrola po korekcie (G)
+weight: 1
+scope:
+  criterion: KRY-TXX-01
+  aspect: ZAK-TXX-01
+family: FAM-TXX-01
+stem: |
+  <Polecenie, np. Które DWA stwierdzenia …?>
+options:
+  - id: a
+    text: <Stwierdzenie a>
+    correct: true
+    rationale: |
+      <Dlaczego należy do klucza.>
+    rules: [REG-TXX-01]
+  - id: b
+    text: <Stwierdzenie b>
+    correct: true
+    rationale: |
+      <Dlaczego należy do klucza.>
+    rules: [REG-TXX-01]
+  - id: c
+    text: <Stwierdzenie c>
+    correct: false
+    rationale: |
+      <Dlaczego nie należy do klucza.>
+    rules: [REG-TXX-01]
+  - id: d
+    text: <Stwierdzenie d>
+    correct: false
+    rationale: |
+      <Dlaczego nie należy do klucza.>
+    rules: [REG-TXX-01]

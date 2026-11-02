@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+  - id: REL-T21-10-01
+    revision: r1
+    type: explains
+    from: N-T21-01
+    to: REG-T21-01
+    meaning: "Nota rozwija znaczenie i granice właściwej reguły; cel: celowany powrót do wiedzy."
+    condition: Ujawnienie dopuszczone przez granicę feedbacku
+    provenance: INTERPRETATION autora wg Content §8.3
+  - id: REL-T21-11-03
+    revision: r1
+    type: distinguishes
+    from: CMP-T21-03
+    to: REG-T21-07
+    meaning: Comparison rozdziela dwa sensy po wspólnej osi.
+    condition: Ujawnienie dopuszczone przez granicę feedbacku
+    provenance: INTERPRETATION autora wg Content §8.3
+  - id: REL-T21-14
+    revision: r1
+    type: required-for
+    from: PRE-T21
+    to: KRY-T21-01
+    meaning: Podstawa requirement/stakeholder jest potrzebna do odczytania sensu adequacy; bez review nie wymusza niczego.
+    condition: Tylko gdy niezrozumiałe są pojęcia potrzeby i interesariusza; podstawa pomijalna
+    provenance: Propozycja dydaktyczna wg Content §3.3

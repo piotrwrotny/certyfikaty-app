@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T21
+revision: r1-mini1
+purpose: review-fixture
+title: T21 — Jakość pojedynczego wymagania (wycinek przykładowy formatu)
+shortTitle: Jakość pojedynczego wymagania
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+limitations:
+  - "Wycinek T21 do pokazania formatu autorskiego: ścieżka ZAK-T21-01 (B01, F01, G01), nota, podstawa, porównanie, scenariusz i korekta."
+  - Treść skopiowana programowo z content/normalized/T21.r1-full1.json; nic nie zostało dopisane.
+  - "Status jak w źródle: do odrębnego review, bez dopuszczonych użyć. Brak pliku review/decisions.yaml jest zamierzony."
+provenance:
+  - path: references/content/T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md
+    documentVersion: v0.1
+    storedFileVersion: "2"
+  - path: references/content/T21_IREB_CPRE_Single_Requirement_Quality_QA_and_Handoff_v0.1.md
+    documentVersion: v0.1
+    storedFileVersion: "2"
+criteria:
+  - id: KRY-T21-01
+    revision: r1
+    description: Rozpoznaje sześć nazw kryteriów jakości pojedynczego wymagania i odtwarza ich znaczenia.
+    eo:
+      - id: EO3.8.1
+        level: L1
+    aspects:
+      - id: ZAK-T21-01
+        labelAfterAnswer: adequate
+      - id: ZAK-T21-06
+        labelAfterAnswer: verifiable
+  - id: KRY-T21-02
+    revision: r1
+    description: Rozpoznaje dwie najważniejsze cechy (adekwatność i zrozumiałość) oraz ich znaczenie wobec pozostałych.
+    eo:
+      - id: EO3.8.1
+        level: L1
+    aspects:
+      - id: ZAK-T21-07
+        labelAfterAnswer: "szczególna para: adekwatność i zrozumiałość"
+families:
+  - id: FAM-T21-01
+    revision: r1
+    description: Wspólna rodzina B/F/G/D ścieżki ZAK-T21-01; brak zatwierdzonej niezależności.

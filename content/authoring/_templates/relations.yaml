@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+# Typowane powiązania między samodzielnymi obiektami. Dozwolone pary typ/od/do: docs/13, sekcja 5.
+relations:
+  - type: explains            # R10: lekcja lub przykład → reguła
+    from: TXX-N01
+    to: REG-TXX-01
+    meaning: <Jakie znaczenie lub granicę reguły rozwija lekcja>
+  - type: distinguishes       # R11: porównanie → reguła rozdzielanego sensu
+    from: TXX-CMP01
+    to: REG-TXX-01
+    meaning: <Jaką różnicę i po jakiej osi pokazuje porównanie>
+  - type: required-for        # R14: podstawa → kryterium, zakres albo pytanie
+    from: TXX-PRE
+    to: KRY-TXX-01
+    meaning: <Czego nie da się zrobić bez tej podstawy>
+    condition: <Kiedy podstawa jest potrzebna>

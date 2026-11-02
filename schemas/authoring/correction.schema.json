@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "corrections/*.md: nagłówek korekty. Treść korekty to Markdown, a inna pomoc idzie pod nagłówkiem ## Inna pomoc.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "revision", "scope", "followUps"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "scope": { "$ref": "common.schema.json#/$defs/scope", "description": "Zakres korygowany (R18). Korekta uruchamia się po błędzie w pytaniu o tym zakresie." },
+    "followUps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": { "$ref": "common.schema.json#/$defs/id" },
+      "uniqueItems": true,
+      "description": "Kontrole po korekcie w kolejności: najpierw F (follow-up-1), potem G (follow-up-2). Każda tworzy relację R19."
+    },
+    "see": { "$ref": "common.schema.json#/$defs/idList", "description": "Lekcje i przykłady wskazane w korekcie." },
+    "sourceAnchor": { "$ref": "common.schema.json#/$defs/text" }
+  }
+}

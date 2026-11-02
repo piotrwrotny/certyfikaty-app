@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+# Szablon pytania A: dokładnie jedna opcja ma correct: true.
+id: TXX-B01
+revision: r1
+format: A
+role: base                    # base (B), follow-up-1 (F), follow-up-2 (G), delayed-candidate (D), practice
+weight: 1                     # maksymalna liczba punktów: 1, 2 albo 3
+scope:                        # zakres, który pytanie mierzy; po błędzie uruchamia korektę tego zakresu
+  criterion: KRY-TXX-01
+  aspect: ZAK-TXX-01
+family: FAM-TXX-01
+stem: |
+  <Treść pytania. Widoczna przed odpowiedzią. Nie podawaj w niej nazwy zakresu, jeśli jest odpowiedzią.>
+options:
+  - id: a
+    text: <Treść opcji a>
+    correct: false
+    rationale: |
+      <Dlaczego ta opcja nie należy do klucza. Widoczne dopiero po odpowiedzi.>
+    rules: [REG-TXX-01]
+  - id: b
+    text: <Treść opcji b>
+    correct: true
+    rationale: |
+      <Dlaczego ta opcja jest poprawna.>
+    rules: [REG-TXX-01]
+    see: TXX-N01              # lekcja otwierana z tej opcji (działa po etapie 3)
+  - id: c
+    text: <Treść opcji c>
+    correct: false
+    rationale: |
+      <Uzasadnienie opcji c.>
+    rules: [REG-TXX-01]
+  - id: d
+    text: <Treść opcji d>
+    correct: false
+    rationale: |
+      <Uzasadnienie opcji d.>
+    rules: [REG-TXX-01]

@@ -1,0 +1,271 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "questions/*.yaml: zadanie A, P albo K z kluczem i uzasadnieniem każdej opcji",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "revision",
+    "format",
+    "role",
+    "weight",
+    "scope",
+    "family",
+    "stem",
+    "options"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "revision": {
+      "$ref": "common.schema.json#/$defs/revision"
+    },
+    "format": {
+      "enum": [
+        "A",
+        "P",
+        "K"
+      ],
+      "description": "A: jedna poprawna. P: k poprawnych. K: Prawda/Fałsz w każdym wierszu."
+    },
+    "role": {
+      "enum": [
+        "base",
+        "follow-up-1",
+        "follow-up-2",
+        "delayed-candidate",
+        "practice"
+      ],
+      "description": "base: pytanie bazowe B. follow-up-1: kontrola F. follow-up-2: kontrola G. delayed-candidate: późniejsza kontrola D. practice: ćwiczenie."
+    },
+    "weight": {
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "description": "Maksymalna liczba punktów."
+    },
+    "k": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Tylko P: liczba poprawnych opcji."
+    },
+    "scope": {
+      "$ref": "common.schema.json#/$defs/scope",
+      "description": "Zakres, który zadanie mierzy (R06). Decyduje o korekcie po błędzie."
+    },
+    "secondaryScopes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "criterion",
+          "role"
+        ],
+        "properties": {
+          "criterion": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "aspect": {
+            "$ref": "common.schema.json#/$defs/id"
+          },
+          "role": {
+            "enum": [
+              "secondary",
+              "helper"
+            ]
+          },
+          "options": {
+            "$ref": "common.schema.json#/$defs/idList",
+            "description": "Opcje dotyczące tego zakresu. Brak pola oznacza wszystkie."
+          }
+        }
+      }
+    },
+    "family": {
+      "$ref": "common.schema.json#/$defs/id",
+      "description": "Rodzina z topic.yaml (R20)."
+    },
+    "sourceAnchor": {
+      "$ref": "common.schema.json#/$defs/text",
+      "description": "Miejsce w dokumencie źródłowym. Brak pola oznacza ścieżkę tego pliku."
+    },
+    "stem": {
+      "$ref": "common.schema.json#/$defs/markdown",
+      "description": "Treść pytania. Widoczna przed odpowiedzią i w teście."
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "text",
+          "rationale",
+          "rules"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/id",
+            "description": "Litera dla A i P, numer wiersza dla K."
+          },
+          "text": {
+            "$ref": "common.schema.json#/$defs/markdown",
+            "description": "Treść opcji albo wiersza. Widoczna przed odpowiedzią."
+          },
+          "correct": {
+            "type": "boolean",
+            "description": "A i P: czy opcja należy do klucza."
+          },
+          "truth": {
+            "type": "boolean",
+            "description": "K: poprawna ocena wiersza, true = Prawda."
+          },
+          "rationale": {
+            "$ref": "common.schema.json#/$defs/markdown",
+            "description": "Uzasadnienie tej decyzji (R08). Widoczne dopiero po odpowiedzi."
+          },
+          "rules": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            "description": "Reguły rozstrzygające (R09). Pierwsza decyduje, którą lekcję aplikacja dziś pokaże pod uzasadnieniem."
+          },
+          "see": {
+            "$ref": "common.schema.json#/$defs/id",
+            "description": "Lekcja lub przykład otwierany z tej opcji. Wymaga etapu 3, do tego czasu konwerter sprawdza zgodność z pierwszą regułą."
+          },
+          "scopes": {
+            "$ref": "common.schema.json#/$defs/scopes",
+            "description": "Zakresy kontaktu uzasadnienia. Brak pola oznacza zakres pytania."
+          },
+          "sourceAnchor": {
+            "$ref": "common.schema.json#/$defs/text"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "format": {
+            "const": "A"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "k"
+          ]
+        },
+        "properties": {
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "correct"
+              ],
+              "not": {
+                "required": [
+                  "truth"
+                ]
+              }
+            },
+            "contains": {
+              "type": "object",
+              "properties": {
+                "correct": {
+                  "const": true
+                }
+              }
+            },
+            "minContains": 1,
+            "maxContains": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "format": {
+            "const": "P"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "k"
+        ],
+        "properties": {
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "correct"
+              ],
+              "not": {
+                "required": [
+                  "truth"
+                ]
+              }
+            },
+            "contains": {
+              "type": "object",
+              "properties": {
+                "correct": {
+                  "const": true
+                }
+              }
+            },
+            "minContains": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "format": {
+            "const": "K"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "k"
+          ]
+        },
+        "properties": {
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "truth"
+              ],
+              "not": {
+                "required": [
+                  "correct"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

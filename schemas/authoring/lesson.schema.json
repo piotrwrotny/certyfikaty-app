@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "lessons/*.md: nagłówek lekcji (nota albo potrzebna podstawa). Treść lekcji to Markdown pod nagłówkiem.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "revision", "kind", "title", "scope", "rules"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "revision": { "$ref": "common.schema.json#/$defs/revision" },
+    "kind": { "enum": ["note", "prerequisite"], "description": "note: wyjaśnienie zakresu. prerequisite: pomijalna podstawa." },
+    "title": { "$ref": "common.schema.json#/$defs/text", "description": "Tytuł lekcji. Widoczny jako nagłówek lekcji, pozycja listy wprowadzeń i link pod uzasadnieniem." },
+    "scope": { "$ref": "common.schema.json#/$defs/scopes", "description": "Zakresy, których dotyczy lekcja. Pierwsza nota zakresu staje się jego wprowadzeniem." },
+    "rules": { "$ref": "common.schema.json#/$defs/idList", "description": "Reguły, na których opiera się tekst. Aplikacja łączy po nich uzasadnienia z lekcją." },
+    "prerequisiteCondition": { "$ref": "common.schema.json#/$defs/text", "description": "Tylko prerequisite: kiedy podstawa jest potrzebna." },
+    "skippable": { "type": "boolean", "description": "Tylko prerequisite: czy uczeń może pominąć podstawę." },
+    "sourceAnchor": { "$ref": "common.schema.json#/$defs/text" }
+  },
+  "if": { "properties": { "kind": { "const": "prerequisite" } } },
+  "then": { "required": ["prerequisiteCondition"] },
+  "else": { "not": { "anyOf": [{ "required": ["prerequisiteCondition"] }, { "required": ["skippable"] }] } }
+}

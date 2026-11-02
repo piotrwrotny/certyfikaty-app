@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T21-B01
+revision: r1
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T21-01
+  aspect: ZAK-T21-01
+family: FAM-T21-01
+sourceAnchor: T21_IREB_CPRE_Single_Requirement_Quality_Content_v0.1.md §7 T21-B01/r1
+stem: Które kryterium jakości pojedynczego wymagania odnosi się do zgodności z rzeczywistymi, uzgodnionymi potrzebami interesariuszy?
+options:
+  - id: a
+    text: Konieczność.
+    correct: false
+    rationale: Konieczność odnosi się do niezbędności danego wymagania w specyfikacji. Polecenie pyta o zgodność treści z potrzebami, dlatego ta nazwa nie jest właściwym wyborem.
+    rules:
+      - REG-T21-01
+      - REG-T21-02
+  - id: b
+    text: Adekwatność.
+    correct: true
+    rationale: W poleceniu wskazano rzeczywiste i uzgodnione potrzeby. To rozstrzygający przedmiot adekwatności, dlatego należy wybrać tę odpowiedź.
+    rules:
+      - REG-T21-01
+  - id: c
+    text: Jednoznaczność.
+    correct: false
+    rationale: Jednoznaczność dotyczy różnych interpretacji zapisu. Brak takich różnic nie jest sam w sobie zgodnością z rzeczywistymi potrzebami, o którą pyta polecenie.
+    rules:
+      - REG-T21-01
+      - REG-T21-03
+  - id: d
+    text: Weryfikowalność.
+    correct: false
+    rationale: Weryfikowalność odnosi się do możliwości sprawdzenia spełnienia. Można sprawdzić realizację niewłaściwej potrzeby, więc nazwa nie odpowiada wskazanemu znaczeniu.
+    rules:
+      - REG-T21-01
+      - REG-T21-06

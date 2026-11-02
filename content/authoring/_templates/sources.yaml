@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../../../schemas/authoring/sources.schema.json
+# Źródła tematu. Reguły odwołują się do nich przez id.
+sources:
+  - id: SRC-TXX-SEN
+    title: CPRE Foundation Level Syllabus EN 3.3.0
+    version: 3.3.0
+    url: https://example.org/<adres dokumentu>.pdf   # adres http(s) albo ""
+    location: <Strony lub sekcje użyte w temacie>
+    attribution: <Autorzy, wydawca, tytuł, data>
+    usageNote: <Ograniczenia użycia; to nie jest zgoda na publikację>

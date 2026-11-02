@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review/decisions.yaml: decyzje recenzji, praw i użyć. Pisze je wyłącznie wskazana osoba. Agent nigdy ich nie tworzy.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "decidedAt", "decidedBy", "ref", "revision", "review", "publication", "allowedUses", "rights"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id", "description": "Identyfikator decyzji, np. DEC-T22-0001." },
+          "decidedAt": { "type": "string", "format": "date" },
+          "decidedBy": { "$ref": "common.schema.json#/$defs/text", "description": "Osoba i rola." },
+          "ref": { "$ref": "common.schema.json#/$defs/text", "description": "Gdzie jest zapis recenzji: protokół, zgłoszenie, dokument." },
+          "revision": { "$ref": "common.schema.json#/$defs/revision", "description": "Rewizja paczki tematu, której dotyczy decyzja." },
+          "review": { "enum": ["pending", "changes-required", "approved"] },
+          "publication": { "enum": ["review-only", "permitted", "withdrawn"] },
+          "allowedUses": {
+            "type": "array",
+            "items": { "enum": ["learning", "practice", "remediation", "delayed", "topic-test"] },
+            "uniqueItems": true
+          },
+          "rights": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "channels"],
+            "properties": {
+              "status": { "enum": ["unresolved", "review-only", "permitted", "restricted"] },
+              "channels": {
+                "type": "array",
+                "items": { "enum": ["internal-review", "internal-lan", "public-noncommercial", "public-commercial"] },
+                "uniqueItems": true
+              }
+            }
+          },
+          "families": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "review"],
+              "properties": { "id": { "$ref": "common.schema.json#/$defs/id" }, "review": { "enum": ["pending", "approved"] } }
+            }
+          },
+          "relations": { "$ref": "common.schema.json#/$defs/idList", "description": "Zatwierdzone relacje. Pozostałe mają status pending." },
+          "novelty": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["question", "review"],
+              "properties": { "question": { "$ref": "common.schema.json#/$defs/id" }, "review": { "enum": ["pending", "near", "independent"] } }
+            }
+          },
+          "forms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "review", "publication", "allowedUses", "eligibilityPolicyRef"],
+              "properties": {
+                "id": { "$ref": "common.schema.json#/$defs/id" },
+                "review": { "enum": ["pending", "changes-required", "approved"] },
+                "publication": { "enum": ["review-only", "permitted", "withdrawn"] },
+                "allowedUses": { "type": "array", "items": { "enum": ["topic-test"] }, "uniqueItems": true },
+                "eligibilityPolicyRef": { "$ref": "common.schema.json#/$defs/text" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "relations.yaml: typowane powiązania między samodzielnymi obiektami tematu",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["relations"],
+  "properties": {
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "from", "to", "meaning"],
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/id", "description": "Stały identyfikator relacji. Brak pola oznacza REL-<from>-<typ>-<to>." },
+          "revision": { "$ref": "common.schema.json#/$defs/revision" },
+          "type": {
+            "enum": ["explains", "distinguishes", "illustrates", "counterexample-of", "required-for", "variant-of"],
+            "description": "explains R10, distinguishes R11, illustrates R12, counterexample-of R13, required-for R14, variant-of R21."
+          },
+          "from": { "$ref": "common.schema.json#/$defs/id" },
+          "to": { "$ref": "common.schema.json#/$defs/id" },
+          "meaning": { "$ref": "common.schema.json#/$defs/text", "description": "Co konkretnie daje to powiązanie. Recenzent ocenia ten zapis." },
+          "condition": { "$ref": "common.schema.json#/$defs/text", "description": "Kiedy powiązanie obowiązuje. Brak pola oznacza wartość domyślną dla typu." },
+          "provenance": { "$ref": "common.schema.json#/$defs/text", "description": "Skąd pochodzi powiązanie. Brak pola oznacza: Interpretacja autora." }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../../../schemas/authoring/forms.schema.json
+# Propozycja formy testu tematu. Forma działa w aplikacji dopiero po decyzji w review/decisions.yaml.
+forms:
+  - id: FORM-TXX-01
+    revision: r1
+    title: <Tytuł formy, widoczny na ekranie warunków testu>
+    scopes:
+      - criterion: KRY-TXX-01
+    items: [TXX-B01, TXX-G01]   # kolejność wyświetlania w teście
+    dictionaryAllowed: false

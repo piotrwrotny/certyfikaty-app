@@ -35,6 +35,24 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 - **TECH01 — syntetyczne fixtures techniczne** (`scripts/content/make-tech-fixture.ts`): neutralne etykiety „Opcja 1–4”, zero treści IREB, oznaczone w treści i pasku statusu. Mają techniczne „dopuszczenie” (`FIXTURE-TECH01-*`) wyłącznie po to, by demonstrować kanał learner, formę testu, follow-up i aktualizacje. **Nie jest to dopuszczenie treści ani formy T21.**
 - Brak formy U-TOPIC T21: ekran warunków pokazuje „Nie mamy odpowiedniego zestawu do tego zakresu”; nie ma automatycznego wyboru D01–08.
 
+## Format autorski `cpre-authoring/1.0` (docs/13, etap 1 z 4)
+
+- **Cel**: zasilanie treści z plików YAML/Markdown przygotowanych poza aplikacją. Zlecenie właściciela z 2.11.2026; kierunek zaakceptowany po przeglądzie grafiki przepływu, grafu obiektów i mapy ekranów.
+- **Nazwy pól angielskie**, zgodne z kontraktem paczki; treść po polsku. Domyślna odpowiedź przyjęta przy akceptacji, bo właściciel nie wskazał innej.
+- **Klucz i uzasadnienie przy opcji**: opcja, poprawność, uzasadnienie i reguły w jednym miejscu. Konwerter rozdziela je na treść pytania i rozwiązanie, więc projekcja testu nie dostaje klucza.
+- **Reguły lekcji w nagłówku lekcji**, nie w `relations.yaml`: aplikacja łączy uzasadnienie z notą przez pierwszą regułę (`noteForRule`), a okno wiedzy podsuwa materiały przez wspólne reguły i zakresy. `relations.yaml` przechowuje semantykę R10–R14 i R21 do recenzji. Kontrole F i G są listą `followUps` w korekcie, bo kontrakt trzyma je jako uporządkowane `followUpRefs`.
+- **Instrukcja formatu nie jest polem autorskim**: aplikacja wylicza ją z formatu i `k` (`formatInstruction`), co wyklucza rozjazd instrukcji i punktacji. Pole `instruction` kontraktu wypełni konwerter tym samym tekstem.
+- **`review/decisions.yaml` pisze wyłącznie upoważniona osoba**; brak pliku oznacza pending/review-only/bez użyć. Szablon decyzji niczego nie dopuszcza.
+- **Przykład T21-mini** (`examples/authoring/T21-mini`) wygenerowano programowo z `content/normalized/T21.r1-full1.json`; test porównuje go ze źródłem pole po polu. Leży w `examples/`, nie w `content/authoring/`, żeby nie kolidował identyfikatorami z T21 i nie trafił do wydania.
+- **Zależność `yaml` 2.9.1** (dev): parser plików autorskich dla skryptów i testów. Nie trafia do aplikacji.
+- **Etap 2 — `content:lint` i `content:convert`** (`scripts/content/authoring-convert.ts`, `authoring-cli.ts`): czyste funkcje kontroli i konwersji oddzielone od zapisu plików. `content:lint` należy do `npm run check`; bez tematów kończy się sukcesem.
+- **Bez decyzji prawa są `unresolved` bez kanałów**, więc paczka nie trafia nawet do kanału recenzenckiego. Konwerter nie domniemywa praw; widoczność dla recenzentów wymaga decyzji o prawach `review-only` dla `internal-review`.
+- **Jedna rewizja tematu w `content/normalized`**: konwersja usuwa poprzednie rewizje tego samego `packageId`, bo `content:build` zabiera cały katalog. Przypięte rewizje rozpoczętych prób zostają na urządzeniach. Paczki spoza formatu autorskiego (import T21) są chronione; zastąpienie wymaga `--replace-import`.
+- **Niezmienność rewizji względem poprzedniej konwersji**: błąd, gdy poprzednia rewizja była kompletna albo miała decyzję; ostrzeżenie dla szkicu bez decyzji. Pola zależne od decyzji nie liczą się jako zmiana treści.
+- **`formatInstruction` przeniesiona do `src/content/instruction.ts`**, żeby aplikacja i konwerter używały jednego tekstu instrukcji. Zachowanie aplikacji bez zmian.
+- **Pochodzenie paczki**: dokumenty z `topic.yaml` z SHA-256 oraz każdy plik autorski z SHA-256; kontrakt wymaga co najmniej dwóch wpisów.
+- **Sprawdzenie ścieżki zapisu**: `content:convert --replace-import` na T21-mini zapisał paczkę i raport, `content:validate` przyjął wynik, po czym `content/normalized` przywrócono z git.
+
 ## Pedagogika — interpretacje wykonawcze (bez zmiany zasad)
 
 - **Nagłówek pytania**: treść nie zawiera tytułów itemów, a ich dopisanie byłoby tworzeniem treści. H1 jest neutralny („Twoja odpowiedź.” / „Sprawdź inną sytuację.”), stem jest akapitem pod nim — ta sama hierarchia co w makiecie.
@@ -64,3 +82,5 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 
 - **[do decyzji właściciela]** Form U-TOPIC dla T21: brak — wymaga odrębnego review doboru, kolejności i przecieków (GAP-T21-06).
 - **[do decyzji właściciela]** Integracja pozostałych instancji relacji T21 (§8.3) do pakietu — warto zrobić po review relacji.
+- **[do decyzji właściciela]** Etap 3 formatu autorskiego: opcjonalne pola `shortTitle`, `order`, `labelBeforeAnswer` i jawne `see` w kontrakcie 1.1.0 (zgodnie wstecz). Zmienia źródło tekstów wyświetlanych, nie wygląd, pedagogikę ani punktację (docs/13 §9).
+- **[do decyzji właściciela]** Opis tematu na ekranie sesji: nie istnieje w zaakceptowanym projekcie; wymaga osobnej propozycji projektowej (docs/13 §6).
