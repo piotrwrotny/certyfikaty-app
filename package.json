@@ -25,6 +25,7 @@
     "test:visual": "npm run build:e2e && playwright test --project=visual",
     "serve:test": "tsx tests/e2e/server.ts",
     "lan:serve": "tsx scripts/lan-serve.ts",
+    "lan:ca": "tsx scripts/lan-ca.ts",
     "preview:learner": "cross-env VITE_BASE=/cpre/ npm run build && tsx tests/e2e/server.ts --port 4310 --base /cpre/ --dist dist --dist-b dist",
     "preview:review": "cross-env VITE_BASE=/cpre-review/ npm run build:review && tsx tests/e2e/server.ts --port 4320 --base /cpre-review/ --dist dist-review --dist-b dist-review",
     "check": "npm run typecheck && npm run lint && npm run content:validate && npm run content:lint && npm run test && npm run build",

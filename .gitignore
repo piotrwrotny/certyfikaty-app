@@ -15,3 +15,5 @@ release-out/
 dist-review/
 dist-e2e/
 dist-e2e-b/
+# Kopia lokalnego CA zawiera klucze prywatne (npm run lan:ca -- export).
+caddy-ca-backup*.json

@@ -15,6 +15,15 @@ export interface CaddyfileOptions {
   base: string;
   /** Absolute path of the built app (dist). */
   distDir: string;
+  /** Serve the local CA root certificate over plain HTTP, so a device can fetch it without cables or mail. */
+  caDownload?: CaDownloadOptions;
+}
+
+export interface CaDownloadOptions {
+  /** Directory of Caddy's local CA (contains root.crt). */
+  dir: string;
+  /** Plain-HTTP port; only /ca.crt is served, everything else redirects to the HTTPS app. */
+  port: number;
 }
 
 const HOST_RE = /^[a-z0-9]([a-z0-9._-]*[a-z0-9])?$/;
@@ -60,6 +69,32 @@ export function buildCaddyfile(o: CaddyfileOptions): string {
   // Forward slashes work for Caddy on Windows and avoid escape issues.
   const root = o.distDir.replace(/\\/g, '/');
   if (/["{}\r\n]/.test(root)) throw new Error(`Niedozwolone znaki w ścieżce dist: ${o.distDir}`);
+  return buildMainSite(host, port, prefix, root, o.caDownload);
+}
+
+function buildCaDownloadSite(host: string, httpsPort: number, ca: CaDownloadOptions): string {
+  const caDir = ca.dir.replace(/\\/g, '/');
+  if (/["{}\r\n]/.test(caDir)) throw new Error(`Niedozwolone znaki w ścieżce CA: ${ca.dir}`);
+  const port = normalizePort(ca.port);
+  // Any Host header (name or IP) may fetch the certificate; the redirect target is the fixed HTTPS origin.
+  return `
+http://:${String(port)} {
+	handle /ca.crt {
+		root * "${caDir}"
+		rewrite * /root.crt
+		header Content-Type "application/x-x509-ca-cert"
+		header Content-Disposition "attachment; filename=caddy-root.crt"
+		header Cache-Control "no-store"
+		file_server
+	}
+	handle {
+		redir https://${siteAddress(host, httpsPort)}{uri} 302
+	}
+}
+`;
+}
+
+function buildMainSite(host: string, port: number, prefix: string, root: string, ca: CaDownloadOptions | undefined): string {
   return `# Generowane przez npm run lan:serve — nie edytuj, nie commituj.
 {
 	admin off
@@ -111,5 +146,5 @@ ${siteAddress(host, port)} {
 		respond "{err.status_code} {err.status_text}" {err.status_code}
 	}
 }
-`;
+${ca === undefined ? '' : buildCaDownloadSite(host, port, ca)}`;
 }

@@ -7,11 +7,15 @@
  *   npm run lan:serve -- --host 192.168.1.50      # IP instead of alfabet.local
  *   npm run lan:serve -- --port 8443 --no-build
  *   npm run lan:serve -- --print-config           # print the Caddyfile and exit
+ *   npm run lan:serve -- --ca-port 8081           # certificate download on another HTTP port
+ *   npm run lan:serve -- --no-ca-download         # do not serve /ca.crt
  */
 import { spawn, spawnSync } from 'node:child_process';
-import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createServer } from 'node:net';
 import { networkInterfaces } from 'node:os';
 import { resolve } from 'node:path';
+import { caDirOf, rootFingerprint } from './lan/ca.ts';
 import { appUrl, buildCaddyfile, caddyRootCertPath, normalizeHost, normalizePort } from './lan/caddyfile.ts';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -28,6 +32,17 @@ const DEFAULT_HOST = 'alfabet.local';
 const host = normalizeHost(option('--host', DEFAULT_HOST));
 const port = normalizePort(Number(option('--port', '443')));
 const base = option('--base', '/cpre/');
+const caPort = normalizePort(Number(option('--ca-port', '80')));
+const rootCert = caddyRootCertPath();
+
+/** True when this process could bind the port now (free and permitted), so Caddy will not fail on it. */
+function canListen(p: number): Promise<boolean> {
+  return new Promise((done) => {
+    const probe = createServer();
+    probe.once('error', () => { done(false); });
+    probe.listen(p, () => { probe.close(() => { done(true); }); });
+  });
+}
 
 function lanAddresses(): string[] {
   return Object.values(networkInterfaces()).flat()
@@ -42,9 +57,16 @@ function fail(message: string): never {
 
 mkdirSync(OUT_DIR, { recursive: true });
 const caddyfilePath = resolve(OUT_DIR, 'Caddyfile');
-const caddyfile = buildCaddyfile({ host, port, base, distDir: DIST });
 
-if (flag('--print-config')) {
+// Pobranie certyfikatu po HTTP działa tylko, gdy port jest wolny i dozwolony; inaczej Caddy nie wystartowałby w ogóle.
+const printOnly = flag('--print-config');
+const caDownload = !flag('--no-ca-download') && (printOnly || await canListen(caPort));
+if (!flag('--no-ca-download') && !caDownload) {
+  console.log(`Pobranie certyfikatu z serwera wyłączone: port ${String(caPort)} jest zajęty albo wymaga uprawnień (Linux: sudo setcap cap_net_bind_service=+ep "$(command -v caddy)"). Użyj --ca-port <n> albo --no-ca-download.\n`);
+}
+const caddyfile = buildCaddyfile({ host, port, base, distDir: DIST, ...(caDownload ? { caDownload: { dir: caDirOf(rootCert), port: caPort } } : {}) });
+
+if (printOnly) {
   console.log(caddyfile);
   process.exit(0);
 }
@@ -53,6 +75,14 @@ if (spawnSync('caddy', ['version'], { stdio: 'ignore' }).status !== 0) {
   const hint = process.platform === 'win32' ? 'winget install CaddyServer.Caddy (potem otwórz nowy terminal)'
     : process.platform === 'darwin' ? 'brew install caddy' : 'sudo pacman -S caddy (Arch) lub menedżer pakietów dystrybucji';
   fail(`Nie znaleziono Caddy w PATH. Zainstaluj: ${hint}.`);
+}
+
+// Wolny i dozwolony port HTTPS: sprawdzamy sami, żeby zamiast błędu Caddy podać konkretne wyjście.
+if (!(await canListen(port))) {
+  const linuxHint = process.platform === 'linux'
+    ? ` Na Linuksie port poniżej 1024 wymaga uprawnienia: sudo setcap cap_net_bind_service=+ep "$(command -v caddy)" (aktualizacja pakietu caddy je kasuje).`
+    : '';
+  fail(`Nie można nasłuchiwać na porcie ${String(port)}: jest zajęty (np. poprzedni lan:serve nadal działa) albo wymaga uprawnień.${linuxHint} Inny port zmienia origin PWA (--port).`);
 }
 
 if (!flag('--no-build')) {
@@ -72,8 +102,11 @@ Host:       ${host}${host.endsWith('.local') ? '  (nazwa mDNS; komputer musi ją
 IP komputera: ${ips.length > 0 ? ips.join(', ') : '(nie wykryto)'}  — IP z DHCP może się zmienić; origin PWA to host, więc nie podawaj uczniom IP, jeśli używasz nazwy.
 Zatrzymanie: Ctrl+C. Zmiana hosta/portu = nowy origin = nowa instalacja PWA bez dotychczasowych profili.
 `);
+if (caDownload) {
+  const portPart = caPort === 80 ? '' : `:${String(caPort)}`;
+  console.log(`Certyfikat na urządzenie (zwykłe HTTP): http://${host}${portPart}/ca.crt${ips[0] === undefined ? '' : `  albo  http://${ips[0]}${portPart}/ca.crt`}\n`);
+}
 
-const rootCert = caddyRootCertPath();
 const copiedCert = resolve(OUT_DIR, 'caddy-root.crt');
 let attempts = 0;
 const certTimer = setInterval(() => {
@@ -81,7 +114,8 @@ const certTimer = setInterval(() => {
   if (existsSync(rootCert)) {
     clearInterval(certTimer);
     copyFileSync(rootCert, copiedCert);
-    console.log(`Certyfikat główny do zainstalowania na telefonach: ${copiedCert}`);
+    console.log(`Certyfikat główny (plik do ręcznego przekazania): ${copiedCert}`);
+    console.log(`Odcisk SHA-256: ${rootFingerprint(readFileSync(rootCert))}\nPorównaj go z odciskiem pokazanym przy instalacji na urządzeniu (certyfikat idzie po zwykłym HTTP).`);
   } else if (attempts >= 60) {
     clearInterval(certTimer);
     console.log(`Nie znaleziono certyfikatu głównego Caddy w: ${rootCert}`);

@@ -21,20 +21,15 @@ Nie pobieraj bibliotek/fontów z publicznych CDN. Link bibliograficzny może wym
 
 ## Uruchomienie w LAN na żądanie (`npm run lan:serve`)
 
-Pomocnik operatora dla małego wdrożenia: serwer włączasz tylko wtedy, gdy trzeba zainstalować aplikację albo pobrać nową treść. Po pierwszym wejściu aplikacja działa offline, więc serwer nie musi pracować stale. Pomocnik jest **narzędziem operatora, nie produkcyjnym hostem** — nie zastępuje docelowego hosta z sekcji „Docelowy model”, ale spełnia jego reguły (HTTPS, cache, prawdziwe 404, fallback shellu).
+Pomocnik operatora dla małego wdrożenia: serwer włączasz tylko wtedy, gdy trzeba zainstalować aplikację albo pobrać nową treść. Po pierwszym wejściu aplikacja działa offline, więc serwer nie musi pracować stale. **Docelowy system serwera to Omarchy (Arch Linux)**; Windows służy tylko do testów (sekcja na końcu). Pomocnik jest **narzędziem operatora, nie produkcyjnym hostem** — nie zastępuje docelowego hosta z sekcji „Docelowy model”, ale spełnia jego reguły (HTTPS, cache, prawdziwe 404, fallback shellu).
 
-### Wymagania
+**Instalacja krok po kroku, od czystego Omarchy: [instalacja omarchy](instalacja%20omarchy.md).** Ta sekcja opisuje mechanizm i opcje.
 
-- Node z `package.json`, Caddy (Windows: `winget install CaddyServer.Caddy`, potem nowy terminal; Arch/Omarchy: `sudo pacman -S caddy`), komputer i urządzenia w tej samej sieci prywatnej bez izolacji klientów Wi-Fi.
-- Zezwolenie w zaporze dla Caddy w sieci prywatnej (Windows: pierwsze uruchomienie; Linux: patrz „Uruchomienie na Linuksie”).
+### Jak to działa i dlaczego własne CA
 
-### Uruchomienie
+Instalacja PWA i service worker wymagają HTTPS z certyfikatem, któremu urządzenie ufa; zwykły `http://IP` nie wystarczy. Caddy wystawia certyfikat z własnego lokalnego CA (`tls internal`), a każde urządzenie instaluje certyfikat główny **jednorazowo**. To rozwiązanie bez kont zewnętrznych i bez zależności od dostawcy tożsamości (odrzucono m.in. Tailscale, który wymaga logowania przez zewnętrznego dostawcę SSO). Docker, router ani zmiana komputera nie zastępują zaufania do certyfikatu.
 
-```bash
-npm run lan:serve
-```
-
-Skrypt: sprawdza Caddy, buduje aplikację z `VITE_BASE=/cpre/`, generuje `release-out/lan/Caddyfile` (poza gitem), startuje Caddy z `tls internal`, wypisuje adres aplikacji i IP komputera oraz kopiuje certyfikat główny do `release-out/lan/caddy-root.crt`. Zatrzymanie: Ctrl+C.
+Skrypt `npm run lan:serve`: sprawdza Caddy i wolny port, buduje aplikację z `VITE_BASE=/cpre/`, generuje `release-out/lan/Caddyfile` (poza gitem), startuje Caddy, wypisuje adres aplikacji, adres pobrania certyfikatu i jego odcisk SHA-256.
 
 | Opcja | Znaczenie |
 |---|---|
@@ -42,9 +37,22 @@ Skrypt: sprawdza Caddy, buduje aplikację z `VITE_BASE=/cpre/`, generuje `releas
 | `--port <n>` | Domyślnie 443; inny port trafia do adresu, np. `https://host:8443/cpre/`. |
 | `--base /ścieżka/` | Domyślnie `/cpre/`; musi zgadzać się z buildem. |
 | `--no-build` | Użyj istniejącego `dist/` (zbudowanego z tym samym `--base`). |
+| `--ca-port <n>` | Port HTTP pobrania certyfikatu (domyślnie 80). |
+| `--no-ca-download` | Nie serwuj `/ca.crt`. |
 | `--print-config` | Tylko wypisz Caddyfile. |
 
-Port 80 jest wyłączony (`http://` nie przekierowuje). Podawaj uczniom adres `https://…`.
+**Pobranie certyfikatu z serwera.** Port 80 serwuje wyłącznie `/ca.crt` (certyfikat główny, plik publiczny) i przekierowuje resztę na HTTPS. Klucze prywatne nigdy nie są serwowane. Certyfikat idzie po zwykłym HTTP, więc skrypt wypisuje jego odcisk SHA-256 do porównania z odciskiem pokazanym przez urządzenie przy instalacji. Gdy port 80 jest zajęty albo wymaga uprawnień, pobranie jest wyłączane z komunikatem, a aplikacja startuje normalnie.
+
+### Stałe CA między komputerami (`npm run lan:ca`)
+
+Urządzenia ufają konkretnemu CA. Przy przeniesieniu serwera na inny komputer musi on mieć **to samo CA**, inaczej każde urządzenie traci zaufanie.
+
+| Polecenie | Działanie |
+|---|---|
+| `npm run lan:ca -- show` | Ścieżka CA i odcisk SHA-256 certyfikatu głównego. |
+| `npm run lan:ca -- export [plik]` | Kopia do `caddy-ca-backup.json` (domyślnie). **Zawiera klucze prywatne**; przenieś ręcznie (pendrive, `scp`), nie commituj (`.gitignore`). |
+| `npm run lan:ca -- import <plik> [--force]` | Zapis CA w katalogu Caddy, **przed pierwszym uruchomieniem** na nowym komputerze. Sprawdza spójność kopii i parowanie kluczy; odmawia nadpisania innego CA bez `--force`. |
+| `npm run lan:ca -- trust` | Zaufanie CA na tym komputerze: Linux — system (`sudo trust anchor`) i Chromium (`~/.pki/nssdb`); Windows — `certutil -user -addstore Root`. |
 
 ### Origin musi być stały
 
@@ -52,37 +60,17 @@ Adres hosta jest częścią originu: IndexedDB, profile i instalacja PWA należ�
 
 | Wybór hosta | Kiedy |
 |---|---|
-| `alfabet.local` (domyślnie) | Stała mimo zmiany IP i komputera, o ile ten, który serwuje, ogłasza tę nazwę (mDNS; na Windows musi nazywać się `alfabet`, na Linuksie patrz niżej), a urządzenia rozwiązują mDNS. Sprawdź na każdym typie urządzenia. |
+| `alfabet.local` (domyślnie) | Stała mimo zmiany IP i komputera, o ile serwujący komputer ogłasza tę nazwę (mDNS przez Avahi, nazwa maszyny `alfabet`) i urządzenia rozwiązują mDNS. Sprawdź na każdym typie urządzenia. |
 | IP z rezerwacją DHCP w routerze | Gdy `.local` nie działa. Bez rezerwacji IP może się zmienić i zmieni origin. |
-| Własna domena wskazująca na IP komputera | Opcja na dłużej; wymaga zmiany rekordu przy zmianie IP. |
+| Własna domena wskazująca na IP komputera | Opcja na dłużej; wymaga domeny i certyfikatu publicznego (inny mechanizm niż własne CA). |
 
-### Uruchomienie na Linuksie (Arch/Omarchy)
+### Wymagania systemowe na Omarchy (skrót)
 
-Start od zera na Omarchy (Arch). Skrypt działa tak samo jak na Windows (`npm run lan:serve`); poniżej kroki systemowe. **Nie zweryfikowane na Omarchy** — sprawdź każdy punkt i popraw dokument, jeśli coś działa inaczej.
+Szczegóły i polecenia w [instalacja omarchy](instalacja%20omarchy.md): pakiety (`caddy`, `nss`, `avahi`, `nss-mdns`), nazwa maszyny `alfabet` ogłaszana przez Avahi, `setcap cap_net_bind_service` dla Caddy (porty 443 i 80 bez roota), reguła `ufw` dla własnej podsieci. **Nie zweryfikowane na Omarchy.**
 
-1. **Klon i pakiety:**
-   ```bash
-   git clone git@github.com:piotrwrotny/certyfikaty-app.git
-   cd certyfikaty-app
-   sudo pacman -S caddy nodejs npm avahi nss-mdns
-   npm ci
-   ```
-   Wersja Node: pole `engines` w `package.json` (≥ 22.12).
-2. **Certyfikat główny — przed pierwszym startem.** Katalog `~/.local/share/caddy/pki/authorities/local/` ma zawierać pliki z poprzedniego komputera (`root.crt`, `root.key`, `intermediate.crt`, `intermediate.key`; Windows: `%APPDATA%\Caddy\pki\authorities\local`). Wtedy urządzenia, które już ufają certyfikatowi, nie wymagają ponownej instalacji. Bez tego Caddy utworzy nowe CA i każde urządzenie trzeba skonfigurować od nowa. Pliki zawierają klucz prywatny — przenieś nośnikiem lub `scp`, **nigdy przez git**.
-3. **Nazwa `alfabet.local`:** `sudo hostnamectl set-hostname alfabet`, potem `sudo systemctl enable --now avahi-daemon`. Jeśli `systemd-resolved` ma włączone MulticastDNS, wyłącz je albo Avahi, by nie dublować odpowiedzi. Sprawdzenie z innego urządzenia w sieci: `ping alfabet.local`.
-4. **Port 443 bez roota:** `sudo setcap cap_net_bind_service=+ep "$(command -v caddy)"` (aktualizacja pakietu `caddy` kasuje to uprawnienie) albo `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=443`. Inny port zmienia origin.
-5. **Zapora:** jeśli działa `ufw`, `sudo ufw allow 443/tcp`.
-6. **Start:** `npm run lan:serve`. Skrypt wypisze adres `https://alfabet.local/cpre/`.
-7. **Zaufanie na tym komputerze (opcjonalnie):** `caddy trust` nie zadziała (admin endpoint jest wyłączony); użyj `sudo trust anchor --store ~/.local/share/caddy/pki/authorities/local/root.crt`.
-8. **Telefon/tablet:** otwórz adres. Ostrzeżenie o certyfikacie = sieć działa, brakuje zaufania (sekcja niżej); „nie można połączyć” = nazwa niewidoczna, zapora albo izolacja klientów (tabela „Typowe problemy”).
+### Zaufanie certyfikatowi na urządzeniach
 
-### Zaufanie certyfikatowi i instalacja PWA
-
-Zwykły `http://IP` nie zadziała: service worker i instalacja wymagają bezpiecznego kontekstu. Caddy podpisuje certyfikat własnym lokalnym CA, więc **każde urządzenie musi zaufać jego certyfikatowi głównemu** (`release-out/lan/caddy-root.crt`, źródło: `%APPDATA%\Caddy\pki\authorities\local\root.crt`). Przekaż urządzeniom wyłącznie `root.crt`; **nigdy `root.key`**.
-
-1. **Android:** Ustawienia → Bezpieczeństwo → Szyfrowanie i dane logowania → Zainstaluj certyfikat → Certyfikat CA. Potem Chrome → adres aplikacji → menu → „Zainstaluj aplikację”.
-2. **iOS:** otwórz plik w Safari i zainstaluj profil; włącz zaufanie w Ustawienia → Ogólne → Informacje → Zaufanie certyfikatów. Potem Safari → adres aplikacji → Udostępnij → „Do ekranu początkowego”.
-3. **Ten komputer (Windows):** nie polegaj na automatycznym dodaniu przez Caddy (przy starcie zgłasza błąd `keytool.exe` z magazynem Javy, a `caddy trust` nie działa przy `admin off`). Dodaj ręcznie: `certutil -user -addstore Root release-out\lan\caddy-root.crt` i zatwierdź okno Windows. Zrób to tylko, jeśli chcesz używać aplikacji także w przeglądarce na tym komputerze.
+Przekaż urządzeniom wyłącznie certyfikat główny (`/ca.crt`, `release-out/lan/caddy-root.crt`); **nigdy `root.key`**. Kroki dla Androida (Chrome), iPhone'a i iPada (Safari, w tym osobny krok „Ustawienia zaufania certyfikatów”), Windows i Linuksa są w [instalacja omarchy](instalacja%20omarchy.md#8-instalacja-na-urządzeniach). Po instalacji certyfikatu: Android Chrome → „Zainstaluj aplikację”; iOS Safari → „Do ekranu początkowego”; laptop Chrome/Edge → ikona instalacji.
 
 ### Aktualizacja treści w tym trybie
 
@@ -93,23 +81,28 @@ Zwykły `http://IP` nie zadziała: service worker i instalacja wymagają bezpiec
 
 ### Szybka kontrola serwera
 
-Z komputera, przy działającym serwerze (`-k`, bo curl nie zna lokalnego CA):
+Z komputera serwującego, przy działającym serwerze (`-k`, bo curl bez `lan:ca -- trust` nie zna lokalnego CA):
 
 ```bash
 curl -skI -H "Accept: text/html" https://<host>/cpre/              # 200, Cache-Control: no-cache
 curl -skI https://<host>/cpre/content/manifest.json                # 200, no-store, application/json
 curl -skI https://<host>/cpre/content/releases/x/packages/nope.json # 404, no-store (nie HTML)
+curl -sI http://<host>/ca.crt                                      # 200, application/x-x509-ca-cert
 ```
 
 ### Typowe problemy
 
 | Objaw | Przyczyna / działanie |
 |---|---|
-| Telefon nie otwiera strony | Izolacja klientów Wi-Fi albo zapora; sprawdź inną sieć/hotspot i zezwolenie dla Caddy. |
-| Telefon nie widzi `<nazwa>.local` | Użyj `--host <IP>` z rezerwacją DHCP (nowy origin — zrób to przed instalacją uczniów). |
-| Ostrzeżenie o certyfikacie albo brak „Zainstaluj” | Certyfikat główny nie jest zainstalowany/zaufany na tym urządzeniu. |
-| Port 443 zajęty | `--port 8443`; adres z portem. |
-| `Nie znaleziono Caddy` | Zainstaluj Caddy i otwórz nowy terminal (PATH). |
+| Telefon nie otwiera strony ani `http://<IP>/ca.crt` | Zapora serwera, izolacja klientów Wi-Fi albo inna sieć; sprawdź hotspot z innego telefonu i regułę `ufw`. Test krok po kroku w [instalacja omarchy](instalacja%20omarchy.md#9-jeśli-urządzenie-nie-widzi-serwera). |
+| Telefon otwiera IP, ale nie `alfabet.local` | mDNS nie dociera (Avahi nie działa albo router filtruje multicast). Wyjście: `--host <IP>` z rezerwacją DHCP (nowy origin — przed instalacją na urządzeniach). |
+| Ostrzeżenie o certyfikacie albo brak „Zainstaluj” | Certyfikat główny niezainstalowany lub (iOS) niezaufany na tym urządzeniu. |
+| `Nie można nasłuchiwać na porcie 443` | Poprzedni `lan:serve` nadal działa albo brak uprawnień (Linux: `setcap`); inny port to inny origin. |
+| `Nie znaleziono Caddy` | Omarchy: `sudo pacman -S caddy`. |
+
+### Windows (tylko testy)
+
+Serwer na Windows służy do prób na laptopie deweloperskim, nie jako host docelowy. `winget install CaddyServer.Caddy` (potem nowy terminal); zezwól Caddy w zaporze — sieć oznaczona w Windows jako **Public** domyślnie blokuje połączenia przychodzące (reguła: `New-NetFirewallRule -DisplayName "CPRE LAN" -Direction Inbound -Protocol TCP -LocalPort 80,443 -RemoteAddress LocalSubnet -Action Allow -Profile Any`, jako administrator); rozłącz VPN na czas testu. Zaufanie na tym komputerze: `npm run lan:ca -- trust` (Caddy sam nie dodaje CA niezawodnie: błąd `keytool.exe` przy starcie jest nieszkodliwy, a `caddy trust` nie działa przy `admin off`).
 
 ## Publikacja następnej paczki przez operatora
 
