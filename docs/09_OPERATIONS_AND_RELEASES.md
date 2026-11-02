@@ -25,8 +25,8 @@ Pomocnik operatora dla małego wdrożenia: serwer włączasz tylko wtedy, gdy tr
 
 ### Wymagania
 
-- Node z `package.json`, Caddy (`winget install CaddyServer.Caddy`, potem nowy terminal), komputer i urządzenia w tej samej sieci prywatnej bez izolacji klientów Wi-Fi.
-- Zezwolenie w zaporze Windows dla Caddy w sieci prywatnej (pierwsze uruchomienie).
+- Node z `package.json`, Caddy (Windows: `winget install CaddyServer.Caddy`, potem nowy terminal; Arch/Omarchy: `sudo pacman -S caddy`), komputer i urządzenia w tej samej sieci prywatnej bez izolacji klientów Wi-Fi.
+- Zezwolenie w zaporze dla Caddy w sieci prywatnej (Windows: pierwsze uruchomienie; Linux: patrz „Uruchomienie na Linuksie”).
 
 ### Uruchomienie
 
@@ -38,7 +38,7 @@ Skrypt: sprawdza Caddy, buduje aplikację z `VITE_BASE=/cpre/`, generuje `releas
 
 | Opcja | Znaczenie |
 |---|---|
-| `--host <nazwa lub IP>` | Domyślnie `<nazwa-komputera>.local`. |
+| `--host <nazwa lub IP>` | Domyślnie `alfabet.local` (stały host aplikacji, niezależny od komputera). |
 | `--port <n>` | Domyślnie 443; inny port trafia do adresu, np. `https://host:8443/cpre/`. |
 | `--base /ścieżka/` | Domyślnie `/cpre/`; musi zgadzać się z buildem. |
 | `--no-build` | Użyj istniejącego `dist/` (zbudowanego z tym samym `--base`). |
@@ -52,9 +52,19 @@ Adres hosta jest częścią originu: IndexedDB, profile i instalacja PWA należ�
 
 | Wybór hosta | Kiedy |
 |---|---|
-| `<nazwa-komputera>.local` (domyślnie) | Stała mimo zmiany IP; wymaga, by urządzenia rozwiązywały mDNS. Sprawdź na każdym typie urządzenia. |
+| `alfabet.local` (domyślnie) | Stała mimo zmiany IP i komputera, o ile ten, który serwuje, ogłasza tę nazwę (mDNS; na Windows musi nazywać się `alfabet`, na Linuksie patrz niżej), a urządzenia rozwiązują mDNS. Sprawdź na każdym typie urządzenia. |
 | IP z rezerwacją DHCP w routerze | Gdy `.local` nie działa. Bez rezerwacji IP może się zmienić i zmieni origin. |
 | Własna domena wskazująca na IP komputera | Opcja na dłużej; wymaga zmiany rekordu przy zmianie IP. |
+
+### Uruchomienie na Linuksie (Arch/Omarchy)
+
+Skrypt działa tak samo (`npm run lan:serve`). Różnice systemowe — **nie zweryfikowane na Omarchy**, sprawdź każdy punkt:
+
+1. **Nazwa `alfabet.local`:** `sudo hostnamectl set-hostname alfabet`, a mDNS ogłasza Avahi: `sudo pacman -S avahi nss-mdns` i `sudo systemctl enable --now avahi-daemon`. Jeśli `systemd-resolved` ma włączone MulticastDNS, wyłącz je albo Avahi, by nie dublować odpowiedzi.
+2. **Port 443 bez roota:** `sudo setcap cap_net_bind_service=+ep "$(command -v caddy)"` (aktualizacja pakietu `caddy` kasuje to uprawnienie) albo `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=443`. Inny port zmienia origin.
+3. **Zapora:** jeśli działa `ufw`, `sudo ufw allow 443/tcp`.
+4. **Certyfikat główny** leży w `~/.local/share/caddy/pki/authorities/local/root.crt`. Żeby telefony, które już mu ufają, nie wymagały ponownej instalacji, skopiuj przed pierwszym startem cały katalog `authorities/local` z poprzedniego komputera (Windows: `%APPDATA%\Caddy\pki\authorities\local`). Zawiera klucz prywatny — przenieś nośnikiem lub `scp`, **nigdy przez git**.
+5. **Zaufanie na tym komputerze:** `caddy trust` nie zadziała (admin endpoint jest wyłączony); użyj `sudo trust anchor --store root.crt`.
 
 ### Zaufanie certyfikatowi i instalacja PWA
 
@@ -62,7 +72,7 @@ Zwykły `http://IP` nie zadziała: service worker i instalacja wymagają bezpiec
 
 1. **Android:** Ustawienia → Bezpieczeństwo → Szyfrowanie i dane logowania → Zainstaluj certyfikat → Certyfikat CA. Potem Chrome → adres aplikacji → menu → „Zainstaluj aplikację”.
 2. **iOS:** otwórz plik w Safari i zainstaluj profil; włącz zaufanie w Ustawienia → Ogólne → Informacje → Zaufanie certyfikatów. Potem Safari → adres aplikacji → Udostępnij → „Do ekranu początkowego”.
-3. **Ten komputer:** przy pierwszym uruchomieniu Caddy może zapytać, czy dodać certyfikat do magazynu zaufanych (okno Windows). Zatwierdź tylko, jeśli chcesz używać aplikacji także w przeglądarce na tym komputerze.
+3. **Ten komputer (Windows):** nie polegaj na automatycznym dodaniu przez Caddy (przy starcie zgłasza błąd `keytool.exe` z magazynem Javy, a `caddy trust` nie działa przy `admin off`). Dodaj ręcznie: `certutil -user -addstore Root release-out\lan\caddy-root.crt` i zatwierdź okno Windows. Zrób to tylko, jeśli chcesz używać aplikacji także w przeglądarce na tym komputerze.
 
 ### Aktualizacja treści w tym trybie
 

@@ -90,7 +90,7 @@ Rozmiar początkowego JS app shell: patrz raport (próg ≤ 250 KiB gzip).
 ## Uruchomienie w LAN na żądanie (2.11.2026)
 
 - **`npm run lan:serve`** (`scripts/lan-serve.ts`, generator w `scripts/lan/caddyfile.ts`): pomocnik operatora, który buduje z `VITE_BASE=/cpre/` i serwuje `dist/` przez Caddy z `tls internal`. Nie zmienia aplikacji ani zasad docs/09; procedura w docs/09 („Uruchomienie w LAN na żądanie”). Nie dodaje backendu ani zależności do aplikacji (Caddy to narzędzie operatora, nie zależność npm).
-- **Host = origin**: domyślnie `<nazwa-komputera>.local`, by origin PWA nie zależał od IP z DHCP; alternatywa to `--host <IP>` z rezerwacją DHCP. Zmiana hosta/portu oznacza nowy origin.
+- **Host = origin**: domyślnie `alfabet.local` (decyzja właściciela z 2.11.2026), by origin PWA nie zależał ani od IP z DHCP, ani od komputera, na którym działa serwer; alternatywa to `--host <IP>` z rezerwacją DHCP. Komputer serwujący musi ogłaszać tę nazwę. Zmiana hosta/portu oznacza nowy origin.
 - **Port 80 wyłączony** (`auto_https disable_redirects`): brak konfliktu z innymi usługami; uczniowie dostają adres `https://`.
 - **Błędy nie dziedziczą cache**: `handle_errors` ustawia `no-store`; wykryte testem na żywym Caddy (brakujący JSON dostawał `immutable`).
 - **Weryfikacja**: testy jednostkowe generatora, `caddy validate` i sondowanie `curl` na localhost (nagłówki, 404, fallback, redirecty). **Nie sprawdzono** na telefonach: zaufania certyfikatowi, rozwiązywania `.local`, instalacji PWA ani aktualizacji między urządzeniami — to ograniczenie, nie dowód.

@@ -4,13 +4,13 @@
  * updating, stop it with Ctrl+C. Not a production deployment tool (docs/09).
  *
  *   npm run lan:serve
- *   npm run lan:serve -- --host 192.168.1.50      # IP instead of <computer>.local
+ *   npm run lan:serve -- --host 192.168.1.50      # IP instead of alfabet.local
  *   npm run lan:serve -- --port 8443 --no-build
  *   npm run lan:serve -- --print-config           # print the Caddyfile and exit
  */
 import { spawn, spawnSync } from 'node:child_process';
 import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { hostname, networkInterfaces } from 'node:os';
+import { networkInterfaces } from 'node:os';
 import { resolve } from 'node:path';
 import { appUrl, buildCaddyfile, caddyRootCertPath, normalizeHost, normalizePort } from './lan/caddyfile.ts';
 
@@ -22,8 +22,10 @@ const args = process.argv.slice(2);
 const flag = (n: string) => args.includes(n);
 const option = (n: string, d: string) => { const i = args.indexOf(n); return i >= 0 ? (args[i + 1] ?? d) : d; };
 
-const defaultHost = (() => { const h = hostname().toLowerCase(); return h.includes('.') ? h : `${h}.local`; })();
-const host = normalizeHost(option('--host', defaultHost));
+// Stały host aplikacji (origin PWA), niezależny od komputera, na którym działa serwer.
+// Komputer musi go ogłaszać (mDNS) albo router/DNS musi go wskazywać (docs/09).
+const DEFAULT_HOST = 'alfabet.local';
+const host = normalizeHost(option('--host', DEFAULT_HOST));
 const port = normalizePort(Number(option('--port', '443')));
 const base = option('--base', '/cpre/');
 
@@ -48,7 +50,9 @@ if (flag('--print-config')) {
 }
 
 if (spawnSync('caddy', ['version'], { stdio: 'ignore' }).status !== 0) {
-  fail('Nie znaleziono Caddy w PATH. Zainstaluj: winget install CaddyServer.Caddy (potem otwórz nowy terminal).');
+  const hint = process.platform === 'win32' ? 'winget install CaddyServer.Caddy (potem otwórz nowy terminal)'
+    : process.platform === 'darwin' ? 'brew install caddy' : 'sudo pacman -S caddy (Arch) lub menedżer pakietów dystrybucji';
+  fail(`Nie znaleziono Caddy w PATH. Zainstaluj: ${hint}.`);
 }
 
 if (!flag('--no-build')) {
@@ -64,7 +68,7 @@ const url = appUrl(host, port, base);
 const ips = lanAddresses();
 console.log(`
 Aplikacja:  ${url}
-Host:       ${host}${host.endsWith('.local') ? '  (nazwa mDNS; stała mimo zmiany IP — sprawdź, czy telefon ją widzi)' : ''}
+Host:       ${host}${host.endsWith('.local') ? '  (nazwa mDNS; komputer musi ją ogłaszać, a telefon rozwiązywać)' : ''}
 IP komputera: ${ips.length > 0 ? ips.join(', ') : '(nie wykryto)'}  — IP z DHCP może się zmienić; origin PWA to host, więc nie podawaj uczniom IP, jeśli używasz nazwy.
 Zatrzymanie: Ctrl+C. Zmiana hosta/portu = nowy origin = nowa instalacja PWA bez dotychczasowych profili.
 `);
