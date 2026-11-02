@@ -15,6 +15,11 @@ export interface CaddyfileOptions {
   base: string;
   /** Absolute path of the built app (dist). */
   distDir: string;
+  /**
+   * TLS ends outside Caddy (Tailscale Serve): plain HTTP on 127.0.0.1:<port>, any Host header,
+   * no certificate. `host` and `port` are then unused.
+   */
+  loopbackPort?: number;
 }
 
 const HOST_RE = /^[a-z0-9]([a-z0-9._-]*[a-z0-9])?$/;
@@ -54,20 +59,23 @@ export function caddyRootCertPath(env: NodeJS.ProcessEnv = process.env, platform
 }
 
 export function buildCaddyfile(o: CaddyfileOptions): string {
-  const host = normalizeHost(o.host);
-  const port = normalizePort(o.port);
+  const loopback = o.loopbackPort === undefined ? null : normalizePort(o.loopbackPort);
   const prefix = basePrefix(o.base);
+  // Own TLS (internal CA) vs. plain loopback HTTP behind a TLS-terminating proxy.
+  const autoHttps = loopback === null ? 'disable_redirects' : 'off';
+  const address = loopback === null ? siteAddress(normalizeHost(o.host), normalizePort(o.port)) : `:${String(loopback)}`;
+  const listen = loopback === null ? 'tls internal' : 'bind 127.0.0.1';
   // Forward slashes work for Caddy on Windows and avoid escape issues.
   const root = o.distDir.replace(/\\/g, '/');
   if (/["{}\r\n]/.test(root)) throw new Error(`Niedozwolone znaki w ścieżce dist: ${o.distDir}`);
   return `# Generowane przez npm run lan:serve — nie edytuj, nie commituj.
 {
 	admin off
-	auto_https disable_redirects
+	auto_https ${autoHttps}
 }
 
-${siteAddress(host, port)} {
-	tls internal
+${address} {
+	${listen}
 	encode zstd gzip
 	header X-Content-Type-Options nosniff
 

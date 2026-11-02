@@ -42,6 +42,16 @@ describe('LAN Caddyfile', () => {
     expect(buildCaddyfile({ ...opts, port: 8443 })).toContain('pc-01.local:8443 {');
   });
 
+  it('behind a TLS-terminating proxy serves plain HTTP on loopback only, with the same cache rules', () => {
+    const c = buildCaddyfile({ ...opts, host: 'ignored', loopbackPort: 8080 });
+    expect(c).toContain('auto_https off');
+    expect(c).toMatch(/\n:8080 \{\n\tbind 127\.0\.0\.1\n/);
+    expect(c).not.toContain('tls internal');
+    expect(c).toContain('handle_path /cpre/* {');
+    expect(c).toContain('header @nostore Cache-Control "no-store"');
+    expect(() => buildCaddyfile({ ...opts, loopbackPort: 0 })).toThrow();
+  });
+
   it('rejects values that could break out of the Caddyfile', () => {
     expect(() => normalizeHost('evil {\n}')).toThrow();
     expect(() => normalizeHost('')).toThrow();

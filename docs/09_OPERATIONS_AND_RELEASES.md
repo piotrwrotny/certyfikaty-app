@@ -56,6 +56,36 @@ Adres hosta jest częścią originu: IndexedDB, profile i instalacja PWA należ�
 | IP z rezerwacją DHCP w routerze | Gdy `.local` nie działa. Bez rezerwacji IP może się zmienić i zmieni origin. |
 | Własna domena wskazująca na IP komputera | Opcja na dłużej; wymaga zmiany rekordu przy zmianie IP. |
 
+### Własne urządzenia: Tailscale (bez instalowania certyfikatu)
+
+Najprostsza droga dla kilku własnych urządzeń (Android, iPhone/iPad, laptopy, komputer serwujący). Tailscale wystawia prawdziwy certyfikat HTTPS dla nazwy `*.ts.net`, więc **żadne urządzenie nie instaluje certyfikatu CA**, a nazwa nie zależy od mDNS ani IP z DHCP. Warunek: na każdym urządzeniu jest Tailscale (to samo konto). Dla uczniów raczej nieodpowiednie — tam stosuj hosta z zaufanym certyfikatem (własna domena z certyfikatem Let's Encrypt albo własne CA z sekcji niżej).
+
+Jednorazowo:
+
+1. Konto Tailscale. W panelu administratora (zakładka DNS) włącz **MagicDNS** i **HTTPS Certificates**.
+2. Komputer serwujący: Linux `sudo pacman -S tailscale`, `sudo systemctl enable --now tailscaled`, `sudo tailscale up --hostname=alfabet`; Windows `winget install Tailscale.Tailscale` i logowanie w aplikacji. Nazwa maszyny wchodzi w adres: `alfabet.<tailnet>.ts.net`.
+3. HTTPS dla lokalnego serwera (zostaje po restarcie; na Linuksie z `sudo`, chyba że `sudo tailscale set --operator=$USER`):
+   ```bash
+   tailscale serve --bg --https=443 http://127.0.0.1:8080
+   ```
+
+Przy każdej aktualizacji lub instalacji:
+
+```bash
+npm run lan:serve -- --tailscale
+```
+
+Skrypt buduje aplikację, startuje Caddy **tylko na `127.0.0.1:8080`** (z tymi samymi regułami cache i 404 co wyżej) i wypisuje adres `https://alfabet.<tailnet>.ts.net/cpre/`. Opcja `--local-port` zmienia port lokalny (musi zgadzać się z `tailscale serve`).
+
+Na urządzeniach: zainstaluj aplikację Tailscale (Google Play, App Store, instalator na laptopa), zaloguj to samo konto, otwórz adres i zainstaluj PWA (Android/Chrome: „Zainstaluj aplikację”; iPhone/iPad/Safari: „Do ekranu początkowego”; laptop/Chrome lub Edge: ikona instalacji w pasku adresu). Po instalacji aplikacja działa offline; Tailscale jest potrzebny do instalacji i pobierania nowej treści.
+
+Uwagi:
+
+- Używaj `tailscale serve`, **nie** `tailscale funnel` — funnel wystawia aplikację w internecie, wbrew założeniu sieci wewnętrznej.
+- Zmiana nazwy maszyny lub tailnetu zmienia origin (nowa instalacja PWA bez profili).
+- Android i iOS mają jedno aktywne VPN naraz; Tailscale zajmuje to miejsce.
+- **Nie zweryfikowano z prawdziwym Tailscale.** Sprawdzono tylko Caddy w tym trybie (curl na `127.0.0.1`, obcy nagłówek Host, brak dostępu przez IP LAN). Składnię `tailscale serve` porównaj z wersją zainstalowanego klienta (`tailscale serve --help`).
+
 ### Uruchomienie na Linuksie (Arch/Omarchy)
 
 Start od zera na Omarchy (Arch). Skrypt działa tak samo jak na Windows (`npm run lan:serve`); poniżej kroki systemowe. **Nie zweryfikowane na Omarchy** — sprawdź każdy punkt i popraw dokument, jeśli coś działa inaczej.
