@@ -37,7 +37,7 @@ cd certyfikaty-app
 npm ci
 ```
 
-`gh auth login`: GitHub.com, HTTPS, logowanie przez przeglądarkę. Dopóki zmiany nie są w `main`, dodaj do klonowania `-- --branch feat/lan-own-ca`.
+`gh auth login`: GitHub.com, HTTPS, logowanie przez przeglądarkę.
 
 ## 3. Nazwa `alfabet.local`
 
