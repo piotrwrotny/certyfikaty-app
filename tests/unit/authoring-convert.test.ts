@@ -189,6 +189,16 @@ describe('stage 2: cross-file errors point at the file and field', () => {
     expectError(dir, 'questions/TXX-G01.yaml', 'k', /k=3, ale 2 opcji/);
   });
 
+  it('A with three options and P with k=1 break the authoring standard', () => {
+    const dir = topicCopy();
+    const text = readFileSync(join(dir, 'questions/TXX-B01.yaml'), 'utf-8');
+    writeFileSync(join(dir, 'questions/TXX-B01.yaml'), text.slice(0, text.indexOf('  - id: d')), 'utf-8');
+    edit(dir, 'questions/TXX-G01.yaml', 'k: 2', 'k: 1');
+    edit(dir, 'questions/TXX-G01.yaml', 'text: <Stwierdzenie b>\n    correct: true', 'text: <Stwierdzenie b>\n    correct: false');
+    expectError(dir, 'questions/TXX-B01.yaml', 'options', /musi mieć 4 albo 5 opcji, a ma 3/);
+    expectError(dir, 'questions/TXX-G01.yaml', 'k', /k co najmniej 2/);
+  });
+
   it('follow-ups in the wrong order', () => {
     const dir = topicCopy();
     edit(dir, 'corrections/TXX-REM01.md', 'followUps: [TXX-F01, TXX-G01]', 'followUps: [TXX-G01, TXX-F01]');
@@ -228,6 +238,11 @@ describe('stage 2: cross-file errors point at the file and field', () => {
     edit(dir, 'rules.yaml', 'statement: <Jedno zdanie reguły, widoczne w oknie wiedzy>', 'statement: Zobacz [plik](file:///c/x)');
     const issues = errorsOf(lint(dir, {}).issues);
     expect(issues).toContainEqual(expect.objectContaining({ file: 'rules.yaml', field: 'rules[0].statement', message: 'Link file:///c/x nie jest adresem http(s).' }));
+  });
+
+  it('the example.org address from the template is an error outside template mode', () => {
+    const issues = errorsOf(lint(TEMPLATES, {}).issues);
+    expect(issues).toContainEqual(expect.objectContaining({ file: 'sources.yaml', field: 'sources[0].url', message: 'Adres źródła to przykład ze wzoru. Podaj prawdziwy adres albo identyfikator urn:.' }));
   });
 
   it('ids that already exist in another package', () => {

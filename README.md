@@ -28,6 +28,9 @@ Ta paczka jest konkretnym wsadem implementacyjnym: instrukcje agenta, specyfikac
 | [docs/10_DECISIONS_AND_OPEN_ITEMS.md](docs/10_DECISIONS_AND_OPEN_ITEMS.md) | Decyzje lokalne, zależności i aktualny stan G2/G3/G4 |
 | [docs/11_HANDOFF_QA.md](docs/11_HANDOFF_QA.md) | Co sprawdzono w tym wsadzie; ograniczenia weryfikacji |
 | [docs/12_TECHNICAL_SOURCES.md](docs/12_TECHNICAL_SOURCES.md) | Oficjalne dokumentacje techniczne i data kontroli |
+| [docs/13_AUTHORING_FORMAT.md](docs/13_AUTHORING_FORMAT.md) | Format autorski treści `cpre-authoring/1.0`: pliki, pola, kontrole, konwersja |
+| [docs/14_AI_AUTHORING_AGENT_GUIDE.md](docs/14_AI_AUTHORING_AGENT_GUIDE.md) | Instrukcja dla agenta AI, który opracowuje wiedzę |
+| [docs/15_MIGRACJA_TRESCI.md](docs/15_MIGRACJA_TRESCI.md) | Krótka procedura wprowadzania nowych paczek wiedzy do aplikacji |
 
 ## Wygląd, który należy zachować
 

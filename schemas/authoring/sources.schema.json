@@ -16,7 +16,7 @@
           "id": { "$ref": "common.schema.json#/$defs/id" },
           "title": { "$ref": "common.schema.json#/$defs/text" },
           "version": { "$ref": "common.schema.json#/$defs/text" },
-          "url": { "type": "string", "pattern": "^(https?://.+)?$", "description": "Adres http(s) albo pusty tekst." },
+          "url": { "type": "string", "format": "uri", "pattern": "^(https?://|urn:)[^\\s<>\"]+$", "description": "Adres http(s) albo identyfikator urn: (np. urn:isbn:…), bez spacji; spację koduj jako %20." },
           "location": { "$ref": "common.schema.json#/$defs/text", "description": "Strony lub sekcje użyte w temacie." },
           "attribution": { "$ref": "common.schema.json#/$defs/markdown" },
           "usageNote": { "$ref": "common.schema.json#/$defs/text", "description": "Ograniczenia użycia. To nie jest zgoda na publikację." }

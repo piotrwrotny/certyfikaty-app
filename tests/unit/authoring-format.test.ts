@@ -209,6 +209,15 @@ describe('authoring format: invalid input is rejected', () => {
     expect(v.correction({ id: 'R', revision: 'r1', scope: { criterion: 'K' }, followUps: ['F', 'G', 'H'] })).toBe(false);
   });
 
+  it('requires a real URI for a source: http(s) or urn, no spaces, never empty', () => {
+    const src = { id: 'S', title: 'T', version: '1', url: 'https://hub.ireb.org/x.pdf', location: 's.1', attribution: 'A', usageNote: 'U' };
+    expect(v.sources({ sources: [src] })).toBe(true);
+    expect(v.sources({ sources: [{ ...src, url: 'urn:isbn:9783864907012' }] })).toBe(true);
+    for (const url of ['', 'https://hub.ireb.org/a b.pdf', 'ftp://x/y', 'https://x.org/<adres>']) {
+      expect(v.sources({ sources: [{ ...src, url }] }), url).toBe(false);
+    }
+  });
+
   it('rejects a decision without person, reference or date', () => {
     const d = { id: 'DEC-1', decidedAt: '2026-11-02', decidedBy: 'Osoba', ref: 'Protokół', revision: 'r1', review: 'approved', publication: 'permitted', allowedUses: ['learning'], rights: { status: 'permitted', channels: ['internal-lan'] } };
     expect(v.decisions({ decisions: [d] })).toBe(true);

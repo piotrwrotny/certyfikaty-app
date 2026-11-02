@@ -13,7 +13,7 @@
  * (approved, permitted or with allowed uses) fails the gate, or a package is broken.
  * Without approved packages the learner release is a valid EMPTY corpus.
  */
-import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { resolve, posix } from 'node:path';
 import { ROOT, stableJson, sha256HexOfBytes, loadValidators, formatAjvErrors, schemaValid } from './lib.ts';
 import { validateManifestSemantics, combine } from '../../src/content/validate.ts';
@@ -104,6 +104,16 @@ for (const { ch, plan } of plans) {
 }
 if (!failed) {
   for (const { ch, plan } of plans) {
+    // A topic present in the previous local release but absent now usually means a new
+    // revision without a decision for it. Learners would lose the topic for new work.
+    const prevPath = resolve(ROOT, 'release-out/content', ch, 'manifest.json');
+    if (existsSync(prevPath)) {
+      const prev = JSON.parse(readFileSync(prevPath, 'utf-8')) as ContentManifest;
+      const now = new Set(plan.included.map((p) => p.packageId));
+      for (const gone of prev.packages.filter((p) => !now.has(p.packageId))) {
+        console.warn(`[${ch}] UWAGA: ${gone.packageId} był w poprzednim wydaniu ${prev.releaseId} (${gone.revision}), a w nowym go nie ma. Sprawdź decyzję dla bieżącej rewizji tematu.`);
+      }
+    }
     const releaseId = writeChannel(ch, plan);
     const ids = plan.included.map((p) => `${p.packageId}@${p.revision}`);
     console.log(`[${ch}] release ${releaseId}: included ${String(ids.length)} package(s): ${ids.join(', ') || '(none)'}; withdrawals: ${String(withdrawals.length)}`);

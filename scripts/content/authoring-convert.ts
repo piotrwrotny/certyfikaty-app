@@ -268,6 +268,11 @@ function crossCheck(m: TopicModel, opts: LintOptions, issues: Issues): void {
     expect(r.file, `rules[${String(i)}].sources[${String(j)}].source`, s.source, ['source'], 'źródło');
   }));
   m.sources.forEach((s, i) => { if (!usedSources.has(s.data.id)) issues.warn(s.file, `sources[${String(i)}]`, `Źródło ${s.data.id} nie jest używane przez żadną regułę.`); });
+  if (!opts.templates) {
+    m.sources.forEach((s, i) => {
+      if (/^https?:\/\/(www\.)?example\.(org|com|net)\//.test(s.data.url)) issues.error(s.file, `sources[${String(i)}].url`, 'Adres źródła to przykład ze wzoru. Podaj prawdziwy adres albo identyfikator urn:.');
+    });
+  }
 
   // knowledge
   const usedRules = new Set<string>();
@@ -297,6 +302,11 @@ function crossCheck(m: TopicModel, opts: LintOptions, issues: Issues): void {
         }
       }
     });
+    // C02-05 / docs/06: A has 4–5 options; P has an explicit k ≥ 2.
+    if (d.format === 'A' && (d.options.length < 4 || d.options.length > 5)) {
+      issues.error(q.file, 'options', `Pytanie A musi mieć 4 albo 5 opcji, a ma ${String(d.options.length)}.`);
+    }
+    if (d.format === 'P' && (d.k ?? 0) < 2) issues.error(q.file, 'k', 'Pytanie P musi mieć k co najmniej 2; przy jednej poprawnej opcji użyj formatu A.');
     if (d.format === 'P') {
       const correct = d.options.filter((o) => o.correct === true).length;
       if (correct !== d.k) issues.error(q.file, 'k', `Pytanie P ma k=${String(d.k)}, ale ${String(correct)} opcji z correct: true.`);

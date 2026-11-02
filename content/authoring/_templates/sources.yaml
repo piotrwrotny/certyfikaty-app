@@ -4,7 +4,7 @@ sources:
   - id: SRC-TXX-SEN
     title: CPRE Foundation Level Syllabus EN 3.3.0
     version: 3.3.0
-    url: https://example.org/<adres dokumentu>.pdf   # adres http(s) albo ""
+    url: https://example.org/dokument.pdf   # adres http(s) albo urn:isbn:…; bez spacji; nie wymyślaj adresu
     location: <Strony lub sekcje użyte w temacie>
     attribution: <Autorzy, wydawca, tytuł, data>
     usageNote: <Ograniczenia użycia; to nie jest zgoda na publikację>

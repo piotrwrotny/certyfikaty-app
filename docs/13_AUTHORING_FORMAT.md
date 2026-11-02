@@ -1,5 +1,7 @@
 # 13 — Format autorski treści `cpre-authoring/1.0`
 
+Instrukcja operacyjna dla agenta AI: `docs/14_AI_AUTHORING_AGENT_GUIDE.md`. Procedura wprowadzania treści do aplikacji: `docs/15_MIGRACJA_TRESCI.md`.
+
 Status: **etapy 1 i 2 z 4 wykonane** (§10). Format, schematy, szablony, przykład oraz komendy `content:lint` i `content:convert` istnieją i przechodzą testy. Etap 3 czeka na decyzję właściciela.
 
 ## 1. Cel i granice
@@ -74,7 +76,7 @@ Kolumna „Widać” mówi, gdzie uczeń widzi pole. Kolumna „Kontrakt” wska
 
 ### 4.2 `sources.yaml` i `rules.yaml`
 
-Źródło: `id`, `title`, `version`, `url` (http(s) albo pusty), `location`, `attribution`, `usageNote`. Okno wiedzy pokazuje tytuł i lokalizację. `usageNote` opisuje ograniczenia i nie jest zgodą na publikację.
+Źródło: `id`, `title`, `version`, `url`, `location`, `attribution`, `usageNote`. Pole `url` jest wymagane przez kontrakt jako poprawny URI: adres `http(s)://` albo identyfikator `urn:`, np. `urn:isbn:…`, bez spacji (spacja jako `%20`). Pusty adres i przykładowy `example.org` ze wzoru są błędem. Okno wiedzy pokazuje tytuł i lokalizację. `usageNote` opisuje ograniczenia i nie jest zgodą na publikację.
 
 Reguła: `id`, `revision`, `statement` (widoczne w oknie wiedzy) oraz `sources[]` z parami `source` i `location`. Każda reguła musi mieć co najmniej jedno źródło (R15).
 
@@ -102,8 +104,8 @@ Reguła: `id`, `revision`, `statement` (widoczne w oknie wiedzy) oraz `sources[]
 
 Reguły formatów, sprawdzane przez schemat i konwerter:
 
-- **A.** Dokładnie jedna opcja z `correct: true`, bez `k`.
-- **P.** Pole `k` wymagane, liczba opcji z `correct: true` równa `k`. Nadmiar zaznaczeń daje 0 punktów za całe pytanie.
+- **A.** 4 albo 5 opcji, dokładnie jedna z `correct: true`, bez `k` (C02-05, docs/06).
+- **P.** Pole `k` wymagane, co najmniej 2 i mniejsze od liczby opcji. Liczba opcji z `correct: true` równa `k`. Nadmiar zaznaczeń daje 0 punktów za całe pytanie.
 - **K.** Każdy wiersz ma `truth`, bez `correct` i bez `k`. Liczbę wierszy `m` liczy konwerter. Poprawny wiersz daje `weight/m`, a pusty wiersz nigdy nie jest liczony jako Fałsz.
 - **Każda opcja ma uzasadnienie**, także poprawna i pominięta. Brak uzasadnienia blokuje całe pytanie.
 
@@ -226,11 +228,11 @@ Błędy:
 - brak `sources.yaml` lub `rules.yaml`, nazwa pliku inna niż identyfikator, nazwa katalogu inna niż `id` tematu;
 - powtórzony identyfikator w temacie albo identyfikator istniejący już w innej paczce `content/normalized`;
 - odwołanie do nieistniejącego obiektu albo obiektu złego rodzaju, zakres spoza wskazanego kryterium, relacja łącząca rodzaje spoza §5, `required-for` i `variant-of` bez warunku;
-- liczba poprawnych opcji P różna od `k`, albo `k` nie mniejsze od liczby opcji;
+- pytanie A z liczbą opcji inną niż 4 lub 5; pytanie P z `k` mniejszym niż 2, z liczbą poprawnych opcji różną od `k` albo z `k` nie mniejszym od liczby opcji;
 - kontrole korekty w złej kolejności ról albo mierzące inny zakres niż korekta;
 - `see` opcji wskazujące inny obiekt niż ten, który aplikacja wybierze dziś z pierwszej reguły (do etapu 3);
 - `labelBeforeAnswer` zawierające `labelAfterAnswer` swojego kryterium;
-- znacznik HTML albo niewypełniony wzór `<…>` w tekście wyświetlanym, link inny niż http(s);
+- znacznik HTML albo niewypełniony wzór `<…>` w tekście wyświetlanym, link inny niż http(s), przykładowy adres źródła `example.org` ze wzoru;
 - brak pliku wskazanego w `provenance`;
 - wycofanie obiektu innego niż pytanie, powtórzony identyfikator wycofania, usunięty albo zmieniony wpis już przekonwertowanego wycofania;
 - paczka niezgodna ze schematem albo regułami semantycznymi kontraktu (te same kontrole co `content:validate`).
