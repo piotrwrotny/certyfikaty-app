@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T02-02-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T02-02
+  aspect: ZAK-T02-02
+family: FAM-T02-02
+sourceAnchor: references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-F01
+stem: Oceń twierdzenia przy znaczeniu NFR z Glossary 2.2.0.
+options:
+- id: '1'
+  text: Dodatkowy constraint należy do NFR.
+  rationale: |-
+    NFR obejmuje constraint → Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint. → Prawda.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  truth: true
+- id: '2'
+  text: Jednoznaczny zapis funkcji automatycznie jest quality requirement.
+  rationale: |-
+    Jakość zapisu nie zmienia concern → Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement. → Fałsz.
+  rules:
+  - REG-T02-02-03
+  see: N-T02-02
+  truth: false
+- id: '3'
+  text: W tym profilu performance requirement mieści się w quality requirement.
+  rationale: |-
+    Glossary przyjmuje wydajność jako podkategorię jakości → Performance requirement jest w przyjętym Glossary podkategorią quality requirement. → Prawda.
+  rules:
+  - REG-T02-02-02
+  see: N-T02-02
+  truth: true

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../schemas/authoring/sources.schema.json
+sources:
+- id: SRC-T07-SEN
+  title: CPRE Foundation Level Syllabus EN
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf
+  location: |-
+    §2.1–2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14; §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14; §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15; §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15; §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16; §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16; §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17; §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17; §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18; §2.2, Principles 6 i 8 / Zasady 6 i 8; fizyczne strony PDF 17–18
+  attribution: IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T07-SPL
+  title: CPRE Foundation Level Syllabus PL
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf
+  location: |-
+    §2.1–2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14; §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14; §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15; §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15; §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16; §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16; §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17; §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17; §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18; §2.2, Principles 6 i 8 / Zasady 6 i 8; fizyczne strony PDF 17–18
+  attribution: |-
+    IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T07-GPL
+  title: Glossary of Requirements Engineering Terminology — Polish
+  version: 2.2.0
+  url: https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf
+  location: |-
+    Hasła Persona; fizyczne strony PDF 21; Hasła System boundary, uwaga 3; fizyczne strony PDF 13; Hasła System boundary; Context boundary; Scope; fizyczne strony PDF 12–13, 35; Hasła Validation; Verification; fizyczne strony PDF 32
+  attribution: |-
+    Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T07-HEN
+  title: CPRE Foundation Level Handbook EN
+  version: 1.3.2
+  url: https://isqi.org/media/65/0a/43/1789029072/cpre_foundationlevel_handbook_en_v1.3.2.pdf
+  location: |-
+    §2.2.3; fizyczne strony PDF 20–21; §2.2.4, real-world requirements and assumptions; fizyczne strony PDF 22–24; §2.2.5; fizyczne strony PDF 24–25
+  attribution: |-
+    IREB e.V.; Martin Glinz, Hans van Loenhoud, Stefan Staal, Stan Bühne; wersja 1.3.2; historia wersji s.5: 23.07.2026; oficjalny dokument w publicznej kopii iSQI; prawa według s.2.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.

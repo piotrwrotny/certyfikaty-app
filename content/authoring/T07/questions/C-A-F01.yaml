@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-A-F01
+revision: r2
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-A01
+  aspect: ZAK-T07-C-A01
+family: FAM-C-A1
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-A-F01
+stem: |-
+  Aplikacja introligatorni ma wskazywać zlecenia gotowe do wykonania. Przed rozpoczęciem prac pracownik ręcznie sprawdza zgodę właściciela materiału. Bez zgody zlecenie nie jest gotowe. Ten proces pozostaje poza aplikacją i nie będzie zmieniany. Nie ma automatycznego interfejsu między osobą sprawdzającą zgodę a aplikacją.
+
+  Dlaczego proces sprawdzania zgody trzeba uwzględnić w analizie wymagań aplikacji?
+options:
+- id: a
+  text: Wynik czynności ręcznej wpływa na znaczenie gotowości zlecenia w aplikacji.
+  rationale: |-
+    Zgoda warunkuje gotowość → zewnętrzna czynność może kształtować wymagania → to właściwe uzasadnienie istotności
+  rules:
+  - REG-A1
+  - REG-KRY-T07-04
+  see: N-T07-C-A01
+  correct: true
+- id: b
+  text: Każdy proces w tej samej firmie należy do istotnego kontekstu aplikacji.
+  rationale: |-
+    Wskazano konkretny wpływ, nie wszystkie procesy firmy → wspólny właściciel nie przesądza znaczenia → argument jest zbyt szeroki
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: c
+  text: Istotny kontekst obejmuje wyłącznie czynności połączone interfejsem IT.
+  rationale: |-
+    Brak automatycznego interfejsu nie usuwa warunku gotowości → kontekst nie ogranicza się do integracji IT → zdanie nie uzasadnia uwzględnienia i zawiera błędną regułę
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: d
+  text: Proces musi wejść do aplikacji, skoro aplikacja ma uwzględniać jego wynik.
+  rationale: |-
+    Proces pozostaje zewnętrzny w stemie → wpływ na wymagania nie wymusza wejścia do systemu → wniosek nie wynika z danych
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false

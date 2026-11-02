@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-03-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T07-03
+  aspect: ZAK-T07-03
+family: FAM-T07-03
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-03-B01
+stem: |-
+  Dwa działy podpisały zapis „zamówienie gotowe”, lecz jeden rozumie gotowość jako kompletację, a drugi jako kompletację wraz z opłaceniem. Który argument odpowiada zasadzie wspólnego zrozumienia?
+options:
+- id: a
+  text: Należy porównać przykłady oczekiwanych wyników i uzgodnić znaczenie gotowości.
+  rationale: |-
+    Przykład ujawnia różnicę i wspiera uzgodnienie → Glosariusze, prototypy, system odniesienia i przykłady pomagają budować lub sprawdzać shared understanding, a krótkie pętle feedbacku ograniczają skutki nieporozumień. → wybrać.
+  rules:
+  - REG-T07-03-05
+  see: N-T07-03
+  correct: true
+- id: b
+  text: Należy wyłącznie zmienić nazwę pliku.
+  rationale: |-
+    Nazwa nie usuwa rozbieżnego sensu → RE tworzy, podtrzymuje i sprawdza wspólną podstawę rozumienia pomiędzy interesariuszami, Requirements Engineers i deweloperami. → nie wybrać.
+  rules:
+  - REG-KRY-T07-03
+  see: N-T07-03
+  correct: false
+- id: c
+  text: Wspólne zrozumienie nigdy nie jest możliwe między działami.
+  rationale: |-
+    Jedna rozbieżność nie dowodzi niemożliwości uzgodnienia → RE tworzy, podtrzymuje i sprawdza wspólną podstawę rozumienia pomiędzy interesariuszami, Requirements Engineers i deweloperami. → nie wybrać.
+  rules:
+  - REG-KRY-T07-03
+  see: N-T07-03
+  correct: false
+- id: d
+  text: Podpis kończy potrzebę sprawdzania znaczenia.
+  rationale: |-
+    Różne interpretacje mimo podpisu pokazują pozorną zgodność → Obie postacie shared understanding mogą być pozorne, a nawet zgodność rozumienia nie dowodzi kompletności wymagań. → nie wybrać.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: false

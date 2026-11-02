@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T06-D02
+revision: r1
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T06-02
+  aspect: ZAK-T06-02
+family: FAM-T06-02
+sourceAnchor: tools/z1_extensions.py T06-02/D
+stem: |-
+  Recenzent tłumaczy explicit jako „zawsze rzeczywiste”, implicit jako „zawsze pozorne”, a validation jako samą kontrolę zgodności ze specyfikacją. Która korekta jest właściwa?
+options:
+- id: a
+  text: Wszystkie trzy utożsamienia są definicjami obowiązującymi w profilu.
+  rationale: |-
+    Opis miesza nośnik z trafnością oraz potrzeby ze specyfikacją → źródła rozróżniają te osie → odpowiedź jest błędna.
+  rules:
+  - REG-T06-02-04
+  see: N-T06-02
+  correct: false
+- id: b
+  text: Wystarczy zmienić nazwę dokumentu, pozostawiając trzy utożsamienia.
+  rationale: Wada dotyczy znaczeń → nazwa pliku nie zmienia definicji → korekta nie rozwiązuje problemu.
+  rules:
+  - REG-T06-02-05
+  see: N-T06-02
+  correct: false
+- id: c
+  text: Explicit i implicit różnią się podstawą, obie postacie mogą być pozorne, a validation odnosi się do potrzeb.
+  rationale: |-
+    Trzy twierdzenia wymagają rozdzielenia → zapis/wiedza, trafność oraz potrzeby/specyfikacja to osobne rozróżnienia → korekta jest trafna.
+  rules:
+  - REG-T06-02-04
+  see: N-T06-02
+  correct: true
+- id: d
+  text: Tylko implicit może służyć wspólnemu zrozumieniu, ponieważ dokumentacja je wyklucza.
+  rationale: Źródło dopuszcza dwie postacie → dokumentowanie i uzgadnianie budują explicit → wykluczenie jest błędne.
+  rules:
+  - REG-T06-02-03
+  see: N-T06-02
+  correct: false

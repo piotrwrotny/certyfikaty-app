@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T03
+revision: r2
+title: T03 — Wartość RE i skutki jego niedostatków
+shortTitle: T03 — Ćwiczenia RE
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:
+- KRY-T03-01
+- KRY-T03-02
+limitations:
+- |-
+  Cztery wskazane korzyści RE; objawy brakujących/niejasnych/nieprawidłowych wymagań i cztery źródłowo wymienione przyczyny.
+- Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.
+- |-
+  Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.
+- Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.
+- 'K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem.'
+provenance:
+- path: references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md
+  documentVersion: v0.1
+- path: references/content/T03_IREB_CPRE_Value_and_Inadequate_RE_QA_and_Handoff_v0.1.md
+  documentVersion: v0.1
+- path: references/content/Z1_IREB_CPRE_Manifest_v0.1.md
+  documentVersion: v0.1
+criteria:
+- id: KRY-T03-01
+  revision: r2
+  description: Wyjaśnia wpływ ustaleń na działania zespołu.
+  labelBeforeAnswer: Wyjaśnia wpływ ustaleń na działania zespołu.
+  eo:
+  - id: EO1.2.1
+    level: L2
+  aspects:
+  - id: ZAK-T03-01
+    labelAfterAnswer: Cztery źródła wartości RE
+- id: KRY-T03-02
+  revision: r2
+  description: Rozpoznaje stany wymagań i granice wnioskowania o ich źródłach.
+  labelBeforeAnswer: Rozpoznaje stany wymagań i granice wnioskowania o ich źródłach.
+  eo:
+  - id: EO1.2.2
+    level: L1
+  aspects:
+  - id: ZAK-T03-02
+    labelAfterAnswer: Objawy i przyczyny niewłaściwego RE
+families:
+- id: FAM-T03-01
+  revision: r2
+  description: |-
+    Wspólny rdzeń Cztery źródła wartości RE; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T03-02
+  revision: r2
+  description: |-
+    Wspólny rdzeń Objawy i przyczyny niewłaściwego RE; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.

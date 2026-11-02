@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-D02
+revision: r1
+format: K
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T01-02
+  aspect: ZAK-T01-02
+family: FAM-T01-02
+sourceAnchor: tools/z1_extensions.py T01-02/D
+stem: |-
+  Plik A jest uporządkowanym zbiorem uzgodnionych wymagań dla następnej wersji i spełnia ustalone kryteria. Plik B opisuje zmierzone parametry obecnie wykonanego urządzenia. Oceń interpretacje.
+options:
+- id: '1'
+  text: Plik A jest requirements specification jako rezultat pracy.
+  rationale: A grupuje wymagania i spełnia kryteria → tak określono rezultat requirements specification → Prawda.
+  rules:
+  - REG-T01-02-02
+  see: N-T01-02
+  truth: true
+- id: '2'
+  text: Plik B nie może być specification, ponieważ opisuje stan już zaimplementowany.
+  rationale: B dotyczy wykonanych cech → specification obejmuje także takie opisy → Fałsz.
+  rules:
+  - REG-T01-02-03
+  see: N-T01-02
+  truth: false
+- id: '3'
+  text: Nazwa rozszerzenia pliku sama nie rozstrzyga, czy jego treść jest requirements specification.
+  rationale: |-
+    Dane odróżniają przedmiot i strukturę opisów → definicja odnosi się do właściwości zbioru, nie rozszerzenia → Prawda.
+  rules:
+  - REG-T01-02-02
+  see: N-T01-02
+  truth: true

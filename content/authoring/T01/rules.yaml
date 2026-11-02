@@ -1,0 +1,127 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T01-01
+  revision: r2
+  statement: |-
+    Wymaganie może oznaczać potrzebę interesariusza, wymaganą zdolność lub właściwość systemu albo ich udokumentowaną reprezentację.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Requirement / Wymaganie; fizyczne strony PDF 33
+- id: REG-T01-01-02
+  revision: r1
+  statement: Potrzeba może istnieć przed powstaniem jej udokumentowanej reprezentacji.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Requirement / Wymaganie, znaczenia 1 i 3; fizyczne strony PDF 33
+- id: REG-T01-01-03
+  revision: r1
+  statement: |-
+    Trzy znaczenia słowa requirement i podział na functional requirement, quality requirement oraz constraint są różnymi rozróżnieniami.
+  sources:
+  - source: SRC-T01-GPL
+    location: |-
+      Hasła Requirement / Wymaganie; Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 33–34
+- id: REG-KRY-T01-02
+  revision: r2
+  statement: |-
+    Specification może oznaczać uporządkowany opis właściwości obiektu spełniający ustalone kryteria albo proces ich specyfikowania.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Specification / Specyfikacja; fizyczne strony PDF 27
+- id: REG-T01-02-02
+  revision: r1
+  statement: Requirements specification jako rezultat jest uporządkowanym zbiorem wymagań spełniającym ustalone
+    kryteria.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Requirements specification / Specyfikacja wymagań; fizyczne strony PDF 27
+- id: REG-T01-02-03
+  revision: r1
+  statement: |-
+    Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Specification / Specyfikacja, uwaga; fizyczne strony PDF 27
+- id: REG-KRY-T01-03
+  revision: r2
+  statement: Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego
+    systemu.
+  sources:
+  - source: SRC-T01-SEN
+    location: §1.1; fizyczne strony PDF 11
+  - source: SRC-T01-SPL
+    location: §1.1; fizyczne strony PDF 11
+  - source: SRC-T01-GPL
+    location: Hasła Stakeholder / Interesariusz; fizyczne strony PDF 14
+- id: REG-T01-03-02
+  revision: r1
+  statement: |-
+    User korzysta z funkcjonalności systemu i jest jego interesariuszem, lecz nie każdy interesariusz musi być użytkownikiem.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła User / Użytkownik; Stakeholder / Interesariusz; fizyczne strony PDF 14, 32
+- id: REG-T01-03-03
+  revision: r1
+  statement: Jeden interesariusz może równocześnie pełnić więcej niż jedną rolę.
+  sources:
+  - source: SRC-T01-SEN
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T01-SPL
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+- id: REG-KRY-T01-04
+  revision: r2
+  statement: |-
+    System w znaczeniu inżynierskim jest spójną, dającą się wyodrębnić całością elementów osiągających cel przez skoordynowane współdziałanie.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła System, znaczenie 2; fizyczne strony PDF 29
+- id: REG-T01-04-02
+  revision: r1
+  statement: |-
+    W CPRE pojęcie system obejmuje także produkty, usługi, urządzenia, procedury oraz komponenty i złożenia systemów.
+  sources:
+  - source: SRC-T01-SEN
+    location: §1.1; fizyczne strony PDF 11
+  - source: SRC-T01-SPL
+    location: §1.1; fizyczne strony PDF 11
+  - source: SRC-T01-GPL
+    location: Hasła System, Important; fizyczne strony PDF 29
+- id: REG-T01-04-03
+  revision: r1
+  statement: System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła System, uwaga 1; fizyczne strony PDF 29
+  - source: SRC-T01-HEN
+    location: §1.1, Definition 1.4 i uwaga o podsystemach; fizyczne strony PDF 12
+- id: REG-T01-04-04
+  revision: r1
+  statement: System socjotechniczny obejmuje oprogramowanie, sprzęt, ludzi i aspekty organizacyjne.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła System, uwaga 4; fizyczne strony PDF 29
+- id: REG-KRY-T01-05
+  revision: r2
+  statement: |-
+    RE jest systematycznym i zdyscyplinowanym podejściem do specyfikowania i zarządzania wymaganiami w celu zrozumienia potrzeb interesariuszy i ograniczenia ryzyka ich niespełnienia przez dostarczony system.
+  sources:
+  - source: SRC-T01-GPL
+    location: Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14
+- id: REG-T01-05-02
+  revision: r1
+  statement: |-
+    Celem specyfikowania i zarządzania wymaganiami jest zaspokojenie oczekiwań i potrzeb interesariuszy przez wytworzony i wdrożony system.
+  sources:
+  - source: SRC-T01-SEN
+    location: §1.1; fizyczne strony PDF 11
+  - source: SRC-T01-SPL
+    location: §1.1; fizyczne strony PDF 11
+- id: REG-T01-05-03
+  revision: r1
+  statement: |-
+    Systematyczna praca RE wymaga doboru procesów i praktyk do sytuacji, a nie jednego uniwersalnego narzędzia lub sposobu pracy.
+  sources:
+  - source: SRC-T01-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T01-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18

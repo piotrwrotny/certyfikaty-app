@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-G02
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T01-02
+  aspect: ZAK-T01-02
+family: FAM-T01-02
+sourceAnchor: tools/z1_extensions.py T01-02/G
+stem: |-
+  W harmonogramie zapisano: „Specyfikowanie parametrów potrwa dwa dni”. W repozytorium znajduje się też opis parametrów już produkowanego czujnika. Która interpretacja jest zgodna ze znaczeniem specification?
+options:
+- id: a
+  text: Oba sformułowania muszą oznaczać wyłącznie przyszłe wymagania.
+  rationale: |-
+    Drugi opis dotyczy wykonanego urządzenia → specification dopuszcza cechy zaimplementowane → ograniczenie do przyszłych wymagań jest błędne.
+  rules:
+  - REG-T01-02-03
+  see: N-T01-02
+  correct: false
+- id: b
+  text: Harmonogram dowodzi, że opis urządzenia nie może być specyfikacją.
+  rationale: Podano dwa różne użycia → proces jednego opisu nie wyklucza rezultatu drugiego → taki wniosek nie wynika.
+  rules:
+  - REG-KRY-T01-02
+  see: N-T01-02
+  correct: false
+- id: c
+  text: Każdy gotowy opis jest requirements specification niezależnie od przedmiotu.
+  rationale: |-
+    Parametry wykonanej wersji nie są same przez się zbiorem wymagań → przedmiot opisu ma znaczenie → uogólnienie jest niepoprawne.
+  rules:
+  - REG-T01-02-02
+  see: N-T01-02
+  correct: false
+- id: d
+  text: Pierwsze użycie nazywa proces, a drugie może nazywać rezultat opisujący cechy wykonane.
+  rationale: |-
+    Czas dotyczy czynności, parametry dotyczą obecnego urządzenia → specification ma oba sensy i dopuszcza właściwości wykonane → opis jest trafny.
+  rules:
+  - REG-KRY-T01-02
+  see: N-T01-02
+  correct: true

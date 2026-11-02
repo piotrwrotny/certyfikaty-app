@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T02-02-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T02-02
+  aspect: ZAK-T02-02
+family: FAM-T02-02
+sourceAnchor: references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-02-B01
+stem: Który zakres ma non-functional requirement w przyjętym Glossary IREB?
+options:
+- id: a
+  text: Każdy błędnie napisany zapis.
+  rationale: |-
+    Jakość redakcyjna nie jest definicją rodzaju → Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement. → nie wybrać.
+  rules:
+  - REG-T02-02-03
+  see: N-T02-02
+  correct: false
+- id: b
+  text: Wyłącznie quality requirement.
+  rationale: Pomija constraint → za wąski zakres → nie wybrać.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  correct: false
+- id: c
+  text: Quality requirement albo constraint.
+  rationale: |-
+    Oba człony odpowiadają hasłu → Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint. → wybrać.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  correct: true
+- id: d
+  text: Wyłącznie każda funkcja związana z bezpieczeństwem.
+  rationale: |-
+    Cel bezpieczeństwa może prowadzić do funkcji, lecz nie definiuje NFR → Perspektywa user requirement nie wyklucza typu quality requirement ani functional requirement. → nie wybrać.
+  rules:
+  - REG-T02-02-04
+  see: N-T02-02
+  correct: false

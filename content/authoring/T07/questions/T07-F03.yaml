@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F03
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-03
+  aspect: ZAK-T07-03
+family: FAM-T07-03
+sourceAnchor: tools/z1_extensions.py T07-03/F
+stem: |-
+  Do zespołu o wysokiej rotacji dołącza dostawca zewnętrzny. Wcześniej opierano się głównie na wspólnej wiedzy wieloletnich pracowników. Który argument najlepiej uzasadnia działanie RE?
+options:
+- id: a
+  text: Wcześniejszy sukces gwarantuje, że nowe osoby znają wszystkie znaczenia.
+  rationale: |-
+    Skład i relacje zespołu się zmieniają → dawna wspólna wiedza nie dowodzi obecnej zgodności → gwarancja jest błędna.
+  rules:
+  - REG-T07-03-04
+  see: N-T07-03
+  correct: false
+- id: b
+  text: Jeden podpis nowego dostawcy usuwa potrzebę sprawdzania interpretacji.
+  rationale: Podpis dotyczy uzgodnionej podstawy → explicit też może być pozorne → pominięcie kontroli jest nieuzasadnione.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: false
+- id: c
+  text: Rotacja dowodzi, że żadne wspólne zrozumienie nie jest już możliwe.
+  rationale: |-
+    Rotacja jest przeszkodą, a nie dowodem niemożliwości → praktyki mogą budować i sprawdzać podstawę → wniosek jest za mocny.
+  rules:
+  - REG-T07-03-04
+  see: N-T07-03
+  correct: false
+- id: d
+  text: Warto uzgodnić znaczenia i sprawdzić je na przykładach, bo dotychczasowa wiedza implicit może nie wystarczyć.
+  rationale: Podano bariery wspólnej podstawy → przykłady i uzgodnienia wspierają jej sprawdzenie → argument jest
+    trafny.
+  rules:
+  - REG-T07-03-05
+  see: N-T07-03
+  correct: true

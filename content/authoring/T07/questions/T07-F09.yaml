@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F09
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-09
+  aspect: ZAK-T07-09
+family: FAM-T07-09
+sourceAnchor: tools/z1_extensions.py T07-09/F
+stem: |-
+  Dostawca proponuje skopiować cały proces RE z dużego projektu do małego przedsięwzięcia. Jedynym uzasadnieniem jest wcześniejszy sukces. Który argument najlepiej stosuje zasadę systematycznej pracy?
+options:
+- id: a
+  text: Dawny sukces dowodzi dopasowania procesu do każdej następnej sytuacji.
+  rationale: Podano tylko wynik innego projektu → reuse wymaga refleksji → automatyczny wniosek jest błędny.
+  rules:
+  - REG-T07-09-04
+  see: N-T07-09
+  correct: false
+- id: b
+  text: Dostosowanie oznacza odrzucenie wszystkich dawnych praktyk niezależnie od ich przydatności.
+  rationale: Zasada wymaga oceny dopasowania → nie zakazuje uzasadnionego reuse → całkowite odrzucenie nie wynika.
+  rules:
+  - REG-T07-09-03
+  see: N-T07-09
+  correct: false
+- id: c
+  text: |-
+    Należy ocenić dopasowanie procesu i artefaktów do nowego problemu, kontekstu i środowiska, zachowując przydatne praktyki.
+  rationale: Projekt różni się sytuacją → zdyscyplinowany dobór wymaga refleksji nad reuse → argument jest trafny.
+  rules:
+  - REG-T07-09-04
+  see: N-T07-09
+  correct: true
+- id: d
+  text: Mały projekt nie potrzebuje żadnej walidacji ani zarządzania wymaganiami.
+  rationale: Skala nie usuwa zadań RE → odpowiednie praktyki są potrzebne niezależnie od procesu → wykluczenie jest
+    błędne.
+  rules:
+  - REG-KRY-T07-09
+  see: N-T07-09
+  correct: false

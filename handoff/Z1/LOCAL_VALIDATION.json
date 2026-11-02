@@ -1,0 +1,162 @@
+{
+  "kind": "autorska walidacja pomocnicza, nie content:lint",
+  "date": "2026-11-02",
+  "schema_draft": "2020-12",
+  "validator": "jsonschema 4.25.1",
+  "official_lint": "not-run: brak implementacji CLI",
+  "official_convert": "not-run: brak implementacji CLI",
+  "checks": {
+    "UTF8_LF_no_BOM": 329,
+    "schema_comment_path": 136,
+    "schema_objects": 329,
+    "topic_directory_name": 7,
+    "draft_without_cli": 7,
+    "global_unique_id": 715,
+    "object_filename": 301,
+    "provenance_file_exists": 23,
+    "no_author_created_decisions": 14,
+    "neutral_criterion_label": 54,
+    "criterion_order": 7,
+    "typed_reference": 2773,
+    "local_reference": 2773,
+    "relation_condition": 83,
+    "real_uri_structure": 25,
+    "source_location": 182,
+    "relation_endpoint_kind": 92,
+    "aspect_belongs_to_criterion": 313,
+    "safe_markdown": 1292,
+    "no_template_url": 1292,
+    "option_unique_id": 108,
+    "allowed_weight": 108,
+    "K_semantics": 37,
+    "rationale_three_part_structure": 435,
+    "see_matches_current_routing": 435,
+    "A_semantics": 41,
+    "followup_is_used": 54,
+    "P_semantics": 30,
+    "base_has_correction": 27,
+    "alternate_help": 27,
+    "two_followups": 27,
+    "followup_role_scope": 54,
+    "open_sections": 45,
+    "open_rubric_components": 45,
+    "no_open_delayed_in_learning": 45,
+    "complete_BFGD_scope": 27,
+    "skippable_prerequisite": 2,
+    "derived_rationale_id_unique": 435,
+    "no_collision_with_available_normalized": 1
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "topic": "T01",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T02",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T03",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T04",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T05",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T06",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    },
+    {
+      "topic": "T07",
+      "code": "DECISION-MISSING",
+      "meaning": "Brak decyzji dla r2; oczekiwany, bez dopuszczonego kanału."
+    }
+  ],
+  "objects": 715,
+  "topics": {
+    "T01": {
+      "source": 4,
+      "rule": 16,
+      "relation": 35,
+      "question": 20,
+      "lesson": 6,
+      "example": 15,
+      "correction": 5,
+      "open": 6
+    },
+    "T02": {
+      "source": 3,
+      "rule": 10,
+      "relation": 22,
+      "question": 12,
+      "lesson": 4,
+      "example": 9,
+      "correction": 3,
+      "open": 5
+    },
+    "T03": {
+      "source": 3,
+      "rule": 7,
+      "relation": 14,
+      "question": 8,
+      "lesson": 2,
+      "example": 6,
+      "correction": 2,
+      "open": 3
+    },
+    "T04": {
+      "source": 3,
+      "rule": 9,
+      "relation": 14,
+      "question": 8,
+      "lesson": 2,
+      "example": 6,
+      "correction": 2,
+      "open": 3
+    },
+    "T05": {
+      "source": 4,
+      "rule": 11,
+      "relation": 21,
+      "question": 12,
+      "lesson": 3,
+      "example": 9,
+      "correction": 3,
+      "open": 4
+    },
+    "T06": {
+      "source": 4,
+      "rule": 9,
+      "relation": 14,
+      "question": 8,
+      "lesson": 2,
+      "example": 6,
+      "correction": 2,
+      "open": 4
+    },
+    "T07": {
+      "source": 4,
+      "rule": 37,
+      "relation": 80,
+      "question": 40,
+      "lesson": 12,
+      "example": 39,
+      "correction": 10,
+      "open": 20
+    }
+  },
+  "scoring_vectors": 566,
+  "external_normalized_checked": "contract_inputs/content/normalized"
+}

@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G06
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-06
+  aspect: ZAK-T07-06
+family: FAM-T07-06
+sourceAnchor: tools/z1_extensions.py T07-06/G
+stem: |-
+  Sponsor podpisał wymaganie. Użytkownicy nadal wskazują inne oczekiwane zachowanie, a dostępność zewnętrznej usługi, na której oparto wymaganie, nie została potwierdzona. Oceń wnioski.
+options:
+- id: '1'
+  text: Podpis sponsora dowodzi pełnego porozumienia mimo podanej rozbieżności.
+  rationale: Użytkownicy wskazują inne oczekiwanie → porozumienie ról nie wynika z jednego podpisu → Fałsz.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  truth: false
+- id: '2'
+  text: Adekwatność wymagania wobec potrzeb nadal wymaga sprawdzenia.
+  rationale: Podano rozbieżność oczekiwań → pokrycie potrzeb jest osobnym aspektem walidacji → Prawda.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  truth: true
+- id: '3'
+  text: Założenie dostępności usługi trzeba sprawdzić, zamiast uznać je za fakt z samego zapisu.
+  rationale: Dostępności nie potwierdzono → rozsądność założeń jest jednym z trzech pytań → Prawda.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  truth: true
+- id: '4'
+  text: Podjęcie tej pracy już podczas RE może ograniczyć ryzyko późnego wykrycia nieadekwatności.
+  rationale: Problemy są widoczne przed realizacją → wczesna walidacja kontroluje ryzyko od początku → Prawda.
+  rules:
+  - REG-KRY-T07-06
+  see: N-T07-06
+  truth: true

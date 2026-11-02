@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-F01
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T01-01
+  aspect: ZAK-T01-01
+family: FAM-T01-01
+sourceAnchor: tools/z1_extensions.py T01-01/F
+stem: |-
+  Właściciel pracowni potrzebował widzieć nieopłacone zamówienia już przed rozmową. Analityk dopiero po rozmowie zapisał tę potrzebę w rejestrze. Który opis obu zdarzeń jest trafny?
+options:
+- id: a
+  text: Przed wpisem nie istniało wymaganie w żadnym znaczeniu.
+  rationale: |-
+    Potrzeba istniała wcześniej → requirement obejmuje potrzebę niezależnie od reprezentacji → wykluczenie wszystkich znaczeń jest błędne.
+  rules:
+  - REG-T01-01-02
+  see: N-T01-01
+  correct: false
+- id: b
+  text: Potrzeba istniała wcześniej, a wpis jest jej udokumentowaną reprezentacją.
+  rationale: Podano wcześniejszą potrzebę i późniejszy zapis → to odrębne znaczenia requirement → opis jest trafny.
+  rules:
+  - REG-KRY-T01-01
+  see: N-T01-01
+  correct: true
+- id: c
+  text: Wpis jest zawsze zaimplementowaną funkcją systemu.
+  rationale: |-
+    Podano zapis analityka, nie wykonanie kodu → reprezentacja oczekiwania nie jest z definicji implementacją → odpowiedź nie wynika z danych.
+  rules:
+  - REG-KRY-T01-01
+  see: N-T01-01
+  correct: false
+- id: d
+  text: Potrzeba i wpis muszą oznaczać dwa różne rodzaje quality requirement.
+  rationale: |-
+    Opis nie rozstrzyga rodzaju oczekiwania → trzy znaczenia nie są trójpodziałem rodzajów → taka klasyfikacja jest nieuzasadniona.
+  rules:
+  - REG-T01-01-03
+  see: N-T01-01
+  correct: false

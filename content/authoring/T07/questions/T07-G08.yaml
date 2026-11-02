@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G08
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-08
+  aspect: ZAK-T07-08
+family: FAM-T07-08
+sourceAnchor: tools/z1_extensions.py T07-08/G
+stem: |-
+  Dostawca proponuje nowy silnik tylko z powodu jego nowości. Drugi pomysł usuwa niepotrzebny krok po zbadaniu potrzeb. Nie wykonano jeszcze oceny obu wariantów z interesariuszami. Oceń argumenty.
+options:
+- id: '1'
+  text: Nowość silnika sama dowodzi lepszego zaspokojenia potrzeb.
+  rationale: Nie podano wyniku sprawdzenia potrzeb → nowość nie jest dowodem adekwatności → Fałsz.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  truth: false
+- id: '2'
+  text: Usunięcie kroku może realizować innowację małej skali, jeśli ułatwia zaspokojenie potrzeby.
+  rationale: Pomysł dotyczy łatwości użycia → zasada dopuszcza małą skalę → Prawda.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  truth: true
+- id: '3'
+  text: Badanie potrzeb wolno pominąć, jeśli pomysłodawca ma tytuł eksperta.
+  rationale: Pozycja zawodowa nie potwierdza dopasowania pomysłu → potrzebna jest walidacja wobec potrzeb → Fałsz.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  truth: false
+- id: '4'
+  text: Rozważanie alternatywy dla literalnej prośby może należeć do dobrego RE.
+  rationale: |-
+    Propozycje mogą być lepszym sposobem zaspokojenia potrzeby → zasada nie ogranicza pracy do przepisywania życzeń → Prawda.
+  rules:
+  - REG-KRY-T07-08
+  see: N-T07-08
+  truth: true

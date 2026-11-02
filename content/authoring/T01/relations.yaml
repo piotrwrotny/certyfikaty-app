@@ -1,0 +1,174 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T01-01
+  meaning: |-
+    Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.
+  from: EX-KRY-T01-01
+- type: counterexample-of
+  to: REG-KRY-T01-01
+  meaning: |-
+    Uogólnienie „bez numeru nie ma wymagania” obala potrzeba odtworzenia zgłoszona ustnie przed utworzeniem REQ-17. Brak zapisu nie usuwa potrzeby.
+  from: CE-KRY-T01-01
+- type: distinguishes
+  to: REG-KRY-T01-01
+  meaning: |-
+    Oś: potrzeba → wymagana właściwość → jej zapis. „Chcę odzyskać dane” wskazuje potrzebę; „system ma umożliwiać odzyskanie” wskazuje właściwość; „akapit REQ-17” wskazuje zapis. Functional/quality/constraint to odmienna oś.
+  from: CMP-KRY-T01-01
+- type: explains
+  to: REG-KRY-T01-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T01-01
+- type: variant-of
+  to: Z1-T01-01-B01
+  meaning: |-
+    Dialog o potrzebie i późniejszym zapisie zastępuje ogólne tezy B; wybór nie zastępuje otwartego uzasadnienia źródłowego F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-F01
+- type: variant-of
+  to: Z1-T01-01-B01
+  meaning: Trzy referenty w sekwencji i dwa poprawne wnioski; odróżnia istnienie potrzeby od tożsamości dokumentu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-G01
+- type: variant-of
+  to: Z1-T01-01-B01
+  meaning: Zmiana na odczyt sensu w instrukcji; wspólny rdzeń pojęciowy.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-01-D01
+- type: illustrates
+  to: REG-KRY-T01-02
+  meaning: |-
+    Opis już produkowanego czujnika może specyfikować jego rzeczywiste cechy; wymagania dla następnej wersji opisują cechy pożądane. Oba są opisami, lecz mają inną rolę.
+  from: EX-KRY-T01-02
+- type: counterexample-of
+  to: REG-KRY-T01-02
+  meaning: |-
+    Uogólnienie „specification zawsze znaczy przyszłe wymagania” obala techniczny opis istniejącego czujnika dokumentujący cechy wykonanej wersji.
+  from: CE-KRY-T01-02
+- type: distinguishes
+  to: REG-KRY-T01-02
+  meaning: |-
+    Oś 1: proces versus rezultat — „specyfikowanie” i „gotowy opis”. Oś 2: właściwości wymagane versus zaimplementowane — specyfikacja wymagań i opis wykonanego produktu. Każda oś ma własne pytanie.
+  from: CMP-KRY-T01-02
+- type: explains
+  to: REG-KRY-T01-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T01-02
+- type: variant-of
+  to: Z1-T01-02-B01
+  meaning: Proces/rezultat i wymagane/wykonane oceniane w kontrastach.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-02-F01
+- type: variant-of
+  to: Z1-T01-02-B01
+  meaning: Łączy rozpoznanie procesu z drugim artefaktem o cechach wykonanych; nie powtarza definicji B.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-G02
+- type: variant-of
+  to: Z1-T01-02-B01
+  meaning: Dwa artefakty i kontrast właściwości wymaganych/wykonanych; zachowano źródłowe otwarte D pod jego ID.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-D02
+- type: illustrates
+  to: REG-KRY-T01-03
+  meaning: |-
+    Organizacja audytująca otrzymuje wyniki systemu i ustala kryteria raportowania, lecz nie loguje się do aplikacji. Może być interesariuszem bez bycia użytkownikiem.
+  from: EX-KRY-T01-03
+- type: counterexample-of
+  to: REG-KRY-T01-03
+  meaning: |-
+    Uogólnienie „tylko zalogowani użytkownicy są interesariuszami” obala grupa pracowników, których grafik ustala system używany wyłącznie przez kierownika.
+  from: CE-KRY-T01-03
+- type: distinguishes
+  to: REG-KRY-T01-03
+  meaning: |-
+    Oś: relacja do systemu. Użytkownik korzysta z funkcjonalności; interesariusz wpływa na wymagania lub odczuwa skutki. Kierownik klikający grafik spełnia oba warunki, pracownik objęty grafikiem może spełniać tylko drugi.
+  from: CMP-KRY-T01-03
+- type: explains
+  to: REG-KRY-T01-03
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T01-03
+- type: variant-of
+  to: Z1-T01-03-B01
+  meaning: Definicję przeniesiono na osobę dotkniętą wynikiem bez użycia aplikacji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-03-F01
+- type: variant-of
+  to: Z1-T01-03-B01
+  meaning: Organizacja podlegająca skutkom i operator korzystający z funkcji; odmienna konfiguracja od pracownika
+    w F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-G03
+- type: variant-of
+  to: Z1-T01-03-B01
+  meaning: Kontrola kwantyfikatorów i zakresu definicji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-03-D01
+- type: illustrates
+  to: REG-KRY-T01-04
+  meaning: |-
+    Usługa odbioru zamówień może obejmować aplikację, skaner i pracowników wydających paczki. Wskazany cel i współdziałanie pozwalają rozpatrywać ją jako system.
+  from: EX-KRY-T01-04
+- type: counterexample-of
+  to: REG-KRY-T01-04
+  meaning: |-
+    Uogólnienie „bez kodu nie ma systemu” obala zorganizowana procedura ręcznego wydawania sprzętu z określonym celem i współpracującymi elementami.
+  from: CE-KRY-T01-04
+- type: distinguishes
+  to: REG-KRY-T01-04
+  meaning: |-
+    Oś: zakres analizowanej całości. System aplikacji obejmuje jej elementy; system całej usługi może obejmować również urządzenia i ludzi. To inne przedmioty analizy, a nie sprzeczne definicje.
+  from: CMP-KRY-T01-04
+- type: explains
+  to: REG-KRY-T01-04
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T01-04
+- type: variant-of
+  to: Z1-T01-04-B01
+  meaning: Zamiast definicji wprost sprawdzono hierarchię i zakres.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-04-F01
+- type: variant-of
+  to: Z1-T01-04-B01
+  meaning: Celowo współdziałająca usługa z programem, urządzeniem i człowiekiem zamiast abstrakcyjnej definicji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-G04
+- type: variant-of
+  to: Z1-T01-04-B01
+  meaning: Wybór warunku definicyjnego w innej mieszanej usłudze; otwarte D pozostaje osobnym wykonaniem.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-D04
+- type: illustrates
+  to: REG-KRY-T01-05
+  meaning: |-
+    Analityk uzgadnia, co oznacza poprawne zamknięcie zgłoszenia, utrwala to i sprawdza z użytkownikami. Dokument jest częścią pracy ukierunkowanej na potrzebę.
+  from: EX-KRY-T01-05
+- type: counterexample-of
+  to: REG-KRY-T01-05
+  meaning: |-
+    Uogólnienie „im więcej stron, tym lepsze RE” obala duża specyfikacja opisująca niewłaściwą potrzebę. Objętość nie zapewnia realizacji celu RE.
+  from: CE-KRY-T01-05
+- type: distinguishes
+  to: REG-KRY-T01-05
+  meaning: |-
+    Oś: działanie versus cel. Dokumentowanie jest czynnością; ograniczenie ryzyka niespełnienia potrzeb jest celem. Uporządkowane dokumenty mogą wspierać cel, lecz nie zastępują go.
+  from: CMP-KRY-T01-05
+- type: explains
+  to: REG-KRY-T01-05
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T01-05
+- type: variant-of
+  to: Z1-T01-05-B01
+  meaning: Kontrast definicji z nieuprawnionymi ograniczeniami.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T01-05-F01
+- type: variant-of
+  to: Z1-T01-05-B01
+  meaning: Ocena ciągłej pracy i jej celu w krótkim opisie, zamiast wyboru dwóch składników definicji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-G05
+- type: variant-of
+  to: Z1-T01-05-B01
+  meaning: Niepełny zawodowy opis wymaga wskazania brakujących działań i celu; oryginalny otwarty wariant zachowany.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T01-D05

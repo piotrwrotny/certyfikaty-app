@@ -1,0 +1,326 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T07-01
+  revision: r2
+  statement: |-
+    Wartość wymagania jest równa jego korzyści pomniejszonej o koszt pozyskania, dokumentowania, walidacji i zarządzania tym wymaganiem.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+- id: REG-T07-01-02
+  revision: r1
+  statement: |-
+    Korzyść wymagania zależy od wkładu w zaspokojenie potrzeb interesariuszy oraz ograniczenie ryzyka niepowodzenia i kosztownych przeróbek.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+- id: REG-T07-01-03
+  revision: r1
+  statement: Wymagania są środkiem do celu, więc sama liczba stron dokumentacji nie określa ich wartości.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.1–2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+  - source: SRC-T07-SPL
+    location: §2.1–2.2, Principle 1 / Zasada 1; fizyczne strony PDF 14
+- id: REG-KRY-T07-02
+  revision: r2
+  statement: |-
+    RE wymaga uwzględniania potrzeb właściwych ról interesariuszy, a ograniczenie się do klientów lub użytkowników końcowych może pominąć krytyczne wymagania.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+- id: REG-T07-02-02
+  revision: r1
+  statement: |-
+    Jedna osoba może pełnić kilka ról interesariusza, a użytkownicy przekazujący feedback pozostają interesariuszami.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+- id: REG-T07-02-03
+  revision: r1
+  statement: |-
+    Persona jest fikcyjnym archetypowym opisem grupy lub nieznanych jeszcze osób, a nie rzeczywistą osobą potwierdzającą ich zgodę.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T07-GPL
+    location: Hasła Persona; fizyczne strony PDF 21
+- id: REG-T07-02-04
+  revision: r1
+  statement: |-
+    Różne potrzeby i punkty widzenia interesariuszy mogą prowadzić do konfliktów, które RE powinno identyfikować i rozwiązywać.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 2 / Zasada 2; fizyczne strony PDF 15
+- id: REG-KRY-T07-03
+  revision: r2
+  statement: |-
+    RE tworzy, podtrzymuje i sprawdza wspólną podstawę rozumienia pomiędzy interesariuszami, Requirements Engineers i deweloperami.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T07-HEN
+    location: §2.2.3; fizyczne strony PDF 20–21
+- id: REG-T07-03-02
+  revision: r1
+  statement: |-
+    Explicit shared understanding ma udokumentowaną i uzgodnioną podstawę, a implicit ma podstawę we wspólnej wiedzy.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+- id: REG-T07-03-03
+  revision: r1
+  statement: |-
+    Obie postacie shared understanding mogą być pozorne, a nawet zgodność rozumienia nie dowodzi kompletności wymagań.
+  sources:
+  - source: SRC-T07-HEN
+    location: §2.2.3; fizyczne strony PDF 20–21
+- id: REG-T07-03-04
+  revision: r1
+  statement: |-
+    Wiedza domenowa, udana współpraca, wspólna kultura i zaufanie sprzyjają wspólnemu zrozumieniu, podczas gdy odległość, outsourcing, wielkość i rotacja zespołu mogą je utrudniać.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+- id: REG-T07-03-05
+  revision: r1
+  statement: |-
+    Glosariusze, prototypy, system odniesienia i przykłady pomagają budować lub sprawdzać shared understanding, a krótkie pętle feedbacku ograniczają skutki nieporozumień.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+- id: REG-KRY-T07-04
+  revision: r2
+  statement: Systemu i jego wymagań nie można właściwie zrozumieć bez rozpatrzenia istotnego kontekstu.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+- id: REG-T07-04-02
+  revision: r1
+  statement: |-
+    Granica systemu oddziela system od otoczenia, granica kontekstu istotne otoczenie od nieistotnego, a scope określa elementy możliwe do kształtowania.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-GPL
+    location: Hasła System boundary; Context boundary; Scope; fizyczne strony PDF 12–13, 35
+- id: REG-T07-04-03
+  revision: r1
+  statement: |-
+    Niezmieniany komponent może być wewnątrz systemu, a element kontekstu może być objęty możliwością przeprojektowania.
+  sources:
+  - source: SRC-T07-GPL
+    location: Hasła System boundary, uwaga 3; fizyczne strony PDF 13
+- id: REG-T07-04-04
+  revision: r1
+  statement: |-
+    RE powinno rozważać zmiany kontekstu wpływające na wymagania, mapowanie wymagań świata rzeczywistego na systemowe oraz założenia kontekstu.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+- id: REG-T07-04-05
+  revision: r1
+  statement: |-
+    Spełnienie wymagania systemowego o zarejestrowaniu sygnału nie gwarantuje spełnienia wymagania świata rzeczywistego bez odpowiednich warunków wiążących sygnał z realnym zjawiskiem.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-HEN
+    location: §2.2.4, real-world requirements and assumptions; fizyczne strony PDF 22–24
+- id: REG-KRY-T07-05
+  revision: r2
+  statement: |-
+    Problem jest niezadowalającą sytuacją, wymagania ujmują potrzebę jej usunięcia lub ograniczenia, a rozwiązaniem jest spełniający je system socjotechniczny.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+- id: REG-T07-05-02
+  revision: r1
+  statement: Problem, wymaganie i rozwiązanie są współzależne i nie muszą pojawiać się w jednej niezmiennej kolejności.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+- id: REG-T07-05-03
+  revision: r1
+  statement: Pomysł rozwiązania może pobudzić potrzeby użytkowników wymagające opracowania jako wymagania.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+- id: REG-T07-05-04
+  revision: r1
+  statement: |-
+    Rozdzielanie opisów problemu, wymagania i rozwiązania w myśleniu, komunikacji i dokumentowaniu ułatwia RE mimo ich współzależności.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 5 / Zasada 5; fizyczne strony PDF 16
+- id: REG-T07-05-05
+  revision: r1
+  statement: |-
+    Prototyp może wspierać rozpoznawanie wymagań i ocenę rozwiązania, bez ustanawiania obowiązkowej kolejności zakończenia całego RE przed jego badaniem.
+  sources:
+  - source: SRC-T07-HEN
+    location: §2.2.5; fizyczne strony PDF 24–25
+- id: REG-KRY-T07-06
+  revision: r2
+  statement: |-
+    Walidacja wymagań powinna zaczynać się już podczas RE, aby od początku kontrolować ryzyko niespełnienia potrzeb interesariuszy.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17
+- id: REG-T07-06-02
+  revision: r1
+  statement: |-
+    Walidacja sprawdza porozumienie interesariuszy, adekwatne pokrycie potrzeb przez wymagania i rozsądność założeń kontekstu.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 6 / Zasada 6; fizyczne strony PDF 17
+- id: REG-T07-06-03
+  revision: r1
+  statement: |-
+    Poprawność zapisu lub zgodność ze specyfikacją nie zastępuje potwierdzenia zgodności wymagania z potrzebami interesariuszy.
+  sources:
+  - source: SRC-T07-GPL
+    location: Hasła Validation; Verification; fizyczne strony PDF 32
+- id: REG-KRY-T07-07
+  revision: r2
+  statement: |-
+    Zmiany wymagań są normalnym skutkiem ewolucji systemów i ich otoczenia, a nie same w sobie dowodem wadliwej wcześniejszej pracy RE.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+- id: REG-T07-07-02
+  revision: r1
+  statement: |-
+    Źródłami zmian mogą być procesy biznesowe, konkurencja, priorytety klientów, technologia, przepisy i feedback użytkowników.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+- id: REG-T07-07-03
+  revision: r1
+  statement: |-
+    Walidacja, odkrycie wad wcześniejszych wymagań i zmiany potrzeb interesariuszy również mogą powodować zmiany wymagań.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+- id: REG-T07-07-04
+  revision: r1
+  statement: RE powinno równocześnie dopuszczać zmiany wymagań i utrzymywać ich stabilność.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 7 / Zasada 7; fizyczne strony PDF 17
+- id: REG-KRY-T07-08
+  revision: r2
+  statement: |-
+    Dobre RE poszukuje sposobów zaspokojenia potrzeb interesariuszy lepiej, niż oczekują, zamiast ograniczać się do literalnych propozycji.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18
+- id: REG-T07-08-02
+  revision: r1
+  statement: |-
+    Innowacja może mieć małą skalę nowych użytecznych funkcji i łatwości obsługi albo dużą skalę przełomowych pomysłów.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 8 / Zasada 8; fizyczne strony PDF 17–18
+- id: REG-T07-08-03
+  revision: r1
+  statement: |-
+    Nowy pomysł nadal wymaga sprawdzenia z potrzebami interesariuszy, więc sama nowość technologii nie potwierdza jego adekwatności.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principles 6 i 8 / Zasady 6 i 8; fizyczne strony PDF 17–18
+  - source: SRC-T07-SPL
+    location: §2.2, Principles 6 i 8 / Zasady 6 i 8; fizyczne strony PDF 17–18
+- id: REG-KRY-T07-09
+  revision: r2
+  statement: |-
+    Systematyczne pozyskiwanie, dokumentowanie, walidowanie i zarządzanie wymaganiami jest potrzebne niezależnie od procesu wytwarzania systemu.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+- id: REG-T07-09-02
+  revision: r1
+  statement: Nie istnieje jeden proces ani zestaw praktyk RE działający dobrze w każdej albo większości sytuacji.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+- id: REG-T07-09-03
+  revision: r1
+  statement: Procesy, praktyki i artefakty RE należy dobierać do danego problemu, kontekstu i środowiska.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+- id: REG-T07-09-04
+  revision: r1
+  statement: Ponowne użycie procesu z udanej wcześniejszej pracy RE wymaga refleksji nad dopasowaniem do nowej sytuacji.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+- id: REG-A1
+  revision: r2
+  statement: Systemu i jego wymagań nie można właściwie zrozumieć bez rozpatrzenia istotnego kontekstu.
+  sources:
+  - source: SRC-T07-SEN
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16
+  - source: SRC-T07-SPL
+    location: §2.2, Principle 4 / Zasada 4; fizyczne strony PDF 16

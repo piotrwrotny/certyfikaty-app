@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T04-02-B01
+revision: r2
+format: K
+role: base
+weight: 3
+scope:
+  criterion: KRY-T04-02
+  aspect: ZAK-T04-02
+family: FAM-T04-02
+sourceAnchor: references/content/T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md § Z1-T04-02-B01
+stem: Oceń znaczenia perspektyw wymagań.
+options:
+- id: '1'
+  text: Business requirement może wyrażać cel organizacji.
+  rationale: |-
+    Cel organizacji to perspektywa biznesowa → Business requirement wyraża cel, zamierzenie lub potrzebę organizacji. → Prawda.
+  rules:
+  - REG-T04-02-02
+  see: N-T04-02
+  truth: true
+- id: '2'
+  text: User requirements są podzbiorem stakeholder requirements.
+  rationale: |-
+    User jest stakeholderem i wyraża własne potrzeby → User requirements wyrażają potrzeby użytkowników i są podzbiorem stakeholder requirements. → Prawda.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  truth: true
+- id: '3'
+  text: Domain requirement dotyczy wymaganej właściwości domeny w kontekście systemu.
+  rationale: |-
+    To sens wskazany w źródle → Domain requirement określa właściwość domeny w kontekście systemu, która ma zachodzić. → Prawda.
+  rules:
+  - REG-T04-02-03
+  see: N-T04-02
+  truth: true
+- id: '4'
+  text: System requirement musi być zawsze constraint.
+  rationale: |-
+    Odniesienie do systemu nie określa concern → System requirement dotyczy systemu, a ta perspektywa nie narzuca sama przez się rodzaju functional, quality albo constraint. → Fałsz.
+  rules:
+  - REG-T04-02-05
+  see: N-T04-02
+  truth: false
+- id: '5'
+  text: Stakeholder requirement może wyrażać potrzebę osoby niekorzystającej bezpośrednio z systemu.
+  rationale: |-
+    Nie każdy stakeholder jest userem → User requirements wyrażają potrzeby użytkowników i są podzbiorem stakeholder requirements. → Prawda.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  truth: true

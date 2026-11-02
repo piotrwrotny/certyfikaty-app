@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D01
+revision: r1
+format: P
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T07-01
+  aspect: ZAK-T07-01
+family: FAM-T07-01
+sourceAnchor: tools/z1_extensions.py T07-01/D
+stem: |-
+  Sponsor chce usunąć całą walidację, ponieważ jej koszt występuje teraz, a uniknięcie przeróbek może nastąpić dopiero później. Nie oceniono wielkości ryzyka ani korzyści. Które argumenty są uzasadnione?
+options:
+- id: a
+  text: Późniejsza korzyść z definicji ma wartość zero.
+  rationale: |-
+    Podano tylko różnicę czasu, nie brak korzyści → wartość uwzględnia wkład w potrzeby i ryzyko → automatyczne zerowanie nie wynika.
+  rules:
+  - REG-T07-01-02
+  see: N-T07-01
+  correct: false
+- id: b
+  text: Eliminacja kosztu może usunąć także korzyść z ograniczenia ryzyka niespełnienia potrzeb.
+  rationale: Walidacja ma zostać usunięta bez oceny → korzyść i koszt trzeba rozważać razem → argument jest trafny.
+  rules:
+  - REG-T07-01-02
+  see: N-T07-01
+  correct: true
+- id: c
+  text: Źródłowa formuła uwzględnia wyłącznie koszt późniejszego programowania.
+  rationale: |-
+    Pytanie dotyczy wartości wymagania → wymienia koszt pozyskania, dokumentowania, walidacji i zarządzania → argument jest błędny.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: false
+- id: d
+  text: Do decyzji potrzebna jest ocena korzyści względem kosztów pracy RE, a nie samo dążenie do zera nakładu.
+  rationale: |-
+    Wielkości nie zostały ocenione → wymagania są środkiem do wyniku, a saldo decyduje o wartości → argument jest trafny.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: true
+k: 2

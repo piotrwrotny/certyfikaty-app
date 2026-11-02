@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-G01
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T05-01
+  aspect: ZAK-T05-01
+family: FAM-T05-01
+sourceAnchor: tools/z1_extensions.py T05-01/G
+stem: |-
+  Zespół wykonuje wywiady, zapisuje ustalenia, sprawdza ich adekwatność i obsługuje zmiany. Następnie wybiera częstość spotkań i postać artefaktów stosownie do dostępności interesariuszy. Który opis jest trafny?
+options:
+- id: a
+  text: Wybrana aplikacja automatycznie wykonuje wszystkie cztery zadania RE.
+  rationale: Opis wskazuje czynności zespołu → wsparcie narzędziowe nie zastępuje ich wykonania → odpowiedź jest
+    błędna.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  correct: false
+- id: b
+  text: Lista czterech zadań ustanawia jeden obowiązkowy jednorazowy harmonogram.
+  rationale: Dane obejmują wybór organizacji pracy → Syllabus wymaga doboru procesu → uniwersalna sekwencja nie
+    wynika.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  correct: false
+- id: c
+  text: Nazwano główne zadania RE i dostosowano sposób ich realizacji do sytuacji.
+  rationale: Wywiady, zapis, sprawdzenie i zmiany odpowiadają zadaniom → ich proces wymaga tailoring → opis jest
+    poprawny.
+  rules:
+  - REG-KRY-T05-01
+  see: N-T05-01
+  correct: true
+- id: d
+  text: Analiza i rozwiązywanie konfliktów z definicji nie należą do pozyskiwania.
+  rationale: Pytanie dotyczy wykazu Syllabus → zalicza on te czynności do elicitation → zaprzeczenie jest błędne.
+  rules:
+  - REG-T05-01-02
+  see: N-T05-01
+  correct: false

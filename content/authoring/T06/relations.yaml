@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T06-01
+  meaning: Zadanie „wymień zasady” wymaga dziewięciu nazw, nie szczegółowego planu review ani diagramu procesu.
+  from: EX-KRY-T06-01
+- type: counterexample-of
+  to: REG-KRY-T06-01
+  meaning: |-
+    Uogólnienie „to dziewięć etapów w obowiązkowej kolejności” obala równoczesne rozważanie potrzeb, wartości i kontekstu w jednym spotkaniu RE.
+  from: CE-KRY-T06-01
+- type: distinguishes
+  to: REG-KRY-T06-01
+  meaning: |-
+    Oś: nazwa zasady versus jej wyjaśnienie. „Ewolucja” jest etykietą L1; wyjaśnienie przyczyn zmian i potrzeby stabilności to T07/PR07 L2.
+  from: CMP-KRY-T06-01
+- type: explains
+  to: REG-KRY-T06-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T06-01
+- type: variant-of
+  to: T06-B01
+  meaning: Rozpoznanie trzech podzbiorów pełnej listy, nie nowy L2.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T06-01-F01
+- type: variant-of
+  to: T06-B01
+  meaning: Rozpoznanie dwóch zmian naruszających wykaz i jego przekrojowy charakter; odmienny cel niż F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T06-G01
+- type: variant-of
+  to: T06-B01
+  meaning: Rozpoznanie nazw EN w innym grupowaniu; to nie swobodny recall dziewiątki, który pozostaje w open.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T06-D01
+- type: illustrates
+  to: REG-KRY-T06-02
+  meaning: |-
+    Dwie osoby używają jednego terminu „zamknięte”, ale mają na myśli różne stany. Zgodność użytego słowa nie dowodzi wspólnego znaczenia.
+  from: EX-KRY-T06-02
+- type: counterexample-of
+  to: REG-KRY-T06-02
+  meaning: |-
+    Uogólnienie „podpisany dokument automatycznie dowodzi wspólnego rozumienia” obala odmienna interpretacja tego samego podpisanego warunku. Explicit nie gwarantuje trafności wspólnej podstawy.
+  from: CE-KRY-T06-02
+- type: distinguishes
+  to: REG-KRY-T06-02
+  meaning: |-
+    Oś 1: nośnik wspólnej podstawy — zapis/uzgodnienie versus wspólna wiedza. Oś 2: zgodność rzeczywista versus pozorna. To odrębne rozróżnienia. Oś validation/verification: potrzeba versus specyfikacja.
+  from: CMP-KRY-T06-02
+- type: explains
+  to: REG-KRY-T06-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T06-02
+- type: variant-of
+  to: Z1-T06-02-B01
+  meaning: Trzy znaczenia i dwa kontrasty; pełne odtworzenie sześciu terminów pozostaje w source F/RP.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T06-F02
+- type: variant-of
+  to: Z1-T06-02-B01
+  meaning: Rozdzielenie nośnika i trafności na dwóch przypadkach; nie przypisuje prawdziwości samej etykiecie.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T06-G02
+- type: variant-of
+  to: Z1-T06-02-B01
+  meaning: Ocena złożonego błędnego objaśnienia zamiast czterech prostych tez B; otwarte D zachowuje sześć definicji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T06-D02

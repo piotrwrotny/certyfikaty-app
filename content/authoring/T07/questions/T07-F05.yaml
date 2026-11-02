@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F05
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-05
+  aspect: ZAK-T07-05
+family: FAM-T07-05
+sourceAnchor: tools/z1_extensions.py T07-05/F
+stem: |-
+  Klient mówi: „Problemem jest brak aplikacji mobilnej”. Rozmowa pokazuje, że zgłoszenia giną przy przekazaniu między zmianami. Nie przesądzono jeszcze sposobu usunięcia tego stanu. Która interpretacja pomaga w pracy RE?
+options:
+- id: a
+  text: Brak jednej wskazanej technologii musi być jedynym możliwym opisem problemu.
+  rationale: |-
+    Ujawniono zagubione zgłoszenia → stan problemowy różni się od propozycji realizacji → utożsamienie jest błędne.
+  rules:
+  - REG-KRY-T07-05
+  see: N-T07-05
+  correct: false
+- id: b
+  text: Rozważanie aplikacji trzeba zakazać do chwili zakończenia wszystkich wymagań.
+  rationale: |-
+    Zasada dopuszcza wzajemne oddziaływanie → rozdzielenie sensów nie narzuca sztywnej kolejności → zakaz nie wynika.
+  rules:
+  - REG-T07-05-02
+  see: N-T07-05
+  correct: false
+- id: c
+  text: |-
+    Gubienie zgłoszeń to stan problemowy, potrzebna jest zdolność ich zachowania i przekazania, a aplikacja jest jedną z propozycji rozwiązania.
+  rationale: |-
+    W opisie są trzy role → rozdzielenie problemu, potrzebnej zdolności i realizacji ułatwia RE → interpretacja jest trafna.
+  rules:
+  - REG-T07-05-04
+  see: N-T07-05
+  correct: true
+- id: d
+  text: Po wypowiedzeniu nazwy aplikacji potrzeby nie mają już znaczenia.
+  rationale: Rozwiązanie ma służyć potrzebie → propozycja technologii jej nie zastępuje → wniosek jest błędny.
+  rules:
+  - REG-KRY-T07-05
+  see: N-T07-05
+  correct: false

@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T04-G01
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T04-01
+  aspect: ZAK-T04-01
+family: FAM-T04-01
+sourceAnchor: tools/z1_extensions.py T04-01/G
+stem: |-
+  Organizacja chce uzgodnić wymagania dla procedury przyjęcia zwrotu, wykonywanej przez ludzi z użyciem formularza i istniejącego skanera. Nie planuje nowego oprogramowania. Która ocena zakresu RE jest trafna?
+options:
+- id: a
+  text: RE jest wykluczone, dopóki nie zaplanowano nowej aplikacji.
+  rationale: |-
+    Przedmiotem jest procedura z określonym celem → system CPRE nie musi być nowym software → wykluczenie jest błędne.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  correct: false
+- id: b
+  text: RE może dotyczyć tej procedury, ponieważ wymagania mogą odnosić się do różnych rodzajów systemów.
+  rationale: |-
+    Wskazano celową procedurę z ludźmi i urządzeniem → szeroki zakres RE obejmuje taki przedmiot → ocena jest poprawna.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  correct: true
+- id: c
+  text: Obecność skanera oznacza, że wolno rozpatrywać wyłącznie jego kod.
+  rationale: |-
+    Opis dotyczy szerszej procedury → składnik techniczny nie usuwa elementów organizacyjnych → zawężenie nie wynika.
+  rules:
+  - REG-T04-01-02
+  see: N-T04-01
+  correct: false
+- id: d
+  text: Wszystkie wymagania procedury muszą być z tego powodu constraint.
+  rationale: Pytanie dotyczy przedmiotu RE → skład systemu nie wyznacza rodzaju każdego oczekiwania → odpowiedź
+    myli osie.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  correct: false

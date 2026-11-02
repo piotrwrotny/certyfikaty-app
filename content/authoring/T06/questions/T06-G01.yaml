@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T06-G01
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T06-01
+  aspect: ZAK-T06-01
+family: FAM-T06-01
+sourceAnchor: tools/z1_extensions.py T06-01/G
+stem: |-
+  Redaktor chce dopisać do listy zasad „maksymalizację liczby stron” i uznać kolejność listy za obowiązkowy plan etapów projektu. Która korekta jest trafna?
+options:
+- id: a
+  text: Wystarczy uznać maksymalizację stron za alternatywną nazwę innowacji.
+  rationale: Zmieniono znaczenie nazwy → taka pozycja nie występuje w źródłowym wykazie → korekta jest błędna.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: false
+- id: b
+  text: Zachować dziewięć źródłowych nazw, a ich kolejności nie interpretować jako obowiązkowych faz procesu.
+  rationale: |-
+    Propozycja zmienia wykaz i jego funkcję → zasady są przekrojową podstawą zadań i praktyk → korekta jest trafna.
+  rules:
+  - REG-T06-01-02
+  see: N-T06-01
+  correct: true
+- id: c
+  text: Dopisać dziesiątą nazwę, jeżeli edytor pozwala utworzyć dziesięć rekordów.
+  rationale: |-
+    Możliwość narzędzia nie zmienia wykazu Syllabus → dziesiąta pozycja nie jest zasadą źródłową → korekta jest błędna.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: false
+- id: d
+  text: Usunąć walidację, bo jest także nazwą zadania RE.
+  rationale: Termin może nazywać zadanie i zasadę → walidacja pozostaje w dziewiątce → korekta jest błędna.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: false

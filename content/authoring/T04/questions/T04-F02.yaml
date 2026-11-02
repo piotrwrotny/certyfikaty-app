@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T04-F02
+revision: r1
+format: P
+role: follow-up-1
+weight: 3
+scope:
+  criterion: KRY-T04-02
+  aspect: ZAK-T04-02
+family: FAM-T04-02
+sourceAnchor: tools/z1_extensions.py T04-02/F
+stem: |-
+  W notatce rozróżniono cel organizacji, potrzebę osoby korzystającej z systemu oraz właściwość domeny, która ma zachodzić. Które przyporządkowania nazw są poprawne?
+options:
+- id: a
+  text: Cel organizacji można opisać jako business requirement.
+  rationale: Przedmiotem jest cel organizacji → to znaczenie business requirement → przyporządkowanie jest trafne.
+  rules:
+  - REG-T04-02-02
+  see: N-T04-02
+  correct: true
+- id: b
+  text: Każda potrzeba użytkownika jest wyłącznie constraint i nie jest potrzebą interesariusza.
+  rationale: |-
+    Podano perspektywę korzystającej osoby → user należy do stakeholder, a perspektywa nie narzuca constraint → odpowiedź jest błędna.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  correct: false
+- id: c
+  text: Potrzeba osoby korzystającej z systemu może być user requirement.
+  rationale: Opis dotyczy użytkownika → nazwa user requirement wyraża taką perspektywę → przyporządkowanie jest
+    trafne.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  correct: true
+- id: d
+  text: Właściwość domeny musi oznaczać wewnętrzny algorytm programu.
+  rationale: Opis dotyczy warunku domeny → domain requirement nie jest z definicji algorytmem → zawężenie jest błędne.
+  rules:
+  - REG-T04-02-03
+  see: N-T04-02
+  correct: false
+- id: e
+  text: Właściwość domeny mająca zachodzić może być domain requirement.
+  rationale: Wskazano wymagany stan domeny → odpowiada znaczeniu domain requirement → przyporządkowanie jest trafne.
+  rules:
+  - REG-T04-02-03
+  see: N-T04-02
+  correct: true
+k: 3

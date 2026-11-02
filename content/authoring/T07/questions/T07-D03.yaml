@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D03
+revision: r1
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T07-03
+  aspect: ZAK-T07-03
+family: FAM-T07-03
+sourceAnchor: tools/z1_extensions.py T07-03/D
+stem: |-
+  W małym, doświadczonym zespole wszyscy niezależnie przewidzieli jednakowy wynik jednego uzgodnionego przypadku. Kierownik ogłasza, że wymagania są przez to kompletne i nie trzeba już feedbacku. Która ocena jest trafna?
+options:
+- id: a
+  text: Doświadczenie dowodzi, że nie mogą istnieć żadne pominięte potrzeby.
+  rationale: |-
+    Zgodność dotyczy jednego przypadku → nawet dobre shared understanding nie dowodzi kompletności → wniosek jest zbyt mocny.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: false
+- id: b
+  text: |-
+    Zgodność jest pomocną przesłanką wspólnego rozumienia tego przypadku, lecz nie dowodzi kompletności wszystkich wymagań.
+  rationale: |-
+    Podano ograniczony wspólny wynik → ważne wymagania mogły nie zostać rozważone → ocena zachowuje granicę dowodu.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: true
+- id: c
+  text: Wspólna wiedza nie może nigdy być podstawą shared understanding.
+  rationale: Zespół ma wspólną wiedzę → może to być podstawa implicit → zakaz jest błędny.
+  rules:
+  - REG-T07-03-02
+  see: N-T07-03
+  correct: false
+- id: d
+  text: Każde kolejne pytanie o przykład unieważniłoby wcześniejszą zgodę.
+  rationale: |-
+    Sprawdzanie interpretacji podtrzymuje wspólną podstawę → feedback nie jest z definicji unieważnieniem → twierdzenie jest błędne.
+  rules:
+  - REG-T07-03-05
+  see: N-T07-03
+  correct: false

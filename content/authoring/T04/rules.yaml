@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T04-01
+  revision: r2
+  statement: |-
+    RE może dotyczyć dowolnego rodzaju systemu, chociaż dominującym zastosowaniem są systemy z ważną rolą oprogramowania.
+  sources:
+  - source: SRC-T04-SEN
+    location: §1.3; fizyczne strony PDF 12
+  - source: SRC-T04-SPL
+    location: §1.3; fizyczne strony PDF 12
+- id: REG-T04-01-02
+  revision: r1
+  statement: Systemy, w których istotne jest oprogramowanie, mogą obejmować także składniki fizyczne i organizacyjne.
+  sources:
+  - source: SRC-T04-SEN
+    location: §1.3; fizyczne strony PDF 12
+  - source: SRC-T04-SPL
+    location: §1.3; fizyczne strony PDF 12
+- id: REG-T04-01-03
+  revision: r1
+  statement: System z oprogramowaniem i elementami fizycznymi może być określany jako cyberfizyczny.
+  sources:
+  - source: SRC-T04-GPL
+    location: Hasła System, uwaga 3; fizyczne strony PDF 29
+- id: REG-T04-01-04
+  revision: r1
+  statement: Potrzeba systematycznego RE nie zależy od wybrania liniowego procesu wytwarzania.
+  sources:
+  - source: SRC-T04-SEN
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  - source: SRC-T04-SPL
+    location: §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+- id: REG-KRY-T04-02
+  revision: r2
+  statement: |-
+    Syllabus wyróżnia perspektywy system requirements, stakeholder requirements, user requirements, domain requirements i business requirements.
+  sources:
+  - source: SRC-T04-SEN
+    location: §1.3, Requirements can occur as; fizyczne strony PDF 12
+  - source: SRC-T04-SPL
+    location: §1.3, Requirements can occur as; fizyczne strony PDF 12
+- id: REG-T04-02-02
+  revision: r1
+  statement: Business requirement wyraża cel, zamierzenie lub potrzebę organizacji.
+  sources:
+  - source: SRC-T04-GPL
+    location: Hasła Business requirement; fizyczne strony PDF 33
+- id: REG-T04-02-03
+  revision: r1
+  statement: Domain requirement określa właściwość domeny w kontekście systemu, która ma zachodzić.
+  sources:
+  - source: SRC-T04-GPL
+    location: Hasła Domain requirement; fizyczne strony PDF 33
+- id: REG-T04-02-04
+  revision: r1
+  statement: User requirements wyrażają potrzeby użytkowników i są podzbiorem stakeholder requirements.
+  sources:
+  - source: SRC-T04-GPL
+    location: Hasła User requirement; Stakeholder requirement; fizyczne strony PDF 34
+- id: REG-T04-02-05
+  revision: r1
+  statement: |-
+    System requirement dotyczy systemu, a ta perspektywa nie narzuca sama przez się rodzaju functional, quality albo constraint.
+  sources:
+  - source: SRC-T04-GPL
+    location: Hasła System requirement; Kind of requirement; fizyczne strony PDF 25, 34

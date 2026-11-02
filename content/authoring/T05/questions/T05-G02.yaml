@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-G02
+revision: r1
+format: P
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T05-02
+  aspect: ZAK-T05-02
+family: FAM-T05-02
+sourceAnchor: tools/z1_extensions.py T05-02/G
+stem: |-
+  Analityczka pozyskuje i dokumentuje wymagania, a deweloper z interesariuszami sprawdza ich znaczenie. Oboje mają pogłębioną wiedzę RE i łączą problem z potencjalnymi rozwiązaniami. Nie istnieje osobny etat Requirements Engineer. Które wnioski są uzasadnione?
+options:
+- id: a
+  text: Brak tego etatu wyklucza pełnienie roli przez obie osoby.
+  rationale: Obowiązki i wiedza zostały podane → rola nie wymaga nazwy etatu → wniosek jest błędny.
+  rules:
+  - REG-KRY-T05-02
+  see: N-T05-02
+  correct: false
+- id: b
+  text: Podział obowiązków może realizować rolę RE przez osoby o innych stanowiskach.
+  rationale: |-
+    Opis zawiera czynności, wiedzę i most problem–rozwiązania → charakterystyka może być spełniona bez osobnego etatu → wniosek jest trafny.
+  rules:
+  - REG-T05-02-02
+  see: N-T05-02
+  correct: true
+- id: c
+  text: Sam tytuł analityczka poświadczałby całą kompetencję także bez tych danych.
+  rationale: |-
+    Dane o czynnościach i wiedzy są istotne → nazwa stanowiska nie zastępuje charakterystyki → wniosek jest nieuprawniony.
+  rules:
+  - REG-T05-02-02
+  see: N-T05-02
+  correct: false
+- id: d
+  text: Programista nie jest z definicji wyłączony z roli Requirements Engineer.
+  rationale: Podano dewelopera wykonującego część zadań → Syllabus dopuszcza programistów w tej roli → wniosek jest
+    trafny.
+  rules:
+  - REG-T05-02-03
+  see: N-T05-02
+  correct: true
+k: 2

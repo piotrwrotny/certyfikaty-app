@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-09-B01
+revision: r2
+format: K
+role: base
+weight: 2
+scope:
+  criterion: KRY-T07-09
+  aspect: ZAK-T07-09
+family: FAM-T07-09
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-09-B01
+stem: Oceń argumenty dotyczące systematycznego RE.
+options:
+- id: '1'
+  text: Zwinny proces wytwarzania usuwa potrzebę walidacji i zarządzania wymaganiami.
+  rationale: |-
+    Proces agile nie znosi głównych zadań RE → Systematyczne pozyskiwanie, dokumentowanie, walidowanie i zarządzanie wymaganiami jest potrzebne niezależnie od procesu wytwarzania systemu. → Fałsz.
+  rules:
+  - REG-KRY-T07-09
+  see: N-T07-09
+  truth: false
+- id: '2'
+  text: Praktyki trzeba dobrać do problemu, kontekstu i środowiska.
+  rationale: |-
+    To istota dostosowania w zasadzie → Procesy, praktyki i artefakty RE należy dobierać do danego problemu, kontekstu i środowiska. → Prawda.
+  rules:
+  - REG-T07-09-03
+  see: N-T07-09
+  truth: true
+- id: '3'
+  text: Proces sprawdzony wcześniej można zawsze kopiować bez refleksji.
+  rationale: |-
+    Źródło wyraźnie wymaga refleksji nad reuse → Ponowne użycie procesu z udanej wcześniejszej pracy RE wymaga refleksji nad dopasowaniem do nowej sytuacji. → Fałsz.
+  rules:
+  - REG-T07-09-04
+  see: N-T07-09
+  truth: false
+- id: '4'
+  text: Lekka dokumentacja może współistnieć z systematyczną pracą.
+  rationale: |-
+    Dyscyplina nie oznacza maksymalnej objętości; ważny odpowiedni sposób pracy → Procesy, praktyki i artefakty RE należy dobierać do danego problemu, kontekstu i środowiska. → Prawda.
+  rules:
+  - REG-T07-09-03
+  see: N-T07-09
+  truth: true

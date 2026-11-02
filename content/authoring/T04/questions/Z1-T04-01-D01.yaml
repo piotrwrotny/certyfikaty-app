@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T04-01-D01
+revision: r2
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T04-01
+  aspect: ZAK-T04-01
+family: FAM-T04-01
+sourceAnchor: references/content/T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md § Z1-T04-01-D01
+stem: Który wniosek wynika z obecności ludzi i procedur w systemie usługi?
+options:
+- id: a
+  text: Wszystkie wymagania tej usługi są constraint.
+  rationale: |-
+    Skład systemu nie określa typu każdego wymagania → RE może dotyczyć dowolnego rodzaju systemu, chociaż dominującym zastosowaniem są systemy z ważną rolą oprogramowania. → nie wybrać.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  correct: false
+- id: b
+  text: Nie może wystąpić żaden komponent fizyczny.
+  rationale: |-
+    Ludzie/procedury nie wykluczają sprzętu → Systemy, w których istotne jest oprogramowanie, mogą obejmować także składniki fizyczne i organizacyjne. → nie wybrać.
+  rules:
+  - REG-T04-01-02
+  see: N-T04-01
+  correct: false
+- id: c
+  text: Wymagania mogą dotyczyć szerszej całości niż sam program.
+  rationale: |-
+    Skład socjotechniczny poszerza przedmiot analizy → Systemy, w których istotne jest oprogramowanie, mogą obejmować także składniki fizyczne i organizacyjne. → wybrać.
+  rules:
+  - REG-T04-01-02
+  see: N-T04-01
+  correct: true
+- id: d
+  text: RE staje się niedozwolone.
+  rationale: |-
+    Elementy organizacyjne nie wyłączają RE → RE może dotyczyć dowolnego rodzaju systemu, chociaż dominującym zastosowaniem są systemy z ważną rolą oprogramowania. → nie wybrać.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  correct: false

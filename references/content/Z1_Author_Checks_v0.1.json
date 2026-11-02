@@ -1,0 +1,20 @@
+{
+  "new_tasks": 75,
+  "new_closed": 39,
+  "new_open_variants": 36,
+  "new_retrieval": 25,
+  "new_rationale": 154,
+  "new_synthetic_vectors": 224,
+  "arithmetic_states": 3952,
+  "independent_reviews": 0,
+  "reused_closed": 6,
+  "reused_open": 5,
+  "reused_rationale": 26,
+  "reused_vectors": 30,
+  "gates": {
+    "G1": "accepted R06",
+    "G2": "open",
+    "G3": "open",
+    "G4": "open"
+  }
+}

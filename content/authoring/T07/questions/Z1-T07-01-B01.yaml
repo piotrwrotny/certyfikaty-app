@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-01-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T07-01
+  aspect: ZAK-T07-01
+family: FAM-T07-01
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-01-B01
+stem: |-
+  Analityk chce rozbudować opis mało ryzykownego parametru o dwadzieścia stron, choć zespół rozumie go jednakowo i dodatkowy opis nie zmieni żadnej decyzji. Który argument najlepiej stosuje zasadę wartości?
+options:
+- id: a
+  text: O wartości decyduje wyłącznie koszt zakupu edytora.
+  rationale: |-
+    Koszt pracy RE i korzyści są szersze niż nośnik → Wartość wymagania jest równa jego korzyści pomniejszonej o koszt pozyskania, dokumentowania, walidacji i zarządzania tym wymaganiem. → nie wybrać.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: false
+- id: b
+  text: Więcej stron zawsze zwiększa wartość wymagania.
+  rationale: |-
+    Nie wskazano dodatkowej korzyści; sama objętość nie jest celem → Wymagania są środkiem do celu, więc sama liczba stron dokumentacji nie określa ich wartości. → nie wybrać.
+  rules:
+  - REG-T07-01-03
+  see: N-T07-01
+  correct: false
+- id: c
+  text: Warto rozważyć, czy dodatkowy koszt dokumentowania przyniesie korzyść dla potrzeb lub kontroli ryzyka.
+  rationale: Opis mówi o koszcie bez wykazanej korzyści → trzeba ocenić saldo, nie liczbę stron → wybrać.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: true
+- id: d
+  text: Każde dokumentowanie należy wyeliminować.
+  rationale: |-
+    Jedna nieopłacalna rozbudowa nie unieważnia korzyści dokumentacji w innych warunkach → Korzyść wymagania zależy od wkładu w zaspokojenie potrzeb interesariuszy oraz ograniczenie ryzyka niepowodzenia i kosztownych przeróbek. → nie wybrać.
+  rules:
+  - REG-T07-01-02
+  see: N-T07-01
+  correct: false

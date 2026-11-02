@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T01-04-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T01-04
+  aspect: ZAK-T01-04
+family: FAM-T01-04
+sourceAnchor: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-04-F01
+stem: Oceń twierdzenia o analizowanym module i usłudze.
+options:
+- id: '1'
+  text: Komponent rozpatrywany w izolacji może być traktowany jako system.
+  rationale: |-
+    Zmiana przedmiotu analizy pozwala rozpatrywać komponent jako całość → System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system. → Prawda.
+  rules:
+  - REG-T01-04-03
+  see: N-T01-04
+  truth: true
+- id: '2'
+  text: Usługa z urządzeniami i procedurami nie może być przedmiotem RE.
+  rationale: |-
+    Syllabus obejmuje usługi i procedury → W CPRE pojęcie system obejmuje także produkty, usługi, urządzenia, procedury oraz komponenty i złożenia systemów. → Fałsz.
+  rules:
+  - REG-T01-04-02
+  see: N-T01-04
+  truth: false
+- id: '3'
+  text: Przyjęta perspektywa analizy powinna być rozpoznawalna.
+  rationale: |-
+    Bez określenia analizowanej całości termin system byłby niejednoznaczny → System może zawierać podsystemy, a komponent może sam być rozpatrywany jako analizowany system. → Prawda; interpretacja warunku użycia definicji.
+  rules:
+  - REG-T01-04-03
+  see: N-T01-04
+  truth: true

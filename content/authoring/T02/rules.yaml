@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T02-01
+  revision: r2
+  statement: |-
+    Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1; fizyczne strony PDF 11–12
+  - source: SRC-T02-SPL
+    location: §1.1; fizyczne strony PDF 11–12
+  - source: SRC-T02-GPL
+    location: Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34
+- id: REG-T02-01-02
+  revision: r1
+  statement: |-
+    Functional requirement określa wynik lub zachowanie dostarczane przez funkcję systemu, w tym dane albo interakcję z otoczeniem.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1, Functional requirements; fizyczne strony PDF 11
+  - source: SRC-T02-SPL
+    location: §1.1, Functional requirements; fizyczne strony PDF 11
+  - source: SRC-T02-GPL
+    location: Hasła Functional requirement; fizyczne strony PDF 34
+- id: REG-T02-01-03
+  revision: r1
+  statement: |-
+    Quality requirement dotyczy zagadnienia jakości nieobjętego wymaganiem funkcjonalnym, na przykład wydajności lub dostępności.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1, Quality requirements; fizyczne strony PDF 11
+  - source: SRC-T02-SPL
+    location: §1.1, Quality requirements; fizyczne strony PDF 11
+  - source: SRC-T02-GPL
+    location: Hasła Quality requirement; Performance requirement; fizyczne strony PDF 34
+- id: REG-T02-01-04
+  revision: r1
+  statement: |-
+    Constraint ogranicza przestrzeń rozwiązania ponad to, co jest konieczne do spełnienia danych wymagań funkcjonalnych i jakościowych.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1, Constraints; fizyczne strony PDF 12
+  - source: SRC-T02-SPL
+    location: §1.1, Constraints; fizyczne strony PDF 12
+  - source: SRC-T02-GPL
+    location: Hasła Constraint / Ograniczenie w IW; fizyczne strony PDF 21
+- id: REG-T02-01-05
+  revision: r1
+  statement: Wymagania bezpieczeństwa mogą być wyrażone jako wymagania jakościowe lub jako wymagania funkcjonalne.
+  sources:
+  - source: SRC-T02-GPL
+    location: Hasła Security / Zabezpieczenia, uwaga; fizyczne strony PDF 35
+- id: REG-KRY-T02-02
+  revision: r2
+  statement: Non-functional requirement w Glossary IREB oznacza quality requirement albo constraint.
+  sources:
+  - source: SRC-T02-GPL
+    location: Hasła Non-functional requirement; fizyczne strony PDF 34
+- id: REG-T02-02-02
+  revision: r1
+  statement: Performance requirement jest w przyjętym Glossary podkategorią quality requirement.
+  sources:
+  - source: SRC-T02-GPL
+    location: Hasła Performance requirement; Non-functional requirement, uwaga; fizyczne strony PDF 34
+- id: REG-T02-02-03
+  revision: r1
+  statement: |-
+    Rodzaj oczekiwania i jakość jego zapisu są odrębnymi osiami oceny, więc jednoznaczny zapis funkcji nie staje się przez to quality requirement.
+  sources:
+  - source: SRC-T02-GPL
+    location: Hasła Functional requirement; Quality requirement; Quality criteria in RE; fizyczne strony PDF 17,
+      34
+- id: REG-T02-02-04
+  revision: r1
+  statement: Perspektywa user requirement nie wyklucza typu quality requirement ani functional requirement.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1 i §1.3; fizyczne strony PDF 11–12
+  - source: SRC-T02-SPL
+    location: §1.1 i §1.3; fizyczne strony PDF 11–12
+  - source: SRC-T02-GPL
+    location: Hasła User requirement; Functional requirement; Quality requirement; fizyczne strony PDF 34
+- id: REG-P1
+  revision: r2
+  statement: |-
+    Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania.
+  sources:
+  - source: SRC-T02-SEN
+    location: §1.1; fizyczne strony PDF 11–12
+  - source: SRC-T02-SPL
+    location: §1.1; fizyczne strony PDF 11–12
+  - source: SRC-T02-GPL
+    location: Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34

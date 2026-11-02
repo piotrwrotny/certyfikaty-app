@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D09
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-09
+  aspect: ZAK-T07-09
+family: FAM-T07-09
+sourceAnchor: tools/z1_extensions.py T07-09/D
+stem: |-
+  Dwa zespoły mają różne ryzyka i dostępność interesariuszy. Jeden chce ciężkiego szablonu dla każdego przypadku, drugi tylko spontanicznych rozmów bez sprawdzania ustaleń. Które argumenty poprawnie stosują zasadę systematycznej pracy?
+options:
+- id: a
+  text: Oba zespoły potrzebują odpowiednich praktyk pozyskiwania, dokumentowania, walidacji i zarządzania.
+  rationale: Różnica kontekstu nie usuwa zadań RE → zasada obowiązuje niezależnie od procesu → argument jest trafny.
+  rules:
+  - REG-KRY-T07-09
+  see: N-T07-09
+  correct: true
+- id: b
+  text: Najcięższy szablon z definicji jest najlepszy w każdej sytuacji.
+  rationale: Sytuacje mają różne potrzeby → nie istnieje uniwersalny proces lub praktyka → argument jest błędny.
+  rules:
+  - REG-T07-09-02
+  see: N-T07-09
+  correct: false
+- id: c
+  text: Praktyki i artefakty należy dobrać do problemu, kontekstu i środowiska obu zespołów.
+  rationale: Podano różne warunki → właściwe dopasowanie jest częścią dyscypliny → argument jest trafny.
+  rules:
+  - REG-T07-09-03
+  see: N-T07-09
+  correct: true
+- id: d
+  text: Nazwa agile pozwala zrezygnować z walidacji bez rozważenia potrzeb.
+  rationale: Proces nie jest wyjątkiem od zadań RE → sam szyld nie uzasadnia pominięcia sprawdzenia → argument jest
+    błędny.
+  rules:
+  - REG-KRY-T07-09
+  see: N-T07-09
+  correct: false
+- id: e
+  text: Dawne praktyki można zachować po refleksji nad ich dopasowaniem do nowej sytuacji.
+  rationale: Mowa o ponownym użyciu → zasada wymaga refleksji, nie automatycznej kopii → argument jest trafny.
+  rules:
+  - REG-T07-09-04
+  see: N-T07-09
+  correct: true
+k: 3

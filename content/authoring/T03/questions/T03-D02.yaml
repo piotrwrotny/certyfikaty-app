@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T03-D02
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T03-02
+  aspect: ZAK-T03-02
+family: FAM-T03-02
+sourceAnchor: tools/z1_extensions.py T03-02/D
+stem: |-
+  Po przeglądzie znaleziono brakujące, niejasne i nieprawidłowe wymagania. Które pozycje należą do wskazanych w Syllabus możliwych przyczyn takich niedostatków?
+options:
+- id: a
+  text: Pośpieszne przejście od razu do budowania systemu.
+  rationale: Wskazano mechanizm pośpiechu → znajduje się na liście przyczyn niedostatków RE → pozycja jest poprawna.
+  rules:
+  - REG-T03-02-02
+  see: N-T03-02
+  correct: true
+- id: b
+  text: Samo stwierdzenie, że wymaganie jest niejasne.
+  rationale: Pozycja opisuje stan wymagania → niejasność jest symptomem, nie wskazaną tu przyczyną → nie należy
+    do klucza.
+  rules:
+  - REG-KRY-T03-02
+  see: N-T03-02
+  correct: false
+- id: c
+  text: Problemy komunikacyjne między zaangażowanymi stronami.
+  rationale: Pozycja dotyczy komunikacji → Syllabus wymienia ten mechanizm wśród przyczyn → należy do klucza.
+  rules:
+  - REG-T03-02-02
+  see: N-T03-02
+  correct: true
+- id: d
+  text: Założenie, że wymagania są oczywiste.
+  rationale: Podano założenie zastępujące wyjaśnianie → jest wymienioną przyczyną niedostatków → należy do klucza.
+  rules:
+  - REG-T03-02-02
+  see: N-T03-02
+  correct: true
+- id: e
+  text: Niewystarczająca edukacja i umiejętności RE.
+  rationale: Pozycja dotyczy przygotowania do RE → należy do źródłowego wykazu przyczyn → należy do klucza.
+  rules:
+  - REG-T03-02-02
+  see: N-T03-02
+  correct: true
+k: 4

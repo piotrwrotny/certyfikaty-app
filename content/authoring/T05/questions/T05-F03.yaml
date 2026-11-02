@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-F03
+revision: r1
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T05-03
+  aspect: ZAK-T05-03
+family: FAM-T05-03
+sourceAnchor: tools/z1_extensions.py T05-03/F
+stem: Oceń przyporządkowania do podstawowego zakresu nauki RE i rozwinięcia z Handbook.
+options:
+- id: '1'
+  text: Zasady, dokumentowanie i opracowywanie wymagań należą do zakresu nauki.
+  rationale: Te trzy obszary wskazano w §1.6 → stanowią część sześciu obszarów → Prawda.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  truth: true
+- id: '2'
+  text: Procesy, zarządzanie i wsparcie narzędziowe uzupełniają wskazany zakres.
+  rationale: To pozostałe obszary EU5–EU7 → wraz z wcześniejszymi tworzą pełną szóstkę → Prawda.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  truth: true
+- id: '3'
+  text: Biegłość w jednym edytorze wyczerpuje wszystkie sześć obszarów.
+  rationale: Edytor dotyczy fragmentu narzędzi → nie zastępuje pozostałych obszarów → Fałsz.
+  rules:
+  - REG-T05-03-02
+  see: N-T05-03
+  truth: false
+- id: '4'
+  text: Słuchanie i moderowanie są przykładami umiejętności interpersonalnych wymienionych w Handbook.
+  rationale: Obie umiejętności występują w §1.6 Handbook → rozpoznanie tej listy jest poprawne → Prawda.
+  rules:
+  - REG-T05-03-03
+  see: N-T05-03
+  truth: true

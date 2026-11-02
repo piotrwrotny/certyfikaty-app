@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T03-G02
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T03-02
+  aspect: ZAK-T03-02
+family: FAM-T03-02
+sourceAnchor: tools/z1_extensions.py T03-02/G
+stem: |-
+  W opisie systemu w ogóle nie uwzględniono wymaganego wyjątku obsługi. Nie podano, jak prowadzono rozmowy ani jakie szkolenia odbył autor. Który wniosek jest uzasadniony?
+options:
+- id: a
+  text: Na pewno jedyną przyczyną jest brak szkolenia autora.
+  rationale: |-
+    Nie podano danych o przygotowaniu → lista możliwych przyczyn nie wskazuje jednej pewnej → diagnoza jest nieuprawniona.
+  rules:
+  - REG-T03-02-03
+  see: N-T03-02
+  correct: false
+- id: b
+  text: Opis ilustruje brakujące wymaganie, ale nie ustala jednej konkretnej przyczyny pominięcia.
+  rationale: |-
+    Wyjątek pominięto, a danych o przyczynie brak → można nazwać symptom bez pewnej diagnozy → wniosek jest poprawny.
+  rules:
+  - REG-KRY-T03-02
+  see: N-T03-02
+  correct: true
+- id: c
+  text: Każde brakujące wymaganie dowodzi celowego pominięcia przez programistę.
+  rationale: Podano tylko brak wyjątku → symptom nie dowodzi zamiaru ani konkretnego sprawcy → wniosek jest nieuzasadniony.
+  rules:
+  - REG-T03-02-03
+  see: N-T03-02
+  correct: false
+- id: d
+  text: Brak wyjątku nie może należeć do symptomów wymienionych w Syllabus.
+  rationale: Wymagane zachowanie nie zostało uwzględnione → to brakujące wymaganie → zaprzeczenie jest błędne.
+  rules:
+  - REG-KRY-T03-02
+  see: N-T03-02
+  correct: false

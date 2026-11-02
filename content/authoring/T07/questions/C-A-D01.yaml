@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-A-D01
+revision: r2
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-A01
+  aspect: ZAK-T07-C-A01
+family: FAM-C-A2
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-A-D01
+stem: |-
+  Przedmiotem analizy jest aplikacja ewidencji palet, instalowana na istniejących terminalach. Sprzęt i organizacja stanowisk pozostają poza tą aplikacją i nie będą zmieniane. Na stanowisku obowiązkowo używa się grubych rękawic, co utrudnia trafianie w małe elementy dotykowe. Projekt może zmienić wielkość i odstępy przycisków aplikacji.
+
+  Który wniosek jest właściwy dla analizy wymagań?
+options:
+- id: a
+  text: Rękawice są poza kontekstem aplikacji, ponieważ nie przekazują danych przez API.
+  rationale: Podano fizyczny wpływ na obsługę → znaczenie kontekstu nie wymaga API → wykluczenie jest nieuzasadnione
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: b
+  text: Używanie rękawic staje się częścią aplikacji, ponieważ wpływa na jej obsługę.
+  rationale: |-
+    Rękawice należą do zewnętrznych warunków pracy → istotność nie oznacza przynależności do aplikacji → wniosek błędny w tej perspektywie
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: c
+  text: Warunki obsługi w rękawicach są istotnym kontekstem mimo braku ich zmiany.
+  rationale: |-
+    Sposób obsługi wpływa na wymagane elementy interakcji, a warunek pozostaje zewnętrzny → należy go uwzględnić mimo braku zmiany → wybór poprawny
+  rules:
+  - REG-A1
+  - REG-KRY-T07-04
+  see: N-T07-C-A01
+  correct: true
+- id: d
+  text: Wymagania obsługi można określić bez rękawic, skoro projekt zmienia tylko aplikację.
+  rationale: |-
+    Zmieniana aplikacja ma działać w opisanych warunkach → zakres zmian nie znosi wpływu otoczenia → pominięcie warunku byłoby błędem
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false

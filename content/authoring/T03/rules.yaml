@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T03-01
+  revision: r2
+  statement: |-
+    Właściwe RE może ograniczać ryzyko niewłaściwego systemu, poprawiać rozumienie problemu oraz dostarczać podstaw szacowania nakładu i kosztu oraz testowania.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, Adequate RE adds value; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, Adequate RE adds value; fizyczne strony PDF 12
+- id: REG-T03-01-02
+  revision: r1
+  statement: Wymagania dostarczają podstawy estymacji pracy i kosztu, a nie gwarancji trafności każdego oszacowania.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, Basis for estimating; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, Basis for estimating; fizyczne strony PDF 12
+  - source: SRC-T03-HEN
+    location: §1.2; fizyczne strony PDF 12–13
+- id: REG-T03-01-03
+  revision: r1
+  statement: Wymagania określające oczekiwany system są podstawą testowania, a nie gwarancją braku defektów implementacji.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, Prerequisite for testing; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, Prerequisite for testing; fizyczne strony PDF 12
+  - source: SRC-T03-HEN
+    location: §1.2; fizyczne strony PDF 12–13
+- id: REG-T03-01-04
+  revision: r1
+  statement: |-
+    Lepsze zrozumienie problemu pomaga ograniczać ryzyko wytwarzania systemu, który nie zaspokoi potrzeb interesariuszy.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.1–1.2; fizyczne strony PDF 11–12
+  - source: SRC-T03-SPL
+    location: §1.1–1.2; fizyczne strony PDF 11–12
+- id: REG-KRY-T03-02
+  revision: r2
+  statement: Typowymi symptomami niewłaściwego RE są wymagania brakujące, niejasne lub nieprawidłowe.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, Typical symptoms; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, Typical symptoms; fizyczne strony PDF 12
+- id: REG-T03-02-02
+  revision: r1
+  statement: |-
+    Syllabus wskazuje pośpiech do budowania, problemy komunikacji, założenie oczywistości wymagań oraz niewystarczającą edukację i umiejętności RE jako przyczyny jego niedostatków.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, This is particularly due to; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, This is particularly due to; fizyczne strony PDF 12
+- id: REG-T03-02-03
+  revision: r1
+  statement: |-
+    Wymienienie kilku możliwych przyczyn niedostatków RE nie pozwala ustalić jednej pewnej przyczyny z samego objawu niejasnego wymagania.
+  sources:
+  - source: SRC-T03-SEN
+    location: §1.2, Symptoms and causes; fizyczne strony PDF 12
+  - source: SRC-T03-SPL
+    location: §1.2, Symptoms and causes; fizyczne strony PDF 12

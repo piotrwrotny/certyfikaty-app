@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D06
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-06
+  aspect: ZAK-T07-06
+family: FAM-T07-06
+sourceAnchor: tools/z1_extensions.py T07-06/D
+stem: |-
+  Przegląd wykazał, że wymaganie jest poprawne językowo i zgodne z szablonem. Nie sprawdzono, czy obejmuje potrzebę osób, których dotyczy, ani czy zewnętrzny dostawca zapewnia założone dane. Które argumenty są właściwe?
+options:
+- id: a
+  text: Kontrola formy nie wystarcza do potwierdzenia dopasowania do potrzeb.
+  rationale: Przegląd dotyczył zapisu → validation ma punkt odniesienia w potrzebach → argument jest trafny.
+  rules:
+  - REG-T07-06-03
+  see: N-T07-06
+  correct: true
+- id: b
+  text: Zgodność z szablonem automatycznie potwierdza rozsądność założenia dostawcy.
+  rationale: Danych dostawcy nie sprawdzono → forma nie ustala warunków otoczenia → argument jest błędny.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  correct: false
+- id: c
+  text: Należy sprawdzić porozumienie właściwych interesariuszy i adekwatne pokrycie ich potrzeb.
+  rationale: Brakuje sprawdzenia wobec osób → to dwa aspekty źródłowej walidacji → argument jest trafny.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  correct: true
+- id: d
+  text: Pracę nad potrzebami trzeba odłożyć do czasu wdrożenia, ponieważ tekst jest już poprawny.
+  rationale: Ryzyko nieadekwatności pozostaje → zasada wymaga początku walidacji w RE → argument jest błędny.
+  rules:
+  - REG-KRY-T07-06
+  see: N-T07-06
+  correct: false
+- id: e
+  text: Trzeba ocenić rozsądność założenia o danych już podczas RE.
+  rationale: Założenie dostawcy jest niepotwierdzone → kontrola kontekstu należy do walidacji → argument jest trafny.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  correct: true
+k: 3

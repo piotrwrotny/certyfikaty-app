@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D04
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-04
+  aspect: ZAK-T07-04
+family: FAM-T07-04
+sourceAnchor: tools/z1_extensions.py T07-04/D
+stem: |-
+  Sortownia ma kierować rzeczywiście ciężkie przesyłki do obsługi ręcznej. Aplikacja obserwuje jedynie wynik z oddzielnej, niezmienianej wagi. Waga bywa błędnie wyzerowana. Zewnętrzną procedurę jej przygotowania można przeprojektować. Które argumenty są uzasadnione?
+options:
+- id: a
+  text: Warunek poprawnego przygotowania wagi jest istotny dla powiązania wyniku z rzeczywistą masą.
+  rationale: |-
+    System widzi wskazanie, a potrzeba dotyczy fizycznej cechy → mapowanie wymaga odpowiedniego założenia otoczenia → argument jest trafny.
+  rules:
+  - REG-T07-04-05
+  see: N-T07-04
+  correct: true
+- id: b
+  text: Brak zmiany wagi usuwa jej wpływ na wymagania aplikacji.
+  rationale: Waga dostarcza rozstrzygający sygnał → scope nie przesądza istotności → argument jest błędny.
+  rules:
+  - REG-T07-04-02
+  see: N-T07-04
+  correct: false
+- id: c
+  text: Zmiana procedury przygotowania może wpłynąć na wymagania i założenia aplikacji.
+  rationale: Procedura wpływa na wiarygodność danych → zmiany kontekstu należy rozpatrywać → argument jest trafny.
+  rules:
+  - REG-T07-04-04
+  see: N-T07-04
+  correct: true
+- id: d
+  text: Poprawna obsługa otrzymanej liczby zawsze dowodzi spełnienia celu dotyczącego realnych przesyłek.
+  rationale: |-
+    Podano możliwość błędnego wyzerowania → sygnał nie gwarantuje realnego stanu bez warunków → argument jest błędny.
+  rules:
+  - REG-T07-04-05
+  see: N-T07-04
+  correct: false
+- id: e
+  text: Możliwość przeprojektowania procedury nie zmienia jej automatycznie w część aplikacji.
+  rationale: Opis jawnie umieszcza procedurę na zewnątrz → scope i granica systemu są różne → argument jest trafny.
+  rules:
+  - REG-T07-04-03
+  see: N-T07-04
+  correct: true
+k: 3

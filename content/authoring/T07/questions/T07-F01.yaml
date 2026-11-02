@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F01
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-01
+  aspect: ZAK-T07-01
+family: FAM-T07-01
+sourceAnchor: tools/z1_extensions.py T07-01/F
+stem: |-
+  Zwykłe rozliczenie jest opisane, ale nowy wyjątek może prowadzić do błędnych wypłat. Zaplanowano dodatkowy warsztat i sprawdzenie potrzeb przed realizacją wyjątku. Który argument właściwie stosuje zasadę wartości?
+options:
+- id: a
+  text: Dodatkowy nakład trzeba zestawić z korzyścią pokrycia potrzeby i ograniczenia ryzyka błędów oraz przeróbek.
+  rationale: Wyjątek niesie wskazane ryzyko → wartość łączy korzyść z kosztem pracy RE → argument jest trafny.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: true
+- id: b
+  text: Każdy warsztat ma dodatnią wartość tylko dlatego, że powstanie dokument.
+  rationale: Powstanie dokumentu nie określa korzyści → wymagania są środkiem do celu → automatyczny wniosek jest
+    błędny.
+  rules:
+  - REG-T07-01-03
+  see: N-T07-01
+  correct: false
+- id: c
+  text: Należy liczyć wyłącznie koszt zakodowania wyjątku, ignorując pracę RE.
+  rationale: |-
+    Pytanie dotyczy źródłowej wartości wymagania → formuła uwzględnia pozyskanie, zapis, walidację i zarządzanie → wskazany rachunek jest niepełny.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  correct: false
+- id: d
+  text: Brak natychmiastowego kodu dowodzi zerowej korzyści warsztatu.
+  rationale: |-
+    Warsztat może ograniczyć ryzyko niewłaściwego zachowania → korzyść nie zależy wyłącznie od natychmiastowego kodu → wniosek jest nieuprawniony.
+  rules:
+  - REG-T07-01-02
+  see: N-T07-01
+  correct: false

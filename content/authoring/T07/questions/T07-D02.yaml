@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D02
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-02
+  aspect: ZAK-T07-02
+family: FAM-T07-02
+sourceAnchor: tools/z1_extensions.py T07-02/D
+stem: |-
+  Dla przyszłej usługi nie zna się jeszcze konkretnych użytkowników. Utworzono ich archetypowy opis. Operatorzy już działającego pilota przekazują uwagi o potrzebach. Które wnioski są uzasadnione?
+options:
+- id: a
+  text: Nieznajomość nazwisk nie uzasadnia pominięcia całej istotnej roli.
+  rationale: |-
+    Osoby są przyszłe, lecz rola istnieje → RE ma uwzględnić właściwe role i ich reprezentację → wniosek jest trafny.
+  rules:
+  - REG-KRY-T07-02
+  see: N-T07-02
+  correct: true
+- id: b
+  text: Archetyp jest realną osobą, która zgodziła się za wszystkich na wymagania.
+  rationale: Opis określono jako archetypowy → persona jest fikcyjna → wniosek o rzeczywistej zgodzie jest błędny.
+  rules:
+  - REG-T07-02-03
+  see: N-T07-02
+  correct: false
+- id: c
+  text: Persona może wspierać opis potrzeb grupy, ale nie zastępuje rzeczywistego uzgadniania konfliktów.
+  rationale: Podano fikcyjną reprezentację → opis grupy nie rozwiązuje sam sprzeczności → wniosek jest trafny.
+  rules:
+  - REG-T07-02-03
+  see: N-T07-02
+  correct: true
+- id: d
+  text: Feedback operatorów trzeba wykluczyć tylko dlatego, że powstał podczas używania pilota.
+  rationale: Źródło dopuszcza feedback z używanego systemu → moment eksploatacji nie usuwa roli → wykluczenie jest
+    błędne.
+  rules:
+  - REG-T07-02-02
+  see: N-T07-02
+  correct: false
+- id: e
+  text: Informacje od użytkowników i operatorów mogą ujawnić istotne potrzeby wymagające pracy RE.
+  rationale: Podano uwagi z użycia → istotne role i ich feedback są częścią pracy nad potrzebami → wniosek jest
+    trafny.
+  rules:
+  - REG-KRY-T07-02
+  see: N-T07-02
+  correct: true
+k: 3

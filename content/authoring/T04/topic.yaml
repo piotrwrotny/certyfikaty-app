@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T04
+revision: r2
+title: T04 — Zastosowania i perspektywy RE
+shortTitle: T04 — Ćwiczenia RE
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:
+- KRY-T04-01
+- KRY-T04-02
+limitations:
+- Zastosowanie do różnych systemów; pięć perspektyw występowania wymagań. Poziom EO L1 mimo nagłówka §1.3 L2.
+- Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.
+- |-
+  Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.
+- Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.
+- 'K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem.'
+provenance:
+- path: references/content/T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md
+  documentVersion: v0.1
+- path: references/content/T04_IREB_CPRE_Applications_and_Perspectives_QA_and_Handoff_v0.1.md
+  documentVersion: v0.1
+- path: references/content/Z1_IREB_CPRE_Manifest_v0.1.md
+  documentVersion: v0.1
+criteria:
+- id: KRY-T04-01
+  revision: r2
+  description: Rozpoznaje dopuszczalne przedmioty analizowanej pracy.
+  labelBeforeAnswer: Rozpoznaje dopuszczalne przedmioty analizowanej pracy.
+  eo:
+  - id: EO1.3.1
+    level: L1
+  aspects:
+  - id: ZAK-T04-01
+    labelAfterAnswer: RE dla różnych rodzajów systemów
+- id: KRY-T04-02
+  revision: r2
+  description: Rozpoznaje perspektywę wypowiedzi o oczekiwaniu.
+  labelBeforeAnswer: Rozpoznaje perspektywę wypowiedzi o oczekiwaniu.
+  eo:
+  - id: EO1.3.1
+    level: L1
+  aspects:
+  - id: ZAK-T04-02
+    labelAfterAnswer: Pięć perspektyw występowania wymagań
+families:
+- id: FAM-T04-01
+  revision: r2
+  description: |-
+    Wspólny rdzeń RE dla różnych rodzajów systemów; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T04-02
+  revision: r2
+  description: |-
+    Wspólny rdzeń Pięć perspektyw występowania wymagań; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.

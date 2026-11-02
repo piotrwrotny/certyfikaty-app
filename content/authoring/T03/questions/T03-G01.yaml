@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T03-G01
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T03-01
+  aspect: ZAK-T03-01
+family: FAM-T03-01
+sourceAnchor: tools/z1_extensions.py T03-01/G
+stem: |-
+  Przed zbudowaniem obsługi zwrotów uzgodniono wyjątek zwrotu części zamówienia. Zespół poznaje potrzebne warianty i oczekiwany wynik. Oceń konsekwencje tego ustalenia.
+options:
+- id: '1'
+  text: Można uwzględnić dodatkowe warianty w szacowaniu nakładu.
+  rationale: Uzgodniono zakres wariantów → wymagania dostarczają podstawy estymacji → Prawda.
+  rules:
+  - REG-T03-01-02
+  see: N-T03-01
+  truth: true
+- id: '2'
+  text: Można przygotować testy z oczekiwanym wynikiem zwrotu częściowego.
+  rationale: Opisano oczekiwany rezultat → wymagania są podstawą testowania → Prawda.
+  rules:
+  - REG-T03-01-03
+  see: N-T03-01
+  truth: true
+- id: '3'
+  text: Ustalenie uniemożliwia popełnienie błędu podczas implementacji.
+  rationale: Treść określa oczekiwania, nie wykonanie kodu → podstawa testu nie jest gwarancją bezbłędności → Fałsz.
+  rules:
+  - REG-T03-01-03
+  see: N-T03-01
+  truth: false
+- id: '4'
+  text: Ustalenie może ograniczać ryzyko błędnego zachowania wobec potrzeby częściowego zwrotu.
+  rationale: |-
+    Wyjątek został rozpoznany przed realizacją → adekwatne RE może zmniejszać ryzyko niewłaściwego systemu → Prawda.
+  rules:
+  - REG-KRY-T03-01
+  see: N-T03-01
+  truth: true

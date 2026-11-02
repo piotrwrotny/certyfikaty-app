@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T02
+revision: r2
+title: T02 — Rodzaje wymagań
+shortTitle: T02 — Ćwiczenia RE
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:
+- KRY-T02-01
+- KRY-T02-02
+- KRY-P01
+limitations:
+- |-
+  Pełny zadeklarowany trójpodział functional/quality/constraint, w tym dane/interakcje i granice heurystyk; NFR jako jakość lub ograniczenie. C-P pozostaje wkładem częściowym.
+- Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.
+- |-
+  Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.
+- Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.
+- 'K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem.'
+provenance:
+- path: references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md
+  documentVersion: v0.1
+- path: references/content/T02_IREB_CPRE_Kinds_of_Requirements_QA_and_Handoff_v0.1.md
+  documentVersion: v0.1
+- path: references/content/Z1_IREB_CPRE_Manifest_v0.1.md
+  documentVersion: v0.1
+- path: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md
+  documentVersion: v0.2
+criteria:
+- id: KRY-T02-01
+  revision: r2
+  description: Klasyfikuje oczekiwania na podstawie jawnych przesłanek.
+  labelBeforeAnswer: Klasyfikuje oczekiwania na podstawie jawnych przesłanek.
+  eo:
+  - id: EO1.1.2
+    level: L2
+  aspects:
+  - id: ZAK-T02-01
+    labelAfterAnswer: Funkcja, jakość i dodatkowe ograniczenie rozwiązania
+- id: KRY-T02-02
+  revision: r2
+  description: Odróżnia osie klasyfikowania i oceniania zapisu.
+  labelBeforeAnswer: Odróżnia osie klasyfikowania i oceniania zapisu.
+  eo:
+  - id: EO1.1.2
+    level: L2
+  aspects:
+  - id: ZAK-T02-02
+    labelAfterAnswer: NFR i rozdzielenie osi klasyfikacji
+- id: KRY-P01
+  revision: r2
+  description: Rozpoznaje i uzasadnia wskazane rozróżnienie w dodatkowych przypadkach.
+  labelBeforeAnswer: Rozpoznaje i uzasadnia wskazane rozróżnienie w dodatkowych przypadkach.
+  eo:
+  - id: EO1.1.2
+    level: L2
+  aspects:
+  - id: ZAK-T02-C-P01
+    labelAfterAnswer: Klasyfikacja typu oczekiwania
+families:
+- id: FAM-T02-01
+  revision: r2
+  description: |-
+    Wspólny rdzeń Funkcja, jakość i dodatkowe ograniczenie rozwiązania; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T02-02
+  revision: r2
+  description: |-
+    Wspólny rdzeń NFR i rozdzielenie osi klasyfikacji; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-C-P1
+  revision: r2
+  description: |-
+    Zachowana propozycja rodziny C-P1 z C03 v0.2; bliskość także wobec pozostałych rodzin C i Z1, bez ustalenia niezależności.
+- id: FAM-C-P2
+  revision: r2
+  description: |-
+    Zachowana propozycja rodziny C-P2 z C03 v0.2; bliskość także wobec pozostałych rodzin C i Z1, bez ustalenia niezależności.

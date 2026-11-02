@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T02-G02
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T02-02
+  aspect: ZAK-T02-02
+family: FAM-T02-02
+sourceAnchor: tools/z1_extensions.py T02-02/G
+stem: |-
+  Wymaganie nakazuje konkretną bazę danych mimo istnienia alternatyw spełniających ustalone funkcje i jakość. Recenzent uznał zapis za jednoznaczny. Który wniosek o tych ocenach jest trafny?
+options:
+- id: a
+  text: Jednoznaczność zmienia dodatkowy nakaz w quality requirement.
+  rationale: Ocena jasności dotyczy redakcji → nie zmienia przedmiotu oczekiwania → wniosek jest błędny.
+  rules:
+  - REG-T02-02-03
+  see: N-T02-02
+  correct: false
+- id: b
+  text: Nakaz nie może należeć do NFR, ponieważ nie opisuje wydajności.
+  rationale: Podano dodatkowe ograniczenie rozwiązania → NFR obejmuje również constraint → wykluczenie jest błędne.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  correct: false
+- id: c
+  text: Nakaz może być constraint i należeć do NFR, a jednoznaczność jest osobną oceną zapisu.
+  rationale: |-
+    Alternatywy wskazują dodatkowe ograniczenie, a recenzja jasność → to odrębne osie; NFR obejmuje constraint → wniosek jest trafny.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  correct: true
+- id: d
+  text: Każde NFR musi dotyczyć wyłącznie szybkości.
+  rationale: |-
+    Zakres NFR obejmuje jakość i constraint → jedna cecha wydajności nie wyczerpuje go → odpowiedź jest zbyt wąska.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  correct: false

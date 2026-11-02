@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-A-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-A01
+  aspect: ZAK-T07-C-A01
+family: FAM-C-A1
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-A-B01
+stem: |-
+  Firma zamawia system obserwacji warunków transportu, obejmujący aplikację dyspozytora i usługę analizującą pomiary. Rejestrator temperatury jest odrębnym urządzeniem, przekazuje pomiary do usługi i pozostaje poza systemem zamawianym. Nie wolno go zmieniać. Odstępy między jego pomiarami wpływają na to, jak aktualną informację można pokazać dyspozytorowi.
+
+  Które działanie analityka jest właściwe?
+options:
+- id: a
+  text: Pominąć odstępy pomiarów, bo rejestrator nie jest objęty zmianą.
+  rationale: |-
+    Rejestrator nie jest zmieniany, ale rytm pomiarów ogranicza aktualność informacji → scope i istotność są odrębne → pominięcie tego wpływu jest niewłaściwe
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: b
+  text: Włączyć rejestrator do systemu, bo dostarcza niezbędne pomiary.
+  rationale: |-
+    Opis jawnie wyodrębnia urządzenie → istotna zależność nie staje się z tego powodu składnikiem przedmiotu analizy → nie należy zmieniać granicy wbrew przyjętej perspektywie
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: c
+  text: Przesunąć granicę kontekstu tak, aby pominąć ten rejestrator.
+  rationale: |-
+    Znaczenie rytmu pomiarów podano wprost → granica kontekstu nie służy usuwaniu znanego istotnego wpływu → to przesunięcie byłoby nieuzasadnione
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  correct: false
+- id: d
+  text: Uwzględnić odstępy pomiarów jako wpływ istotnego kontekstu.
+  rationale: |-
+    Pomiary z oddzielnego urządzenia wpływają na oczekiwane informacje → wymagania trzeba rozpatrywać wraz z istotnym otoczeniem → wpływ należy uwzględnić
+  rules:
+  - REG-A1
+  - REG-KRY-T07-04
+  see: N-T07-C-A01
+  correct: true

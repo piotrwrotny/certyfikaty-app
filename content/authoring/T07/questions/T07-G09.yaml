@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G09
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-09
+  aspect: ZAK-T07-09
+family: FAM-T07-09
+sourceAnchor: tools/z1_extensions.py T07-09/G
+stem: |-
+  Mały zespół rozwija system doraźnie, ale uzgadnia potrzeby, zapisuje istotne decyzje, sprawdza je i kontroluje zmiany. Duży zespół chce skopiować dawny proces bez zbadania nowego kontekstu. Oceń argumenty.
+options:
+- id: '1'
+  text: Doraźny rozwój systemu nie usuwa potrzeby systematycznej pracy nad wymaganiami.
+  rationale: Podano ad-hoc wytwarzanie → zasada obowiązuje niezależnie od procesu wytwarzania → Prawda.
+  rules:
+  - REG-KRY-T07-09
+  see: N-T07-09
+  truth: true
+- id: '2'
+  text: Mała ilość dokumentacji sama dowodzi braku dyscypliny w pierwszym zespole.
+  rationale: Opis zawiera odpowiednie czynności RE → ciężar dokumentacji nie jest jedynym kryterium doboru → Fałsz.
+  rules:
+  - REG-T07-09-03
+  see: N-T07-09
+  truth: false
+- id: '3'
+  text: Drugi zespół powinien ocenić dopasowanie dawnych praktyk do nowej sytuacji.
+  rationale: Proponuje reuse bez analizy → zasada wymaga refleksji → Prawda.
+  rules:
+  - REG-T07-09-04
+  see: N-T07-09
+  truth: true
+- id: '4'
+  text: Jeden proces jest z definicji najlepszy dla obu zespołów niezależnie od kontekstu.
+  rationale: Sytuacje mają różną skalę i warunki → nie ma uniwersalnego procesu → Fałsz.
+  rules:
+  - REG-T07-09-02
+  see: N-T07-09
+  truth: false

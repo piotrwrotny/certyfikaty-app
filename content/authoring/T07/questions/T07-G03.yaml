@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G03
+revision: r1
+format: P
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-03
+  aspect: ZAK-T07-03
+family: FAM-T07-03
+sourceAnchor: tools/z1_extensions.py T07-03/G
+stem: |-
+  Zespół używa jednego podpisanego dokumentu, ale przykłady ujawniły różne rozumienie słowa „dostępny”. Część osób chce uzgodnić glosariusz i często porównywać oczekiwane wyniki. Które argumenty są uzasadnione?
+options:
+- id: a
+  text: Przykłady mogą ujawnić pozorne wspólne zrozumienie mimo udokumentowanej podstawy.
+  rationale: Podano różne znaczenia przy jednym dokumencie → explicit może być pozorne → argument jest trafny.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: true
+- id: b
+  text: Podpis uniemożliwia istnienie rozbieżności, więc przykłady trzeba zignorować.
+  rationale: Rozbieżność jest jawna → podpis nie gwarantuje trafności wspólnego sensu → argument jest błędny.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: false
+- id: c
+  text: Glosariusz sam dowiedzie, że żadne wymaganie nie zostało pominięte.
+  rationale: Glosariusz dotyczy znaczeń → nawet zgodność rozumienia nie dowodzi kompletności → wniosek jest błędny.
+  rules:
+  - REG-T07-03-03
+  see: N-T07-03
+  correct: false
+- id: d
+  text: Uzgodnione znaczenia i krótkie pętle feedbacku mogą ograniczać skutki nieporozumień.
+  rationale: Wskazano rozbieżne interpretacje → glosariusz i feedback wspierają wspólną podstawę → argument jest
+    trafny.
+  rules:
+  - REG-T07-03-05
+  see: N-T07-03
+  correct: true
+k: 2

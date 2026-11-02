@@ -1,0 +1,2254 @@
+[
+  {
+    "id": "T01",
+    "title": "Podstawowe pojęcia RE",
+    "slug": "Fundamental_RE_Concepts",
+    "eos": "EO1.1.1 L1",
+    "scope": "Wymaganie w trzech sensach; specyfikacja/specyfikacja wymagań; interesariusz; system; RE i podstawowa terminologia roli.",
+    "dependencies": "T02/T05 rozwijają typy i rolę; znajomość słów można sprawdzić bez lektury innych T.",
+    "units": [
+      {
+        "id": "KRY-T01-01",
+        "title": "Trzy sensy requirement",
+        "eo": "EO1.1.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 hasło Wymaganie s.33",
+        "note": "Wymaganie (requirement) może oznaczać potrzebę postrzeganą przez interesariusza, zdolność lub właściwość, którą ma mieć system, albo udokumentowaną reprezentację takiej potrzeby, zdolności lub właściwości. To trzy sensy jednego terminu, nie trzy rodzaje z T02. Rozmówca mówiący „nie zapisaliśmy tego wymagania” może mieć na myśli istniejącą potrzebę, której nie utrwalono. Zdanie „wymaganie znajduje się w repozytorium” mówi zwykle o reprezentacji. Rozróżnienie pomaga uniknąć twierdzenia, że potrzeba zaczyna istnieć dopiero po utworzeniu rekordu.\n\nZapis jest środkiem komunikacji. Może być niejasny, niepełny lub nietrafny wobec potrzeby; samo jego istnienie nie potwierdza zgodności z potrzebą. Rozpoznanie sensu nie wymaga narzędzia ani formalnego ID. Gdy w zdaniu brakuje kontekstu, należy dopytać, zamiast arbitralnie wybierać jeden sens. Na L1 chodzi o znajomość tych znaczeń; ocena jakości zapisu i proces jego uzgadniania należą do innych tematów.",
+        "terms": "wymaganie — requirement: oficjalna para C-S06 s.33; „reprezentacja” jest objaśnieniem sensu 3.",
+        "example": "Pracownik potrzebuje odtworzyć numer przesyłki po awarii. Zdolność odtworzenia jest oczekiwaniem wobec systemu; wpis REQ-17 jest jego reprezentacją.",
+        "counter": "Uogólnienie „bez numeru nie ma wymagania” obala potrzeba odtworzenia zgłoszona ustnie przed utworzeniem REQ-17. Brak zapisu nie usuwa potrzeby.",
+        "comparison": "Oś: potrzeba → wymagana właściwość → jej zapis. „Chcę odzyskać dane” wskazuje potrzebę; „system ma umożliwiać odzyskanie” wskazuje właściwość; „akapit REQ-17” wskazuje zapis. Functional/quality/constraint to odmienna oś.",
+        "rp": "Wymień trzy sensy requirement i pokaż różnicę między potrzebą a jej zapisem.",
+        "answer": [
+          "Wymienia potrzebę interesariusza, wymaganą zdolność/właściwość systemu oraz udokumentowaną reprezentację.",
+          "Odróżnia potrzebę od zapisu; dopuszcza istnienie potrzeby przed zapisem."
+        ],
+        "remedy": "Najpierw ustal, czy zdanie dotyczy potrzeby, cechy systemu czy reprezentacji. Nie zastępuj tych sensów podziałem na funkcję, jakość i ograniczenie.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń twierdzenia o znaczeniu terminu requirement.",
+            "options": [
+              [
+                "Potrzeba interesariusza może być wymaganiem przed jej udokumentowaniem.",
+                "Podano potrzebę → pierwszy sens requirement nie wymaga wcześniejszego rekordu → Prawda."
+              ],
+              [
+                "Wpis w specyfikacji może być reprezentacją wymaganej właściwości.",
+                "Podano utrwalony zapis właściwości → sens reprezentacji → Prawda."
+              ],
+              [
+                "Trzy sensy requirement to functional, quality i constraint.",
+                "Wyliczono rodzaje oczekiwań → to inna klasyfikacja niż trzy znaczenia terminu → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Rozpoznanie trzech znaczeń wprost."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Właściciel pracowni mówi: „Muszę widzieć, które zamówienia nie są opłacone”. Analityk dopisuje zdanie w rejestrze. Nazwij potrzebę i jej reprezentację; czy zapis stworzył potrzebę?",
+            "dimensions": [
+              "Potrzebą jest wiedza o nieopłaconych zamówieniach, niezależna od późniejszego wpisu.",
+              "Wpis analityka dokumentuje potrzebę; nie jest powodem jej powstania."
+            ],
+            "critical": "Uznanie, że przed wpisem nie mogła istnieć potrzeba.",
+            "border": "Nie trzeba cytować właściciela dosłownie; można nazwać sens własnymi słowami.",
+            "change": "Konkretny dialog zastępuje ogólne tezy; trzeba rozpoznać dwa referenty.",
+            "w": 0
+          },
+          {
+            "type": "A",
+            "role": "D",
+            "stem": "W instrukcji przeglądu napisano: „Porównaj wymaganie zapisane w punkcie 8 z potrzebą zgłoszoną przez operatora”. Co oznacza tu wymaganie „zapisane w punkcie 8”?",
+            "options": [
+              [
+                "Rodzaj ograniczenia technologicznego.",
+                "Lokalizacja nie mówi, czego dotyczy oczekiwanie → typ constraint nie wynika → nie wybrać."
+              ],
+              [
+                "Udokumentowaną reprezentację potrzeby lub wymaganej właściwości.",
+                "Lokalizacja w tekście wskazuje reprezentację → sens 3 → właściwa odpowiedź."
+              ],
+              [
+                "Wyłącznie potrzebę, której nie da się zapisać.",
+                "Podano istniejący zapis → nie jest to wyłącznie nieutrwalona potrzeba → nie wybrać."
+              ],
+              [
+                "Każdy zrealizowany fragment kodu.",
+                "Punkt specyfikacji nie oznacza kodu → implementacja nie wynika ze stemu → nie wybrać."
+              ]
+            ],
+            "key": "b",
+            "w": 1,
+            "change": "Zmiana na odczyt sensu w instrukcji; wspólny rdzeń pojęciowy."
+          }
+        ]
+      },
+      {
+        "id": "KRY-T01-02",
+        "title": "Specification i requirements specification",
+        "eo": "EO1.1.1",
+        "level": "L1",
+        "source": "C-S06 2.2.0 hasła Specyfikacja i Specyfikacja wymagań s.27; C-S02/C-S03 3.3.0 EU1 s.11",
+        "note": "Specification oznacza zarówno rezultat pracy, jak i proces specyfikowania. Jako rezultat jest uporządkowanym opisem właściwości określonego obiektu, spełniającym ustalone kryteria. Może opisywać właściwości wymagane lub już zaimplementowane. Requirements specification jako rezultat skupia wymagania w uporządkowanej reprezentacji. W drugim sensie wyrażenie może oznaczać czynność ich specyfikowania.\n\nNie należy utożsamiać każdej specyfikacji z listą przyszłych wymagań ani każdego zbioru luźnych notatek ze spełniającą kryteria specyfikacją. O rodzaju opisu decyduje przedmiot i rola, a nie rozszerzenie pliku. Requirements specification nie musi być pojedynczym dokumentem Word; w tym temacie rozpoznajemy sens, bez projektowania struktur dokumentacji z T19. Zdanie „specyfikacja trwała dwa dni” nazywa proces; „przejrzeliśmy specyfikację” zwykle nazywa rezultat.",
+        "terms": "specyfikacja — specification; specyfikacja wymagań — requirements specification: C-S06 s.27; nie każdy dokument to specyfikacja wymagań.",
+        "example": "Opis już produkowanego czujnika może specyfikować jego rzeczywiste cechy; wymagania dla następnej wersji opisują cechy pożądane. Oba są opisami, lecz mają inną rolę.",
+        "counter": "Uogólnienie „specification zawsze znaczy przyszłe wymagania” obala techniczny opis istniejącego czujnika dokumentujący cechy wykonanej wersji.",
+        "comparison": "Oś 1: proces versus rezultat — „specyfikowanie” i „gotowy opis”. Oś 2: właściwości wymagane versus zaimplementowane — specyfikacja wymagań i opis wykonanego produktu. Każda oś ma własne pytanie.",
+        "rp": "Odróżnij specification jako proces i rezultat oraz wyjaśnij, co wyróżnia requirements specification.",
+        "answer": [
+          "Rozpoznaje proces specyfikowania i uporządkowany opis jako rezultat.",
+          "Requirements specification dotyczy wymagań, a specification może też opisywać właściwości już istniejące."
+        ],
+        "remedy": "Zbadaj przedmiot opisu i sens zdania. Nazwa pliku lub obecność tabel nie zastępuje tego rozróżnienia.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Które zdanie poprawnie charakteryzuje requirements specification jako rezultat pracy?",
+            "options": [
+              [
+                "Wyłącznie kod wdrożonej aplikacji.",
+                "Kod implementuje zachowanie, a nie z definicji zbiór wymagań → nie wybrać."
+              ],
+              [
+                "Zawsze pojedynczy papierowy formularz.",
+                "Nośnik i liczba dokumentów nie definiują znaczenia → bezpodstawne zawężenie → nie wybrać."
+              ],
+              [
+                "Uporządkowany zbiór wymagań spełniający ustalone kryteria.",
+                "Chodzi o rezultat → zbiór wymagań o uporządkowanej reprezentacji → wybrać."
+              ],
+              [
+                "Dowolną rozmowę niezależnie od jej utrwalenia i struktury.",
+                "Rozmowa nie gwarantuje reprezentacji spełniającej kryteria → definicja rezultatu nie jest spełniona → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Rozpoznanie znaczenia rezultatu pracy."
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń użycia terminu specification.",
+            "options": [
+              [
+                "Sformułowanie „specyfikowanie wymagań zajęło tydzień” dotyczy procesu.",
+                "Opis czasu czynności → proces specyfikowania → Prawda."
+              ],
+              [
+                "Specyfikacja techniczna może opisywać już zaimplementowane właściwości.",
+                "Znaczenie specification dopuszcza cechy wykonane → Prawda."
+              ],
+              [
+                "Każda specyfikacja z definicji zawiera tylko wymagania.",
+                "Specification ma szerszy zakres niż requirements specification → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Proces/rezultat i wymagane/wykonane oceniane w kontrastach."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Zespół ma katalog parametrów obecnego urządzenia i uzgodniony opis oczekiwań dla następnego wydania. Rozpoznaj, który opis jest specyfikacją wymagań. Czy drugi przez to przestaje być specification?",
+            "dimensions": [
+              "Opis oczekiwań dla następnego wydania jest specyfikacją wymagań, o ile spełnia kryteria uporządkowanego zbioru.",
+              "Katalog parametrów obecnego urządzenia może być specyfikacją jego zaimplementowanych właściwości; nie musi być specyfikacją wymagań."
+            ],
+            "critical": "Stwierdzenie, że opis właściwości istniejącego urządzenia nie może być specyfikacją.",
+            "border": "Dopuszczalne słowa „opis wykonania” i „opis tego, co ma powstać”; należy zachować obie role.",
+            "change": "Dwa równoległe artefakty wymuszają rozróżnienie przedmiotu.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T01-03",
+        "title": "Stakeholder a user",
+        "eo": "EO1.1.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Interesariusz s.14 i Użytkownik s.32",
+        "note": "Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi systemu. Alternatywa „albo” jest istotna: ktoś może nie mieć prawa decyzji, a mimo to być interesariuszem przez skutki działania systemu. User korzysta z funkcjonalności systemu. Użytkownik jest interesariuszem, lecz zbiór interesariuszy obejmuje również inne role.\n\nNabywca, zamawiający, operator czy organizacja regulująca mogą mieć istotne wymagania bez codziennej obsługi interfejsu. Jedna osoba może występować w kilku rolach. Nazwanie organizacji interesariuszem nie oznacza, że jej każda osoba jest automatycznie właściwym reprezentantem. T01 uczy definicji; pełna identyfikacja reprezentantów i stakeholder management należą do T24. W zadaniach wystarczy rozpoznać podaną przesłankę wpływu lub oddziaływania, bez znajomości rzeczywistych kompetencji prawnych wymyślonej instytucji.",
+        "terms": "interesariusz — stakeholder: oficjalna para s.14; użytkownik — user, s.32.",
+        "example": "Organizacja audytująca otrzymuje wyniki systemu i ustala kryteria raportowania, lecz nie loguje się do aplikacji. Może być interesariuszem bez bycia użytkownikiem.",
+        "counter": "Uogólnienie „tylko zalogowani użytkownicy są interesariuszami” obala grupa pracowników, których grafik ustala system używany wyłącznie przez kierownika.",
+        "comparison": "Oś: relacja do systemu. Użytkownik korzysta z funkcjonalności; interesariusz wpływa na wymagania lub odczuwa skutki. Kierownik klikający grafik spełnia oba warunki, pracownik objęty grafikiem może spełniać tylko drugi.",
+        "rp": "Podaj definicję stakeholder i powód, dla którego nie jest to synonim user.",
+        "answer": [
+          "Wskazuje osobę lub organizację oraz wpływ na wymagania lub oddziaływanie systemu.",
+          "User korzysta z funkcjonalności; nie każdy stakeholder musi jej używać."
+        ],
+        "remedy": "Sprawdź dwa niezależne wejścia do definicji: wpływ na wymagania i bycie dotkniętym działaniem systemu. Nie wymagaj obu jednocześnie.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Które DWIE informacje samodzielnie wystarczają do uznania osoby lub organizacji za stakeholder w znaczeniu RE?",
+            "options": [
+              [
+                "Pracuje w tej samej miejscowości, bez jakiegokolwiek związku z systemem.",
+                "Wspólna miejscowość nie jest wpływem ani oddziaływaniem → nie wybrać."
+              ],
+              [
+                "Wpływa na wymagania rozpatrywanego systemu.",
+                "Wpływ na wymagania spełnia jedną stronę definicji → wybrać."
+              ],
+              [
+                "System wpływa na jej sytuację.",
+                "Oddziaływanie systemu spełnia drugą stronę → wybrać."
+              ],
+              [
+                "Ma konto w dowolnym, niezwiązanym systemie.",
+                "Brak związku z analizowanym systemem → informacja nie wystarcza → nie wybrać."
+              ]
+            ],
+            "key": [
+              "b",
+              "c"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Dwie alternatywne przesłanki definicyjne."
+          },
+          {
+            "type": "A",
+            "role": "F",
+            "stem": "System przydziela miejsca parkingowe pracownikom. Obsługuje go administrator. Pracownik objęty przydziałem nie korzysta z systemu. Która etykieta jest uzasadniona dla tego pracownika?",
+            "options": [
+              [
+                "Stakeholder, ponieważ wynik systemu na niego wpływa.",
+                "Przydział dotyczy pracownika → jest dotknięty systemem → wybrać."
+              ],
+              [
+                "Na pewno user, ponieważ każdy stakeholder jest userem.",
+                "Nie korzysta z funkcjonalności → odwrócono relację user–stakeholder → nie wybrać."
+              ],
+              [
+                "Nie jest stakeholder, bo nie ma konta.",
+                "Konto nie jest warunkiem definicji → nie wybrać."
+              ],
+              [
+                "Wyłącznie element oprogramowania.",
+                "Pracownik jest osobą → nie jest komponentem kodu → nie wybrać."
+              ]
+            ],
+            "key": "a",
+            "w": 1,
+            "change": "Definicję przeniesiono na osobę dotkniętą wynikiem bez użycia aplikacji."
+          },
+          {
+            "type": "K",
+            "role": "D",
+            "stem": "Oceń relacje pojęć.",
+            "options": [
+              [
+                "Interesariuszem może być organizacja.",
+                "Definicja obejmuje organizacje, nie tylko osoby → Prawda."
+              ],
+              [
+                "Interesariusz musi zarazem wpływać na wymagania i korzystać z funkcjonalności.",
+                "Są to inne warunki; definicja używa wpływu lub oddziaływania, bez obowiązku użycia → Fałsz."
+              ],
+              [
+                "Osoba może pełnić kilka ról interesariusza.",
+                "Role nie muszą wykluczać się wzajemnie → Prawda; także C-S02/C-S03 §2.2 zasada 2 s.15."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Kontrola kwantyfikatorów i zakresu definicji."
+          }
+        ]
+      },
+      {
+        "id": "KRY-T01-04",
+        "title": "System w szerokim znaczeniu inżynierskim",
+        "eo": "EO1.1.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 System s.29 i Komponent s.16",
+        "note": "W znaczeniu inżynierskim system jest spójną, dającą się wyodrębnić całością elementów współdziałających w określonym celu. W CPRE używa się tego słowa szeroko: obejmuje produkty, usługi, urządzenia, procedury i ich składniki lub zestawienia. System nie jest synonimem aplikacji. W zależności od przedmiotu analizy całością może być samo oprogramowanie albo szersza usługa z ludźmi, urządzeniami i zasadami organizacyjnymi.\n\nKomponent może być rozpatrywany jako system, gdy sam staje się analizowaną całością. Nie oznacza to dowolnego przesuwania granicy w trakcie rozwiązania zadania: przyjęta perspektywa musi być jawna. Znajomość definicji L1 nie zastępuje samodzielnego wyznaczania granic L3 z T23. W T01 rozpoznajemy szerokie znaczenie i możliwość hierarchii; nie tworzymy modelu kontekstu.",
+        "terms": "system — system, oficjalna para s.29; komponent — component, s.16. Używany sens inżynierski, nie ogólny „system porządkowania”.",
+        "example": "Usługa odbioru zamówień może obejmować aplikację, skaner i pracowników wydających paczki. Wskazany cel i współdziałanie pozwalają rozpatrywać ją jako system.",
+        "counter": "Uogólnienie „bez kodu nie ma systemu” obala zorganizowana procedura ręcznego wydawania sprzętu z określonym celem i współpracującymi elementami.",
+        "comparison": "Oś: zakres analizowanej całości. System aplikacji obejmuje jej elementy; system całej usługi może obejmować również urządzenia i ludzi. To inne przedmioty analizy, a nie sprzeczne definicje.",
+        "rp": "Czy system w CPRE musi być aplikacją? Wskaż znaczenie inżynierskie i przykład szerszy niż software.",
+        "answer": [
+          "Rozpoznaje wyodrębnioną całość współdziałających elementów realizującą cel.",
+          "Dopuszcza usługę/urządzenie/procedurę lub całość socjotechniczną; nie ogranicza pojęcia do aplikacji."
+        ],
+        "remedy": "Nazwij cel i analizowaną całość. Oprogramowanie jest jednym możliwym składnikiem, nie warunkiem definicji systemu.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Które stwierdzenie jest zgodne ze znaczeniem system w CPRE?",
+            "options": [
+              [
+                "System może obejmować oprogramowanie, ludzi i elementy organizacyjne.",
+                "Szerokie znaczenie obejmuje takie całości → wybrać."
+              ],
+              [
+                "System to zawsze wyłącznie kod aplikacji.",
+                "Bezpodstawne zawężenie pomija inne rodzaje całości → nie wybrać."
+              ],
+              [
+                "System nigdy nie zawiera innych systemów.",
+                "Definicja dopuszcza podsystemy → nie wybrać."
+              ],
+              [
+                "Każdy przypadkowy zbiór przedmiotów jest systemem niezależnie od celu i współdziałania.",
+                "W sensie inżynierskim potrzebne są spójność i wspólny cel → nie wybrać."
+              ]
+            ],
+            "key": "a",
+            "w": 1,
+            "change": "Rozpoznanie definicji i granic pojęcia."
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń twierdzenia o analizowanym module i usłudze.",
+            "options": [
+              [
+                "Komponent rozpatrywany w izolacji może być traktowany jako system.",
+                "Zmiana przedmiotu analizy pozwala rozpatrywać komponent jako całość → Prawda."
+              ],
+              [
+                "Usługa z urządzeniami i procedurami nie może być przedmiotem RE.",
+                "Syllabus obejmuje usługi i procedury → Fałsz."
+              ],
+              [
+                "Przyjęta perspektywa analizy powinna być rozpoznawalna.",
+                "Bez określenia analizowanej całości termin system byłby niejednoznaczny → Prawda; interpretacja warunku użycia definicji."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Zamiast definicji wprost sprawdzono hierarchię i zakres."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Za system uznano usługę archiwizacji obejmującą ludzi, szafy i rejestr elektroniczny. Czy samo istnienie elementów nieinformatycznych unieważnia tę nazwę? Nazwij warunek definicyjny.",
+            "dimensions": [
+              "Nie; system w RE może zawierać składniki nieinformatyczne.",
+              "Rozstrzygają spójna wyodrębniona całość, współdziałanie elementów i cel archiwizacji."
+            ],
+            "critical": "Uznanie, że wyłącznie aplikacje są systemami.",
+            "border": "Krótka odpowiedź z poprawnym warunkiem wystarcza; nie trzeba projektować granic.",
+            "change": "Rozpoznanie dopuszczalności nazwy w mieszanej całości.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T01-05",
+        "title": "Cel i charakter Requirements Engineering",
+        "eo": "EO1.1.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.1 s.11; C-S06 2.2.0 Inżynieria wymagań i Inżynier wymagań s.14",
+        "note": "Requirements Engineering (RE, inżynieria wymagań, IW) oznacza systematyczne i zdyscyplinowane podejście do specyfikowania i zarządzania wymaganiami. Jego celem jest zrozumienie oczekiwań i potrzeb interesariuszy oraz ograniczenie ryzyka dostarczenia systemu, który ich nie spełnia. Akcent na cel chroni przed traktowaniem produkcji dokumentów jako samodzielnej miary powodzenia.\n\nRE obejmuje pracę z wymaganiami podczas tworzenia i rozwijania systemu; nie kończy się z definicji po pierwszym wywiadzie. Requirements Engineer współpracuje z interesariuszami przy pozyskiwaniu, dokumentowaniu, walidacji i zarządzaniu. Szczegóły zadań, roli i wiedzy rozwija T05. Znajomość definicji nie dowodzi umiejętności wykonania zawodowego, podobnie jak samo posiadanie certyfikatu lub stanowiska nie jest wynikiem zadania w tym materiale.",
+        "terms": "inżynieria wymagań — Requirements Engineering; IW i RE jako kontrolowane skróty. Inżynier wymagań — Requirements Engineer, C-S06 s.14.",
+        "example": "Analityk uzgadnia, co oznacza poprawne zamknięcie zgłoszenia, utrwala to i sprawdza z użytkownikami. Dokument jest częścią pracy ukierunkowanej na potrzebę.",
+        "counter": "Uogólnienie „im więcej stron, tym lepsze RE” obala duża specyfikacja opisująca niewłaściwą potrzebę. Objętość nie zapewnia realizacji celu RE.",
+        "comparison": "Oś: działanie versus cel. Dokumentowanie jest czynnością; ograniczenie ryzyka niespełnienia potrzeb jest celem. Uporządkowane dokumenty mogą wspierać cel, lecz nie zastępują go.",
+        "rp": "Co oznacza RE i jaki ma cel? Odróżnij ten cel od produkowania dokumentacji.",
+        "answer": [
+          "Nazywa systematyczne i zdyscyplinowane specyfikowanie i zarządzanie wymaganiami.",
+          "Wskazuje rozumienie potrzeb oraz zmniejszenie ryzyka dostarczenia systemu, który ich nie spełnia."
+        ],
+        "remedy": "Powiąż czynności RE z potrzebami interesariuszy. Dokument i narzędzie są środkami; sama ich obecność nie poświadcza właściwego wyniku.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Który opis najtrafniej oddaje cel RE?",
+            "options": [
+              [
+                "Zmaksymalizować liczbę stron bez względu na potrzeby.",
+                "Objętość nie jest celem definicyjnym → nie wybrać."
+              ],
+              [
+                "Zastąpić wszystkie decyzje projektowe jednym narzędziem.",
+                "Narzędzie nie zastępuje pracy z potrzebami → nie wybrać."
+              ],
+              [
+                "Zagwarantować brak jakichkolwiek przyszłych zmian.",
+                "RE ogranicza ryzyko; nie gwarantuje niezmienności → nie wybrać."
+              ],
+              [
+                "Zrozumieć potrzeby i zmniejszyć ryzyko dostarczenia systemu, który ich nie spełnia.",
+                "Opis wskazuje cel definicyjny → wybrać."
+              ]
+            ],
+            "key": "d",
+            "w": 1,
+            "change": "Cel RE wprost."
+          },
+          {
+            "type": "P",
+            "role": "F",
+            "stem": "Które DWIE cechy należą do definicyjnego opisu RE?",
+            "options": [
+              [
+                "Obowiązek użycia jednego konkretnego programu.",
+                "Definicja nie wyznacza narzędzia → nie wybrać."
+              ],
+              [
+                "Zakaz uzgadniania wymagań po rozpoczęciu projektu.",
+                "Takiego zakazu nie ma; pozostawałby sprzeczny z zarządzaniem ewolucją → nie wybrać."
+              ],
+              [
+                "Systematyczne podejście do specyfikowania wymagań.",
+                "Specyfikowanie w sposób systematyczny należy do definicji → wybrać."
+              ],
+              [
+                "Zarządzanie wymaganiami z uwzględnieniem potrzeb interesariuszy.",
+                "Zarządzanie i cel potrzeb należą do definicji → wybrać."
+              ]
+            ],
+            "key": [
+              "c",
+              "d"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Kontrast definicji z nieuprawnionymi ograniczeniami."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Ktoś opisuje RE jako „pisanie wszystkiego, co klient powie, bez sprawdzania znaczenia”. Jakich dwóch elementów definicji brakuje?",
+            "dimensions": [
+              "Brakuje systematycznego i zdyscyplinowanego specyfikowania oraz zarządzania; samo przepisywanie nie opisuje całości.",
+              "Brakuje celu rozumienia potrzeb i ograniczania ryzyka ich niespełnienia; trzeba sprawdzać sens, a nie tylko utrwalać słowa."
+            ],
+            "critical": "Uznanie bezrefleksyjnego przepisywania za pełną definicję RE.",
+            "border": "Dopuszczalne wskazanie pracy nad znaczeniem i ryzykiem bez odtwarzania formuły słowo w słowo.",
+            "change": "Rozpoznanie niepełnej definicji w opisie zawodowym.",
+            "w": 0
+          }
+        ]
+      }
+    ],
+    "reuse": [],
+    "intro": "Podstawowe pojęcia pozwalają ustalić, o czym rozmawiamy: czy o potrzebie człowieka, wymaganej właściwości systemu, czy o zapisie tej właściwości. W tym temacie rozpoznajesz znaczenia, a nie tworzysz jeszcze kompletnej specyfikacji. Najważniejsza praktyka językowa to nazwanie sensu słowa w konkretnym zdaniu. Obecność formularza, dokumentu lub numeru wymagania nie przesądza o istnieniu i poprawnym rozumieniu samej potrzeby."
+  },
+  {
+    "id": "T02",
+    "title": "Rodzaje wymagań",
+    "slug": "Kinds_of_Requirements",
+    "eos": "EO1.1.2 L2",
+    "scope": "Pełny zadeklarowany trójpodział functional/quality/constraint, w tym dane/interakcje i granice heurystyk; NFR jako jakość lub ograniczenie. C-P pozostaje wkładem częściowym.",
+    "dependencies": "T01: rozpoznanie przedmiotu wymagania; T04: perspektywa nie jest rodzajem; T21: jakość zapisu nie jest quality requirement.",
+    "units": [
+      {
+        "id": "KRY-T02-01",
+        "title": "Funkcja, jakość i dodatkowe ograniczenie rozwiązania",
+        "eo": "EO1.1.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §1.1 s.11–12; C-S06 2.2.0 Functional/quality s.34, Constraint s.21; C-S07 1.3.2 §1.1 s.10–11",
+        "note": "Klasyfikuj przedmiot oczekiwania. Functional requirement opisuje rezultat, zachowanie, dane lub interakcję, które ma zapewnić funkcja systemu. Quality requirement dotyczy cechy jakościowej niepokrytej samym wymaganiem funkcjonalnym. Constraint dodatkowo ogranicza przestrzeń rozwiązań ponad to, co wynika z wymaganych funkcji i jakości. Ten ostatni warunek odróżnia ograniczenie w sensie RE od potocznego „każde wymaganie coś ogranicza”.\n\nŻądanie wygenerowania czterech etykiet jest funkcją mimo liczby. Limit czasu odpowiedzi jest jakością, choć odpowiada na ważne biznesowe „co chcemy osiągnąć”. Nakaz użycia wskazanej platformy mimo istnienia innych realizacji spełniających funkcje i jakość jest dodatkowym ograniczeniem. Wymóg zapisania osoby zatwierdzającej jest funkcją także wtedy, gdy służy bezpieczeństwu. Oczekiwana struktura danych oraz wymagana interakcja nie stają się constraint tylko przez szczegółowość. Zawodna heurystyka „co versus jak” nie może zastąpić concern, czyli przedmiotu oczekiwania.\n\nZłożone zdanie może wyrażać kilka oczekiwań. „System tworzy raport i robi to w 2 sekundy” zawiera funkcję oraz cechę czasu. Rozdzielenie sensów jest objaśnieniem klasyfikacji L2, nie obowiązkiem wykonania pełnego projektu L3. Dla jednoznacznego punktowanego zadania trzeba określić perspektywę i warunki: czy technologia jest dodatkowo narzucona, czy zdanie opisuje cechę lub interakcję. Nie wolno dopisywać tych przesłanek dopiero w rationale.",
+        "terms": "T-06/T-07/T-08 z C02 zachowane; functional requirement — wymaganie funkcjonalne; quality requirement — wymaganie jakościowe; constraint in RE — ograniczenie w IW. Concern: autorskie objaśnienie „przedmiot oczekiwania”.",
+        "example": "„Odpowiedź zawiera numer zgłoszenia” wymaga danych wyniku funkcji. „95% odpowiedzi w ≤1 s przy określonym obciążeniu” określa czas. „Użyj jedynie silnika X mimo odpowiednich alternatyw” nakazuje rozwiązanie.",
+        "counter": "Uogólnienie „każdy limit to constraint” obala limit zużycia pamięci opisujący jakość pracy systemu. Wymagania funkcji i jakości też ograniczają możliwe realizacje.",
+        "comparison": "Oś: przedmiot oczekiwania. Wynik/zachowanie/dane/interakcja → functional; cecha jakościowa → quality; dodatkowo narzucony wybór → constraint. Dwa różne oczekiwania w zdaniu trzeba nazwać osobno, zamiast wybierać typ po słowie „musi”.",
+        "rp": "Sklasyfikuj i uzasadnij: (1) system po żądaniu wysyła potwierdzenie; (2) czas odpowiedzi przy zadanym obciążeniu ≤1 s; (3) nakaz silnika X mimo alternatyw spełniających funkcje i jakość.",
+        "answer": [
+          "(1) Functional: wymagane zachowanie wysłania.",
+          "(2) Quality: cecha czasu pracy przy wskazanym obciążeniu.",
+          "(3) Constraint: dodatkowy wybór realizacji mimo odpowiednich alternatyw."
+        ],
+        "remedy": "Podkreśl, czego wymaga zdanie. Odrzuć reguły „liczba/technologia/bezpieczeństwo = jakość”. W constraint sprawdź dodatkowe zawężenie ponad funkcje i jakość.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Dla systemu wydawania sprzętu oceń pary opis–typ. Wybrany czytnik Z jest narzucony mimo dostępności innych czytników spełniających wszystkie podane funkcje i cechy jakościowe. Które TRZY pary wraz z powodem są poprawne?",
+            "options": [
+              [
+                "„Użyj czytnika Z” — constraint, bo dodatkowo narzucono rozwiązanie mimo odpowiednich alternatyw.",
+                "Przesłanka alternatyw jest jawna → dodatkowe zawężenie → wybrać."
+              ],
+              [
+                "„Po wydaniu sprzętu wyślij SMS” — quality, bo poprawia obsługę klienta.",
+                "Wysyłanie to zachowanie → jego korzystny cel nie zmienia typu → nie wybrać."
+              ],
+              [
+                "„Limit pamięci procesu to 180 MiB w podanym teście” — constraint, bo każda liczba oznacza narzucony komponent.",
+                "Limit zasobu nie nazywa komponentu → cecha jakości, błędna reguła → nie wybrać."
+              ],
+              [
+                "„Potwierdzenie zawiera identyfikator wypożyczenia” — functional, bo opisuje dane wymaganego wyniku.",
+                "Dane potwierdzenia są rezultatem funkcji → typ i argument właściwe → wybrać."
+              ],
+              [
+                "„95% identyfikacji w ≤0,8 s przy 30 terminalach” — quality, bo podaje cechę czasu w warunkach pracy.",
+                "Czas identyfikacji to concern jakości → wybrać."
+              ]
+            ],
+            "key": [
+              "a",
+              "d",
+              "e"
+            ],
+            "w": 3,
+            "k": 3,
+            "change": "Klasyfikacja wszystkich trzech rodzajów z uzasadnieniem."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "System ma po anulowaniu zlecenia wysłać komunikat do operatora. Przy zadanym obciążeniu 99% komunikatów ma dotrzeć w ciągu 3 s. Do wysyłki narzucono komponent Omega, choć inne spełniają obie powyższe potrzeby. Rozdziel oczekiwania i podaj typ z powodem.",
+            "dimensions": [
+              "Wysłanie komunikatu to functional: wymagane zachowanie/interakcja.",
+              "Czas dla 99% komunikatów to quality: cecha działania w warunkach.",
+              "Omega to constraint: dodatkowo narzucony wybór realizacji mimo alternatyw."
+            ],
+            "critical": "Uznanie wszystkich oczekiwań za jeden typ wyłącznie z powodu słowa „komunikat” lub technologii.",
+            "border": "Można opisać trzy oczekiwania jednym akapitem; wymagane są trzy odrębne klasyfikacje i powody.",
+            "change": "Jedno złożone wymaganie trzeba rozdzielić znaczeniowo; otwarty powód nie wynika z klucza P.",
+            "w": 0
+          },
+          {
+            "type": "K",
+            "role": "D",
+            "stem": "Oceń klasyfikacje. System po zatwierdzeniu produkuje 5 kopii etykiety, ma dostępność 99,8% w uzgodnionym okresie i musi działać na platformie K narzuconej mimo odpowiednich alternatyw.",
+            "options": [
+              [
+                "Wymóg pięciu kopii etykiety jest funkcjonalny.",
+                "Liczba opisuje rezultat funkcji → functional → Prawda."
+              ],
+              [
+                "Wymóg dostępności jest jakościowy.",
+                "Dostępność jest cechą jakościową działania → Prawda."
+              ],
+              [
+                "Nakaz platformy K jest ograniczeniem w sensie RE.",
+                "Dodatkowy wybór platformy mimo alternatyw → constraint → Prawda."
+              ],
+              [
+                "Każde z tych wymagań jest jakościowe, bo zawęża zbiór realizacji.",
+                "Każdy wymóg może zawężać realizacje; o typie decyduje concern → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Kontrast rezultatu liczbowego, cechy i dodatkowego wyboru; bliskość do C-P jawna."
+          }
+        ]
+      },
+      {
+        "id": "KRY-T02-02",
+        "title": "NFR i rozdzielenie osi klasyfikacji",
+        "eo": "EO1.1.2",
+        "level": "L2",
+        "source": "C-S06 2.2.0 Non-functional/quality/functional s.34 i Kind of requirement s.25; C-S02/C-S03 3.3.0 §1.1 s.11–12",
+        "note": "W kontrolowanym znaczeniu Glossary non-functional requirement obejmuje quality requirement albo constraint. NFR nie jest więc synonimem samej jakości. Jeżeli materiał zawodowy stosuje inne znaczenie, trzeba je jawnie nazwać; w tym pakiecie klucze opierają się na profilu IREB. Wydajność traktujemy w tym profilu jako podkategorię jakości, nawet jeśli w innych klasyfikacjach bywa wyróżniana oddzielnie.\n\nNie mieszaj rodzaju wymagania z perspektywą. Wymaganie użytkownika może opisywać funkcję albo jakość, a wymaganie biznesowe wskazuje inną perspektywę niż podział concern. Nie myl też quality requirement z jakością samego sformułowania. Funkcjonalny zapis może być jasny lub niejasny; jakościowy zapis też może być niejasny. T21 ocenia jakość zapisu, T02 to, czego ten zapis wymaga. Rozdzielenie osi pozwala utrzymać sens terminów bez uznawania jednego członu za odpowiedź na wszystkie pytania klasyfikacyjne.",
+        "terms": "non-functional requirement — wymaganie niefunkcjonalne (T-09); quality requirement — T-07. NFR rozwijać przy pierwszym użyciu.",
+        "example": "Dodatkowy nakaz bazy danych jest constraint, więc należy do NFR w profilu Glossary. Wymóg czasu odpowiedzi jest quality, więc również należy do NFR.",
+        "counter": "Uogólnienie „NFR = jakość” obala dodatkowy nakaz konkretnego silnika. Jest NFR jako constraint, choć nie określa cechy jakościowej.",
+        "comparison": "Oś zbiorów: quality jest jedną z dwóch kategorii NFR; constraint jest drugą. Oś redakcyjna: jasny/niejasny zapis jest niezależna od obu — „system działa szybko” jest jakościowe i zarazem nieprecyzyjne.",
+        "rp": "Czy constraint należy do NFR? Czy jasny zapis funkcjonalny staje się quality requirement? Uzasadnij oba rozróżnienia.",
+        "answer": [
+          "NFR w Glossary obejmuje quality albo constraint; sam termin NFR nie oznacza wyłącznie jakości.",
+          "Jasność zapisu nie zmienia rodzaju oczekiwania; funkcja pozostaje funkcją."
+        ],
+        "remedy": "Rozdziel pytanie o typ oczekiwania od pytania o jakość jego zapisania. W profilu IREB NFR ma dwa człony: quality i constraint.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Który zakres ma non-functional requirement w przyjętym Glossary IREB?",
+            "options": [
+              [
+                "Każdy błędnie napisany zapis.",
+                "Jakość redakcyjna nie jest definicją rodzaju → nie wybrać."
+              ],
+              [
+                "Wyłącznie quality requirement.",
+                "Pomija constraint → za wąski zakres → nie wybrać."
+              ],
+              [
+                "Quality requirement albo constraint.",
+                "Oba człony odpowiadają hasłu → wybrać."
+              ],
+              [
+                "Wyłącznie każda funkcja związana z bezpieczeństwem.",
+                "Cel bezpieczeństwa może prowadzić do funkcji, lecz nie definiuje NFR → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Znajomość zakresu terminu wspierająca klasyfikację L2."
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń twierdzenia przy znaczeniu NFR z Glossary 2.2.0.",
+            "options": [
+              [
+                "Dodatkowy constraint należy do NFR.",
+                "NFR obejmuje constraint → Prawda."
+              ],
+              [
+                "Jednoznaczny zapis funkcji automatycznie jest quality requirement.",
+                "Jakość zapisu nie zmienia concern → Fałsz."
+              ],
+              [
+                "W tym profilu performance requirement mieści się w quality requirement.",
+                "Glossary przyjmuje wydajność jako podkategorię jakości → Prawda."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Rozdzielono zakres NFR, jakość zapisu i wydajność."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Recenzent mówi: „Zdanie o generowaniu potwierdzenia jest dobrze napisane, więc przeniosę je do wymagań jakościowych. Nakaz platformy nie może być NFR, bo nie mówi o jakości”. Skoryguj oba argumenty.",
+            "dimensions": [
+              "Generowanie potwierdzenia pozostaje functional; dobrze napisane oznacza cechę zapisu.",
+              "Nakaz platformy będący dodatkowym constraint należy do NFR według Glossary, niezależnie od braku quality concern."
+            ],
+            "critical": "Utrzymanie dowolnego z dwóch utożsamień jako reguły definicyjnej.",
+            "border": "Nie trzeba oceniać rzeczywistej jakości zdania; wystarczy rozdzielić osie i zakres terminu.",
+            "change": "Dwa błędne rozumowania trzeba poprawić samodzielnie.",
+            "w": 0
+          }
+        ]
+      }
+    ],
+    "reuse": [
+      "C-P-B01",
+      "C-P-F01",
+      "C-P-D01",
+      "C-P-R01",
+      "C-P-S01"
+    ],
+    "reuse_text": "KRY-P01/r1, REG-P1, CMP-P, EX/CE/REM-P oraz C-P-B01/F01/D01/R01/S01 zachowują ID i znaczenie z C03 v0.2. KRY-P01 nadal jest częściowym rozróżnieniem quality wobec funkcji i dodatkowo narzuconego rozwiązania. Nowe KRY-T02-01/r1 operacjonalizuje szerszy jawny zakres: rozpoznanie i uzasadnienie każdego z trzech rodzajów także w danych/interakcjach; KRY-T02-02 kontroluje NFR. Nie przemianowano C-P-D01 na P: jest A. Pełny wkład C-P z jego źródłami, rodzinami i ograniczeniami włączono niżej jako wierny aneks; autorski odczyt nie zastępuje review C.",
+    "delta": "Stan przed: C-P mierzy częściowe KRY-P01; istnieją 3 zamknięte i 2 otwarte aktywności C-P. Stan po: niezmienione ID oraz nowe KRY-T02-01/02, 6 dodatkowych zadań i 2 RP. Powód: objąć cały zadeklarowany trójpodział i NFR. Źródła: C-S02/03 §1.1; Glossary s.21/34; Handbook §1.1 s.10–11. Granice rodzin nowych zadań porównać z FAM-C-P1/P2 i FAM-ILL-P01; nie zakładać nowości na podstawie nowych ID."
+  },
+  {
+    "id": "T03",
+    "title": "Wartość RE i skutki jego niedostatków",
+    "slug": "Value_and_Inadequate_RE",
+    "eos": "EO1.2.1 L2; EO1.2.2 L1",
+    "scope": "Cztery wskazane korzyści RE; objawy brakujących/niejasnych/nieprawidłowych wymagań i cztery źródłowo wymienione przyczyny.",
+    "dependencies": "T01; T07/PR01 rozwija zasadę wartości; bez obowiązku liczenia ROI lub diagnozy prawdziwego projektu.",
+    "units": [
+      {
+        "id": "KRY-T03-01",
+        "title": "Cztery źródła wartości RE",
+        "eo": "EO1.2.1",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+        "note": "Wartość RE należy wyjaśniać przez mechanizm wpływu na rozwój systemu. Uzgodnienie potrzeby zmniejsza ryzyko zbudowania niewłaściwego systemu. Rozpoznanie problemu pomaga ustalić, co trzeba zmienić i dlaczego. Określony zakres oraz oczekiwane właściwości dają podstawę szacowania pracy i kosztu. Wymagania dostarczają również punktu odniesienia dla testowania: trzeba wiedzieć, co ma być sprawdzane.\n\nTo korzyści warunkowe, a nie gwarancja sukcesu, trafnego kosztorysu czy braku defektów. Nie wystarczy sporządzić dokument, jeśli opisuje niewłaściwy problem. W przykładzie brak reguły częściowego zwrotu może prowadzić do błędnego zachowania i przeróbek; jej wcześniejsze uzgodnienie dostarcza również danych do oszacowania wariantów obsługi oraz oczekiwanych testów. Jeden konkretny zapis może wspierać kilka korzyści, lecz nie oznacza to podwójnej niezależnej obserwacji wiedzy ucznia.\n\nNie podajemy uniwersalnych mnożników oszczędności ani dowiedzionego ROI. Dla EO L2 wymagane jest rozumienie, dlaczego dana czynność RE może dawać korzyść, a nie bezwarunkowe hasło „RE się opłaca”.",
+        "terms": "wartość — value (etykieta zasady z Syllabus); wymaganie — requirement. „Podstawa szacowania” nie znaczy gwarancji kosztu.",
+        "example": "Przed estymacją ustalono, że anulowanie ma zwalniać również część rezerwacji. Zespół może uwzględnić dodatkowe zachowanie w nakładzie i scenariuszach testów.",
+        "counter": "Uogólnienie „RE gwarantuje trafny budżet” obala projekt z poprawnie uzgodnionymi wymaganiami i błędną oceną złożoności technicznej. Wymagania są podstawą, nie gwarancją.",
+        "comparison": "Oś: rezultat bezpośredni i korzyść. Uzgodniona reguła zwrotu jest rezultatem RE; mniejsze ryzyko przeróbki, lepsza estymacja i podstawa testu to możliwe skutki użycia tego rezultatu.",
+        "rp": "Wymień cztery wskazane korzyści RE i wyjaśnij mechanizm przynajmniej dwóch.",
+        "answer": [
+          "Nazywa mniejsze ryzyko niewłaściwego systemu, lepsze rozumienie problemu, podstawę estymacji i podstawę testowania.",
+          "Dla dwóch korzyści łączy konkretny rezultat RE z użyciem, np. reguła → test albo zakres → estymacja; bez gwarancji."
+        ],
+        "remedy": "Użyj łańcucha: ustalona potrzeba lub reguła → decyzja zespołu → ograniczone ryzyko albo lepsza podstawa działania. Unikaj słowa „gwarantuje”.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Uzgodniono, kiedy rezerwacja może być anulowana i jakie dane muszą zostać odzyskane. Które DWIE korzyści wynikają bezpośrednio z takiego ustalenia?",
+            "options": [
+              [
+                "Każda przyszła zmiana staje się zbędna.",
+                "Ewolucja potrzeb pozostaje możliwa → nie wybrać."
+              ],
+              [
+                "Można przygotować oczekiwane wyniki testów anulowania.",
+                "Reguła opisuje oczekiwane zachowanie → podstawa testowania → wybrać."
+              ],
+              [
+                "Można uwzględnić warianty anulowania w oszacowaniu nakładu.",
+                "Zakres zachowania daje dane do estymacji → wybrać."
+              ],
+              [
+                "Na pewno nie wystąpią defekty w implementacji.",
+                "Uzgodnienie wymagań nie usuwa wszystkich usterek kodu → nie wybrać."
+              ]
+            ],
+            "key": [
+              "b",
+              "c"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Korzyści z użycia konkretnej reguły, bez gwarancji."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Zespół chce automatyzować druk etykiet, ale rozmowa RE wykazała, że opóźnienia wynikają głównie z braku danych zamówienia. Wyjaśnij wartość tej rozmowy, nawet jeżeli nie powstał jeszcze żaden kod.",
+            "dimensions": [
+              "Lepsze rozumienie problemu ujawniło przyczynę opóźnień inną niż założona.",
+              "Zmniejszono ryzyko inwestowania w system, który nie usuwa istotnego problemu; nie jest to gwarancja sukcesu nowej decyzji."
+            ],
+            "critical": "Uznanie braku kodu za dowód braku jakiejkolwiek wartości RE.",
+            "border": "Można wspomnieć oszczędzenie zbędnego nakładu jako interpretację, bez liczb lub twierdzenia o potwierdzonym ROI.",
+            "change": "Zmiana z reguły funkcji na rozpoznanie niewłaściwego problemu.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Nowe wymaganie doprecyzowuje, które części zamówienia można anulować. Wyjaśnij wszystkie cztery korzyści RE z §1.2 w odniesieniu do tego ustalenia; odróżnij podstawę działania od gwarancji.",
+            "dimensions": [
+              "Uzgodnienie potrzeb ogranicza ryzyko stworzenia niewłaściwego zachowania systemu.",
+              "Doprecyzowanie wyjątku poprawia rozumienie problemu częściowego anulowania.",
+              "Zakres wariantów stanowi podstawę estymacji nakładu i kosztu.",
+              "Oczekiwany rezultat daje podstawę testowania; żadna z korzyści nie gwarantuje trafnego kosztu lub braku defektów."
+            ],
+            "critical": "Uznanie wymagania za gwarancję bezbłędnej realizacji lub dokładnego kosztu.",
+            "border": "Można opisać korzyści bez liczb; poprawne cztery związki są ważniejsze od identycznych nazw.",
+            "change": "Kontrola obejmuje cztery składowe kryterium, zamiast tylko podstawy testu.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T03-02",
+        "title": "Objawy i przyczyny niewłaściwego RE",
+        "eo": "EO1.2.2",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 EO1.2.2 s.11 i §1.2 s.12; C-S07 1.3.2 §1.2 s.12–13",
+        "note": "Typowe objawy niewłaściwego RE to wymagania brakujące, niejasne lub nieprawidłowe. Brakujące: istotne oczekiwanie nie zostało uwzględnione. Niejasne: strony mogą inaczej rozumieć zapis. Nieprawidłowe: treść nie odpowiada właściwemu oczekiwaniu lub opisuje błędny warunek. Kategorie mogą współwystępować; nie są diagnozą wyczerpującą każdy problem projektu.\n\nSyllabus wskazuje w szczególności pośpiech prowadzący od razu do budowania, problemy komunikacyjne, założenie oczywistości wymagań oraz niewystarczające wykształcenie i umiejętności RE. To możliwe przyczyny, a nie jednoznaczne etykiety przypisywane z pojedynczego objawu. Niejasne wymaganie może mieć kilka źródeł; bez danych nie wiadomo, które wystąpiło. Podobnie opóźnienie projektu samo w sobie nie dowodzi niedostatku RE — może wynikać z innych czynników.\n\nPoziom L1 wymaga nazwania i rozpoznania wskazanego katalogu. Przykłady przyczyn w materiale są autorskie i służą odróżnieniu symptomu od mechanizmu, nie ocenie kompetencji konkretnego zespołu.",
+        "terms": "symptom — objaw/symptom; cause — przyczyna: robocze etykiety dydaktyczne. Missing, unclear, incorrect requirements — brakujące, niejasne, nieprawidłowe wymagania.",
+        "example": "„System działa szybko” bez uzgodnionego znaczenia jest objawem niejasności. „Wszyscy przecież wiedzą, jak szybko” obrazuje założenie oczywistości jako możliwą przyczynę.",
+        "counter": "Uogólnienie „każde opóźnienie dowodzi złego RE” obala uzgodniony zakres z opóźnioną dostawą sprzętu. Sam termin nie wskazuje źródła problemu.",
+        "comparison": "Oś: co obserwujemy versus co mogło do tego doprowadzić. Niejasny zapis to objaw; brak rozmowy z powodu pośpiechu to możliwa przyczyna. Jedno nie ustala automatycznie drugiego.",
+        "rp": "Wymień trzy symptomy i cztery wskazane w syllabusie przyczyny. Czy sam symptom ustala konkretną przyczynę?",
+        "answer": [
+          "Nazywa brakujące, niejasne i nieprawidłowe wymagania.",
+          "Nazywa pośpiech ku budowie, problemy komunikacji, założenie oczywistości, brak edukacji/umiejętności.",
+          "Nie przypisuje jednej pewnej przyczyny z samego symptomu."
+        ],
+        "remedy": "Oddziel stan wymagania od możliwego źródła tego stanu. Źródłowa lista pomaga rozpoznawać ryzyka; nie jest automatycznym narzędziem diagnozy projektu.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń twierdzenia o symptomach i przyczynach niewłaściwego RE.",
+            "options": [
+              [
+                "Brakujące i niejasne wymagania są wymienionymi symptomami.",
+                "Obie kategorie są w §1.2 → Prawda."
+              ],
+              [
+                "Założenie oczywistości wymagań jest wymienioną możliwą przyczyną.",
+                "Syllabus wskazuje to założenie jako źródło niedostatków → Prawda."
+              ],
+              [
+                "Sam niejasny zapis dowodzi, że autor nie odbył szkolenia RE.",
+                "Brak edukacji jest jedną możliwością, nie jedyną przyczyną niejasności → Fałsz."
+              ],
+              [
+                "Pośpieszne rozpoczęcie budowy i problemy komunikacji należą do wskazanych przyczyn.",
+                "Oba mechanizmy występują w katalogu §1.2 → Prawda."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Katalog i zakaz pewnej diagnozy z objawu."
+          },
+          {
+            "type": "P",
+            "role": "F",
+            "stem": "Które TRZY pozycje są symptomami niewłaściwego RE wymienionymi w §1.2?",
+            "options": [
+              [
+                "Brakujące wymagania.",
+                "Brak istotnego wymagania jest objawem → wybrać."
+              ],
+              [
+                "Niejasne wymagania.",
+                "Niejasność jest objawem → wybrać."
+              ],
+              [
+                "Nieprawidłowe wymagania.",
+                "Błędna treść należy do symptomów → wybrać."
+              ],
+              [
+                "Przekonanie, że wymagania są oczywiste.",
+                "To możliwa przyczyna, nie pozycja listy symptomów → nie wybrać."
+              ],
+              [
+                "Niewystarczające umiejętności RE.",
+                "To możliwa przyczyna → nie wybrać."
+              ]
+            ],
+            "key": [
+              "a",
+              "b",
+              "c"
+            ],
+            "w": 3,
+            "k": 3,
+            "change": "Kontrast dwóch list; wybór dotyczy wyłącznie symptomów."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Wypisz cztery wskazane w §1.2 przyczyny niewłaściwego RE. Następnie rozpoznaj kategorię: w projekcie w ogóle nie uwzględniono wymaganego wyjątku obsługi.",
+            "dimensions": [
+              "Przyczyny: pośpiech do budowania, problemy komunikacji, oczywistość wymagań, brak edukacji/umiejętności.",
+              "Nieuwzględnienie wyjątku obrazuje brakujące wymaganie; dane nie ustalają konkretnej przyczyny."
+            ],
+            "critical": "Wskazanie jednej pewnej przyczyny pominięcia bez danych.",
+            "border": "Dopuszczalne „zbyt szybkie kodowanie” dla pośpiechu, jeśli sens jest zachowany.",
+            "change": "Odtworzenie listy przyczyn i rozpoznanie brakującego zakresu.",
+            "w": 0
+          }
+        ]
+      }
+    ],
+    "reuse": [],
+    "delta": "PL EO1.2.2 s.11 wprost wymienia symptomy i przyczyny; EN EO s.11 wymienia symptomy, a §1.2 s.12 także przyczyny. Przyjęto zakres obejmujący oba, bez konfliktu z M01. Nie wolno z samego symptomu wywnioskować jednej rzeczywistej przyczyny. Stan M01: brak → treść autorsko opracowana, review pending."
+  },
+  {
+    "id": "T04",
+    "title": "Zastosowania i perspektywy RE",
+    "slug": "Applications_and_Perspectives",
+    "eos": "EO1.3.1 L1",
+    "scope": "Zastosowanie do różnych systemów; pięć perspektyw występowania wymagań. Poziom EO L1 mimo nagłówka §1.3 L2.",
+    "dependencies": "T01 system/stakeholder; T02 rodzaje wymagań; nie wymuszać klasyfikacji domenowej L3.",
+    "units": [
+      {
+        "id": "KRY-T04-01",
+        "title": "RE dla różnych rodzajów systemów",
+        "eo": "EO1.3.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 EO1.3.1 s.11 i §1.3 s.12; C-S07 1.3.2 §1.3 s.13; C-S06 System s.29",
+        "note": "RE może być stosowane do wymagań dotyczących dowolnego rodzaju systemu. Syllabus wskazuje jako dominujący obszar systemy z ważną rolą oprogramowania, ale nie ogranicza definicji do tego obszaru. W takich systemach występują zwykle składniki programowe, fizyczne i organizacyjne. Oznacza to, że przedmiotem wymagań może być również urządzenie, procedura, usługa lub kombinacja elementów.\n\nSystem łączący software i składniki fizyczne nazywamy cyber-physical, a szerszy system obejmujący także ludzi i aspekty organizacyjne — socio-technical. Są to określenia składu i perspektywy, nie trzy rodzaje wymagań. Nazwanie elementów nieinformatycznych pomaga nie przeoczyć ich wpływu. Ten temat sprawdza rozpoznanie obszaru zastosowania; nie wymaga kompletnej architektury ani samodzielnej analizy granic.\n\nNie należy z dominacji zastosowań software wywodzić normy „wyłącznie software”. Podobnie użycie aplikacji nie usuwa roli sprzętu czy procedur w analizowanej całości.",
+        "terms": "system cyberfizyczny — cyber-physical system; system socjotechniczny — socio-technical system: objaśnienia składu według C-S06 System s.29 i C-S07 s.13; nie odrębne EO.",
+        "example": "Stanowisko wydawania paczek może obejmować aplikację, zamek, skaner i zasady przekazania paczki przez pracownika. RE dotyczy oczekiwań wobec takiej całości.",
+        "counter": "Uogólnienie „RE nie dotyczy procedury ręcznej” obala procedura obsługi zwrotu z określonym celem, rolami i wymaganiami, choć nie wprowadza się nowego programu.",
+        "comparison": "Oś: skład analizowanej całości. Sam program, system z urządzeniem i cała usługa z ludźmi mogą mieć wymagania. Rozszerzanie perspektywy nie tworzy automatycznie nowego rodzaju functional/quality/constraint.",
+        "rp": "Gdzie można stosować RE? Czy dominacja systemów software ogranicza dopuszczalny zakres?",
+        "answer": [
+          "RE dotyczy wymagań dla różnych rodzajów systemów, także produktów, usług, procedur i urządzeń.",
+          "Dominujący obszar software nie oznacza wyłączności; rozpoznaje składniki fizyczne i organizacyjne."
+        ],
+        "remedy": "Oddziel obserwację najczęstszych zastosowań od definicji dopuszczalnego zakresu. System nie musi być wyłącznie aplikacją.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Które DWA twierdzenia poprawnie opisują zakres zastosowania RE?",
+            "options": [
+              [
+                "RE może dotyczyć urządzenia i współpracującego oprogramowania.",
+                "Szerokie znaczenie systemu obejmuje całość cyberfizyczną → wybrać."
+              ],
+              [
+                "RE może dotyczyć procedury realizującej określony cel organizacji.",
+                "Procedura może być przedmiotem wymagań przy szerokim znaczeniu systemu → wybrać."
+              ],
+              [
+                "Dominacja zastosowań software oznacza, że RE jest z definicji ograniczone do samego kodu.",
+                "Opis dominującego zastosowania nie jest ograniczeniem normatywnym → nie wybrać."
+              ],
+              [
+                "RE można stosować tylko wtedy, gdy wybrano liniowy proces wytwarzania.",
+                "Zastosowanie nie jest uzależnione od takiego procesu; zasady dotyczą różnych podejść → nie wybrać; C-S02/C-S03 preambuła s.3 i PR09 s.18."
+              ]
+            ],
+            "key": [
+              "a",
+              "b"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Rozpoznanie dopuszczalnych obszarów."
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń twierdzenia o zastosowaniu RE.",
+            "options": [
+              [
+                "RE może obejmować wymagania dla usługi z elementami organizacyjnymi.",
+                "Usługi i elementy organizacyjne są dopuszczone → Prawda."
+              ],
+              [
+                "Dominujące zastosowanie w software oznacza zakaz RE dla sprzętu.",
+                "Dominacja opisuje praktykę, nie wyłączność → Fałsz."
+              ],
+              [
+                "System z software i elementami fizycznymi może być cyberfizyczny.",
+                "To podany zakres określenia składu → Prawda."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Rozpoznanie twierdzeń bez tworzenia modelu."
+          },
+          {
+            "type": "A",
+            "role": "D",
+            "stem": "Który wniosek wynika z obecności ludzi i procedur w systemie usługi?",
+            "options": [
+              [
+                "Wszystkie wymagania tej usługi są constraint.",
+                "Skład systemu nie określa typu każdego wymagania → nie wybrać."
+              ],
+              [
+                "Nie może wystąpić żaden komponent fizyczny.",
+                "Ludzie/procedury nie wykluczają sprzętu → nie wybrać."
+              ],
+              [
+                "Wymagania mogą dotyczyć szerszej całości niż sam program.",
+                "Skład socjotechniczny poszerza przedmiot analizy → wybrać."
+              ],
+              [
+                "RE staje się niedozwolone.",
+                "Elementy organizacyjne nie wyłączają RE → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Kontrast zakresu systemu i rodzaju wymagania."
+          }
+        ]
+      },
+      {
+        "id": "KRY-T04-02",
+        "title": "Pięć perspektyw występowania wymagań",
+        "eo": "EO1.3.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.3 s.12; C-S06 2.2.0 Business/Domain s.33, System/Stakeholder/User s.34; C-S07 1.3.2 §1.3 s.13",
+        "note": "Syllabus wyróżnia wymagania systemowe, interesariuszy, użytkowników, domenowe i biznesowe. Systemowe odnoszą się do wymaganego systemu. Interesariuszy wyrażają oczekiwania z ich perspektywy, a użytkowników — potrzeby osób korzystających z systemu; wymagania użytkowników są podzbiorem wymagań interesariuszy. Domenowe dotyczą właściwości domeny, które mają zachodzić w kontekście systemu. Biznesowe dotyczą celów, zamierzeń i potrzeb organizacji.\n\nJest to perspektywa występowania, a nie alternatywny zamknięty podział concern. Wymóg użytkownika może dotyczyć funkcji lub jakości, a oczekiwanie biznesowe może zostać rozwinięte do różnych wymagań systemowych. Nie trzeba przypisywać każdemu zdaniu dokładnie jednej etykiety z pięciu, jeżeli kontekst tego nie rozstrzyga. Aby pytanie było jednoznaczne, wskazujemy perspektywę, np. cel organizacji albo właściwość rzeczywistej domeny.\n\nWymaganie domenowe nie jest automatycznie opisem algorytmu aplikacji: reguła o tym, co ma być prawdą w otoczeniu, wymaga przełożenia na obserwowalne i sterowalne własności systemu. To przełożenie szerzej wyjaśnia T07/PR04. W T04 wystarcza rozpoznanie znaczenia pięciu nazw.",
+        "terms": "wymaganie systemowe — system requirement; interesariusza — stakeholder requirement; użytkownika — user requirement; domenowe — domain requirement; biznesowe — business requirement: C-S06 s.33–34. „Dotyczące domeny” w sylabusie PL jest wariantem nazwy domenowego.",
+        "example": "„Organizacja chce ograniczyć straty magazynowe” wskazuje perspektywę biznesową; „operator chce znaleźć różnicę stanu” użytkownika; „każda wydana paczka ma mieć rzeczywistego odbiorcę” może opisywać wymaganą właściwość domeny.",
+        "counter": "Uogólnienie „user requirement jest czwartym rodzajem obok functional/quality/constraint” obala potrzeba użytkownika otrzymania potwierdzenia: perspektywa user i concern functional mogą współistnieć.",
+        "comparison": "Oś 1: z czyjej perspektywy / czego dotyczy wymaganie — pięć nazw. Oś 2: przedmiot oczekiwania — funkcja, jakość, constraint. Wymóg czasu oczekiwania zgłoszony przez użytkownika ma perspektywę user i concern quality.",
+        "rp": "Nazwij pięć perspektyw i wskaż relację user requirements do stakeholder requirements.",
+        "answer": [
+          "Wymienia system, stakeholder, user, domain i business requirements z poprawnym ogólnym sensem.",
+          "User requirements są podzbiorem stakeholder requirements; perspektywa nie zastępuje rodzaju z T02."
+        ],
+        "remedy": "Najpierw nazwij perspektywę lub przedmiot, a dopiero osobno rodzaj oczekiwania. Użytkownik jest interesariuszem; domena nie oznacza wyłącznie kodu.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń znaczenia perspektyw wymagań.",
+            "options": [
+              [
+                "Business requirement może wyrażać cel organizacji.",
+                "Cel organizacji to perspektywa biznesowa → Prawda."
+              ],
+              [
+                "User requirements są podzbiorem stakeholder requirements.",
+                "User jest stakeholderem i wyraża własne potrzeby → Prawda."
+              ],
+              [
+                "Domain requirement dotyczy wymaganej właściwości domeny w kontekście systemu.",
+                "To sens wskazany w źródle → Prawda."
+              ],
+              [
+                "System requirement musi być zawsze constraint.",
+                "Odniesienie do systemu nie określa concern → Fałsz."
+              ],
+              [
+                "Stakeholder requirement może wyrażać potrzebę osoby niekorzystającej bezpośrednio z systemu.",
+                "Nie każdy stakeholder jest userem → Prawda."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              true,
+              false,
+              true
+            ],
+            "w": 3,
+            "m": 5,
+            "change": "Pięć perspektyw w jawnym rozpoznaniu."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Rozpoznaj perspektywy: (1) cel organizacji ograniczenia strat; (2) potrzeba osoby korzystającej z systemu; (3) wymagana właściwość domeny; (4) oczekiwanie operatora utrzymania jako interesariusza; (5) właściwość, którą ma mieć system. Nie klasyfikuj concern.",
+            "dimensions": [
+              "(1) business; (2) user.",
+              "(3) domain; (4) stakeholder; (5) system.",
+              "Nazwy nie są zamiennikami functional/quality/constraint; user należy także do szerszej perspektywy stakeholder."
+            ],
+            "critical": "Wymuszanie rozłączności user i stakeholder jako warunku poprawności.",
+            "border": "Można wskazać user+stakeholder przy (2), zachowując węższą nazwę user.",
+            "change": "Odtworzenie wszystkich nazw przy jawnie podanych perspektywach L1.",
+            "w": 0
+          },
+          {
+            "type": "A",
+            "role": "D",
+            "stem": "Zdanie „Użytkownik chce, aby 95% odpowiedzi pojawiało się w ciągu sekundy” opisano jako user requirement. Który wniosek o tej etykiecie jest poprawny?",
+            "options": [
+              [
+                "Oznacza, że autor zapisał kod.",
+                "Perspektywa potrzeby nie jest implementacją → nie wybrać."
+              ],
+              [
+                "Nazywa perspektywę użytkownika; nie wyklucza rodzaju quality.",
+                "Perspektywa i concern to inne osie → wybrać."
+              ],
+              [
+                "Wyklucza wszystkie rodzaje z T02.",
+                "Osie mogą współistnieć → nie wybrać."
+              ],
+              [
+                "Dowodzi, że wymaganie nie ma żadnego interesariusza.",
+                "User jest stakeholderem → nie wybrać."
+              ]
+            ],
+            "key": "b",
+            "w": 1,
+            "change": "Kontrola relacji osi w krótkim opisie."
+          }
+        ]
+      }
+    ],
+    "reuse": [],
+    "delta": "Źródło: §1.3 ma nagłówek L2, lecz EO1.3.1 ma L1 w EN/PL. Zachowano L1 konkretnego EO. Nie odziedziczono poziomu nagłówka. Pięć perspektyw nie zastępuje trójpodziału rodzajów z T02."
+  },
+  {
+    "id": "T05",
+    "title": "Zadania RE, rola i kompetencje Requirements Engineer",
+    "slug": "Tasks_Role_and_Competencies",
+    "eos": "EO1.4.1 L1; EO1.5.1 L1; EO1.6.1 L1",
+    "scope": "Cztery główne zadania i tailoring; rola względem stanowiska; sześć obszarów uczenia FL oraz objaśniające soft skills z Handbook.",
+    "dependencies": "T01; T30–T32 szczegółowo rozwijają proces, T39–T40 narzędzia. Brak obowiązku zawodowego L3 w tym temacie.",
+    "units": [
+      {
+        "id": "KRY-T05-01",
+        "title": "Zadania RE i tailoring procesu",
+        "eo": "EO1.4.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.4 s.12; C-S07 1.3.2 §1.4 s.13–14",
+        "note": "Główne zadania RE to pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. Syllabus zalicza analizę wymagań i rozwiązywanie ich konfliktów do pozyskiwania. Narzędzia mogą pomagać w realizacji tych zadań, ale zakup programu nie jest piątym równorzędnym zadaniem tego wykazu i nie zastępuje ich wykonania.\n\nAby realizować zadania właściwie, trzeba dopasować proces RE do sytuacji. Tailoring nie oznacza rezygnacji z dyscypliny. Określa dobór sposobu pracy, praktyk i artefaktów do problemu, otoczenia i procesu wytwarzania. Znajomość czterech nazw nie ustala obowiązkowej sekwencji jednorazowego przechodzenia przez etapy. Zadania mogą powracać i współdziałać; szczegóły konfiguracji procesu są właścicielskim zakresem T30–T32.\n\nNa L1 należy rozpoznać zadanie i wiedzieć o potrzebie dostosowania procesu. Nie wymagamy samodzielnego zaprojektowania procesu dla złożonej organizacji ani wyboru jedynej techniki zawsze właściwej.",
+        "terms": "pozyskiwanie — elicitation; dokumentowanie — documentation; walidacja — validation; zarządzanie wymaganiami — requirements management; tailoring — projektowo „dostosowanie procesu”.",
+        "example": "Rozmowa o oczekiwaniach wspiera pozyskiwanie; zapis uzgodnień dokumentowanie; porównanie z potrzebami walidację; obsługa zmian i powiązań zarządzanie.",
+        "counter": "Uogólnienie „jedna skuteczna procedura jest dobra wszędzie” obala zastosowanie ciężkiego trybu zatwierdzania do małego eksperymentu bez rozważenia jego celu i ryzyka. Wymagana jest refleksja i dopasowanie.",
+        "comparison": "Oś: zadanie versus sposób wykonania. Walidacja jest zadaniem; wybrany review to praktyka jego wykonania. Narzędzie przechowujące wymagania wspiera pracę, lecz samo nie oznacza walidacji.",
+        "rp": "Wymień cztery główne zadania RE, miejsce analizy i rozwiązywania konfliktów oraz sens tailoring.",
+        "answer": [
+          "Nazywa elicitation, documentation, validation i management.",
+          "Analiza i rozwiązywanie konfliktów należą w tym wykazie do elicitation; proces dobiera się do sytuacji."
+        ],
+        "remedy": "Oddziel „co robimy” od „jaką praktyką/narzędziem”. Cztery zadania pozostają; sposób ich realizacji wymaga dopasowania.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń twierdzenia o wykazie zadań RE.",
+            "options": [
+              [
+                "Walidacja i dokumentowanie należą do głównych zadań RE.",
+                "Obie nazwy należą do §1.4 → Prawda."
+              ],
+              [
+                "Analizę wymagań i rozwiązywanie konfliktów zaliczono tu do pozyskiwania.",
+                "Taki zakres elicitation przyjmuje syllabus → Prawda."
+              ],
+              [
+                "Proces RE należy dostosować do sytuacji.",
+                "§1.4 wymaga tailoring → Prawda."
+              ],
+              [
+                "Zakup narzędzia zastępuje pozyskiwanie wymagań.",
+                "Wsparcie narzędziowe nie zastępuje zadania → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Nazwy i potrzeba dostosowania."
+          },
+          {
+            "type": "P",
+            "role": "F",
+            "stem": "Które DWIE czynności odpowiadają walidacji lub zarządzaniu wymaganiami?",
+            "options": [
+              [
+                "Pozyskanie nowej potrzeby w wywiadzie, bez jej sprawdzania lub zarządzania istniejącym zapisem.",
+                "To elicitation, nie jedna z dwóch czynności wyznaczonych pytaniem → nie wybrać."
+              ],
+              [
+                "Utrwalenie treści rozmowy jako nowego opisu, bez oceny adekwatności.",
+                "To dokumentowanie; sam zapis nie jest walidacją ani obsługą istniejącego wymagania → nie wybrać."
+              ],
+              [
+                "Sprawdzenie, czy zapisane oczekiwanie odpowiada potrzebie interesariusza.",
+                "To potwierdzenie adekwatności wobec potrzeby → walidacja → wybrać."
+              ],
+              [
+                "Utrzymanie wersji i obsługa zmiany istniejącego wymagania.",
+                "To zarządzanie istniejącymi wymaganiami → wybrać."
+              ]
+            ],
+            "key": [
+              "c",
+              "d"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Rozpoznanie zadań w prostych opisach, bez projektowania procesu."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Zespół utrzymuje, że cztery zadania RE można wykonać wyłącznie raz w jednej niezmiennej kolejności. Przypomnij wykaz zadań i źródłową zasadę dotyczącą procesu.",
+            "dimensions": [
+              "Pozyskiwanie, dokumentowanie, walidacja, zarządzanie to wykaz zadań, nie gwarantowany jednorazowy harmonogram.",
+              "Odpowiedni proces trzeba dostosować; nie ma podstaw do uniwersalnej niezmiennej sekwencji."
+            ],
+            "critical": "Potwierdzenie uniwersalnego procesu wyłącznie na podstawie kolejności listy.",
+            "border": "Nie trzeba proponować własnego harmonogramu.",
+            "change": "Rozpoznanie różnicy wykaz–proces.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T05-02",
+        "title": "Rola Requirements Engineer a stanowisko",
+        "eo": "EO1.5.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.5 s.13; C-S06 2.2.0 Inżynier wymagań s.14; C-S07 1.3.2 §1.5 s.14",
+        "note": "Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska. W tę rolę wchodzą osoby pozyskujące, dokumentujące, walidujące lub zarządzające wymaganiami w ramach swoich obowiązków, mające pogłębioną wiedzę RE i zdolność połączenia problemu z potencjalnymi rozwiązaniami. W praktyce mogą ją pełnić analitycy, specjaliści aplikacyjni, Product Owners, systems engineers oraz programiści.\n\nNie należy wyprowadzać pełnienia roli wyłącznie z etykiety stanowiska. Podobnie brak tytułu „Requirements Engineer” w strukturze organizacyjnej nie dowodzi braku pracy RE. W zadaniu rozpoznajemy charakterystykę roli; nie przeprowadzamy audytu kompetencji rzeczywistej osoby. Jedna osoba może łączyć role, a obowiązki RE mogą być rozdzielone między kilka osób. Zwrot „i/lub” w zakresie zadań nie oznacza obowiązku osobistego wykonania przez każdego inżyniera wszystkich czterech czynności w każdym projekcie.",
+        "terms": "inżynier wymagań — Requirements Engineer; rola — role; stanowisko — job title: ostatnie zestawienie jest objaśnieniem §1.5.",
+        "example": "Product Owner prowadzący uzgodnienia potrzeb i walidację może działać w roli RE, choć jego etat nie ma takiej nazwy.",
+        "counter": "Uogólnienie „programista nie może pełnić roli RE” obala programista uczestniczący kompetentnie w pozyskiwaniu i uzgadnianiu wymagań. Sama nazwa stanowiska tego nie wyklucza.",
+        "comparison": "Oś: formalna etykieta organizacyjna versus wykonywana rola. „Analityk” jest nazwą stanowiska; faktyczne czynności i wiedza mogą wskazywać rolę RE. Etykieta nie jest samodzielnym dowodem kompetencji.",
+        "rp": "Scharakteryzuj rolę Requirements Engineer i podaj dwa stanowiska, które mogą ją pełnić.",
+        "answer": [
+          "Wskazuje zadania RE, wiedzę RE oraz łączenie problemu z potencjalnymi rozwiązaniami.",
+          "Dopuszcza np. analityka, PO, systems engineer lub programistę; rola nie wymaga konkretnej nazwy stanowiska."
+        ],
+        "remedy": "Sprawdź obowiązki i charakterystykę wiedzy, nie samą etykietę etatu. Nie oceniaj pełnej kompetencji zawodowej z jednego quizu.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Które stwierdzenie o roli Requirements Engineer jest poprawne?",
+            "options": [
+              [
+                "Zawsze sprowadza się do przepisywania wypowiedzi bez rozumienia problemu.",
+                "Rola obejmuje wiedzę i most problem–rozwiązania → nie wybrać."
+              ],
+              [
+                "Nie wymaga znajomości RE.",
+                "Pogłębiona wiedza należy do charakterystyki → nie wybrać."
+              ],
+              [
+                "Może być pełniona przez Product Ownera lub programistę.",
+                "§1.5 wymienia różne funkcje zawodowe → wybrać."
+              ],
+              [
+                "Musi być osobnym stanowiskiem w każdej organizacji.",
+                "Syllabus mówi zwykle o roli, nie obowiązkowym etacie → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Charakterystyka roli bez oceny osoby."
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń twierdzenia o roli RE.",
+            "options": [
+              [
+                "Brak etatu o nazwie Requirements Engineer nie dowodzi braku tej roli.",
+                "Rolę mogą pełnić osoby o innych stanowiskach → Prawda."
+              ],
+              [
+                "Sama nazwa stanowiska wystarcza do poświadczenia zawodowej kompetencji.",
+                "Etykieta nie potwierdza wiedzy i działania → Fałsz; granica interpretacji charakterystyki."
+              ],
+              [
+                "Łączenie problemu z potencjalnymi rozwiązaniami należy do charakterystyki roli.",
+                "To wprost element §1.5 → Prawda."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 3,
+            "change": "Kontrast stanowiska i charakterystyki."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Analityk i deweloper dzielą pracę: pierwszy pozyskuje i dokumentuje potrzeby, drugi wraz z interesariuszami waliduje ich znaczenie. Obaj mają wiedzę RE i rozumieją problem. Czy brak osobnego etatu wyklucza rolę RE? Odnieś odpowiedź do charakterystyki.",
+            "dimensions": [
+              "Nie; rola RE nie jest uzależniona od osobnego tytułu stanowiska.",
+              "Podane zadania, wiedza i związek problem–rozwiązanie odpowiadają charakterystyce; nie stanowią całościowego audytu kompetencji obu osób."
+            ],
+            "critical": "Wykluczenie roli wyłącznie z powodu nazwy etatu.",
+            "border": "Wystarczy wskazać możliwość pełnienia roli, bez certyfikowania kompetencji.",
+            "change": "Charakterystykę rozpoznaje się przy podziale obowiązków.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T05-03",
+        "title": "Co inżynier wymagań powinien poznawać",
+        "eo": "EO1.6.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §1.6 s.13; C-S07 1.3.2 §1.6 s.14–15",
+        "note": "Podstawowy zakres uczenia obejmuje zasady RE, dokumentowanie w różnych postaciach, praktyki opracowywania wymagań, odpowiednie procesy i struktury pracy, zarządzanie wymaganiami oraz wsparcie narzędziowe. To sześć obszarów odpowiadających EU2–EU7; EU1 daje wprowadzenie. Lista nie nakazuje nauki jednego konkretnego produktu ani sprowadzania RE do diagramów.\n\nHandbook dodatkowo wskazuje umiejętności interpersonalne: słuchanie, moderowanie, negocjowanie, mediację, empatię i otwartość na potrzeby oraz pomysły innych. W tym temacie są objaśniającym rozwinięciem roli, jawnie opartym na Handbook. Nie tworzymy z nich nowych oficjalnych EO ani testu praktycznego poziomu L3. Nauka pojęć o narzędziach to inna rzecz niż sama obsługa jednego interfejsu; podobnie znajomość celu negocjacji nie poświadcza zawodowej biegłości negocjatora.\n\nWymagany wynik L1 to rozpoznanie obszarów i ich sensu. Szczegółowe wykonania i techniki pozostają w odpowiednich tematach późniejszych zbiorów.",
+        "terms": "zasady — principles; artefakty — work products; opracowywanie — elaboration; proces i struktura pracy — process and working structure; zarządzanie — management; wsparcie narzędziowe — tool support: nazwy obszarów sylabusa.",
+        "example": "Kandydat uczy się dobierać reprezentację wymagania, rozumieć walidację i zarządzać zmianą; znajomość jednej notacji nie wyczerpuje zakresu.",
+        "counter": "Uogólnienie „kurs narzędzia wyczerpuje RE” obala sytuacja, gdy użytkownik programu umie tworzyć rekordy, lecz nie rozróżnia potrzeby i narzuconego rozwiązania.",
+        "comparison": "Oś: obszar kompetencji versus konkretny nośnik/praktyka. Tool support jest obszarem; kliknięcia w programie są jedną umiejętnością operacyjną. Moderowanie spotkania wspiera współpracę, ale nie zastępuje dokumentowania czy walidacji.",
+        "rp": "Wymień sześć obszarów nauki wskazanych w §1.6. Osobno nazwij dwa przykłady soft skills z Handbook.",
+        "answer": [
+          "Wymienia zasady, dokumentowanie, opracowywanie, procesy, zarządzanie i narzędzia.",
+          "Soft skills np. słuchanie i moderacja są rozwinięciem Handbook, a nie nowymi EO; rozpoznanie nie certyfikuje wykonania."
+        ],
+        "remedy": "Sprawdź komplet sześciu obszarów, zamiast redukować RE do narzędzia, pisania dokumentów albo diagramów.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Które TRZY pozycje są obszarami nauki wskazanymi w §1.6?",
+            "options": [
+              [
+                "Zarządzanie istniejącymi wymaganiami.",
+                "To wskazany obszar EU6 → wybrać."
+              ],
+              [
+                "Obowiązkowe opanowanie jednego konkretnego komercyjnego edytora.",
+                "Syllabus nie narzuca konkretnego produktu → nie wybrać."
+              ],
+              [
+                "Zastąpienie wszystkich uzgodnień samą pamięcią autora.",
+                "To nie jest obszar wskazanego zestawu umiejętności → nie wybrać."
+              ],
+              [
+                "Dokumentowanie wymagań w różnych formach.",
+                "To wskazany obszar EU3 → wybrać."
+              ],
+              [
+                "Procesy i struktury pracy RE.",
+                "To wskazany obszar EU5 → wybrać."
+              ]
+            ],
+            "key": [
+              "a",
+              "d",
+              "e"
+            ],
+            "w": 3,
+            "k": 3,
+            "change": "Rozpoznanie części katalogu; pełna lista odtwarzana w F/RP."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Przywołaj pełną listę sześciu obszarów nauki z §1.6 i połącz każdy z krótkim sensem. Nie wybieraj konkretnych narzędzi.",
+            "dimensions": [
+              "Zasady RE; dokumentowanie w różnych formach; opracowywanie różnymi praktykami.",
+              "Definiowanie i stosowanie odpowiednich procesów; zarządzanie wymaganiami; wsparcie narzędziowe."
+            ],
+            "critical": "Zastąpienie listy samą obsługą jednego programu.",
+            "border": "Dopuszczalne nazwy EU2–EU7 z poprawnym sensem; pominięty obszar to częściowe odtworzenie.",
+            "change": "Swobodne przywołanie pełnej listy zamiast wyboru trzech znanych pozycji.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Kurs ma obejmować wyłącznie obsługę edytora i rysowanie diagramów. Przywołaj sześć obszarów §1.6, pokaż braki tej propozycji, a osobno wskaż dwa soft skills rozwijane w Handbook.",
+            "dimensions": [
+              "Zasady, dokumentowanie i opracowywanie wymagań to trzy obszary; sam diagram nie pokrywa wszystkich.",
+              "Proces i struktura pracy, zarządzanie oraz wsparcie narzędziowe uzupełniają pełną szóstkę; obsługa jednego edytora nie wyczerpuje żadnego pełnego zakresu RE.",
+              "Np. słuchanie i moderowanie są interpersonalnym rozwinięciem Handbook; nie nowymi EO ani dowodem zawodowej biegłości."
+            ],
+            "critical": "Uznanie dwóch wskazanych umiejętności za kompletny zakres nauki RE.",
+            "border": "Nazwy EU2–EU7 z poprawnym sensem wystarczą.",
+            "change": "Pełna szóstka sprawdzana w nowym opisie niepełnego kursu, zamiast rozpoznania trzech tez.",
+            "w": 0
+          }
+        ]
+      }
+    ],
+    "reuse": []
+  },
+  {
+    "id": "T06",
+    "title": "Przegląd zasad RE i ich terminologia",
+    "slug": "Principles_Overview_and_Terminology",
+    "eos": "EO2.1.1 L1; EO2.2.1 L1",
+    "scope": "Odtworzenie dziewięciu zasad; sześć terminów EU2 i związane rozróżnienia terminologiczne. Wyjaśnianie znaczenia i ważności zasad należy do T07.",
+    "dependencies": "T01; T07 dzieli ten sam słownik, lecz ma odrębną czynność L2. Nie wymuszać ukończenia T06 przed próbą T07.",
+    "units": [
+      {
+        "id": "KRY-T06-01",
+        "title": "Nazwy wszystkich dziewięciu zasad",
+        "eo": "EO2.1.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 §2.1 s.14; C-S07 1.3.2 §2.1 s.16",
+        "note": "Dziewięć zasad tworzy wspólną podstawę pracy RE: orientacja na wartość; interesariusze; wspólne zrozumienie; kontekst; problem–wymaganie–rozwiązanie; walidacja; ewolucja; innowacja; systematyczna i zdyscyplinowana praca. Zasady obowiązują przekrojowo wobec zadań i praktyk RE, a nie jako lista dziewięciu faz projektu.\n\nW T06 trzeba przywołać wszystkie nazwy i rozpoznać odpowiadający im termin EN. Nie wymagamy pamięci identycznego brzmienia hasła ani obowiązkowej kolejności odpowiedzi. Porządek PR01–PR09 zachowuje routing M01. Na tym poziomie nazwanie „kontekst” jest znajomością etykiety; uzasadnienie, dlaczego wpływ otoczenia trzeba uwzględnić w wymaganiach, wymaga pracy L2 z T07. Słowo walidacja jest również nazwą zadania RE; zależnie od pytania chodzi o zasadę albo czynność, a nie sprzeczność terminów.",
+        "terms": "PR01 Value-orientation; PR02 Stakeholders; PR03 Shared understanding; PR04 Context; PR05 Problem–Requirement–Solution; PR06 Validation; PR07 Evolution; PR08 Innovation; PR09 Systematic and disciplined work. Oficjalne nazwy z §2.1; opisy PL w tym pakiecie są własne.",
+        "example": "Zadanie „wymień zasady” wymaga dziewięciu nazw, nie szczegółowego planu review ani diagramu procesu.",
+        "counter": "Uogólnienie „to dziewięć etapów w obowiązkowej kolejności” obala równoczesne rozważanie potrzeb, wartości i kontekstu w jednym spotkaniu RE.",
+        "comparison": "Oś: nazwa zasady versus jej wyjaśnienie. „Ewolucja” jest etykietą L1; wyjaśnienie przyczyn zmian i potrzeby stabilności to T07/PR07 L2.",
+        "rp": "Bez patrzenia na listę wymień dziewięć zasad. Czy są to fazy procesu?",
+        "answer": [
+          "Podaje wszystkie dziewięć nazw, dopuszczając trafne odpowiedniki EN i równoważne PL.",
+          "Rozpoznaje przekrojowe zasady, bez obowiązkowego dziewięcioetapowego harmonogramu."
+        ],
+        "remedy": "Sprawdź listę PR01–PR09 i odtwórz ją w dowolnej kolejności. Pominiętej zasady nie zastępuj szczegółowym objaśnieniem innej.",
+        "tasks": [
+          {
+            "type": "O",
+            "role": "B",
+            "stem": "Wymień wszystkie dziewięć zasad RE. Kolejność dowolna; użyj nazw PL albo EN.",
+            "dimensions": [
+              "Orientacja na wartość; interesariusze; wspólne zrozumienie.",
+              "Kontekst; problem–wymaganie–rozwiązanie; walidacja.",
+              "Ewolucja; innowacja; systematyczna i zdyscyplinowana praca."
+            ],
+            "critical": "Zamiana listy zasad na rzekomy obowiązkowy harmonogram.",
+            "border": "Nazwy „wartość” lub „praca systematyczna” są wystarczające przy jednoznacznym sensie. Brak jednej zasady daje częściowy wynik.",
+            "change": "Swobodne odtworzenie pełnego mianownika dziewięciu.",
+            "w": 0
+          },
+          {
+            "type": "K",
+            "role": "F",
+            "stem": "Oceń zgodność nazw z listą zasad. To rozpoznanie nazw, bez wyjaśniania ich ważności.",
+            "options": [
+              [
+                "Orientacja na wartość, interesariusze i wspólne zrozumienie są zasadami RE.",
+                "To PR01–PR03 → Prawda."
+              ],
+              [
+                "Kontekst, problem–wymaganie–rozwiązanie i walidacja są zasadami RE.",
+                "To PR04–PR06 → Prawda."
+              ],
+              [
+                "Ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca są zasadami RE.",
+                "To PR07–PR09 → Prawda."
+              ],
+              [
+                "„Maksymalizacja liczby dokumentów” jest dziesiątą zasadą z tego wykazu.",
+                "Taka pozycja nie należy do dziewięciu → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Rozpoznanie trzech podzbiorów pełnej listy, nie nowy L2."
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Podaj brakujące nazwy zasad w grupach: (a) wartość, interesariusze, …; (b) kontekst, …, walidacja; (c) ewolucja, innowacja, … . Następnie przywołaj pełną dziewiątkę bez grupowania.",
+            "dimensions": [
+              "Braki: wspólne zrozumienie; problem–wymaganie–rozwiązanie; systematyczna i zdyscyplinowana praca.",
+              "Pełna lista zawiera te trzy oraz sześć nazw podanych w poleceniu; brak zasady daje częściowe odtworzenie."
+            ],
+            "critical": "Traktowanie grup jako etapów wymuszających kolejność realizacji.",
+            "border": "Wolno zmienić kolejność i użyć EN. Polecenie częściowo podpowiada sześć nazw, dlatego nie jest niezależnym odtworzeniem całej listy.",
+            "change": "Kontrola braków w strukturze; jawna częściowa podpowiedź listy ogranicza dowód pełnego swobodnego recall.",
+            "w": 0
+          }
+        ]
+      },
+      {
+        "id": "KRY-T06-02",
+        "title": "Sześć terminów EU2 i słownik zasad",
+        "eo": "EO2.2.1",
+        "level": "L1",
+        "source": "C-S02/C-S03 3.3.0 EU2 s.14 i §2.2 s.15–17; C-S06 2.2.0 s.14/17/32/33; C-S07 1.3.2 §2.2.3 s.20–21",
+        "note": "Sześć terminów umieszczonych przy EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation. Pierwsze cztery łączą się ze słownikiem T01; context w RE oznacza istotną część otoczenia systemu. Shared understanding dotyczy wspólnej podstawy rozumienia potrzeb, wymagań i kontekstu między zaangażowanymi stronami. Validation potwierdza dopasowanie do potrzeb interesariuszy; nie jest synonimem samego sprawdzenia poprawności zapisu.\n\nExplicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach. Implicit opiera się na wspólnej wiedzy, np. domeny, potrzeb i wizji. Polski syllabus używa etykiet „faktyczne (explicit)” i „domniemane (implicit)”. W pakiecie używamy także objaśniającego „jawne/niejawne” z zachowaniem EN; nie utożsamiamy explicit z automatycznie prawdziwym, a implicit z automatycznie pozornym. Handbook wyjaśnia, że obie postacie mogą być pozorne i wymagają sprawdzania.\n\nDodatkowe hasła pomagające czytać zasady to persona, scope, system boundary, context boundary, problem i solution. W T06 ich krótkie znaczenia są wejściem terminologicznym, a argumenty stosowania rozwija T07. Nie tworzymy nowego EO dla każdego hasła. Verification potwierdza zgodność ze specyfikacją; validation zgodność z potrzebami. Źródłowy odsyłacz do tych haseł to Glossary PL s.32.",
+        "terms": "kontekst — context; wymaganie — requirement; IW/RE — Requirements Engineering; interesariusz — stakeholder; wspólne zrozumienie — shared understanding; walidacja — validation. Shared understanding: etykieta sylabusa PL s.14–15; nie przypisano nieistniejącej definicji PL Glossary.",
+        "example": "Dwie osoby używają jednego terminu „zamknięte”, ale mają na myśli różne stany. Zgodność użytego słowa nie dowodzi wspólnego znaczenia.",
+        "counter": "Uogólnienie „podpisany dokument automatycznie dowodzi wspólnego rozumienia” obala odmienna interpretacja tego samego podpisanego warunku. Explicit nie gwarantuje trafności wspólnej podstawy.",
+        "comparison": "Oś 1: nośnik wspólnej podstawy — zapis/uzgodnienie versus wspólna wiedza. Oś 2: zgodność rzeczywista versus pozorna. To odrębne rozróżnienia. Oś validation/verification: potrzeba versus specyfikacja.",
+        "rp": "Wymień sześć terminów EU2. Odróżnij explicit od implicit shared understanding oraz validation od verification.",
+        "answer": [
+          "Nazywa sześć terminów: context, requirement, RE, stakeholder, shared understanding, validation.",
+          "Explicit/implicit rozróżnia według udokumentowanej podstawy versus wspólnej wiedzy; nie według prawdziwe/fałszywe.",
+          "Validation wiąże z potrzebami, verification ze specyfikacją; to termin wspierający kontrast."
+        ],
+        "remedy": "Zachowaj EN obok polskiego terminu. „Faktyczne” w etykiecie przekładu nie uprawnia do wniosku, że każde explicit shared understanding jest prawdziwe.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń znaczenia terminów.",
+            "options": [
+              [
+                "Context w RE to istotna część otoczenia systemu.",
+                "Istotność wobec systemu i wymagań ogranicza zakres → Prawda."
+              ],
+              [
+                "Stakeholder musi być bezpośrednim użytkownikiem.",
+                "Wpływ lub oddziaływanie wystarcza → Fałsz."
+              ],
+              [
+                "Validation odnosi się do zgodności z potrzebami interesariuszy.",
+                "To odniesienie definiuje validation → Prawda."
+              ],
+              [
+                "Shared understanding oznacza po prostu używanie tych samych słów.",
+                "Słowa mogą mieć różne znaczenia; wspólna podstawa wymaga znaczenia → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Terminy EU2 wprost; requirement i RE odtwarzane w F/RP."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Podaj krótki sens każdego z sześciu terminów EU2. Nie wyjaśniaj jeszcze ważności dziewięciu zasad.",
+            "dimensions": [
+              "Requirement: potrzeba, wymagana właściwość/zdolność lub jej zapis; RE: systematyczne specyfikowanie i zarządzanie z celem zrozumienia potrzeb i zmniejszenia ryzyka.",
+              "Stakeholder: osoba/organizacja wpływająca na wymagania lub dotknięta systemem; context: istotne otoczenie.",
+              "Shared understanding: wspólna podstawa znaczeń; validation: potwierdzenie dopasowania do potrzeb."
+            ],
+            "critical": "Redukowanie stakeholder do user lub validation wyłącznie do poprawności zapisu.",
+            "border": "Wystarczy jeden poprawny sens requirement, jeśli nie neguje pozostałych; pełniejszy recall trzech sensów jest w T01.",
+            "change": "Pełny mianownik sześciu terminów sprawdzany przez odtworzenie.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Odtwórz sześć terminów EU2 i podaj ich sens. Następnie odróżnij explicit i implicit shared understanding od zrozumienia rzeczywistego i pozornego.",
+            "dimensions": [
+              "Requirement: potrzeba/właściwość/reprezentacja; RE: systematyczne specyfikowanie i zarządzanie dla rozumienia potrzeb i ograniczenia ryzyka.",
+              "Stakeholder: wpływ na wymagania albo oddziaływanie systemu; context: istotna część otoczenia.",
+              "Shared understanding: wspólna podstawa znaczeń; validation: dopasowanie do potrzeb.",
+              "Explicit ma podstawę w zapisie/uzgodnieniu, implicit we wspólnej wiedzy; obie postacie mogą być pozorne."
+            ],
+            "critical": "Utożsamienie explicit z automatycznie prawdziwym rozumieniem albo walidacji tylko z kontrolą składni.",
+            "border": "Kolejność terminów dowolna; nie wymagamy dosłownego cytatu definicji.",
+            "change": "Pełny mianownik sześciu terminów i kontrast nośnik–trafność, zamiast wyłącznie dwóch definicji shared understanding.",
+            "w": 0
+          }
+        ]
+      }
+    ],
+    "reuse": [],
+    "delta": "EO2.1.1 wymaga wszystkich dziewięciu zasad; nie wystarczy rozpoznanie jednej etykiety. Przy EO2.2.1 podstawowym mianownikiem jest sześć terminów EU2: context, requirement, RE, stakeholder, shared understanding, validation. Dodatkowe terminy zasad mają jawne odsyłacze; brak nowego oficjalnego EO. Explicit/implicit shared understanding w PL to „faktyczne/domniemane”, co jest inną etykietą niż explicit/implicit traceability; zachowano wspólny EN i sens, bez zamiany z prawdziwym/pozornym zrozumieniem."
+  },
+  {
+    "id": "T07",
+    "title": "Wyjaśnianie dziewięciu zasad RE",
+    "slug": "Nine_Principles_Explained",
+    "eos": "EO2.2.2 L2",
+    "scope": "Dziewięć jawnych zakresów PR01–PR09 z argumentem, warunkami i konsekwencją. PR04 obejmuje granice/scope, zmiany kontekstu, wymagania świata rzeczywistego i założenia.",
+    "dependencies": "T06 daje nazwy L1; T03 wartość; T24 interesariusze; T18 glosariusz; T23 granice L3; T28 walidacja; T37 zmiany; T30–T32 proces. Są to odsyłacze, bez automatycznego gatingu.",
+    "units": [
+      {
+        "id": "KRY-T07-01",
+        "title": "PR01 — Orientacja na wartość",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.1–2.2 zasada 1 s.14; C-S07 1.3.2 §2.2.1 s.16–18",
+        "note": "Orientacja na wartość traktuje wymagania jako środek do osiągnięcia potrzebnego wyniku. Zapisanie większej liczby wymagań nie jest niezależnym celem. W ujęciu sylabusa wartość wymagania wiąże korzyści z kosztami jego pozyskania, dokumentowania, walidacji i zarządzania. Korzyści dotyczą spełnienia potrzeb interesariuszy oraz ograniczenia ryzyka niepowodzenia i kosztownych przeróbek. Nie należy podmieniać kosztów pracy RE samym kosztem implementacji, jeżeli wyjaśniamy tę źródłową formułę.\n\nPraktyczna konsekwencja to dobór nakładu odpowiedni do znaczenia wymagania i ryzyka pomyłki. Dokładny opis istotnego wyjątku może uchronić przed przeróbką; rozbudowywanie niskiego ryzyka bez użytecznej różnicy może tylko zwiększać koszt. Nie istnieje wynikająca z zasady liczba stron ani jednakowy poziom szczegółowości dla wszystkich oczekiwań. Zmniejszenie kosztu RE do zera nie maksymalizuje wartości automatycznie, bo może usunąć korzyść z rozpoznania potrzeb i kontroli ryzyka.\n\nKorzyści często pojawiają się później niż wydatek na RE. Dlatego widoczny koszt warsztatu i brak natychmiastowego kodu nie wystarczają do stwierdzenia braku wartości. W tym materiale nie liczymy rzeczywistego ROI ani nie obiecujemy uniwersalnych oszczędności. W przykładach trzeba pokazać, jaki mechanizm łączy konkretną pracę RE z jej korzyścią i kosztem.",
+        "terms": "orientacja na wartość — value-orientation/value orientation; nazwa z Syllabus. Wartość ekonomiczna w scenariuszu jest interpretacją, nie zmierzonym wynikiem.",
+        "example": "Doprecyzowanie wyjątku rezerwacji zajmuje godzinę, ale może uniknąć zbudowania błędnego procesu. Rozważamy koszt doprecyzowania i korzyść ograniczenia ryzyka.",
+        "counter": "Uogólnienie „więcej dokumentacji zawsze zwiększa wartość” obala opisanie po raz dziesiąty oczywistego, niskiego ryzyka parametru bez poprawy decyzji ani zrozumienia.",
+        "comparison": "Oś: nakład versus uzyskana korzyść. Dodatkowy przykład krytycznego wyjątku może ograniczyć błąd; kolejny redundantny opis może tylko zwiększyć koszt. Objętość sama nie rozstrzyga.",
+        "rp": "Wyjaśnij zasadę wartości: jakie koszty i korzyści porównuje, i dlaczego nie zaleca ani maksimum dokumentacji, ani całkowitej rezygnacji z RE?",
+        "answer": [
+          "Korzyści obejmują spełnienie potrzeb i ograniczenie ryzyka/przeróbek; koszty to pozyskanie, dokumentowanie, walidacja i zarządzanie.",
+          "Wyjaśnia potrzebę proporcji nakładu do korzyści i ryzyka; ilość dokumentacji nie jest celem."
+        ],
+        "remedy": "Nazwij oczekiwaną korzyść oraz koszt pracy nad wymaganiem. Więcej ani mniej RE samo w sobie nie rozstrzyga wartości.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Analityk chce rozbudować opis mało ryzykownego parametru o dwadzieścia stron, choć zespół rozumie go jednakowo i dodatkowy opis nie zmieni żadnej decyzji. Który argument najlepiej stosuje zasadę wartości?",
+            "options": [
+              [
+                "O wartości decyduje wyłącznie koszt zakupu edytora.",
+                "Koszt pracy RE i korzyści są szersze niż nośnik → nie wybrać."
+              ],
+              [
+                "Więcej stron zawsze zwiększa wartość wymagania.",
+                "Nie wskazano dodatkowej korzyści; sama objętość nie jest celem → nie wybrać."
+              ],
+              [
+                "Warto rozważyć, czy dodatkowy koszt dokumentowania przyniesie korzyść dla potrzeb lub kontroli ryzyka.",
+                "Opis mówi o koszcie bez wykazanej korzyści → trzeba ocenić saldo, nie liczbę stron → wybrać."
+              ],
+              [
+                "Każde dokumentowanie należy wyeliminować.",
+                "Jedna nieopłacalna rozbudowa nie unieważnia korzyści dokumentacji w innych warunkach → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Wybór właściwego argumentu dla nadmiarowego nakładu."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Dla ryzykownego wyjątku rozliczenia zaplanowano warsztat i walidację, choć opis zwykłego przypadku już istnieje. Wyjaśnij, kiedy dodatkowy nakład może mieć wartość i jakie składniki trzeba rozważyć.",
+            "dimensions": [
+              "Korzyść: adekwatne pokrycie potrzeby oraz mniejsze ryzyko błędu i przeróbki w wyjątku.",
+              "Koszty dotyczą pozyskania/dokumentowania/walidacji/zarządzania; decyzja zależy od ich relacji do korzyści.",
+              "Brak gwarancji zwrotu; ani objętość, ani sama chęć oszczędności nie rozstrzygają."
+            ],
+            "critical": "Twierdzenie, że każdy dodatkowy dokument z definicji ma dodatnią wartość.",
+            "border": "Wolno opisać ocenę jakościowo, bez wymyślania pieniędzy.",
+            "change": "Od nadmiaru niskiego ryzyka do uzasadnionego doprecyzowania wyjątku.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Sponsor chce usunąć całą walidację, bo jej koszt jest natychmiastowy, a korzyści mogą pojawić się później. Wyjaśnij zasadę wartości z odniesieniem do obu stron decyzji i pełnego rodzaju kosztów.",
+            "dimensions": [
+              "Zerowy koszt walidacji nie gwarantuje najwyższej wartości; może zwiększyć ryzyko niespełnienia potrzeb i przeróbek.",
+              "Uwzględnia korzyści oraz koszt pozyskania, dokumentowania, walidacji i zarządzania, nie tylko implementacji.",
+              "Potrzebny jest proporcjonalny nakład do sytuacji, a nie ogólne maksimum lub minimum dokumentacji."
+            ],
+            "critical": "Uznanie późniejszego charakteru korzyści za dowód ich nieistnienia.",
+            "border": "Można stwierdzić, że potrzebne są dane do konkretnej decyzji; nie trzeba rozstrzygać, czy warsztat na pewno się opłaci.",
+            "change": "Decyzja budżetowa o eliminacji walidacji zamiast liczby stron; nadal wspólna rodzina reguły.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR01"
+      },
+      {
+        "id": "KRY-T07-02",
+        "title": "PR02 — Interesariusze",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 2 s.15; C-S06 2.2.0 Interesariusz s.14, Persona s.21; C-S07 1.3.2 §2.2.2 s.18–19",
+        "note": "RE ma pomagać zrozumieć i zaspokoić potrzeby właściwych interesariuszy. Nie wystarczy zebrać życzeń najgłośniejszej osoby lub samych użytkowników końcowych. W kontekście systemu istotne role mogą mieć zamawiający, odbiorca, użytkownik, operator czy regulator. Jedna osoba może łączyć role; dla danej istotnej roli trzeba znaleźć właściwych reprezentantów. Rola opisuje związek z systemem, a nie wyłącznie etat w organizacji.\n\nGdy grupa jest liczna lub przyszłe osoby nie są jeszcze znane, persona może reprezentować archetypowe potrzeby i sposób działania. To fikcyjny opis, a nie rzeczywisty użytkownik, który osobiście zatwierdził wymagania. Potrzeby i punkty widzenia mogą być sprzeczne; zadaniem RE jest ujawnienie i rozwiązanie konfliktów. „Zaspokojenie potrzeb” nie oznacza bezrefleksyjnego jednoczesnego przyjęcia każdej sprzecznej propozycji.\n\nUżytkownicy przekazujący feedback z eksploatacji pozostają interesariuszami. Ważność zasady wynika z ryzyka pominięcia krytycznych oczekiwań: nawet świetny interfejs użytkownika nie pomoże, jeśli usługa nie może być utrzymywana albo jej wyniki są nieadekwatne dla istotnego odbiorcy. Konkretne techniki identyfikacji i lista stakeholderów to T24, natomiast tutaj wyjaśniamy potrzebę objęcia właściwych ról i pracy z konfliktem.",
+        "terms": "interesariusze — stakeholders; persona — persona; user/client/customer/operator/regulator to nazwy ról w źródle. Nie utożsamiać client i customer automatycznie.",
+        "example": "Nowa usługa spełnia oczekiwania klienta zamawiającego, ale operator nie może odtworzyć przetwarzania po awarii. Pominięcie roli operatora pozostawia ważną potrzebę bez uzgodnienia.",
+        "counter": "Uogólnienie „wystarczy klient i użytkownik końcowy” obala wymaganie utrzymania zgłaszane przez operatora, który nie należy do tych ról w scenariuszu.",
+        "comparison": "Oś: potrzeba roli versus pojedyncza propozycja rozwiązania. Dwie role mogą potrzebować różnych rzeczy; konflikt trzeba uzgodnić. Persona zastępuje archetypowy opis grupy, nie realne porozumienie wszystkich osób.",
+        "rp": "Dlaczego sam wywiad z klientem końcowym może nie wystarczyć? Wyjaśnij rolę reprezentantów, person i konfliktu potrzeb.",
+        "answer": [
+          "Wymienia inne istotne role i ryzyko utraty ich wymagań; jedna osoba może łączyć role.",
+          "Persona reprezentuje grupę/nieznane osoby, ale nie jest realnym potwierdzeniem ich zgody.",
+          "Różne potrzeby mogą prowadzić do konfliktów wymagających identyfikacji i rozwiązania."
+        ],
+        "remedy": "Wskaż pominiętą rolę i jej możliwy wpływ. Persona pomaga opisać perspektywę, lecz nie dowodzi, że sprzeczne potrzeby zostały uzgodnione.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Projekt rozmawiał tylko z kupującym i użytkownikami końcowymi. Nie uwzględnił operatora usługi. Dla licznej przyszłej grupy stworzono personę. Które DWIE oceny są uzasadnione?",
+            "options": [
+              [
+                "Pominięcie operatora może oznaczać pominięcie istotnych wymagań.",
+                "Operator to możliwa istotna rola → ograniczenie rozmów może pozostawić potrzebę poza analizą → wybrać."
+              ],
+              [
+                "Persona może pomóc opisać archetypowe potrzeby nieznanej jeszcze grupy.",
+                "Duża/nieznana grupa spełnia warunki użycia persony → wybrać."
+              ],
+              [
+                "Sama persona dowodzi zgody wszystkich przyszłych użytkowników.",
+                "Fikcyjny archetyp nie jest uzgodnieniem realnych osób → nie wybrać."
+              ],
+              [
+                "Każdą sprzeczną propozycję wszystkich ról należy przyjąć jednocześnie.",
+                "Konflikt wymaga rozwiązania, nie niemożliwego równoczesnego spełnienia → nie wybrać."
+              ]
+            ],
+            "key": [
+              "a",
+              "b"
+            ],
+            "w": 2,
+            "k": 2,
+            "change": "Role, persona i błędny wniosek o konflikcie."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Użytkownicy chcą natychmiast usuwać rekord, a dział rozliczeń potrzebuje zachować dane do wyjaśnienia transakcji. Organizacja mówi, że RE oznacza po prostu wykonanie obu żądań. Wyjaśnij zasadę interesariuszy i sens pracy z taką sytuacją.",
+            "dimensions": [
+              "Obie istotne perspektywy trzeba rozpoznać i reprezentować; klient/user nie wyczerpują listy ról.",
+              "Sprzeczność wymaga identyfikacji i rozwiązania konfliktu; nie wystarczy przepisać obu żądań.",
+              "Należy zrozumieć potrzeby stojące za propozycjami; nie przesądzamy rozwiązania ani realnego prawa przechowywania."
+            ],
+            "critical": "Obietnica jednoczesnego spełnienia sprzecznych zapisów bez uzgodnienia.",
+            "border": "Nie trzeba wybrać czasu retencji ani cytować prawa; scenariusz jest fikcyjny.",
+            "change": "Konflikt dwóch ról zastępuje problem pominiętego operatora.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Przy nowej usłudze nie zna się nazwisk przyszłych użytkowników. Zamawiający sugeruje całkowite pominięcie tej grupy, a feedback operatorów ma trafiać wyłącznie do programistów bez pracy RE. Wyjaśnij właściwą rolę reprezentacji i feedbacku oraz granicę person.",
+            "dimensions": [
+              "Nieznajomość osób nie uzasadnia pominięcia roli; reprezentacja/persona może pomóc opisać potrzeby.",
+              "Użytkownicy/operatorzy przekazujący feedback są istotnymi źródłami potrzeb i możliwych zmian; RE powinno je uwzględnić.",
+              "Persona jest fikcyjna, nie poświadcza zgody grupy; różne potrzeby/konflikty nadal wymagają uzgodnień."
+            ],
+            "critical": "Utożsamienie persony z rzeczywistym podpisem całej grupy.",
+            "border": "Wolno zaproponować reprezentantów grupy; nie trzeba tworzyć pełnej stakeholder list.",
+            "change": "Sytuacja przyszłego rynku i eksploatacji, zamiast jednego konfliktu; zakres wyjaśnienia zachowany.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR02"
+      },
+      {
+        "id": "KRY-T07-03",
+        "title": "PR03 — Wspólne zrozumienie",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 3 s.15; C-S07 1.3.2 §2.2.3 s.20–21",
+        "note": "Wielu uczestników wytwarzania musi mieć wspólną podstawę znaczeń potrzeb, wymagań i kontekstu. RE buduje, podtrzymuje i sprawdza tę podstawę. Explicit shared understanding jest osiągane przez dokumentowanie i uzgadnianie, implicit przez wspólną wiedzę o potrzebach, domenie i wizji. To różne źródła wspólnej podstawy; żadne nie gwarantuje, że osoby rzeczywiście rozumieją to samo.\n\nWiedza domenowa, udana wcześniejsza współpraca, wspólna kultura i wartości oraz wzajemne zaufanie sprzyjają wspólnemu zrozumieniu. Odległość, outsourcing, duże zespoły i duża rotacja mogą je utrudniać. Nie są to bezwyjątkowe prawa: zdalny zespół może rozumieć się dobrze, a długo współpracujący może przeoczyć zmianę znaczenia. Dlatego potrzebna jest ocena faktycznego rozumienia, np. przez przykłady oczekiwanych wyników, prototyp lub porównanie interpretacji.\n\nGlosariusz, prototyp i istniejący system jako punkt odniesienia pomagają budować podstawę. Krótkie pętle feedbacku ograniczają koszt i zasięg nieporozumień. Sam podpis lub użycie tego samego słowa nie jest wystarczającym dowodem. Co więcej, nawet zgodne rozumienie nie daje kompletności, jeśli nikt nie pomyślał o istotnym wymaganiu. Znaczenie PR03 polega na redukcji ryzyka rozbieżnych decyzji opartych na pozornie tych samych oczekiwaniach.",
+        "terms": "wspólne zrozumienie — shared understanding; explicit: PL „faktyczne”, projektowo „jawne”; implicit: PL „domniemane”, projektowo „niejawne”. Prawdziwe/pozorne to osobna oś.",
+        "example": "Dział sprzedaży i magazyn używają słowa „dostępny”. Przykład zamówienia ujawnia, że jeden liczy zarezerwowane sztuki, drugi je odejmuje. Glosariusz i feedback pozwalają uzgodnić sens.",
+        "counter": "Uogólnienie „wspólny dokument dowodzi wspólnego rozumienia” obala dwóch podpisujących, którzy odmiennie interpretują „dostępny”.",
+        "comparison": "Oś nośnika: explicit versus implicit. Oś trafności: faktycznie to samo znaczenie versus pozorna zgodność. Wspólna wiedza domenowa może być dobra, a uzgodniony zapis może zostać różnie odczytany.",
+        "rp": "Wyjaśnij, dlaczego shared understanding trzeba nie tylko budować, ale także sprawdzać. Podaj sprzyjające i utrudniające warunki oraz dwie praktyki.",
+        "answer": [
+          "Odróżnia explicit/implicit od prawdziwego/pozornego; dokument nie gwarantuje rozumienia.",
+          "Wskazuje warunki wspólnej wiedzy/zaufania oraz bariery np. rotacji/odległości bez absolutyzowania.",
+          "Wyjaśnia rolę przykładów, glosariusza/prototypów i krótkich pętli feedbacku."
+        ],
+        "remedy": "Poproś o interpretację na konkretnym przykładzie. Podpis i wspólny termin to słabsza przesłanka niż zgodne rozstrzygnięcie przypadku; nie gwarantują też kompletności.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Dwa działy podpisały zapis „zamówienie gotowe”, lecz jeden rozumie gotowość jako kompletację, a drugi jako kompletację wraz z opłaceniem. Który argument odpowiada zasadzie wspólnego zrozumienia?",
+            "options": [
+              [
+                "Należy porównać przykłady oczekiwanych wyników i uzgodnić znaczenie gotowości.",
+                "Przykład ujawnia różnicę i wspiera uzgodnienie → wybrać."
+              ],
+              [
+                "Należy wyłącznie zmienić nazwę pliku.",
+                "Nazwa nie usuwa rozbieżnego sensu → nie wybrać."
+              ],
+              [
+                "Wspólne zrozumienie nigdy nie jest możliwe między działami.",
+                "Jedna rozbieżność nie dowodzi niemożliwości uzgodnienia → nie wybrać."
+              ],
+              [
+                "Podpis kończy potrzebę sprawdzania znaczenia.",
+                "Różne interpretacje mimo podpisu pokazują pozorną zgodność → nie wybrać."
+              ]
+            ],
+            "key": "a",
+            "w": 1,
+            "change": "Pozorna explicit zgodność w jednym terminie."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Do zespołu z dużą rotacją dołącza dostawca zewnętrzny. Dotąd opierano się na wieloletniej wspólnej wiedzy bez zapisów. Wyjaśnij wpływ zmiany na wspólne zrozumienie i zaproponuj sensowną kontrolę, odróżniając nośnik od trafności.",
+            "dimensions": [
+              "Rotacja/outsourcing mogą osłabić wspólną wiedzę; dotychczasowa podstawa implicit nie musi wystarczyć.",
+              "Dokumentowanie i uzgadnianie mogą budować explicit, ale nie gwarantują prawdziwego wspólnego sensu.",
+              "Glosariusz/przykłady/prototyp i krótkie pętle feedbacku pozwalają sprawdzać interpretacje, ograniczając wpływ nieporozumień."
+            ],
+            "critical": "Uznanie nowego podpisu za dowód usunięcia wszystkich rozbieżności.",
+            "border": "Dopuszczalne różne praktyki z uzasadnieniem; nie należy zakazywać wszelkiej wiedzy implicit.",
+            "change": "Zmieniające się warunki zespołu zamiast samego homonimu.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "W małym zespole wszyscy wyjaśniają uzgodniony przykład jednakowo. Czy to dowodzi kompletności wymagań? Wyjaśnij obie postacie shared understanding, rolę warunków współpracy i potrzebę dalszej kontroli.",
+            "dimensions": [
+              "Zgodność przykładu jest ograniczoną przesłanką wspólnego rozumienia, nie dowodem kompletności; wszyscy mogli przeoczyć wymaganie.",
+              "Explicit opiera się na dokumentach i uzgodnieniu; implicit na wspólnej wiedzy, obie postacie mogą być pozorne.",
+              "Wiedza domenowa/zaufanie sprzyjają, rotacja/odległość mogą utrudniać; przykłady/prototypy i krótkie feedback loops umożliwiają kontrolę."
+            ],
+            "critical": "Wniosek „zgodni w jednym przykładzie, więc niczego nie brakuje”.",
+            "border": "Można zaakceptować obecną zgodność jako dobry sygnał, zachowując granice.",
+            "change": "Kontrast zgodności i kompletności przy sprzyjających warunkach.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR03"
+      },
+      {
+        "id": "KRY-T07-04",
+        "title": "PR04 — Kontekst: pełna granica zasady",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 4 s.16; C-S06 2.2.0 Context boundary s.12, System boundary s.13, Context s.17, Scope s.35; C-S07 1.3.2 §2.2.4 s.22–24",
+        "note": "System działa w istotnym otoczeniu. Bez zrozumienia jego wpływu nie można właściwie określić wymagań. Granica systemu oddziela analizowaną całość od kontekstu, granica kontekstu — istotne otoczenie od nieistotnej reszty. Scope oznacza zakres elementów możliwych do kształtowania. Granice i zakres zmian nie są tą samą osią: wewnętrzny moduł może być ponownie używany bez zmian, a procedura zewnętrzna może zostać przeprojektowana.\n\nPR04 obejmuje więcej niż „zewnętrzne bywa istotne”. Trzeba uwzględniać zmiany kontekstu wpływające na wymagania, wymagania dotyczące świata rzeczywistego oraz założenia, które muszą zachodzić, żeby system działał zgodnie z potrzebą. Wymaganie o realnym zjawisku trzeba przełożyć na to, co system może obserwować lub sterować. Jeżeli aplikacja widzi jedynie zeskanowane zdarzenie, to jego zgodność z fizycznym faktem jest odrębnym założeniem albo wymaganiem wobec otoczenia.\n\nZałożenie nie staje się prawdziwe przez zapisanie. Gdy nie zachodzi, poprawny program może nie zapewnić pożądanego wyniku w świecie rzeczywistym. Tak samo zmiana regulaminu, czujnika lub procedury może zmienić wymagania bez automatycznej zmiany granicy systemu. Wyjaśnienie L2 uzasadnia te związki; nie zastępuje samodzielnego wyznaczania pełnych granic L3. KRY-A01 z C-A nadal dotyczy tylko ograniczonego wpływu mimo braku zmiany, a nie całego powyższego zakresu.",
+        "terms": "T-01–05 z C02 zachowane; real-world/domain requirement — wymaganie dotyczące świata rzeczywistego/domeny; context/domain assumption — założenie o kontekście/domenie: autorskie PL objaśnienia z §2.2.4.",
+        "example": "System ewidencji narzędzi widzi skan zwrotu. Potrzeba „narzędzie rzeczywiście wróciło” wymaga zgodności skanu z fizycznym zwrotem; samo poprawne zapisanie skanu tego nie zapewnia.",
+        "counter": "Uogólnienie „wszystko poza projektem można pominąć” obala niezmieniany skaner z opóźnieniami danych. Uogólnienie „zarejestrowane zdarzenie dowodzi realnego faktu” obala omyłkowy skan bez fizycznego zwrotu.",
+        "comparison": "Oś A: wewnętrzny/zewnętrzny; B: istotny/nieistotny; C: zmieniany/niezmieniany. Stary wewnętrzny moduł może być niezmieniany; zewnętrzna procedura istotna i zmieniana. Wymaganie realnego zwrotu i sygnał skanera są też różnymi poziomami opisu.",
+        "rp": "Wyjaśnij trzy osie granic/scope oraz trzy obowiązki zasady: zmiany kontekstu, real-world requirements i założenia. Podaj granicę wnioskowania z danych systemu.",
+        "answer": [
+          "Odróżnia granicę systemu, granicę kontekstu i scope, bez utożsamienia istotności z zakresem zmian.",
+          "Wyjaśnia wpływ zmian otoczenia, przełożenie wymagań świata rzeczywistego na systemowe i rolę założeń.",
+          "Nie uznaje samego sygnału/rekordu za pewny dowód realnego zdarzenia bez uzasadnionych warunków."
+        ],
+        "remedy": "Zadaj osobno pytania o skład systemu, istotność otoczenia, możliwość zmiany i wiarygodność powiązania danych ze światem. C-A naprawia tylko część tego rozróżnienia.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Aplikacja magazynowa obejmuje formularz i stary moduł ewidencji używany bez zmian. Oddzielna procedura kontroli skanu może zostać przeprojektowana. Fizyczny zwrot narzędzia ma być odzwierciedlony skanem; aplikacja obserwuje wyłącznie skan. Oceń argumenty.",
+            "options": [
+              [
+                "Stary moduł jest poza aplikacją tylko dlatego, że nie wolno go zmienić.",
+                "Stem włącza go do aplikacji; brak zmiany dotyczy scope → Fałsz."
+              ],
+              [
+                "Procedura może być zewnętrzna i zarazem objęta zakresem zmiany.",
+                "Dane jawnie rozdzielają przynależność i możliwość projektowania → Prawda."
+              ],
+              [
+                "Poprawny zapis skanu sam w sobie gwarantuje fizyczny zwrot.",
+                "System widzi sygnał; zgodność sygnału z faktem wymaga warunku otoczenia → Fałsz."
+              ],
+              [
+                "Zmiana sposobu kontroli skanu może wpłynąć na wymagania aplikacji.",
+                "Zmieniona procedura to istotny kontekst → możliwy wpływ na wymagania → Prawda."
+              ]
+            ],
+            "key": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "w": 3,
+            "m": 4,
+            "change": "Granice/scope i mapowanie realnego faktu na sygnał."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "System rejestruje wejścia do strefy na podstawie sygnału bramki. Bramki nie zmieniamy; procedurę reakcji ochrony można zmienić. Potrzebą jest rzeczywiste niedopuszczenie nieuprawnionych osób. Wyjaśnij znaczenie kontekstu, różnicę scope i granicy oraz założenia potrzebne do interpretacji sygnału.",
+            "dimensions": [
+              "Brama i procedura są istotnym otoczeniem wobec systemu; brak zmiany bramki nie usuwa wpływu, możliwość zmiany procedury nie czyni jej automatycznie częścią aplikacji.",
+              "Real-world requirement dotyczy rzeczywistego dostępu; wymaganie aplikacji dotyczy obserwowalnych sygnałów i reakcji.",
+              "Zgodność sygnału z przejściem i skuteczność reakcji są warunkami otoczenia wymagającymi sprawdzenia; ich zmiana może zmienić wymagania."
+            ],
+            "critical": "Uznanie samego rekordu wejścia za gwarancję rzeczywistej ochrony.",
+            "border": "Nie trzeba projektować zabezpieczeń ani wyznaczać wszystkich granic L3; argument wystarcza.",
+            "change": "Od skanu zwrotu do kontroli wejścia, ze zmianą rodzaju realnego celu i warunku.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Aplikacja planowania dostaw korzysta z niezmienianego, zewnętrznego czujnika poziomu zbiornika. Ma zapewnić brak przepełnienia w świecie rzeczywistym. Czujnik bywa opóźniony, a procedurę dostaw można zmienić. Wewnętrzny katalog aplikacji pozostaje bez zmian. Wyjaśnij pełną zasadę kontekstu, odnosząc się do granic, scope, wymagań realnych, mapowania sygnału, założeń i zmian.",
+            "dimensions": [
+              "Katalog może być wewnętrzny i niezmieniany; czujnik zewnętrzny i istotny; zmieniana procedura pozostaje odrębną częścią kontekstu. Granica kontekstu dotyczy istotności, nie zakresu prac.",
+              "Brak przepełnienia jest realnym celem; aplikacja podejmuje decyzje na podstawie danych czujnika, więc trzeba uzasadnić adekwatność mapowania danych na stan zbiornika.",
+              "Aktualność i poprawność odczytu oraz wykonanie procedury są istotnymi warunkami; zmiana czujnika/procedury może zmienić wymagania. Sam zapis nie gwarantuje realnego wyniku."
+            ],
+            "critical": "Pominięcie czujnika wyłącznie dlatego, że nie jest zmieniany, albo utożsamienie odczytu z gwarancją stanu realnego.",
+            "border": "Dopuszczalne jawne wskazanie, że wymagania zależą od danych i nie można zagwarantować celu bez dodatkowych warunków.",
+            "change": "Sterowanie realnym procesem z opóźnionym sygnałem zamiast ewidencji; pełne PR04, bez podnoszenia do L3.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR04"
+      },
+      {
+        "id": "KRY-T07-05",
+        "title": "PR05 — Problem–Wymaganie–Rozwiązanie",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 5 s.16; C-S07 1.3.2 §2.2.5 s.24–25",
+        "note": "Problem opisuje niezadowalającą sytuację. Wymagania określają potrzebne właściwości lub zdolności pozwalające go usunąć albo ograniczyć. Rozwiązaniem jest system socjotechniczny, który je spełnia. Warto rozdzielać te role w myśleniu i komunikacji: inaczej łatwo uznać preferowaną technologię za sam problem albo z góry odrzucić inne sposoby zaspokojenia potrzeby.\n\nRozdzielenie znaczeń nie oznacza izolowania prac ani narzucenia kolejności, która nigdy nie może się zmienić. Pomysł rozwiązania może ujawnić nową potrzebę, szczególnie przy innowacji. Wykonalność wymagania bywa możliwa do oceny dopiero przez sprawdzenie rozwiązania, a prototyp jako częściowe rozwiązanie może wspierać walidację. System na wysokim poziomie może być rozwiązaniem, a dla podsystemu źródłem dalszych wymagań.\n\nWażność zasady wynika z potrzeby jednoczesnego utrzymania związku celu i realizacji oraz przejrzystości rozmowy. Należy wiedzieć, dlaczego czegoś potrzebujemy, co ma się zmienić i jakie rozwiązanie to umożliwi, bez udawania, że te pytania można zawsze zamknąć oddzielnie raz na zawsze. Nie jest to zakaz rozważania technologii w RE; jest to ochrona przed nieświadomym mieszaniem concern.",
+        "terms": "problem — problem; wymaganie — requirement; rozwiązanie — solution: nazwy trójki z Syllabus. PL §2.1 „nierozłączna trójka”, §2.2 „połączony trójkąt”; EN spójne triple. Nie traktować jako trzech faz.",
+        "example": "Problem: magazyn myli paczki. Wymaganie: identyfikować paczkę przy wydaniu. Rozwiązanie: wybrana usługa z czytnikiem i procedurą. Pomysł czytnika może ujawnić dodatkowe potrzeby obsługi uszkodzonych etykiet.",
+        "counter": "Uogólnienie „najpierw wszystkie wymagania, potem można pomyśleć o rozwiązaniu” obala prototyp potrzebny do oceny wykonalności i zrozumienia interakcji.",
+        "comparison": "Oś: rola opisu. „Mylimy paczki” to stan problemowy; „potrzebujemy sprawdzić tożsamość” to wymaganie; „stosujemy czytnik” to rozwiązanie. Ich związek nie znosi różnic, a różnice nie ustanawiają izolacji.",
+        "rp": "Wyjaśnij związek trójki i powód rozdzielania jej w komunikacji. Czy pomysł rozwiązania może poprzedzić doprecyzowanie potrzeb?",
+        "answer": [
+          "Rozpoznaje problem, potrzebną właściwość i system realizujący oczekiwanie jako powiązane role.",
+          "Rozdzielanie concern ułatwia pracę, ale nie oznacza izolacji ani niezmiennej kolejności; pomysł/prototyp może ujawnić wymagania."
+        ],
+        "remedy": "Oznacz każde zdanie jako opis sytuacji, potrzebnej właściwości albo realizacji. Zachowaj powiązania między nimi i możliwość iteracji.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Zespół chce sprawdzić prototyp nowego sposobu obsługi, aby zrozumieć potrzeby użytkowników. Kierownik zakazuje tego, bo „żadne rozwiązanie nie może być rozważane przed kompletem wymagań”. Która ocena jest właściwa?",
+            "options": [
+              [
+                "Każda sugestia technologii jest definicją problemu.",
+                "Technologia jest propozycją realizacji, nie samym stanem problemowym → nie wybrać."
+              ],
+              [
+                "Zakaz wynika z zasady trójki w każdej sytuacji.",
+                "Zasada dopuszcza wzajemny wpływ i brak stałej kolejności → nie wybrać."
+              ],
+              [
+                "Prototyp może ujawnić wymagania; nadal warto rozdzielić opisy problemu, potrzeby i rozwiązania.",
+                "Częściowe rozwiązanie pomaga poznać potrzeby bez scalania ich znaczeń → wybrać."
+              ],
+              [
+                "Od tej chwili potrzeby nie mają znaczenia.",
+                "Rozwiązanie ma nadal zaspokajać potrzeby → nie wybrać."
+              ]
+            ],
+            "key": "c",
+            "w": 1,
+            "change": "Argument przeciw sztywnej kolejności."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Klient mówi: „Naszym problemem jest brak aplikacji mobilnej”. Z rozmowy wynika, że zgłoszenia giną między zmianami. Wyjaśnij różnicę problemu, wymagania i propozycji rozwiązania, bez zakazywania rozważenia aplikacji.",
+            "dimensions": [
+              "Zagubione zgłoszenia to niezadowalający stan; aplikacja mobilna jest propozycją realizacji.",
+              "Wymaganie powinno uchwycić potrzebną zdolność, np. zachowanie i przekazanie zgłoszeń, bez utożsamienia jej z jednym kanałem.",
+              "Rozwiązanie można badać, także prototypem; trójka współzależy, choć sensy należy komunikacyjnie rozdzielać."
+            ],
+            "critical": "Uznanie braku wskazanej technologii za jedyną możliwą definicję problemu.",
+            "border": "Nie trzeba projektować alternatywnej aplikacji; trafne rozróżnienie wystarcza.",
+            "change": "Solution bias w sformułowaniu klienta zamiast formalnego zakazu prototypu.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Nowy czujnik umożliwił usługę, której użytkownicy wcześniej nie znali. Zespół dopiero teraz bada potrzebę i formułuje wymagania. Czy narusza zasadę trójki? Wyjaśnij sensy oraz powód ich rozdzielania i współzależności.",
+            "dimensions": [
+              "Nie; pomysł rozwiązania może pobudzać potrzeby i prowadzić do wymagań.",
+              "Problem/potrzeba, wymagane zdolności i realizujący je system mają różne role; nie należy uznać samego czujnika za kompletną potrzebę.",
+              "Rozdzielenie w opisie ułatwia rozumowanie, ale ocena rozwiązania/wykonalności i walidacja mogą oddziaływać na wymagania."
+            ],
+            "critical": "Stwierdzenie, że sama kolejność pomysł→potrzeba unieważnia RE.",
+            "border": "Wolno zaznaczyć konieczność potwierdzenia realnej potrzeby; nie zakładać popytu z istnienia czujnika.",
+            "change": "Innowacja pobudzona technologią, a nie istniejąca potrzeba opisana jako rozwiązanie.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR05"
+      },
+      {
+        "id": "KRY-T07-06",
+        "title": "PR06 — Walidacja",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 6 s.17; C-S06 2.2.0 Validation/Verification s.32; C-S07 1.3.2 §2.2.6 s.25–26",
+        "note": "Walidacja wymagań sprawdza, czy opisane oczekiwania odpowiadają potrzebom interesariuszy. Czekanie z tym do wdrożenia przenosi ryzyko na moment, gdy poprawa może wymagać znacznej przeróbki. Zasada wymaga rozpoczęcia kontroli już w RE. Nie oznacza to, że każda hipoteza wymogu musi być od razu w pełni zatwierdzona, zanim wolno ją zapisać; oznacza, że nie należy uznawać niezwalidowanego zapisu za wystarczająco pewną podstawę realizacji potrzeby.\n\nTrzy źródłowe pytania dotyczą porozumienia między interesariuszami, adekwatnego pokrycia ich oczekiwań i potrzeb oraz rozsądności założeń kontekstu. Podpis jednej osoby nie dowodzi dwóch pozostałych warunków. Poprawna składnia ani pełne pola formularza nie dowodzą dopasowania do potrzeb. Kontrola zapisu jest ważna, ale nie zastępuje walidacji adekwatności.\n\nHasło zasady jest mocne, lecz trzeba interpretować je w granicach jej argumentu o ograniczaniu ryzyka. Prototyp, przykład lub rozmowa mogą ujawnić różnicę oczekiwań jeszcze przed implementacją. Szczegółowe techniki i ich dobór należą do T28–T29; tu trzeba uzasadnić wczesną walidację i objąć trzy pytania, a nie zaprojektować pełny plan testów.",
+        "terms": "walidacja — validation; weryfikacja — verification: C-S06 s.32. „Zgoda”, „pokrycie potrzeb” i „założenia” to trzy aspekty kontroli zasady.",
+        "example": "Wymaganie przewiduje odbiór paczki przez całą dobę. Walidacja ujawnia, że założenie o nocnej obsadzie punktu jest fałszywe; poprawny formularz tego nie wykrył.",
+        "counter": "Uogólnienie „brak literówek oznacza zwalidowane wymaganie” obala poprawnie napisany zapis o całodobowej usłudze bez warunków jej zapewnienia.",
+        "comparison": "Oś odniesienia: potrzeby interesariuszy i realne założenia versus formalna poprawność zapisu. Obie kontrole mogą być potrzebne; pierwsza nie wynika automatycznie z drugiej.",
+        "rp": "Dlaczego walidacja zaczyna się w RE? Wyjaśnij trzy pytania kontrolne i odróżnij je od samej kontroli składni.",
+        "answer": [
+          "Wczesna kontrola zmniejsza ryzyko odkrycia nieadekwatności dopiero po wdrożeniu.",
+          "Obejmuje porozumienie, adekwatne pokrycie potrzeb oraz rozsądne założenia kontekstu.",
+          "Poprawność zapisu nie dowodzi zgodności z potrzebą."
+        ],
+        "remedy": "Sprawdź osobno zgodę ról, potrzebę i założenia. Nie używaj jednego podpisu lub testu składni jako dowodu całej walidacji.",
+        "tasks": [
+          {
+            "type": "P",
+            "role": "B",
+            "stem": "Które TRZY pytania odpowiadają zasadzie walidacji?",
+            "options": [
+              [
+                "Czy założenia kontekstu są rozsądne?",
+                "Realność założeń to trzeci aspekt → wybrać."
+              ],
+              [
+                "Czy wybrano najdroższy edytor dokumentacji?",
+                "Cena narzędzia nie jest wskazanym pytaniem walidacji → nie wybrać."
+              ],
+              [
+                "Czy z dokumentu usunięto wszystkie numerowane punkty?",
+                "Sposób numeracji nie potwierdza zgodności z potrzebami → nie wybrać."
+              ],
+              [
+                "Czy interesariusze osiągnęli porozumienie co do wymagań?",
+                "Zgoda/uzgodnienie to pierwszy aspekt → wybrać."
+              ],
+              [
+                "Czy wymagania adekwatnie pokrywają potrzeby interesariuszy?",
+                "Dopasowanie do potrzeb to drugi aspekt → wybrać."
+              ]
+            ],
+            "key": [
+              "a",
+              "d",
+              "e"
+            ],
+            "w": 3,
+            "k": 3,
+            "change": "Pełna trójka pytań walidacyjnych."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Wymaganie ma poprawną formę, lecz zakłada całodobową pracę operatora, który jest dostępny tylko w dzień. Wyjaśnij potrzebę walidacji już podczas RE i wskaż trzy aspekty sprawdzenia.",
+            "dimensions": [
+              "Poprawność formy nie potwierdza realizowalności potrzeby w podanym kontekście; wcześniejsza kontrola ogranicza ryzyko przeróbki po wdrożeniu.",
+              "Trzeba sprawdzić uzgodnienie ról i adekwatność wymagania wobec potrzeb.",
+              "Założenie obsady jest nierozsądne wobec danych; należy uzgodnić wymaganie lub warunki, bez twierdzenia, że podpis usuwa problem."
+            ],
+            "critical": "Uznanie poprawnej formy za wystarczającą walidację.",
+            "border": "Można zaproponować zmianę zakresu usługi lub warunków obsady jako przykład; wybór rozwiązania nie jest wymagany.",
+            "change": "Sytuacja fałszywego założenia zamiast odtwarzania listy.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Sponsor zaakceptował wymaganie, użytkownicy odczytują potrzebę inaczej, a zapis opiera się na niepotwierdzonej dostępności zewnętrznej usługi. Wyjaśnij, dlaczego jeden podpis nie zamyka walidacji i kiedy należy wykonać tę pracę.",
+            "dimensions": [
+              "Porozumienie istotnych interesariuszy nie wynika z podpisu sponsora, skoro podano rozbieżność.",
+              "Adekwatność wobec potrzeb i rozsądność założenia o usłudze wymagają osobnego sprawdzenia.",
+              "Walidację trzeba podejmować już w RE, żeby ograniczyć ryzyko wykrycia problemu dopiero przy wdrożeniu; kontrola dokumentu nie zastępuje trzech aspektów."
+            ],
+            "critical": "Uznanie jednej formalnej akceptacji za dowód wszystkich aspektów.",
+            "border": "Można pozostawić założenie jako niepotwierdzone; nie wymyślać dostępności usługi.",
+            "change": "Rozbieżność ról i niepewne założenie w pakiecie, zamiast jednego jawnie fałszywego założenia.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR06"
+      },
+      {
+        "id": "KRY-T07-07",
+        "title": "PR07 — Ewolucja i stabilność",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 7 s.17; C-S07 1.3.2 §2.2.7 s.27",
+        "note": "Wymagania zmieniają się, ponieważ zmieniają się potrzeby i warunki systemu. Źródłowe przykłady przyczyn obejmują procesy biznesowe, ofertę konkurencji, priorytety lub opinie klientów, technologię, przepisy oraz feedback użytkowników. Walidacja, wykrycie błędu w wymaganiu i zmienione potrzeby także mogą prowadzić do zmian. Nie każda zmiana dowodzi, że poprzednia praca RE była wadliwa; część jest reakcją na nową sytuację, część korektą wcześniejszego błędu.\n\nZasada prowadzi do pozornie sprzecznych celów: dopuszczać zmiany i utrzymywać stabilność wymagań. Bez możliwości dostosowania system traci dopasowanie do potrzeb, a bez pewnej stabilności trudno planować i rozwijać go w uporządkowany sposób. Stabilność nie oznacza niezmienności na zawsze. Dopuszczanie zmian nie oznacza przyjmowania każdej bez oceny i decyzji.\n\nWażność polega na świadomym zarządzaniu ewolucją, zamiast próby jej ignorowania lub chaotycznego reagowania. Szczegółowe mechanizmy zależą od procesu i są zakresem T37. W tym temacie potrzebne jest uzasadnienie obu celów oraz rozpoznanie źródeł zmiany; nie narzucamy jednej procedury CCB wszystkim organizacjom.",
+        "terms": "ewolucja — evolution; zmiana — change; stabilność — stability. Nazwy zasad z Syllabus; „stabilność” nie znaczy zamrożenia na zawsze.",
+        "example": "Zmiana harmonogramu dostaw klienta ujawnia nową potrzebę anulowania. Organizacja ocenia jej wpływ i termin wprowadzenia, zachowując znany zakres bieżącego przyrostu.",
+        "counter": "Uogólnienie „każda zmiana dowodzi błędu analityka” obala zmiana przepisów po uzgodnieniu poprawnych wcześniej wymagań. Uogólnienie „ewolucja = przyjmuj wszystko” obala sprzeczne żądania wymagające decyzji.",
+        "comparison": "Oś: otwartość na uzasadnioną zmianę versus zdolność oparcia prac na stabilnym zakresie. Nie są absolutnym albo–albo: kontrolowane decyzje pozwalają zachować oba cele w odpowiednim horyzoncie.",
+        "rp": "Podaj źródła zmian z zasady ewolucji i wyjaśnij, dlaczego RE jednocześnie dopuszcza zmianę i dba o stabilność.",
+        "answer": [
+          "Wskazuje różne przyczyny: biznes/procesy, konkurencja, priorytety klientów, technologia, przepisy, feedback; dopuszcza korektę błędów/walidację.",
+          "Wyjaśnia adaptację do potrzeb i potrzebę stabilnej podstawy realizacji, bez absolutnego zakazu albo automatycznej akceptacji zmian."
+        ],
+        "remedy": "Najpierw ustal źródło zmiany, potem odróżnij możliwość jej rozważenia od automatycznej realizacji. Stabilna podstawa prac i ewolucja mogą współistnieć.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń uzasadnienia dotyczące zmian wymagań.",
+            "options": [
+              [
+                "Nowy produkt konkurenta lub zmiana priorytetu klienta mogą prowadzić do zmiany wymagań.",
+                "Obie przyczyny są wskazane w zasadzie → Prawda."
+              ],
+              [
+                "Zmiana po poprawnej walidacji zawsze dowodzi jej błędu.",
+                "Nowe potrzeby/warunki mogą pojawić się później → Fałsz."
+              ],
+              [
+                "RE ma dopuszczać zmiany i równocześnie dbać o stabilność.",
+                "To dwa źródłowe cele wymagające pogodzenia → Prawda."
+              ],
+              [
+                "Dopuszczenie zmiany oznacza obowiązek natychmiastowej realizacji każdego żądania.",
+                "Możliwość ewolucji nie oznacza niekontrolowanej akceptacji → Fałsz."
+              ]
+            ],
+            "key": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Dwie strony zasady i źródła zmian."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Proces obsługi zmienił się już po rozpoczęciu implementacji. Właściciel chce albo odrzucać wszystkie zmiany do końca projektu, albo przyjmować każdą natychmiast. Wyjaśnij, dlaczego obie skrajności są niepełne.",
+            "dimensions": [
+              "Zmiana procesu jest możliwym naturalnym źródłem nowych wymagań; blokada każdej zmiany może utrwalić niedopasowanie.",
+              "Natychmiastowa akceptacja wszystkiego usuwa stabilną podstawę prac i utrudnia uporządkowany rozwój.",
+              "Trzeba świadomie godzić dopuszczenie zmian i stabilność według procesu; bez obowiązku jednej uniwersalnej procedury."
+            ],
+            "critical": "Uznanie jednej skrajności za bezwyjątkową regułę ewolucji.",
+            "border": "Nie trzeba ustalać konkretnego terminu wdrożenia zmiany.",
+            "change": "Konkretny wybór polityki po zmianie procesu zamiast ogólnych tez.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Wymień sześć przykładowych zewnętrznych źródeł zmian z §2.2/PR07 oraz wewnętrzne odkrycia, które też mogą powodować zmianę. Wyjaśnij na tej podstawie dwa cele zarządzania ewolucją.",
+            "dimensions": [
+              "Procesy biznesowe, konkurencja, priorytety/opinie klientów, technologia, przepisy, feedback użytkowników.",
+              "Walidacja, wykrycie wad i zmiana potrzeb mogą także zmienić wymagania; nie każda zmiana jest dowodem błędu, choć niektóre są korektą.",
+              "Dopuszczenie adaptacji i stabilność podstawy realizacji trzeba godzić; brak automatycznej akceptacji lub zakazu."
+            ],
+            "critical": "Przypisanie wszystkich zmian wyłącznie niedostatecznej analizie.",
+            "border": "Przyczyny można grupować we własnych słowach; wymagane jest zachowanie ich różnych sensów.",
+            "change": "Samodzielne odtworzenie pełnego katalogu i argumentu, bez podanej historii konkretnego projektu.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR07"
+      },
+      {
+        "id": "KRY-T07-08",
+        "title": "PR08 — Innowacja",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 8 s.17–18; C-S07 1.3.2 §2.2.8 s.28",
+        "note": "RE nie ogranicza się do zapisu dokładnie tych rozwiązań, które interesariusze potrafią już wskazać. Rozumienie ich potrzeb może ujawnić sposób zaspokojenia lepszy niż oczekiwane obejście problemu. Innowacja może mieć małą skalę — nową użyteczną funkcję lub prostszą obsługę — albo dużą skalę, gdy rozważa się istotnie odmienny sposób działania. Sama nowość technologii lub liczba funkcji nie potwierdza korzyści.\n\nTrzeba wyjść poza literalne propozycje i zbadać potrzebę, ale nie zastępować głosu interesariuszy przekonaniem „wiemy lepiej”. Pomysł rozwiązania wymaga sprawdzenia z potrzebami; zasada współdziała z walidacją i trójką problem–wymaganie–rozwiązanie. Użytkownik proszący o kolejne pole do ręcznego wpisania może potrzebować uniknąć pomyłek, co da się czasem osiągnąć przez usunięcie ponownego wprowadzania danych.\n\nWażność zasady polega na niewykorzystanej możliwości lepszego działania: bezrefleksyjne „więcej tego samego” może utrwalać problem. Innowacją nie musi być rewolucyjna architektura. Uzasadnione uproszczenie może dać wartość bez przyrostu funkcji. Zadania L2 wymagają wyjaśnienia mechanizmu i granic; nie żądają wynalezienia technologii ani dowodu popytu.",
+        "terms": "innowacja — innovation; mała/duża skala: objaśnienia z Syllabus; nie utożsamiać innowacji z dowolną nową technologią.",
+        "example": "Operator chce drugą kopię listy do kontroli. Analiza pokazuje, że chodzi o wychwycenie brakującego pola; prostszy sposób sprawdzenia przy wpisie może lepiej zaspokoić tę potrzebę.",
+        "counter": "Uogólnienie „więcej funkcji oznacza innowację” obala dodanie kolejnej nieużywanej tabeli, która zwiększa trudność obsługi i nie odpowiada na potrzebę.",
+        "comparison": "Oś: literalne żądanie rozwiązania versus potrzeba i lepszy sposób jej zaspokojenia. Dodatkowy formularz to jedna propozycja; usunięcie zbędnej czynności może lepiej realizować cel.",
+        "rp": "Wyjaśnij innowację w małej i dużej skali oraz granicę między wyjściem poza literalne życzenia a ignorowaniem interesariuszy.",
+        "answer": [
+          "Innowacja ma poprawiać zaspokojenie potrzeb, a nie jedynie zwiększać liczbę funkcji lub nowość technologii.",
+          "Dopuszcza użyteczne uproszczenie/małą funkcję i istotnie nowy sposób działania w dużej skali.",
+          "Nowy pomysł trzeba sprawdzać z interesariuszami; nie zakładać, że ekspert zawsze wie lepiej."
+        ],
+        "remedy": "Zapytaj, jaka potrzeba stoi za żądanym rozwiązaniem i czy inny sposób zaspokaja ją lepiej. Pomysł nadal wymaga walidacji, nie samej etykiety „innowacyjny”.",
+        "tasks": [
+          {
+            "type": "A",
+            "role": "B",
+            "stem": "Użytkownik prosi o trzeci ekran do ponownego przepisywania tych samych danych. Analiza potrzeby wskazuje, że chce uniknąć błędu uzgodnienia. Które działanie najlepiej oddaje zasadę innowacji?",
+            "options": [
+              [
+                "Zignorować użytkownika, bo analityk zawsze wie lepiej.",
+                "Zasada nie znosi potrzeb i walidacji → nie wybrać."
+              ],
+              [
+                "Wybrać najnowszą technologię bez sprawdzenia celu.",
+                "Nowość techniczna nie dowodzi poprawy → nie wybrać."
+              ],
+              [
+                "Dodać ekran bez badania przyczyny, bo tylko literalna prośba jest wymaganiem.",
+                "Bezrefleksyjny zapis może utrwalać obejście zamiast potrzeby → nie wybrać."
+              ],
+              [
+                "Zbadać prostszy sposób uzgodnienia bez ponownego wpisu i zwalidować go z użytkownikiem.",
+                "Lepsze zaspokojenie potrzeby może wymagać innego rozwiązania i kontroli → wybrać."
+              ]
+            ],
+            "key": "d",
+            "w": 1,
+            "change": "Mała skala innowacji przez uproszczenie."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "W firmie uznano, że innowacja wymaga dużej rewolucji technicznej. Analityk proponuje usunięcie zbędnego ręcznego kroku po zbadaniu potrzeby i pokazaniu użytkownikom wariantu. Wyjaśnij, czy to może realizować PR08.",
+            "dimensions": [
+              "Tak; użyteczne uproszczenie lub poprawa łatwości użycia mieści się w małej skali innowacji.",
+              "Wartość wynika z lepszego zaspokojenia potrzeby; sama nowość/rozmiar technologii nie jest kryterium.",
+              "Propozycja wymaga sprawdzenia z użytkownikami; duża skala także jest możliwa, lecz nie obowiązkowa."
+            ],
+            "critical": "Odrzucenie wartościowego uproszczenia wyłącznie z powodu braku nowej technologii.",
+            "border": "Odpowiedź „może, po walidacji potrzeby” jest trafna; nie zakładać zmierzonej korzyści.",
+            "change": "Kontrast małej i dużej skali, zamiast wyłącznie literalnego żądania.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Projekt może wybrać nową funkcję ułatwiającą pracę lub przeprojektować cały sposób świadczenia usługi. Wyjaśnij innowację obu skal, sens wyjścia poza życzenia i granicę, która chroni potrzeby interesariuszy.",
+            "dimensions": [
+              "Mała skala może poprawiać funkcję/łatwość pracy, duża badać radykalnie inny sposób realizacji usługi.",
+              "Nie ograniczamy się do literalnych propozycji; badamy potrzeby i możliwości ich lepszego zaspokojenia.",
+              "Nowość lub mnożenie funkcji nie wystarczają; pomysły waliduje się z potrzebami, bez założenia wyższości eksperta."
+            ],
+            "critical": "Przyjęcie technologicznej nowości za wystarczający dowód korzyści dla interesariusza.",
+            "border": "Nie trzeba zaprojektować nowej usługi; oceniana jest argumentacja o zasadzie.",
+            "change": "Porównanie dwóch skal i warunku wartości, bez gotowego przykładu obejścia.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR08"
+      },
+      {
+        "id": "KRY-T07-09",
+        "title": "PR09 — Systematyczna i zdyscyplinowana praca",
+        "eo": "EO2.2.2",
+        "level": "L2",
+        "source": "C-S02/C-S03 3.3.0 §2.2 zasada 9 s.18; C-S07 1.3.2 §2.2.9 s.29",
+        "note": "Systematyczne i zdyscyplinowane RE wymaga odpowiednich procesów i praktyk pozyskiwania, dokumentowania, walidacji oraz zarządzania. Potrzeba ta występuje niezależnie od procesu wytwarzania, także gdy budowa systemu jest prowadzona doraźnie. Zwinność nie uzasadnia przypadkowego obchodzenia się z wymaganiami.\n\nNie istnieje jeden proces lub zestaw praktyk działający dobrze w każdej albo większości sytuacji. Dyscyplina oznacza świadome dopasowanie do problemu, kontekstu i środowiska: wybór potrzebnych praktyk oraz artefaktów, sprawdzenie ich celu i realizację przyjętego sposobu pracy. Kopiowanie procesu z udanego projektu bez refleksji nie staje się właściwe dlatego, że kiedyś zadziałał. Tak samo dopasowanie nie oznacza pominięcia walidacji bez rozważenia ryzyka.\n\nZasada jest ważna, ponieważ ogranicza przypadkowość i daje uzasadnioną, powtarzalną podstawę pracy, zachowując adekwatność do sytuacji. Nie nakazuje najcięższego formalizmu, jednej notacji ani jednego narzędzia. Zespół może pracować lekko i nadal systematycznie, jeżeli wie, jak rozpoznaje potrzeby, zapisuje i sprawdza istotne ustalenia oraz kontroluje zmiany. Szczegóły procesu należą do T30–T32; tutaj oceniamy wyjaśnienie, dlaczego dyscyplina i dostosowanie współistnieją.",
+        "terms": "systematyczna i zdyscyplinowana praca — systematic and disciplined work; dostosowanie — tailoring (kontrolowana nazwa projektowa).",
+        "example": "Mały zespół uzgadnia krótkie przykłady, zapisuje decyzje i regularnie waliduje je z właścicielem potrzeby. Mało dokumentów nie oznacza braku dyscypliny.",
+        "counter": "Uogólnienie „dyscyplina = jeden szablon dla wszystkich projektów” obala dwa systemy o innym ryzyku i dostępności interesariuszy, wymagające uzasadnionych różnych praktyk.",
+        "comparison": "Oś: świadomy dobór i konsekwentne wykonanie versus rutynowe kopiowanie lub chaos. Dostosowanie może zmieniać praktykę, a dyscyplina zachowuje cel, kryteria i odpowiedzialność.",
+        "rp": "Wyjaśnij, dlaczego systematyczność nie oznacza jednego procesu i dlaczego agile nie znosi potrzeby dyscypliny RE.",
+        "answer": [
+          "Potrzebne są odpowiednie praktyki czterech zadań niezależnie od procesu wytwarzania.",
+          "Procesy/praktyki/artefakty dobiera się do problemu, kontekstu i środowiska; brak uniwersalnej recepty.",
+          "Ponowne użycie wymaga refleksji; lekki sposób pracy może być zdyscyplinowany."
+        ],
+        "remedy": "Pokaż cel wybranej praktyki i jej dopasowanie. Ani ciężki szablon, ani nazwa agile nie są samodzielnym dowodem właściwego RE.",
+        "tasks": [
+          {
+            "type": "K",
+            "role": "B",
+            "stem": "Oceń argumenty dotyczące systematycznego RE.",
+            "options": [
+              [
+                "Zwinny proces wytwarzania usuwa potrzebę walidacji i zarządzania wymaganiami.",
+                "Proces agile nie znosi głównych zadań RE → Fałsz."
+              ],
+              [
+                "Praktyki trzeba dobrać do problemu, kontekstu i środowiska.",
+                "To istota dostosowania w zasadzie → Prawda."
+              ],
+              [
+                "Proces sprawdzony wcześniej można zawsze kopiować bez refleksji.",
+                "Źródło wyraźnie wymaga refleksji nad reuse → Fałsz."
+              ],
+              [
+                "Lekka dokumentacja może współistnieć z systematyczną pracą.",
+                "Dyscyplina nie oznacza maksymalnej objętości; ważny odpowiedni sposób pracy → Prawda."
+              ]
+            ],
+            "key": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "w": 2,
+            "m": 4,
+            "change": "Dostosowanie, reuse i niezależność od procesu."
+          },
+          {
+            "type": "O",
+            "role": "F",
+            "stem": "Dostawca proponuje w małym projekcie ten sam proces, którego użył dla znacznie większego systemu. Jedynym argumentem jest dawny sukces. Wyjaśnij, jak PR09 traktuje takie ponowne użycie i co wymaga oceny.",
+            "dimensions": [
+              "Dawny sukces nie wystarcza; trzeba rozważyć zgodność problemu, kontekstu, środowiska i procesu wytwarzania.",
+              "Dobór praktyk i artefaktów powinien służyć pozyskiwaniu/dokumentowaniu/walidacji/zarządzaniu, bez jednego obowiązkowego zestawu.",
+              "Dopuszczalne jest użycie części dawnego procesu po refleksji; nie trzeba wszystkiego odrzucać ani maksymalizować formalizmu."
+            ],
+            "critical": "Twierdzenie, że dawny sukces uzasadnia automatyczne kopiowanie w każdej sytuacji.",
+            "border": "Można zachować dawną praktykę po uzasadnieniu dopasowania.",
+            "change": "Refleksyjny reuse zamiast samej deklaracji agile.",
+            "w": 0
+          },
+          {
+            "type": "O",
+            "role": "D",
+            "stem": "Dwa zespoły mają różne ryzyka i dostępność interesariuszy. Jeden chce ciężkiego szablonu, drugi spontanicznych rozmów bez zapisu ani kontroli. Wyjaśnij zasadę systematycznej pracy, relację do agile i warunki uzasadnionego reuse.",
+            "dimensions": [
+              "Oba zespoły potrzebują odpowiednich praktyk głównych zadań RE; spontaniczność nie usuwa potrzeby sprawdzania i zarządzania.",
+              "Nie ma jednego najlepszego procesu; dobór praktyk i artefaktów zależy od sytuacji, a ciężki szablon sam nie dowodzi adekwatności.",
+              "Agile nie jest wyjątkiem od dyscypliny; reuse dawnych praktyk wymaga refleksji nad dopasowaniem, a nie automatycznego skopiowania."
+            ],
+            "critical": "Uznanie ciężaru dokumentacji lub nazwy agile za wystarczający dowód poprawnego RE.",
+            "border": "Wolno zaproponować inne sposoby pracy dla obu zespołów bez projektowania pełnego procesu.",
+            "change": "Dwie odmienne sytuacje wymuszają wyjaśnienie obu skrajności i dopasowania.",
+            "w": 0
+          }
+        ],
+        "scope_id": "T07/PR09"
+      }
+    ],
+    "reuse": [
+      "C-A-B01",
+      "C-A-F01",
+      "C-A-D01",
+      "C-A-R01",
+      "C-A-S01",
+      "C-A-L301"
+    ],
+    "intro": "Każdą zasadę trzeba umieć wyjaśnić: jaki problem pracy RE rozwiązuje, dlaczego jest ważna i co z niej wynika w danych warunkach. Podanie nazwy nie wystarcza do L2. Poniższe PR01–PR09 są lokalnymi zakresami M01 w jednym oficjalnym EO2.2.2. Treść zasad współdziała, ale poprawna odpowiedź o kontekście nie jest obserwacją wszystkich pozostałych zasad. Zadania otwarte wymagają argumentu. Zamknięte oceniają wybór gotowego argumentu, więc ich wynik nie potwierdza samodzielnego stworzenia wyjaśnienia.",
+    "reuse_text": "C-A zachowuje KRY-A01/r1, REG-A1, CMP-A, EX/CE/REM-A i C-A-B01/F01/D01/R01/S01. To wkład do PR04 o znaczeniu wpływu mimo braku zmiany, a nie pełne EO2.2.2. C-A-L301 i KRY-A02/r1 dotyczą części EO4.1.1 L3; pozostają materiałem do review właściciela T23, nie zostają przemianowane na pomiar dziewięciu zasad. Nowe KRY-T07-04/r1 ma szerszą granicę PR04; nie zastępuje ani nie rozszerza po cichu KRY-A01. Wierny aneks C-A obejmuje treść, rubryki, warianty i ograniczenia; cały C pozostaje nieprzyjęty w G2.",
+    "delta": "Stan przed: C-A dostarczał część zasady kontekstu i jedno wykonanie L3 do review. Stan po: dziewięć zakresów PR01–09, każde z własną treścią, B/F/D i RP; kontekst rozszerzony o założenia, zmiany i real-world requirements bez redefinicji KRY-A01. EO2.2.2 ma opracowany autorsko deklarowany zakres dziewięciu zasad, lecz pełność formalnie oczekuje niezależnego audytu. Klucze C-A, jego ID i rodziny zachowane. Nowe FAM-T07 porównać z C-A, B03 i T03/T06; żadna rodzina nie została tu uznana za niezależną rezerwę."
+  }
+]

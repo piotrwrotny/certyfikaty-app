@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D08
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-08
+  aspect: ZAK-T07-08
+family: FAM-T07-08
+sourceAnchor: tools/z1_extensions.py T07-08/D
+stem: |-
+  Jeden wariant nowej usługi ułatwia wykonanie pojedynczej czynności, drugi radykalnie zmienia sposób świadczenia usługi. Oba są dopiero pomysłami. Które argumenty są zgodne z zasadą innowacji?
+options:
+- id: a
+  text: Tylko radykalny wariant może być innowacją niezależnie od potrzeb.
+  rationale: Źródło dopuszcza dwie skale → mała poprawa łatwości użycia nie jest wykluczona → argument jest błędny.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  correct: false
+- id: b
+  text: Pierwszy wariant może realizować innowację małej skali.
+  rationale: Opis dotyczy ułatwienia czynności → łatwość użycia należy do małej skali → argument jest trafny.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  correct: true
+- id: c
+  text: Drugi wariant może odpowiadać innowacji dużej skali.
+  rationale: Rozważono przełomowy sposób świadczenia → duża skala jest dopuszczonym kierunkiem → argument jest trafny.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  correct: true
+- id: d
+  text: Etykieta innowacji zwalnia oba warianty ze sprawdzenia wobec potrzeb.
+  rationale: Warianty są dopiero pomysłami → nowość nie potwierdza adekwatności → argument jest błędny.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  correct: false
+- id: e
+  text: Oba warianty trzeba rozważać pod kątem lepszego zaspokojenia potrzeb niż literalna propozycja.
+  rationale: |-
+    Cel dotyczy korzyści interesariuszy → zasada zachęca do poszukiwania lepszego zaspokojenia → argument jest trafny.
+  rules:
+  - REG-KRY-T07-08
+  see: N-T07-08
+  correct: true
+k: 3

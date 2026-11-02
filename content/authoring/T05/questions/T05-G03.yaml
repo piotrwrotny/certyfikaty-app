@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-G03
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T05-03
+  aspect: ZAK-T05-03
+family: FAM-T05-03
+sourceAnchor: tools/z1_extensions.py T05-03/G
+stem: |-
+  Program kursu obejmuje wyłącznie rysowanie diagramów w jednym edytorze. Organizator uważa, że to pełny zakres przygotowania RE. Która ocena jest trafna?
+options:
+- id: a
+  text: Kurs jest pełny, jeżeli edytor ma wiele funkcji.
+  rationale: |-
+    Liczba funkcji narzędzia nie pokrywa sześciu obszarów → obsługa programu nie wyczerpuje RE → ocena jest błędna.
+  rules:
+  - REG-T05-03-02
+  see: N-T05-03
+  correct: false
+- id: b
+  text: Z zakresu RE należy usunąć zarządzanie istniejącymi wymaganiami.
+  rationale: Zarządzanie znajduje się w §1.6 → redukcja kursu nie zmienia wykazu → ocena jest błędna.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: false
+- id: c
+  text: Pozostałe obszary zastąpi sam tytuł certyfikatu.
+  rationale: Tytuł nie jest treścią kursu → wymagany zakres obejmuje konkretne obszary → ocena nie wynika.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: false
+- id: d
+  text: |-
+    Brakuje zakresów zasad, opracowywania, procesów i zarządzania, a samo narzędzie nie wyczerpuje także dokumentowania.
+  rationale: Program opisuje tylko diagramy i edytor → §1.6 obejmuje szerszą szóstkę → zarzut niepełności jest uzasadniony.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: true

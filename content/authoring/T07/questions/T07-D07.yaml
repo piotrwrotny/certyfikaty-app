@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D07
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T07-07
+  aspect: ZAK-T07-07
+family: FAM-T07-07
+sourceAnchor: tools/z1_extensions.py T07-07/D
+stem: |-
+  Recenzent twierdzi, że jedynym dopuszczalnym źródłem zmiany jest błąd analityka, a stabilność wyklucza rozważanie nowych żądań. Które argumenty korygują to rozumowanie zgodnie z zasadą ewolucji?
+options:
+- id: a
+  text: Procesy biznesowe, oferta konkurencji i priorytety klientów mogą zmieniać wymagania.
+  rationale: Wskazano źródła zewnętrznej ewolucji → nie wymagają one założenia wcześniejszej wady → argument jest
+    trafny.
+  rules:
+  - REG-T07-07-02
+  see: N-T07-07
+  correct: true
+- id: b
+  text: Każde żądanie trzeba wdrożyć natychmiast, aby uznać zmianę za dopuszczalną.
+  rationale: |-
+    Możliwość zmiany współistnieje ze stabilnością → żądanie nie oznacza automatycznej realizacji → argument jest błędny.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  correct: false
+- id: c
+  text: Technologia, regulacje i feedback użytkowników także mogą powodować zmiany.
+  rationale: Wymieniono pozostałe przykłady źródłowe → katalog wykracza poza błąd autora → argument jest trafny.
+  rules:
+  - REG-T07-07-02
+  see: N-T07-07
+  correct: true
+- id: d
+  text: Wykrycie wady w walidacji nigdy nie może uzasadniać zmiany wymagania.
+  rationale: |-
+    Zasada wprost dopuszcza korektę odkrytych wad → Walidacja, odkrycie wad wcześniejszych wymagań i zmiany potrzeb interesariuszy również mogą powodować zmiany wymagań. → absolutne wykluczenie jest błędne.
+  rules:
+  - REG-T07-07-03
+  see: N-T07-07
+  correct: false
+- id: e
+  text: Można rozważać zmiany i zarazem zachować stabilną podstawę realizacji.
+  rationale: Recenzent przeciwstawił cele absolutnie → źródło wymaga godzenia obu → argument jest trafny.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  correct: true
+k: 3

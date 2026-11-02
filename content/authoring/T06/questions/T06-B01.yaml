@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T06-B01
+revision: r1
+format: P
+role: base
+weight: 3
+scope:
+  criterion: KRY-T06-01
+  aspect: ZAK-T06-01
+family: FAM-T06-01
+sourceAnchor: tools/z1_extensions.py T06-01/B
+stem: Które zestawy zawierają wyłącznie nazwy z dziewięciu zasad RE wymienionych w §2.1 Syllabus?
+options:
+- id: a
+  text: Orientacja na wartość; interesariusze; wspólne zrozumienie.
+  rationale: Trzy nazwy należą do PR01–PR03 → zestaw zawiera wyłącznie pozycje wykazu → należy do klucza.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: true
+- id: b
+  text: Kontekst; maksymalizacja dokumentacji; walidacja.
+  rationale: |-
+    Środkowa pozycja nie występuje w wykazie → cały zestaw nie spełnia warunku wyłącznie nazw zasad → nie należy do klucza.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: false
+- id: c
+  text: Kontekst; problem–wymaganie–rozwiązanie; walidacja.
+  rationale: Nazwy odpowiadają PR04–PR06 → zestaw spełnia warunek → należy do klucza.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: true
+- id: d
+  text: Ewolucja; innowacja; obowiązkowy zakup narzędzia.
+  rationale: Zakup narzędzia nie jest nazwą dziewiątej zasady → zestaw nie spełnia warunku → nie należy do klucza.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: false
+- id: e
+  text: Ewolucja; innowacja; systematyczna i zdyscyplinowana praca.
+  rationale: Nazwy odpowiadają PR07–PR09 → wszystkie są na liście → zestaw należy do klucza.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  correct: true
+k: 3

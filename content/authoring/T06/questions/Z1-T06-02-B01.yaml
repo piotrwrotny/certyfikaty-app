@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T06-02-B01
+revision: r2
+format: K
+role: base
+weight: 2
+scope:
+  criterion: KRY-T06-02
+  aspect: ZAK-T06-02
+family: FAM-T06-02
+sourceAnchor: references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-02-B01
+stem: Oceń znaczenia terminów.
+options:
+- id: '1'
+  text: Context w RE to istotna część otoczenia systemu.
+  rationale: |-
+    Istotność wobec systemu i wymagań ogranicza zakres → Context w RE jest częścią otoczenia istotną dla zrozumienia systemu i jego wymagań. → Prawda.
+  rules:
+  - REG-T06-02-02
+  see: N-T06-02
+  truth: true
+- id: '2'
+  text: Stakeholder musi być bezpośrednim użytkownikiem.
+  rationale: |-
+    Wpływ lub oddziaływanie wystarcza → Stakeholder może wpływać na wymagania albo podlegać wpływowi systemu, a requirement może oznaczać potrzebę, właściwość lub jej reprezentację. → Fałsz.
+  rules:
+  - REG-T06-02-06
+  see: N-T06-02
+  truth: false
+- id: '3'
+  text: Validation odnosi się do zgodności z potrzebami interesariuszy.
+  rationale: |-
+    To odniesienie definiuje validation → Validation potwierdza zgodność z potrzebami interesariuszy, a verification zgodność ze specyfikacją. → Prawda.
+  rules:
+  - REG-T06-02-05
+  see: N-T06-02
+  truth: true
+- id: '4'
+  text: Shared understanding oznacza po prostu używanie tych samych słów.
+  rationale: |-
+    Słowa mogą mieć różne znaczenia; wspólna podstawa wymaga znaczenia → Explicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach, a implicit na wspólnej wiedzy o potrzebach, wizji i kontekście. → Fałsz.
+  rules:
+  - REG-T06-02-03
+  see: N-T06-02
+  truth: false

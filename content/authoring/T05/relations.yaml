@@ -1,0 +1,106 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T05-01
+  meaning: |-
+    Rozmowa o oczekiwaniach wspiera pozyskiwanie; zapis uzgodnień dokumentowanie; porównanie z potrzebami walidację; obsługa zmian i powiązań zarządzanie.
+  from: EX-KRY-T05-01
+- type: counterexample-of
+  to: REG-KRY-T05-01
+  meaning: |-
+    Uogólnienie „jedna skuteczna procedura jest dobra wszędzie” obala zastosowanie ciężkiego trybu zatwierdzania do małego eksperymentu bez rozważenia jego celu i ryzyka. Wymagana jest refleksja i dopasowanie.
+  from: CE-KRY-T05-01
+- type: distinguishes
+  to: REG-KRY-T05-01
+  meaning: |-
+    Oś: zadanie versus sposób wykonania. Walidacja jest zadaniem; wybrany review to praktyka jego wykonania. Narzędzie przechowujące wymagania wspiera pracę, lecz samo nie oznacza walidacji.
+  from: CMP-KRY-T05-01
+- type: explains
+  to: REG-KRY-T05-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T05-01
+- type: variant-of
+  to: Z1-T05-01-B01
+  meaning: Rozpoznanie zadań w prostych opisach, bez projektowania procesu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T05-01-F01
+- type: variant-of
+  to: Z1-T05-01-B01
+  meaning: Kontrast zadań i konkretnego doboru praktyk; nie projektuje pełnego procesu L3.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-G01
+- type: variant-of
+  to: Z1-T05-01-B01
+  meaning: Ocena błędnej interpretacji listy jako harmonogramu; zachowano otwarte D wymagające własnego wyjaśnienia.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-D01
+- type: illustrates
+  to: REG-KRY-T05-02
+  meaning: |-
+    Product Owner prowadzący uzgodnienia potrzeb i walidację może działać w roli RE, choć jego etat nie ma takiej nazwy.
+  from: EX-KRY-T05-02
+- type: counterexample-of
+  to: REG-KRY-T05-02
+  meaning: |-
+    Uogólnienie „programista nie może pełnić roli RE” obala programista uczestniczący kompetentnie w pozyskiwaniu i uzgadnianiu wymagań. Sama nazwa stanowiska tego nie wyklucza.
+  from: CE-KRY-T05-02
+- type: distinguishes
+  to: REG-KRY-T05-02
+  meaning: |-
+    Oś: formalna etykieta organizacyjna versus wykonywana rola. „Analityk” jest nazwą stanowiska; faktyczne czynności i wiedza mogą wskazywać rolę RE. Etykieta nie jest samodzielnym dowodem kompetencji.
+  from: CMP-KRY-T05-02
+- type: explains
+  to: REG-KRY-T05-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T05-02
+- type: variant-of
+  to: Z1-T05-02-B01
+  meaning: Kontrast stanowiska i charakterystyki.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T05-02-F01
+- type: variant-of
+  to: Z1-T05-02-B01
+  meaning: |-
+    Praca rozdzielona między dwie osoby zamiast definicji stanowiska; zakres nie obejmuje certyfikowania kompetencji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-G02
+- type: variant-of
+  to: Z1-T05-02-B01
+  meaning: Spór o formalny etat przy jawnej charakterystyce pracy, bez udawania pełnego audytu zawodowego.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-D02
+- type: illustrates
+  to: REG-KRY-T05-03
+  meaning: |-
+    Kandydat uczy się dobierać reprezentację wymagania, rozumieć walidację i zarządzać zmianą; znajomość jednej notacji nie wyczerpuje zakresu.
+  from: EX-KRY-T05-03
+- type: counterexample-of
+  to: REG-KRY-T05-03
+  meaning: |-
+    Uogólnienie „kurs narzędzia wyczerpuje RE” obala sytuacja, gdy użytkownik programu umie tworzyć rekordy, lecz nie rozróżnia potrzeby i narzuconego rozwiązania.
+  from: CE-KRY-T05-03
+- type: distinguishes
+  to: REG-KRY-T05-03
+  meaning: |-
+    Oś: obszar kompetencji versus konkretny nośnik/praktyka. Tool support jest obszarem; kliknięcia w programie są jedną umiejętnością operacyjną. Moderowanie spotkania wspiera współpracę, ale nie zastępuje dokumentowania czy walidacji.
+  from: CMP-KRY-T05-03
+- type: explains
+  to: REG-KRY-T05-03
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T05-03
+- type: variant-of
+  to: Z1-T05-03-B01
+  meaning: |-
+    Rozpoznanie pełnej szóstki w dwóch grupach i jawne oddzielenie rozwinięcia Handbook; otwarte F zachowuje recall.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-F03
+- type: variant-of
+  to: Z1-T05-03-B01
+  meaning: Ocena niepełnego programu zamiast wybierania trzech pozycji listy.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-G03
+- type: variant-of
+  to: Z1-T05-03-B01
+  meaning: Dopełnienie pełnej szóstki po innej grupie wejściowej; nie dowodzi samodzielnego odtworzenia bez podpowiedzi.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T05-D03

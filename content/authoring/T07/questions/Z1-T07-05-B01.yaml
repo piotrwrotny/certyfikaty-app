@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-05-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T07-05
+  aspect: ZAK-T07-05
+family: FAM-T07-05
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-05-B01
+stem: |-
+  Zespół chce sprawdzić prototyp nowego sposobu obsługi, aby zrozumieć potrzeby użytkowników. Kierownik zakazuje tego, bo „żadne rozwiązanie nie może być rozważane przed kompletem wymagań”. Która ocena jest właściwa?
+options:
+- id: a
+  text: Każda sugestia technologii jest definicją problemu.
+  rationale: |-
+    Technologia jest propozycją realizacji, nie samym stanem problemowym → Problem jest niezadowalającą sytuacją, wymagania ujmują potrzebę jej usunięcia lub ograniczenia, a rozwiązaniem jest spełniający je system socjotechniczny. → nie wybrać.
+  rules:
+  - REG-KRY-T07-05
+  see: N-T07-05
+  correct: false
+- id: b
+  text: Zakaz wynika z zasady trójki w każdej sytuacji.
+  rationale: |-
+    Zasada dopuszcza wzajemny wpływ i brak stałej kolejności → Problem, wymaganie i rozwiązanie są współzależne i nie muszą pojawiać się w jednej niezmiennej kolejności. → nie wybrać.
+  rules:
+  - REG-T07-05-02
+  see: N-T07-05
+  correct: false
+- id: c
+  text: Prototyp może ujawnić wymagania; nadal warto rozdzielić opisy problemu, potrzeby i rozwiązania.
+  rationale: |-
+    Częściowe rozwiązanie pomaga poznać potrzeby bez scalania ich znaczeń → Prototyp może wspierać rozpoznawanie wymagań i ocenę rozwiązania, bez ustanawiania obowiązkowej kolejności zakończenia całego RE przed jego badaniem. → wybrać.
+  rules:
+  - REG-T07-05-05
+  see: N-T07-05
+  correct: true
+- id: d
+  text: Od tej chwili potrzeby nie mają znaczenia.
+  rationale: |-
+    Rozwiązanie ma nadal zaspokajać potrzeby → Problem jest niezadowalającą sytuacją, wymagania ujmują potrzebę jej usunięcia lub ograniczenia, a rozwiązaniem jest spełniający je system socjotechniczny. → nie wybrać.
+  rules:
+  - REG-KRY-T07-05
+  see: N-T07-05
+  correct: false

@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G02
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-02
+  aspect: ZAK-T07-02
+family: FAM-T07-02
+sourceAnchor: tools/z1_extensions.py T07-02/G
+stem: |-
+  Przyszli użytkownicy usługi nie są jeszcze znani z nazwiska. Przygotowano personę. Operator przekazuje informacje o trudnościach odtworzenia usługi, a jedna osoba łączy role kupującego i użytkownika. Oceń wnioski.
+options:
+- id: '1'
+  text: Persona może pomóc opisać archetypowe potrzeby nieznanej grupy.
+  rationale: Podano nieznane przyszłe osoby → fikcyjny archetyp jest dopuszczoną reprezentacją → Prawda.
+  rules:
+  - REG-T07-02-03
+  see: N-T07-02
+  truth: true
+- id: '2'
+  text: Persona poświadcza rzeczywistą zgodę całej przyszłej grupy.
+  rationale: Opis jest fikcyjny → nie jest podpisem ani wypowiedzią wszystkich osób → Fałsz.
+  rules:
+  - REG-T07-02-03
+  see: N-T07-02
+  truth: false
+- id: '3'
+  text: Feedback operatora należy rozpatrzyć jako wkład istotnej roli, a nie odrzucać z braku roli klienta.
+  rationale: Podano potrzebę odtworzenia usługi → uwzględnianie samych klientów mogłoby pominąć wymaganie → Prawda.
+  rules:
+  - REG-KRY-T07-02
+  see: N-T07-02
+  truth: true
+- id: '4'
+  text: Kupujący i użytkownik mogą być dwiema rolami tej samej osoby.
+  rationale: Wprost wskazano łączenie ról → zasada dopuszcza więcej niż jedną rolę stakeholdera → Prawda.
+  rules:
+  - REG-T07-02-02
+  see: N-T07-02
+  truth: true

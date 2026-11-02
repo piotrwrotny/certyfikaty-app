@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T06-F02
+revision: r1
+format: P
+role: follow-up-1
+weight: 3
+scope:
+  criterion: KRY-T06-02
+  aspect: ZAK-T06-02
+family: FAM-T06-02
+sourceAnchor: tools/z1_extensions.py T06-02/F
+stem: Które pary termin–znaczenie są zgodne z terminologią EU2 i przyjętym Glossary?
+options:
+- id: a
+  text: Requirement — potrzeba, wymagana zdolność lub właściwość albo ich udokumentowana reprezentacja.
+  rationale: Para wymienia trzy sensy → odpowiada hasłu Requirement → należy do klucza.
+  rules:
+  - REG-T06-02-06
+  see: N-T06-02
+  correct: true
+- id: b
+  text: Stakeholder — wyłącznie osoba bezpośrednio używająca interfejsu.
+  rationale: Zawężono wpływ i oddziaływanie do użycia → stakeholder jest szerszy niż user → para jest błędna.
+  rules:
+  - REG-T06-02-06
+  see: N-T06-02
+  correct: false
+- id: c
+  text: Context — istotna część otoczenia systemu.
+  rationale: Wskazano istotność wobec systemu i wymagań → jest to sens Context w RE → para jest poprawna.
+  rules:
+  - REG-T06-02-02
+  see: N-T06-02
+  correct: true
+- id: d
+  text: Validation — wyłącznie sprawdzenie zgodności zapisu ze specyfikacją.
+  rationale: Wskazano punkt odniesienia verification → validation odnosi się do potrzeb → para jest błędna.
+  rules:
+  - REG-T06-02-05
+  see: N-T06-02
+  correct: false
+- id: e
+  text: RE — systematyczne specyfikowanie i zarządzanie wymaganiami dla rozumienia potrzeb i ograniczenia ryzyka.
+  rationale: Opis zachowuje działania i cel → odpowiada definicji RE → para jest poprawna.
+  rules:
+  - REG-T06-02-07
+  see: N-T06-02
+  correct: true
+k: 3

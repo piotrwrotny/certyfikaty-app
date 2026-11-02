@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T01-03-D01
+revision: r2
+format: K
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T01-03
+  aspect: ZAK-T01-03
+family: FAM-T01-03
+sourceAnchor: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-03-D01
+stem: Oceń relacje pojęć.
+options:
+- id: '1'
+  text: Interesariuszem może być organizacja.
+  rationale: |-
+    Definicja obejmuje organizacje, nie tylko osoby → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → Prawda.
+  rules:
+  - REG-KRY-T01-03
+  see: N-T01-03
+  truth: true
+- id: '2'
+  text: Interesariusz musi zarazem wpływać na wymagania i korzystać z funkcjonalności.
+  rationale: |-
+    Są to inne warunki; definicja używa wpływu lub oddziaływania, bez obowiązku użycia → Stakeholder to osoba lub organizacja wpływająca na wymagania systemu albo podlegająca wpływowi tego systemu. → Fałsz.
+  rules:
+  - REG-KRY-T01-03
+  see: N-T01-03
+  truth: false
+- id: '3'
+  text: Osoba może pełnić kilka ról interesariusza.
+  rationale: |-
+    Role nie muszą wykluczać się wzajemnie → Jeden interesariusz może równocześnie pełnić więcej niż jedną rolę. → Prawda; także C-S02/C-S03 §2.2 zasada 2 s.15.
+  rules:
+  - REG-T01-03-03
+  see: N-T01-03
+  truth: true

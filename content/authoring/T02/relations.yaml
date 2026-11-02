@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T02-01
+  meaning: |-
+    „Odpowiedź zawiera numer zgłoszenia” wymaga danych wyniku funkcji. „95% odpowiedzi w ≤1 s przy określonym obciążeniu” określa czas. „Użyj jedynie silnika X mimo odpowiednich alternatyw” nakazuje rozwiązanie.
+  from: EX-KRY-T02-01
+- type: counterexample-of
+  to: REG-KRY-T02-01
+  meaning: |-
+    Uogólnienie „każdy limit to constraint” obala limit zużycia pamięci opisujący jakość pracy systemu. Wymagania funkcji i jakości też ograniczają możliwe realizacje.
+  from: CE-KRY-T02-01
+- type: distinguishes
+  to: REG-KRY-T02-01
+  meaning: |-
+    Oś: przedmiot oczekiwania. Wynik/zachowanie/dane/interakcja → functional; cecha jakościowa → quality; dodatkowo narzucony wybór → constraint. Dwa różne oczekiwania w zdaniu trzeba nazwać osobno, zamiast wybierać typ po słowie „musi”.
+  from: CMP-KRY-T02-01
+- type: explains
+  to: REG-KRY-T02-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T02-01
+- type: variant-of
+  to: Z1-T02-01-B01
+  meaning: |-
+    Złożony przypadek jest rozdzielany na oczekiwania; zamknięta kontrola nie zastępuje swobodnego powodu w źródłowym F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T02-F01
+- type: variant-of
+  to: Z1-T02-01-B01
+  meaning: Inna cecha zasobowa i funkcja rozliczalności; oceniane są zarazem typ i podany argument.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T02-G01
+- type: variant-of
+  to: Z1-T02-01-B01
+  meaning: Kontrast rezultatu liczbowego, cechy i dodatkowego wyboru; bliskość do C-P jawna.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T02-01-D01
+- type: illustrates
+  to: REG-KRY-T02-02
+  meaning: |-
+    Dodatkowy nakaz bazy danych jest constraint, więc należy do NFR w profilu Glossary. Wymóg czasu odpowiedzi jest quality, więc również należy do NFR.
+  from: EX-KRY-T02-02
+- type: counterexample-of
+  to: REG-KRY-T02-02
+  meaning: |-
+    Uogólnienie „NFR = jakość” obala dodatkowy nakaz konkretnego silnika. Jest NFR jako constraint, choć nie określa cechy jakościowej.
+  from: CE-KRY-T02-02
+- type: distinguishes
+  to: REG-KRY-T02-02
+  meaning: |-
+    Oś zbiorów: quality jest jedną z dwóch kategorii NFR; constraint jest drugą. Oś redakcyjna: jasny/niejasny zapis jest niezależna od obu — „system działa szybko” jest jakościowe i zarazem nieprecyzyjne.
+  from: CMP-KRY-T02-02
+- type: explains
+  to: REG-KRY-T02-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T02-02
+- type: variant-of
+  to: Z1-T02-02-B01
+  meaning: Rozdzielono zakres NFR, jakość zapisu i wydajność.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T02-02-F01
+- type: variant-of
+  to: Z1-T02-02-B01
+  meaning: Łączy dodatkowy wybór realizacji z oceną jego zapisu; nie wystarcza pamięć samej definicji NFR.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T02-G02
+- type: variant-of
+  to: Z1-T02-02-B01
+  meaning: Dwa błędne argumenty ze źródłowego otwartego D stają się osobnym sprawdzeniem zamkniętym z nowym ID.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T02-D02
+- type: illustrates
+  to: REG-P1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: EX-P
+- type: counterexample-of
+  to: REG-P1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: CE-P
+- type: distinguishes
+  to: REG-P1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: CMP-P
+- type: required-for
+  to: KRY-P01
+  condition: |-
+    Gdy nie można wskazać, co w zdaniu jest przedmiotem oczekiwania. Znana podstawa jest pomijalna; brak decyzji nie tworzy bramki.
+  meaning: Podstawa umożliwia odczytanie przyjętej perspektywy lub przedmiotu wymagania.
+  from: PRE-P
+- type: explains
+  to: REG-P1
+  meaning: Wierny wkład C wyjaśnia zachowany częściowy zakres.
+  from: N-T02-C-P01
+- type: variant-of
+  to: C-P-B01
+  meaning: Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: C-P-F01
+- type: variant-of
+  to: C-P-B01
+  meaning: Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: T02-GC01
+- type: variant-of
+  to: C-P-B01
+  meaning: Wspólny kontrast C-P; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: C-P-D01

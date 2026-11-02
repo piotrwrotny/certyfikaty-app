@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T02-D02
+revision: r1
+format: K
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T02-02
+  aspect: ZAK-T02-02
+family: FAM-T02-02
+sourceAnchor: tools/z1_extensions.py T02-02/D
+stem: |-
+  Przyjęto znaczenie NFR z Glossary IREB 2.2.0. Zapis A nakazuje generowanie potwierdzenia i został oceniony jako jednoznaczny. Zapis B dodatkowo narzuca platformę mimo odpowiednich alternatyw. Oceń wnioski.
+options:
+- id: '1'
+  text: Jednoznaczność A wystarcza, aby zmienić jego rodzaj z functional na quality.
+  rationale: A opisuje generowanie → jakość redakcji nie zmienia oczekiwanego zachowania → Fałsz.
+  rules:
+  - REG-T02-02-03
+  see: N-T02-02
+  truth: false
+- id: '2'
+  text: B jako constraint należy do NFR w tym profilu.
+  rationale: B dodatkowo narzuca platformę → constraint jest członem definicji NFR → Prawda.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  truth: true
+- id: '3'
+  text: NFR jest szersze niż sam zbiór quality requirements.
+  rationale: Profil zawiera także constraint → quality nie wyczerpuje NFR → Prawda.
+  rules:
+  - REG-KRY-T02-02
+  see: N-T02-02
+  truth: true

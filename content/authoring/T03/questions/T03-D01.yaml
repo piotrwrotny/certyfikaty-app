@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T03-D01
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T03-01
+  aspect: ZAK-T03-01
+family: FAM-T03-01
+sourceAnchor: tools/z1_extensions.py T03-01/D
+stem: |-
+  Dla nowej usługi ustalono oczekiwania operatora, wyjątki zachowania i wyniki mające być widoczne po ich obsłudze. Które argumenty poprawnie wiążą RE z korzyściami?
+options:
+- id: a
+  text: Znajomość wyjątków poprawia rozumienie problemu i ogranicza ryzyko pominięcia istotnej potrzeby.
+  rationale: |-
+    Ustalono wyjątki i oczekiwania operatora → rozumienie i ograniczenie ryzyka należą do korzyści RE → argument jest trafny.
+  rules:
+  - REG-T03-01-04
+  see: N-T03-01
+  correct: true
+- id: b
+  text: Uzgodnienie potrzeb zapewnia, że każda przyszła estymacja będzie dokładna.
+  rationale: Uzgodniono zakres, nie przyszłą pracochłonność → podstawa estymacji nie jest gwarancją → argument jest
+    błędny.
+  rules:
+  - REG-T03-01-02
+  see: N-T03-01
+  correct: false
+- id: c
+  text: Znany zakres wariantów daje podstawę szacowania pracy i kosztu.
+  rationale: Dane opisują potrzebne zachowania → określony zakres wspiera estymację → argument jest trafny.
+  rules:
+  - REG-T03-01-02
+  see: N-T03-01
+  correct: true
+- id: d
+  text: Po takim uzgodnieniu nie ma już potrzeby testowania.
+  rationale: |-
+    Ustalono oczekiwane wyniki → wymagania są podstawą testu, a nie powodem jego zaniechania → argument jest błędny.
+  rules:
+  - REG-T03-01-03
+  see: N-T03-01
+  correct: false
+- id: e
+  text: Oczekiwane wyniki pozwalają wyznaczyć punkt odniesienia dla testów.
+  rationale: Podano oczekiwany rezultat → można porównać z nim wykonanie → argument jest trafny.
+  rules:
+  - REG-T03-01-03
+  see: N-T03-01
+  correct: true
+k: 3

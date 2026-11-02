@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T01-02-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T01-02
+  aspect: ZAK-T01-02
+family: FAM-T01-02
+sourceAnchor: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-02-F01
+stem: Oceń użycia terminu specification.
+options:
+- id: '1'
+  text: Sformułowanie „specyfikowanie wymagań zajęło tydzień” dotyczy procesu.
+  rationale: Opis czasu czynności → proces specyfikowania → Prawda.
+  rules:
+  - REG-KRY-T01-02
+  see: N-T01-02
+  truth: true
+- id: '2'
+  text: Specyfikacja techniczna może opisywać już zaimplementowane właściwości.
+  rationale: |-
+    Znaczenie specification dopuszcza cechy wykonane → Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań. → Prawda.
+  rules:
+  - REG-T01-02-03
+  see: N-T01-02
+  truth: true
+- id: '3'
+  text: Każda specyfikacja z definicji zawiera tylko wymagania.
+  rationale: |-
+    Specification ma szerszy zakres niż requirements specification → Specyfikacja może opisywać właściwości wymagane lub już zaimplementowane, więc nie każda specyfikacja jest specyfikacją wymagań. → Fałsz.
+  rules:
+  - REG-T01-02-03
+  see: N-T01-02
+  truth: false

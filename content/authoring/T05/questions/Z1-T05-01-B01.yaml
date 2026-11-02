@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T05-01-B01
+revision: r2
+format: K
+role: base
+weight: 2
+scope:
+  criterion: KRY-T05-01
+  aspect: ZAK-T05-01
+family: FAM-T05-01
+sourceAnchor: references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-01-B01
+stem: Oceń twierdzenia o wykazie zadań RE.
+options:
+- id: '1'
+  text: Walidacja i dokumentowanie należą do głównych zadań RE.
+  rationale: |-
+    Obie nazwy należą do §1.4 → Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami. → Prawda.
+  rules:
+  - REG-KRY-T05-01
+  see: N-T05-01
+  truth: true
+- id: '2'
+  text: Analizę wymagań i rozwiązywanie konfliktów zaliczono tu do pozyskiwania.
+  rationale: |-
+    Taki zakres elicitation przyjmuje syllabus → Syllabus zalicza analizę wymagań i rozwiązywanie konfliktów do pozyskiwania wymagań. → Prawda.
+  rules:
+  - REG-T05-01-02
+  see: N-T05-01
+  truth: true
+- id: '3'
+  text: Proces RE należy dostosować do sytuacji.
+  rationale: |-
+    §1.4 wymaga tailoring → Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie. → Prawda.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  truth: true
+- id: '4'
+  text: Zakup narzędzia zastępuje pozyskiwanie wymagań.
+  rationale: |-
+    Wsparcie narzędziowe nie zastępuje zadania → Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie. → Fałsz.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  truth: false

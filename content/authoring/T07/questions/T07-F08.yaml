@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F08
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-08
+  aspect: ZAK-T07-08
+family: FAM-T07-08
+sourceAnchor: tools/z1_extensions.py T07-08/F
+stem: |-
+  Po zbadaniu potrzeb analityk proponuje usunąć zbędne ręczne przepisywanie danych i sprawdzić wariant z użytkownikami. Kierownik odrzuca pomysł, ponieważ nie wymaga nowej technologii ani przebudowy całej usługi. Która ocena jest trafna?
+options:
+- id: a
+  text: Kierownik ma rację, bo każda innowacja musi być przełomem technologicznym.
+  rationale: Propozycja upraszcza użycie → zasada dopuszcza także małą skalę innowacji → warunek przełomu jest błędny.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  correct: false
+- id: b
+  text: |-
+    Uproszczenie może być innowacją małej skali, jeżeli lepiej zaspokaja potrzebę i zostanie sprawdzone z użytkownikami.
+  rationale: |-
+    Podano badanie potrzeby i wariant → łatwość obsługi mieści się w małej skali, a pomysł wymaga walidacji → ocena jest trafna.
+  rules:
+  - REG-T07-08-02
+  see: N-T07-08
+  correct: true
+- id: c
+  text: Wystarczy nazwać pomysł innowacyjnym, aby uznać jego korzyść za dowiedzioną.
+  rationale: Opis przewiduje dopiero sprawdzenie → etykieta nowości nie potwierdza adekwatności → wniosek jest błędny.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  correct: false
+- id: d
+  text: Uproszczenie należy wdrożyć bez udziału użytkowników, bo analityk zawsze wie lepiej.
+  rationale: Zasada odnosi się do ich potrzeb → nowy pomysł nadal wymaga sprawdzenia → argument jest błędny.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  correct: false

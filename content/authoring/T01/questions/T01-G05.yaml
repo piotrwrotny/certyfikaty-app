@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-G05
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T01-05
+  aspect: ZAK-T01-05
+family: FAM-T01-05
+sourceAnchor: tools/z1_extensions.py T01-05/G
+stem: |-
+  Zespół zapisuje potrzeby, sprawdza ich znaczenie z zainteresowanymi osobami i zarządza późniejszymi zmianami. Oceń interpretacje celu tej pracy.
+options:
+- id: '1'
+  text: Praca może ograniczać ryzyko dostarczenia systemu nieodpowiadającego potrzebom.
+  rationale: Podano pracę nad potrzebami i zmianami → cel definicji RE obejmuje ograniczenie tego ryzyka → Prawda.
+  rules:
+  - REG-KRY-T01-05
+  see: N-T01-05
+  truth: true
+- id: '2'
+  text: Sukces tej pracy z definicji mierzy się wyłącznie liczbą stron.
+  rationale: Opis dotyczy rozumienia i zarządzania → celem RE są potrzeby, nie objętość → Fałsz.
+  rules:
+  - REG-T01-05-02
+  see: N-T01-05
+  truth: false
+- id: '3'
+  text: Zarządzanie późniejszymi zmianami nie jest z definicji wyłączone z RE.
+  rationale: |-
+    Podano zarządzanie wymaganiami po ustaleniach → definicja obejmuje zarządzanie, a nie tylko pierwszy zapis → Prawda.
+  rules:
+  - REG-KRY-T01-05
+  see: N-T01-05
+  truth: true

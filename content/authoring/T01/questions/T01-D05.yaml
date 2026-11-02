@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-D05
+revision: r1
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T01-05
+  aspect: ZAK-T01-05
+family: FAM-T01-05
+sourceAnchor: tools/z1_extensions.py T01-05/D
+stem: |-
+  Pracownik przepisuje wszystkie słowa klienta bez sprawdzania znaczenia i twierdzi, że jest to pełny opis RE. Które uzupełnienie najtrafniej oddaje pominięte elementy?
+options:
+- id: a
+  text: Wystarczy użyć droższego edytora, aby zapewnić realizację potrzeb.
+  rationale: |-
+    Brakuje pracy nad znaczeniem → narzędzie nie zastępuje celu i systematycznego podejścia → uzupełnienie jest nietrafne.
+  rules:
+  - REG-T01-05-03
+  see: N-T01-05
+  correct: false
+- id: b
+  text: |-
+    Potrzebne są systematyczne specyfikowanie i zarządzanie oraz cel rozumienia potrzeb i ograniczania ryzyka ich niespełnienia.
+  rationale: Opis ograniczono do przepisywania → definicja RE obejmuje wskazane działania i cel → to właściwe uzupełnienie.
+  rules:
+  - REG-KRY-T01-05
+  see: N-T01-05
+  correct: true
+- id: c
+  text: Należy zagwarantować, że wymagania nigdy się nie zmienią.
+  rationale: |-
+    W danych nie ma podstaw do niezmienności → definicja ogranicza ryzyko, a nie zabrania ewolucji → to niewłaściwe uzupełnienie.
+  rules:
+  - REG-KRY-T01-05
+  see: N-T01-05
+  correct: false
+- id: d
+  text: Należy zakończyć kontakt z interesariuszami natychmiast po zapisie.
+  rationale: |-
+    Cel dotyczy rozumienia ich potrzeb → zerwanie kontaktu nie uzupełnia brakującego rozumienia → odpowiedź nie wynika.
+  rules:
+  - REG-T01-05-02
+  see: N-T01-05
+  correct: false

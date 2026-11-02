@@ -1,0 +1,1167 @@
+[
+  {
+    "check": "retrieval_preserved_RP-T01-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T01-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T01-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T01-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T01-01-F01",
+    "result": "OK",
+    "details": "content/authoring/T01/open/Z1-T01-01-F01.md"
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-01-D01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "retrieval_preserved_RP-T01-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T01-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T01-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T01-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-02-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T01-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T01/open/Z1-T01-02-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T01-03",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T01-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T01-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T01-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-03-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-03-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-03-D01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "retrieval_preserved_RP-T01-04",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T01-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T01-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T01-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-04-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-04-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T01-04-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T01/open/Z1-T01-04-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T01-05",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T01-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T01-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T01-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-05-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T01-05-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T01-05-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T01/open/Z1-T01-05-D01.md"
+  },
+  {
+    "check": "all_four_roles_T01",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T02-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T02-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T02-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T02-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T02-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T02-01-F01",
+    "result": "OK",
+    "details": "content/authoring/T02/open/Z1-T02-01-F01.md"
+  },
+  {
+    "check": "question_core_preserved_Z1-T02-01-D01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "retrieval_preserved_RP-T02-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T02-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T02-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T02-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T02-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T02-02-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T02-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T02/open/Z1-T02-02-D01.md"
+  },
+  {
+    "check": "all_four_roles_T02",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T03-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T03-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T03-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T03-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T03-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T03-01-F01",
+    "result": "OK",
+    "details": "content/authoring/T03/open/Z1-T03-01-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T03-01-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T03/open/Z1-T03-01-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T03-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T03-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T03-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T03-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T03-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T03-02-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T03-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T03/open/Z1-T03-02-D01.md"
+  },
+  {
+    "check": "all_four_roles_T03",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T04-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T04-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T04-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T04-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T04-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T04-01-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T04-01-D01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "retrieval_preserved_RP-T04-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T04-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T04-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T04-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T04-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T04-02-F01",
+    "result": "OK",
+    "details": "content/authoring/T04/open/Z1-T04-02-F01.md"
+  },
+  {
+    "check": "question_core_preserved_Z1-T04-02-D01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "all_four_roles_T04",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T05-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T05-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T05-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T05-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T05-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T05-01-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T05-01-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T05/open/Z1-T05-01-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T05-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T05-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T05-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T05-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T05-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "question_core_preserved_Z1-T05-02-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T05-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T05/open/Z1-T05-02-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T05-03",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T05-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T05-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T05-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T05-03-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T05-03-F01",
+    "result": "OK",
+    "details": "content/authoring/T05/open/Z1-T05-03-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T05-03-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T05/open/Z1-T05-03-D01.md"
+  },
+  {
+    "check": "all_four_roles_T05",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T06-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T06-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T06-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T06-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "open_preserved_Z1-T06-01-B01",
+    "result": "OK",
+    "details": "content/authoring/T06/open/Z1-T06-01-B01.md"
+  },
+  {
+    "check": "question_core_preserved_Z1-T06-01-F01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T06-01-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T06/open/Z1-T06-01-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T06-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T06-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T06-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T06-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T06-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T06-02-F01",
+    "result": "OK",
+    "details": "content/authoring/T06/open/Z1-T06-02-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T06-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T06/open/Z1-T06-02-D01.md"
+  },
+  {
+    "check": "all_four_roles_T06",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-01",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-01",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-01-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-01-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-01-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-01-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-01-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-02",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-02",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-02-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-02-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-02-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-02-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-02-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-03",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-03",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-03-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-03-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-03-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-03-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-03-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-04",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-04",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-04-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-04-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-04-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-04-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-04-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-05",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-05",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-05-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-05-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-05-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-05-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-05-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-06",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-06",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-06",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-06",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-06-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-06-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-06-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-06-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-06-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-07",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-07",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-07",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-07",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-07-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-07-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-07-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-07-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-07-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-08",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-08",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-08",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-08",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-08-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-08-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-08-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-08-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-08-D01.md"
+  },
+  {
+    "check": "retrieval_preserved_RP-T07-09",
+    "result": "OK",
+    "details": "Polecenie i każdy element modelu zachowane w open."
+  },
+  {
+    "check": "material_preserved_EX-KRY-T07-09",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CE-KRY-T07-09",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "material_preserved_CMP-KRY-T07-09",
+    "result": "OK",
+    "details": "ID i pełny źródłowy przykład/kontrprzykład/oś porównania zachowane."
+  },
+  {
+    "check": "question_core_preserved_Z1-T07-09-B01",
+    "result": "OK",
+    "details": "Stem, opcje, klucz i waga bez zmiany; rationale doprecyzowane w r2."
+  },
+  {
+    "check": "open_preserved_Z1-T07-09-F01",
+    "result": "OK",
+    "details": "content/authoring/T07/open/Z1-T07-09-F01.md"
+  },
+  {
+    "check": "open_preserved_Z1-T07-09-D01",
+    "result": "OK",
+    "details": "handoff/Z1/retained_open_delayed/T07/open/Z1-T07-09-D01.md"
+  },
+  {
+    "check": "all_four_roles_T07",
+    "result": "OK",
+    "details": "Jedna pełna zamknięta ścieżka na każdy z 25 głównych i dwóch legacy zakresów."
+  },
+  {
+    "check": "eleven_owner_EO",
+    "result": "OK",
+    "details": "EO1.1.1, EO1.1.2, EO1.2.1, EO1.2.2, EO1.3.1, EO1.4.1, EO1.5.1, EO1.6.1, EO2.1.1, EO2.2.1, EO2.2.2"
+  },
+  {
+    "check": "nine_T07_principles",
+    "result": "OK",
+    "details": "Dziewięć PR i dodatkowe częściowe KRY-A01; KRY-A02 nie wyeksportowano."
+  },
+  {
+    "check": "all_original_open_D_retained",
+    "result": "OK",
+    "details": "20 pełnych wykonań otwartych D poza parserem tematów."
+  },
+  {
+    "check": "legacy_key_preserved_C-A-B01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "legacy_key_preserved_C-A-F01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "legacy_key_preserved_C-A-D01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "legacy_key_preserved_C-P-B01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "legacy_key_preserved_C-P-F01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "legacy_key_preserved_C-P-D01",
+    "result": "OK",
+    "details": "Klucz odczytany bezpośrednio z C03, nie z definicji generatora."
+  },
+  {
+    "check": "no_fake_runtime_package",
+    "result": "OK",
+    "details": "Wyjście to pliki autorskie, bez ręcznie tworzonych JSON content-package."
+  },
+  {
+    "check": "no_decision_files",
+    "result": "OK",
+    "details": "Schematy chronionych plików są wejściem formatu, nie decyzjami."
+  },
+  {
+    "check": "source_bytes_T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T01_IREB_CPRE_Fundamental_RE_Concepts_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T04_IREB_CPRE_Applications_and_Perspectives_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T03_IREB_CPRE_Value_and_Inadequate_RE_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T05_IREB_CPRE_Tasks_Role_and_Competencies_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T07_IREB_CPRE_Nine_Principles_Explained_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_Z1_IREB_CPRE_Manifest_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T02_IREB_CPRE_Kinds_of_Requirements_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_PROGRESS.json",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_PROGRESS.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T06_IREB_CPRE_Principles_Overview_and_Terminology_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_Z1_Author_Checks_v0.1.json",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "source_bytes_T03_IREB_CPRE_Value_and_Inadequate_RE_QA_and_Handoff_v0.1.md",
+    "result": "OK",
+    "details": "Kopia źródła bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_09-R05_IREB_CPRE_G1_Corrections_and_Readiness_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_01-IREB_CPRE_Deep_Research_PL_2026-11.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_10-B03_IREB_CPRE_Semantic_Pilot_APK_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_17-M01_IREB_CPRE_FL_Topic_Map_and_Authoring_Backlog_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_02-IREB_CPRE_Functional_Learning_Experience_Blueprint_PL_2026-11.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_08-R04_IREB_CPRE_B_Acceptance_Review_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_12-B01_IREB_CPRE_Semantic_Knowledge_Contract_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_15-R06_IREB_CPRE_G1_Owner_Decision_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_13-00_IREB_CPRE_START.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_03-IREB_CPRE_Functional_to_Knowledge_Contract_PL_2026-11.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_11-B02_IREB_CPRE_FR_Traceability_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_21-C04_IREB_CPRE_Content_QA_and_Handoff_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_16-M02_IREB_CPRE_Topic_Flow_Brief_Template_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_22-M03_IREB_CPRE_Topic_Collections_Z1-Z6_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_06-R02_IREB_CPRE_Readiness_Audit_and_Gap_Register_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_19-C02_IREB_CPRE_Terminology_and_Authoring_Standard_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_05-R01_IREB_CPRE_Project_State_and_Knowledge_Consolidation_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_04-00_IREB_CPRE_Fundament_pedagogiczny.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_18-C01_IREB_CPRE_Source_and_Licensing_Register_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_14-B04_IREB_CPRE_B_Decisions_and_Handoff_C_v0.2.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  },
+  {
+    "check": "project_bytes_07-R03_IREB_CPRE_Application_Design_Conversation_Input_v0.1.md",
+    "result": "OK",
+    "details": "Baseline projektu bez zmiany bajtów."
+  }
+]

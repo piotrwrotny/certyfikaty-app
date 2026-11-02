@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T03-F01
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T03-01
+  aspect: ZAK-T03-01
+family: FAM-T03-01
+sourceAnchor: tools/z1_extensions.py T03-01/F
+stem: |-
+  Zespół zamierzał automatyzować druk etykiet. Rozmowa o potrzebach wykazała, że opóźnienia wynikają głównie z brakujących danych zamówienia. Nie powstał jeszcze nowy kod. Który argument opisuje wartość tej pracy?
+options:
+- id: a
+  text: Bez kodu nie mogło poprawić się rozumienie problemu.
+  rationale: |-
+    Rozmowa ujawniła przyczynę inną niż zakładana → RE może poprawiać rozumienie przed implementacją → argument jest błędny.
+  rules:
+  - REG-T03-01-04
+  see: N-T03-01
+  correct: false
+- id: b
+  text: Ustalenie gwarantuje już brak wszystkich przyszłych defektów.
+  rationale: |-
+    Ujawniono problem danych → wiedza o potrzebie nie gwarantuje poprawności każdego wykonania → argument wykracza poza korzyść.
+  rules:
+  - REG-T03-01-03
+  see: N-T03-01
+  correct: false
+- id: c
+  text: Ustalenie samo zapewnia dokładny budżet całego rozwiązania.
+  rationale: |-
+    Dane dotyczą przyczyny opóźnienia → wymagania są podstawą estymacji, nie gwarancją kosztu → argument jest nieuprawniony.
+  rules:
+  - REG-T03-01-02
+  see: N-T03-01
+  correct: false
+- id: d
+  text: Lepsze rozumienie problemu zmniejsza ryzyko budowania automatyzacji, która go nie rozwiąże.
+  rationale: |-
+    Ujawniono brak danych zamiast problemu druku → rozumienie problemu ogranicza ryzyko niewłaściwego systemu → argument jest trafny.
+  rules:
+  - REG-T03-01-04
+  see: N-T03-01
+  correct: true

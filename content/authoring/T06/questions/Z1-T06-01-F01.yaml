@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T06-01-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T06-01
+  aspect: ZAK-T06-01
+family: FAM-T06-01
+sourceAnchor: references/content/T06_IREB_CPRE_Principles_Overview_and_Terminology_Content_v0.1.md § Z1-T06-01-F01
+stem: Oceń zgodność nazw z listą zasad. To rozpoznanie nazw, bez wyjaśniania ich ważności.
+options:
+- id: '1'
+  text: Orientacja na wartość, interesariusze i wspólne zrozumienie są zasadami RE.
+  rationale: |-
+    To PR01–PR03 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  truth: true
+- id: '2'
+  text: Kontekst, problem–wymaganie–rozwiązanie i walidacja są zasadami RE.
+  rationale: |-
+    To PR04–PR06 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  truth: true
+- id: '3'
+  text: Ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca są zasadami RE.
+  rationale: |-
+    To PR07–PR09 → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Prawda.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  truth: true
+- id: '4'
+  text: „Maksymalizacja liczby dokumentów” jest dziesiątą zasadą z tego wykazu.
+  rationale: |-
+    Taka pozycja nie należy do dziewięciu → Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca. → Fałsz.
+  rules:
+  - REG-KRY-T06-01
+  see: N-T06-01
+  truth: false

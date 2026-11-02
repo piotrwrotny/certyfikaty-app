@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G05
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-05
+  aspect: ZAK-T07-05
+family: FAM-T07-05
+sourceAnchor: tools/z1_extensions.py T07-05/G
+stem: |-
+  Nowy rodzaj czujnika zainspirował pomysł usługi. Po zobaczeniu demonstratora użytkownicy opisali potrzebę, której wcześniej nie zgłaszali. Zespół oddzielnie dokumentuje problem, potrzebne właściwości i proponowaną realizację. Oceń interpretacje.
+options:
+- id: '1'
+  text: Pomysł rozwiązania może poprzedzać opracowanie nowych wymagań.
+  rationale: Technologia pobudziła potrzebę → zasada dopuszcza taką kolejność, szczególnie w innowacji → Prawda.
+  rules:
+  - REG-T07-05-03
+  see: N-T07-05
+  truth: true
+- id: '2'
+  text: Rozdzielenie trzech opisów oznacza zakaz wzajemnego wpływania na siebie.
+  rationale: Opis zachowuje rozróżnienie ról → separation of concerns nie usuwa współzależności → Fałsz.
+  rules:
+  - REG-T07-05-02
+  see: N-T07-05
+  truth: false
+- id: '3'
+  text: Osobne nazwanie problemu, potrzebnej zdolności i realizacji może ułatwiać myślenie i komunikację.
+  rationale: Dokumentuje się trzy role → ich rozdzielanie jest celem RE mimo powiązania → Prawda.
+  rules:
+  - REG-T07-05-04
+  see: N-T07-05
+  truth: true

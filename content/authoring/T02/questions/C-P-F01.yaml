@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-P-F01
+revision: r2
+format: P
+role: follow-up-1
+weight: 3
+scope:
+  criterion: KRY-P01
+  aspect: ZAK-T02-C-P01
+family: FAM-C-P1
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-F01
+stem: |-
+  W systemie obsługi faktur opisano wymagania poniżej. Użycie komponentu ScanBridge jest dodatkowym nakazem organizacji mimo istnienia innych rozwiązań spełniających te same wymagania funkcjonalne i jakościowe.
+
+  Które klasyfikacje wraz z uzasadnieniem są poprawne?
+options:
+- id: a
+  text: „System na żądanie generuje trzy kopie potwierdzenia” — jakościowe, ponieważ podano liczbę kopii.
+  rationale: Trzy kopie określają wynik funkcji → liczba nie jest kryterium jakości → para typ/powód błędna
+  rules:
+  - REG-P1
+  - REG-T02-01-02
+  see: N-T02-C-P01
+  correct: false
+- id: b
+  text: „System używa komponentu ScanBridge” — ograniczenie, ponieważ dodatkowo narzucono wybór realizacji.
+  rationale: |-
+    Alternatywy spełniają pozostałe wymagania, lecz nakazano ScanBridge → dodatkowe zawężenie rozwiązania → klasyfikacja i powód poprawne
+  rules:
+  - REG-P1
+  - REG-T02-01-04
+  see: N-T02-C-P01
+  correct: true
+- id: c
+  text: |-
+    „Przy 80 równoczesnych operatorach 95% podglądów faktury pojawia się w ciągu 1,5 s” — jakościowe, ponieważ ograniczono czas odpowiedzi w danych warunkach.
+  rationale: |-
+    Czas dla odsetka podglądów przy wskazanym obciążeniu → cecha wydajności, nie sama funkcja podglądu → klasyfikacja i powód poprawne
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  correct: true
+- id: d
+  text: „System pozwala odrzucić fakturę z podaniem powodu” — jakościowe, ponieważ służy ograniczaniu błędów.
+  rationale: |-
+    Odrzucenie z powodem to wymagane zachowanie → cel ograniczania błędów nie zmienia typu → quality jest nieadekwatne
+  rules:
+  - REG-P1
+  - REG-T02-01-05
+  see: N-T02-C-P01
+  correct: false
+- id: e
+  text: |-
+    „Czas ponownego udostępnienia usługi po awarii procesu nie przekracza 40 s w uzgodnionym teście” — funkcjonalne, ponieważ wspomina o wykonaniu czynności.
+  rationale: |-
+    Zdanie ogranicza czas przywrócenia usługi w teście → cecha jakościowa odtwarzania działania → obecność czynności nie uzasadnia typu functional dla tego ograniczenia
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  correct: false
+k: 2

@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-G01
+revision: r1
+format: P
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T01-01
+  aspect: ZAK-T01-01
+family: FAM-T01-01
+sourceAnchor: tools/z1_extensions.py T01-01/G
+stem: |-
+  Operator od dawna potrzebuje rozpoznać właściciela przesyłki. Zespół opisuje oczekiwaną zdolność systemu, po czym utrwala ją w punkcie REQ-9. Które interpretacje są uzasadnione?
+options:
+- id: a
+  text: Wcześniejsza potrzeba operatora może być requirement.
+  rationale: |-
+    Potrzebę wskazano przed dokumentowaniem → pierwszy sens requirement obejmuje tę potrzebę → interpretacja jest poprawna.
+  rules:
+  - REG-T01-01-02
+  see: N-T01-01
+  correct: true
+- id: b
+  text: Dopiero numer REQ-9 sprawił, że potrzeba mogła istnieć.
+  rationale: |-
+    Numer nadano późniejszemu zapisowi → potrzeba nie zależy od identyfikatora reprezentacji → twierdzenie jest błędne.
+  rules:
+  - REG-T01-01-02
+  see: N-T01-01
+  correct: false
+- id: c
+  text: Trzy opisane momenty wyznaczają kolejno functional, quality i constraint.
+  rationale: |-
+    Momenty dotyczą potrzeby, zdolności i zapisu → znaczenia terminu nie są rodzajami wymagań → przyporządkowanie jest błędne.
+  rules:
+  - REG-T01-01-03
+  see: N-T01-01
+  correct: false
+- id: d
+  text: Punkt REQ-9 jest udokumentowaną reprezentacją oczekiwanej zdolności.
+  rationale: |-
+    Podano utrwalenie opisu zdolności → trzeci sens requirement dotyczy takiej reprezentacji → interpretacja jest poprawna.
+  rules:
+  - REG-KRY-T01-01
+  see: N-T01-01
+  correct: true
+k: 2

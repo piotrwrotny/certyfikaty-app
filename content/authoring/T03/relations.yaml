@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T03-01
+  meaning: |-
+    Przed estymacją ustalono, że anulowanie ma zwalniać również część rezerwacji. Zespół może uwzględnić dodatkowe zachowanie w nakładzie i scenariuszach testów.
+  from: EX-KRY-T03-01
+- type: counterexample-of
+  to: REG-KRY-T03-01
+  meaning: |-
+    Uogólnienie „RE gwarantuje trafny budżet” obala projekt z poprawnie uzgodnionymi wymaganiami i błędną oceną złożoności technicznej. Wymagania są podstawą, nie gwarancją.
+  from: CE-KRY-T03-01
+- type: distinguishes
+  to: REG-KRY-T03-01
+  meaning: |-
+    Oś: rezultat bezpośredni i korzyść. Uzgodniona reguła zwrotu jest rezultatem RE; mniejsze ryzyko przeróbki, lepsza estymacja i podstawa testu to możliwe skutki użycia tego rezultatu.
+  from: CMP-KRY-T03-01
+- type: explains
+  to: REG-KRY-T03-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T03-01
+- type: variant-of
+  to: Z1-T03-01-B01
+  meaning: Zmiana z korzyści testowania i estymacji w B na uniknięcie niewłaściwego problemu; otwarte F pozostaje.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T03-F01
+- type: variant-of
+  to: Z1-T03-01-B01
+  meaning: Łączna ocena warunkowych korzyści i granicy gwarancji w nowej funkcji biznesowej.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T03-G01
+- type: variant-of
+  to: Z1-T03-01-B01
+  meaning: Łączy cztery korzyści w trzech argumentach i dwie fałszywe gwarancje; nie zastępuje odtworzenia w otwartym
+    D.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T03-D01
+- type: illustrates
+  to: REG-KRY-T03-02
+  meaning: |-
+    „System działa szybko” bez uzgodnionego znaczenia jest objawem niejasności. „Wszyscy przecież wiedzą, jak szybko” obrazuje założenie oczywistości jako możliwą przyczynę.
+  from: EX-KRY-T03-02
+- type: counterexample-of
+  to: REG-KRY-T03-02
+  meaning: |-
+    Uogólnienie „każde opóźnienie dowodzi złego RE” obala uzgodniony zakres z opóźnioną dostawą sprzętu. Sam termin nie wskazuje źródła problemu.
+  from: CE-KRY-T03-02
+- type: distinguishes
+  to: REG-KRY-T03-02
+  meaning: |-
+    Oś: co obserwujemy versus co mogło do tego doprowadzić. Niejasny zapis to objaw; brak rozmowy z powodu pośpiechu to możliwa przyczyna. Jedno nie ustala automatycznie drugiego.
+  from: CMP-KRY-T03-02
+- type: explains
+  to: REG-KRY-T03-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T03-02
+- type: variant-of
+  to: Z1-T03-02-B01
+  meaning: Kontrast dwóch list; wybór dotyczy wyłącznie symptomów.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T03-02-F01
+- type: variant-of
+  to: Z1-T03-02-B01
+  meaning: Przypadek z jawnie ograniczonymi danymi zamiast odtwarzania obu list; nie diagnozuje osoby.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T03-G02
+- type: variant-of
+  to: Z1-T03-02-B01
+  meaning: Rozpoznanie pełnej listy czterech przyczyn z kontrastem objawu; zachowano osobne swobodne odtworzenie
+    D.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T03-D02

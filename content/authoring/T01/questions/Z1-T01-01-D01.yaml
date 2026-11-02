@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T01-01-D01
+revision: r2
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T01-01
+  aspect: ZAK-T01-01
+family: FAM-T01-01
+sourceAnchor: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md § Z1-T01-01-D01
+stem: |-
+  W instrukcji przeglądu napisano: „Porównaj wymaganie zapisane w punkcie 8 z potrzebą zgłoszoną przez operatora”. Co oznacza tu wymaganie „zapisane w punkcie 8”?
+options:
+- id: a
+  text: Rodzaj ograniczenia technologicznego.
+  rationale: Lokalizacja nie mówi, czego dotyczy oczekiwanie → typ constraint nie wynika → nie wybrać.
+  rules:
+  - REG-T01-01-03
+  see: N-T01-01
+  correct: false
+- id: b
+  text: Udokumentowaną reprezentację potrzeby lub wymaganej właściwości.
+  rationale: Lokalizacja w tekście wskazuje reprezentację → sens 3 → właściwa odpowiedź.
+  rules:
+  - REG-KRY-T01-01
+  see: N-T01-01
+  correct: true
+- id: c
+  text: Wyłącznie potrzebę, której nie da się zapisać.
+  rationale: Podano istniejący zapis → nie jest to wyłącznie nieutrwalona potrzeba → nie wybrać.
+  rules:
+  - REG-T01-01-02
+  see: N-T01-01
+  correct: false
+- id: d
+  text: Każdy zrealizowany fragment kodu.
+  rationale: Punkt specyfikacji nie oznacza kodu → implementacja nie wynika ze stemu → nie wybrać.
+  rules:
+  - REG-KRY-T01-01
+  see: N-T01-01
+  correct: false

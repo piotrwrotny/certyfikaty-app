@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../../../schemas/authoring/sources.schema.json
+sources:
+- id: SRC-T04-SEN
+  title: CPRE Foundation Level Syllabus EN
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf
+  location: |-
+    §1.3, Requirements can occur as; fizyczne strony PDF 12; §1.3; fizyczne strony PDF 12; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  attribution: IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T04-SPL
+  title: CPRE Foundation Level Syllabus PL
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf
+  location: |-
+    §1.3, Requirements can occur as; fizyczne strony PDF 12; §1.3; fizyczne strony PDF 12; §2.2, Principle 9 / Zasada 9; fizyczne strony PDF 18
+  attribution: |-
+    IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T04-GPL
+  title: Glossary of Requirements Engineering Terminology — Polish
+  version: 2.2.0
+  url: https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf
+  location: |-
+    Hasła Business requirement; fizyczne strony PDF 33; Hasła Domain requirement; fizyczne strony PDF 33; Hasła System requirement; Kind of requirement; fizyczne strony PDF 25, 34; Hasła System, uwaga 3; fizyczne strony PDF 29; Hasła User requirement; Stakeholder requirement; fizyczne strony PDF 34
+  attribution: |-
+    Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.

@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F02
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-02
+  aspect: ZAK-T07-02
+family: FAM-T07-02
+sourceAnchor: tools/z1_extensions.py T07-02/F
+stem: |-
+  Użytkownicy chcą natychmiast usuwać rekord, a dział rozliczeń potrzebuje zachować go do wyjaśnienia transakcji. Nie ustalono wspólnego rozwiązania ani warunków retencji. Który argument najlepiej opisuje potrzebną pracę RE?
+options:
+- id: a
+  text: Wystarczy przepisać oba żądania, aby stały się jednocześnie spełnione.
+  rationale: |-
+    Żądania są sprzeczne w podanych warunkach → konflikt wymaga identyfikacji i rozwiązania → sam zapis go nie usuwa.
+  rules:
+  - REG-T07-02-04
+  see: N-T07-02
+  correct: false
+- id: b
+  text: Dział rozliczeń należy pominąć wyłącznie dlatego, że nie jest użytkownikiem końcowym.
+  rationale: |-
+    Podano istotną potrzebę innej roli → uwzględnianie samych użytkowników może pominąć wymagania → pominięcie jest błędne.
+  rules:
+  - REG-KRY-T07-02
+  see: N-T07-02
+  correct: false
+- id: c
+  text: Trzeba rozpoznać potrzeby obu ról i rozwiązać konflikt, bez obiecywania spełnienia sprzecznych zapisów.
+  rationale: |-
+    Opis ujawnia dwie potrzeby i sprzeczność propozycji → zasada wymaga właściwych ról i pracy z konfliktem → argument jest trafny.
+  rules:
+  - REG-T07-02-04
+  see: N-T07-02
+  correct: true
+- id: d
+  text: Sama nazwa ważniejszego działu automatycznie rozstrzyga adekwatność każdej jego propozycji.
+  rationale: Nie podano uzgodnienia potrzeb → rola organizacyjna nie zastępuje rozwiązania konfliktu → wniosek nie
+    wynika.
+  rules:
+  - REG-KRY-T07-02
+  see: N-T07-02
+  correct: false

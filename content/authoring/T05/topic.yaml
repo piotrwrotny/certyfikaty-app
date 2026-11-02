@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T05
+revision: r2
+title: T05 — Zadania RE, rola i kompetencje Requirements Engineer
+shortTitle: T05 — Ćwiczenia RE
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:
+- KRY-T05-01
+- KRY-T05-02
+- KRY-T05-03
+limitations:
+- |-
+  Cztery główne zadania i tailoring; rola względem stanowiska; sześć obszarów uczenia FL oraz objaśniające soft skills z Handbook.
+- Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.
+- |-
+  Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.
+- Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.
+- 'K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem.'
+provenance:
+- path: references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md
+  documentVersion: v0.1
+- path: references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_QA_and_Handoff_v0.1.md
+  documentVersion: v0.1
+- path: references/content/Z1_IREB_CPRE_Manifest_v0.1.md
+  documentVersion: v0.1
+criteria:
+- id: KRY-T05-01
+  revision: r2
+  description: Rozpoznaje czynności i warunki doboru sposobu pracy.
+  labelBeforeAnswer: Rozpoznaje czynności i warunki doboru sposobu pracy.
+  eo:
+  - id: EO1.4.1
+    level: L1
+  aspects:
+  - id: ZAK-T05-01
+    labelAfterAnswer: Zadania RE i tailoring procesu
+- id: KRY-T05-02
+  revision: r2
+  description: Charakteryzuje udział osoby w opisanej pracy.
+  labelBeforeAnswer: Charakteryzuje udział osoby w opisanej pracy.
+  eo:
+  - id: EO1.5.1
+    level: L1
+  aspects:
+  - id: ZAK-T05-02
+    labelAfterAnswer: Rola Requirements Engineer a stanowisko
+- id: KRY-T05-03
+  revision: r2
+  description: Rozpoznaje obszary potrzebnej wiedzy i umiejętności.
+  labelBeforeAnswer: Rozpoznaje obszary potrzebnej wiedzy i umiejętności.
+  eo:
+  - id: EO1.6.1
+    level: L1
+  aspects:
+  - id: ZAK-T05-03
+    labelAfterAnswer: Co inżynier wymagań powinien poznawać
+families:
+- id: FAM-T05-01
+  revision: r2
+  description: |-
+    Wspólny rdzeń Zadania RE i tailoring procesu; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T05-02
+  revision: r2
+  description: |-
+    Wspólny rdzeń Rola Requirements Engineer a stanowisko; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T05-03
+  revision: r2
+  description: |-
+    Wspólny rdzeń Co inżynier wymagań powinien poznawać; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.

@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-GC01
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-A01
+  aspect: ZAK-T07-C-A01
+family: FAM-C-A1
+sourceAnchor: tools/z1_extensions.py T07-C-A/G
+stem: |-
+  Analizowany system to aplikacja pokazująca dostępność operatorów serwisu. Oddzielny, niezmieniany harmonogram pracy warunkuje ich dostępność. Harmonogram pozostaje poza aplikacją, a informacje wprowadza pracownik; nie ma automatycznego interfejsu IT. Oceń argumenty.
+options:
+- id: '1'
+  text: Harmonogram jest istotnym otoczeniem, ponieważ warunkuje znaczenie informacji o dostępności.
+  rationale: Podano wpływ na wymagane informacje → wymagania trzeba rozpatrywać wraz z istotnym kontekstem → Prawda.
+  rules:
+  - REG-A1
+  - REG-KRY-T07-04
+  see: N-T07-C-A01
+  truth: true
+- id: '2'
+  text: Brak możliwości zmiany harmonogramu wystarcza do pominięcia jego wpływu.
+  rationale: Harmonogram warunkuje dostępność mimo niezmienności → scope nie usuwa istotności zewnętrznego wpływu
+    → Fałsz.
+  rules:
+  - REG-A1
+  - REG-T07-04-02
+  see: N-T07-C-A01
+  truth: false
+- id: '3'
+  text: Brak automatycznego interfejsu IT nie usuwa podanego wpływu harmonogramu na wymagania.
+  rationale: |-
+    Informacje wprowadza człowiek, a warunek nadal obowiązuje → istotność kontekstu nie wymaga automatycznej integracji → Prawda.
+  rules:
+  - REG-A1
+  - REG-KRY-T07-04
+  see: N-T07-C-A01
+  truth: true

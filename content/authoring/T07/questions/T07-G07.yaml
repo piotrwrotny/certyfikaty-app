@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G07
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-07
+  aspect: ZAK-T07-07
+family: FAM-T07-07
+sourceAnchor: tools/z1_extensions.py T07-07/G
+stem: |-
+  Po uzgodnieniu wymagań pojawiły się nowa technologia i nowe potrzeby użytkowników. Podczas walidacji wykryto też błąd wcześniejszego wymagania. Oceń interpretacje zmian.
+options:
+- id: '1'
+  text: Nowa technologia i feedback o potrzebach mogą być naturalnymi źródłami zmian.
+  rationale: Wskazano dwa źródła z katalogu → ewolucja wymagań jest normalnym przypadkiem → Prawda.
+  rules:
+  - REG-T07-07-02
+  see: N-T07-07
+  truth: true
+- id: '2'
+  text: Wykrycie wady podczas walidacji również może prowadzić do zmiany.
+  rationale: Podano odkrycie błędu → zasada wymienia walidację i korektę wad → Prawda.
+  rules:
+  - REG-T07-07-03
+  see: N-T07-07
+  truth: true
+- id: '3'
+  text: Skoro istnieją zmiany, nie wolno zachować żadnej stabilnej podstawy prac.
+  rationale: Ewolucja obejmuje dwa cele → dopuszczanie zmian nie znosi stabilności → Fałsz.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  truth: false
+- id: '4'
+  text: Nie wszystkie opisane zmiany dowodzą błędu wcześniejszego RE.
+  rationale: Część wynika z nowej sytuacji, część z wykrytej wady → nie można utożsamić wszystkich z błędem → Prawda.
+  rules:
+  - REG-KRY-T07-07
+  see: N-T07-07
+  truth: true

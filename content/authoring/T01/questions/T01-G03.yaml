@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-G03
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T01-03
+  aspect: ZAK-T01-03
+family: FAM-T01-03
+sourceAnchor: tools/z1_extensions.py T01-03/G
+stem: |-
+  Oceń konsekwencje następujących danych: urząd używa wyników systemu do podjęcia decyzji dotyczącej firmy, firma nie ma konta w systemie, a operator korzysta z jego funkcji.
+options:
+- id: '1'
+  text: Firma może być interesariuszem, ponieważ wynik systemu na nią wpływa.
+  rationale: Decyzja dotyczy firmy → oddziaływanie systemu wystarcza w definicji stakeholder → Prawda.
+  rules:
+  - REG-KRY-T01-03
+  see: N-T01-03
+  truth: true
+- id: '2'
+  text: Brak konta wyklucza firmę ze zbioru interesariuszy.
+  rationale: Podano oddziaływanie mimo braku konta → konto nie jest warunkiem definicji → Fałsz.
+  rules:
+  - REG-KRY-T01-03
+  see: N-T01-03
+  truth: false
+- id: '3'
+  text: Operator korzystający z funkcji jest użytkownikiem i zarazem interesariuszem.
+  rationale: Operator używa funkcji → user jest stakeholderem → Prawda.
+  rules:
+  - REG-T01-03-02
+  see: N-T01-03
+  truth: true

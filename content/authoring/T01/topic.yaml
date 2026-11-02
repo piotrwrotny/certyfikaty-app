@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=../../../schemas/authoring/topic.schema.json
+format: cpre-authoring/1.0
+id: T01
+revision: r2
+title: T01 — Podstawowe pojęcia RE
+shortTitle: T01 — Ćwiczenia RE
+language: pl
+authoring: draft
+educationProfile:
+  syllabusVersion: 3.3.0
+  glossaryVersion: 2.2.0
+  regulationsVersion: 5.6.2
+order:
+- KRY-T01-01
+- KRY-T01-02
+- KRY-T01-03
+- KRY-T01-04
+- KRY-T01-05
+limitations:
+- |-
+  Wymaganie w trzech sensach; specyfikacja/specyfikacja wymagań; interesariusz; system; RE i podstawowa terminologia roli.
+- Zakres wyłącznie opisanych czynności; brak dowodu pełnego EO z pojedynczego pytania.
+- |-
+  Brak oficjalnego CLI i konwersji; samokontrola jest autorska; odrębne review i decyzje użycia pozostają otwarte.
+- Źródłowe otwarte D zachowano poza runtime, ponieważ schemat open nie koduje roli delayed.
+- 'K-04: wiersz 4 ILL-K01 / KRY-X01 bez EO; cała ilustracja poza rezerwą CPRE i pełnym mockiem.'
+provenance:
+- path: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_Content_v0.1.md
+  documentVersion: v0.1
+- path: references/content/T01_IREB_CPRE_Fundamental_RE_Concepts_QA_and_Handoff_v0.1.md
+  documentVersion: v0.1
+- path: references/content/Z1_IREB_CPRE_Manifest_v0.1.md
+  documentVersion: v0.1
+criteria:
+- id: KRY-T01-01
+  revision: r2
+  description: Rozpoznaje sens terminu w podanej wypowiedzi.
+  labelBeforeAnswer: Rozpoznaje sens terminu w podanej wypowiedzi.
+  eo:
+  - id: EO1.1.1
+    level: L1
+  aspects:
+  - id: ZAK-T01-01
+    labelAfterAnswer: Trzy sensy requirement
+- id: KRY-T01-02
+  revision: r2
+  description: Rozpoznaje rolę opisu i czynności w podanym przypadku.
+  labelBeforeAnswer: Rozpoznaje rolę opisu i czynności w podanym przypadku.
+  eo:
+  - id: EO1.1.1
+    level: L1
+  aspects:
+  - id: ZAK-T01-02
+    labelAfterAnswer: Specification i requirements specification
+- id: KRY-T01-03
+  revision: r2
+  description: Rozpoznaje relacje osób i organizacji z analizowaną całością.
+  labelBeforeAnswer: Rozpoznaje relacje osób i organizacji z analizowaną całością.
+  eo:
+  - id: EO1.1.1
+    level: L1
+  aspects:
+  - id: ZAK-T01-03
+    labelAfterAnswer: Stakeholder a user
+- id: KRY-T01-04
+  revision: r2
+  description: Rozpoznaje zakres pojęcia w podanym opisie całości.
+  labelBeforeAnswer: Rozpoznaje zakres pojęcia w podanym opisie całości.
+  eo:
+  - id: EO1.1.1
+    level: L1
+  aspects:
+  - id: ZAK-T01-04
+    labelAfterAnswer: System w szerokim znaczeniu inżynierskim
+- id: KRY-T01-05
+  revision: r2
+  description: Rozpoznaje cel i charakter wskazanego podejścia.
+  labelBeforeAnswer: Rozpoznaje cel i charakter wskazanego podejścia.
+  eo:
+  - id: EO1.1.1
+    level: L1
+  aspects:
+  - id: ZAK-T01-05
+    labelAfterAnswer: Cel i charakter Requirements Engineering
+families:
+- id: FAM-T01-01
+  revision: r2
+  description: |-
+    Wspólny rdzeń Trzy sensy requirement; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T01-02
+  revision: r2
+  description: |-
+    Wspólny rdzeń Specification i requirements specification; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T01-03
+  revision: r2
+  description: |-
+    Wspólny rdzeń Stakeholder a user; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T01-04
+  revision: r2
+  description: |-
+    Wspólny rdzeń System w szerokim znaczeniu inżynierskim; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.
+- id: FAM-T01-05
+  revision: r2
+  description: |-
+    Wspólny rdzeń Cel i charakter Requirements Engineering; B/F/G/D i zachowane wykonania otwarte korzystają z tej wiedzy. To propozycja grupowania, bez ustalenia niezależności lub nowości.

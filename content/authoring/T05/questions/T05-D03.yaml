@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-D03
+revision: r1
+format: P
+role: delayed-candidate
+weight: 3
+scope:
+  criterion: KRY-T05-03
+  aspect: ZAK-T05-03
+family: FAM-T05-03
+sourceAnchor: tools/z1_extensions.py T05-03/D
+stem: |-
+  W planie nauki są zasady RE, dokumentowanie w różnych postaciach oraz opracowywanie wymagań. Które trzy obszary uzupełniają pełny wykaz z §1.6 Syllabus?
+options:
+- id: a
+  text: Definiowanie i stosowanie odpowiednich procesów RE.
+  rationale: Brakuje obszaru organizacji pracy → odpowiednie procesy są częścią §1.6 → pozycja należy do klucza.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: true
+- id: b
+  text: Obowiązkowa specjalizacja w jednym wskazanym komercyjnym edytorze.
+  rationale: |-
+    Syllabus mówi o wsparciu narzędziowym jako obszarze → nie wskazuje takiego obowiązkowego produktu → pozycja nie należy do klucza.
+  rules:
+  - REG-T05-03-02
+  see: N-T05-03
+  correct: false
+- id: c
+  text: Zarządzanie istniejącymi wymaganiami.
+  rationale: |-
+    Pierwsze trzy obszary nie obejmują tej pracy → zarządzanie jest osobnym obszarem §1.6 → pozycja należy do klucza.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: true
+- id: d
+  text: Zastąpienie walidacji samą pamięcią prowadzącego.
+  rationale: |-
+    Nie opisano żadnego obszaru z wykazu → pamięć nie zastępuje podstawowego zakresu → pozycja nie należy do klucza.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: false
+- id: e
+  text: Wykorzystanie wsparcia narzędziowego.
+  rationale: |-
+    Narzędzia są szóstym obszarem → uzupełniają podane zasady, dokumentowanie i opracowywanie → pozycja należy do klucza.
+  rules:
+  - REG-KRY-T05-03
+  see: N-T05-03
+  correct: true
+k: 3

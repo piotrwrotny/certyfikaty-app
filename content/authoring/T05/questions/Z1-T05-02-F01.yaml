@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T05-02-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T05-02
+  aspect: ZAK-T05-02
+family: FAM-T05-02
+sourceAnchor: references/content/T05_IREB_CPRE_Tasks_Role_and_Competencies_Content_v0.1.md § Z1-T05-02-F01
+stem: Oceń twierdzenia o roli RE.
+options:
+- id: '1'
+  text: Brak etatu o nazwie Requirements Engineer nie dowodzi braku tej roli.
+  rationale: |-
+    Rolę mogą pełnić osoby o innych stanowiskach → Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska. → Prawda.
+  rules:
+  - REG-KRY-T05-02
+  see: N-T05-02
+  truth: true
+- id: '2'
+  text: Sama nazwa stanowiska wystarcza do poświadczenia zawodowej kompetencji.
+  rationale: |-
+    Etykieta nie potwierdza wiedzy i działania → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → Fałsz; granica interpretacji charakterystyki.
+  rules:
+  - REG-T05-02-02
+  see: N-T05-02
+  truth: false
+- id: '3'
+  text: Łączenie problemu z potencjalnymi rozwiązaniami należy do charakterystyki roli.
+  rationale: |-
+    To wprost element §1.5 → Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami. → Prawda.
+  rules:
+  - REG-T05-02-02
+  see: N-T05-02
+  truth: true

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T04-G02
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T04-02
+  aspect: ZAK-T04-02
+family: FAM-T04-02
+sourceAnchor: tools/z1_extensions.py T04-02/G
+stem: |-
+  Potrzebę krótszego czasu obsługi zgłosiła osoba korzystająca z funkcji systemu. Operator utrzymania zgłasza osobną potrzebę odtworzenia działania, choć nie obsługuje tej funkcji użytkowej. Oceń wnioski.
+options:
+- id: '1'
+  text: Pierwsze oczekiwanie może być user requirement i zarazem stakeholder requirement.
+  rationale: Osoba używa funkcji → user requirements są podzbiorem stakeholder requirements → Prawda.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  truth: true
+- id: '2'
+  text: Nazwa user requirement wyklucza rodzaj quality requirement dotyczący czasu.
+  rationale: Etykieta nazywa perspektywę osoby → nie wyznacza rodzaju concern → Fałsz.
+  rules:
+  - REG-KRY-T04-02
+  see: N-T04-02
+  truth: false
+- id: '3'
+  text: Oczekiwanie operatora może być stakeholder requirement bez uznania go za usera tej funkcji.
+  rationale: Podano istotną potrzebę innej roli → stakeholder jest szerszą perspektywą niż user → Prawda.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  truth: true

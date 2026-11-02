@@ -1,0 +1,91 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T05-01
+  revision: r2
+  statement: Głównymi zadaniami RE są pozyskiwanie, dokumentowanie, walidacja i zarządzanie wymaganiami.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.4; fizyczne strony PDF 12
+  - source: SRC-T05-SPL
+    location: §1.4; fizyczne strony PDF 12
+- id: REG-T05-01-02
+  revision: r1
+  statement: Syllabus zalicza analizę wymagań i rozwiązywanie konfliktów do pozyskiwania wymagań.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.4; fizyczne strony PDF 12
+  - source: SRC-T05-SPL
+    location: §1.4; fizyczne strony PDF 12
+- id: REG-T05-01-03
+  revision: r1
+  statement: Do realizacji zadań RE trzeba dobrać odpowiedni proces, a narzędzia mogą wspierać ich wykonanie.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.4; fizyczne strony PDF 12
+  - source: SRC-T05-SPL
+    location: §1.4; fizyczne strony PDF 12
+- id: REG-T05-01-04
+  revision: r1
+  statement: |-
+    Zarządzanie wymaganiami obejmuje istniejące wymagania i powiązane artefakty, w tym przechowywanie, zmiany i śledzenie powiązań.
+  sources:
+  - source: SRC-T05-GPL
+    location: Hasła Requirements management; fizyczne strony PDF 35
+- id: REG-T05-01-05
+  revision: r1
+  statement: Walidacja potwierdza dopasowanie wymagania do potrzeb, a samo utrwalenie wypowiedzi tego nie potwierdza.
+  sources:
+  - source: SRC-T05-GPL
+    location: Hasła Validation / Walidacja; fizyczne strony PDF 32
+- id: REG-KRY-T05-02
+  revision: r2
+  statement: Requirements Engineer zwykle oznacza rolę, a nie nazwę stanowiska.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.5; fizyczne strony PDF 13
+  - source: SRC-T05-SPL
+    location: §1.5; fizyczne strony PDF 13
+  - source: SRC-T05-GPL
+    location: Hasła Requirements Engineer; fizyczne strony PDF 14
+- id: REG-T05-02-02
+  revision: r1
+  statement: |-
+    Charakterystyka roli obejmuje wykonywanie zadań RE, pogłębioną wiedzę RE i łączenie problemu z potencjalnymi rozwiązaniami.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.5; fizyczne strony PDF 13
+  - source: SRC-T05-SPL
+    location: §1.5; fizyczne strony PDF 13
+- id: REG-T05-02-03
+  revision: r1
+  statement: |-
+    Rolę Requirements Engineer mogą pełnić między innymi analitycy, specjaliści aplikacyjni, Product Owners, inżynierowie systemów i programiści.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.5; fizyczne strony PDF 13
+  - source: SRC-T05-SPL
+    location: §1.5; fizyczne strony PDF 13
+- id: REG-KRY-T05-03
+  revision: r2
+  statement: |-
+    Podstawowy zakres nauki RE obejmuje zasady, dokumentowanie, opracowywanie wymagań, procesy, zarządzanie i wsparcie narzędziowe.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.6; fizyczne strony PDF 13
+  - source: SRC-T05-SPL
+    location: §1.6; fizyczne strony PDF 13
+- id: REG-T05-03-02
+  revision: r1
+  statement: Znajomość jednego edytora nie wyczerpuje sześciu obszarów wiedzy i praktyk wskazanych w §1.6.
+  sources:
+  - source: SRC-T05-SEN
+    location: §1.6; fizyczne strony PDF 13
+  - source: SRC-T05-SPL
+    location: §1.6; fizyczne strony PDF 13
+- id: REG-T05-03-03
+  revision: r1
+  statement: |-
+    Handbook wymienia słuchanie, moderowanie, negocjowanie, mediację, empatię i otwartość jako potrzebne umiejętności interpersonalne.
+  sources:
+  - source: SRC-T05-HEN
+    location: §1.6, soft skills; fizyczne strony PDF 14

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-G01
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T07-01
+  aspect: ZAK-T07-01
+family: FAM-T07-01
+sourceAnchor: tools/z1_extensions.py T07-01/G
+stem: |-
+  Dwie propozycje pracy RE oceniono jakościowo. Pierwsza dodaje powtórzony opis bez wpływu na decyzje, druga wyjaśnia nieuzgodniony wyjątek mogący wywołać kosztowną przeróbkę. Oceń argumenty.
+options:
+- id: '1'
+  text: Powtórzony opis ma wyższą wartość z samego powodu większej liczby stron.
+  rationale: Podano brak nowej korzyści decyzyjnej → objętość nie jest celem wartości → Fałsz.
+  rules:
+  - REG-T07-01-03
+  see: N-T07-01
+  truth: false
+- id: '2'
+  text: Wyjaśnienie wyjątku może przynosić korzyść przez ograniczenie ryzyka przeróbki.
+  rationale: Wskazano ryzyko wyjątku → taki wkład należy do korzyści wymagania → Prawda.
+  rules:
+  - REG-T07-01-02
+  see: N-T07-01
+  truth: true
+- id: '3'
+  text: Dla obu propozycji trzeba rozważyć także koszt ich pozyskania, dokumentowania, walidacji i zarządzania.
+  rationale: Porównuje się pracę nad wymaganiami → źródłowa formuła obejmuje te koszty RE → Prawda.
+  rules:
+  - REG-KRY-T07-01
+  see: N-T07-01
+  truth: true

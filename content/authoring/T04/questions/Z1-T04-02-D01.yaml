@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T04-02-D01
+revision: r2
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-T04-02
+  aspect: ZAK-T04-02
+family: FAM-T04-02
+sourceAnchor: references/content/T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md § Z1-T04-02-D01
+stem: |-
+  Zdanie „Użytkownik chce, aby 95% odpowiedzi pojawiało się w ciągu sekundy” opisano jako user requirement. Który wniosek o tej etykiecie jest poprawny?
+options:
+- id: a
+  text: Oznacza, że autor zapisał kod.
+  rationale: |-
+    Perspektywa potrzeby nie jest implementacją → Syllabus wyróżnia perspektywy system requirements, stakeholder requirements, user requirements, domain requirements i business requirements. → nie wybrać.
+  rules:
+  - REG-KRY-T04-02
+  see: N-T04-02
+  correct: false
+- id: b
+  text: Nazywa perspektywę użytkownika; nie wyklucza rodzaju quality.
+  rationale: |-
+    Perspektywa i concern to inne osie → Syllabus wyróżnia perspektywy system requirements, stakeholder requirements, user requirements, domain requirements i business requirements. → wybrać.
+  rules:
+  - REG-KRY-T04-02
+  see: N-T04-02
+  correct: true
+- id: c
+  text: Wyklucza wszystkie rodzaje z T02.
+  rationale: |-
+    Osie mogą współistnieć → Syllabus wyróżnia perspektywy system requirements, stakeholder requirements, user requirements, domain requirements i business requirements. → nie wybrać.
+  rules:
+  - REG-KRY-T04-02
+  see: N-T04-02
+  correct: false
+- id: d
+  text: Dowodzi, że wymaganie nie ma żadnego interesariusza.
+  rationale: |-
+    User jest stakeholderem → User requirements wyrażają potrzeby użytkowników i są podzbiorem stakeholder requirements. → nie wybrać.
+  rules:
+  - REG-T04-02-04
+  see: N-T04-02
+  correct: false

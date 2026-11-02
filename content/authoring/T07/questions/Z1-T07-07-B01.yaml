@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-07-B01
+revision: r2
+format: K
+role: base
+weight: 2
+scope:
+  criterion: KRY-T07-07
+  aspect: ZAK-T07-07
+family: FAM-T07-07
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-07-B01
+stem: Oceń uzasadnienia dotyczące zmian wymagań.
+options:
+- id: '1'
+  text: Nowy produkt konkurenta lub zmiana priorytetu klienta mogą prowadzić do zmiany wymagań.
+  rationale: |-
+    Obie przyczyny są wskazane w zasadzie → Źródłami zmian mogą być procesy biznesowe, konkurencja, priorytety klientów, technologia, przepisy i feedback użytkowników. → Prawda.
+  rules:
+  - REG-T07-07-02
+  see: N-T07-07
+  truth: true
+- id: '2'
+  text: Zmiana po poprawnej walidacji zawsze dowodzi jej błędu.
+  rationale: |-
+    Nowe potrzeby/warunki mogą pojawić się później → Zmiany wymagań są normalnym skutkiem ewolucji systemów i ich otoczenia, a nie same w sobie dowodem wadliwej wcześniejszej pracy RE. → Fałsz.
+  rules:
+  - REG-KRY-T07-07
+  see: N-T07-07
+  truth: false
+- id: '3'
+  text: RE ma dopuszczać zmiany i równocześnie dbać o stabilność.
+  rationale: |-
+    To dwa źródłowe cele wymagające pogodzenia → RE powinno równocześnie dopuszczać zmiany wymagań i utrzymywać ich stabilność. → Prawda.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  truth: true
+- id: '4'
+  text: Dopuszczenie zmiany oznacza obowiązek natychmiastowej realizacji każdego żądania.
+  rationale: |-
+    Możliwość ewolucji nie oznacza niekontrolowanej akceptacji → RE powinno równocześnie dopuszczać zmiany wymagań i utrzymywać ich stabilność. → Fałsz.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  truth: false

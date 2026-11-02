@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T02-01-D01
+revision: r2
+format: K
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T02-01
+  aspect: ZAK-T02-01
+family: FAM-T02-01
+sourceAnchor: references/content/T02_IREB_CPRE_Kinds_of_Requirements_Content_v0.1.md § Z1-T02-01-D01
+stem: |-
+  Oceń klasyfikacje. System po zatwierdzeniu produkuje 5 kopii etykiety, ma dostępność 99,8% w uzgodnionym okresie i musi działać na platformie K narzuconej mimo odpowiednich alternatyw.
+options:
+- id: '1'
+  text: Wymóg pięciu kopii etykiety jest funkcjonalny.
+  rationale: Liczba opisuje rezultat funkcji → functional → Prawda.
+  rules:
+  - REG-T02-01-02
+  see: N-T02-01
+  truth: true
+- id: '2'
+  text: Wymóg dostępności jest jakościowy.
+  rationale: |-
+    Dostępność jest cechą jakościową działania → Quality requirement dotyczy zagadnienia jakości nieobjętego wymaganiem funkcjonalnym, na przykład wydajności lub dostępności. → Prawda.
+  rules:
+  - REG-T02-01-03
+  see: N-T02-01
+  truth: true
+- id: '3'
+  text: Nakaz platformy K jest ograniczeniem w sensie RE.
+  rationale: Dodatkowy wybór platformy mimo alternatyw → constraint → Prawda.
+  rules:
+  - REG-T02-01-04
+  see: N-T02-01
+  truth: true
+- id: '4'
+  text: Każde z tych wymagań jest jakościowe, bo zawęża zbiór realizacji.
+  rationale: |-
+    Każdy wymóg może zawężać realizacje; o typie decyduje concern → Rodzaj wymagania rozpoznaje się według tego, czy dotyczy wyniku lub zachowania funkcji, cechy jakościowej czy dodatkowego ograniczenia przestrzeni rozwiązania. → Fałsz.
+  rules:
+  - REG-KRY-T02-01
+  see: N-T02-01
+  truth: false

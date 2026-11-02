@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T04-01
+  meaning: |-
+    Stanowisko wydawania paczek może obejmować aplikację, zamek, skaner i zasady przekazania paczki przez pracownika. RE dotyczy oczekiwań wobec takiej całości.
+  from: EX-KRY-T04-01
+- type: counterexample-of
+  to: REG-KRY-T04-01
+  meaning: |-
+    Uogólnienie „RE nie dotyczy procedury ręcznej” obala procedura obsługi zwrotu z określonym celem, rolami i wymaganiami, choć nie wprowadza się nowego programu.
+  from: CE-KRY-T04-01
+- type: distinguishes
+  to: REG-KRY-T04-01
+  meaning: |-
+    Oś: skład analizowanej całości. Sam program, system z urządzeniem i cała usługa z ludźmi mogą mieć wymagania. Rozszerzanie perspektywy nie tworzy automatycznie nowego rodzaju functional/quality/constraint.
+  from: CMP-KRY-T04-01
+- type: explains
+  to: REG-KRY-T04-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T04-01
+- type: variant-of
+  to: Z1-T04-01-B01
+  meaning: Rozpoznanie twierdzeń bez tworzenia modelu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T04-01-F01
+- type: variant-of
+  to: Z1-T04-01-B01
+  meaning: Organizacyjna procedura bez nowego programu zastępuje ogólne stwierdzenia o zastosowaniach.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T04-G01
+- type: variant-of
+  to: Z1-T04-01-B01
+  meaning: Kontrast zakresu systemu i rodzaju wymagania.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T04-01-D01
+- type: illustrates
+  to: REG-KRY-T04-02
+  meaning: |-
+    „Organizacja chce ograniczyć straty magazynowe” wskazuje perspektywę biznesową; „operator chce znaleźć różnicę stanu” użytkownika; „każda wydana paczka ma mieć rzeczywistego odbiorcę” może opisywać wymaganą właściwość domeny.
+  from: EX-KRY-T04-02
+- type: counterexample-of
+  to: REG-KRY-T04-02
+  meaning: |-
+    Uogólnienie „user requirement jest czwartym rodzajem obok functional/quality/constraint” obala potrzeba użytkownika otrzymania potwierdzenia: perspektywa user i concern functional mogą współistnieć.
+  from: CE-KRY-T04-02
+- type: distinguishes
+  to: REG-KRY-T04-02
+  meaning: |-
+    Oś 1: z czyjej perspektywy / czego dotyczy wymaganie — pięć nazw. Oś 2: przedmiot oczekiwania — funkcja, jakość, constraint. Wymóg czasu oczekiwania zgłoszony przez użytkownika ma perspektywę user i concern quality.
+  from: CMP-KRY-T04-02
+- type: explains
+  to: REG-KRY-T04-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T04-02
+- type: variant-of
+  to: Z1-T04-02-B01
+  meaning: Wybór trzech uzasadnionych przyporządkowań; source F nadal sprawdza samodzielne odtworzenie pięciu nazw.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T04-F02
+- type: variant-of
+  to: Z1-T04-02-B01
+  meaning: Relacja podzbioru i dwie role w jednym opisie; nie wymusza rozłączności perspektyw.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T04-G02
+- type: variant-of
+  to: Z1-T04-02-B01
+  meaning: Kontrola relacji osi w krótkim opisie.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: Z1-T04-02-D01

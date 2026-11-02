@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T04-01-F01
+revision: r2
+format: K
+role: follow-up-1
+weight: 2
+scope:
+  criterion: KRY-T04-01
+  aspect: ZAK-T04-01
+family: FAM-T04-01
+sourceAnchor: references/content/T04_IREB_CPRE_Applications_and_Perspectives_Content_v0.1.md § Z1-T04-01-F01
+stem: Oceń twierdzenia o zastosowaniu RE.
+options:
+- id: '1'
+  text: RE może obejmować wymagania dla usługi z elementami organizacyjnymi.
+  rationale: |-
+    Usługi i elementy organizacyjne są dopuszczone → Systemy, w których istotne jest oprogramowanie, mogą obejmować także składniki fizyczne i organizacyjne. → Prawda.
+  rules:
+  - REG-T04-01-02
+  see: N-T04-01
+  truth: true
+- id: '2'
+  text: Dominujące zastosowanie w software oznacza zakaz RE dla sprzętu.
+  rationale: |-
+    Dominacja opisuje praktykę, nie wyłączność → RE może dotyczyć dowolnego rodzaju systemu, chociaż dominującym zastosowaniem są systemy z ważną rolą oprogramowania. → Fałsz.
+  rules:
+  - REG-KRY-T04-01
+  see: N-T04-01
+  truth: false
+- id: '3'
+  text: System z software i elementami fizycznymi może być cyberfizyczny.
+  rationale: |-
+    To podany zakres określenia składu → System z oprogramowaniem i elementami fizycznymi może być określany jako cyberfizyczny. → Prawda.
+  rules:
+  - REG-T04-01-03
+  see: N-T04-01
+  truth: true

@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../../../schemas/authoring/sources.schema.json
+sources:
+- id: SRC-T02-SEN
+  title: CPRE Foundation Level Syllabus EN
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/9c084b1cfd-1787039954/cpre_foundationlevel_syllabus_en_v.3.3.0.pdf
+  location: |-
+    §1.1 i §1.3; fizyczne strony PDF 11–12; §1.1, Constraints; fizyczne strony PDF 12; §1.1, Functional requirements; fizyczne strony PDF 11; §1.1, Quality requirements; fizyczne strony PDF 11; §1.1; fizyczne strony PDF 11–12
+  attribution: IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T02-SPL
+  title: CPRE Foundation Level Syllabus PL
+  version: 3.3.0
+  url: |-
+    https://hub.ireb.org/media/pages/resources/cpre-foundation-level-syllabus/68b8837862-1787039957/cpre_foundationlevel_syllabus_pl_v.3.3.pdf
+  location: |-
+    §1.1 i §1.3; fizyczne strony PDF 11–12; §1.1, Constraints; fizyczne strony PDF 12; §1.1, Functional requirements; fizyczne strony PDF 11; §1.1, Quality requirements; fizyczne strony PDF 11; §1.1; fizyczne strony PDF 11–12
+  attribution: |-
+    IREB e.V.; Stan Bühne, Martin Glinz, Hans van Loenhoud, Stefan Staal; przekład SJSI wskazany na s.2; 1.04.2026; © IREB e.V.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.
+- id: SRC-T02-GPL
+  title: Glossary of Requirements Engineering Terminology — Polish
+  version: 2.2.0
+  url: https://hub.ireb.org/media/pages/resources/cpre-glossary/d804142017-1787039952/ireb_cpre_glossary_pl_2.2.pdf
+  location: |-
+    Hasła Constraint / Ograniczenie w IW; fizyczne strony PDF 21; Hasła Functional requirement; Quality requirement; Constraint; fizyczne strony PDF 21, 34; Hasła Functional requirement; Quality requirement; Quality criteria in RE; fizyczne strony PDF 17, 34; Hasła Functional requirement; fizyczne strony PDF 34; Hasła Non-functional requirement; fizyczne strony PDF 34; Hasła Performance requirement; Non-functional requirement, uwaga; fizyczne strony PDF 34; Hasła Quality requirement; Performance requirement; fizyczne strony PDF 34; Hasła Security / Zabezpieczenia, uwaga; fizyczne strony PDF 35; Hasła User requirement; Functional requirement; Quality requirement; fizyczne strony PDF 34
+  attribution: |-
+    Martin Glinz / IREB e.V.; terminy polskie Monika Petri-Starego i Karolina Zmitrowicz; 1.10.2025; © 2011–2025 IREB e.V. i Martin Glinz; definicje w języku EN.
+  usageNote: |-
+    Wersja i fragmenty sprawdzone przez autora AI na lokalnej kopii zgodnej SHA-256 z manifestem Z1; lokalizacje są fizycznymi stronami PDF. Parafrazy i fikcyjne przykłady autora. To opis ograniczeń, nie decyzja praw lub zgoda na kanał publikacji.

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T05-D01
+revision: r1
+format: K
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T05-01
+  aspect: ZAK-T05-01
+family: FAM-T05-01
+sourceAnchor: tools/z1_extensions.py T05-01/D
+stem: |-
+  Zespół potraktował listę zadań jako nakaz wykonania każdego dokładnie raz. Inna osoba proponuje dopasować proces i wracać do potrzebnych czynności. Oceń argumenty.
+options:
+- id: '1'
+  text: Pozyskiwanie, dokumentowanie, walidacja i zarządzanie to główne zadania RE.
+  rationale: Opis odwołuje się do źródłowego wykazu → te cztery nazwy do niego należą → Prawda.
+  rules:
+  - REG-KRY-T05-01
+  see: N-T05-01
+  truth: true
+- id: '2'
+  text: Sama kolejność nazw w wykazie dowodzi zakazu ponownej walidacji.
+  rationale: Wykaz nie jest uniwersalnym harmonogramem → proces dobiera się do sytuacji → Fałsz.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  truth: false
+- id: '3'
+  text: Dobór procesu do sytuacji jest zgodny z wymaganiem tailoring.
+  rationale: Zaproponowano dopasowanie sposobu pracy → §1.4 wymaga odpowiedniego procesu → Prawda.
+  rules:
+  - REG-T05-01-03
+  see: N-T05-01
+  truth: true

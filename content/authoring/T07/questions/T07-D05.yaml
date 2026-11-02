@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-D05
+revision: r1
+format: P
+role: delayed-candidate
+weight: 2
+scope:
+  criterion: KRY-T07-05
+  aspect: ZAK-T07-05
+family: FAM-T07-05
+sourceAnchor: tools/z1_extensions.py T07-05/D
+stem: |-
+  Organizacja rozważa demonstrator nowego terminala, aby poznać potrzebne interakcje. Równolegle opisuje niezadowalającą sytuację i oczekiwane zdolności. Które argumenty poprawnie opisują tę pracę?
+options:
+- id: a
+  text: Samo istnienie terminala jest pełnym opisem potrzeby interesariuszy.
+  rationale: Terminal jest propozycją realizacji → rozwiązanie nie zastępuje znaczenia potrzeby → argument jest
+    błędny.
+  rules:
+  - REG-KRY-T07-05
+  see: N-T07-05
+  correct: false
+- id: b
+  text: |-
+    Badanie częściowego rozwiązania może pomóc opracować wymagania, choć opisy problemu i potrzeb trzeba nadal rozróżniać.
+  rationale: Demonstrator ma wyjaśnić interakcje → trójka współzależy przy zachowaniu rozróżnień → argument jest
+    trafny.
+  rules:
+  - REG-T07-05-05
+  see: N-T07-05
+  correct: true
+- id: c
+  text: Rozdzielenie nazw wymaga całkowitego odizolowania prac nad rozwiązaniem od RE.
+  rationale: Podano równoległe badanie → separation of concerns nie jest izolowaniem trójki → argument jest błędny.
+  rules:
+  - REG-T07-05-02
+  see: N-T07-05
+  correct: false
+- id: d
+  text: W dokumentowaniu warto odróżnić stan problemowy, potrzebne właściwości i proponowany terminal.
+  rationale: Są to trzy role opisu → ich rozdzielenie ułatwia komunikację mimo współzależności → argument jest trafny.
+  rules:
+  - REG-T07-05-04
+  see: N-T07-05
+  correct: true
+k: 2

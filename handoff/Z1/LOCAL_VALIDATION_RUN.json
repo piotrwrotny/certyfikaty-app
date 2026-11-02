@@ -1,0 +1,6 @@
+{
+  "command": "python Z1_App_Knowledge_Package_v1.0/tools/validate_authoring_local.py --existing-normalized contract_inputs/content/normalized",
+  "exit_code": 0,
+  "stdout": "{\n  \"errors\": 0,\n  \"warnings\": 7,\n  \"objects\": 715,\n  \"checks\": 12730,\n  \"scoring_vectors\": 566,\n  \"first_errors\": []\n}\n",
+  "role": "Autorska kontrola pomocnicza, nie oficjalny content:lint lub scorer aplikacji"
+}

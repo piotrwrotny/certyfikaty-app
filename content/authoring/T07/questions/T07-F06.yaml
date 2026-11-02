@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F06
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-06
+  aspect: ZAK-T07-06
+family: FAM-T07-06
+sourceAnchor: tools/z1_extensions.py T07-06/F
+stem: |-
+  Wymaganie opisuje obsługę przez całą dobę i ma poprawną formę. Realizacja zakłada dostępność operatora, lecz z danych wynika, że operator pracuje tylko w dzień. Który argument najlepiej opisuje potrzebne sprawdzenie?
+options:
+- id: a
+  text: |-
+    Już podczas RE trzeba sprawdzić potrzeby, porozumienie i rozsądność założenia obsady, zamiast polegać na poprawnej formie.
+  rationale: |-
+    Podano rozbieżność założenia z warunkami → walidacja obejmuje trzy aspekty i zaczyna się w RE → argument jest trafny.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  correct: true
+- id: b
+  text: Poprawna forma dowodzi wszystkich aspektów walidacji.
+  rationale: |-
+    Forma nie potwierdza zgodności z potrzebami ani obsady → verification nie zastępuje validation → argument jest błędny.
+  rules:
+  - REG-T07-06-03
+  see: N-T07-06
+  correct: false
+- id: c
+  text: Rozbieżność należy rozważyć dopiero po wdrożeniu systemu.
+  rationale: Ryzyko jest już widoczne → wczesna walidacja służy jego kontroli od początku → odkładanie przeczy zasadzie.
+  rules:
+  - REG-KRY-T07-06
+  see: N-T07-06
+  correct: false
+- id: d
+  text: Podpis jednej osoby zmienia dzienną obsadę w całodobową.
+  rationale: |-
+    Podpis nie zmienia podanego stanu otoczenia → założenie wymaga rzeczywistego sprawdzenia → wniosek jest nieuprawniony.
+  rules:
+  - REG-T07-06-02
+  see: N-T07-06
+  correct: false

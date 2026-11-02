@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-P-D01
+revision: r2
+format: A
+role: delayed-candidate
+weight: 1
+scope:
+  criterion: KRY-P01
+  aspect: ZAK-T02-C-P01
+family: FAM-C-P2
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-D01
+stem: |-
+  Moduł zestawia wyniki pomiarów. Dwie jego możliwe implementacje zapewniają te same wymagane funkcje, ale różnią się zużyciem pamięci. Postawiono wymaganie: „Podczas pracy na uzgodnionym zestawie 50 000 rekordów proces zajmuje nie więcej niż 256 MiB pamięci operacyjnej”. Wymaganie nie wskazuje komponentu, algorytmu ani platformy; obie implementacje mogą spełnić ten limit.
+
+  Która klasyfikacja tego wymagania ma właściwe uzasadnienie?
+options:
+- id: a
+  text: Funkcjonalne — ponieważ sprawne zestawianie wyników jest ważnym celem modułu.
+  rationale: |-
+    Przedmiotem zdania jest zużycie pamięci, chociaż system realizuje cel funkcjonalny → cel całego modułu nie określa typu każdego jego wymagania → uzasadnienie nie daje typu functional
+  rules:
+  - REG-P1
+  - REG-T02-01-02
+  see: N-T02-C-P01
+  correct: false
+- id: b
+  text: Ograniczenie — ponieważ każdy liczbowy limit zawężający możliwe implementacje jest ograniczeniem w sensie
+    RE.
+  rationale: |-
+    Limit dotyczy cechy pracy modułu → także quality zawęża dopuszczalne realizacje; constraint ogranicza je dodatkowo ponad dane funkcje i jakość → sam limit liczbowy nie uzasadnia constraint
+  rules:
+  - REG-P1
+  - REG-T02-01-04
+  see: N-T02-C-P01
+  correct: false
+- id: c
+  text: Funkcjonalne — ponieważ wymaganie nie narzuca nazwanego komponentu ani platformy.
+  rationale: |-
+    Nie narzucono komponentu → brak takiego constraint nie rozstrzyga pomiędzy functional i quality → argument jest niewystarczający i daje niewłaściwy typ
+  rules:
+  - REG-P1
+  - REG-KRY-T02-01
+  see: N-T02-C-P01
+  correct: false
+- id: d
+  text: Jakościowe — ponieważ określa cechę zużycia zasobu przy podanym wolumenie pracy.
+  rationale: |-
+    Wskazano pamięć procesu przy określonych danych → cecha jakościowa zużycia zasobu, bez dodatkowego wyboru realizacji → klasyfikacja i argument poprawne
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  correct: true

@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T02-GC01
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-P01
+  aspect: ZAK-T02-C-P01
+family: FAM-C-P1
+sourceAnchor: tools/z1_extensions.py T02-C-P/G
+stem: |-
+  Urządzenie po przyjęciu zlecenia drukuje dwie etykiety. W zdefiniowanym trybie ma zużywać najwyżej 6 W. Nakazano sterownik Sigma mimo innych sterowników spełniających te same wymagania funkcjonalne i jakościowe. Oceń klasyfikacje z uzasadnieniem.
+options:
+- id: '1'
+  text: Dwie etykiety określają wynik funkcji, więc oczekiwanie jest funkcjonalne.
+  rationale: Liczba dotyczy wytwarzanego rezultatu → functional requirement obejmuje taki wynik → Prawda.
+  rules:
+  - REG-P1
+  - REG-T02-01-02
+  see: N-T02-C-P01
+  truth: true
+- id: '2'
+  text: Limit zużycia energii jest constraint tylko dlatego, że zapisano liczbę.
+  rationale: |-
+    Limit określa cechę pracy w trybie → quality może zawężać realizacje bez dodatkowego narzucenia rozwiązania → Fałsz.
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  truth: false
+- id: '3'
+  text: Nakaz Sigma jest constraint, ponieważ eliminuje dodatkowo odpowiednie alternatywy.
+  rationale: Podano odpowiednie alternatywy i nakaz sterownika → dodatkowe zawężenie spełnia definicję constraint
+    → Prawda.
+  rules:
+  - REG-P1
+  - REG-T02-01-04
+  see: N-T02-C-P01
+  truth: true
+- id: '4'
+  text: Każde wymaganie wspierające bezpieczeństwo musi być jakościowe.
+  rationale: Cel może być wspierany zachowaniem → security bywa wyrażone funkcjonalnie lub jakościowo → Fałsz.
+  rules:
+  - REG-P1
+  - REG-T02-01-05
+  see: N-T02-C-P01
+  truth: false

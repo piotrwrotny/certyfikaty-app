@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T07-F07
+revision: r1
+format: A
+role: follow-up-1
+weight: 1
+scope:
+  criterion: KRY-T07-07
+  aspect: ZAK-T07-07
+family: FAM-T07-07
+sourceAnchor: tools/z1_extensions.py T07-07/F
+stem: |-
+  Po rozpoczęciu implementacji organizacja zmieniła proces obsługi. Kierownik proponuje albo odrzucać każdą zmianę, albo realizować każde zgłoszenie natychmiast. Który argument jest najtrafniejszy?
+options:
+- id: a
+  text: Każda zmiana procesu dowodzi, że wcześniejsze RE było nieprawidłowe.
+  rationale: Podano nową sytuację po uzgodnieniu → ewolucja bywa naturalna → pewna diagnoza wcześniejszej wady nie
+    wynika.
+  rules:
+  - REG-KRY-T07-07
+  see: N-T07-07
+  correct: false
+- id: b
+  text: Zasada wymaga natychmiastowej realizacji każdej propozycji.
+  rationale: |-
+    Dopuszczenie zmian współistnieje ze stabilnością → sama propozycja nie jest decyzją o realizacji → argument jest błędny.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  correct: false
+- id: c
+  text: Po rozpoczęciu kodowania potrzeby muszą pozostać niezmienne na zawsze.
+  rationale: Proces biznesowy się zmienił → wymagania mogą wymagać adaptacji → absolutna niezmienność przeczy ewolucji.
+  rules:
+  - REG-T07-07-02
+  see: N-T07-07
+  correct: false
+- id: d
+  text: Trzeba umożliwić rozważenie potrzebnej zmiany i zachować uporządkowaną stabilną podstawę prac.
+  rationale: Obie skrajności pomijają jeden cel → RE godzi adaptację i stabilność → argument jest trafny.
+  rules:
+  - REG-T07-07-04
+  see: N-T07-07
+  correct: true

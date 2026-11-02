@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=../../../schemas/authoring/rules.schema.json
+rules:
+- id: REG-KRY-T06-01
+  revision: r2
+  statement: |-
+    Dziewięć zasad RE to orientacja na wartość, interesariusze, wspólne zrozumienie, kontekst, problem–wymaganie–rozwiązanie, walidacja, ewolucja, innowacja oraz systematyczna i zdyscyplinowana praca.
+  sources:
+  - source: SRC-T06-SEN
+    location: §2.1; fizyczne strony PDF 14
+  - source: SRC-T06-SPL
+    location: §2.1; fizyczne strony PDF 14
+- id: REG-T06-01-02
+  revision: r1
+  statement: |-
+    Zasady RE stosuje się przekrojowo do jego zadań, działań i praktyk, a nie jako dziewięć obowiązkowych faz procesu.
+  sources:
+  - source: SRC-T06-SEN
+    location: §2.1, akapit wprowadzający; fizyczne strony PDF 14
+  - source: SRC-T06-SPL
+    location: §2.1, akapit wprowadzający; fizyczne strony PDF 14
+- id: REG-KRY-T06-02
+  revision: r2
+  statement: |-
+    Sześć terminów EU2 to context, requirement, Requirements Engineering, stakeholder, shared understanding i validation.
+  sources:
+  - source: SRC-T06-SEN
+    location: EU2, Terms / Terminy; fizyczne strony PDF 14
+  - source: SRC-T06-SPL
+    location: EU2, Terms / Terminy; fizyczne strony PDF 14
+- id: REG-T06-02-02
+  revision: r1
+  statement: Context w RE jest częścią otoczenia istotną dla zrozumienia systemu i jego wymagań.
+  sources:
+  - source: SRC-T06-GPL
+    location: Hasła Context / Kontekst, znaczenie 2; fizyczne strony PDF 17
+- id: REG-T06-02-03
+  revision: r1
+  statement: |-
+    Explicit shared understanding opiera się na udokumentowanych i uzgodnionych wymaganiach, a implicit na wspólnej wiedzy o potrzebach, wizji i kontekście.
+  sources:
+  - source: SRC-T06-SEN
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+  - source: SRC-T06-SPL
+    location: §2.2, Principle 3 / Zasada 3; fizyczne strony PDF 15
+- id: REG-T06-02-04
+  revision: r1
+  statement: Zarówno explicit, jak i implicit shared understanding mogą być pozorne i wymagają sprawdzania.
+  sources:
+  - source: SRC-T06-HEN
+    location: §2.2.3; fizyczne strony PDF 20–21
+- id: REG-T06-02-05
+  revision: r1
+  statement: Validation potwierdza zgodność z potrzebami interesariuszy, a verification zgodność ze specyfikacją.
+  sources:
+  - source: SRC-T06-GPL
+    location: Hasła Validation / Walidacja; Verification / Weryfikacja; fizyczne strony PDF 32
+- id: REG-T06-02-06
+  revision: r1
+  statement: |-
+    Stakeholder może wpływać na wymagania albo podlegać wpływowi systemu, a requirement może oznaczać potrzebę, właściwość lub jej reprezentację.
+  sources:
+  - source: SRC-T06-GPL
+    location: Hasła Stakeholder / Interesariusz; Requirement / Wymaganie; fizyczne strony PDF 14, 33
+- id: REG-T06-02-07
+  revision: r1
+  statement: |-
+    RE jest systematycznym i zdyscyplinowanym specyfikowaniem i zarządzaniem wymaganiami dla rozumienia potrzeb i ograniczania ryzyka ich niespełnienia.
+  sources:
+  - source: SRC-T06-GPL
+    location: Hasła Requirements Engineering / Inżynieria wymagań; fizyczne strony PDF 14

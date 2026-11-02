@@ -1,0 +1,388 @@
+# yaml-language-server: $schema=../../../schemas/authoring/relations.schema.json
+relations:
+- type: illustrates
+  to: REG-KRY-T07-01
+  meaning: |-
+    Doprecyzowanie wyjątku rezerwacji zajmuje godzinę, ale może uniknąć zbudowania błędnego procesu. Rozważamy koszt doprecyzowania i korzyść ograniczenia ryzyka.
+  from: EX-KRY-T07-01
+- type: counterexample-of
+  to: REG-KRY-T07-01
+  meaning: |-
+    Uogólnienie „więcej dokumentacji zawsze zwiększa wartość” obala opisanie po raz dziesiąty oczywistego, niskiego ryzyka parametru bez poprawy decyzji ani zrozumienia.
+  from: CE-KRY-T07-01
+- type: distinguishes
+  to: REG-KRY-T07-01
+  meaning: |-
+    Oś: nakład versus uzyskana korzyść. Dodatkowy przykład krytycznego wyjątku może ograniczyć błąd; kolejny redundantny opis może tylko zwiększyć koszt. Objętość sama nie rozstrzyga.
+  from: CMP-KRY-T07-01
+- type: illustrates
+  to: REG-KRY-T07-01
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-01
+- type: explains
+  to: REG-KRY-T07-01
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-01
+- type: variant-of
+  to: Z1-T07-01-B01
+  meaning: Ryzykowny wyjątek i możliwie uzasadniony dodatkowy nakład zamiast nadmiarowych stron w B.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F01
+- type: variant-of
+  to: Z1-T07-01-B01
+  meaning: Porównanie dwóch rodzajów nakładu i ich mechanizmów, zamiast jednego ryzykownego wyjątku.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G01
+- type: variant-of
+  to: Z1-T07-01-B01
+  meaning: |-
+    Budżetowa eliminacja walidacji i różny moment korzyści zamiast objętości lub pojedynczego wyjątku; nie jest rachunkiem rzeczywistego ROI.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D01
+- type: illustrates
+  to: REG-KRY-T07-02
+  meaning: |-
+    Nowa usługa spełnia oczekiwania klienta zamawiającego, ale operator nie może odtworzyć przetwarzania po awarii. Pominięcie roli operatora pozostawia ważną potrzebę bez uzgodnienia.
+  from: EX-KRY-T07-02
+- type: counterexample-of
+  to: REG-KRY-T07-02
+  meaning: |-
+    Uogólnienie „wystarczy klient i użytkownik końcowy” obala wymaganie utrzymania zgłaszane przez operatora, który nie należy do tych ról w scenariuszu.
+  from: CE-KRY-T07-02
+- type: distinguishes
+  to: REG-KRY-T07-02
+  meaning: |-
+    Oś: potrzeba roli versus pojedyncza propozycja rozwiązania. Dwie role mogą potrzebować różnych rzeczy; konflikt trzeba uzgodnić. Persona zastępuje archetypowy opis grupy, nie realne porozumienie wszystkich osób.
+  from: CMP-KRY-T07-02
+- type: illustrates
+  to: REG-KRY-T07-02
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-02
+- type: explains
+  to: REG-KRY-T07-02
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-02
+- type: variant-of
+  to: Z1-T07-02-B01
+  meaning: Konflikt dwóch ról zamiast pominiętego operatora i persony; bez doradzania rzeczywistej retencji prawnej.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F02
+- type: variant-of
+  to: Z1-T07-02-B01
+  meaning: Nieznana grupa, informacja z eksploatacji i łączenie ról, bez powtarzania konfliktu F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G02
+- type: variant-of
+  to: Z1-T07-02-B01
+  meaning: |-
+    Reprezentacja przyszłego rynku i feedback z pilota; trzy argumenty, bez deklaracji kompletności stakeholder list.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D02
+- type: illustrates
+  to: REG-KRY-T07-03
+  meaning: |-
+    Dział sprzedaży i magazyn używają słowa „dostępny”. Przykład zamówienia ujawnia, że jeden liczy zarezerwowane sztuki, drugi je odejmuje. Glosariusz i feedback pozwalają uzgodnić sens.
+  from: EX-KRY-T07-03
+- type: counterexample-of
+  to: REG-KRY-T07-03
+  meaning: |-
+    Uogólnienie „wspólny dokument dowodzi wspólnego rozumienia” obala dwóch podpisujących, którzy odmiennie interpretują „dostępny”.
+  from: CE-KRY-T07-03
+- type: distinguishes
+  to: REG-KRY-T07-03
+  meaning: |-
+    Oś nośnika: explicit versus implicit. Oś trafności: faktycznie to samo znaczenie versus pozorna zgodność. Wspólna wiedza domenowa może być dobra, a uzgodniony zapis może zostać różnie odczytany.
+  from: CMP-KRY-T07-03
+- type: illustrates
+  to: REG-KRY-T07-03
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-03
+- type: explains
+  to: REG-KRY-T07-03
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-03
+- type: variant-of
+  to: Z1-T07-03-B01
+  meaning: Warunki zespołu i trwałość wspólnej wiedzy zamiast jednego wieloznacznego terminu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F03
+- type: variant-of
+  to: Z1-T07-03-B01
+  meaning: Wybór uzasadnionych praktyk i ograniczenie wniosku o kompletności; nie opiera się na zmianie składu zespołu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G03
+- type: variant-of
+  to: Z1-T07-03-B01
+  meaning: Granica wnioskowania ze zgodnego przykładu przy sprzyjających warunkach, zamiast rozbieżności lub rotacji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D03
+- type: illustrates
+  to: REG-KRY-T07-04
+  meaning: |-
+    System ewidencji narzędzi widzi skan zwrotu. Potrzeba „narzędzie rzeczywiście wróciło” wymaga zgodności skanu z fizycznym zwrotem; samo poprawne zapisanie skanu tego nie zapewnia.
+  from: EX-KRY-T07-04
+- type: counterexample-of
+  to: REG-KRY-T07-04
+  meaning: |-
+    Uogólnienie „wszystko poza projektem można pominąć” obala niezmieniany skaner z opóźnieniami danych. Uogólnienie „zarejestrowane zdarzenie dowodzi realnego faktu” obala omyłkowy skan bez fizycznego zwrotu.
+  from: CE-KRY-T07-04
+- type: distinguishes
+  to: REG-KRY-T07-04
+  meaning: |-
+    Oś A: wewnętrzny/zewnętrzny; B: istotny/nieistotny; C: zmieniany/niezmieniany. Stary wewnętrzny moduł może być niezmieniany; zewnętrzna procedura istotna i zmieniana. Wymaganie realnego zwrotu i sygnał skanera są też różnymi poziomami opisu.
+  from: CMP-KRY-T07-04
+- type: illustrates
+  to: REG-KRY-T07-04
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-04
+- type: explains
+  to: REG-KRY-T07-04
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-04
+- type: variant-of
+  to: Z1-T07-04-B01
+  meaning: Mapowanie realnej kontroli dostępu na sygnał i reakcję, zamiast skanu zwrotu i modułu w B.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F04
+- type: variant-of
+  to: Z1-T07-04-B01
+  meaning: |-
+    Dynamika procesu fizycznego i opóźnione dane zamiast bramki i reakcji ochrony; obejmuje cztery różne rozstrzygnięcia.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G04
+- type: variant-of
+  to: Z1-T07-04-B01
+  meaning: |-
+    Realna cecha i potencjalnie błędny pomiar zamiast opóźnienia lub skanu; łączy istotność, scope, założenia i zmianę.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D04
+- type: illustrates
+  to: REG-KRY-T07-05
+  meaning: |-
+    Problem: magazyn myli paczki. Wymaganie: identyfikować paczkę przy wydaniu. Rozwiązanie: wybrana usługa z czytnikiem i procedurą. Pomysł czytnika może ujawnić dodatkowe potrzeby obsługi uszkodzonych etykiet.
+  from: EX-KRY-T07-05
+- type: counterexample-of
+  to: REG-KRY-T07-05
+  meaning: |-
+    Uogólnienie „najpierw wszystkie wymagania, potem można pomyśleć o rozwiązaniu” obala prototyp potrzebny do oceny wykonalności i zrozumienia interakcji.
+  from: CE-KRY-T07-05
+- type: distinguishes
+  to: REG-KRY-T07-05
+  meaning: |-
+    Oś: rola opisu. „Mylimy paczki” to stan problemowy; „potrzebujemy sprawdzić tożsamość” to wymaganie; „stosujemy czytnik” to rozwiązanie. Ich związek nie znosi różnic, a różnice nie ustanawiają izolacji.
+  from: CMP-KRY-T07-05
+- type: illustrates
+  to: REG-KRY-T07-05
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-05
+- type: explains
+  to: REG-KRY-T07-05
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-05
+- type: variant-of
+  to: Z1-T07-05-B01
+  meaning: Solution bias w wypowiedzi klienta zamiast zakazu prototypowania; wymaga wyboru rozdzielonych sensów.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F05
+- type: variant-of
+  to: Z1-T07-05-B01
+  meaning: Innowacja pobudzona rozwiązaniem i osobne opisy, zamiast istniejącego problemu nazwanego technologią.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G05
+- type: variant-of
+  to: Z1-T07-05-B01
+  meaning: |-
+    Równoległe poznawanie interakcji i opis ról, zamiast technologicznego impulsu z G; wybór argumentów, nie recall definicji.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D05
+- type: illustrates
+  to: REG-KRY-T07-06
+  meaning: |-
+    Wymaganie przewiduje odbiór paczki przez całą dobę. Walidacja ujawnia, że założenie o nocnej obsadzie punktu jest fałszywe; poprawny formularz tego nie wykrył.
+  from: EX-KRY-T07-06
+- type: counterexample-of
+  to: REG-KRY-T07-06
+  meaning: |-
+    Uogólnienie „brak literówek oznacza zwalidowane wymaganie” obala poprawnie napisany zapis o całodobowej usłudze bez warunków jej zapewnienia.
+  from: CE-KRY-T07-06
+- type: distinguishes
+  to: REG-KRY-T07-06
+  meaning: |-
+    Oś odniesienia: potrzeby interesariuszy i realne założenia versus formalna poprawność zapisu. Obie kontrole mogą być potrzebne; pierwsza nie wynika automatycznie z drugiej.
+  from: CMP-KRY-T07-06
+- type: illustrates
+  to: REG-KRY-T07-06
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-06
+- type: explains
+  to: REG-KRY-T07-06
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-06
+- type: variant-of
+  to: Z1-T07-06-B01
+  meaning: Fałszywe założenie w konkretnej usłudze zamiast rozpoznawania samej listy trzech pytań B.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F06
+- type: variant-of
+  to: Z1-T07-06-B01
+  meaning: Niepewne założenie i rozbieżność ról zamiast jawnie fałszywej całodobowej obsady.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G06
+- type: variant-of
+  to: Z1-T07-06-B01
+  meaning: |-
+    Oddzielenie zakończonej kontroli formy od niewykonanej walidacji trzech aspektów; nie podaje rozbieżności jako już rozstrzygniętej.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D06
+- type: illustrates
+  to: REG-KRY-T07-07
+  meaning: |-
+    Zmiana harmonogramu dostaw klienta ujawnia nową potrzebę anulowania. Organizacja ocenia jej wpływ i termin wprowadzenia, zachowując znany zakres bieżącego przyrostu.
+  from: EX-KRY-T07-07
+- type: counterexample-of
+  to: REG-KRY-T07-07
+  meaning: |-
+    Uogólnienie „każda zmiana dowodzi błędu analityka” obala zmiana przepisów po uzgodnieniu poprawnych wcześniej wymagań. Uogólnienie „ewolucja = przyjmuj wszystko” obala sprzeczne żądania wymagające decyzji.
+  from: CE-KRY-T07-07
+- type: distinguishes
+  to: REG-KRY-T07-07
+  meaning: |-
+    Oś: otwartość na uzasadnioną zmianę versus zdolność oparcia prac na stabilnym zakresie. Nie są absolutnym albo–albo: kontrolowane decyzje pozwalają zachować oba cele w odpowiednim horyzoncie.
+  from: CMP-KRY-T07-07
+- type: illustrates
+  to: REG-KRY-T07-07
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-07
+- type: explains
+  to: REG-KRY-T07-07
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-07
+- type: variant-of
+  to: Z1-T07-07-B01
+  meaning: Wybór uzasadnienia polityki po konkretnej zmianie procesu zamiast ogólnych tez B.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F07
+- type: variant-of
+  to: Z1-T07-07-B01
+  meaning: Oddziela źródła zewnętrzne od korekty odkrytej wady i od stabilności; nie wybiera polityki jak F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G07
+- type: variant-of
+  to: Z1-T07-07-B01
+  meaning: |-
+    Korekta zamkniętej błędnej teorii źródeł zmian; obejmuje sześć przykładów w dwóch grupach i relację do stabilności.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D07
+- type: illustrates
+  to: REG-KRY-T07-08
+  meaning: |-
+    Operator chce drugą kopię listy do kontroli. Analiza pokazuje, że chodzi o wychwycenie brakującego pola; prostszy sposób sprawdzenia przy wpisie może lepiej zaspokoić tę potrzebę.
+  from: EX-KRY-T07-08
+- type: counterexample-of
+  to: REG-KRY-T07-08
+  meaning: |-
+    Uogólnienie „więcej funkcji oznacza innowację” obala dodanie kolejnej nieużywanej tabeli, która zwiększa trudność obsługi i nie odpowiada na potrzebę.
+  from: CE-KRY-T07-08
+- type: distinguishes
+  to: REG-KRY-T07-08
+  meaning: |-
+    Oś: literalne żądanie rozwiązania versus potrzeba i lepszy sposób jej zaspokojenia. Dodatkowy formularz to jedna propozycja; usunięcie zbędnej czynności może lepiej realizować cel.
+  from: CMP-KRY-T07-08
+- type: illustrates
+  to: REG-KRY-T07-08
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-08
+- type: explains
+  to: REG-KRY-T07-08
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-08
+- type: variant-of
+  to: Z1-T07-08-B01
+  meaning: Kontrast małej i dużej skali zamiast samej literalnej prośby o kolejny ekran.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F08
+- type: variant-of
+  to: Z1-T07-08-B01
+  meaning: Porównuje technologiczną nowość i użyteczne uproszczenie, z jawnie nieprzeprowadzoną walidacją.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G08
+- type: variant-of
+  to: Z1-T07-08-B01
+  meaning: Porównanie dwóch skal bez gotowej historii obejścia; nie wymaga wymyślenia rozwiązania L3.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D08
+- type: illustrates
+  to: REG-KRY-T07-09
+  meaning: |-
+    Mały zespół uzgadnia krótkie przykłady, zapisuje decyzje i regularnie waliduje je z właścicielem potrzeby. Mało dokumentów nie oznacza braku dyscypliny.
+  from: EX-KRY-T07-09
+- type: counterexample-of
+  to: REG-KRY-T07-09
+  meaning: |-
+    Uogólnienie „dyscyplina = jeden szablon dla wszystkich projektów” obala dwa systemy o innym ryzyku i dostępności interesariuszy, wymagające uzasadnionych różnych praktyk.
+  from: CE-KRY-T07-09
+- type: distinguishes
+  to: REG-KRY-T07-09
+  meaning: |-
+    Oś: świadomy dobór i konsekwentne wykonanie versus rutynowe kopiowanie lub chaos. Dostosowanie może zmieniać praktykę, a dyscyplina zachowuje cel, kryteria i odpowiedzialność.
+  from: CMP-KRY-T07-09
+- type: illustrates
+  to: REG-KRY-T07-09
+  meaning: Przepracowanie jawnego przypadku pokazuje regułę, wynik i granice wnioskowania.
+  from: WS-T07-09
+- type: explains
+  to: REG-KRY-T07-09
+  meaning: Nota wyjaśnia znaczenie, warunki i granicę reguły dla tego zakresu.
+  from: N-T07-09
+- type: variant-of
+  to: Z1-T07-09-B01
+  meaning: Refleksyjny reuse w konkretnej zmianie skali; nie żąda projektowania całego procesu.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-F09
+- type: variant-of
+  to: Z1-T07-09-B01
+  meaning: Dwa sposoby pracy z jawnymi czynnościami i bezrefleksyjnym reuse, zamiast jednego dostawcy w F.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-G09
+- type: variant-of
+  to: Z1-T07-09-B01
+  meaning: Dwie skrajne propozycje i różne warunki interesariuszy; wybór argumentów nie jest projektem procesu L3.
+  condition: Ten sam rdzeń wiedzy; różnice opisane autorsko, bez ustalenia niezależności lub nowości.
+  from: T07-D09
+- type: illustrates
+  to: REG-A1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: EX-A
+- type: counterexample-of
+  to: REG-A1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: CE-A
+- type: distinguishes
+  to: REG-A1
+  meaning: Zachowany przypadek C rozwija częściowy zakres jego kryterium.
+  from: CMP-A
+- type: required-for
+  to: KRY-A01
+  condition: |-
+    Gdy nie można wskazać analizowanej całości i odróżnić jej od zakresu zmian. Znana podstawa jest pomijalna; brak decyzji nie tworzy bramki.
+  meaning: Podstawa umożliwia odczytanie przyjętej perspektywy lub przedmiotu wymagania.
+  from: PRE-A
+- type: explains
+  to: REG-A1
+  meaning: Wierny wkład C wyjaśnia zachowany częściowy zakres.
+  from: N-T07-C-A01
+- type: variant-of
+  to: C-A-B01
+  meaning: Wspólny kontrast C-A; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: C-A-F01
+- type: variant-of
+  to: C-A-B01
+  meaning: Wspólny kontrast C-A; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: T07-GC01
+- type: variant-of
+  to: C-A-B01
+  meaning: Wspólny kontrast C-A; zachowano źródłową rodzinę D, ale jej odrębność nie jest potwierdzona.
+  condition: Podobieństwo wiedzy i konstrukcji; autorskie porównanie bez decyzji nowości.
+  from: C-A-D01

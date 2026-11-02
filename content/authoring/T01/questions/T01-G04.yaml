@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T01-G04
+revision: r1
+format: A
+role: follow-up-2
+weight: 1
+scope:
+  criterion: KRY-T01-04
+  aspect: ZAK-T01-04
+family: FAM-T01-04
+sourceAnchor: tools/z1_extensions.py T01-04/G
+stem: |-
+  Laboratorium obejmuje usługę kalibracji: program przyjmuje zlecenie, urządzenie wykonuje pomiar, a pracownik zatwierdza wynik. Elementy współdziałają w celu dostarczenia wyniku kalibracji. Która ocena użycia terminu system jest trafna?
+options:
+- id: a
+  text: Termin jest wykluczony, ponieważ w całości uczestniczy człowiek.
+  rationale: |-
+    Pracownik współdziała z programem i sprzętem → system może mieć skład socjotechniczny → wykluczenie jest błędne.
+  rules:
+  - REG-T01-04-04
+  see: N-T01-04
+  correct: false
+- id: b
+  text: Tylko program może być systemem, a urządzenie nigdy.
+  rationale: |-
+    Opis obejmuje współdziałające elementy i cel → system nie jest ograniczony do samego kodu → odpowiedź nadmiernie zawęża pojęcie.
+  rules:
+  - REG-T01-04-02
+  see: N-T01-04
+  correct: false
+- id: c
+  text: Całość może być systemem, ponieważ elementy współdziałają w określonym celu.
+  rationale: |-
+    Dane wskazują wyodrębnioną całość i skoordynowane działania → spełniają sens inżynierski systemu → odpowiedź jest poprawna.
+  rules:
+  - REG-KRY-T01-04
+  see: N-T01-04
+  correct: true
+- id: d
+  text: Sama wspólna lokalizacja wystarczałaby także bez celu i współdziałania.
+  rationale: Podano istotny cel i współdziałanie → definicja wymaga ich, a nie tylko miejsca → uogólnienie jest
+    błędne.
+  rules:
+  - REG-KRY-T01-04
+  see: N-T01-04
+  correct: false

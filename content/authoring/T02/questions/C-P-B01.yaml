@@ -1,0 +1,61 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: C-P-B01
+revision: r2
+format: P
+role: base
+weight: 2
+scope:
+  criterion: KRY-P01
+  aspect: ZAK-T02-C-P01
+family: FAM-C-P1
+sourceAnchor: references/project/20-C03_IREB_CPRE_Pilot_Content_APK_v0.2.md § C-P-B01
+stem: |-
+  Poniższe wymagania dotyczą samoobsługowego systemu wypożyczeń, obejmującego terminal i jego aplikację. Wymieniony komponent CatalogCore jest dodatkowo narzucony organizacyjnie, chociaż dostępne są inne komponenty spełniające te same wymagania funkcjonalne i jakościowe.
+
+  Które wymagania są jakościowe?
+options:
+- id: a
+  text: System umożliwia czytelnikowi przedłużenie wskazanego wypożyczenia.
+  rationale: Przedłużenie wypożyczenia jest oczekiwanym działaniem → określa funkcję → nie należy do klucza jakości
+  rules:
+  - REG-P1
+  - REG-T02-01-02
+  see: N-T02-C-P01
+  correct: false
+- id: b
+  text: System wykorzystuje komponent CatalogCore jako jedyny dopuszczony silnik katalogu.
+  rationale: |-
+    Podano dodatkowy nakaz jednego silnika mimo odpowiednich alternatyw → ogranicza przestrzeń rozwiązań ponad pozostałe wymagania → constraint, nie quality
+  rules:
+  - REG-P1
+  - REG-T02-01-04
+  see: N-T02-C-P01
+  correct: false
+- id: c
+  text: Pobór mocy terminala w zdefiniowanym trybie bezczynności nie przekracza 8 W.
+  rationale: |-
+    Wskazano zużycie energii w określonym stanie → jest cechą jakościową terminala, a nie dodatkowym wyborem komponentu → należy do klucza
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  correct: true
+- id: d
+  text: System zapisuje identyfikator pracownika, który zatwierdził zmianę limitu wypożyczeń.
+  rationale: |-
+    Rejestrowanie osoby jest wymaganym zachowaniem → funkcja może służyć jakości/bezpieczeństwu → sam cel nie czyni tego zapisu quality
+  rules:
+  - REG-P1
+  - REG-T02-01-05
+  see: N-T02-C-P01
+  correct: false
+- id: e
+  text: |-
+    W godzinach otwarcia, bez wyłączania okien serwisowych, system jest gotowy do obsługi przez co najmniej 99,5% czasu w miesiącu.
+  rationale: Określono gotowość w zadanym okresie i sposób liczenia → cecha dostępności → należy do klucza
+  rules:
+  - REG-P1
+  - REG-T02-01-03
+  see: N-T02-C-P01
+  correct: true
+k: 2

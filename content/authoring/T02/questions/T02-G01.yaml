@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T02-G01
+revision: r1
+format: P
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T02-01
+  aspect: ZAK-T02-01
+family: FAM-T02-01
+sourceAnchor: tools/z1_extensions.py T02-01/G
+stem: |-
+  Terminal potwierdza przyjęcie produktu i zapisuje identyfikator kontrolera. W uzgodnionym teście ma zużywać najwyżej 12 W. Organizacja nakazuje platformę Atlas-X mimo alternatyw spełniających wszystkie wymagane funkcje i jakość. Które klasyfikacje z powodem są poprawne?
+options:
+- id: a
+  text: Zapis identyfikatora jest jakościowy, bo pomaga w rozliczalności.
+  rationale: |-
+    Podano czynność zapisu → funkcjonalne zachowanie może wspierać bezpieczeństwo → cel nie uzasadnia etykiety quality.
+  rules:
+  - REG-T02-01-05
+  see: N-T02-01
+  correct: false
+- id: b
+  text: Limit 12 W jest jakościowy, bo określa zużycie zasobu w podanych warunkach.
+  rationale: Oczekiwanie dotyczy cechy zużycia energii → quality requirement → para jest poprawna.
+  rules:
+  - REG-T02-01-03
+  see: N-T02-01
+  correct: true
+- id: c
+  text: Samo słowo platforma zawsze wystarcza do rozpoznania constraint w każdym zdaniu.
+  rationale: |-
+    W zadaniu podano dodatkowy nakaz i alternatywy → constraint wynika z zawężenia ponad funkcje i jakość, nie samego słowa → uogólnienie jest błędne.
+  rules:
+  - REG-T02-01-04
+  see: N-T02-01
+  correct: false
+- id: d
+  text: Nakaz Atlas-X jest constraint, bo dodatkowo eliminuje odpowiednie alternatywy.
+  rationale: |-
+    Alternatywy są odpowiednie funkcjonalnie i jakościowo → dodatkowy wybór ogranicza przestrzeń → para jest poprawna.
+  rules:
+  - REG-T02-01-04
+  see: N-T02-01
+  correct: true
+k: 2

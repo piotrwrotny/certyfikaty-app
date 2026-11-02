@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: Z1-T07-08-B01
+revision: r2
+format: A
+role: base
+weight: 1
+scope:
+  criterion: KRY-T07-08
+  aspect: ZAK-T07-08
+family: FAM-T07-08
+sourceAnchor: references/content/T07_IREB_CPRE_Nine_Principles_Explained_Content_v0.1.md § Z1-T07-08-B01
+stem: |-
+  Użytkownik prosi o trzeci ekran do ponownego przepisywania tych samych danych. Analiza potrzeby wskazuje, że chce uniknąć błędu uzgodnienia. Które działanie najlepiej oddaje zasadę innowacji?
+options:
+- id: a
+  text: Zignorować użytkownika, bo analityk zawsze wie lepiej.
+  rationale: |-
+    Zasada nie znosi potrzeb i walidacji → Nowy pomysł nadal wymaga sprawdzenia z potrzebami interesariuszy, więc sama nowość technologii nie potwierdza jego adekwatności. → nie wybrać.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  correct: false
+- id: b
+  text: Wybrać najnowszą technologię bez sprawdzenia celu.
+  rationale: |-
+    Nowość techniczna nie dowodzi poprawy → Nowy pomysł nadal wymaga sprawdzenia z potrzebami interesariuszy, więc sama nowość technologii nie potwierdza jego adekwatności. → nie wybrać.
+  rules:
+  - REG-T07-08-03
+  see: N-T07-08
+  correct: false
+- id: c
+  text: Dodać ekran bez badania przyczyny, bo tylko literalna prośba jest wymaganiem.
+  rationale: |-
+    Bezrefleksyjny zapis może utrwalać obejście zamiast potrzeby → Dobre RE poszukuje sposobów zaspokojenia potrzeb interesariuszy lepiej, niż oczekują, zamiast ograniczać się do literalnych propozycji. → nie wybrać.
+  rules:
+  - REG-KRY-T07-08
+  see: N-T07-08
+  correct: false
+- id: d
+  text: Zbadać prostszy sposób uzgodnienia bez ponownego wpisu i zwalidować go z użytkownikiem.
+  rationale: |-
+    Lepsze zaspokojenie potrzeby może wymagać innego rozwiązania i kontroli → Dobre RE poszukuje sposobów zaspokojenia potrzeb interesariuszy lepiej, niż oczekują, zamiast ograniczać się do literalnych propozycji. → wybrać.
+  rules:
+  - REG-KRY-T07-08
+  see: N-T07-08
+  correct: true

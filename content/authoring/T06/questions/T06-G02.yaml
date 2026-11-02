@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../../../schemas/authoring/question.schema.json
+id: T06-G02
+revision: r1
+format: K
+role: follow-up-2
+weight: 2
+scope:
+  criterion: KRY-T06-02
+  aspect: ZAK-T06-02
+family: FAM-T06-02
+sourceAnchor: tools/z1_extensions.py T06-02/G
+stem: |-
+  Dwie osoby podpisały wymaganie, lecz podają różne wyniki dla tego samego przypadku. W innym zespole wspólna wiedza domenowa pozwala przewidzieć ten przypadek jednakowo. Oceń terminologiczne wnioski.
+options:
+- id: '1'
+  text: Udokumentowana i uzgodniona podstawa należy do explicit shared understanding.
+  rationale: Wskazano zapis i uzgodnienie → tym rozróżnia się explicit od implicit → Prawda.
+  rules:
+  - REG-T06-02-03
+  see: N-T06-02
+  truth: true
+- id: '2'
+  text: Sam podpis dowodzi, że pierwsze osoby rzeczywiście mają wspólne znaczenie.
+  rationale: Podano różne interpretacje mimo podpisu → obie postacie mogą być pozorne → Fałsz.
+  rules:
+  - REG-T06-02-04
+  see: N-T06-02
+  truth: false
+- id: '3'
+  text: Wspólna wiedza stanowi podstawę implicit shared understanding.
+  rationale: Drugi przypadek opiera się na wiedzy domenowej → odpowiada podstawie implicit → Prawda.
+  rules:
+  - REG-T06-02-03
+  see: N-T06-02
+  truth: true
+- id: '4'
+  text: Kontrola dopasowania wymagania do potrzeb to validation, a nie wyłącznie verification.
+  rationale: Punktem odniesienia są potrzeby → validation różni się od zgodności ze specyfikacją → Prawda.
+  rules:
+  - REG-T06-02-05
+  see: N-T06-02
+  truth: true
